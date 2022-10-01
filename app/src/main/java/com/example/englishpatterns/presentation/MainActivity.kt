@@ -1,4 +1,4 @@
-package com.example.englishpatterns
+package com.example.englishpatterns.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -18,8 +18,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             EnglishPatternsTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background) {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colors.background
+                ) {
                     Greeting("Android")
                 }
             }
