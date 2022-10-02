@@ -3,17 +3,32 @@ package com.example.englishpatterns.presentation
 import android.app.Application
 import androidx.annotation.StringRes
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.englishpatterns.R
 import com.example.englishpatterns.domain.Pattern
 import com.example.englishpatterns.domain.Pattern.*
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.*
 import java.io.File
 
 class MainViewModel(context: Application) : AndroidViewModel(context) {
 
-    val patternHolders: StateFlow<List<PatternHolder>> = MutableStateFlow(value = getPatternHolders())
+    private val _patternHolders = MutableStateFlow(value = getPatternHolders())
+    val patternHolders: StateFlow<List<PatternHolder>> = _patternHolders.asStateFlow()
+    val chosenPatterns = _patternHolders.map {
+        it.filter { holder -> holder.isChosen }
+            .map { holder -> holder.pattern }
+    }.stateIn(
+        scope = viewModelScope,
+        started = SharingStarted.Eagerly,
+        initialValue = emptyList()
+    )
 
+    fun changePatterHolderChoosingState(position: Int, patternHolder: PatternHolder) {
+        _patternHolders.update { holders ->
+            holders.toMutableList()
+                .apply { this[position] = patternHolder.copy(isChosen = !patternHolder.isChosen) }
+        }
+    }
 
     private fun getPatternHolders(): List<PatternHolder> {
         return listOf(
@@ -42,7 +57,7 @@ class MainViewModel(context: Application) : AndroidViewModel(context) {
     }
 }
 
-class PatternHolder(
+data class PatternHolder(
     val pattern: Pattern,
     val isChosen: Boolean,
 )
