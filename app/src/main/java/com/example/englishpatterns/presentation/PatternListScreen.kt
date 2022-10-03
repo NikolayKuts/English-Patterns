@@ -14,17 +14,17 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import kotlinx.coroutines.flow.StateFlow
 
 const val PatternListDestination = "pattern_list_screen"
 
 @Composable
 fun PatternListScreen(
-    patternHolderSource: StateFlow<List<PatternHolder>>,
+    viewModel: MainViewModel,
     onItemClick: (position: Int, patternHolder: PatternHolder) -> Unit,
     onStartButtonClick: () -> Unit,
 ) {
-    val patternHolders by patternHolderSource.collectAsState()
+    val state = viewModel.state.collectAsState().value as? State.InitialState ?: return
+    val patternHolders by state.patternHolderSource.collectAsState()
 
     Box(
         modifier = Modifier.fillMaxSize()
@@ -39,7 +39,7 @@ fun PatternListScreen(
                     modifier = Modifier
                         .background(
                             when (holder.isChosen) {
-                                true -> Color(0xFF97A785)
+                                true -> Color(0x9A97A785)
                                 else -> Color(0x2597A785)
                             }
                         )

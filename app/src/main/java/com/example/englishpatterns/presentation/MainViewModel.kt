@@ -1,20 +1,16 @@
 package com.example.englishpatterns.presentation
 
 import android.app.Application
-import androidx.annotation.StringRes
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.englishpatterns.R
 import com.example.englishpatterns.domain.Pattern
 import com.example.englishpatterns.domain.Pattern.*
 import kotlinx.coroutines.flow.*
-import java.io.File
 
 class MainViewModel(context: Application) : AndroidViewModel(context) {
 
     private val _patternHolders = MutableStateFlow(value = getPatternHolders())
-    val patternHolders: StateFlow<List<PatternHolder>> = _patternHolders.asStateFlow()
-    val chosenPatterns = _patternHolders.map {
+    private val chosenPatterns = _patternHolders.map {
         it.filter { holder -> holder.isChosen }
             .map { holder -> holder.pattern }
     }.stateIn(
@@ -23,7 +19,30 @@ class MainViewModel(context: Application) : AndroidViewModel(context) {
         initialValue = emptyList()
     )
 
-    fun changePatterHolderChoosingState(position: Int, patternHolder: PatternHolder) {
+    private val _state = MutableStateFlow<State>(
+        value = State.InitialState(patternHolderSource = _patternHolders)
+    )
+    val state = _state.asStateFlow()
+
+    fun sendEvent(event: Event) {
+        when (event) {
+            Event.DisplayMainScreen -> {
+                _state.value = State.InitialState(patternHolderSource = _patternHolders)
+            }
+            Event.NavigateToPatternPracticing -> {
+                _state.value = State.PatternPracticingState(patternsSource = chosenPatterns)
+            }
+
+            is Event.ChangePatterHolderChoosingState -> {
+                changePatterHolderChoosingState(
+                    position = event.position,
+                    patternHolder = event.patternHolder
+                )
+            }
+        }
+    }
+
+    private fun changePatterHolderChoosingState(position: Int, patternHolder: PatternHolder) {
         _patternHolders.update { holders ->
             holders.toMutableList()
                 .apply { this[position] = patternHolder.copy(isChosen = !patternHolder.isChosen) }
