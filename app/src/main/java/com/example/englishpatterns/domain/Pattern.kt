@@ -83,7 +83,10 @@ sealed class Pattern(val name: String, @StringRes val resId: Int) {
         name = "Present Simple frequency adverbs",
         resId = R.string.present_simple_frequency_adverbs
     )
-    class PresentSimpleGo : Pattern(name = "Present Simple + go", resId = R.string.present_simple_go)
+    class PresentSimpleGo : Pattern(
+        name = "Present Simple + go",
+        resId = R.string.present_simple_go
+    )
     class PresentSimplePlay : Pattern(
         name = "Present Simple + play",
         resId = R.string.present_simple_play

@@ -1,44 +1,102 @@
 package com.example.englishpatterns.presentation
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Button
+import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
-import com.example.englishpatterns.domain.Pattern
-import kotlinx.coroutines.flow.StateFlow
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 
 const val PatternPracticingDestination = "pattern_practicing_screen"
 
 @Composable
-fun PatternPracticingScreen(patternsSource: StateFlow<List<Pattern>>) {
-    val patterns by patternsSource.collectAsState()
+fun PatternPracticingScreen(
+    viewModel: MainViewModel,
+) {
+    DisposableEffect(key1 = null) {
+        onDispose { viewModel.sendEvent(event = Event.DisplayMainScreen) }
+    }
+
+    val state = viewModel.state.collectAsState().value as? State.PatternPracticingState ?: return
+    val groups by state.patternPairGroups.collectAsState()
+    val currentPattern by state.currentPattern.collectAsState()
 
     Box(
         Modifier.fillMaxSize()
     ) {
-        val patternPairs = patterns.map {
-            stringResource(id = it.resId).split("@")
-                .map { rowPair ->
-                    rowPair.substringBefore("==") to rowPair.substringAfter("==")
+        Row(
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .fillMaxWidth()
+        ) {
+            Text(text = "Groups ->")
+            LazyRow(
+            ) {
+                itemsIndexed(items = groups) { index, pairGroup ->
+                    Card(
+                        modifier = Modifier
+                            .defaultMinSize(minHeight = 30.dp, minWidth = 20.dp)
+                            .padding()
+                            .clickable {
+                                viewModel.sendEvent(
+                                    event = Event.ChangePairGroupChoosingState(position = index)
+                                )
+                            },
+                        backgroundColor = if (pairGroup.isChosen) Color(0xFF9EBE79)
+                        else Color(0x228BC34A),
+                        shape = RoundedCornerShape(size = 5.dp),
+                        border = BorderStroke(width = 1.dp, color = Color(0xF0CFCFCF)),
+                    ) {
+                        Text(
+                            text = index.toString(),
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.wrapContentHeight()
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(6.dp))
                 }
+            }
         }
-            .flatten()
 
         Column(
             modifier = Modifier.align(Alignment.Center)
         ) {
             Text(
-                text = patternPairs.first().first,
+                text = currentPattern?.native ?: "select groups",
             )
             Text(
-                text = patternPairs.first().second,
+                text = currentPattern?.translation ?: ""
             )
         }
+
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.BottomCenter),
+        ) {
+            Button(
+                onClick = { viewModel.sendEvent(event = Event.ShufflePatternPairs) }
+            ) {
+                Text(text = "Shuffle")
+            }
+            Button(
+                modifier = Modifier.fillMaxWidth(),
+                onClick = { viewModel.sendEvent(event = Event.NextPatterPair) }) {
+                Text(text = "Next")
+            }
+        }
+
     }
 }

@@ -9,8 +9,10 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -25,12 +27,24 @@ class MainActivity : ComponentActivity() {
         val viewModel by viewModels<MainViewModel>()
 
         setContent {
+            log("set content")
             EnglishPatternsTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
                     val navController = rememberNavController()
+                    lifecycleScope.launchWhenStarted {
+                        viewModel.state.collect { state ->
+                            log(state)
+                            when (state) {
+                                is State.InitialState -> {}
+                                is State.PatternPracticingState -> {
+                                    navController.navigate(route = PatternPracticingDestination)
+                                }
+                            }
+                        }
+                    }
 
                     NavHost(
                         navController = navController,
@@ -38,24 +52,27 @@ class MainActivity : ComponentActivity() {
                     ) {
                         composable(PatternListDestination) {
                             PatternListScreen(
-                                patternHolderSource = viewModel.patternHolders,
-                                onItemClick = viewModel::changePatterHolderChoosingState,
+                                viewModel = viewModel,
+                                onItemClick = { position, patternHolder ->
+                                    viewModel.sendEvent(
+                                        event = Event.ChangePatterHolderChoosingState(
+                                            position = position,
+                                            patternHolder = patternHolder
+                                        )
+                                    )
+                                },
                                 onStartButtonClick = {
-                                    navController.navigate(route = PatternPracticingDestination)
+                                    viewModel.sendEvent(event = Event.NavigateToPatternPracticing)
                                 }
                             )
                         }
                         composable(route = PatternPracticingDestination) {
-                            PatternPracticingScreen(patternsSource = viewModel.chosenPatterns)
+                            PatternPracticingScreen(viewModel = viewModel)
                         }
                     }
                 }
             }
         }
-    }
-
-    private fun NavHostController.navigateToPracticing() {
-
     }
 }
 
