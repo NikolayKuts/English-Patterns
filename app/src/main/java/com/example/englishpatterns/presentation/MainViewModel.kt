@@ -5,47 +5,105 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.englishpatterns.domain.Pattern
 import com.example.englishpatterns.domain.Pattern.*
+import com.example.englishpatterns.domain.PatternManager
+import com.example.englishpatterns.domain.PatternPairGroup
+import com.example.englishpatterns.domain.PatternPair
 import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
 
-class MainViewModel(context: Application) : AndroidViewModel(context) {
+class MainViewModel(private val context: Application) : AndroidViewModel(context) {
 
-    private val _patternHolders = MutableStateFlow(value = getPatternHolders())
-    private val chosenPatterns = _patternHolders.map {
-        it.filter { holder -> holder.isChosen }
-            .map { holder -> holder.pattern }
-    }.stateIn(
-        scope = viewModelScope,
-        started = SharingStarted.Eagerly,
-        initialValue = emptyList()
+    private val patternHolders = MutableStateFlow(value = getPatternHolders())
+    private val chosenPatterns = getChosenPatterns()
+    private val chosenPatternPairGroups =
+        MutableStateFlow<List<PatternPairGroup>>(value = emptyList())
+
+    private val currentPatter = MutableStateFlow<PatternPair?>(value = null)
+    private var patternManager = PatternManager(
+        patternPairGroup = chosenPatternPairGroups.value.mapToSingleGroup()
     )
 
     private val _state = MutableStateFlow<State>(
-        value = State.InitialState(patternHolderSource = _patternHolders)
+        value = State.InitialState(patternHolderSource = patternHolders)
     )
     val state = _state.asStateFlow()
+
+    init {
+        observeChosenPatterns()
+    }
 
     fun sendEvent(event: Event) {
         when (event) {
             Event.DisplayMainScreen -> {
-                _state.value = State.InitialState(patternHolderSource = _patternHolders)
+                _state.value = State.InitialState(patternHolderSource = patternHolders)
             }
             Event.NavigateToPatternPracticing -> {
-                _state.value = State.PatternPracticingState(patternsSource = chosenPatterns)
+                _state.value = State.PatternPracticingState(
+                    patternPairGroups = chosenPatternPairGroups,
+                    currentPattern = currentPatter
+                )
             }
-
             is Event.ChangePatterHolderChoosingState -> {
                 changePatterHolderChoosingState(
                     position = event.position,
                     patternHolder = event.patternHolder
                 )
             }
+            is Event.ChangePairGroupChoosingState -> {
+                chosenPatternPairGroups.update {
+                    it.toMutableList().apply {
+                        val group = this[event.position]
+                        this[event.position] = group.copy(isChosen = !group.isChosen)
+                    }
+                }
+
+                patternManager = PatternManager(
+                    patternPairGroup = chosenPatternPairGroups.value.filter { it.isChosen }
+                        .mapToSingleGroup()
+                )
+                currentPatter.value = patternManager.nextPattern()
+            }
+            Event.NextPatterPair -> {
+                currentPatter.value = patternManager.nextPattern()
+            }
         }
     }
 
+    private fun getChosenPatterns(): Flow<List<PatternPair>> {
+        return patternHolders.map {
+            it.filter { holder -> holder.isChosen }
+                .map { holder -> holder.pattern }
+                .map { chosenPattern ->
+                    context.getString(chosenPattern.resId).split("@")
+                        .map { rowPair ->
+                            PatternPair(
+                                native = rowPair.substringBefore("=="),
+                                translation = rowPair.substringAfter("==")
+                            )
+                        }
+                }.flatten()
+        }
+    }
+
+    private fun observeChosenPatterns() {
+        viewModelScope.launch {
+            chosenPatterns.collect { patternPairs ->
+                chosenPatternPairGroups.value = patternPairs.chunked(size = 6)
+                    .map { pairs -> PatternPairGroup(isChosen = false, pairs = pairs) }
+            }
+        }
+    }
+
+    private fun List<PatternPairGroup>.mapToSingleGroup(): PatternPairGroup = PatternPairGroup(
+        pairs = this.map { it.pairs }.flatten()
+    )
+
     private fun changePatterHolderChoosingState(position: Int, patternHolder: PatternHolder) {
-        _patternHolders.update { holders ->
+        patternHolders.update { holders ->
             holders.toMutableList()
-                .apply { this[position] = patternHolder.copy(isChosen = !patternHolder.isChosen) }
+                .apply {
+                    this[position] = patternHolder.copy(isChosen = !patternHolder.isChosen)
+                }
         }
     }
 
@@ -62,6 +120,7 @@ class MainViewModel(context: Application) : AndroidViewModel(context) {
             PatternHolder(pattern = VerbToBeArticle(), isChosen = false),
             PatternHolder(pattern = ThisIsA(), isChosen = false),
             PatternHolder(pattern = TheNounBe(), isChosen = false),
+            PatternHolder(pattern = PresentSimple(), isChosen = false),
             PatternHolder(pattern = Ordinals(), isChosen = false),
             PatternHolder(pattern = TimePrepositionsAt(), isChosen = false),
             PatternHolder(pattern = TimePrepositionsIn(), isChosen = false),

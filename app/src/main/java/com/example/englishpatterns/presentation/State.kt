@@ -1,10 +1,14 @@
 package com.example.englishpatterns.presentation
 
-import com.example.englishpatterns.domain.Pattern
+import com.example.englishpatterns.domain.PatternPair
+import com.example.englishpatterns.domain.PatternPairGroup
 import kotlinx.coroutines.flow.StateFlow
 
 sealed class State {
 
     class InitialState(val patternHolderSource: StateFlow<List<PatternHolder>>) : State()
-    class PatternPracticingState(val  patternsSource: StateFlow<List<Pattern>>) : State()
+    class PatternPracticingState(
+        val patternPairGroups: StateFlow<List<PatternPairGroup>>,
+        val currentPattern: StateFlow<PatternPair?>,
+    ) : State()
 }

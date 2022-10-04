@@ -27,6 +27,7 @@ class MainActivity : ComponentActivity() {
         val viewModel by viewModels<MainViewModel>()
 
         setContent {
+            log("set content")
             EnglishPatternsTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -35,6 +36,7 @@ class MainActivity : ComponentActivity() {
                     val navController = rememberNavController()
                     lifecycleScope.launchWhenStarted {
                         viewModel.state.collect { state ->
+                            log(state)
                             when (state) {
                                 is State.InitialState -> {}
                                 is State.PatternPracticingState -> {
