@@ -66,6 +66,13 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
             Event.NextPatterPair -> {
                 currentPatter.value = patternManager.nextPattern()
             }
+            Event.ShufflePatternPairs -> {
+                patternManager = PatternManager(
+                    patternPairGroup = chosenPatternPairGroups.value.filter { it.isChosen }
+                        .mapToSingleShuffledGroup()
+                )
+                currentPatter.value = patternManager.nextPattern()
+            }
         }
     }
 
@@ -96,6 +103,10 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
 
     private fun List<PatternPairGroup>.mapToSingleGroup(): PatternPairGroup = PatternPairGroup(
         pairs = this.map { it.pairs }.flatten()
+    )
+
+    private fun List<PatternPairGroup>.mapToSingleShuffledGroup(): PatternPairGroup = PatternPairGroup(
+        pairs = this.map { it.pairs.shuffled() }.shuffled().flatten()
     )
 
     private fun changePatterHolderChoosingState(position: Int, patternHolder: PatternHolder) {

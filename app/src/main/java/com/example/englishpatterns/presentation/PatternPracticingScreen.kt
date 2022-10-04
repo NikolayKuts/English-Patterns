@@ -43,7 +43,6 @@ fun PatternPracticingScreen(
         ) {
             Text(text = "Groups ->")
             LazyRow(
-//                modifier = Modifier.weight(0.7F)
             ) {
                 itemsIndexed(items = groups) { index, pairGroup ->
                     Card(
@@ -82,12 +81,22 @@ fun PatternPracticingScreen(
             )
         }
 
-        Button(
+        Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .align(Alignment.BottomCenter),
-            onClick = { viewModel.sendEvent(event = Event.NextPatterPair) }) {
-            Text(text = "Next")
+        ) {
+            Button(
+                onClick = { viewModel.sendEvent(event = Event.ShufflePatternPairs) }
+            ) {
+                Text(text = "Shuffle")
+            }
+            Button(
+                modifier = Modifier.fillMaxWidth(),
+                onClick = { viewModel.sendEvent(event = Event.NextPatterPair) }) {
+                Text(text = "Next")
+            }
         }
+
     }
 }
