@@ -14,13 +14,15 @@ class PatternManager(
                 position = 0
                 PatternPairGroupState(
                     pair = patternPairGroup.pairs[position],
-                    position = position
+                    position = position,
+                    groupSize = patternPairGroup.pairs.size
                 )
             }
             else ->
                 PatternPairGroupState(
                     pair = patternPairGroup.pairs[++position],
-                    position = position
+                    position = position,
+                    groupSize = patternPairGroup.pairs.size
                 )
         }
     }

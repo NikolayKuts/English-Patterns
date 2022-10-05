@@ -73,12 +73,15 @@ fun PatternPracticingScreen(
                     }
                 }
             }
-            val position = currentPatternGroupState?.position ?: -1
-            val positionText = if (position == -1) "" else position.toString()
+            val position = (currentPatternGroupState?.position ?: -1) + 1
+            val positionText = if (position == 0) "" else position.toString()
+            val size = currentPatternGroupState?.groupSize ?: -1
+            val sizeText = if (size == -1) "" else " / $size"
+            val progress = "$positionText$sizeText"
 
             Text(
                 modifier = Modifier.padding(start = 28.dp),
-                text = positionText)
+                text = progress)
         }
 
         Column(
