@@ -139,6 +139,11 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
             PatternHolder(pattern = PresentSimpleGo(), isChosen = false),
             PatternHolder(pattern = PresentSimplePlay(), isChosen = false),
             PatternHolder(pattern = PossessivePronounsSecond(), isChosen = false),
+            PatternHolder(pattern = ObjectPronouns(), isChosen = false),
+            PatternHolder(pattern = PresentSimpleLesson2(), isChosen = false),
+            PatternHolder(pattern = LikeVIng(), isChosen = false),
+            PatternHolder(pattern = BeFondKeenInterestedCrazy(), isChosen = false),
+            PatternHolder(pattern = PresentProcess(), isChosen = false),
         )
     }
 }

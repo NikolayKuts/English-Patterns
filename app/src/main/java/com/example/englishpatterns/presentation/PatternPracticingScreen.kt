@@ -90,12 +90,14 @@ fun PatternPracticingScreen(
         ) {
             Text(
                 text = currentPatternGroupState?.pair?.native ?: "select groups",
-                color = Color(0xFFC5CC85)
+                color = Color(0xFFC5CC85),
+                textAlign = TextAlign.Center
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
                 text = currentPatternGroupState?.pair?.translation ?: "",
-                color = Color(0xFF7ABCC5)
+                color = Color(0xFF7ABCC5),
+                textAlign = TextAlign.Center
             )
         }
 

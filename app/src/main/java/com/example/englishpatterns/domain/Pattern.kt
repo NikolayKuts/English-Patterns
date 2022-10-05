@@ -95,4 +95,29 @@ sealed class Pattern(val name: String, @StringRes val resId: Int) {
         name = "Possessive pronouns 2",
         resId = R.string.possessive_pronouns_2
     )
+
+    class ObjectPronouns : Pattern(
+        name = "Object pronouns",
+        resId = R.string.object_pronouns
+    )
+
+    class PresentSimpleLesson2 : Pattern(
+        name = "Present simple lessen 2",
+        resId = R.string.present_simple_lesson_2
+    )
+
+    class LikeVIng : Pattern(
+        name = "Like + Ving",
+        resId = R.string.like_Ving
+    )
+
+    class BeFondKeenInterestedCrazy : Pattern(
+        name = "Be + found of + kenn on..",
+        resId = R.string.be_fond_of_be_keen_on_be_interested_in_be_crazy_about
+    )
+
+    class PresentProcess : Pattern(
+        name = "Present Process",
+        resId = R.string.present_process
+    )
 }
