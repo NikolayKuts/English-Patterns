@@ -3,11 +3,8 @@ package com.example.englishpatterns.presentation
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.englishpatterns.domain.Pattern
+import com.example.englishpatterns.domain.*
 import com.example.englishpatterns.domain.Pattern.*
-import com.example.englishpatterns.domain.PatternManager
-import com.example.englishpatterns.domain.PatternPairGroup
-import com.example.englishpatterns.domain.PatternPair
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
@@ -18,7 +15,7 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
     private val chosenPatternPairGroups =
         MutableStateFlow<List<PatternPairGroup>>(value = emptyList())
 
-    private val currentPatter = MutableStateFlow<PatternPair?>(value = null)
+    private val currentPatter = MutableStateFlow<PatternPairGroupState?>(value = null)
     private var patternManager = PatternManager(
         patternPairGroup = chosenPatternPairGroups.value.mapToSingleGroup()
     )
