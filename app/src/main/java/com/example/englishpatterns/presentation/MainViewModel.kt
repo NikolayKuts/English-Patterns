@@ -103,7 +103,7 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
     )
 
     private fun List<PatternPairGroup>.mapToSingleShuffledGroup(): PatternPairGroup = PatternPairGroup(
-        pairs = this.map { it.pairs.shuffled() }.shuffled().flatten()
+        pairs = this.map { it.pairs.shuffled() }.shuffled().flatten().shuffled()
     )
 
     private fun changePatterHolderChoosingState(position: Int, patternHolder: PatternHolder) {
