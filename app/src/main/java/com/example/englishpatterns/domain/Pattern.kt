@@ -120,4 +120,9 @@ sealed class Pattern(val name: String, @StringRes val resId: Int) {
         name = "Present Process",
         resId = R.string.present_process
     )
+
+    class PresentTypicalVsPresentProcess : Pattern(
+        name = "PresentTypicalVsPresentProcess",
+        resId = R.string.present_typical_vs_present_process
+    )
 }
