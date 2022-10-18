@@ -3,11 +3,8 @@ package com.example.englishpatterns.presentation
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.englishpatterns.domain.Pattern
+import com.example.englishpatterns.domain.*
 import com.example.englishpatterns.domain.Pattern.*
-import com.example.englishpatterns.domain.PatternManager
-import com.example.englishpatterns.domain.PatternPairGroup
-import com.example.englishpatterns.domain.PatternPair
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
@@ -18,7 +15,7 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
     private val chosenPatternPairGroups =
         MutableStateFlow<List<PatternPairGroup>>(value = emptyList())
 
-    private val currentPatter = MutableStateFlow<PatternPair?>(value = null)
+    private val currentPatter = MutableStateFlow<PatternPairGroupState?>(value = null)
     private var patternManager = PatternManager(
         patternPairGroup = chosenPatternPairGroups.value.mapToSingleGroup()
     )
@@ -105,45 +102,56 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
         pairs = this.map { it.pairs }.flatten()
     )
 
-    private fun List<PatternPairGroup>.mapToSingleShuffledGroup(): PatternPairGroup = PatternPairGroup(
-        pairs = this.map { it.pairs.shuffled() }.shuffled().flatten()
-    )
+    private fun List<PatternPairGroup>.mapToSingleShuffledGroup(): PatternPairGroup =
+        PatternPairGroup(
+            pairs = this.map { it.pairs.shuffled() }.shuffled().flatten().shuffled()
+        )
 
     private fun changePatterHolderChoosingState(position: Int, patternHolder: PatternHolder) {
         patternHolders.update { holders ->
             holders.toMutableList()
-                .apply {
-                    this[position] = patternHolder.copy(isChosen = !patternHolder.isChosen)
-                }
+                .apply { this[position] = patternHolder.copy(isChosen = !patternHolder.isChosen) }
         }
     }
 
     private fun getPatternHolders(): List<PatternHolder> {
         return listOf(
             PatternHolder(pattern = PossessivePronouns(), isChosen = true),
-            PatternHolder(pattern = ThisThatTheseThose(), isChosen = false),
-            PatternHolder(pattern = PossessiveCaseOfNouns(), isChosen = false),
-            PatternHolder(pattern = ToBeAdjectivesAffirmative(), isChosen = false),
-            PatternHolder(pattern = ToBeAdjectivesQuestions(), isChosen = false),
-            PatternHolder(pattern = ToBeAdjectivesNegative(), isChosen = false),
-            PatternHolder(pattern = ToBeAdjectivesMixed(), isChosen = false),
-            PatternHolder(pattern = ToBeSpecialQuestions(), isChosen = false),
-            PatternHolder(pattern = VerbToBeArticle(), isChosen = false),
-            PatternHolder(pattern = ThisIsA(), isChosen = false),
-            PatternHolder(pattern = TheNounBe(), isChosen = false),
-            PatternHolder(pattern = PresentSimple(), isChosen = false),
-            PatternHolder(pattern = Ordinals(), isChosen = false),
-            PatternHolder(pattern = TimePrepositionsAt(), isChosen = false),
-            PatternHolder(pattern = TimePrepositionsIn(), isChosen = false),
-            PatternHolder(pattern = TimePrepositionsOn(), isChosen = false),
-            PatternHolder(pattern = TimePrepositionsMixed(), isChosen = false),
-            PatternHolder(pattern = PresentSimpleTimePrepositions(), isChosen = false),
-            PatternHolder(pattern = PresentSimpleFrequencyAdverbs(), isChosen = false),
-            PatternHolder(pattern = PresentSimpleGo(), isChosen = false),
-            PatternHolder(pattern = PresentSimplePlay(), isChosen = false),
-            PatternHolder(pattern = PossessivePronounsSecond(), isChosen = false),
+        ) + composePatternHolders(
+            ThisThatTheseThose(),
+            PossessiveCaseOfNouns(),
+            ToBeAdjectivesAffirmative(),
+            ToBeAdjectivesQuestions(),
+            ToBeAdjectivesNegative(),
+            ToBeAdjectivesMixed(),
+            ToBeSpecialQuestions(),
+            VerbToBeArticle(),
+            ThisIsA(),
+            TheNounBe(),
+            PresentSimple(),
+            Ordinals(),
+            TimePrepositionsAt(),
+            TimePrepositionsIn(),
+            TimePrepositionsOn(),
+            TimePrepositionsMixed(),
+            PresentSimpleTimePrepositions(),
+            PresentSimpleFrequencyAdverbs(),
+            PresentSimpleGo(),
+            PresentSimplePlay(),
+            PossessivePronounsSecond(),
+            ObjectPronouns(),
+            PresentSimpleLesson2(),
+            LikeVIng(),
+            BeFondKeenInterestedCrazy(),
+            PresentProcess(),
+            PresentProcess(),
+            PresentTypicalVsPresentProcess(),
         )
     }
+}
+
+private fun composePatternHolders(vararg pattern: Pattern): List<PatternHolder> {
+    return pattern.map { PatternHolder(pattern = it, isChosen = false) }
 }
 
 data class PatternHolder(

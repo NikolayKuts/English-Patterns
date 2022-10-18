@@ -6,15 +6,24 @@ class PatternManager(
 
     private var position: Int = -1
 
-    fun nextPattern(): PatternPair? {
+    fun nextPattern(): PatternPairGroupState? {
         return when {
             patternPairGroup == null -> null
             patternPairGroup.pairs.isEmpty() -> null
             patternPairGroup.pairs.lastIndex <= position -> {
                 position = 0
-                patternPairGroup.pairs[position]
+                PatternPairGroupState(
+                    pair = patternPairGroup.pairs[position],
+                    position = position,
+                    groupSize = patternPairGroup.pairs.size
+                )
             }
-            else -> patternPairGroup.pairs[++position]
+            else ->
+                PatternPairGroupState(
+                    pair = patternPairGroup.pairs[++position],
+                    position = position,
+                    groupSize = patternPairGroup.pairs.size
+                )
         }
     }
 }
