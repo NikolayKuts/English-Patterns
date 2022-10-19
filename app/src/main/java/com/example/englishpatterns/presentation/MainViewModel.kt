@@ -146,6 +146,10 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
             PresentProcess(),
             PresentProcess(),
             PresentTypicalVsPresentProcess(),
+            LocationPrepositions(),
+            ThereIsInstallation(),
+            ThereIsThereArePrepositions(),
+            ManyMuch(),
         )
     }
 }
