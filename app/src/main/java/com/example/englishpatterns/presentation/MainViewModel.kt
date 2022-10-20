@@ -78,7 +78,9 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
             it.filter { holder -> holder.isChosen }
                 .map { holder -> holder.pattern }
                 .map { chosenPattern ->
-                    context.getString(chosenPattern.resId).split("@")
+                    chosenPattern.resIds.map { resId -> context.getString(resId) }
+                        .joinToString(separator = "@")
+                        .split("@")
                         .map { rowPair ->
                             PatternPair(
                                 native = rowPair.substringBefore("=="),
@@ -146,6 +148,38 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
             PresentProcess(),
             PresentProcess(),
             PresentTypicalVsPresentProcess(),
+            LocationPrepositions(),
+            ThereIsInstallation(),
+            ThereIsThereArePrepositions(),
+            ManyMuch(),
+            MuchManyLittleFew(),
+            SomeAnyNo(),
+            PrepositionsInAtToOn(),
+            MovementAroundTheCity(),
+            PrepositionsCityThereIs(),
+            PresentSimpleCity(),
+            PresentSimpleFood(),
+            PresentProcessWorkAndLeisure(),
+            PresentProcessRelationship(),
+            PresentSimpleCont(),
+            PresentSimpleVsPresentProcess(),
+            PresentProcessResult(),
+            ProcessProcessResult(),
+            WasWere(),
+            ThereWasThereWere(),
+            PastTypical(),
+            PastProcess(),
+            PresentResult(),
+            ArticlesGeography(),
+            CountriesAndCities(),
+            ToBeUsedToGetUsedTo(),
+            UsedTo(),
+            AsThingsStandNowAtFirst(),
+            AtLeastInMyOpinion(),
+            InOtherWordsToSayTheTruth(),
+            OnTheContraryAsMatterOfFact(),
+            ThusIfIAmNotMistaken(),
+            VerbsWithPrepositions(),
         )
     }
 }
