@@ -164,4 +164,59 @@ sealed class Pattern(val name: String, @StringRes val resId: Int) {
         name = "Many / much",
         resId = R.string.many_much
     )
+
+    class MuchManyLittleFew : Pattern(
+        name = "Much / many / little / few",
+        resId = R.string.much_many_little_few
+    )
+
+    class SomeAnyNo : Pattern(
+        name = "Some / any / no",
+        resId = R.string.some_any_no
+    )
+
+    class PrepositionsInAtToOn : Pattern(
+        name = "Prepositions in/at, to, on",
+        resId = R.string.prepositions_in_at_to_on
+    )
+
+    class MovementAroundTheCity : Pattern(
+    name = "Movement around the city",
+    resId = R.string.movement_around_the_city
+    )
+
+    class PrepositionsCityThereIs : Pattern(
+        name = "Prepositions City there is",
+        resId = R.string.prepositions_city_there_is
+    )
+
+    class PresentSimpleCity : Pattern(
+        name = "Present simple CITY",
+        resId = R.string.present_simple_city
+    )
+
+    class PresentSimpleFood : Pattern(
+        name = "Present Simple Food",
+        resId = R.string.present_simple_food
+    )
+
+    class PresentProcessWorkAndLeisure : Pattern(
+    name = "Present Process WORK and LEISURE",
+    resId = R.string.present_process_work_and_leisure
+    )
+
+    class PresentProcessRelationship : Pattern(
+        name = "Present Process + Relationship",
+        resId = R.string.present_process_relationship
+    )
+
+    class PresentSimpleCont : Pattern(
+        name = "Present simple cont.",
+        resId = R.string.present_simple_cont
+    )
+
+    class PresentSimpleVsPresentProcess : Pattern(
+        name = "Present Simple vs Present Process",
+        resId = R.string.present_simple_vs_present_process
+    )
 }

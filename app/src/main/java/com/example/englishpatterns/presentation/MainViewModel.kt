@@ -150,6 +150,17 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
             ThereIsInstallation(),
             ThereIsThereArePrepositions(),
             ManyMuch(),
+            MuchManyLittleFew(),
+            SomeAnyNo(),
+            PrepositionsInAtToOn(),
+            MovementAroundTheCity(),
+            PrepositionsCityThereIs(),
+            PresentSimpleCity(),
+            PresentSimpleFood(),
+            PresentProcessWorkAndLeisure(),
+            PresentProcessRelationship(),
+            PresentSimpleCont(),
+            PresentSimpleVsPresentProcess(),
         )
     }
 }
