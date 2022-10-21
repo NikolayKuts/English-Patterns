@@ -304,4 +304,59 @@ sealed class Pattern(val name: String, @StringRes vararg val resIds: Int) {
         name = "Verbs with prepositions",
         resIds = intArrayOf(R.string.verbs_with_prepositions_1, R.string.verbs_with_prepositions_2)
     )
+
+    class FutureSimpleForBeginner : Pattern(
+        name = "Future Simple for beginner",
+        resIds = intArrayOf(R.string.future_simple_for_beginner)
+    )
+
+    class FutureSimpleWillV : Pattern(
+        name = "Future simple will+V",
+        resIds = intArrayOf(R.string.future_simple_will_v)
+    )
+
+    class Plan100Percents : Pattern(
+        name = "Plan 100%",
+        resIds = intArrayOf(R.string.plan_100)
+    )
+
+    class Plan50Percents : Pattern(
+        name = "Plan 50%",
+        resIds = intArrayOf(R.string.plan_50)
+    )
+
+    class FutureProcess : Pattern(
+        name = "Future Process",
+        resIds = intArrayOf(R.string.future_process)
+    )
+
+    class ZeroConditional : Pattern(
+        name = "Zero conditional",
+        resIds = intArrayOf(R.string.zero_conditional)
+    )
+
+    class TheFirstConditional : Pattern(
+        name = "The First Conditional",
+        resIds = intArrayOf(R.string.the_first_conditional)
+    )
+
+    class SecondConditional : Pattern(
+        name = "Second conditional",
+        resIds = intArrayOf(R.string.second_conditional)
+    )
+
+    class ThirdConditional : Pattern(
+        name = "Third conditional",
+        resIds = intArrayOf(R.string.third_conditional)
+    )
+
+    class UsingWish : Pattern(
+        name = "Using \"Wish\"",
+        resIds = intArrayOf(R.string.using_wish)
+    )
+
+    class ThereVerb : Pattern(
+        name = "There + verb",
+        resIds = intArrayOf(R.string.there_verb)
+    )
 }
