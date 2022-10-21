@@ -359,4 +359,94 @@ sealed class Pattern(val name: String, @StringRes vararg val resIds: Int) {
         name = "There + verb",
         resIds = intArrayOf(R.string.there_verb)
     )
+
+    class AdjectivesMore : Pattern(
+        name = "Adjectives more adj. / __er",
+        resIds = intArrayOf(R.string.adjectives_more)
+    )
+
+    class AdjectivesTheMost : Pattern(
+        name = "Adjectives the most adj. / the __est",
+        resIds = intArrayOf(R.string.adjectives_the_most)
+    )
+
+    class GoodBadFarOld : Pattern(
+        name = "good/bad/far/old",
+        resIds = intArrayOf(R.string.good_bad_far_old)
+    )
+
+    class AsAs : Pattern(
+        name = "as …. as",
+        resIds = intArrayOf(R.string.as_as)
+    )
+
+    class NotSoAsNotAsAs : Pattern(
+        name = "not so … as/ not as ... as",
+        resIds = intArrayOf(R.string.not_so_as_not_as_as)
+    )
+
+    class TwiceTimesAsAs : Pattern(
+        name = "twice / 3 times as….as",
+        resIds = intArrayOf(R.string.twice_times_as_as)
+    )
+
+    class TheSameAs : Pattern(
+        name = "The same…as",
+        resIds = intArrayOf(R.string.the_same_as)
+    )
+
+    class TheThe : Pattern(
+        name = "The...  the",
+        resIds = intArrayOf(R.string.the_the)
+    )
+
+    class AdjectivesComparativeCity : Pattern(
+        name = "Adjectives - Comparative (City)",
+        resIds = intArrayOf(R.string.adjectives_comparative_city)
+    )
+
+    class ComparativeAndSuperlativeDegreesOfAdjectives : Pattern(
+        name = "Comparative and superlative degrees of adjectives",
+        resIds = intArrayOf(R.string.comparative_and_superlative_degrees_of_adjectives)
+    )
+
+    class ModalVerbCan : Pattern(
+        name = "Modal verb CAN",
+        resIds = intArrayOf(R.string.modal_verb_can)
+    )
+
+    class Could : Pattern(
+        name = "Could",
+        resIds = intArrayOf(R.string.could)
+    )
+
+    class HaveTo : Pattern(
+        name = "Have to",
+        resIds = intArrayOf(R.string.have_to)
+    )
+
+    class CanMayMustHaveTo : Pattern(
+        name = "Can, May, Must, Have to",
+        resIds = intArrayOf(R.string.can_may_must_have_to)
+    )
+
+    class HadToWillHaveTo : Pattern(
+        name= "Had to & Will have to",
+        resIds = intArrayOf(R.string.had_to_will_have_to)
+    )
+
+    class Gotta : Pattern(
+        name = "Gotta",
+        resIds = intArrayOf(R.string.gotta)
+    )
+
+    class GonnaGoingTo : Pattern(
+        name = "Gonna = going to",
+        resIds = intArrayOf(R.string.gonna_going_to)
+    )
+
+    class ModalProbabilities : Pattern(
+        name = "Modal probabilities",
+        resIds = intArrayOf(R.string.modal_probabilities)
+    )
 }
