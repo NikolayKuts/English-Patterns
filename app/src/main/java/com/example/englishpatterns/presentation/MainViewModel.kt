@@ -33,6 +33,7 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
         when (event) {
             Event.DisplayMainScreen -> {
                 _state.value = State.InitialState(patternHolderSource = patternHolders)
+                currentPatter.value = null
             }
             Event.NavigateToPatternPracticing -> {
                 _state.value = State.PatternPracticingState(
@@ -146,7 +147,6 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
             LikeVIng(),
             BeFondKeenInterestedCrazy(),
             PresentProcess(),
-            PresentProcess(),
             PresentTypicalVsPresentProcess(),
             LocationPrepositions(),
             ThereIsInstallation(),
@@ -180,6 +180,35 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
             OnTheContraryAsMatterOfFact(),
             ThusIfIAmNotMistaken(),
             VerbsWithPrepositions(),
+            FutureSimpleForBeginner(),
+            FutureSimpleWillV(),
+            Plan100Percents(),
+            Plan50Percents(),
+            FutureProcess(),
+            ZeroConditional(),
+            TheFirstConditional(),
+            SecondConditional(),
+            ThirdConditional(),
+            UsingWish(),
+            ThereVerb(),
+            AdjectivesMore(),
+            AdjectivesTheMost(),
+            GoodBadFarOld(),
+            AsAs(),
+            NotSoAsNotAsAs(),
+            TwiceTimesAsAs(),
+            TheSameAs(),
+            TheThe(),
+            AdjectivesComparativeCity(),
+            ComparativeAndSuperlativeDegreesOfAdjectives(),
+            ModalVerbCan(),
+            Could(),
+            HaveTo(),
+            CanMayMustHaveTo(),
+            HadToWillHaveTo(),
+            Gotta(),
+            GonnaGoingTo(),
+            ModalProbabilities(),
         )
     }
 }
