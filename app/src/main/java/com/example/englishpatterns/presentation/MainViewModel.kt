@@ -32,6 +32,7 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
     fun sendEvent(event: Event) {
         when (event) {
             Event.DisplayMainScreen -> {
+                patternHolders.value = getPatternHolders()
                 _state.value = State.InitialState(patternHolderSource = patternHolders)
                 currentPatter.value = null
             }
