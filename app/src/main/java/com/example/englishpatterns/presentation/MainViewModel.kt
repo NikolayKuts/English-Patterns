@@ -1,16 +1,21 @@
 package com.example.englishpatterns.presentation
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
+import androidx.datastore.core.DataStore
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.englishpatterns.data.PatternHolders
 import com.example.englishpatterns.domain.*
-import com.example.englishpatterns.domain.Pattern.*
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-class MainViewModel(private val context: Application) : AndroidViewModel(context) {
+class MainViewModel(
+    private val context: Application,
+    private val dataStore: DataStore<PatternHolders>,
+) : ViewModel() {
 
-    private val patternHolders = MutableStateFlow(value = getPatternHolders())
+    private val patternHolders = MutableStateFlow<PatternHolders?>(value = null)
     private val chosenPatterns = getChosenPatterns()
     private val chosenPatternPairGroups =
         MutableStateFlow<List<PatternPairGroup>>(value = emptyList())
@@ -27,12 +32,17 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
 
     init {
         observeChosenPatterns()
+        viewModelScope.launch(Dispatchers.IO) {
+            dataStore.data.collect { holders ->
+                patternHolders.value = holders
+            }
+        }
     }
 
     fun sendEvent(event: Event) {
         when (event) {
             Event.DisplayMainScreen -> {
-                patternHolders.value = getPatternHolders()
+//                patternHolders.value = getPatternHolders()
                 _state.value = State.InitialState(patternHolderSource = patternHolders)
                 currentPatter.value = null
             }
@@ -76,10 +86,10 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
     }
 
     private fun getChosenPatterns(): Flow<List<PatternPair>> {
-        return patternHolders.map {
-            it.filter { holder -> holder.isChosen }
-                .map { holder -> holder.pattern }
-                .map { chosenPattern ->
+        return patternHolders.map { patternHolders ->
+            patternHolders?.holders?.filter { holder -> holder.isChosen }
+                ?.map { holder -> holder.pattern }
+                ?.map { chosenPattern ->
                     chosenPattern.resIds.map { resId -> context.getString(resId) }
                         .joinToString(separator = "@")
                         .split("@")
@@ -89,7 +99,8 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
                                 translation = rowPair.substringAfter("==")
                             )
                         }
-                }.flatten()
+                }?.flatten()
+                ?: emptyList()
         }
     }
 
@@ -112,126 +123,14 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
         )
 
     private fun changePatterHolderChoosingState(position: Int, patternHolder: PatternHolder) {
-        patternHolders.update { holders ->
-            holders.toMutableList()
-                .apply { this[position] = patternHolder.copy(isChosen = !patternHolder.isChosen) }
+        viewModelScope.launch(Dispatchers.IO) {
+            dataStore.updateData { patternHolders ->
+                val updatedHolders = patternHolders.holders.toMutableList()
+                    .apply {
+                        this[position] = patternHolder.copy(isChosen = !patternHolder.isChosen)
+                    }
+                PatternHolders(holders = updatedHolders)
+            }
         }
     }
-
-    private fun getPatternHolders(): List<PatternHolder> {
-        return listOf(
-            PatternHolder(pattern = PossessivePronouns(), isChosen = true),
-        ) + composePatternHolders(
-            ThisThatTheseThose(),
-            PossessiveCaseOfNouns(),
-            ToBeAdjectivesAffirmative(),
-            ToBeAdjectivesQuestions(),
-            ToBeAdjectivesNegative(),
-            ToBeAdjectivesMixed(),
-            ToBeSpecialQuestions(),
-            VerbToBeArticle(),
-            ThisIsA(),
-            TheNounBe(),
-            PresentSimple(),
-            Ordinals(),
-            TimePrepositionsAt(),
-            TimePrepositionsIn(),
-            TimePrepositionsOn(),
-            TimePrepositionsMixed(),
-            PresentSimpleTimePrepositions(),
-            PresentSimpleFrequencyAdverbs(),
-            PresentSimpleGo(),
-            PresentSimplePlay(),
-            PossessivePronounsSecond(),
-            ObjectPronouns(),
-            PresentSimpleLesson2(),
-            LikeVIng(),
-            BeFondKeenInterestedCrazy(),
-            PresentProcess(),
-            PresentTypicalVsPresentProcess(),
-            LocationPrepositions(),
-            ThereIsInstallation(),
-            ThereIsThereArePrepositions(),
-            ManyMuch(),
-            MuchManyLittleFew(),
-            SomeAnyNo(),
-            PrepositionsInAtToOn(),
-            MovementAroundTheCity(),
-            PrepositionsCityThereIs(),
-            PresentSimpleCity(),
-            PresentSimpleFood(),
-            PresentProcessWorkAndLeisure(),
-            PresentProcessRelationship(),
-            PresentSimpleCont(),
-            PresentSimpleVsPresentProcess(),
-            PresentProcessResult(),
-            ProcessProcessResult(),
-            WasWere(),
-            ThereWasThereWere(),
-            PastTypical(),
-            PastProcess(),
-            PresentResult(),
-            ArticlesGeography(),
-            CountriesAndCities(),
-            ToBeUsedToGetUsedTo(),
-            UsedTo(),
-            AsThingsStandNowAtFirst(),
-            AtLeastInMyOpinion(),
-            InOtherWordsToSayTheTruth(),
-            OnTheContraryAsMatterOfFact(),
-            ThusIfIAmNotMistaken(),
-            VerbsWithPrepositions(),
-            FutureSimpleForBeginner(),
-            FutureSimpleWillV(),
-            Plan100Percents(),
-            Plan50Percents(),
-            FutureProcess(),
-            ZeroConditional(),
-            TheFirstConditional(),
-            SecondConditional(),
-            ThirdConditional(),
-            UsingWish(),
-            ThereVerb(),
-            AdjectivesMore(),
-            AdjectivesTheMost(),
-            GoodBadFarOld(),
-            AsAs(),
-            NotSoAsNotAsAs(),
-            TwiceTimesAsAs(),
-            TheSameAs(),
-            TheThe(),
-            AdjectivesComparativeCity(),
-            ComparativeAndSuperlativeDegreesOfAdjectives(),
-            ModalVerbCan(),
-            Could(),
-            HaveTo(),
-            CanMayMustHaveTo(),
-            HadToWillHaveTo(),
-            Gotta(),
-            GonnaGoingTo(),
-            ModalProbabilities(),
-            PresentSimplePassive(),
-            PastSimplePassive(),
-            PresentTypicalPassiveFood(),
-            Passive(),
-            WouldLikeTo(),
-            Shall(),
-            ArticlesFood(),
-            AtRestaurant(),
-            Pronouns(),
-            Gerund(),
-            Infinitive(),
-            SomethingAnythingNothing(),
-            TheOtherAnother(),
-        )
-    }
 }
-
-private fun composePatternHolders(vararg pattern: Pattern): List<PatternHolder> {
-    return pattern.map { PatternHolder(pattern = it, isChosen = false) }
-}
-
-data class PatternHolder(
-    val pattern: Pattern,
-    val isChosen: Boolean,
-)

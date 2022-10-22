@@ -46,8 +46,7 @@ fun PatternPracticingScreen(
             ) {
                 Text(text = "Groups ->")
                 Spacer(modifier = Modifier.width(16.dp))
-                LazyRow(
-                ) {
+                LazyRow {
                     itemsIndexed(items = groups) { index, pairGroup ->
                         Card(
                             modifier = Modifier
