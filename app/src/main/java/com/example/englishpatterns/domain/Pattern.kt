@@ -449,4 +449,69 @@ sealed class Pattern(val name: String, @StringRes vararg val resIds: Int) {
         name = "Modal probabilities",
         resIds = intArrayOf(R.string.modal_probabilities)
     )
+
+    class PresentSimplePassive : Pattern(
+        name = "Present Simple Passive",
+        resIds = intArrayOf(R.string.present_simple_passive)
+    )
+
+    class PastSimplePassive : Pattern(
+        name = "Past Simple Passive",
+        resIds = intArrayOf(R.string.past_simple_passive)
+    )
+
+    class PresentTypicalPassiveFood : Pattern(
+        name = "Present Typical Passive (Food)",
+        resIds = intArrayOf(R.string.present_typical_passive_food)
+    )
+
+    class Passive : Pattern(
+        name = "Passive",
+        resIds = intArrayOf(R.string.passive)
+    )
+
+    class WouldLikeTo : Pattern(
+        name = "Would like to",
+        resIds = intArrayOf(R.string.would_like_to)
+    )
+
+    class Shall : Pattern(
+        name = "Shall",
+        resIds = intArrayOf(R.string.shall)
+    )
+
+    class ArticlesFood : Pattern(
+        name = "Articles food",
+        resIds = intArrayOf(R.string.articles_food)
+    )
+
+    class AtRestaurant : Pattern(
+        name = "At a restaurant",
+        resIds = intArrayOf(R.string.at_restaurant)
+    )
+
+    class Pronouns : Pattern(
+        name = "Pronouns",
+        resIds = intArrayOf(R.string.pronouns)
+    )
+
+    class Gerund : Pattern(
+        name = "Gerund",
+        resIds = intArrayOf(R.string.gerund)
+    )
+
+    class Infinitive : Pattern(
+        name = "Infinitive",
+        resIds = intArrayOf(R.string.infinitive)
+    )
+
+    class SomethingAnythingNothing : Pattern(
+        name = "Something / anything / nothing",
+        resIds = intArrayOf(R.string.something_anything_nothing)
+    )
+
+    class TheOtherAnother : Pattern(
+        name = "The other / another",
+        resIds = intArrayOf(R.string.the_other_another)
+    )
 }

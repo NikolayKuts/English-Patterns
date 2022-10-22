@@ -209,6 +209,19 @@ class MainViewModel(private val context: Application) : AndroidViewModel(context
             Gotta(),
             GonnaGoingTo(),
             ModalProbabilities(),
+            PresentSimplePassive(),
+            PastSimplePassive(),
+            PresentTypicalPassiveFood(),
+            Passive(),
+            WouldLikeTo(),
+            Shall(),
+            ArticlesFood(),
+            AtRestaurant(),
+            Pronouns(),
+            Gerund(),
+            Infinitive(),
+            SomethingAnythingNothing(),
+            TheOtherAnother(),
         )
     }
 }
