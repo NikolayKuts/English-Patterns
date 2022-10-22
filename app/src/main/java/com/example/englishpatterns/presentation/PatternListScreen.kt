@@ -11,15 +11,13 @@ import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
-import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.example.englishpatterns.domain.PatternHolder
 
 const val PatternListDestination = "pattern_list_screen"
 
@@ -31,7 +29,7 @@ fun PatternListScreen(
     onStartButtonClick: () -> Unit,
 ) {
     val state = viewModel.state.collectAsState().value as? State.InitialState ?: return
-    val patternHolders by state.patternHolderSource.collectAsState()
+    val patternHolders = state.patternHolderSource.collectAsState().value ?: return
 
     Column(
         modifier = Modifier.fillMaxSize()
@@ -43,7 +41,7 @@ fun PatternListScreen(
                 .padding(start = 6.dp, end = 6.dp)
         ) {
             stickyHeader {
-                val count = patternHolders.count { patternHolder -> patternHolder.isChosen }
+                val count = patternHolders.holders.count { patternHolder -> patternHolder.isChosen }
                 Text(
                     modifier = Modifier
                         .padding(4.dp)
@@ -55,7 +53,7 @@ fun PatternListScreen(
                     textAlign = TextAlign.Center
                 )
             }
-            itemsIndexed(items = patternHolders) { index, holder ->
+            itemsIndexed(items = patternHolders.holders) { index, holder ->
                 Text(
                     text = holder.pattern.name,
                     modifier = Modifier
