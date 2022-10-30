@@ -14,4 +14,5 @@ sealed class Event {
     data class ChangePairGroupChoosingState(val position: Int) : Event()
     object NextPatterPair : Event()
     object ShufflePatternPairs : Event()
+    object SelectAllPairs : Event()
 }

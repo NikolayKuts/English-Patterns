@@ -82,6 +82,17 @@ class MainViewModel(
                 )
                 currentPatter.value = patternManager.nextPattern()
             }
+            Event.SelectAllPairs -> {
+                chosenPatternPairGroups.update { patternPairGroups ->
+                    patternPairGroups.map { it.copy(isChosen = true) }
+                }
+
+                patternManager = PatternManager(
+                    patternPairGroup = chosenPatternPairGroups.value.filter { it.isChosen }
+                        .mapToSingleGroup()
+                )
+                currentPatter.value = patternManager.nextPattern()
+            }
         }
     }
 

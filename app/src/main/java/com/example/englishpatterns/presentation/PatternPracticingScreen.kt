@@ -78,9 +78,22 @@ fun PatternPracticingScreen(
             val sizeText = if (size == -1) "" else " / $size"
             val progress = "$positionText$sizeText"
 
-            Text(
-                modifier = Modifier.padding(start = 28.dp),
-                text = progress)
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    modifier = Modifier.padding(start = 28.dp),
+                    text = progress
+                )
+                Button(
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFB38481)),
+                    onClick = { viewModel.sendEvent(event = Event.SelectAllPairs) }
+                ) {
+                    Text(text = "Select all")
+                }
+            }
         }
 
         Column(
