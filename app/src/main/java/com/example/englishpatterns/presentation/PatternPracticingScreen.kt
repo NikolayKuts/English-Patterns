@@ -1,19 +1,23 @@
 package com.example.englishpatterns.presentation
 
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.DisposableEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
+import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.Card
+import androidx.compose.material.Text
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
@@ -96,8 +100,25 @@ fun PatternPracticingScreen(
             }
         }
 
+        val position = currentPatternGroupState?.position ?: -1
+        var rotationState by remember {
+            mutableStateOf(true)
+        }
+        LaunchedEffect(key1 = position) {
+            if (position == 0) {
+                rotationState = !rotationState
+            }
+        }
+
+        val rotation by animateFloatAsState(
+            targetValue = if (rotationState) 0F else 360F,
+            animationSpec = tween(durationMillis = 500, easing = LinearEasing),
+        )
+
         Column(
-            modifier = Modifier.align(Alignment.Center),
+            modifier = Modifier
+                .align(Alignment.Center)
+                .graphicsLayer { rotationY = rotation },
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
@@ -127,10 +148,10 @@ fun PatternPracticingScreen(
             Button(
                 modifier = Modifier.fillMaxWidth(),
                 colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF91AA74)),
-                onClick = { viewModel.sendEvent(event = Event.NextPatterPair) }) {
+                onClick = { viewModel.sendEvent(event = Event.NextPatterPair) },
+            ) {
                 Text(text = "Next")
             }
         }
-
     }
 }
