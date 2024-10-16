@@ -9,10 +9,11 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.Card
-import androidx.compose.material.Text
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -61,8 +62,13 @@ fun PatternPracticingScreen(
                                         event = Event.ChangePairGroupChoosingState(position = index)
                                     )
                                 },
-                            backgroundColor = if (pairGroup.isChosen) Color(0xFF9EBE79)
-                            else Color(0x228BC34A),
+                            colors = CardDefaults.cardColors(
+                                containerColor = if (pairGroup.isChosen) {
+                                    Color(0xFF9EBE79)
+                                } else {
+                                    Color(0x228BC34A)
+                                },
+                            ),
                             shape = RoundedCornerShape(size = 5.dp),
                             border = BorderStroke(width = 1.dp, color = Color(0xF0CFCFCF)),
                         ) {
@@ -92,7 +98,7 @@ fun PatternPracticingScreen(
                     text = progress
                 )
                 Button(
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFB38481)),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFB38481)),
                     onClick = { viewModel.sendEvent(event = Event.SelectAllPairs) }
                 ) {
                     Text(text = "Select all")
@@ -141,13 +147,13 @@ fun PatternPracticingScreen(
         ) {
             Button(
                 onClick = { viewModel.sendEvent(event = Event.ShufflePatternPairs) },
-                colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFB38481)),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFB38481)),
             ) {
                 Text(text = "Shuffle")
             }
             Button(
                 modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFF91AA74)),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF91AA74)),
                 onClick = { viewModel.sendEvent(event = Event.NextPatterPair) },
             ) {
                 Text(text = "Next")
