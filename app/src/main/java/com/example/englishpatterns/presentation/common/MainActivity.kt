@@ -18,7 +18,6 @@ import com.example.englishpatterns.data.PatternHoldersSerializer
 import com.example.englishpatterns.presentation.collectWhenStarted
 import com.example.englishpatterns.presentation.navigation.AppNavGraph
 import com.example.englishpatterns.presentation.navigation.Screen
-import com.example.englishpatterns.presentation.patternPractisingScreen.PatternListScreen
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingAction
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingScreen
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingState
@@ -53,7 +52,7 @@ class MainActivity : ComponentActivity() {
                     AppNavGraph(
                         navHostController = navController,
                         mainScreenContent = {
-                            PatternListScreen(
+                            MainScreen(
                                 state = viewModel.state.collectAsState().value,
                                 sendAction = viewModel::sendAction
                             )
