@@ -76,4 +76,7 @@ dependencies {
 
     /** Kotlin Serialization **/
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+
+    /** LoKdroid **/
+    implementation("io.github.nikolaykuts:lokdroid:0.0.4-alpha")
 }

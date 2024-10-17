@@ -1,36 +1,36 @@
-package com.example.englishpatterns.presentation
+package com.example.englishpatterns.presentation.patternPractisingScreen
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.example.englishpatterns.domain.PatternHolder
-
-const val PatternListDestination = "pattern_list_screen"
+import com.example.englishpatterns.presentation.common.MainAction
+import com.example.englishpatterns.presentation.common.MainState
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun PatternListScreen(
-    viewModel: MainViewModel,
-    onItemClick: (position: Int, patternHolder: PatternHolder) -> Unit,
-    onStartButtonClick: () -> Unit,
+    state: MainState,
+    sendAction: (action: MainAction) -> Unit,
 ) {
-    val state = viewModel.state.collectAsState().value as? State.InitialState ?: return
-    val patternHolders = state.patternHolderSource.collectAsState().value ?: return
-
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -41,7 +41,7 @@ fun PatternListScreen(
                 .padding(start = 6.dp, end = 6.dp)
         ) {
             stickyHeader {
-                val count = patternHolders.holders.count { patternHolder -> patternHolder.isChosen }
+                val count = state.rowPatternGroupHolders.content.count { patternHolder -> patternHolder.isChosen }
                 Text(
                     modifier = Modifier
                         .padding(4.dp)
@@ -53,12 +53,14 @@ fun PatternListScreen(
                     textAlign = TextAlign.Center
                 )
             }
-            itemsIndexed(items = patternHolders.holders) { index, holder ->
+            itemsIndexed(items = state.rowPatternGroupHolders.content) { index, holder ->
                 Text(
-                    text = holder.pattern.name,
+                    text = holder.rawPatternGroup.name,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clickable { onItemClick(index, holder) }
+                        .clickable {
+                            sendAction(MainAction.ChangePatterHolderChoosingState(index, holder))
+                        }
                         .clip(shape = RoundedCornerShape(4.dp))
                         .background(
                             when (holder.isChosen) {
@@ -73,7 +75,9 @@ fun PatternListScreen(
         }
         Button(
             modifier = Modifier.fillMaxWidth(),
-            onClick = onStartButtonClick
+            onClick = {
+                sendAction(MainAction.NavigateToPatternPracticing)
+            }
         ) {
             Text(text = "start")
         }
