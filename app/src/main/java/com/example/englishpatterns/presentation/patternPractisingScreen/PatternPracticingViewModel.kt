@@ -4,8 +4,8 @@ import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.englishpatterns.domain.PatternManager
 import com.example.englishpatterns.domain.PatternGroupUnitState
+import com.example.englishpatterns.domain.PatternManager
 import com.example.englishpatterns.domain.RawPatternGroup
 import com.example.englishpatterns.presentation.common.BaseViewModel
 import com.lib.lokdroid.core.logD
@@ -79,7 +79,7 @@ class PatternPracticingViewModel(
                 currentPatterState.value = patternManager.nextPattern()
             }
 
-            PatternPracticingAction.SelectAllPairs -> {
+            PatternPracticingAction.SelectAllPatternGroups -> {
                 chosenPatternGroupHoldersSate.update { patternPairGroups ->
                     patternPairGroups.map { it.copy(isChosen = true) }
                 }
@@ -89,6 +89,10 @@ class PatternPracticingViewModel(
                         .mapToSingleGroup()
                 )
                 currentPatterState.value = patternManager.nextPattern()
+            }
+
+            PatternPracticingAction.SelectNextPatternGroup -> {
+                manageSelectingNextPatternGroup()
             }
         }
     }
@@ -120,6 +124,19 @@ class PatternPracticingViewModel(
         PatternGroupsHolder(
             patterns = this.map { it.patterns.shuffled() }.shuffled().flatten().shuffled()
         )
+
+    private fun manageSelectingNextPatternGroup() {
+        val chosenPatternsGroupHolders = chosenPatternGroupHoldersSate.value
+        val currentIndex = chosenPatternsGroupHolders.indexOfLast { it.isChosen }
+
+        if (chosenPatternsGroupHolders.isEmpty()) return
+
+        chosenPatternGroupHoldersSate.update {
+            it.mapIndexed { index, patternGroupHolder ->
+                patternGroupHolder.copy(isChosen = index == (currentIndex + 1) % it.size)
+            }
+        }
+    }
 
 
     class Factory(
