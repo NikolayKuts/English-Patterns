@@ -5,28 +5,27 @@ import kotlinx.serialization.json.Json
 import java.io.InputStream
 import java.io.OutputStream
 
-
 @Suppress("BlockingMethodInNonBlockingContext")
-class PatternHoldersSerializer : androidx.datastore.core.Serializer<PatternHolders> {
+class PatternHoldersSerializer : androidx.datastore.core.Serializer<RowPatternGroupHolders> {
 
-    override val defaultValue: PatternHolders = PatternHolders()
+    override val defaultValue: RowPatternGroupHolders = RowPatternGroupHolders()
 
-    override suspend fun readFrom(input: InputStream): PatternHolders {
+    override suspend fun readFrom(input: InputStream): RowPatternGroupHolders {
         return try {
             Json.decodeFromString(
-                deserializer = PatternHolders.serializer(),
+                deserializer = RowPatternGroupHolders.serializer(),
                 string = input.readBytes().decodeToString()
             )
         } catch (e: SerializationException) {
             e.printStackTrace()
-            PatternHolders()
+            RowPatternGroupHolders()
         }
     }
 
-    override suspend fun writeTo(t: PatternHolders, output: OutputStream) {
+    override suspend fun writeTo(t: RowPatternGroupHolders, output: OutputStream) {
         output.write(
             Json.encodeToString(
-                serializer = PatternHolders.serializer(),
+                serializer = RowPatternGroupHolders.serializer(),
                 value = t
             ).encodeToByteArray()
         )

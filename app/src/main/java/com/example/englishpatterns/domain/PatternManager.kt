@@ -1,28 +1,30 @@
 package com.example.englishpatterns.domain
 
+import com.example.englishpatterns.presentation.patternPractisingScreen.PatternGroupsHolder
+
 class PatternManager(
-    private val patternPairGroup: PatternPairGroup? = null,
+    private val patternGroupsHolder: PatternGroupsHolder? = null,
 ) {
 
     private var position: Int = -1
 
-    fun nextPattern(): PatternPairGroupState? {
+    fun nextPattern(): PatternGroupUnitState? {
         return when {
-            patternPairGroup == null -> null
-            patternPairGroup.pairs.isEmpty() -> null
-            patternPairGroup.pairs.lastIndex <= position -> {
+            patternGroupsHolder == null -> null
+            patternGroupsHolder.patterns.isEmpty() -> null
+            patternGroupsHolder.patterns.lastIndex <= position -> {
                 position = 0
-                PatternPairGroupState(
-                    pair = patternPairGroup.pairs[position],
+                PatternGroupUnitState(
+                    pair = patternGroupsHolder.patterns[position],
                     position = position,
-                    groupSize = patternPairGroup.pairs.size
+                    groupSize = patternGroupsHolder.patterns.size
                 )
             }
             else ->
-                PatternPairGroupState(
-                    pair = patternPairGroup.pairs[++position],
+                PatternGroupUnitState(
+                    pair = patternGroupsHolder.patterns[++position],
                     position = position,
-                    groupSize = patternPairGroup.pairs.size
+                    groupSize = patternGroupsHolder.patterns.size
                 )
         }
     }

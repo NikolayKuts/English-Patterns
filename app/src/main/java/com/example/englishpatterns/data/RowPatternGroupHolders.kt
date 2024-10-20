@@ -1,18 +1,18 @@
 package com.example.englishpatterns.data
 
-import com.example.englishpatterns.domain.Pattern
-import com.example.englishpatterns.domain.Pattern.*
-import com.example.englishpatterns.domain.PatternHolder
+import com.example.englishpatterns.domain.RawPatternGroup
+import com.example.englishpatterns.domain.RawPatternGroup.*
+import com.example.englishpatterns.domain.RawPatternGroupHolder
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class PatternHolders(
-    val holders: List<PatternHolder> = getDefaultHolders(),
+data class RowPatternGroupHolders(
+    val content: List<RawPatternGroupHolder> = getDefaultHolders(),
 )
 
-private fun getDefaultHolders(): List<PatternHolder> = listOf(
-    PatternHolder(pattern = PossessivePronouns(), isChosen = true),
-) + composeDefaultPatternHolders(
+private fun getDefaultHolders(): List<RawPatternGroupHolder> = listOf(
+    RawPatternGroupHolder(rawPatternGroup = PossessivePronouns(), isChosen = true),
+) + composedDefaultRawPatternGroupHolders(
     ThisThatTheseThose(),
     PossessiveCaseOfNouns(),
     ToBeAdjectivesAffirmative(),
@@ -116,6 +116,8 @@ private fun getDefaultHolders(): List<PatternHolder> = listOf(
     TheOtherAnother(),
 )
 
-private fun composeDefaultPatternHolders(vararg pattern: Pattern): List<PatternHolder> {
-    return pattern.map { PatternHolder(pattern = it, isChosen = false) }
+private fun composedDefaultRawPatternGroupHolders(
+    vararg rawPatternGroup: RawPatternGroup
+): List<RawPatternGroupHolder> {
+    return rawPatternGroup.map { RawPatternGroupHolder(rawPatternGroup = it, isChosen = false) }
 }

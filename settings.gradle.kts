@@ -12,5 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
 rootProject.name = "English Patterns"
-include ':app'
+include(":app")
