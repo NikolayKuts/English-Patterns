@@ -4,10 +4,12 @@ import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -34,12 +36,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.englishpatterns.ui.theme.EnglishPatternsTheme
+import com.lib.lokdroid.core.logE
 
 @Composable
 fun PatternPracticingScreen(
@@ -64,7 +68,10 @@ fun PatternPracticingScreen(
                 Spacer(modifier = Modifier.width(16.dp))
 
                 LazyRow {
-                    groupItems(state = state, sendAction = sendAction)
+                    groupItems(
+                        patternGroupHolders = state.patternGroupHolders,
+                        sendAction = sendAction
+                    )
                 }
             }
 
@@ -106,82 +113,42 @@ fun PatternPracticingScreen(
             }
         }
 
-        val position = state.currentPattern?.position ?: -1
-        var rotationState by remember {
-            mutableStateOf(true)
-        }
-        LaunchedEffect(key1 = position) {
-            if (position == 0) {
-                rotationState = !rotationState
-            }
-        }
+        PatternContent(state = state)
 
-        val rotation by animateFloatAsState(
-            targetValue = if (rotationState) 0F else 360F,
-            animationSpec = tween(durationMillis = 500, easing = LinearEasing),
-        )
-
-        Column(
-            modifier = Modifier
-                .align(Alignment.Center)
-                .graphicsLayer { rotationY = rotation },
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text(
-                text = state.currentPattern?.pair?.native ?: "select groups",
-                color = Color(0xFFC5CC85),
-                textAlign = TextAlign.Center
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            Text(
-                text = state.currentPattern?.pair?.translation ?: "",
-                color = Color(0xFF7ABCC5),
-                textAlign = TextAlign.Center
-            )
-        }
-
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .align(Alignment.BottomCenter),
-        ) {
-            Button(
-                onClick = { sendAction(PatternPracticingAction.ShufflePatternPairs) },
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFB38481)),
-            ) {
-                Text(text = "Shuffle")
-            }
-            Button(
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF91AA74)),
-                onClick = { sendAction(PatternPracticingAction.NextPatterPair) },
-            ) {
-                Text(text = "Next")
-            }
-        }
+        BottomContent(sendAction = sendAction)
     }
 }
 
 private fun LazyListScope.groupItems(
-    state: PatternPracticingState,
+    patternGroupHolders: List<PatternGroupHolder>,
     sendAction: (PatternPracticingAction) -> Unit
 ) {
-    itemsIndexed(items = state.patternGroupHolders) { index, pairGroup ->
+    logE("WEAK -> $patternGroupHolders")
+
+    itemsIndexed(items = patternGroupHolders) { index, patternGroupHolder ->
+        val itemBackground: Color = if (patternGroupHolder.isWeaklyMemorized) {
+            Color(0xBFC96D65)
+        } else {
+            Color.Transparent
+        }
+
         Box(
             modifier = Modifier
                 .clickable {
                     sendAction(
-                        PatternPracticingAction.ChangePairGroupChoosingState(position = index)
+                        PatternPracticingAction.ChangePatternGroupHolderChoosingState(position = index)
                     )
                 }
                 .defaultMinSize(minHeight = 30.dp, minWidth = 20.dp)
                 .border(
                     width = 2.dp,
-                    color = if (pairGroup.isChosen)
+                    color = if (patternGroupHolder.isChosen)
                         Color(0xFF8DA96D) else
                         Color(0xFF535650),
                     shape = RoundedCornerShape(6.dp)
                 )
+                .clip(RoundedCornerShape(6.dp))
+                .background(itemBackground)
                 .padding(4.dp),
             contentAlignment = Alignment.Center
         ) {
@@ -192,6 +159,81 @@ private fun LazyListScope.groupItems(
             )
         }
         Spacer(modifier = Modifier.width(6.dp))
+    }
+}
+
+@Composable
+private fun BoxScope.PatternContent(state: PatternPracticingState) {
+    val position = state.currentPattern?.position ?: -1
+    var rotationState by remember {
+        mutableStateOf(true)
+    }
+
+    LaunchedEffect(key1 = position) {
+        if (position == 0) {
+            rotationState = !rotationState
+        }
+    }
+
+    val rotation by animateFloatAsState(
+        targetValue = if (rotationState) 0F else 360F,
+        animationSpec = tween(durationMillis = 500, easing = LinearEasing), label = "rotation",
+    )
+
+    Column(
+        modifier = Modifier
+            .align(Alignment.Center)
+            .graphicsLayer { rotationY = rotation },
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = state.currentPattern?.pattern?.native ?: "select groups",
+            color = Color(0xFFC5CC85),
+            textAlign = TextAlign.Center
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+        Text(
+            text = state.currentPattern?.pattern?.translation ?: "",
+            color = Color(0xFF7ABCC5),
+            textAlign = TextAlign.Center
+        )
+    }
+}
+
+@Composable
+private fun BoxScope.BottomContent(sendAction: (PatternPracticingAction) -> Unit) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .align(Alignment.BottomCenter),
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Button(
+                onClick = { sendAction(PatternPracticingAction.ShufflePatternPairs) },
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFDFB4B1)),
+            ) {
+                Text(text = "Shuffle")
+            }
+
+            Button(
+                onClick = { sendAction(PatternPracticingAction.AddPatternAsWeaklyMemorized) },
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFDB8B86)),
+            ) {
+                Text(text = "week")
+            }
+        }
+
+        Button(
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF91AA74)),
+            onClick = { sendAction(PatternPracticingAction.NextPatterPair) },
+        ) {
+            Text(text = "Next")
+        }
     }
 }
 
@@ -211,32 +253,48 @@ private fun PatternPracticingScreenPreview() {
             PatternPracticingScreen(
                 state = PatternPracticingState(
                     patternGroupHolders = listOf(
-                        PatternGroupsHolder(
-                            patterns = listOf(Pattern("native", "translation")),
+                        PatternGroupHolder(
+                            patterns = listOf(Pattern(native = "native", translation = "translation")),
                             isChosen = true
                         ),
-                        PatternGroupsHolder(
-                            patterns = listOf(Pattern("native", "translation")),
+                        PatternGroupHolder(
+                            patterns = listOf(Pattern(native = "native", translation = "translation")),
                             isChosen = false
                         ),
-                        PatternGroupsHolder(
-                            patterns = listOf(Pattern("native", "translation")),
+                        PatternGroupHolder(
+                            patterns = listOf(Pattern(native = "native", translation = "translation")),
                             isChosen = false
                         ),
-                        PatternGroupsHolder(
-                            patterns = listOf(Pattern("native", "translation")),
+                        PatternGroupHolder(
+                            patterns = listOf(Pattern(native = "native", translation = "translation")),
                             isChosen = true
                         ),
 
-                        PatternGroupsHolder(listOf(Pattern("native", "translation"))),
-                        PatternGroupsHolder(listOf(Pattern("native", "translation"))),
-                        PatternGroupsHolder(listOf(Pattern("native", "translation"))),
-                        PatternGroupsHolder(listOf(Pattern("native", "translation"))),
-                        PatternGroupsHolder(listOf(Pattern("native", "translation"))),
-                        PatternGroupsHolder(listOf(Pattern("native", "translation"))),
-                        PatternGroupsHolder(listOf(Pattern("native", "translation"))),
-                        PatternGroupsHolder(listOf(Pattern("native", "translation"))),
-                    )
+                        PatternGroupHolder(
+                            listOf(Pattern(native = "native", translation = "translation"))
+                        ),
+                        PatternGroupHolder(
+                            listOf(Pattern(native = "native", translation = "translation"))
+                        ),
+                        PatternGroupHolder(
+                            listOf(Pattern(native = "native", translation = "translation"))
+                        ),
+                        PatternGroupHolder(
+                            listOf(Pattern(native = "native", translation = "translation"))
+                        ),
+                        PatternGroupHolder(
+                            listOf(Pattern(native = "native", translation = "translation"))
+                        ),
+                        PatternGroupHolder(
+                            listOf(Pattern(native = "native", translation = "translation"))
+                        ),
+                        PatternGroupHolder(
+                            listOf(Pattern(native = "native", translation = "translation"))
+                        ),
+                        PatternGroupHolder(
+                            listOf(Pattern(native = "native", translation = "translation"))
+                        ),
+                    ),
                 ),
                 sendAction = {}
             )

@@ -1,31 +1,45 @@
 package com.example.englishpatterns.domain
 
-import com.example.englishpatterns.presentation.patternPractisingScreen.PatternGroupsHolder
+import com.example.englishpatterns.presentation.patternPractisingScreen.PatternGroupHolder
 
 class PatternManager(
-    private val patternGroupsHolder: PatternGroupsHolder? = null,
+    private var patternGroupHolder: PatternGroupHolder? = null,
 ) {
 
     private var position: Int = -1
 
-    fun nextPattern(): PatternGroupUnitState? {
+    fun nextPatternGroupUnitState(): PatternGroupUnitState? {
+        val immutablePatternGroupHolder = patternGroupHolder ?: return null
+        val patterns = immutablePatternGroupHolder.patterns
+
+        if (patterns.isEmpty()) return null
+
+        position = if (position >= patterns.lastIndex) 0 else position + 1
+
+        return PatternGroupUnitState(
+            pattern = patterns[position],
+            position = position,
+            groupSize = patterns.size
+        )
+    }
+
+    fun updatedPatternGroupUnitState(
+        patternGroupHolder: PatternGroupHolder?
+    ): PatternGroupUnitState? {
+        this.patternGroupHolder = patternGroupHolder
+
+        val immutablePatternGroupHolder = this.patternGroupHolder
+
         return when {
-            patternGroupsHolder == null -> null
-            patternGroupsHolder.patterns.isEmpty() -> null
-            patternGroupsHolder.patterns.lastIndex <= position -> {
-                position = 0
+            immutablePatternGroupHolder == null -> null
+            immutablePatternGroupHolder.patterns.isEmpty() -> null
+            else -> {
                 PatternGroupUnitState(
-                    pair = patternGroupsHolder.patterns[position],
+                    pattern = immutablePatternGroupHolder.patterns[position],
                     position = position,
-                    groupSize = patternGroupsHolder.patterns.size
+                    groupSize = immutablePatternGroupHolder.patterns.size
                 )
             }
-            else ->
-                PatternGroupUnitState(
-                    pair = patternGroupsHolder.patterns[++position],
-                    position = position,
-                    groupSize = patternGroupsHolder.patterns.size
-                )
         }
     }
 }

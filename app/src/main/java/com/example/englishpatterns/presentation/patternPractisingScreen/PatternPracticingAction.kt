@@ -2,7 +2,7 @@ package com.example.englishpatterns.presentation.patternPractisingScreen
 
 sealed interface PatternPracticingAction {
 
-    data class ChangePairGroupChoosingState(val position: Int) : PatternPracticingAction
+    data class ChangePatternGroupHolderChoosingState(val position: Int) : PatternPracticingAction
 
     data object NextPatterPair : PatternPracticingAction
 
@@ -11,4 +11,6 @@ sealed interface PatternPracticingAction {
     data object SelectAllPatternGroups : PatternPracticingAction
 
     data object SelectNextPatternGroup : PatternPracticingAction
+
+    data object AddPatternAsWeaklyMemorized : PatternPracticingAction
 }

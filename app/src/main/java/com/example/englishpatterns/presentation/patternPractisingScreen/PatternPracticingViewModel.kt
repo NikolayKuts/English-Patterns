@@ -23,26 +23,31 @@ class PatternPracticingViewModel(
     rawPatternGroups: List<RawPatternGroup>,
 ) : BaseViewModel<PatternPracticingState, PatternPracticingAction, Unit>() {
 
+    companion object {
+
+        private const val PATTERN_GROUP_CHUNK_SIZE = 6
+    }
+
     override val state = MutableStateFlow(value = PatternPracticingState())
 
     override val eventState: SharedFlow<Unit> = MutableSharedFlow()
 
-    private val chosenPatternGroupHoldersSate: MutableStateFlow<List<PatternGroupsHolder>> =
-        MutableStateFlow(value = rawPatternGroups.toPatternGroupHolders())
+    private val patternGroupHoldersSate: MutableStateFlow<List<PatternGroupHolder>> =
+        MutableStateFlow(value = rawPatternGroups.toChunkedPatternGroupHolders())
 
-    private val currentPatterState = MutableStateFlow<PatternGroupUnitState?>(value = null)
+    private val currentPatterGroupUnitState = MutableStateFlow<PatternGroupUnitState?>(value = null)
 
     private var patternManager = PatternManager(
-        patternGroupsHolder = chosenPatternGroupHoldersSate.value.mapToSingleGroup()
+        patternGroupHolder = patternGroupHoldersSate.value.mapToSinglePatternHolderGroup()
     )
 
     init {
-        chosenPatternGroupHoldersSate.onEach {
-            state.update { it.copy(patternGroupHolders = chosenPatternGroupHoldersSate.value) }
+        patternGroupHoldersSate.onEach { holders ->
+            state.update { it.copy(patternGroupHolders = holders) }
         }.flowOn(Dispatchers.IO)
             .launchIn(viewModelScope)
 
-        currentPatterState.onEach { currentPattern ->
+        currentPatterGroupUnitState.onEach { currentPattern ->
             state.update { it.copy(currentPattern = currentPattern) }
         }.flowOn(Dispatchers.IO)
             .launchIn(viewModelScope)
@@ -52,53 +57,49 @@ class PatternPracticingViewModel(
         logD("sendAction() called. Event: $action")
 
         when (action) {
-            is PatternPracticingAction.ChangePairGroupChoosingState -> {
-                chosenPatternGroupHoldersSate.update {
+            is PatternPracticingAction.ChangePatternGroupHolderChoosingState -> {
+                patternGroupHoldersSate.update {
                     it.toMutableList().apply {
                         val group = this[action.position]
                         this[action.position] = group.copy(isChosen = !group.isChosen)
                     }
                 }
 
-                patternManager = PatternManager(
-                    patternGroupsHolder = chosenPatternGroupHoldersSate.value.filter { it.isChosen }
-                        .mapToSingleGroup()
-                )
-                currentPatterState.value = patternManager.nextPattern()
+                resetCurrentPatternGroupUnitState()
             }
 
             PatternPracticingAction.NextPatterPair -> {
-                currentPatterState.value = patternManager.nextPattern()
+                currentPatterGroupUnitState.value = patternManager.nextPatternGroupUnitState()
             }
 
             PatternPracticingAction.ShufflePatternPairs -> {
                 patternManager = PatternManager(
-                    patternGroupsHolder = chosenPatternGroupHoldersSate.value.filter { it.isChosen }
+                    patternGroupHolder = patternGroupHoldersSate.value.filter { it.isChosen }
                         .mapToSingleShuffledGroup()
                 )
-                currentPatterState.value = patternManager.nextPattern()
+                currentPatterGroupUnitState.value = patternManager.nextPatternGroupUnitState()
             }
 
             PatternPracticingAction.SelectAllPatternGroups -> {
-                chosenPatternGroupHoldersSate.update { patternPairGroups ->
+                patternGroupHoldersSate.update { patternPairGroups ->
                     patternPairGroups.map { it.copy(isChosen = true) }
                 }
 
-                patternManager = PatternManager(
-                    patternGroupsHolder = chosenPatternGroupHoldersSate.value.filter { it.isChosen }
-                        .mapToSingleGroup()
-                )
-                currentPatterState.value = patternManager.nextPattern()
+                resetCurrentPatternGroupUnitState()
             }
 
             PatternPracticingAction.SelectNextPatternGroup -> {
                 manageSelectingNextPatternGroup()
             }
+
+            is PatternPracticingAction.AddPatternAsWeaklyMemorized -> {
+                manageAddingPatternAsWeaklyMemorized()
+            }
         }
     }
 
-    private fun List<RawPatternGroup>.toPatternGroupHolders(): List<PatternGroupsHolder> {
-        val patternsList = this.flatMap { rawPatternGroup ->
+    private fun List<RawPatternGroup>.toChunkedPatternGroupHolders(): List<PatternGroupHolder> {
+        val patternsList = this.flatMapIndexed { index, rawPatternGroup ->
             rawPatternGroup.contentResIds
                 .joinToString(separator = "@") { resId -> context.getString(resId) }
                 .split("@")
@@ -110,32 +111,85 @@ class PatternPracticingViewModel(
                 }
         }
 
-        return patternsList.chunked(6).map { patterns ->
-            PatternGroupsHolder(patterns = patterns, isChosen = false)
+        return patternsList.chunked(size = PATTERN_GROUP_CHUNK_SIZE).map { patterns ->
+            PatternGroupHolder(patterns = patterns, isChosen = false)
         }
     }
 
-    private fun List<PatternGroupsHolder>.mapToSingleGroup(): PatternGroupsHolder =
-        PatternGroupsHolder(
+    private fun List<PatternGroupHolder>.mapToSinglePatternHolderGroup(): PatternGroupHolder =
+        PatternGroupHolder(
             patterns = this.map { it.patterns }.flatten()
         )
 
-    private fun List<PatternGroupsHolder>.mapToSingleShuffledGroup(): PatternGroupsHolder =
-        PatternGroupsHolder(
+    private fun List<PatternGroupHolder>.mapToSingleShuffledGroup(): PatternGroupHolder =
+        PatternGroupHolder(
             patterns = this.map { it.patterns.shuffled() }.shuffled().flatten().shuffled()
         )
 
     private fun manageSelectingNextPatternGroup() {
-        val chosenPatternsGroupHolders = chosenPatternGroupHoldersSate.value
+        val chosenPatternsGroupHolders = patternGroupHoldersSate.value
         val currentIndex = chosenPatternsGroupHolders.indexOfLast { it.isChosen }
 
         if (chosenPatternsGroupHolders.isEmpty()) return
 
-        chosenPatternGroupHoldersSate.update {
+        patternGroupHoldersSate.update {
             it.mapIndexed { index, patternGroupHolder ->
                 patternGroupHolder.copy(isChosen = index == (currentIndex + 1) % it.size)
             }
         }
+
+        resetCurrentPatternGroupUnitState()
+    }
+
+    private fun manageAddingPatternAsWeaklyMemorized() {
+        patternGroupHoldersSate.update {
+            val currentPattern =
+                currentPatterGroupUnitState.value?.pattern ?: return@update it
+            val patternGroupHoldersToUpdate = it.toMutableList()
+            val weaklyMemorizedPatternGroupHolderIndex =
+                patternGroupHoldersToUpdate.indexOfFirst { holder -> holder.isWeaklyMemorized }
+
+            if (weaklyMemorizedPatternGroupHolderIndex != -1) {
+                val weaklyMemorizedPatternGroupHolder =
+                    patternGroupHoldersToUpdate[weaklyMemorizedPatternGroupHolderIndex]
+
+                if (currentPattern in weaklyMemorizedPatternGroupHolder.patterns) return@update it
+
+                val updatedPatterns =
+                    weaklyMemorizedPatternGroupHolder.patterns + currentPattern
+
+                patternGroupHoldersToUpdate[weaklyMemorizedPatternGroupHolderIndex] =
+                    weaklyMemorizedPatternGroupHolder.copy(patterns = updatedPatterns)
+            } else {
+                patternGroupHoldersToUpdate.add(
+                    PatternGroupHolder(
+                        patterns = listOf(currentPattern),
+                        isWeaklyMemorized = true
+                    )
+                )
+            }
+
+            patternGroupHoldersToUpdate
+        }
+
+        updateCurrentPatternGroupUnitState()
+    }
+
+    private fun resetCurrentPatternGroupUnitState() {
+        patternManager = PatternManager(
+            patternGroupHolder = patternGroupHoldersSate.value.filter { it.isChosen }
+                .mapToSinglePatternHolderGroup()
+        )
+        currentPatterGroupUnitState.value = patternManager.nextPatternGroupUnitState()
+    }
+
+    private fun updateCurrentPatternGroupUnitState() {
+        val patterGroupHolder = patternGroupHoldersSate.value.filter { it.isChosen }
+            .mapToSinglePatternHolderGroup()
+
+        currentPatterGroupUnitState.value = patternManager.updatedPatternGroupUnitState(
+            patternGroupHolder = patterGroupHolder
+        )
     }
 
 
