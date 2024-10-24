@@ -8,7 +8,7 @@ sealed interface PatternPracticingAction {
 
     data object ShufflePatternPairs : PatternPracticingAction
 
-    data object SelectAllPatternGroups : PatternPracticingAction
+    data object ChangeAllPatternGroupHoldersSelectionState : PatternPracticingAction
 
     data object SelectNextPatternGroup : PatternPracticingAction
 

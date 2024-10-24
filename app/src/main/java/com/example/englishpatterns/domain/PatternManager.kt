@@ -24,9 +24,9 @@ class PatternManager(
     }
 
     fun updatedPatternGroupUnitState(
-        patternGroupHolder: PatternGroupHolder?
+        updatedPatternGroupHolder: PatternGroupHolder?
     ): PatternGroupUnitState? {
-        this.patternGroupHolder = patternGroupHolder
+        this.patternGroupHolder = updatedPatternGroupHolder
 
         val immutablePatternGroupHolder = this.patternGroupHolder
 

@@ -93,9 +93,9 @@ fun PatternPracticingScreen(
                     )
                     Button(
                         colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFB38481)),
-                        onClick = { sendAction(PatternPracticingAction.SelectAllPatternGroups) }
+                        onClick = { sendAction(PatternPracticingAction.ChangeAllPatternGroupHoldersSelectionState) }
                     ) {
-                        Text(text = "Select all")
+                        Text(text = "Change selection for all")
                     }
                 }
 
