@@ -35,11 +35,12 @@ import com.example.englishpatterns.ui.theme.EnglishPatternsTheme
 
 @Composable
 fun MainScreen(
+    modifier: Modifier = Modifier,
     state: MainState,
     sendAction: (action: MainAction) -> Unit,
 ) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .padding(4.dp)
     ) {

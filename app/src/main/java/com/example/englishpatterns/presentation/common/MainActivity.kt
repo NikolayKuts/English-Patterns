@@ -3,13 +3,20 @@ package com.example.englishpatterns.presentation.common
 import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.datastore.dataStore
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
@@ -39,39 +46,55 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        enableEdgeToEdge(
+            statusBarStyle = SystemBarStyle.auto(
+                lightScrim = Color.Transparent.toArgb(),
+                darkScrim = Color.Transparent.toArgb()
+            ),
+        )
+
         setContent {
             EnglishPatternsTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val navController = rememberNavController()
+                    Scaffold { paddingValues ->
+                        val navController = rememberNavController()
 
-                    observeEventState(navController = navController)
+                        LaunchedEffect(key1 = Unit) {
+                            observeEventState(navController = navController)
+                        }
 
-                    AppNavGraph(
-                        navHostController = navController,
-                        mainScreenContent = {
-                            MainScreen(
-                                state = viewModel.state.collectAsState().value,
-                                sendAction = viewModel::sendAction
-                            )
-                        },
-                        patternPracticingScreenContent = { rawPatternGroups ->
-                            val patternPracticingViewModel: BaseViewModel<PatternPracticingState, PatternPracticingAction, Unit> =
-                                viewModel<PatternPracticingViewModel>(
+                        AppNavGraph(
+                            navHostController = navController,
+                            mainScreenContent = {
+                                MainScreen(
+                                    modifier = Modifier.padding(paddingValues),
+                                    state = viewModel.state.collectAsState().value,
+                                    sendAction = viewModel::sendAction
+                                )
+                            },
+                            patternPracticingScreenContent = { rawPatternGroups ->
+                                val patternPracticingViewModel: BaseViewModel<
+                                        PatternPracticingState,
+                                        PatternPracticingAction,
+                                        Unit
+                                        > = viewModel<PatternPracticingViewModel>(
                                     factory = PatternPracticingViewModel.Factory(
                                         context = application,
                                         rawPatternGroups = rawPatternGroups
                                     )
                                 )
 
-                            PatternPracticingScreen(
-                                state = patternPracticingViewModel.state.collectAsState().value,
-                                sendAction = patternPracticingViewModel::sendAction
-                            )
-                        }
-                    )
+                                PatternPracticingScreen(
+                                    modifier = Modifier.padding(paddingValues),
+                                    state = patternPracticingViewModel.state.collectAsState().value,
+                                    sendAction = patternPracticingViewModel::sendAction
+                                )
+                            }
+                        )
+                    }
                 }
             }
         }

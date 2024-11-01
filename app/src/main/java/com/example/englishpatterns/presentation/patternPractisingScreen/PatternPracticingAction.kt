@@ -4,7 +4,9 @@ sealed interface PatternPracticingAction {
 
     data class ChangePatternGroupHolderChoosingState(val position: Int) : PatternPracticingAction
 
-    data object NextPatterPair : PatternPracticingAction
+    data object NextPatter : PatternPracticingAction
+
+    data object PreviousPatter : PatternPracticingAction
 
     data object ShufflePatternPairs : PatternPracticingAction
 
@@ -13,4 +15,6 @@ sealed interface PatternPracticingAction {
     data object SelectNextPatternGroup : PatternPracticingAction
 
     data object AddPatternAsWeaklyMemorized : PatternPracticingAction
+
+    data object ChangeTranslationVisibilityState: PatternPracticingAction
 }

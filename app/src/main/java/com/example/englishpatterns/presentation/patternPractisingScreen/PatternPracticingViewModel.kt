@@ -72,7 +72,7 @@ class PatternPracticingViewModel(
                 resetCurrentPatternGroupUnitState()
             }
 
-            PatternPracticingAction.NextPatterPair -> {
+            PatternPracticingAction.NextPatter -> {
                 currentPatterGroupUnitState.value = patternManager.nextPatternGroupUnitState()
             }
 
@@ -104,6 +104,14 @@ class PatternPracticingViewModel(
 
             is PatternPracticingAction.AddPatternAsWeaklyMemorized -> {
                 manageAddingPatternAsWeaklyMemorized()
+            }
+
+            PatternPracticingAction.ChangeTranslationVisibilityState -> {
+                manageTranslationVisibilityState()
+            }
+
+            PatternPracticingAction.PreviousPatter -> {
+                currentPatterGroupUnitState.value = patternManager.previousPatternGroupUnitState()
             }
         }
     }
@@ -191,6 +199,10 @@ class PatternPracticingViewModel(
 
             patternGroupHoldersToUpdate
         }
+    }
+
+    private fun  manageTranslationVisibilityState() {
+        state.update { it.copy(isTranslationHidden = it.isTranslationHidden.not()) }
     }
 
     private fun resetCurrentPatternGroupUnitState() {

@@ -14,7 +14,22 @@ class PatternManager(
 
         if (patterns.isEmpty()) return null
 
-        position = if (position >= patterns.lastIndex) 0 else position + 1
+        position = if (position >= patterns.lastIndex) 0 else position.inc()
+
+        return PatternGroupUnitState(
+            pattern = patterns[position],
+            position = position,
+            groupSize = patterns.size
+        )
+    }
+
+    fun previousPatternGroupUnitState(): PatternGroupUnitState? {
+        val immutablePatternGroupHolder = patternGroupHolder ?: return null
+        val patterns = immutablePatternGroupHolder.patterns
+
+        if (patterns.isEmpty()) return null
+
+        position = if (position <= 0) patterns.lastIndex else position.dec()
 
         return PatternGroupUnitState(
             pattern = patterns[position],
