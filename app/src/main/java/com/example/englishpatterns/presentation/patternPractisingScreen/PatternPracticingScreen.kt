@@ -10,6 +10,7 @@ import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.keyframes
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -354,71 +355,12 @@ private fun PatternTranslationContent(
             )
 
             if (showDropdown && isTranslationHidden.not()) {
-                Popup(
-                    offset = IntOffset(x = 0, y = translationTextContainerSize.height + 20)
-                ) {
-                    Column(
-                        modifier = Modifier
-                            .clip(RoundedCornerShape(16.dp))
-                            .widthIn(min = 50.dp)
-                            .width(IntrinsicSize.Max)
-                            .background(Color(0xFF292929))
-                            .padding(8.dp)
-                    ) {
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.Absolute.SpaceBetween
-                        ) {
-                            Text(text = selectedTextInfo.transcription)
-
-                            Spacer(modifier = Modifier.width(12.dp))
-
-                            Icon(
-                                modifier = Modifier
-                                    .clip(RoundedCornerShape(8.dp))
-                                    .clickable {
-                                        sendAction(
-                                            PatternPracticingAction.TextPronunciationRequired(
-                                                selectedText
-                                            )
-                                        )
-                                    },
-                                painter = painterResource(id = R.drawable.ic_volume_up),
-                                contentDescription = null
-                            )
-                        }
-
-                        HorizontalDivider(
-                            modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
-                        )
-
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clip(RoundedCornerShape(8.dp))
-                                .clickable {
-                                    sendAction(
-                                        PatternPracticingAction.SelectedTextSearchRequired(
-                                            text = selectedText,
-                                        )
-                                    )
-                                },
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.Absolute.SpaceBetween
-                        ) {
-                            Text(text = "WordHunt")
-
-                            Spacer(modifier = Modifier.width(12.dp))
-
-                            Icon(
-                                modifier = Modifier.clip(RoundedCornerShape(8.dp)),
-                                painter = painterResource(id = R.drawable.ic_search),
-                                contentDescription = null
-                            )
-                        }
-                    }
-                }
+                SelectedTextMenu(
+                    selectedText = selectedText,
+                    selectedTextInfo = selectedTextInfo,
+                    translationTextContainerSize = translationTextContainerSize,
+                    sendAction = sendAction
+                )
             }
         }
     }
@@ -600,6 +542,108 @@ private fun AlertDialogButton(
     )
 }
 
+@Composable
+private fun SelectedTextMenu(
+    selectedText: String,
+    selectedTextInfo: SelectedTextInfo,
+    translationTextContainerSize: IntSize,
+    sendAction: (PatternPracticingAction) -> Unit,
+) {
+    Popup(
+        offset = IntOffset(x = 0, y = translationTextContainerSize.height + 20)
+    ) {
+        Column(
+            modifier = Modifier
+                .clip(RoundedCornerShape(10.dp))
+                .widthIn(min = 50.dp)
+                .width(IntrinsicSize.Max)
+                .background(Color(0xFF292929))
+                .padding(10.dp)
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Absolute.SpaceBetween
+            ) {
+                Text(text = selectedTextInfo.transcription)
+
+                Spacer(modifier = Modifier.width(12.dp))
+
+                Icon(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(8.dp))
+                        .clickable {
+                            sendAction(
+                                PatternPracticingAction.TextPronunciationRequired(
+                                    selectedText
+                                )
+                            )
+                        },
+                    painter = painterResource(id = R.drawable.ic_volume_up),
+                    contentDescription = null
+                )
+            }
+
+            HorizontalDivider(
+                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+            )
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(8.dp))
+                    .clickable {
+                        sendAction(
+                            PatternPracticingAction.SelectedTextSearchRequired(text = selectedText)
+                        )
+                    },
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Absolute.SpaceBetween
+            ) {
+                Text(text = "WordHunt")
+
+                Spacer(modifier = Modifier.width(12.dp))
+
+                Icon(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(8.dp))
+                        .size(24.dp),
+                    painter = painterResource(id = R.drawable.ic_search),
+                    contentDescription = null
+                )
+            }
+
+            HorizontalDivider(
+                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+            )
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(8.dp))
+                    .clickable {
+                        sendAction(
+                            PatternPracticingAction.RedirectionToKlafAppRequired(text = selectedText)
+                        )
+                    },
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Absolute.SpaceBetween
+            ) {
+                Text(text = "Klaf")
+
+                Spacer(modifier = Modifier.width(12.dp))
+
+                Image(
+                    modifier = Modifier.size(24.dp),
+                    painter = painterResource(id = R.drawable.ic_klaf_app_labale),
+                    contentDescription = null,
+                )
+            }
+        }
+    }
+}
+
+/** ---------------------------------- Previews ---------------------------------- **/
 
 @Preview(
     showBackground = true,
@@ -705,4 +749,28 @@ private fun ExitDialogPreview() {
         onDismiss = {},
         onConfirm = {}
     )
+}
+
+@Preview(
+    showBackground = true,
+    showSystemUi = true,
+    uiMode = UI_MODE_NIGHT_YES
+)
+@Composable
+private fun SelectedTextMenuPreview() {
+    EnglishPatternsTheme {
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colorScheme.background
+        ) {
+            SelectedTextMenu(
+                selectedText = "selected text",
+                selectedTextInfo = SelectedTextInfo(
+                    transcription = "translation"
+                ),
+                translationTextContainerSize = IntSize.Zero,
+                sendAction = {},
+            )
+        }
+    }
 }

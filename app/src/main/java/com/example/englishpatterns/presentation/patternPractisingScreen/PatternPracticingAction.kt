@@ -23,4 +23,6 @@ sealed interface PatternPracticingAction {
     data class SelectedTextInfoRequired(val text: String) : PatternPracticingAction
 
     data class SelectedTextSearchRequired(val text: String) : PatternPracticingAction
+
+    data class RedirectionToKlafAppRequired(val text: String) : PatternPracticingAction
 }

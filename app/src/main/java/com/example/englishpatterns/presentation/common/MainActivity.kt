@@ -2,6 +2,7 @@ package com.example.englishpatterns.presentation.common
 
 import android.content.ActivityNotFoundException
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -87,11 +88,11 @@ class MainActivity : ComponentActivity() {
 
                                         when (it) {
                                             is PatternPracticingEvent.SearchSelectedTextRequired -> {
-                                                try {
-                                                    startActivity(it.intent)
-                                                } catch (ex: ActivityNotFoundException) {
-                                                    logW("Application not found")
-                                                }
+                                                startActivityWithCheck(intent = it.intent)
+                                            }
+
+                                            is PatternPracticingEvent.RedirectionToKlafAppRequired -> {
+                                                startActivityWithCheck(intent = it.intent)
                                             }
                                         }
                                     }
@@ -137,6 +138,14 @@ class MainActivity : ComponentActivity() {
                     navController.navigate(route = destination)
                 }
             }
+        }
+    }
+
+    private fun startActivityWithCheck(intent: Intent) {
+        try {
+            startActivity(intent)
+        } catch (ex: ActivityNotFoundException) {
+            logW("Application not found")
         }
     }
 }

@@ -136,6 +136,10 @@ class PatternPracticingViewModel(
             is PatternPracticingAction.SelectedTextSearchRequired -> {
                 handleSelectedTextSearchRequest(action = action)
             }
+
+            is PatternPracticingAction.RedirectionToKlafAppRequired -> {
+                handleRedirectionToKlafAppRequest(action = action)
+            }
         }
     }
 
@@ -267,6 +271,21 @@ class PatternPracticingViewModel(
 
         viewModelScope.launch {
             eventState.emit(PatternPracticingEvent.SearchSelectedTextRequired(intent = intent))
+        }
+    }
+
+    private fun handleRedirectionToKlafAppRequest(
+        action: PatternPracticingAction.RedirectionToKlafAppRequired
+    ) {
+        val intent = Intent(Intent.ACTION_PROCESS_TEXT).apply {
+            type = Constants.Intent.Type.TEXT_PLAIN
+            putExtra(Intent.EXTRA_PROCESS_TEXT, action.text)
+            putExtra(Intent.EXTRA_PROCESS_TEXT_READONLY, false)
+            setPackage(Constants.Klaf.PACKAGE_NAME)
+        }
+
+        viewModelScope.launch {
+            eventState.emit(PatternPracticingEvent.RedirectionToKlafAppRequired(intent = intent))
         }
     }
 
