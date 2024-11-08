@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.defaultMinSize
@@ -26,19 +27,28 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.selection.LocalTextSelectionColors
+import androidx.compose.foundation.text.selection.SelectionContainer
+import androidx.compose.foundation.text.selection.TextSelectionColors
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -48,12 +58,23 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.LocalTextToolbar
+import androidx.compose.ui.platform.TextToolbar
+import androidx.compose.ui.platform.TextToolbarStatus
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.input.getSelectedText
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Popup
 import com.example.englishpatterns.R
 import com.example.englishpatterns.domain.PatternGroupUnitState
 import com.example.englishpatterns.ui.theme.EnglishPatternsTheme
@@ -96,7 +117,7 @@ fun PatternPracticingScreen(
                 .fillMaxWidth(),
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(text = "Groups ->",)
+                Text(text = "Groups: ")
 
                 Spacer(modifier = Modifier.width(16.dp))
 
@@ -164,7 +185,7 @@ fun PatternPracticingScreen(
             PatternContent(
                 patternGroupUnitState = patternGroupUnitState,
                 isTranslationHidden = state.isTranslationHidden,
-                containerColor = patternContentContainerColor.value,
+                selectedTextInfo = state.selectedTextInfo,
                 sendAction = sendAction
             )
         }
@@ -235,7 +256,7 @@ private fun LazyListScope.groupItems(
 private fun BoxScope.PatternContent(
     patternGroupUnitState: PatternGroupUnitState?,
     isTranslationHidden: Boolean,
-    containerColor: Color,
+    selectedTextInfo: SelectedTextInfo,
     sendAction: (PatternPracticingAction) -> Unit,
 ) {
     val position = patternGroupUnitState?.position ?: -1
@@ -254,22 +275,16 @@ private fun BoxScope.PatternContent(
         animationSpec = tween(durationMillis = 500, easing = LinearEasing), label = "rotation",
     )
 
-    val (translationContainerColor, translationTextColor) = if (isTranslationHidden) {
-        Color(0xFF292929) to Color.Transparent
-    } else {
-        Color.Transparent to Color(0xFF7ABCC5)
-    }
-
     Column(
         modifier = Modifier
             .align(Alignment.Center)
-            .graphicsLayer { rotationY = rotation }
-            .clip(RoundedCornerShape(16.dp))
-            .background(containerColor)
-            .padding(16.dp),
+            .graphicsLayer { rotationY = rotation },
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
+            modifier = Modifier.clickable {
+                sendAction(PatternPracticingAction.ChangeTranslationVisibilityState)
+            },
             text = patternGroupUnitState?.pattern?.native ?: "select groups",
             color = Color(0xFFC5CC85),
             textAlign = TextAlign.Center
@@ -277,17 +292,185 @@ private fun BoxScope.PatternContent(
 
         Spacer(modifier = Modifier.height(40.dp))
 
-        Text(
-            modifier = Modifier
-                .clip(RoundedCornerShape(6.dp))
-                .clickable { sendAction(PatternPracticingAction.ChangeTranslationVisibilityState) }
-                .background(translationContainerColor)
-                .padding(6.dp),
-            text = patternGroupUnitState?.pattern?.translation ?: "",
-            color = translationTextColor,
-            textAlign = TextAlign.Center
+        PatternTranslationContent(
+            patternGroupUnitState = patternGroupUnitState,
+            selectedTextInfo = selectedTextInfo,
+            isTranslationHidden = isTranslationHidden,
+            sendAction = sendAction
         )
     }
+}
+
+@Composable
+private fun PatternTranslationContent(
+    patternGroupUnitState: PatternGroupUnitState?,
+    selectedTextInfo: SelectedTextInfo,
+    isTranslationHidden: Boolean,
+    sendAction: (PatternPracticingAction) -> Unit,
+) {
+    CompositionLocalProvider(
+        LocalTextToolbar provides object : TextToolbar {
+            override val status: TextToolbarStatus
+                get() = TextToolbarStatus.Hidden
+
+            override fun showMenu(
+                rect: Rect,
+                onCopyRequested: (() -> Unit)?,
+                onPasteRequested: (() -> Unit)?,
+                onCutRequested: (() -> Unit)?,
+                onSelectAllRequested: (() -> Unit)?
+            ) {
+                // No implementation to prevent menu from showing
+            }
+
+            override fun hide() {}
+        }
+    ) {
+        SelectionContainer {
+            var selectedText by remember { mutableStateOf("") }
+            var showDropdown by remember(patternGroupUnitState) { mutableStateOf(false) }
+            var translationTextContainerSize by remember { mutableStateOf(IntSize.Zero) }
+            val (translationContainerColor, translationTextColor) = if (isTranslationHidden) {
+                Color(0xFF292929) to Color.Transparent
+            } else {
+                Color.Transparent to Color(0xFF7ABCC5)
+            }
+
+            SelectableText(
+                text = patternGroupUnitState?.pattern?.translation ?: "",
+                containerColor = translationContainerColor,
+                textColor = translationTextColor,
+                isTranslationHidden = isTranslationHidden,
+                onGloballyPositioned = { translationTextContainerSize = it },
+                onTextSelected = { newSelectedText ->
+                    showDropdown = newSelectedText.isNotBlank() == true
+                    selectedText = newSelectedText
+                    sendAction(
+                        PatternPracticingAction.SelectedTextInfoRequired(
+                            newSelectedText
+                        )
+                    )
+                },
+            )
+
+            if (showDropdown && isTranslationHidden.not()) {
+                Popup(
+                    offset = IntOffset(x = 0, y = translationTextContainerSize.height + 20)
+                ) {
+                    Column(
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(16.dp))
+                            .widthIn(min = 50.dp)
+                            .width(IntrinsicSize.Max)
+                            .background(Color(0xFF292929))
+                            .padding(8.dp)
+                    ) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Absolute.SpaceBetween
+                        ) {
+                            Text(text = selectedTextInfo.transcription)
+
+                            Spacer(modifier = Modifier.width(12.dp))
+
+                            Icon(
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .clickable {
+                                        sendAction(
+                                            PatternPracticingAction.TextPronunciationRequired(
+                                                selectedText
+                                            )
+                                        )
+                                    },
+                                painter = painterResource(id = R.drawable.ic_volume_up),
+                                contentDescription = null
+                            )
+                        }
+
+                        HorizontalDivider(
+                            modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+                        )
+
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clip(RoundedCornerShape(8.dp))
+                                .clickable {
+                                    sendAction(
+                                        PatternPracticingAction.SelectedTextSearchRequired(
+                                            text = selectedText,
+                                        )
+                                    )
+                                },
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Absolute.SpaceBetween
+                        ) {
+                            Text(text = "WordHunt")
+
+                            Spacer(modifier = Modifier.width(12.dp))
+
+                            Icon(
+                                modifier = Modifier.clip(RoundedCornerShape(8.dp)),
+                                painter = painterResource(id = R.drawable.ic_search),
+                                contentDescription = null
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun SelectableText(
+    text: String,
+    onTextSelected: (String) -> Unit,
+    containerColor: Color,
+    textColor: Color,
+    isTranslationHidden: Boolean,
+    onGloballyPositioned: (IntSize) -> Unit,
+) {
+    var textInput by remember(text) { mutableStateOf(TextFieldValue(text)) }
+    val (handleColor, backgroundSelectionColor) = if (isTranslationHidden) {
+        Color.Transparent to Color.Transparent
+    } else {
+        LocalTextSelectionColors.current.handleColor to LocalTextSelectionColors.current.backgroundColor
+    }
+
+    OutlinedTextField(
+        modifier = Modifier
+            .widthIn(min = 3.dp)
+            .onGloballyPositioned { onGloballyPositioned(it.size) },
+        value = textInput,
+        onValueChange = { newValue: TextFieldValue ->
+            textInput = newValue
+            val selectedTextValue = textInput.getSelectedText().text
+
+            onTextSelected(selectedTextValue)
+        },
+        readOnly = true,
+        colors = TextFieldDefaults.colors(
+            cursorColor = Color(Color.Transparent.toArgb()),
+            focusedContainerColor = containerColor,
+            errorContainerColor = containerColor,
+            disabledContainerColor = containerColor,
+            unfocusedContainerColor = containerColor,
+            focusedIndicatorColor = Color.Transparent,
+            unfocusedIndicatorColor = Color.Transparent,
+            disabledIndicatorColor = Color.Transparent,
+            selectionColors = TextSelectionColors(
+                handleColor = handleColor,
+                backgroundColor = backgroundSelectionColor
+            ),
+        ),
+        textStyle = LocalTextStyle.current.copy(
+            textAlign = TextAlign.Center,
+            color = textColor
+        ),
+    )
 }
 
 @Composable

@@ -17,4 +17,10 @@ sealed interface PatternPracticingAction {
     data object AddPatternAsWeaklyMemorized : PatternPracticingAction
 
     data object ChangeTranslationVisibilityState: PatternPracticingAction
+
+    data class TextPronunciationRequired(val text: String) : PatternPracticingAction
+
+    data class SelectedTextInfoRequired(val text: String) : PatternPracticingAction
+
+    data class SelectedTextSearchRequired(val text: String) : PatternPracticingAction
 }

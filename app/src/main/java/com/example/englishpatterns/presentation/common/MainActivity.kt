@@ -1,23 +1,24 @@
 package com.example.englishpatterns.presentation.common
 
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.unit.dp
 import androidx.datastore.dataStore
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
@@ -25,12 +26,14 @@ import com.example.englishpatterns.data.PatternHoldersSerializer
 import com.example.englishpatterns.presentation.collectWhenStarted
 import com.example.englishpatterns.presentation.navigation.AppNavGraph
 import com.example.englishpatterns.presentation.navigation.Screen
-import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingAction
+import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingBaseViewModel
+import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingEvent
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingScreen
-import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingState
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingViewModel
 import com.example.englishpatterns.ui.theme.EnglishPatternsTheme
 import com.lib.lokdroid.core.logD
+import com.lib.lokdroid.core.logW
+import kotlinx.coroutines.flow.collectLatest
 
 class MainActivity : ComponentActivity() {
 
@@ -46,20 +49,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        enableEdgeToEdge(
-            statusBarStyle = SystemBarStyle.auto(
-                lightScrim = Color.Transparent.toArgb(),
-                darkScrim = Color.Transparent.toArgb()
-            ),
-        )
+        enableEdgeToEdge()
 
         setContent {
             EnglishPatternsTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = EnglishPatternsTheme.colors.surface
                 ) {
-                    Scaffold { paddingValues ->
+                    Scaffold(modifier = Modifier.padding(16.dp)) { paddingValues ->
                         val navController = rememberNavController()
 
                         LaunchedEffect(key1 = Unit) {
@@ -76,16 +74,42 @@ class MainActivity : ComponentActivity() {
                                 )
                             },
                             patternPracticingScreenContent = { rawPatternGroups ->
-                                val patternPracticingViewModel: BaseViewModel<
-                                        PatternPracticingState,
-                                        PatternPracticingAction,
-                                        Unit
-                                        > = viewModel<PatternPracticingViewModel>(
-                                    factory = PatternPracticingViewModel.Factory(
-                                        context = application,
-                                        rawPatternGroups = rawPatternGroups
+                                val patternPracticingViewModel: PatternPracticingBaseViewModel =
+                                    viewModel<PatternPracticingViewModel>(
+                                        factory = PatternPracticingViewModel.Factory(
+                                            context = application,
+                                            rawPatternGroups = rawPatternGroups
+                                        )
                                     )
-                                )
+
+                                LaunchedEffect(key1 = Unit) {
+                                    patternPracticingViewModel.eventState.collectLatest {
+
+                                        when (it) {
+                                            is PatternPracticingEvent.SearchSelectedTextRequired -> {
+                                                try {
+                                                    startActivity(it.intent)
+                                                } catch (ex: ActivityNotFoundException) {
+                                                    logW("Application not found")
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                val lifecycleOwner: LifecycleOwner = LocalLifecycleOwner.current
+
+                                DisposableEffect(lifecycleOwner) {
+                                    lifecycleOwner.lifecycle.addObserver(
+                                        patternPracticingViewModel.textAudioPlayer
+                                    )
+
+                                    onDispose {
+                                        lifecycleOwner.lifecycle.removeObserver(
+                                            patternPracticingViewModel.textAudioPlayer
+                                        )
+                                    }
+                                }
 
                                 PatternPracticingScreen(
                                     modifier = Modifier.padding(paddingValues),

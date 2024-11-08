@@ -11,13 +11,9 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.staticCompositionLocalOf
 
 private val DarkColorPalette = darkColorScheme(
-    primary = Purple200,
-    secondary = Teal200
 )
 
 private val LightColorPalette = lightColorScheme(
-    primary = Purple500,
-    secondary = Teal200
 
     /* Other default colors to override
     background = Color.White,

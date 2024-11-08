@@ -1,27 +1,36 @@
 package com.example.englishpatterns.presentation.patternPractisingScreen
 
 import android.app.Application
+import android.content.Intent
+import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.example.englishpatterns.data.TextAudioPlayer
+import com.example.englishpatterns.data.common.Constants
+import com.example.englishpatterns.data.common.LoadingState
+import com.example.englishpatterns.data.yandexApi.YandexWordInfoProvider
 import com.example.englishpatterns.domain.PatternGroupUnitState
 import com.example.englishpatterns.domain.PatternManager
 import com.example.englishpatterns.domain.RawPatternGroup
-import com.example.englishpatterns.presentation.common.BaseViewModel
 import com.lib.lokdroid.core.logD
+import com.lib.lokdroid.core.logE
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 
 class PatternPracticingViewModel(
     private val context: Application,
+    private val selectedTextProvider: YandexWordInfoProvider = YandexWordInfoProvider(),
+    override val textAudioPlayer: TextAudioPlayer = TextAudioPlayer(),
     rawPatternGroups: List<RawPatternGroup>,
-) : BaseViewModel<PatternPracticingState, PatternPracticingAction, Unit>() {
+) : PatternPracticingBaseViewModel() {
 
     companion object {
 
@@ -30,7 +39,7 @@ class PatternPracticingViewModel(
 
     override val state = MutableStateFlow(value = PatternPracticingState())
 
-    override val eventState: SharedFlow<Unit> = MutableSharedFlow()
+    override val eventState = MutableSharedFlow<PatternPracticingEvent>()
 
     private val patternGroupHoldersSate: MutableStateFlow<List<PatternGroupHolder>> =
         MutableStateFlow(value = rawPatternGroups.toChunkedPatternGroupHolders())
@@ -45,6 +54,8 @@ class PatternPracticingViewModel(
         patternGroupHolder = currentPracticePatternGroupHolderSate.value
     )
 
+    private var fetchTextInfoJob: Job? = null
+
     init {
         patternGroupHoldersSate.onEach { holders ->
             state.update { it.copy(patternGroupHolders = holders) }
@@ -58,7 +69,7 @@ class PatternPracticingViewModel(
     }
 
     override fun sendAction(action: PatternPracticingAction) {
-        logD("sendAction() called. Event: $action")
+        logD("sendAction() called. action: $action")
 
         when (action) {
             is PatternPracticingAction.ChangePatternGroupHolderChoosingState -> {
@@ -112,6 +123,18 @@ class PatternPracticingViewModel(
 
             PatternPracticingAction.PreviousPatter -> {
                 currentPatterGroupUnitState.value = patternManager.previousPatternGroupUnitState()
+            }
+
+            is PatternPracticingAction.SelectedTextInfoRequired -> {
+                handelSelectedTextInfoRequest(action = action)
+            }
+
+            is PatternPracticingAction.TextPronunciationRequired -> {
+                textAudioPlayer.play()
+            }
+
+            is PatternPracticingAction.SelectedTextSearchRequired -> {
+                handleSelectedTextSearchRequest(action = action)
             }
         }
     }
@@ -201,8 +224,50 @@ class PatternPracticingViewModel(
         }
     }
 
-    private fun  manageTranslationVisibilityState() {
+    private fun manageTranslationVisibilityState() {
         state.update { it.copy(isTranslationHidden = it.isTranslationHidden.not()) }
+    }
+
+    private fun handelSelectedTextInfoRequest(
+        action: PatternPracticingAction.SelectedTextInfoRequired
+    ) {
+        if (action.text.isBlank()) return
+
+        fetchTextInfoJob?.cancel()
+
+        fetchTextInfoJob = viewModelScope.launch(Dispatchers.IO) {
+            selectedTextProvider.fetchTextInfo(word = action.text).collect { loadingState ->
+                logE("fetchTextInfo() collector: $loadingState")
+
+                val textTranslation = when (loadingState) {
+                    LoadingState.Non -> ""
+                    is LoadingState.Error -> ""
+                    LoadingState.Loading -> ""
+                    is LoadingState.Success -> "[ ${loadingState.data.transcription} ]"
+                }
+
+                textAudioPlayer.preparePronunciation(text = action.text)
+
+                state.update {
+                    val updatedSelectedTextTranslation = it.selectedTextInfo.copy(
+                        transcription = textTranslation
+                    )
+
+                    it.copy(selectedTextInfo = updatedSelectedTextTranslation)
+                }
+            }
+        }
+    }
+
+    private fun handleSelectedTextSearchRequest(
+        action: PatternPracticingAction.SelectedTextSearchRequired
+    ) {
+        val url = "${Constants.WordHunt.BASE_URL}${action.text}"
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+
+        viewModelScope.launch {
+            eventState.emit(PatternPracticingEvent.SearchSelectedTextRequired(intent = intent))
+        }
     }
 
     private fun resetCurrentPatternGroupUnitState() {
