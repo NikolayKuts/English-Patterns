@@ -162,7 +162,7 @@ sealed class RawPatternGroup(
 
     @Serializable
     class BeFondKeenInterestedCrazy : RawPatternGroup(
-        name = "Be + found of + kenn on..",
+        name = "Be + found of + keen on..",
         contentResIds = intArrayOf(R.string.be_fond_of_be_keen_on_be_interested_in_be_crazy_about)
     )
 

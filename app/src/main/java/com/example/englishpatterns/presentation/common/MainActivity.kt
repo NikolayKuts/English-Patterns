@@ -1,6 +1,8 @@
 package com.example.englishpatterns.presentation.common
 
 import android.content.ActivityNotFoundException
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -87,11 +89,25 @@ class MainActivity : ComponentActivity() {
                                     patternPracticingViewModel.eventState.collectLatest {
 
                                         when (it) {
-                                            is PatternPracticingEvent.SearchSelectedTextRequired -> {
+                                            is PatternPracticingEvent.RedirectionToWordHuntAppRequired -> {
                                                 startActivityWithCheck(intent = it.intent)
                                             }
 
                                             is PatternPracticingEvent.RedirectionToKlafAppRequired -> {
+                                                startActivityWithCheck(intent = it.intent)
+                                            }
+
+                                            is PatternPracticingEvent.RedirectionToGhatGptAppRequired -> {
+                                                val clipboard: ClipboardManager = getSystemService(
+                                                    CLIPBOARD_SERVICE
+                                                ) as ClipboardManager
+
+                                                val clip = ClipData.newPlainText(
+                                                    it.clipboardUnit.label,
+                                                    it.clipboardUnit.text
+                                                )
+
+                                                clipboard.setPrimaryClip(clip)
                                                 startActivityWithCheck(intent = it.intent)
                                             }
                                         }

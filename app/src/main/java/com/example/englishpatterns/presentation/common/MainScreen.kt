@@ -42,7 +42,6 @@ fun MainScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(4.dp)
     ) {
         LazyColumn(
             modifier = Modifier

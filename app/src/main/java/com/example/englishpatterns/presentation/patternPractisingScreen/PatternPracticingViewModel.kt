@@ -6,7 +6,9 @@ import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.example.englishpatterns.data.SecretConstants
 import com.example.englishpatterns.data.TextAudioPlayer
+import com.example.englishpatterns.data.common.ClipboardUnit
 import com.example.englishpatterns.data.common.Constants
 import com.example.englishpatterns.data.common.LoadingState
 import com.example.englishpatterns.data.yandexApi.YandexWordInfoProvider
@@ -140,6 +142,10 @@ class PatternPracticingViewModel(
             is PatternPracticingAction.RedirectionToKlafAppRequired -> {
                 handleRedirectionToKlafAppRequest(action = action)
             }
+
+            is PatternPracticingAction.RedirectionToChatGptAppRequired -> {
+                handleRedirectionToChatGptAppRequest(action = action)
+            }
         }
     }
 
@@ -270,7 +276,7 @@ class PatternPracticingViewModel(
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
 
         viewModelScope.launch {
-            eventState.emit(PatternPracticingEvent.SearchSelectedTextRequired(intent = intent))
+            eventState.emit(PatternPracticingEvent.RedirectionToWordHuntAppRequired(intent = intent))
         }
     }
 
@@ -286,6 +292,27 @@ class PatternPracticingViewModel(
 
         viewModelScope.launch {
             eventState.emit(PatternPracticingEvent.RedirectionToKlafAppRequired(intent = intent))
+        }
+    }
+
+    private fun handleRedirectionToChatGptAppRequest(
+        action: PatternPracticingAction.RedirectionToChatGptAppRequired,
+    ) {
+        val url = "${Constants.ChatGpt.BASE_URL}${SecretConstants.GhatGpt.ENGLISH_PATTERNS_CHAT_ID}"
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+
+        val clipboardUnit = ClipboardUnit(
+            label = Constants.ChatGpt.CLIPBOARD_CLIP_DATA_LABEL,
+            text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
+        )
+
+        viewModelScope.launch {
+            eventState.emit(
+                PatternPracticingEvent.RedirectionToGhatGptAppRequired(
+                    intent = intent,
+                    clipboardUnit = clipboardUnit
+                )
+            )
         }
     }
 
