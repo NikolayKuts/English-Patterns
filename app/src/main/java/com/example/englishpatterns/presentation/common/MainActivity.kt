@@ -33,6 +33,8 @@ import com.example.englishpatterns.presentation.patternPractisingScreen.PatternP
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingEvent
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingScreen
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingViewModel
+import com.example.englishpatterns.presentation.webConten.WebContentScreen
+import com.example.englishpatterns.presentation.webConten.WebContentState
 import com.example.englishpatterns.ui.theme.EnglishPatternsTheme
 import com.lib.lokdroid.core.logD
 import com.lib.lokdroid.core.logW
@@ -60,7 +62,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = EnglishPatternsTheme.colors.surface
                 ) {
-                    Scaffold(modifier = Modifier.padding(16.dp)) { paddingValues ->
+                    Scaffold { paddingValues ->
                         val navController = rememberNavController()
 
                         LaunchedEffect(key1 = Unit) {
@@ -90,7 +92,8 @@ class MainActivity : ComponentActivity() {
 
                                         when (it) {
                                             is PatternPracticingEvent.RedirectionToWordHuntAppRequired -> {
-                                                startActivityWithCheck(intent = it.intent)
+//                                                startActivityWithCheck(intent = it.intent)
+                                                navController.navigateToWebContentScreen(url = it.url)
                                             }
 
                                             is PatternPracticingEvent.RedirectionToKlafAppRequired -> {
@@ -109,6 +112,12 @@ class MainActivity : ComponentActivity() {
 
                                                 clipboard.setPrimaryClip(clip)
                                                 startActivityWithCheck(intent = it.intent)
+//                                                navController.navigateToWebContentScreen(url = it.url)
+                                            }
+
+                                            is PatternPracticingEvent.RedirectionToYouGlishPageRequired -> {
+//                                                startActivityWithCheck(intent = it.intent)
+                                                navController.navigateToWebContentScreen(url = it.url)
                                             }
                                         }
                                     }
@@ -132,6 +141,12 @@ class MainActivity : ComponentActivity() {
                                     modifier = Modifier.padding(paddingValues),
                                     state = patternPracticingViewModel.state.collectAsState().value,
                                     sendAction = patternPracticingViewModel::sendAction
+                                )
+                            },
+                            webContentScreenContent = { url ->
+                                WebContentScreen(
+                                    modifier = Modifier.padding(paddingValues),
+                                    state = WebContentState(url = url)
                                 )
                             }
                         )
@@ -163,5 +178,11 @@ class MainActivity : ComponentActivity() {
         } catch (ex: ActivityNotFoundException) {
             logW("Application not found")
         }
+    }
+
+    private fun NavController.navigateToWebContentScreen(url: String) {
+        val destination = Screen.WebContentScreen(url = url)
+
+        navigate(route = destination)
     }
 }

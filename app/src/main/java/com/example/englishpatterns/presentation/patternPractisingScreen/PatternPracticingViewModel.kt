@@ -146,6 +146,10 @@ class PatternPracticingViewModel(
             is PatternPracticingAction.RedirectionToChatGptAppRequired -> {
                 handleRedirectionToChatGptAppRequest(action = action)
             }
+
+            is PatternPracticingAction.RedirectionToYouGlishPageRequired -> {
+                handleRedirectionToYouGlishPageRequest(action = action)
+            }
         }
     }
 
@@ -276,7 +280,9 @@ class PatternPracticingViewModel(
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
 
         viewModelScope.launch {
-            eventState.emit(PatternPracticingEvent.RedirectionToWordHuntAppRequired(intent = intent))
+            eventState.emit(
+                PatternPracticingEvent.RedirectionToWordHuntAppRequired(intent = intent, url = url)
+            )
         }
     }
 
@@ -300,7 +306,6 @@ class PatternPracticingViewModel(
     ) {
         val url = "${Constants.ChatGpt.BASE_URL}${SecretConstants.GhatGpt.ENGLISH_PATTERNS_CHAT_ID}"
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-
         val clipboardUnit = ClipboardUnit(
             label = Constants.ChatGpt.CLIPBOARD_CLIP_DATA_LABEL,
             text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
@@ -310,8 +315,23 @@ class PatternPracticingViewModel(
             eventState.emit(
                 PatternPracticingEvent.RedirectionToGhatGptAppRequired(
                     intent = intent,
+                    url = url,
                     clipboardUnit = clipboardUnit
                 )
+            )
+        }
+    }
+
+    private fun handleRedirectionToYouGlishPageRequest(
+        action: PatternPracticingAction.RedirectionToYouGlishPageRequired
+    ) {
+        val encodedText = Uri.encode(action.text).trim()
+        val url = Constants.YouGlish.BASE_URL_WITH_PLACEHOLDER.format(encodedText.lowercase())
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+
+        viewModelScope.launch {
+            eventState.emit(
+                PatternPracticingEvent.RedirectionToYouGlishPageRequired(intent = intent, url = url)
             )
         }
     }

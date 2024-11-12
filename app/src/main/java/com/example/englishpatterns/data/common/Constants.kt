@@ -26,4 +26,9 @@ sealed interface Constants {
         const val BASE_URL = "https://www.chatgpt.com/c/"
         const val CLIPBOARD_CLIP_DATA_LABEL = "sentence"
     }
+
+    data object YouGlish : Constants {
+
+        const val BASE_URL_WITH_PLACEHOLDER = "https://youglish.com/pronounce/%s/english/us"
+    }
 }

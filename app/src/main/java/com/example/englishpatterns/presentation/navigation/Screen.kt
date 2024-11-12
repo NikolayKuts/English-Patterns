@@ -13,4 +13,7 @@ sealed class Screen(open val route: String) {
     class PatternPracticingScreen(
          val rawPatternGroups: List<RawPatternGroup>,
     ) : Screen(route = "PatternPracticingScreen")
+
+    @Serializable
+    data class WebContentScreen(val url: String) : Screen(route = "WebContentScreen")
 }

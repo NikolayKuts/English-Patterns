@@ -92,6 +92,7 @@ fun PatternPracticingScreen(
         modifier
             .fillMaxSize()
             .padding(top = 32.dp)
+            .padding(horizontal = 16.dp)
     ) {
         val scope = rememberCoroutineScope()
         val patternContentContainerColor = remember { Animatable(Color.Transparent) }
@@ -286,7 +287,7 @@ private fun BoxScope.PatternContent(
             modifier = Modifier.clickable {
                 sendAction(PatternPracticingAction.ChangeTranslationVisibilityState)
             },
-            text = patternGroupUnitState?.pattern?.native ?: "select groups",
+            text = patternGroupUnitState?.pattern?.native ?: "",
             color = Color(0xFFC5CC85),
             textAlign = TextAlign.Center
         )
@@ -665,6 +666,35 @@ private fun SelectedTextMenu(
                         .clip(RoundedCornerShape(8.dp))
                         .size(24.dp),
                     painter = painterResource(id = R.drawable.ic_chatgpt),
+                    contentDescription = null
+                )
+            }
+
+            HorizontalDivider(
+                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+            )
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(8.dp))
+                    .clickable {
+                        sendAction(
+                            PatternPracticingAction.RedirectionToYouGlishPageRequired(text = selectedText)
+                        )
+                    },
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Absolute.SpaceBetween
+            ) {
+                Text(text = "YouGlish")
+
+                Spacer(modifier = Modifier.width(12.dp))
+
+                Icon(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(8.dp))
+                        .size(height = 24.dp, width = 40.dp),
+                    painter = painterResource(id = R.drawable.ic_youglish),
                     contentDescription = null
                 )
             }

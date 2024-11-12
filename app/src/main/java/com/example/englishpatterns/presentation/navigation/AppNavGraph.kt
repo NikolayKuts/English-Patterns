@@ -12,13 +12,15 @@ import kotlin.reflect.typeOf
 fun AppNavGraph(
     navHostController: NavHostController,
     mainScreenContent: @Composable () -> Unit,
-    patternPracticingScreenContent: @Composable (List<RawPatternGroup>) -> Unit
+    patternPracticingScreenContent: @Composable (List<RawPatternGroup>) -> Unit,
+    webContentScreenContent: @Composable (url: String) -> Unit,
 ) {
     NavHost(
         navController = navHostController,
         startDestination = Screen.MainScreen
     ) {
         composable<Screen.MainScreen> { mainScreenContent() }
+
         composable<Screen.PatternPracticingScreen>(
             typeMap = mapOf(
                 typeOf<List<RawPatternGroup>>() to CustomNavType.RawPatternGroupList
@@ -27,6 +29,12 @@ fun AppNavGraph(
             val args = it.toRoute<Screen.PatternPracticingScreen>()
 
             patternPracticingScreenContent(args.rawPatternGroups)
+        }
+
+        composable<Screen.WebContentScreen> {
+            val args = it.toRoute<Screen.WebContentScreen>()
+
+            webContentScreenContent(args.url)
         }
     }
 }

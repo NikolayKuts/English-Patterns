@@ -27,4 +27,6 @@ sealed interface PatternPracticingAction {
     data class RedirectionToKlafAppRequired(val text: String) : PatternPracticingAction
 
     data class RedirectionToChatGptAppRequired(val text: String) : PatternPracticingAction
+
+    data class RedirectionToYouGlishPageRequired(val text: String) : PatternPracticingAction
 }
