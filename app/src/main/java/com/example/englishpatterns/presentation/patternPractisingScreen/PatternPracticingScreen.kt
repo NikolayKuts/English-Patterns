@@ -42,6 +42,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -77,7 +78,9 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
 import com.example.englishpatterns.R
+import com.example.englishpatterns.data.common.LoadingState
 import com.example.englishpatterns.domain.PatternGroupUnitState
+import com.example.englishpatterns.presentation.common.shimmerEffect
 import com.example.englishpatterns.ui.theme.EnglishPatternsTheme
 import kotlinx.coroutines.android.awaitFrame
 import kotlinx.coroutines.launch
@@ -188,6 +191,7 @@ fun PatternPracticingScreen(
                 patternGroupUnitState = patternGroupUnitState,
                 isTranslationHidden = state.isTranslationHidden,
                 selectedTextInfo = state.selectedTextInfo,
+                pronunciationLoadingState = state.pronunciationLoadingState,
                 sendAction = sendAction
             )
         }
@@ -258,7 +262,8 @@ private fun LazyListScope.groupItems(
 private fun BoxScope.PatternContent(
     patternGroupUnitState: PatternGroupUnitState?,
     isTranslationHidden: Boolean,
-    selectedTextInfo: SelectedTextInfo,
+    selectedTextInfo: LoadingState<SelectedTextInfo>,
+    pronunciationLoadingState: LoadingState<Unit>,
     sendAction: (PatternPracticingAction) -> Unit,
 ) {
     val position = patternGroupUnitState?.position ?: -1
@@ -298,6 +303,7 @@ private fun BoxScope.PatternContent(
             patternGroupUnitState = patternGroupUnitState,
             selectedTextInfo = selectedTextInfo,
             isTranslationHidden = isTranslationHidden,
+            pronunciationLoadingState = pronunciationLoadingState,
             sendAction = sendAction
         )
     }
@@ -306,9 +312,10 @@ private fun BoxScope.PatternContent(
 @Composable
 private fun PatternTranslationContent(
     patternGroupUnitState: PatternGroupUnitState?,
-    selectedTextInfo: SelectedTextInfo,
+    selectedTextInfo: LoadingState<SelectedTextInfo>,
     isTranslationHidden: Boolean,
     sendAction: (PatternPracticingAction) -> Unit,
+    pronunciationLoadingState: LoadingState<Unit>,
 ) {
     CompositionLocalProvider(
         LocalTextToolbar provides object : TextToolbar {
@@ -360,6 +367,7 @@ private fun PatternTranslationContent(
                     selectedText = selectedText,
                     selectedTextInfo = selectedTextInfo,
                     translationTextContainerSize = translationTextContainerSize,
+                    pronunciationLoadingState = pronunciationLoadingState,
                     sendAction = sendAction
                 )
             }
@@ -546,9 +554,10 @@ private fun AlertDialogButton(
 @Composable
 private fun SelectedTextMenu(
     selectedText: String,
-    selectedTextInfo: SelectedTextInfo,
+    selectedTextInfo: LoadingState<SelectedTextInfo>,
     translationTextContainerSize: IntSize,
     sendAction: (PatternPracticingAction) -> Unit,
+    pronunciationLoadingState: LoadingState<Unit>,
 ) {
     Popup(
         offset = IntOffset(x = 0, y = translationTextContainerSize.height + 20)
@@ -566,14 +575,31 @@ private fun SelectedTextMenu(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Absolute.SpaceBetween
             ) {
-                Text(text = selectedTextInfo.transcription)
+                val transcriptionText = if (selectedTextInfo is LoadingState.Success) {
+                    selectedTextInfo.data.transcription
+                } else {
+                    ""
+                }
+
+                val (iconColor: Color, clickable: Boolean) = when (pronunciationLoadingState) {
+                    is LoadingState.Success -> Color(0xFF8DAC6A) to true
+                    else -> LocalContentColor.current.copy(alpha = 0.3f) to false
+                }
+
+                Text(
+                    modifier = Modifier
+                        .weight(1f)
+                        .clip(RoundedCornerShape(4.dp))
+                        .shimmerEffect(enabled = selectedTextInfo is LoadingState.Loading),
+                    text = transcriptionText,
+                )
 
                 Spacer(modifier = Modifier.width(12.dp))
 
                 Icon(
                     modifier = Modifier
                         .clip(RoundedCornerShape(8.dp))
-                        .clickable {
+                        .clickable(enabled = clickable) {
                             sendAction(
                                 PatternPracticingAction.TextPronunciationRequired(
                                     selectedText
@@ -581,6 +607,7 @@ private fun SelectedTextMenu(
                             )
                         },
                     painter = painterResource(id = R.drawable.ic_volume_up),
+                    tint = iconColor,
                     contentDescription = null
                 )
             }
@@ -824,10 +851,11 @@ private fun SelectedTextMenuPreview() {
         ) {
             SelectedTextMenu(
                 selectedText = "selected text",
-                selectedTextInfo = SelectedTextInfo(
-                    transcription = "translation"
+                selectedTextInfo = LoadingState.Success(
+                    data = SelectedTextInfo(transcription = "translation")
                 ),
                 translationTextContainerSize = IntSize.Zero,
+                pronunciationLoadingState = LoadingState.Success(Unit),
                 sendAction = {},
             )
         }

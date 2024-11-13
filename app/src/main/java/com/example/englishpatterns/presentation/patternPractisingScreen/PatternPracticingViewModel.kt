@@ -10,7 +10,6 @@ import com.example.englishpatterns.data.SecretConstants
 import com.example.englishpatterns.data.TextAudioPlayer
 import com.example.englishpatterns.data.common.ClipboardUnit
 import com.example.englishpatterns.data.common.Constants
-import com.example.englishpatterns.data.common.LoadingState
 import com.example.englishpatterns.data.yandexApi.YandexWordInfoProvider
 import com.example.englishpatterns.domain.PatternGroupUnitState
 import com.example.englishpatterns.domain.PatternManager
@@ -66,6 +65,11 @@ class PatternPracticingViewModel(
 
         currentPatterGroupUnitState.onEach { currentPattern ->
             state.update { it.copy(currentPattern = currentPattern) }
+        }.flowOn(Dispatchers.IO)
+            .launchIn(viewModelScope)
+
+        textAudioPlayer.loadingState.onEach { pronunciationLoadingState ->
+            state.update { it.copy(pronunciationLoadingState = pronunciationLoadingState) }
         }.flowOn(Dispatchers.IO)
             .launchIn(viewModelScope)
     }
@@ -251,26 +255,11 @@ class PatternPracticingViewModel(
 
         fetchTextInfoJob = viewModelScope.launch(Dispatchers.IO) {
             selectedTextProvider.fetchTextInfo(word = action.text).collect { loadingState ->
-                logE("fetchTextInfo() collector: $loadingState")
-
-                val textTranslation = when (loadingState) {
-                    LoadingState.Non -> ""
-                    is LoadingState.Error -> ""
-                    LoadingState.Loading -> ""
-                    is LoadingState.Success -> "[ ${loadingState.data.transcription} ]"
-                }
-
-                textAudioPlayer.preparePronunciation(text = action.text)
-
-                state.update {
-                    val updatedSelectedTextTranslation = it.selectedTextInfo.copy(
-                        transcription = textTranslation
-                    )
-
-                    it.copy(selectedTextInfo = updatedSelectedTextTranslation)
-                }
+                state.update { it.copy(selectedTextInfo = loadingState) }
             }
         }
+
+        textAudioPlayer.preparePronunciation(text = action.text)
     }
 
     private fun handleSelectedTextSearchRequest(
