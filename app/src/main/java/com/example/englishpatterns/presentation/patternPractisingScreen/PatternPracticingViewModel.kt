@@ -158,6 +158,10 @@ class PatternPracticingViewModel(
             is PatternPracticingAction.RedirectionToYouGlishPageRequired -> {
                 handleRedirectionToYouGlishPageRequest(action = action)
             }
+
+            is PatternPracticingAction.RedirectionToGoogleImagesPageRequired -> {
+                handleRedirectionToGoogleImagesPageRequest(action = action)
+            }
         }
     }
 
@@ -354,6 +358,26 @@ class PatternPracticingViewModel(
         viewModelScope.launch {
             eventState.emit(
                 PatternPracticingEvent.RedirectionToYouGlishPageRequired(intent = intent, url = url)
+            )
+        }
+    }
+
+    private fun handleRedirectionToGoogleImagesPageRequest(
+        action: PatternPracticingAction.RedirectionToGoogleImagesPageRequired,
+    ) {
+        val encodedText = Uri.encode(action.text).trim()
+        val url = Constants.Google.BASE_URL_WITH_PLACEHOLDER.format(encodedText.lowercase())
+        val clipboardUnit = ClipboardUnit(
+            label = Constants.ChatGpt.CLIPBOARD_CLIP_DATA_LABEL,
+            text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
+        )
+
+        viewModelScope.launch {
+            eventState.emit(
+                PatternPracticingEvent.RedirectionToGoogleImagesPageRequired(
+                    url = url,
+                    clipboardUnit = clipboardUnit,
+                )
             )
         }
     }

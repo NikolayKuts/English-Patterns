@@ -758,6 +758,33 @@ private fun SelectedTextMenu(
                     contentDescription = null
                 )
             }
+
+            HorizontalDivider(
+                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+            )
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(8.dp))
+                    .clickable {
+                        sendAction(
+                            PatternPracticingAction.RedirectionToGoogleImagesPageRequired(text = selectedText)
+                        )
+                    },
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Absolute.SpaceBetween
+            ) {
+                Text(text = "Google")
+
+                Spacer(modifier = Modifier.width(12.dp))
+
+                Icon(
+                    modifier = Modifier.clip(RoundedCornerShape(8.dp)),
+                    painter = painterResource(id = R.drawable.ic_google_icon),
+                    contentDescription = null
+                )
+            }
         }
     }
 }

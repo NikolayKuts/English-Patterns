@@ -109,6 +109,10 @@ class MainActivity : ComponentActivity() {
 //                                                startActivityWithCheck(intent = it.intent)
                                                 navController.navigateToWebContentScreen(url = it.url)
                                             }
+
+                                            is PatternPracticingEvent.RedirectionToGoogleImagesPageRequired -> {
+                                                navController.navigateToWebContentScreen(url = it.url)
+                                            }
                                         }
                                     }
                                 }

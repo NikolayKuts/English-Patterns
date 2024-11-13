@@ -31,4 +31,9 @@ sealed interface Constants {
 
         const val BASE_URL_WITH_PLACEHOLDER = "https://youglish.com/pronounce/%s/english/us"
     }
+
+    data object Google : Constants {
+
+        const val BASE_URL_WITH_PLACEHOLDER = "https://www.google.com/search?q=%s&tbm=isch"
+    }
 }
