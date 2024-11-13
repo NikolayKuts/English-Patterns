@@ -8,6 +8,7 @@ sealed interface PatternPracticingEvent {
     data class RedirectionToWordHuntAppRequired(
         val intent: Intent,
         val url: String,
+        val clipboardUnit: ClipboardUnit
     ) : PatternPracticingEvent
 
     data class RedirectionToKlafAppRequired(val intent: Intent) : PatternPracticingEvent

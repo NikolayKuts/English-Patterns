@@ -168,17 +168,7 @@ fun PatternPracticingScreen(
                     }
                 }
 
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.End
-                ) {
-                    Button(
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFCBAAA8)),
-                        onClick = { sendAction(PatternPracticingAction.SelectNextPatternGroup) }
-                    ) {
-                        Text(text = "Select next")
-                    }
-                }
+                PatternGroupNavigationContent(sendAction = sendAction)
             }
         }
 
@@ -256,6 +246,49 @@ private fun LazyListScope.groupItems(
         }
         Spacer(modifier = Modifier.width(6.dp))
     }
+}
+
+@Composable
+private fun PatternGroupNavigationContent(sendAction: (PatternPracticingAction) -> Unit) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.End
+    ) {
+        Spacer(modifier = Modifier.weight(1f))
+
+        Row(
+            modifier = Modifier
+                .border(width = 1.dp, color = Color(0xFF565656), shape = RoundedCornerShape(50.dp))
+                .padding(6.dp),
+        ) {
+            PatterGroupNavigationButton(iconId = R.drawable.ic_arrow_back) {
+                sendAction(PatternPracticingAction.SelectPreviousPatternGroup)
+            }
+
+            Spacer(modifier = Modifier.width(10.dp))
+
+            PatterGroupNavigationButton(iconId = R.drawable.ic_arrow_forward) {
+                sendAction(PatternPracticingAction.SelectNextPatternGroup)
+            }
+        }
+    }
+}
+
+@Composable
+private fun PatterGroupNavigationButton(
+    @DrawableRes iconId: Int,
+    contentDescription: String? = null,
+    onClink: () -> Unit
+) {
+    Icon(
+        modifier = Modifier
+            .clip(RoundedCornerShape(50.dp))
+            .background(Color(0x57FF9800))
+            .clickable { onClink() }
+            .padding(4.dp),
+        painter = painterResource(id = iconId),
+        contentDescription = contentDescription
+    )
 }
 
 @Composable

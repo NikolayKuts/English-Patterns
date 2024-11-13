@@ -1,8 +1,6 @@
 package com.example.englishpatterns.presentation.common
 
 import android.content.ActivityNotFoundException
-import android.content.ClipData
-import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -18,7 +16,6 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.datastore.dataStore
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.compose.LocalLifecycleOwner
@@ -93,6 +90,7 @@ class MainActivity : ComponentActivity() {
                                         when (it) {
                                             is PatternPracticingEvent.RedirectionToWordHuntAppRequired -> {
 //                                                startActivityWithCheck(intent = it.intent)
+                                                copyToClipboard(clipboardUnit = it.clipboardUnit)
                                                 navController.navigateToWebContentScreen(url = it.url)
                                             }
 
@@ -101,16 +99,8 @@ class MainActivity : ComponentActivity() {
                                             }
 
                                             is PatternPracticingEvent.RedirectionToGhatGptAppRequired -> {
-                                                val clipboard: ClipboardManager = getSystemService(
-                                                    CLIPBOARD_SERVICE
-                                                ) as ClipboardManager
+                                                copyToClipboard(clipboardUnit = it.clipboardUnit)
 
-                                                val clip = ClipData.newPlainText(
-                                                    it.clipboardUnit.label,
-                                                    it.clipboardUnit.text
-                                                )
-
-                                                clipboard.setPrimaryClip(clip)
                                                 startActivityWithCheck(intent = it.intent)
 //                                                navController.navigateToWebContentScreen(url = it.url)
                                             }

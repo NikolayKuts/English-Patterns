@@ -119,6 +119,10 @@ class PatternPracticingViewModel(
                 manageSelectingNextPatternGroup()
             }
 
+            PatternPracticingAction.SelectPreviousPatternGroup -> {
+                manageSelectingPreviousPatternGroup()
+            }
+
             is PatternPracticingAction.AddPatternAsWeaklyMemorized -> {
                 manageAddingPatternAsWeaklyMemorized()
             }
@@ -199,7 +203,28 @@ class PatternPracticingViewModel(
 
         patternGroupHoldersSate.update {
             it.mapIndexed { index, patternGroupHolder ->
-                patternGroupHolder.copy(isChosen = index == (currentIndex + 1) % it.size)
+                patternGroupHolder.copy(isChosen = index == (currentIndex.inc()) % it.size)
+            }
+        }
+
+        resetCurrentPatternGroupUnitState()
+    }
+
+    private fun manageSelectingPreviousPatternGroup() {
+        val chosenPatternsGroupHolders = patternGroupHoldersSate.value
+        val currentIndex = chosenPatternsGroupHolders.indexOfFirst { it.isChosen }
+
+        if (chosenPatternsGroupHolders.isEmpty()) return
+
+        patternGroupHoldersSate.update {
+            it.mapIndexed { index, patternGroupHolder ->
+                val targetIndex = if (currentIndex == -1) {
+                    it.size.dec()
+                } else {
+                    (currentIndex.dec() + it.size) % it.size
+                }
+
+                patternGroupHolder.copy(isChosen = index == targetIndex)
             }
         }
 
@@ -267,10 +292,18 @@ class PatternPracticingViewModel(
     ) {
         val url = "${Constants.WordHunt.BASE_URL}${action.text}"
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        val clipboardUnit = ClipboardUnit(
+            label = Constants.ChatGpt.CLIPBOARD_CLIP_DATA_LABEL,
+            text = action.text,
+        )
 
         viewModelScope.launch {
             eventState.emit(
-                PatternPracticingEvent.RedirectionToWordHuntAppRequired(intent = intent, url = url)
+                PatternPracticingEvent.RedirectionToWordHuntAppRequired(
+                    intent = intent,
+                    url = url,
+                    clipboardUnit = clipboardUnit
+                )
             )
         }
     }

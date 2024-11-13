@@ -1,5 +1,9 @@
 package com.example.englishpatterns.presentation.common
 
+import android.app.Activity.CLIPBOARD_SERVICE
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
@@ -16,6 +20,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.unit.IntSize
+import com.example.englishpatterns.data.common.ClipboardUnit
 
 
 fun Modifier.shimmerEffect(enabled: Boolean): Modifier = composed {
@@ -45,4 +50,11 @@ fun Modifier.shimmerEffect(enabled: Boolean): Modifier = composed {
     } else {
         this
     }
+}
+
+fun Context.copyToClipboard(clipboardUnit: ClipboardUnit) {
+    val clipboard: ClipboardManager = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+    val clip = ClipData.newPlainText(clipboardUnit.label, clipboardUnit.text)
+
+    clipboard.setPrimaryClip(clip)
 }

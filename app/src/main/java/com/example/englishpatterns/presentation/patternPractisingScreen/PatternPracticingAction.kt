@@ -14,6 +14,8 @@ sealed interface PatternPracticingAction {
 
     data object SelectNextPatternGroup : PatternPracticingAction
 
+    data object SelectPreviousPatternGroup : PatternPracticingAction
+
     data object AddPatternAsWeaklyMemorized : PatternPracticingAction
 
     data object ChangeTranslationVisibilityState: PatternPracticingAction
