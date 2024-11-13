@@ -82,4 +82,7 @@ dependencies {
 
     /** Ktor **/
     implementation(libs.bundles.ktor)
+
+    /** SplashScreen API **/
+    implementation(libs.androidx.core.splashscreen)
 }

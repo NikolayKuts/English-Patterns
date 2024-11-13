@@ -34,7 +34,6 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.selection.LocalTextSelectionColors
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.text.selection.TextSelectionColors
 import androidx.compose.material3.AlertDialog
@@ -63,7 +62,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalTextToolbar
 import androidx.compose.ui.platform.TextToolbar
@@ -421,7 +419,7 @@ fun SelectableText(
     val (handleColor, backgroundSelectionColor) = if (isTranslationHidden) {
         Color.Transparent to Color.Transparent
     } else {
-        LocalTextSelectionColors.current.handleColor to LocalTextSelectionColors.current.backgroundColor
+        Color(0xFF484848) to Color(0x42B3B3B3)
     }
 
     OutlinedTextField(
@@ -437,7 +435,6 @@ fun SelectableText(
         },
         readOnly = true,
         colors = TextFieldDefaults.colors(
-            cursorColor = Color(Color.Transparent.toArgb()),
             focusedContainerColor = containerColor,
             errorContainerColor = containerColor,
             disabledContainerColor = containerColor,
