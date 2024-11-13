@@ -15,7 +15,6 @@ import com.example.englishpatterns.domain.PatternGroupUnitState
 import com.example.englishpatterns.domain.PatternManager
 import com.example.englishpatterns.domain.RawPatternGroup
 import com.lib.lokdroid.core.logD
-import com.lib.lokdroid.core.logE
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -90,6 +89,7 @@ class PatternPracticingViewModel(
             }
 
             PatternPracticingAction.NextPatter -> {
+                managePatternGroupSelectionStatesIfNoSelected()
                 currentPatterGroupUnitState.value = patternManager.nextPatternGroupUnitState()
             }
 
@@ -166,7 +166,7 @@ class PatternPracticingViewModel(
     }
 
     private fun List<RawPatternGroup>.toChunkedPatternGroupHolders(): List<PatternGroupHolder> {
-        val patternsList = this.flatMapIndexed { index, rawPatternGroup ->
+        val patternsList = this.flatMapIndexed { _, rawPatternGroup ->
             rawPatternGroup.contentResIds
                 .joinToString(separator = "@") { resId -> context.getString(resId) }
                 .split("@")
@@ -390,6 +390,23 @@ class PatternPracticingViewModel(
             patternGroupHolder = currentPracticePatternGroupHolderSate.value
         )
         currentPatterGroupUnitState.value = patternManager.nextPatternGroupUnitState()
+    }
+
+    private fun managePatternGroupSelectionStatesIfNoSelected() {
+        if (patternGroupHoldersSate.value.isNotEmpty() && patternGroupHoldersSate.value.all { !it.isChosen }) {
+            patternGroupHoldersSate.update {
+                it.mapIndexed { index, patternGroupHolder ->
+                    patternGroupHolder.copy(isChosen = index == 0)
+                }
+            }
+
+            currentPracticePatternGroupHolderSate.value =
+                patternGroupHoldersSate.value.mapToSingleChosenPatternHolderGroup()
+
+            patternManager = PatternManager(
+                patternGroupHolder = currentPracticePatternGroupHolderSate.value
+            )
+        }
     }
 
     /**
