@@ -105,10 +105,8 @@ class PatternPracticingViewModel(
 
             PatternPracticingAction.ChangeAllPatternGroupHoldersSelectionState -> {
                 patternGroupHoldersSate.update { patternGroupHolders ->
-                    val revertedFirstElementSelectionState = patternGroupHolders.firstOrNull()
-                        ?.isChosen
-                        ?.not()
-                        ?: false
+                    val revertedFirstElementSelectionState = patternGroupHolders.all { it.isChosen }
+                        .not()
 
                     patternGroupHolders.map { it.copy(isChosen = revertedFirstElementSelectionState) }
                 }

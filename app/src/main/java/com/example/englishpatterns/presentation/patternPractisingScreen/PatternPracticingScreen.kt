@@ -10,6 +10,7 @@ import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.keyframes
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -19,6 +20,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.defaultMinSize
@@ -151,22 +153,60 @@ fun PatternPracticingScreen(
             Column {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        modifier = Modifier.padding(start = 28.dp),
+                        modifier = Modifier
+                            .weight(1f)
+                            .padding(start = 28.dp),
                         text = progress
                     )
+
+                    val (
+                        allButtonColor,
+                        allButtonTextColor,
+                        allButtonBorderColor
+                    ) = if (state.patternGroupHolders.all { it.isChosen }) {
+                        Triple(Color(0xFFA1BB84), Color.Unspecified, Color.Transparent)
+                    } else {
+                        Triple(Color(0x19A2A2A2), Color(0xFFA5A5A5), Color(0xFF686868))
+                    }
+
                     Button(
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8FC0C7)),
-                        onClick = { sendAction(PatternPracticingAction.ChangeAllPatternGroupHoldersSelectionState) }
+                        modifier = Modifier.defaultMinSize(minWidth = 41.dp, minHeight = 41.dp),
+                        shape = RoundedCornerShape(50.dp),
+                        border = BorderStroke(width = 1.dp, color = allButtonBorderColor),
+                        contentPadding = PaddingValues(),
+                        colors = ButtonDefaults.buttonColors(containerColor = allButtonColor),
+                        onClick = {
+                            sendAction(PatternPracticingAction.ChangeAllPatternGroupHoldersSelectionState)
+                        }
                     ) {
-                        Text(text = "Change selection for all")
+                        Text(text = "all", color = allButtonTextColor)
+                    }
+
+                    Spacer(modifier = Modifier.width(8.dp))
+
+                    Row(
+                        modifier = Modifier
+                            .border(
+                                width = 1.dp,
+                                color = Color(0xFF565656),
+                                shape = RoundedCornerShape(50.dp)
+                            )
+                            .padding(6.dp),
+                    ) {
+                        PatterGroupNavigationButton(iconId = R.drawable.ic_arrow_back) {
+                            sendAction(PatternPracticingAction.SelectPreviousPatternGroup)
+                        }
+
+                        Spacer(modifier = Modifier.width(10.dp))
+
+                        PatterGroupNavigationButton(iconId = R.drawable.ic_arrow_forward) {
+                            sendAction(PatternPracticingAction.SelectNextPatternGroup)
+                        }
                     }
                 }
-
-                PatternGroupNavigationContent(sendAction = sendAction)
             }
         }
 
@@ -243,32 +283,6 @@ private fun LazyListScope.groupItems(
             )
         }
         Spacer(modifier = Modifier.width(6.dp))
-    }
-}
-
-@Composable
-private fun PatternGroupNavigationContent(sendAction: (PatternPracticingAction) -> Unit) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.End
-    ) {
-        Spacer(modifier = Modifier.weight(1f))
-
-        Row(
-            modifier = Modifier
-                .border(width = 1.dp, color = Color(0xFF565656), shape = RoundedCornerShape(50.dp))
-                .padding(6.dp),
-        ) {
-            PatterGroupNavigationButton(iconId = R.drawable.ic_arrow_back) {
-                sendAction(PatternPracticingAction.SelectPreviousPatternGroup)
-            }
-
-            Spacer(modifier = Modifier.width(10.dp))
-
-            PatterGroupNavigationButton(iconId = R.drawable.ic_arrow_forward) {
-                sendAction(PatternPracticingAction.SelectNextPatternGroup)
-            }
-        }
     }
 }
 
