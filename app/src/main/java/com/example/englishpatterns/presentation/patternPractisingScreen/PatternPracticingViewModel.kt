@@ -164,10 +164,10 @@ class PatternPracticingViewModel(
     }
 
     private fun List<RawPatternGroup>.toChunkedPatternGroupHolders(): List<PatternGroupHolder> {
-        val patternsList = this.flatMapIndexed { _, rawPatternGroup ->
-            rawPatternGroup.contentResIds
-                .joinToString(separator = "@") { resId -> context.getString(resId) }
-                .split("@")
+        val patternsList = this.flatMap { rawPatternGroup ->
+            rawPatternGroup.contentResIds.flatMap { arrayResId ->
+                context.resources.getStringArray(arrayResId).toList()
+            }.filterNotNull()
                 .map { rowPair ->
                     Pattern(
                         native = rowPair.substringBefore("=="),
