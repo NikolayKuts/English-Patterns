@@ -1,16 +1,25 @@
 package com.example.englishpatterns.presentation.common
 
+import android.content.ActivityNotFoundException
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.datastore.dataStore
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
@@ -18,12 +27,16 @@ import com.example.englishpatterns.data.PatternHoldersSerializer
 import com.example.englishpatterns.presentation.collectWhenStarted
 import com.example.englishpatterns.presentation.navigation.AppNavGraph
 import com.example.englishpatterns.presentation.navigation.Screen
-import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingAction
+import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingBaseViewModel
+import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingEvent
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingScreen
-import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingState
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingViewModel
+import com.example.englishpatterns.presentation.webConten.WebContentScreen
+import com.example.englishpatterns.presentation.webConten.WebContentState
 import com.example.englishpatterns.ui.theme.EnglishPatternsTheme
 import com.lib.lokdroid.core.logD
+import com.lib.lokdroid.core.logW
+import kotlinx.coroutines.flow.collectLatest
 
 class MainActivity : ComponentActivity() {
 
@@ -37,41 +50,104 @@ class MainActivity : ComponentActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
+
         super.onCreate(savedInstanceState)
+
+        enableEdgeToEdge()
 
         setContent {
             EnglishPatternsTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = EnglishPatternsTheme.colors.surface
                 ) {
-                    val navController = rememberNavController()
+                    Scaffold { paddingValues ->
+                        val navController = rememberNavController()
 
-                    observeEventState(navController = navController)
-
-                    AppNavGraph(
-                        navHostController = navController,
-                        mainScreenContent = {
-                            MainScreen(
-                                state = viewModel.state.collectAsState().value,
-                                sendAction = viewModel::sendAction
-                            )
-                        },
-                        patternPracticingScreenContent = { rawPatternGroups ->
-                            val patternPracticingViewModel: BaseViewModel<PatternPracticingState, PatternPracticingAction, Unit> =
-                                viewModel<PatternPracticingViewModel>(
-                                    factory = PatternPracticingViewModel.Factory(
-                                        context = application,
-                                        rawPatternGroups = rawPatternGroups
-                                    )
-                                )
-
-                            PatternPracticingScreen(
-                                state = patternPracticingViewModel.state.collectAsState().value,
-                                sendAction = patternPracticingViewModel::sendAction
-                            )
+                        LaunchedEffect(key1 = Unit) {
+                            observeEventState(navController = navController)
                         }
-                    )
+
+                        AppNavGraph(
+                            navHostController = navController,
+                            mainScreenContent = {
+                                MainScreen(
+                                    modifier = Modifier.padding(paddingValues),
+                                    state = viewModel.state.collectAsState().value,
+                                    sendAction = viewModel::sendAction
+                                )
+                            },
+                            patternPracticingScreenContent = { rawPatternGroups ->
+                                val patternPracticingViewModel: PatternPracticingBaseViewModel =
+                                    viewModel<PatternPracticingViewModel>(
+                                        factory = PatternPracticingViewModel.Factory(
+                                            context = application,
+                                            rawPatternGroups = rawPatternGroups
+                                        )
+                                    )
+
+                                LaunchedEffect(key1 = Unit) {
+                                    patternPracticingViewModel.eventState.collectLatest {
+
+                                        when (it) {
+                                            is PatternPracticingEvent.RedirectionToWordHuntAppRequired -> {
+//                                                startActivityWithCheck(intent = it.intent)
+                                                copyToClipboard(clipboardUnit = it.clipboardUnit)
+                                                navController.navigateToWebContentScreen(url = it.url)
+                                            }
+
+                                            is PatternPracticingEvent.RedirectionToKlafAppRequired -> {
+                                                startActivityWithCheck(intent = it.intent)
+                                            }
+
+                                            is PatternPracticingEvent.RedirectionToGhatGptAppRequired -> {
+                                                copyToClipboard(clipboardUnit = it.clipboardUnit)
+
+                                                startActivityWithCheck(intent = it.intent)
+//                                                navController.navigateToWebContentScreen(url = it.url)
+                                            }
+
+                                            is PatternPracticingEvent.RedirectionToYouGlishPageRequired -> {
+//                                                startActivityWithCheck(intent = it.intent)
+                                                navController.navigateToWebContentScreen(url = it.url)
+                                            }
+
+                                            is PatternPracticingEvent.RedirectionToGoogleImagesPageRequired -> {
+                                                navController.navigateToWebContentScreen(url = it.url)
+                                            }
+                                        }
+                                    }
+                                }
+
+                                val lifecycleOwner: LifecycleOwner = LocalLifecycleOwner.current
+
+                                DisposableEffect(lifecycleOwner) {
+                                    lifecycleOwner.lifecycle.addObserver(
+                                        patternPracticingViewModel.textAudioPlayer
+                                    )
+
+                                    onDispose {
+                                        lifecycleOwner.lifecycle.removeObserver(
+                                            patternPracticingViewModel.textAudioPlayer
+                                        )
+                                    }
+                                }
+
+                                PatternPracticingScreen(
+                                    modifier = Modifier.padding(paddingValues),
+                                    state = patternPracticingViewModel.state.collectAsState().value,
+                                    sendAction = patternPracticingViewModel::sendAction
+                                )
+                            },
+                            webContentScreenContent = { url ->
+                                WebContentScreen(
+                                    modifier = Modifier.padding(paddingValues),
+                                    state = WebContentState(url = url)
+                                )
+                            }
+                        )
+                    }
                 }
             }
         }
@@ -91,5 +167,19 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    private fun startActivityWithCheck(intent: Intent) {
+        try {
+            startActivity(intent)
+        } catch (ex: ActivityNotFoundException) {
+            logW("Application not found")
+        }
+    }
+
+    private fun NavController.navigateToWebContentScreen(url: String) {
+        val destination = Screen.WebContentScreen(url = url)
+
+        navigate(route = destination)
     }
 }

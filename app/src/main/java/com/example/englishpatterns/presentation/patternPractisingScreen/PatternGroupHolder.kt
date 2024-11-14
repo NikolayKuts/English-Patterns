@@ -1,6 +1,7 @@
 package com.example.englishpatterns.presentation.patternPractisingScreen
 
-data class PatternGroupsHolder(
+data class PatternGroupHolder(
     val patterns: List<Pattern>,
+    val isWeaklyMemorized: Boolean = false,
     val isChosen: Boolean = false,
 )
