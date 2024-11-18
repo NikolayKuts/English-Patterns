@@ -144,6 +144,8 @@ fun PatternPracticingScreen(
                 }
             }
 
+            Spacer(modifier = Modifier.height(8.dp))
+
             val position = (state.currentPattern?.position ?: -1) + 1
             val positionText = if (position == 0) "" else position.toString()
             val size = state.currentPattern?.groupSize ?: -1
@@ -156,11 +158,20 @@ fun PatternPracticingScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        modifier = Modifier
-                            .weight(1f)
-                            .padding(start = 28.dp),
+                        modifier = Modifier.weight(1f),
                         text = progress
                     )
+
+                    Icon(
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(50.dp))
+                            .background(Color(0xFF4B7485))
+                            .clickable { sendAction(PatternPracticingAction.ShufflePatternPairs) }
+                            .padding(8.dp),
+                        painter = painterResource(id = R.drawable.ic_shuffle),
+                        contentDescription = null
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
 
                     val (
                         allButtonColor,
@@ -484,18 +495,6 @@ private fun BoxScope.BottomContent(
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Button(
-                onClick = { sendAction(PatternPracticingAction.ShufflePatternPairs) },
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFDFB4B1)),
-            ) {
-                Icon(
-                    painter = painterResource(id = R.drawable.ic_shuffle),
-                    contentDescription = null
-                )
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(text = "Shuffle")
-            }
-
-            Button(
                 onClick = {
                     sendAction(PatternPracticingAction.AddPatternAsWeaklyMemorized)
                     onWeakButtonClick()
@@ -643,6 +642,7 @@ private fun SelectedTextMenu(
                 Icon(
                     modifier = Modifier
                         .clip(RoundedCornerShape(8.dp))
+                        .shimmerEffect(enabled = pronunciationLoadingState is LoadingState.Loading)
                         .clickable(enabled = clickable) {
                             sendAction(
                                 PatternPracticingAction.TextPronunciationRequired(
@@ -680,7 +680,7 @@ private fun SelectedTextMenu(
                     modifier = Modifier
                         .clip(RoundedCornerShape(8.dp))
                         .size(24.dp),
-                    painter = painterResource(id = R.drawable.ic_search),
+                    painter = painterResource(id = R.drawable.ic_word_hunt),
                     contentDescription = null
                 )
             }
@@ -792,7 +792,34 @@ private fun SelectedTextMenu(
 
                 Icon(
                     modifier = Modifier.clip(RoundedCornerShape(8.dp)),
-                    painter = painterResource(id = R.drawable.ic_google_icon),
+                    painter = painterResource(id = R.drawable.ic_image_search),
+                    contentDescription = null
+                )
+            }
+
+            HorizontalDivider(
+                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+            )
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(8.dp))
+                    .clickable {
+                        sendAction(
+                            PatternPracticingAction.RedirectionToWordTemplateSearchPageRequired(text = selectedText)
+                        )
+                    },
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Absolute.SpaceBetween
+            ) {
+                Text(text = "Template")
+
+                Spacer(modifier = Modifier.width(12.dp))
+
+                Icon(
+                    modifier = Modifier.clip(RoundedCornerShape(8.dp)),
+                    painter = painterResource(id = R.drawable.ic_search),
                     contentDescription = null
                 )
             }

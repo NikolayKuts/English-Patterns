@@ -116,6 +116,10 @@ class MainActivity : ComponentActivity() {
                                             is PatternPracticingEvent.RedirectionToGoogleImagesPageRequired -> {
                                                 navController.navigateToWebContentScreen(url = it.url)
                                             }
+
+                                            is PatternPracticingEvent.RedirectionToWordTemplateSearchPageRequired -> {
+                                                navController.navigateToWebContentScreen(url = it.url)
+                                            }
                                         }
                                     }
                                 }

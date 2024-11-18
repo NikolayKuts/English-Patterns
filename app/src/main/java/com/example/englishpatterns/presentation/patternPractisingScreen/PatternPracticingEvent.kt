@@ -28,4 +28,9 @@ sealed interface PatternPracticingEvent {
         val url: String,
         val clipboardUnit: ClipboardUnit,
     ) : PatternPracticingEvent
+
+    data class RedirectionToWordTemplateSearchPageRequired(
+        val url: String,
+        val clipboardUnit: ClipboardUnit,
+    ) : PatternPracticingEvent
 }
