@@ -50,6 +50,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
+import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
@@ -69,6 +70,7 @@ import androidx.compose.ui.platform.LocalTextToolbar
 import androidx.compose.ui.platform.TextToolbar
 import androidx.compose.ui.platform.TextToolbarStatus
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.getSelectedText
 import androidx.compose.ui.text.style.TextAlign
@@ -421,7 +423,7 @@ private fun PatternTranslationContent(
             if (showDropdown && isTranslationHidden.not()) {
                 SelectedTextMenu(
                     selectedText = selectedText,
-                    selectedTextInfo = selectedTextInfo,
+                    selectedTextInfoLoadingState = selectedTextInfo,
                     translationTextContainerSize = translationTextContainerSize,
                     pronunciationLoadingState = pronunciationLoadingState,
                     sendAction = sendAction
@@ -597,7 +599,7 @@ private fun AlertDialogButton(
 @Composable
 private fun SelectedTextMenu(
     selectedText: String,
-    selectedTextInfo: LoadingState<SelectedTextInfo>,
+    selectedTextInfoLoadingState: LoadingState<SelectedTextInfo>,
     translationTextContainerSize: IntSize,
     sendAction: (PatternPracticingAction) -> Unit,
     pronunciationLoadingState: LoadingState<Unit>,
@@ -605,223 +607,257 @@ private fun SelectedTextMenu(
     Popup(
         offset = IntOffset(x = 0, y = translationTextContainerSize.height + 20)
     ) {
-        Column(
+        Row(
             modifier = Modifier
                 .clip(RoundedCornerShape(10.dp))
-                .widthIn(min = 50.dp)
-                .width(IntrinsicSize.Max)
                 .background(Color(0xFF292929))
                 .padding(10.dp)
+                .height(IntrinsicSize.Max)
         ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Absolute.SpaceBetween
+            Column(
+                modifier = Modifier
+                    .widthIn(min = 50.dp)
+                    .width(IntrinsicSize.Max)
             ) {
-                val transcriptionText = if (selectedTextInfo is LoadingState.Success) {
-                    selectedTextInfo.data.transcription
-                } else {
-                    ""
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Absolute.SpaceBetween
+                ) {
+                    val transcriptionText =
+                        if (selectedTextInfoLoadingState is LoadingState.Success) {
+                            selectedTextInfoLoadingState.data.transcription
+                        } else {
+                            ""
+                        }
+
+                    val (iconColor: Color, clickable: Boolean) = when (pronunciationLoadingState) {
+                        is LoadingState.Success -> Color(0xFF8DAC6A) to true
+                        else -> LocalContentColor.current.copy(alpha = 0.3f) to false
+                    }
+
+                    Text(
+                        modifier = Modifier
+                            .weight(1f)
+                            .clip(RoundedCornerShape(4.dp))
+                            .shimmerEffect(enabled = selectedTextInfoLoadingState is LoadingState.Loading),
+                        text = transcriptionText,
+                    )
+
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    Icon(
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(8.dp))
+                            .shimmerEffect(enabled = pronunciationLoadingState is LoadingState.Loading)
+                            .clickable(enabled = clickable) {
+                                sendAction(
+                                    PatternPracticingAction.TextPronunciationRequired(
+                                        selectedText
+                                    )
+                                )
+                            },
+                        painter = painterResource(id = R.drawable.ic_volume_up),
+                        tint = iconColor,
+                        contentDescription = null
+                    )
                 }
 
-                val (iconColor: Color, clickable: Boolean) = when (pronunciationLoadingState) {
-                    is LoadingState.Success -> Color(0xFF8DAC6A) to true
-                    else -> LocalContentColor.current.copy(alpha = 0.3f) to false
-                }
-
-                Text(
-                    modifier = Modifier
-                        .weight(1f)
-                        .clip(RoundedCornerShape(4.dp))
-                        .shimmerEffect(enabled = selectedTextInfo is LoadingState.Loading),
-                    text = transcriptionText,
+                HorizontalDivider(
+                    modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
                 )
 
-                Spacer(modifier = Modifier.width(12.dp))
-
-                Icon(
+                Row(
                     modifier = Modifier
+                        .fillMaxWidth()
                         .clip(RoundedCornerShape(8.dp))
-                        .shimmerEffect(enabled = pronunciationLoadingState is LoadingState.Loading)
-                        .clickable(enabled = clickable) {
+                        .clickable {
                             sendAction(
-                                PatternPracticingAction.TextPronunciationRequired(
-                                    selectedText
+                                PatternPracticingAction.SelectedTextSearchRequired(text = selectedText)
+                            )
+                        },
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Absolute.SpaceBetween
+                ) {
+                    Text(text = "WordHunt")
+
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    Icon(
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(8.dp))
+                            .size(24.dp),
+                        painter = painterResource(id = R.drawable.ic_word_hunt),
+                        contentDescription = null
+                    )
+                }
+
+                HorizontalDivider(
+                    modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+                )
+
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(8.dp))
+                        .clickable {
+                            sendAction(
+                                PatternPracticingAction.RedirectionToKlafAppRequired(text = selectedText)
+                            )
+                        },
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Absolute.SpaceBetween
+                ) {
+                    Text(text = "Klaf")
+
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    Image(
+                        modifier = Modifier.size(24.dp),
+                        painter = painterResource(id = R.drawable.ic_klaf_app_labale),
+                        contentDescription = null,
+                    )
+                }
+
+                HorizontalDivider(
+                    modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+                )
+
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(8.dp))
+                        .clickable {
+                            sendAction(
+                                PatternPracticingAction.RedirectionToChatGptAppRequired(text = selectedText)
+                            )
+                        },
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Absolute.SpaceBetween
+                ) {
+                    Text(text = "ChatGPT")
+
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    Icon(
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(8.dp))
+                            .size(24.dp),
+                        painter = painterResource(id = R.drawable.ic_chatgpt),
+                        contentDescription = null
+                    )
+                }
+
+                HorizontalDivider(
+                    modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+                )
+
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(8.dp))
+                        .clickable {
+                            sendAction(
+                                PatternPracticingAction.RedirectionToYouGlishPageRequired(text = selectedText)
+                            )
+                        },
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Absolute.SpaceBetween
+                ) {
+                    Text(text = "YouGlish")
+
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    Icon(
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(8.dp))
+                            .size(height = 24.dp, width = 40.dp),
+                        painter = painterResource(id = R.drawable.ic_youglish),
+                        contentDescription = null
+                    )
+                }
+
+                HorizontalDivider(
+                    modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+                )
+
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(8.dp))
+                        .clickable {
+                            sendAction(
+                                PatternPracticingAction.RedirectionToGoogleImagesPageRequired(text = selectedText)
+                            )
+                        },
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Absolute.SpaceBetween
+                ) {
+                    Text(text = "Google")
+
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    Icon(
+                        modifier = Modifier.clip(RoundedCornerShape(8.dp)),
+                        painter = painterResource(id = R.drawable.ic_image_search),
+                        contentDescription = null
+                    )
+                }
+
+                HorizontalDivider(
+                    modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+                )
+
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(8.dp))
+                        .clickable {
+                            sendAction(
+                                PatternPracticingAction.RedirectionToWordTemplateSearchPageRequired(
+                                    text = selectedText
                                 )
                             )
                         },
-                    painter = painterResource(id = R.drawable.ic_volume_up),
-                    tint = iconColor,
-                    contentDescription = null
-                )
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Absolute.SpaceBetween
+                ) {
+                    Text(text = "Template")
+
+                    Spacer(modifier = Modifier.width(12.dp))
+
+                    Icon(
+                        modifier = Modifier.clip(RoundedCornerShape(8.dp)),
+                        painter = painterResource(id = R.drawable.ic_search),
+                        contentDescription = null
+                    )
+                }
             }
 
-            HorizontalDivider(
-                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
+            VerticalDivider(
+                modifier = Modifier
+                    .padding(6.dp)
+                    .padding(top = 22.dp)
             )
 
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(8.dp))
-                    .clickable {
-                        sendAction(
-                            PatternPracticingAction.SelectedTextSearchRequired(text = selectedText)
-                        )
-                    },
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Absolute.SpaceBetween
-            ) {
-                Text(text = "WordHunt")
-
-                Spacer(modifier = Modifier.width(12.dp))
-
-                Icon(
+            if (selectedTextInfoLoadingState is LoadingState.Success) {
+                Column(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(8.dp))
-                        .size(24.dp),
-                    painter = painterResource(id = R.drawable.ic_word_hunt),
-                    contentDescription = null
-                )
-            }
-
-            HorizontalDivider(
-                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
-            )
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(8.dp))
-                    .clickable {
-                        sendAction(
-                            PatternPracticingAction.RedirectionToKlafAppRequired(text = selectedText)
+                        .padding(2.dp)
+                        .width(IntrinsicSize.Max)
+                ) {
+                    val translation = selectedTextInfoLoadingState.data.translations
+                    translation.forEachIndexed { index, translaton ->
+                        Text(
+                            text = translaton,
+                            style = MaterialTheme.typography.bodyMedium.copy(fontStyle = FontStyle.Italic)
                         )
-                    },
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Absolute.SpaceBetween
-            ) {
-                Text(text = "Klaf")
 
-                Spacer(modifier = Modifier.width(12.dp))
-
-                Image(
-                    modifier = Modifier.size(24.dp),
-                    painter = painterResource(id = R.drawable.ic_klaf_app_labale),
-                    contentDescription = null,
-                )
-            }
-
-            HorizontalDivider(
-                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
-            )
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(8.dp))
-                    .clickable {
-                        sendAction(
-                            PatternPracticingAction.RedirectionToChatGptAppRequired(text = selectedText)
-                        )
-                    },
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Absolute.SpaceBetween
-            ) {
-                Text(text = "ChatGPT")
-
-                Spacer(modifier = Modifier.width(12.dp))
-
-                Icon(
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(8.dp))
-                        .size(24.dp),
-                    painter = painterResource(id = R.drawable.ic_chatgpt),
-                    contentDescription = null
-                )
-            }
-
-            HorizontalDivider(
-                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
-            )
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(8.dp))
-                    .clickable {
-                        sendAction(
-                            PatternPracticingAction.RedirectionToYouGlishPageRequired(text = selectedText)
-                        )
-                    },
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Absolute.SpaceBetween
-            ) {
-                Text(text = "YouGlish")
-
-                Spacer(modifier = Modifier.width(12.dp))
-
-                Icon(
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(8.dp))
-                        .size(height = 24.dp, width = 40.dp),
-                    painter = painterResource(id = R.drawable.ic_youglish),
-                    contentDescription = null
-                )
-            }
-
-            HorizontalDivider(
-                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
-            )
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(8.dp))
-                    .clickable {
-                        sendAction(
-                            PatternPracticingAction.RedirectionToGoogleImagesPageRequired(text = selectedText)
-                        )
-                    },
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Absolute.SpaceBetween
-            ) {
-                Text(text = "Google")
-
-                Spacer(modifier = Modifier.width(12.dp))
-
-                Icon(
-                    modifier = Modifier.clip(RoundedCornerShape(8.dp)),
-                    painter = painterResource(id = R.drawable.ic_image_search),
-                    contentDescription = null
-                )
-            }
-
-            HorizontalDivider(
-                modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
-            )
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(8.dp))
-                    .clickable {
-                        sendAction(
-                            PatternPracticingAction.RedirectionToWordTemplateSearchPageRequired(text = selectedText)
-                        )
-                    },
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Absolute.SpaceBetween
-            ) {
-                Text(text = "Template")
-
-                Spacer(modifier = Modifier.width(12.dp))
-
-                Icon(
-                    modifier = Modifier.clip(RoundedCornerShape(8.dp)),
-                    painter = painterResource(id = R.drawable.ic_search),
-                    contentDescription = null
-                )
+                        if (index != translation.lastIndex) {
+                            HorizontalDivider()
+                        }
+                    }
+                }
             }
         }
     }
@@ -944,13 +980,18 @@ private fun ExitDialogPreview() {
 private fun SelectedTextMenuPreview() {
     EnglishPatternsTheme {
         Surface(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(32.dp),
             color = MaterialTheme.colorScheme.background
         ) {
             SelectedTextMenu(
                 selectedText = "selected text",
-                selectedTextInfo = LoadingState.Success(
-                    data = SelectedTextInfo(transcription = "translation")
+                selectedTextInfoLoadingState = LoadingState.Success(
+                    data = SelectedTextInfo(
+                        transcription = "translation",
+                        translations = listOf("translation1", "translation2")
+                    )
                 ),
                 translationTextContainerSize = IntSize.Zero,
                 pronunciationLoadingState = LoadingState.Success(Unit),
