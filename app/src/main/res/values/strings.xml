@@ -2622,84 +2622,84 @@
     </string-array>
 
     <string-array name="present_simple_city">
-        <item>Я обычно приезжаю на станцию за 30 минут до отправления.==I usually arrive at the station 30 minutes before the departure.</item>
-        <item>Нам нужно найти банкомат, чтобы снять наличные.==We need to find an ATM to withdraw some cash.</item>
-        <item>Весной они всегда высаживают цветы вдоль тротуаров==In spring they always plant flowers along sidewalks.</item>
-        <item>Они обычно берут больше за экспресс- ремонт обуви ==They usually charge more for express shoe repair.</item>
-        <item>Многие горожане принимают участие в ежегодном городском марафоне.==Many citizens take part in the annual city marathon.</item>
-        <item>Летом театральные представления часто проходят на музыкальной площадке в парке.==In summer theatrical performances often take place on the music venue in the park.</item>
-        <item>Поезда до Парижа отправляются каждые 15 минут, и путешествие занимает 30 минут.==Trains to Paris leave every 15 minutes and the journey takes about 30 minutes.</item>
-        <item>Туристы часто фотографируют с этого моста.==Tourists often take photos from this bridge.</item>
-        <item>В общественном транспорте дети всегда ездят бесплатно.==Children always take public transport free of charge.</item>
-        <item>Замусоренные улицы дают негативное представление о местной среде.==Littered streets make a poor impression of the local environment.</item>
-        <item>По субботам детишки собираются на детской площадке.==On Saturdays small children gather on the playground.</item>
-        <item>Многие маршруты стоят дороже в выходные.==Many routes cost more on weekends.</item>
-        <item>От офиса до городского парка она обычно прогуливается.==She usually takes a walk from her office to the city park.</item>
-        <item>Она часто кормит голубей на озере около городской башни.==She often feeds swans on the lake near the city tower.</item>
-        <item>Стадион вмещает более 3000 зрителей.==The stadium seats more than 3000 spectators.</item>
-        <item>Тур по городу длится примерно два часа и отправляется каждые 15 минут из аэропорта.==The city tour lasts approximately 2 hours and departs every 15 minutes from the airport.</item>
+        <item>Я обычно приезжаю на станцию за 30 минут до отправления.==I usually arrive at the station 30 minutes before departure.</item>
+        <item>Нам нужно найти банкомат, чтобы снять наличные.==We need to find an ATM to withdraw cash.</item>
+        <item>Весной они всегда высаживают цветы вдоль тротуаров.==In spring, they always plant flowers along the sidewalks.</item>
+        <item>Они обычно берут больше за экспресс-ремонт обуви.==They usually charge more for express shoe repairs.</item>
+        <item>Многие горожане принимают участие в ежегодном городском марафоне.==Many residents take part in the annual city marathon.</item>
+        <item>Летом театральные представления часто проходят на музыкальной площадке в парке.==In summer, theatrical performances often take place at the music venue in the park.</item>
+        <item>Поезда до Парижа отправляются каждые 15 минут, и путешествие занимает 30 минут.==Trains to Paris depart every 15 minutes, and the journey takes about 30 minutes.</item>
+        <item>Туристы часто фотографируют с этого моста.==Tourists often take pictures from this bridge.</item>
+        <item>В общественном транспорте дети всегда ездят бесплатно.==Children always ride public transport for free.</item>
+        <item>Замусоренные улицы дают негативное представление о местной среде.==Littered streets give a bad impression of the local environment.</item>
+        <item>По субботам детишки собираются на детской площадке.==On Saturdays, small children gather at the playground.</item>
+        <item>Многие маршруты стоят дороже в выходные.==Many routes are more expensive on weekends.</item>
+        <item>От офиса до городского парка она обычно прогуливается.==She usually walks from her office to the city park.</item>
+        <item>Она часто кормит голубей на озере около городской башни.==She often feeds pigeons by the lake near the city tower.</item>
+        <item>Стадион вмещает более 3000 зрителей.==The stadium holds more than 3,000 spectators.</item>
+        <item>Тур по городу длится примерно два часа и отправляется каждые 15 минут из аэропорта.==The city tour lasts about 2 hours and departs every 15 minutes from the airport.</item>
         <item>Густонаселенный город страдает от загрязнения воздуха.==The densely populated city suffers from air pollution.</item>
-        <item>Бульвар красиво выглядит вечером, когда включают фонари.==The boulevard looks beautiful in the evening when they turn on the street lights.</item>
-        <item>Возведение этого собора датируется 18 веком.==The construction of the cathedral dates back to 18th century.</item>
-        <item>Ночная иллюминация приводит гостей города в восхищение.==Night-time illumination fascinates guests of the city.</item>
-        <item>Эта линия метро соединяет восточную и западную части города.==This subway line connects east and west parts of the city.</item>
-        <item>Здание выходит на живописную набережную. ==The building faces a picturesque embankment.</item>
-        <item>Карта показывает все популярные туристические места.==The map shows all the popular tourist destinations.</item>
+        <item>Бульвар красиво выглядит вечером, когда включают фонари.==The boulevard looks beautiful in the evening when the streetlights are turned on.</item>
+        <item>Возведение этого собора датируется 18 веком.==The construction of this cathedral dates back to the 18th century.</item>
+        <item>Ночная иллюминация приводит гостей города в восхищение.==Nighttime illumination amazes the city\'s visitors.</item>
+        <item>Эта линия метро соединяет восточную и западную части города.==This subway line connects the east and west parts of the city.</item>
+        <item>Здание выходит на живописную набережную.==The building overlooks a picturesque waterfront.</item>
+        <item>Карта показывает все популярные туристические места.==The map shows all the popular tourist attractions.</item>
         <item>Каждый год этот древний город привлекает тысячи посетителей.==This ancient city attracts thousands of visitors every year.</item>
         <item>Эта улица ведет к почтовому отделению.==This street leads to the post office.</item>
-        <item>Большое количество дорогих авто указывает на высокий уровень жизни в городе.==A large number of expensive cars indicates high standard of living in the city.</item>
-        <item>Ты можешь идти пешком или доехать на автобусе.==You can go on foot or take a bus.</item>
-        <item>Она может встретить вас у подземного перехода и проводить до гостиницы.==She can meet you near the underground crossing and accompany you to the hotel.</item>
+        <item>Большое количество дорогих авто указывает на высокий уровень жизни в городе.==A large number of expensive cars indicates a high standard of living in the city.</item>
+        <item>Ты можешь идти пешком или доехать на автобусе.==You can walk or take a bus.</item>
+        <item>Она может встретить вас у подземного перехода и проводить до гостиницы.==She can meet you at the underground crossing and guide you to the hotel.</item>
         <item>У некоторых небоскребов на первых этажах находятся магазины и рестораны.==Some skyscrapers have shops and restaurants on their ground floors.</item>
         <item>В этом отеле есть тренажерный зал.==This hotel has a gym.</item>
-        <item>За въезд в рекреационную зону взимается плата, и посетители также платят за пользование озером.==The recreation area has an admission fee, and visitors also pay for use of the lake.</item>
-        <item>Лучше предупредить водителя, что вы хотите выйти, за один квартал до вашей остановки.==It is wise to signal the driver one block before your stop that you want to get off.</item>
-        <item>Эта экскурсия популярна среди семейных путешественников.==This excursion is popular with family travelers.</item>
-        <item>Эти районы знамениты яркими витринами магазинов.==The districts are famous for their flashy shop windows.</item>
-        <item>На экскурсию по обзору достопримечательностей регистрироваться не нужно.==You don\'t need to register for the sightseeing tour.</item>
-        <item>Мы нечасто ходим в театр.==We don\'t go to the theatre very often.</item>
-        <item>В этом развлекательном парке не принимают карты Виза.==They don\'t accept Visa cards in the amusement park.</item>
-        <item>Новые дома не строят в историческом центре города.==They don\'t build modern houses in the historical center of the town.</item>
-        <item>По воскресеньям банки не работают.==Banks don\'t work on Sundays.</item>
-        <item>Коренные жители обычно не знают об этой исторической достопримечательности.==The natives don\'t usually know about this historic landmark.</item>
-        <item>ДТП не часто происходят на этих оживленных улицах.==Car accidents don\'t occur often on these animated streets.</item>
-        <item>Городские власти не разрешают спонтанные демонстрации.==City authorities don\'t permit spontaneous demonstrations.</item>
-        <item>Его не слишком беспокоит (он не обращает внимания) шумная стройка за окном.==He doesn\'t pay much attention to the noisy building site outside his window.</item>
-        <item>Ей не нравится этот маршрут, так как он проходит через криминальный район.==She doesn\'t like this route as it goes through the criminal area.</item>
-        <item>Из-за пробок она не ездит на работу на машине.==She doesn\'t drive to work because of traffic jams.</item>
-        <item>В этой кассе не продаются ж/д билеты.==This ticket office doesn\’t sell railway tickets.</item>
-        <item>На этой карте не указаны велосипедные дорожки.==This map doesn\'t show cycle lanes.</item>
-        <item>Ж/д билет до Москвы стоит недорого.==A railway ticket to Moscow doesn\'t cost much.</item>
-        <item>Она не умеет кататься на коньках, поэтому не ходит на каток.==She can\'t skate so she doesn\'t go to the skating-rink.</item>
-        <item>В час-пик поймать такси нелегко.==It\'s not easy to hail a cab during a rush hour.</item>
-        <item>Рано утром движение не слишком затрудненное.==The traffic isn\'t very heavy early in the morning.</item>
-        <item>В отеле нет услуг прачечной.==Laundry service isn\'t available in the hotel.</item>
-        <item>Стоянка рядом с нашим офисом - не бесплатная.==The car parking near our office isn\'t free.</item>
-        <item>Для такого модного кафе цены не высокие.==For such a trendy cafe the prices aren\’t high.</item>
-        <item>Кто знает короткий путь к дворцу?==Who knows a short route to the palace?</item>
+        <item>За въезд в рекреационную зону взимается плата, и посетители также платят за пользование озером.==There is an admission fee for the recreation area, and visitors also pay to use the lake.</item>
+        <item>Лучше предупредить водителя, что вы хотите выйти, за один квартал до вашей остановки.==It’s better to let the driver know one block before your stop that you want to get off.</item>
+        <item>Эта экскурсия популярна среди семейных путешественников.==This tour is popular among family travelers.</item>
+        <item>Эти районы знамениты яркими витринами магазинов.==These districts are famous for their bright shop windows.</item>
+        <item>На экскурсию по обзору достопримечательностей регистрироваться не нужно.==You don’t need to register for the sightseeing tour.</item>
+        <item>Мы нечасто ходим в театр.==We don’t go to the theater very often.</item>
+        <item>В этом развлекательном парке не принимают карты Visa.==They don’t accept Visa cards at this amusement park.</item>
+        <item>Новые дома не строят в историческом центре города.==They don’t build modern houses in the historic city center.</item>
+        <item>По воскресеньям банки не работают.==Banks don’t open on Sundays.</item>
+        <item>Коренные жители обычно не знают об этой исторической достопримечательности.==The locals usually don’t know about this historic landmark.</item>
+        <item>ДТП не часто происходят на этих оживленных улицах.==Car accidents don’t happen often on these busy streets.</item>
+        <item>Городские власти не разрешают спонтанные демонстрации.==City authorities don’t allow spontaneous demonstrations.</item>
+        <item>Его не слишком беспокоит (он не обращает внимания) шумная стройка за окном.==He doesn’t mind the noisy construction site outside his window.</item>
+        <item>Ей не нравится этот маршрут, так как он проходит через криминальный район.==She doesn’t like this route because it goes through a dangerous area.</item>
+        <item>Из-за пробок она не ездит на работу на машине.==She doesn’t drive to work because of traffic jams.</item>
+        <item>В этой кассе не продаются ж/д билеты.==This ticket office doesn’t sell train tickets.</item>
+        <item>На этой карте не указаны велосипедные дорожки.==This map doesn’t show bike lanes.</item>
+        <item>Ж/д билет до Москвы стоит недорого.==A train ticket to Moscow doesn’t cost much.</item>
+        <item>Она не умеет кататься на коньках, поэтому не ходит на каток.==She can’t skate, so she doesn’t go to the skating rink.</item>
+        <item>В час-пик поймать такси нелегко.==It’s not easy to catch a cab during rush hour.</item>
+        <item>Рано утром движение не слишком затрудненное.==Traffic isn’t heavy early in the morning.</item>
+        <item>В отеле нет услуг прачечной.==The hotel doesn’t offer laundry service.</item>
+        <item>Стоянка рядом с нашим офисом - не бесплатная.==The parking lot near our office isn’t free.</item>
+        <item>Для такого модного кафе цены не высокие.==For such a trendy cafe, the prices aren’t high.</item>
+        <item>Кто знает короткий путь к дворцу?==Who knows a shortcut to the palace?</item>
         <item>Автобус с каким номером идет до городского стадиона?==What bus number goes to the city stadium?</item>
-        <item>Какой продуктовый магазин работает круглосуточно?==What grocery store works round the clock?</item>
-        <item>Сколько линий метро проходят через ваш город?==How many subway lines run through your city?</item>
+        <item>Какой продуктовый магазин работает круглосуточно?==Which grocery store is open 24/7?</item>
+        <item>Сколько линий метро проходят через ваш город?==How many subway lines go through your city?</item>
         <item>Кто может нам показать дорогу к оперному театру?==Who can show us the way to the opera house?</item>
-        <item>Вы покупаете продукты на местном рынке?==Do you buy products at the local market?</item>
-        <item>Они устраивают индивидуальные туры по обзору достопримечательностей?==Do they give individual sightseeing tours?</item>
-        <item>В картинной галерее выставлены работы современных художников?==Does the art gallery present modern artists\’ works?</item>
+        <item>Вы покупаете продукты на местном рынке?==Do you buy groceries at the local market?</item>
+        <item>Они устраивают индивидуальные туры по обзору достопримечательностей?==Do they offer private sightseeing tours?</item>
+        <item>В картинной галерее выставлены работы современных художников?==Does the art gallery exhibit works of modern artists?</item>
         <item>Эта современная выставка привлекает много посетителей?==Does this modern exhibition attract many visitors?</item>
-        <item>По выходным цена на билеты поднимается?==Does weekend ticket price go up?</item>
+        <item>По выходным цена на билеты поднимается?==Does the ticket price go up on weekends?</item>
         <item>Она может заказать нам билеты?==Can she book tickets for us?</item>
-        <item>Поблизости есть круглосуточная аптека?==Is there an all-night drugstore nearby?</item>
-        <item>Здесь можно снять комнату?==Are there rooms available for rent?</item>
+        <item>Поблизости есть круглосуточная аптека?==Is there a 24-hour pharmacy nearby?</item>
+        <item>Здесь можно снять комнату?==Are rooms available for rent here?</item>
         <item>Это дорога к памятнику?==Is this the way to the monument?</item>
-        <item>Сколько арендные платежи в день за машины?==How much are car rentals per day?</item>
+        <item>Сколько стоит аренда автомобиля в день?==How much are car rentals per day?</item>
         <item>Как нам добраться до зоопарка?==How do we get to the zoo?</item>
-        <item>На какой остановке ты обычно выходишь?==What bus station do you usually get off at?</item>
-        <item>Как часто отсюда ходят автобусы в аэропорт?==How often do buses depart from here to the airport?</item>
-        <item>Сколько времени пешком до центра города? ==How long does it take to walk from here to the city center?</item>
+        <item>На какой остановке ты обычно выходишь?==Which bus stop do you usually get off at?</item>
+        <item>Как часто отсюда ходят автобусы в аэропорт?==How often do buses run from here to the airport?</item>
+        <item>Сколько времени пешком до центра города?==How long does it take to walk to the city center?</item>
         <item>Во сколько по утрам открывается музей?==What time does the museum open in the morning?</item>
         <item>Когда метро открывается и закрывается?==When does the subway open and close?</item>
-        <item>Где я могу пополнить баланс мобильного?==Where can I top up my mobile phone?</item>
-        <item>Где мне могут починить туфли?==Where can I have my shoes fixed?</item>
-        <item>С какого возраста можно посещать ночные клубы?==From what age can you go to night clubs?</item>
+        <item>Где я могу пополнить баланс мобильного?==Where can I top up my mobile balance?</item>
+        <item>Где мне могут починить туфли?==Where can I get my shoes repaired?</item>
+        <item>С какого возраста можно посещать ночные клубы?==At what age can you go to nightclubs?</item>
     </string-array>
 
     <string-array name="present_simple_food">
