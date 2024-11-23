@@ -2815,7 +2815,7 @@
         <item>Что-то мне не весело на этой вечеринке.==I\'m not having fun at this party.</item>
         <item>У меня сейчас собеседование, я не могу с тобой разговаривать.==I\'m having an interview right now, so I can\'t talk to you.</item>
         <item>Мой муж не работает на этой неделе - он в отпуске.==My husband isn\'t working this week; he\'s on vacation.</item>
-        <item>Она сегодня задерживается на работе: делает отчет.==She\'s working late today; she\'s writing a report.</item>
+        <item>Она сегодня задерживается на работе: пишет отчет.==She\'s working late today; she\'s writing a report.</item>
         <item>Сейчас он не пишет новую книгу. Он ищет вдохновение.==He\'s not writing a new book right now; he\'s looking for inspiration.</item>
         <item>Она сейчас вяжет новый наряд для своей собачки.==She\'s knitting a new outfit for her dog right now.</item>
         <item>Вечно он с друзьями тусуется!==He\'s constantly hanging out with his friends!</item>
@@ -2842,7 +2842,7 @@
         <item>Они катаются на коньках в центральном парке.==They\'re skating in Central Park.</item>
         <item>Дети репетируют выступление.==The children are rehearsing their performance.</item>
         <item>Мы тут по городу катаемся, можем заехать в гости.==We\'re driving around town, we could drop by.</item>
-        <item>Мы пишем песни, чтобы поддержать нашу футбольную команду.==We\'re writing songs to cheer up our soccer team.</item>
+        <item>Мы пишем песни, чтобы подбодрить нашу футбольную команду.==We\'re writing songs to cheer up our soccer team.</item>
         <item>Бегуны соревнуются за национальный титул.==The runners are competing for the national title.</item>
         <item>Рекордное число Африканских атлетов принимает участие в этих соревнованиях.==A record number of African athletes are participating in this competition.</item>
         <item>Моя подруга ходит на кулинарные курсы.==My friend is taking cooking classes.</item>
@@ -2861,7 +2861,7 @@
         <item>Он в данный момент едет на работу?==Is he driving to work right now?</item>
         <item>Твой муж сегодня задерживается на работе?==Is your husband working late today?</item>
         <item>Она все еще занимается йогой?==Is she still doing yoga?</item>
-        <item>Она все еще усиленно занимается спортом, чтобы похудеть?==Is she still exercising hard to lose weight?</item>
+        <item>Она все еще усиленно упражняется спортом, чтобы похудеть?==Is she still exercising hard to lose weight?</item>
         <item>Она все еще общается со своим китайским другом?==Is she still keeping in touch with her Chinese friend?</item>
         <item>Твой ребенок учится играть на пианино?==Is your child learning to play the piano?</item>
         <item>Твоя подруга-художница выставляет свои работы в настоящее время?==Is your friend painter currently exhibiting her works?</item>
@@ -2889,66 +2889,65 @@
 
     <string-array name="present_process_relationship">
         <item>Я вижу ты гуляешь с новой девушкой. Мог бы ты нас познакомить?==I see you\’re walking with a new girlfriend. Could you introduce us?</item>
-        <item>- Посмотри! Они дерутся!- А кто это?- Муж и его жена ==- Look!They\’re fighting!- Who are they?- The husband and his wife</item>
-        <item>Он вечно разбрасывает свои носки по квартире. Ненавижу эту его привычку!==He\’s always throwing his socks in the apartment. I hate this habit of his!</item>
-        <item>Мы с сестрой смотрим передачу о влиянии афродизиаков на размножение кроликов. Не понимаю зачем, черт побери, это им==My sister and I are watching a program about the influence of aphrodisiacs on the reproduction of rabbits. I do not understand why the hell they need it</item>
-        <item>Он все готовится сделать ей предложение. А она подумывает о том, чтоб бросить его. ==He is still getting ready to propose, while she is thinking of dumping him.</item>
-        <item>- А где мои маленькие крошки?-Девочки в своей комнате. Разговаривают и смеются==- Where are my little babies?-The girls are in their room. Talking and laughing</item>
-        <item>Почему ты смеешься? Тебе нравится шутить надо мной? Это потому что я приемный сын?==Why are you laughing? Do you like making fun on me? Is it because I\’m a step-son?</item>
-        <item>Мне постоянно кто-то звонит, когда я принимаю ванну==Every time somebody\’s calling me when I\’m taking a bath. I hate it!</item>
-        <item>Например, твой любимый племянник сейчас пытается своровать твой бумажник==For example, your lovely nephew is trying to steal your wallet now.</item>
-        <item>Она все еще ждет, что он вернется и женится на ней==She is still waiting for him to return and marry her.</item>
-        <item>Смотри! Он стоит на коленях и предлагает ей выйти за него замуж ==-Look! He is on his knees and proposing to marry him</item>
-        <item>Моя жена всегда соглашается со своими подружками чтобы ей там не сказали!==My wife\’s always agreeing with her friends whatever she is told there!</item>
-        <item>-Ты делаешь уроки?-Сама делай!-Не груби матери! ==- Are you doing your homework?- Do it yourself!- Don\'t answer back to your mother!</item>
-        <item>- Что ты делаешь?- Звоню в полицию. ==- What are you doing?- I\’m phoning the police.</item>
-        <item>В этом месяце мы готовимся к свадьбе==We are preparing for the wedding this month</item>
-        <item>Подружки невесты дерутся за ее букет. Никогда не видел, чтобы девушек так хотели выйти замуж==Bridesmaids are fighting for her bouquet. I\'ve never seen such girls who are so eager to get married.</item>
-        <item>Внучка несет не только пирожки бабушке, но и счет за коммунальные услуги==А granddaughter is carrying not only pies to her grandmother, but also a utility bill.</item>
-        <item>Все дети на улице играют в игры, а наш ребенок читает теорию струн==All kids are playing games in the street, and our child is reading the string-array theory.</item>
-        <item>Наш разведенный друг ищет немного романтики==Our divorced friend is looking for a little romance</item>
-        <item>Мой супруг каждый день говорит мне один и тот же комплимент «ты просто космос»! Меня это уже бесит!==Every day my spouse is telling me the same compliment like “You are fucking rock” over and over again! It infuriates me!</item>
-        <item>- Где же, блин, мое обручальное кольцо?-Кто знает…Думаю, ты потерял его и сейчас кто-то пытается его продать==- Where the hell is my wedding ring?- Who knows … I think you lost it and now someone is trying to sell it</item>
-        <item>Будучи сиротой, он бродит по улице целый день и смотрит на счастливые семьи==Being an orphan, he is wandering the whole day in the street and looking at the happy families.</item>
-        <item>- Привет, сильная и независимая женщина. Что делаешь? Наверно, ты сейчас на свидании или знакомишься с кем-то?- Нет… я сижу и играю с кошками.==- Hi, strong and independent woman! What are you doing? Perhaps you are on date or getting acquaintance now, right?- No … I am sitting and playing with my cats</item>
-        <item>Жених просит отменить свадьбу. Ему становится хуже и его может стошнить==The fiance\’s asking to call wedding off. It\’s getting worse to him and he might throw up.</item>
-        <item>Мой зять молчит все время, пока говорит свекровь. ==My son-in-law is silent all this time while his mother-in-law is talking.</item>
-        <item>Полицейские стоят и думают, стоит ли им арестовать супругов за драку в общественных местах или подождать финала этой романтической истории==Policemen are staying and thinking if they should arrest spouses for fighting in public places or they should wait the end of this romantic story</item>
-        <item>Ой, ваш новорожденный сын улыбается, не понимая куда он попал==Oh, your new-born baby is smiling, not realizing where he is</item>
-        <item>Не беспокой кондитера. Он делает нам свадебный торт==Do not bother confectioner. He is making for us a wedding cake</item>
-        <item>- Эти близнецы классно танцуют.- О, да! Это же « Лэс Твинс»==- The twins are dancing great.- Oh yeah! It\'s "Les Twins"</item>
+        <item>- Посмотри! Они дерутся! - А кто это? - Муж и его жена == - Look! They\’re fighting! - Who are they? - The husband and his wife</item>
+        <item>Он вечно разбрасывает свои носки по квартире. Ненавижу эту его привычку! == He\’s always throwing his socks around the apartment. I hate that habit of his!</item>
+        <item>Мы с сестрой смотрим передачу о влиянии афродизиаков на размножение кроликов. Не понимаю, зачем это им. == My sister and I are watching a show about the influence of aphrodisiacs on rabbit reproduction. I don\’t understand why they need it.</item>
+        <item>Он все готовится сделать ей предложение. А она подумывает о том, чтобы бросить его. == He\’s still getting ready to propose, while she\'s thinking of dumping him.</item>
+        <item>- А где мои маленькие крошки? - Девочки в своей комнате, разговаривают и смеются. == - Where are my little ones? - The girls are in their room, talking and laughing.</item>
+        <item>Почему ты смеешься? Тебе нравится шутить надо мной? Это потому что я приемный сын? == Why are you laughing? Do you like making fun of me? Is it because I\’m adopted?</item>
+        <item>Мне постоянно кто-то звонит, когда я принимаю ванну. == Someone always calls me when I\'m taking a bath. I hate it!</item>
+        <item>Например, твой любимый племянник сейчас пытается своровать твой бумажник. == For example, your favorite nephew is trying to steal your wallet right now.</item>
+        <item>Она все еще ждет, что он вернется и женится на ней. == She\’s still waiting for him to come back and marry her.</item>
+        <item>Смотри! Он стоит на коленях и делает ей предложение. == Look! He\’s on his knees proposing to her.</item>
+        <item>Моя жена всегда соглашается со своими подружками, что бы они ни говорили! == My wife is always agreeing with her friends, no matter what they say!</item>
+        <item>- Ты делаешь уроки? - Сама делай! - Не груби матери! == - Are you doing your homework? - Do it yourself! - Don\'t talk back to your mother!</item>
+        <item>- Что ты делаешь? - Звоню в полицию. == - What are you doing? - I\'m calling the police.</item>
+        <item>В этом месяце мы готовимся к свадьбе. == We\'re preparing for the wedding this month.</item>
+        <item>Подружки невесты дерутся за ее букет. Никогда не видел девушек, которые так хотят выйти замуж. == The bridesmaids are fighting over her bouquet. I\'ve never seen girls so eager to get married.</item>
+        <item>Внучка несет не только пирожки бабушке, но и счет за коммунальные услуги. == A granddaughter is carrying not only pies to her grandmother but also a utility bill.</item>
+        <item>Все дети на улице играют в игры, а наш ребенок читает теорию струн. == All the kids are playing outside, and our child is reading about string theory.</item>
+        <item>Наш разведенный друг ищет немного романтики.==Our divorced friend is looking for a little romance.</item>
+        <item>- Где же мое обручальное кольцо? - Кто знает… Думаю, ты потерял его, и сейчас кто-то пытается его продать. == - Where is my wedding ring? - Who knows… I think you lost it, and now someone is trying to sell it.</item>
+        <item>Будучи сиротой, он бродит по улице целый день и смотрит на счастливые семьи. == Being an orphan, he\'s wandering around the street all day, watching happy families.</item>
+        <item>- Привет, сильная и независимая женщина. Что делаешь? Наверное, ты сейчас на свидании или знакомишься с кем-то, верно? - Нет… я просто сижу и играю с кошками. == - Hi, strong and independent woman! What are you doing? Maybe you\'re on a date or meeting someone, right? - No… I\'m just sitting here playing with my cats.</item>
+        <item>Жених просит отменить свадьбу. Ему становится хуже, и его может стошнить. == The groom is asking to call off the wedding. He\'s feeling worse, and he might throw up.</item>
+        <item>Мой зять молчит все время, пока говорит свекровь. == My son-in-law stays quiet the whole time while his mother-in-law talks.</item>
+        <item>Полицейские стоят и думают, стоит ли им арестовать парочку за драку в общественном месте или подождать окончания этой романтической истории. == The police officers are standing there, wondering whether they should arrest the couple for fighting in public or wait for the end of this romantic story.</item>
+        <item>Ой, ваш новорожденный сын улыбается, не понимая, куда он попал. == Oh, your newborn baby is smiling, not realizing where he is.</item>
+        <item>Не беспокой кондитера. Он делает нащ свадебный торт. == Don\'t bother the baker. He\'s making our wedding cake.</item>
+        <item>- Эти близнецы классно танцуют. - О, да! Это же "Les Twins". == - The twins are dancing great. - Oh yeah! It\'s "Les Twins".</item>
         <item>-А где ваш малыш?-Думаю, он пьет водку средь девушек==-Where is your baby?-I think he\’s drinking vodka among girls</item>
-        <item>-Сын, ты где?-Бегаю….от полиции.==-Son, where are you?- I\’m running … away from the police.</item>
+        <item>- Сын, ты где? - Бегаю… от полиции. == - Son, where are you? - Running… from the police.</item>
     </string-array>
 
     <string-array name="present_simple_cont">
         <item>Вечером я всегда закрываю окно==I always close the window at night.</item>
         <item>Солнце всходит на востоке.==The sun rises in the east.</item>
-        <item>Мальчики не плачут.==The boys do not (don\’t) cry.</item>
-        <item>Мы не путешественники,==We are not (aren\’t) travelers.</item>
-        <item>Алексей отдыхает в Крыму каждое лето==Aleksey has a rest in Crimea every summer</item>
-        <item>Эта квартира стоит достаточно дорого.==This apartment costs a lot of money.</item>
-        <item>Он идёт пешком в школу каждый день==He walks to school every day.</item>
-        <item>Он идет вниз по улице==He is walking down the street.</item>
-        <item>Мы идем в кинотеатр==We are going to the movie theater.</item>
-        <item>Он знает о ее проблеме==He knows about her problem.</item>
-        <item>Вечно ты оставляешь газету на полу.==You are always leaving your newspaper on the floor</item>
-        <item>Она занимается йогой каждый день==She does yoga every day.</item>
-        <item>Он принимает душ сейчас==He is taking a shower now.</item>
+        <item>Мальчики не плачут.==Boys don\’t cry.</item>
+        <item>Мы не путешественники.==We are not travelers.</item>
+        <item>Алексей отдыхает в Крыму каждое лето.==Aleksey vacations in Crimea every summer.</item>
+        <item>Эта квартира стоит достаточно дорого.==This apartment is quite expensive.</item>
+        <item>Он идёт пешком в школу каждый день.==He walks to school every day.</item>
+        <item>Он идет вниз по улице.==He is walking down the street.</item>
+        <item>Мы идем в кинотеатр.==We are going to the movie theater.</item>
+        <item>Он знает о ее проблеме.==He knows about her problem.</item>
+        <item>Вечно ты оставляешь газету на полу.==You are always leaving the newspaper on the floor.</item>
+        <item>Она занимается йогой каждый день.==She does yoga every day.</item>
+        <item>Он принимает душ сейчас.==He is taking a shower now.</item>
         <item>Он спит.==He is sleeping.</item>
-        <item>Моя мама отдыхает.==My mother is resting (having a rest).</item>
+        <item>Моя мама отдыхает.==My mother is resting.</item>
         <item>Соседи празднуют день рождения сына.==My neighbors are celebrating their son\'s birthday.</item>
         <item>Он играет в компьютерную игру.==He is playing a computer game.</item>
-        <item>Он твой младший брат==He is your younger brother</item>
-        <item>Обычно мой друг приходит поздно.==Usually my friend comes late.</item>
-        <item>Я чищу овощи.==I\’m peeling vegetables.</item>
-        <item>Они работают над новым проектом.==They are working at a new project.</item>
-        <item>Моя подружка переписывается с немцем.==My girlfriend is chatting with a German.</item>
-        <item>Обычно он встает в 8 часов.==Usually he gets up at eight o\’clock.</item>
+        <item>Он твой младший брат.==He is your younger brother.</item>
+        <item>Обычно мой друг приходит поздно.==Usually, my friend comes late.</item>
+        <item>Я чищу овощи.==I am peeling vegetables.</item>
+        <item>Они работают над новым проектом.==They are working on a new project.</item>
+        <item>Моя подружка переписывается с немцем.==My girlfriend is chatting with a German guy.</item>
+        <item>Обычно он встает в 8 часов.==Usually, he gets up at eight o\'clock.</item>
         <item>Они обычно покупают газеты по утрам.==They usually buy newspapers in the morning.</item>
-        <item>Я еду в метро. ==I\’m taking the subway (going by subway/on a train)</item>
-        <item>Я учу испанский.==I\’m learning Spanish</item>
-        <item>Какой-то человек стоит у моей машины.==A man (some man) is standing near my car.</item>
+        <item>Я еду в метро.==I am taking the subway.</item>
+        <item>Я учу испанский.==I am learning Spanish.</item>
+        <item>Какой-то человек стоит у моей машины.==Some man is standing near my car.</item>
         <item>Они все еще ходят по городу.==They are still walking around the city.</item>
         <item>Он навещает своих родителей очень часто.==He visits his parents very often.</item>
         <item>Я обычно ложусь спать в 11.==I usually go to bed at eleven.</item>
@@ -2959,48 +2958,49 @@
         <item>Мы готовим ужин сейчас.==We are cooking dinner now.</item>
         <item>Они играют в комнате (в данный момент).==They are playing in the room (at the moment).</item>
         <item>Она любит молоко.==She likes milk.</item>
-        <item>Радио не работает.==Radio is not (isn\’t) working.</item>
-        <item>Я не читаю газету сейчас.==I\’m not reading a newspaper now.</item>
-        <item>Я не сижу в интернете.==I\’m not surfing the internet.</item>
-        <item>Я и моя жена всегда находим компромисс. Я каждый раз признаю, что я не прав, и она соглашается.==Every time I admit I\'m wrong and she agrees with me.</item>
-        <item>Насколько я знаю, она хочет выйти замуж за немца и сделать его несчастным==As far as I know, she wants to get married to a German and make him unhappy</item>
-        <item>Они слишком много думают по ночам==They think a lot at night</item>
+        <item>Радио не работает.==The radio is not working.</item>
+        <item>Я не читаю газету сейчас.==I\'m not reading a newspaper now.</item>
+        <item>Я не сижу в интернете.==I\'m not surfing the internet.</item>
+        <item>Я и моя жена всегда находим компромисс. Я каждый раз признаю, что я не прав, и она соглашается.==My wife and I always find a compromise. Every time I admit I am wrong, and she agrees with me.</item>
+        <item>Насколько я знаю, она хочет выйти замуж за немца и сделать его несчастным.==As far as I know, she wants to marry a German guy and make him unhappy.</item>
+        <item>Они слишком много думают по ночам.==They think too much at night.</item>
         <item>Вы изучаете английский в настоящее время.==You are learning English now.</item>
-        <item>Не могу попробовать на вкус свои губы, можешь сделать это для меня?==I can\’t taste my lips, can you do it for me?</item>
-        <item>Назад!! Вы стоите на моей ауре!==Back off!! You\'re standing in my aura</item>
-        <item>Мальчик постоянно разыгрывает свою бедную маму.==The boy is constantly playing tricks on his poor mother..</item>
-        <item>О чем ты, блин, сейчас говоришь?==What the hell are you talking about now?</item>
-        <item>Я умный человек. Я просто делаю глупости.==I\'m a smart person. I just do stupid things</item>
-        <item>Моя соседка курит марихуану. Она говорит, что это лекарство от реальности==My neighbor smokes marijuana. She says that this medicine from reality</item>
-        <item>Я жду посадки на рейс.==I\’m waiting for boarding.</item>
-        <item>Он выбирает горячее блюдо в меню.==He\’s choosing a hot dish in the menu.</item>
-        <item>Я стою в очереди на регистрацию.==I\’m standing in the line (am queuing) for the check-in</item>
-        <item>Она танцуют танго.==They are dancing tango.</item>
-        <item>Я строю новый дом за городом.==I\'m building a new house in the country</item>
+        <item>Не могу попробовать на вкус свои губы, можешь сделать это для меня?==I can\'t taste my lips. Can you do it for me?</item>
+        <item>Назад!! Вы стоите на моей ауре!==Back off!! You\'re standing in my aura!</item>
+        <item>Мальчик постоянно разыгрывает свою бедную маму.==The boy is constantly playing tricks on his poor mother.</item>
+        <item>О чем ты сейчас говоришь?==What are you talking about now?</item>
+        <item>Я умный человек. Я просто делаю глупости.==I\'m a smart person. I just do stupid things.</item>
+        <item>Моя соседка курит марихуану. Она говорит, что это лекарство от реальности.==My neighbor smokes marijuana. She says it is medicine from reality.</item>
+        <item>Я жду посадки на рейс.==I\'m waiting for boarding.</item>
+        <item>Он выбирает горячее блюдо в меню.==He is choosing a hot dish from the menu.</item>
+        <item>Я стою в очереди на регистрацию.==I am standing in line for check-in.</item>
+        <item>Они танцуют танго.==They are dancing tango.</item>
+        <item>Я строю новый дом за городом.==I am building a new house in the country.</item>
         <item>Я сейчас ем.==I am eating now.</item>
-        <item>Он играет в футбол сейчас.==Не is playing football now.</item>
-        <item>Он играет в футбол по субботам.==Не plays football every Saturday.</item>
+        <item>Он играет в футбол сейчас.==He is playing soccer now.</item>
+        <item>Он играет в футбол по субботам.==He plays soccer every Saturday.</item>
         <item>Она смотрит телевизор в данный момент.==She is watching TV at the moment.</item>
         <item>Я работаю в данный момент.==I am working at the moment.</item>
-        <item>Я работаю в офисе.==I work at the office.</item>
+        <item>Я работаю в офисе.==I work at an office.</item>
         <item>Мы сейчас гуляем.==We are walking now.</item>
         <item>Обычно мы гуляем по вечерам.==We usually walk in the evening.</item>
-        <item>Я не играю в шахматы.==I don\’t play chess.</item>
-        <item>Он не любит апельсиновый сок.==He doesn\’t like orange juice.</item>
+        <item>Я не играю в шахматы.==I don\'t play chess.</item>
+        <item>Он не любит апельсиновый сок.==He doesn\'t like orange juice.</item>
         <item>Он не ест бутерброд сейчас.==He is not eating a sandwich now.</item>
         <item>Он принимает душ?==Is he taking a shower?</item>
         <item>Они сейчас спят?==Are they sleeping now?</item>
-        <item>Мы не встаем рано утром.==We don\’t get up early in the morning.</item>
-        <item>Она не читает каждый день.==She doesn\’t read every day.</item>
+        <item>Мы не встаем рано утром.==We don\'t get up early in the morning.</item>
+        <item>Она не читает каждый день.==She doesn\'t read every day.</item>
         <item>Твоя сестра ходит в школу?==Does your sister go to school?</item>
         <item>Ты часто ходишь в музей?==Do you often go to the museum?</item>
-        <item>Мы ждём автобус?==Are we waiting for a bus?</item>
-        <item>Салли сейчас делает домашнее задание?==Is Sally doing her homework at the moment?</item>
+        <item>Мы ждем автобус?==Are we waiting for the bus?</item>
+        <item>Салли сейчас делает домашнее задание?==Is Sally doing her homework now?</item>
         <item>Вы используете этот словарь?==Are you using this dictionary?</item>
         <item>Я слушаю произведения Моцарта сейчас?==Am I listening to Mozart now?</item>
         <item>Шеф готовит новое блюдо?==Is the chef cooking a new dish?</item>
         <item>Ты постоянно что-то теряешь!==You are always losing something!</item>
     </string-array>
+
 
     <string-array name="present_simple_vs_present_process">
         <item>Она говорит по-японски==She speaks Japanese</item>
