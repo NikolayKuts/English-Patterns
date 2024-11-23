@@ -128,7 +128,7 @@
     </string-array>
 
     <string-array name="possessive_case_of_nouns">
-        <item>Мамино имя==Mum’s name</item>
+        <item>Мамино имя==Mom’s name</item>
         <item>Папино имя==Dad’s name</item>
         <item>Дочкино имя==Daughter’s name</item>
         <item>Имя сына==Son’s name</item>
@@ -141,7 +141,7 @@
         <item>Имя двоюродного брата (сестры)==Cousin’s name</item>
         <item>Имя мужа==Husband’s name</item>
         <item>Имя жены==Wife’s name</item>
-        <item>Имя моей мамы==My mum’s name</item>
+        <item>Имя моей мамы==My mom’s name</item>
         <item>Имя моего папы==My dad’s name</item>
         <item>Имя моей дочки==My daughter’s name</item>
         <item>Имя моего сына==My son’s name</item>
@@ -162,13 +162,13 @@
         <item>Имя твоей тети==Your aunt’s name</item>
         <item>Имя твоего дяди==Your uncle’s name</item>
         <item>Имя твоего дедушки==Your grandfather’s name</item>
-        <item>Имя твоей мамы==Your mum’s name</item>
+        <item>Имя твоей мамы==Your mom’s name</item>
         <item>Имя твоего папы==Your dad’s name</item>
         <item>Имя твоей бабушки==Your grandmother’s name</item>
         <item>Имя твоей двоюродной сестры==Your cousin’s name</item>
         <item>Имя его двоюродной сестры==His cousin’s name</item>
         <item>Имя его жены==His wife’s name</item>
-        <item>Имя его мамы==His mum’s name</item>
+        <item>Имя его мамы==His mom’s name</item>
         <item>Имя его бабушки==His grandmother’s name</item>
         <item>Имя его дедушки==His grandfather’s name</item>
         <item>Имя его сына==His son’s name</item>
@@ -1303,8 +1303,8 @@
     <string-array name="present_simple_go">
         <item>Мы идем домой в 5 вечера.==We go home at five p.m.</item>
         <item>Он идет домой после работы.==He goes home after work.</item>
-        <item>Я часто хожу в кино.==I often go to the cinema.</item>
-        <item>Она часто ходит в кино по понедельникам.==She often goes to the cinema on Mondays.</item>
+        <item>Я часто хожу в кино.==I often go to the movie theater.</item>
+        <item>Она часто ходит в кино по понедельникам.==She often goes to the movie theater on Mondays.</item>
         <item>Вы ходите в ресторан во вторник.==You go to the restaurant on Tuesday.</item>
         <item>Мой брат ходит в ресторан каждый день.==My brother goes to the restaurant every day.</item>
         <item>Их сестры часто ходят в театр.==Their sisters often go to the theatre.</item>
@@ -1337,15 +1337,15 @@
         <item>Они ходят в университет каждый день, у них много лекций.==They go to university every day, they have a lot of lectures.</item>
         <item>Наши семьи ездят в круиз каждый год.==Our families go on a cruise every year.</item>
         <item>Мы ездим на экскурсии время от времени.==We go on excursions from time to time.</item>
-        <item>Она ходит в кино с Беном.==She goes to the cinema with Ben.</item>
+        <item>Она ходит в кино с Беном.==She goes to the movie theater with Ben.</item>
         <item>Они редко ходят в театр.==They rarely go to the theatre.</item>
         <item>Я хожу в ресторан каждый уикенд.==I go to the restaurant every weekend.</item>
         <item>Его мама идет домой после обеда.==His mother goes home after lunch.</item>
         <item>Ее папа идет на работу после завтрака.==Her father goes to work after breakfast.</item>
         <item>Мы не идем домой в 5 вечера.==We don\'t go home at five p.m.</item>
         <item>Он не идет домой после работы.==He doesn\'t go home after work.</item>
-        <item>Я не часто хожу в кино.==I don\'t often go to the cinema.</item>
-        <item>Она не ходит в кино по понедельникам.==She doesn\'t often go to the cinema on Mondays.</item>
+        <item>Я не часто хожу в кино.==I don\'t often go to the movie theater.</item>
+        <item>Она не ходит в кино по понедельникам.==She doesn\'t often go to the movie theater on Mondays.</item>
         <item>Вы не ходите в ресторан во вторник.==You don\'t go to the restaurant on Tuesday.</item>
         <item>Мой брат не ходит в ресторан каждый день.==My brother doesn\'t go to the restaurant every day.</item>
         <item>Их сестры не часто ходят в театр.==Their sisters don\'t often go to the theatre.</item>
@@ -1363,7 +1363,7 @@
         <item>Мои друзья не идут на работу утром.==My friends don\'t go to work in the morning.</item>
         <item>Дети не уходят на каникулы четыре раза в год.==Children don\'t go on holiday four times a year.</item>
         <item>Я не езжу в отпуск летом.==I don\'t go on vacation in summer.</item>
-        <item>Сэм обычно не уходит в отпуск в январе.==Sam doesn\'t usually go on holiday in January.</item>
+        <item>Сэм обычно не уходит в отпуск в январе.==Sam doesn\'t usually go on vacation in January.</item>
         <item>Ученики не ходят на экскурсии очень часто.==Students don\'t go on excursions very often.</item>
         <item>Они не ходят на экскурсии в музеи.==They don\'t go on excursions to museums.</item>
         <item>Вы ходите в ресторан во вторник?==Do you go to the restaurant on Tuesday?</item>
@@ -1373,7 +1373,7 @@
         <item>Они ходят в зоопарк время от времени?==Do they go to the zoo from time to time?</item>
         <item>Соня ходит в зоопарк со своей мамой?==Does Sonya go to the zoo with her mom?</item>
         <item>Джон и Диана идут спать рано?==Do John and Diana go to bed early?</item>
-        <item>Она часто ходит в кино по понедельникам?==Does she often go to the cinema on Mondays?</item>
+        <item>Она часто ходит в кино по понедельникам?==Does she often go to the movie theater on Mondays?</item>
         <item>Они ездят в Англию летом?==Do they go to England in summer?</item>
         <item>Она ездит в Германию каждый год?==Does she go to Germany every year?</item>
         <item>Кейт ходит в школу даже по воскресеньям?==Does Kate go to school even on Sundays?</item>
@@ -1390,14 +1390,14 @@
         <item>Когда Джон и Диана идут спать?==When do John and Diana go to bed?</item>
         <item>Когда они идут домой?==When do they go home?</item>
         <item>Когда мои друзья идут на работу?==When do my friends go to work?</item>
-        <item>Когда Сэм обычно уходит в отпуск?==When does Sam usually go on holiday?</item>
+        <item>Когда Сэм обычно уходит в отпуск?==When does Sam usually go on vacation?</item>
         <item>Мои друзья не идут на работу вечером.==My friends don\'t go to work in the evening.</item>
         <item>Куда Соня ходит со своей подругой?==Where does Sonya go with her friend?</item>
         <item>Я не езжу в отпуск летом.==I don\'t go on vacation in summer.</item>
         <item>Майк не часто попадает в больницу.==Mike doesn\'t often go to hospital.</item>
         <item>Сэм обычно уходит в отпуск в январе.==Sam usually goes on vacation in January.</item>
         <item>Они не ходят на экскурсии в музеи.==They don\'t go on excursions to museums.</item>
-        <item>Она часто ходит в кино по понедельникам?==Does she often go to the cinema on Mondays?</item>
+        <item>Она часто ходит в кино по понедельникам?==Does she often go to the movie theater on Mondays?</item>
         <item>Они ездят в Англию летом.==They go to England in summer.</item>
         <item>Она ездит в Италию каждый год?==Does she go to Italy every year?</item>
         <item>Ваши братья ездят в школу на автобусе.==Your brothers go to school by bus.</item>
@@ -1715,7 +1715,7 @@
     </string-array>
 
     <string-array name="present_simple_lesson_2">
-        <item>Я просыпаюсь в 7 утра каждый день==I wake up at 7 o\’clock (in the morning) every day</item>
+        <item>Я просыпаюсь в 7 утра каждый день==I wake up at 7 a.m (in the morning) every day</item>
         <item>Она читает перед сном глянцевые журналы==She reads glossy magazines before going to bed</item>
         <item>Я чувствую себя сонным по понедельникам==I feel sleepy on Mondays</item>
         <item>Они обычно завтракают в ресторане==They usually have breakfast in the restaurant</item>
@@ -1725,7 +1725,7 @@
         <item>Я использую компьютер только для работы==I use computer for work only</item>
         <item>Мы встречаемся с друзьями по выходным==We meet friends on the weekends</item>
         <item>Она ходит в спортзал после работы==She goes to the gym after work</item>
-        <item>Они всегда слушают музыку в метро==They always listen to music in/on ( the) subway</item>
+        <item>Они всегда слушают музыку в метро==They always listen to music on the subway."</item>
         <item>После обеда я обычно мою посуду==I usually wash the dishes after dinner</item>
         <item>Она часто играет в компьютерные игры==She often plays computer games</item>
         <item>Они занимаются спортом 3 раза в неделю ==They do sport 3 times a week</item>
@@ -1773,7 +1773,7 @@
         <item>Что она читает перед сном?==What does she read before going to bed?</item>
         <item>Что она готовит на выходных?==What does she cook on the weekend?</item>
         <item>Где ты работаешь?==Where do you work?</item>
-        <item>Где они обычно обедают?==Where do they have dinner usually?</item>
+        <item>Где они обычно обедают?==Where do they usually have lunch?</item>
         <item>Куда он ходит после работы?==Where does he go after work?</item>
         <item>Когда она убирается дома?==When does she clean the house?</item>
         <item>Когда они делают домашнее задание?==When do they do their homework?</item>
@@ -1815,7 +1815,7 @@
         <item>Она убирает комнату время от времени==She cleans her room from time to time</item>
         <item>Почему ты не ешь после 6 часов вечера?==Why don\’t you eat after 6 p.m?</item>
         <item>Как часто она болтает с ним?==How often does she chat with him?</item>
-        <item>Что она готовит для своих питомцев?==What does she cook for his pets?</item>
+        <item>Что она готовит для своих питомцев?==What does she cook for her pets?</item>
         <item>Она выходит на прогулку по вечерам?==Does she go for a walk in the evening?</item>
         <item>Я не люблю ездить на работу на метро==I don\’t like to go to work by subway</item>
         <item>Почему он не помогает готовить?==Why doesn\’t he help to cook?</item>
@@ -1855,7 +1855,7 @@
         <item>Я люблю работать с детьми.==I love working with children.</item>
         <item>Тебе нравится рано просыпаться?==Do you like waking up early?</item>
         <item>Ты любишь заниматься спортом?==Do you love doing sports?</item>
-        <item>Ей нравится мыть посуду?==Does she like doing the washing up?</item>
+        <item>Ей нравится мыть посуду?==Does she like doing the washing-up?</item>
         <item>Твоей сестре нравится готовить?==Does your sister like cooking?</item>
         <item>Твоему брату нравится смотреть видео?==Does your brother like watching videos?</item>
         <item>Тебе нравится играть на барабанах?==Do you like playing drums?</item>
@@ -1934,7 +1934,7 @@
         <item>Вас реально не интересуют современные композиторы?==Are you really not interested in the modern composers?</item>
         <item>Вы увлекаетесь живописью?==Are you keen on painting?</item>
         <item>Она совсем не была увлечена идеей?==Wasn\'t she keen on the idea at all?</item>
-        <item>Я надеюсь заинтересовать её своим планом==I hope she will be interested in my plan</item>
+        <item>Я надеюсь она будет заинтересована моим планом==I hope she will be interested in my plan</item>
         <item>Он без ума от нее?==Is he crazy about her?</item>
         <item>Я всегда интересовался политикой ==I have always been interested in politics.</item>
         <item>Он не помешан на искусстве.==He isn\'t crazy about art</item>
@@ -1947,7 +1947,7 @@
 
     <string-array name="present_process">
         <item>Я читаю книгу.==I am reading a book.</item>
-        <item>Она смотрит кино.==She is watching a film.</item>
+        <item>Она смотрит кино.==She is watching a movie.</item>
         <item>Ты делаешь свое домашнее задание.==You are doing your homework.</item>
         <item>Мы обедаем.==We are having lunch.</item>
         <item>Он принимает душ.==He is taking a shower.</item>
@@ -1961,10 +1961,10 @@
         <item>Мы обедаем, извини.==We are having lunch, sorry.</item>
         <item>Она ужинает.==She is having dinner.</item>
         <item>Она встаёт сейчас.==She is getting up.</item>
-        <item>Я помогаю маме.==I am helping my mum.</item>
+        <item>Я помогаю маме.==I am helping my mom.</item>
         <item>Он учит новые слова.==He is learning new words.</item>
         <item>Ты умываешься.==You are washing.</item>
-        <item>Она всегда встает (просыпается) поздно!==She is always waking up late!</item>
+        <item>Она всегда просыпается поздно!==She is always waking up late!</item>
         <item>Мы моем посуду.==We are washing up the dishes.</item>
         <item>Он закрывает окно.==He is closing the window.</item>
         <item>Она закрывает дверь.==She is closing the door.</item>
@@ -1986,7 +1986,7 @@
         <item>Я не слушаю радио.==I am not listening to the radio.</item>
         <item>Он не обедает.==She isn\’t having lunch.</item>
         <item>Я не шучу.==I am not kidding.</item>
-        <item>Мама не идет в супермаркет.==Mum isn\’t going to the supermarket.</item>
+        <item>Мама не идет в супермаркет.==Mom isn\’t going to the supermarket.</item>
         <item>Мы не играем в компьютерные игры.==We are not playing computer games.</item>
         <item>Она не за рулем.==She isn\’t driving.</item>
         <item>Не идет снег.==It isn\’t snowing.</item>
@@ -2005,10 +2005,10 @@
         <item>Мы делаем домашнее задание?==Are we doing homework?</item>
         <item>Идет снег?==Is it snowing?</item>
         <item>Угадай. Я сижу в интернете?==Guess. Am I surfing the internet?</item>
-        <item>Ты идешь в кино?==Are you going to the cinema?</item>
+        <item>Ты идешь в кино?==Are you going to the movie theater?</item>
         <item>Она работает в супермаркете?==Is she working in the supermarket?</item>
         <item>Ты шутишь?==Are you kidding?</item>
-        <item>Он скачивает фильм?==Is he downloading the film?</item>
+        <item>Он скачивает фильм?==Is he downloading the movie?</item>
         <item>Ты делаешь завтрак?==Are you making breakfast?</item>
         <item>Угадай. Мы работаем там?==Guess. Are we working there?</item>
         <item>Где ты сидишь?==Where are you sitting?</item>
@@ -2017,7 +2017,7 @@
         <item>Где я работаю?==Where am I working?</item>
         <item>Почему ты готовишь салат?==Why are you making а salad?</item>
         <item>Как ты поживаешь?==How are you doing?</item>
-        <item>Что делает твоя семья?==What are your family doing?</item>
+        <item>Что делает твоя семья?==What is your family doing?</item>
         <item>Я читаю книгу сейчас.==I\’m reading a book.</item>
         <item>Мой папа смотрит телевизор.==My dad is watching TV.</item>
         <item>Что он смотрит?==What is he watching?</item>
@@ -2043,7 +2043,7 @@
         <item>Они играют в комнате (в данный момент).==They are playing in the room (at the moment).</item>
         <item>Я сейчас ем.==I am eating now.</item>
         <item>Она любит молоко.==She likes milk.</item>
-        <item>Обычно он встает (просыпается) в 8 часов.==Usually he wakes up at eight o\’clock.</item>
+        <item>Обычно он просыпается в 8 часов.==Usually he wakes up at eight o\’clock.</item>
         <item>Они обычно покупают газеты утром.==They usually buy newspapers in the morning.</item>
         <item>Он навещает своих родителей очень часто.==He visits his parents very often.</item>
         <item>Я обычно ложусь спать в 11.==I usually go to bed at eleven.</item>
@@ -2060,7 +2060,7 @@
         <item>Мы не просыпаемся рано утром.==We don\’t wake up early in the morning.</item>
         <item>Она не читает каждый день.==She doesn\’t read every day.</item>
         <item>Он не ест бутерброд сейчас.==He is not eating a sandwich now.</item>
-        <item>Он принимает душ?==Is he having a shower?</item>
+        <item>Он принимает душ?==Is he taking a shower?</item>
         <item>Они сейчас спят?==Are they sleeping now?</item>
         <item>Твоя сестра ходит в школу?==Does your sister go to school?</item>
         <item>Ты часто ходишь в музей?==Do you often go to the museum?</item>
@@ -2212,7 +2212,7 @@
         <item>В центре комнаты стоит табурет.==There is a stool in the center of the room.</item>
         <item>На полу лежат 3 книжки и 4 карандаша.==There are three books and four pencils on the floor.</item>
         <item>Возле кровати стоят стулья.==There are chairs near the bed.</item>
-        <item>У стола стоит мусорное ведро.==There is a dustbin beside the table.</item>
+        <item>Сбоку от стола стоит мусорное ведро.==There is a dustbin beside the table.</item>
         <item>На журнальном столике стоит ноутбук.==There is a laptop on the coffee table.</item>
         <item>Вокруг стола стоят 5 стульев.==There are five chairs around the table.</item>
         <item>На полутора спальной кровати лежит покрывало.==There is a bedspread on the three quarter bed.</item>
@@ -2245,7 +2245,7 @@
         <item>Много еды==Much food</item>
         <item>Много света==Much light</item>
         <item>Много машин==Many cars</item>
-        <item>много фильмов==Many films (movies)</item>
+        <item>много фильмов==Many movies</item>
         <item>Много красивых женщин==Many pretty (beautiful) women</item>
         <item>Много умных мужчин==Many clever (smart) men</item>
         <item>Много интересных книг==Many interesting books</item>
@@ -2266,15 +2266,15 @@
     <string-array name="much_many_little_few">
         <item>В миске не много (мало) сахара.==There isn\’t much sugar in a bowl.</item>
         <item>На тарелке не много (мало) сыра.==There isn\’t much cheese on the plate.</item>
-        <item>В кастрюле не много (мало) мяса.==There isn\’t much meat in the pan.</item>
+        <item>В кастрюле не много (мало) мяса.==There isn\’t much meat in the pot.</item>
         <item>В бутылке не много (мало) масла.==There isn\’t much oil in the bottle.</item>
         <item>В блендере не много (мало) молока.==There isn\’t much milk in the blender.</item>
-        <item>В кастрюле не много (мало) рыбы.==There isn\’t much fish in a pan.</item>
+        <item>В кастрюле не много (мало) рыбы.==There isn\’t much fish in the pot.</item>
         <item>В корзине не много (мало) яблок.==There aren\’t many apples in the basket.</item>
         <item>В сумке не много (мало) апельсинов.==There aren\’t many oranges in the bag.</item>
         <item>На столе не много (мало) бананов.==There aren\’t many bananas on the table.</item>
         <item>В раковине не много (мало) моркови.==There aren\’t many carrots in the sink.</item>
-        <item>В кастрюле не много (мало) картошки.==There aren\’t many potatoes in the pan.</item>
+        <item>В кастрюле не много (мало) картошки.==There aren\’t many potatoes in the pot.</item>
         <item>В холодильнике не много (мало) томатов. ==There aren\’t many tomatoes in the fridge.</item>
         <item>В холодильнике много яиц?==Are there many eggs in the fridge?</item>
         <item>Там много еды?==Is there much food?</item>
@@ -2299,7 +2299,7 @@
         <item>У нее мало молока.==She has little milk.</item>
         <item>У них мало сока.==They have little juice.</item>
         <item>У нас мало черного чая.==We have little black tea.</item>
-        <item>У нее мало кофе.==He has little coffee.</item>
+        <item>У нее мало кофе.==She has little coffee.</item>
         <item>У меня мало зеленого чая.==I have little green tea.</item>
         <item>У нас мало рублей.==We have few rubles.</item>
         <item>У них мало сигарет. ==They have few cigarettes.</item>
@@ -2399,7 +2399,7 @@
         <item>В центре города==In the downtown</item>
         <item>В клубе ==In the club</item>
         <item>В музее==In the museum</item>
-        <item>В кино==At/ in the cinema</item>
+        <item>В кино==At/ in the movie theater</item>
         <item>В пригороде==In the suburbs</item>
         <item>В гараже ==At the garage</item>
         <item>На катке==At/in the rink</item>
@@ -2416,9 +2416,9 @@
         <item>В банк==To the bank</item>
         <item>В полицию==To the police station</item>
         <item>В университет==To university</item>
-        <item>В кафе==To the café</item>
+        <item>В кафе==To the cafe</item>
         <item>В ресторан==To the restaurant</item>
-        <item>В кино==To the cinema</item>
+        <item>В кино==To the movie theater</item>
         <item>В центр города==To the downtown</item>
         <item>На вечеринку==To the party</item>
         <item>На свадьбу==To the wedding</item>
@@ -2454,15 +2454,15 @@
         <item>Идите по дороге.==Go along the road</item>
         <item>Езжайте по шоссе.==Drive along the highway.</item>
         <item>Идите по этому пути.==Go along the way.</item>
-        <item>Идите по тротуару.==Walk along the pavement.</item>
+        <item>Идите по тротуару.==Walk along the sidewalk.</item>
         <item>Поверните направо у красного здания.==Turn right at the red building.</item>
-        <item>Поверните направо у аптеки.==Turn right at the chemist\’s.</item>
+        <item>Поверните направо у аптеки.==Turn right at the drugstore.</item>
         <item>Поверните направо у банка.==Turn right at the bank.</item>
         <item>Поверните направо у светофора.==Turn right at the traffic lights.</item>
         <item>Поверните направо у гостиницы.==Turn right at the hotel.</item>
         <item>Поверните направо у библиотеки.==Turn right at the library.</item>
         <item>Поверните налево у ресторана.==Turn left at the restaurant.</item>
-        <item>Поверните налево у кафе.==Turn left at the café.</item>
+        <item>Поверните налево у кафе.==Turn left at the cafe.</item>
         <item>Поверните налево у галереи.==Turn left at the gallery.</item>
         <item>Поверните налево у фонарного столба.==Turn left at the street lamp.</item>
         <item>Поверните налево у дорожного знака.==Turn left at the road sign.</item>
@@ -2472,10 +2472,10 @@
         <item>Пройдите через дверь.==Go through the door.</item>
         <item>Пролезайте через кусты.==Go through the bushes.</item>
         <item>Идите через черный выход.==Go through the back door.</item>
-        <item>Пролезайте через щель (дыру) в заборе.==Go through the gap in the hedge.</item>
+        <item>Пролезайте через щель (дыру) в ограда.==Go through the gap in the hedge.</item>
         <item>Идите через толпу.==Go through the crowd.</item>
         <item>Садитесь на трамвай ==Get on the tram.</item>
-        <item>Садитесь на автобус № 15==Get on the bus.</item>
+        <item>Садитесь на автобус № 15==Get on bus number 15.</item>
         <item>Садитесь на следующий поезд ==Get on the next train.</item>
         <item>Садитесь на самолет до Москвы.==Get on the plane to Moscow.</item>
         <item>Садитесь на троллейбус.==Get on the trolley-bus.</item>
@@ -2490,7 +2490,7 @@
         <item>Проедьте еще 3 станции метро.==Go three more stations.</item>
         <item>Езжайте еще 15 минут по прямой.==Drive 15 more minutes straight ahead.</item>
         <item>Пройдите еще 10 минут и сверните за угол.==Go 10 more minutes and turn round the corner.</item>
-        <item>Идите по тротуару еще 2 автобусных остановки и поверните налево.==Go along the pavement 2 more bus stops and turn left.</item>
+        <item>Идите по тротуару еще 2 автобусных остановки и поверните налево.==Go along the sidewalk 2 more bus stops and turn left.</item>
         <item>Пройдите по улице еще 1 светофор и поверните направо. ==Go along the street 1 more traffic light and turn right.</item>
         <item>Пройдите мимо большой больницы.==Go past the big hospital.</item>
         <item>Пройдите мимо высокого здания.==Go past the high building.</item>
@@ -2522,39 +2522,39 @@
         <item>В нашем городе есть театр и две церкви==There is a theatre and two churches in our city</item>
         <item>В этом парке есть скамейки, дорожки и газон==There are benches, paths and a lawn in this park</item>
         <item>Поблизости с метро находится школа==There is a school near the subway station</item>
-        <item>Между кинотеатром и школой есть банк==There is a bank between the school and the cinema</item>
-        <item>Пешеходный переход находится справа от автобусной остановки==There is a crossing on the right of the bus stop</item>
+        <item>Между кинотеатром и школой есть банк==There is a bank between the school and the movie theater</item>
+        <item>Пешеходный переход находится справа от автобусной остановки==There is a crossing to the right of the bus stop</item>
         <item>За рестораном есть маленький садик==There is a small garden behind the restaurant</item>
-        <item>Слева от кафе есть офис страховой компании==There is an insurance company office on the left of the café</item>
+        <item>Слева от кафе есть офис страховой компании==There is an insurance company office to the left of the cafe</item>
         <item>За этим небоскрёбом есть хорошая гостиница==There is a good hotel behind this skyscraper</item>
         <item>Рядом со светофором есть подземный переход==There is an underpass near the traffic light</item>
         <item>На этой площади есть памятники== There are monuments on this square</item>
-        <item>Напротив больницы есть отличное кафе==There is an excellent café opposite the hospital</item>
-        <item>Справа от супермаркета есть парковка==There is a parking on the right of the supermarket</item>
+        <item>Напротив больницы есть отличное кафе==There is an excellent cafe opposite the hospital</item>
+        <item>Справа от супермаркета есть парковка==There is a parking to the right of the supermarket</item>
         <item>Совсем рядом с магазином есть 2 киоска ==There are two stalls at the shop</item>
-        <item>Детский сад находится после парикмахерской==There is a nursery school next to the hairdresser</item>
+        <item>Детский сад находится после парикмахерской==There is a preschool next to the hairdresser</item>
         <item>В этом здании есть магазины ==There are shops in this building</item>
-        <item>На этом этаже есть спортзал и кафе быстрого питания ==There is a gym and a fast-food café on this floor</item>
-        <item>Справа от этого стадиона есть парк ==There is a park on the right of this stadium</item>
+        <item>На этом этаже есть спортзал и кафе быстрого питания ==There is a gym and a fast-food cafe on this floor</item>
+        <item>Справа от этого стадиона есть парк ==There is a park to the right of this stadium</item>
         <item>Напротив метро есть автобусная остановка ==There is a bus stop opposite the subway station</item>
         <item>Под этим мостом есть прокат лодок==There is a boat rent under this bridge</item>
-        <item>Между ювелирным магазином и бизнес-центром есть интернет-кафе==There is an internet-café between the jewelry and a business center</item>
+        <item>Между ювелирным магазином и бизнес-центром есть интернет-кафе==There is an internet-cafe between the jewelry and a business center</item>
         <item>Совсем рядом с музеем есть хостел.==There is a hostel at the museum</item>
         <item>Над его квартирой есть терраса==There is a terrace over his apartment</item>
         <item>На этой площади есть несколько сувенирных магазинов==There are few gift shops on this square</item>
-        <item>Справа от банка есть маленькая улочка==There is a small street on the right of the bank</item>
+        <item>Справа от банка есть маленькая улочка==There is a small street to the right of the bank</item>
         <item>В нашем городе нет автобусов и трамваев==There are no buses and trams in our city</item>
-        <item>В этом здании нет кафе==There is no café in this building</item>
+        <item>В этом здании нет кафе==There is no cafe in this building</item>
         <item>На этой площади нет памятников==There are no monuments on this square</item>
         <item>Рядом с супермаркетом нет парковки==There is no parking near the supermarket</item>
         <item>За этим метро нет парка==There is no park behind the subway station</item>
-        <item>Справа от светофора нет пешеходного перехода==There is no crossing on the right of the traffic light</item>
-        <item>На этой улице нет кинотеатров==There are no cinemas in this street</item>
-        <item>Слева от школы нет деткой площадки==There is no playground on the left of the school</item>
-        <item>На этом этаже нет кафе==There is no café on this floor</item>
+        <item>Справа от светофора нет пешеходного перехода==There is no crossing to the right of the traffic light</item>
+        <item>На этой улице нет кинотеатров==There are no movie theater on this street</item>
+        <item>Слева от школы нет деткой площадки==There is no playground to the left of the school</item>
+        <item>На этом этаже нет кафе==There is no cafe on this floor</item>
         <item>Напротив этого банка нет торгового центра==There is no mall opposite this bank</item>
-        <item>В этом здании нет банкомата==There is no cash machine (ATM) in this building</item>
-        <item>После здания больницы нет аптеки==There is no pharmacy next to the hospital</item>
+        <item>В этом здании нет банкомата==There is no ATM in this building</item>
+        <item>После здания больницы нет аптеки==There is no drugstore next to the hospital</item>
         <item>Рядом с вокзалом нет проката машин==There is no car rent near the station</item>
         <item>В его доме нет лифта==There is no lift in his home</item>
         <item>В этом парке нет фонтанов==There are no fountains in this park</item>
@@ -2566,13 +2566,13 @@
         <item>В этом парке есть фонтан?==Is there a fountain in this park?</item>
         <item>На площади есть памятники?==Are there monuments on the square?</item>
         <item>В этом здании есть солярии?==Is there a solar spot in this building?</item>
-        <item>Справа от автобусной остановки есть канал?==Is there an underpass on the right of the canal?</item>
-        <item>Слева от светофора есть пешеходный переход?==Is there a crossing on the left of the traffic light?</item>
-        <item>В этом садике есть газоны?==Are there lawns in this garden?</item>
+        <item>Справа от автобусной остановки есть канал?==Is there a canal to the right of the bus stop?</item>
+        <item>Слева от светофора есть пешеходный переход?==Is there a crossing to the left of the traffic light?</item>
+        <item>В этом саду есть газоны?==Are there lawns in this garden?</item>
         <item>Что есть в этом здании?==What is there in this building?</item>
-        <item>Что есть рядом с кинотеатром?==What is there near the cinema?</item>
-        <item>Что есть справа от супермаркета?==What is there on the right of the supermarket?</item>
-        <item>Что есть слева от её школы?==What is there on the left of her school?</item>
+        <item>Что есть рядом с кинотеатром?==What is there near the movie theater?</item>
+        <item>Что есть справа от супермаркета?==What is there to the right of the supermarket?</item>
+        <item>Что есть слева от её школы?==What is there to the left of her school?</item>
         <item>Что есть напротив того банка?==What is there opposite that bank?</item>
         <item>Что тут есть поблизости?==What is there near here?</item>
         <item>Сколько этажей в этом здании?==How many floors are there in this building?</item>
@@ -2583,7 +2583,7 @@
         <item>Сколько людей в машине?==How many people are there in the car?</item>
         <item>Сколько фонтанов в парке?==How many fountains are there in the park?</item>
         <item>Что находится за этим небоскрёбом?==What is there behind this skyscraper?</item>
-        <item>Что есть на этой улице?==What is there in this street?</item>
+        <item>Что есть на этой улице?==What is there on this street?</item>
         <item>Что есть рядом с его офисом?==What is there near his office?</item>
         <item>Какие животные есть в этом зоопарке?==Which animals are there in this zoo?</item>
         <item>Какая кухня в этом ресторане?==What cuisine is there in this restaurant?</item>
@@ -2595,15 +2595,15 @@
         <item>Что есть над твоим офисом?==What is there over your office?</item>
         <item>Сколько памятников на этой площади? ==How many monuments are there on this square?</item>
         <item>Что есть за зданием театра?==What is there behind the theatre?</item>
-        <item>Какое здание после аптеки?==What is there next to the pharmacy?</item>
+        <item>Какое здание после аптеки?==What is there next to the drugstore?</item>
         <item>Что есть под этим мостом?==What is there under this bridge?</item>
-        <item>Между рестораном и гостиницей нет магазинов==There is no shops between the restaurant and the hotel</item>
-        <item>На этом перекрёстке нет светофора==There is no traffic light on this crossroads</item>
-        <item>На этой улице есть тротуар?==Is there a pavement in this street?</item>
+        <item>Между рестораном и гостиницей нет магазинов==There are no shops between the restaurant and the hotel</item>
+        <item>На этом перекрёстке нет светофора==There is no traffic light on this intersection</item>
+        <item>На этой улице есть тротуар?==Is there a sidewalk on this street?</item>
         <item>В городе есть прокат лодок?==Is there a boat rent in the city?</item>
         <item>Рядом с твоим домом есть спортзал?==Is there a gym near your home?</item>
         <item>В северной части города нет каналов==There are no canals in the northern part of the city</item>
-        <item>В этом кафе итальянский повар==There is an Italian chef in this café</item>
+        <item>В этом кафе итальянский повар==There is an Italian chef in this cafe</item>
         <item>Сколько марок машин в этом салоне?==How many car brands are there in this salon?</item>
         <item>В нашем городе есть реки и каналы==There are rivers and canals in our city.</item>
         <item>На дорогах вашего города есть пробки?==Are there traffic jams on the roads of your city?</item>
@@ -2611,95 +2611,95 @@
         <item>Перед башней есть два памятника==There are two monuments in front of the tower</item>
         <item>В этом здании есть два ресторана, спортзал и солярий==There are two restaurant, a gym and a solar spot in this building</item>
         <item>Сколько окон в твоей квартире?==How many windows are there in your apartment?</item>
-        <item>На этой улице напротив метро есть аптека==There is a pharmacy in this street opposite the subway station</item>
+        <item>На этой улице напротив метро есть аптека==There is a drugstore on this street opposite the subway station</item>
         <item>Сколько улиц в этой деревне?==How many streets are there in this village?</item>
         <item>Что есть перед тем магазином?==What is there in front of that shop?</item>
         <item>Что есть в её квартире?==What is there in her apartment?</item>
         <item>Сколько районов в том городе?==How many districts are there in that city?</item>
         <item>Рядом с моим домом нет детской площадки==There is no playground near my home</item>
         <item>За тем садом находится зоопарк==There is a zoo behind that garden</item>
-        <item>Рядом с автобусной остановкой есть хорошая булочная==There is a good bakery hear the bus stop</item>
+        <item>Рядом с автобусной остановкой есть хорошая булочная==There is a good bakery near the bus stop</item>
     </string-array>
 
     <string-array name="present_simple_city">
-        <item>Я обычно приезжаю на станцию за 30 минут до отправления.==I usually arrive at the station 30 minutes before the departure.</item>
-        <item>Нам нужно найти банкомат, чтобы снять наличные.==We need to find an ATM to withdraw some cash.</item>
-        <item>Весной они всегда высаживают цветы вдоль тротуаров==In spring they always plant flowers along pavements.</item>
-        <item>Они обычно берут больше за экспресс- ремонт обуви ==They usually charge more for express shoe repair.</item>
-        <item>Многие горожане принимают участие в ежегодном городском марафоне.==Many citizens take part in the annual city marathon.</item>
-        <item>Летом театральные представления часто проходят на музыкальной площадке в парке.==In summer theatrical performances often take place on the music venue in the park.</item>
-        <item>Поезда до Парижа отправляются каждые 15 минут, и путешествие занимает 30 минут.==Trains to Paris leave every 15 minutes and the journey takes about 30 minutes.</item>
-        <item>Туристы часто фотографируют с этого моста.==Tourists often take photos from this bridge.</item>
-        <item>В общественном транспорте дети всегда ездят бесплатно.==Children always take public transport free of charge.</item>
-        <item>Замусоренные улицы дают негативное представление о местной среде.==Littered streets make a poor impression of the local environment.</item>
-        <item>По субботам детишки собираются на детской площадке.==On Saturdays small children gather on the playground.</item>
-        <item>Многие маршруты стоят дороже в выходные.==Many routes cost more on weekends.</item>
-        <item>От офиса до городского парка она обычно прогуливается.==She usually takes a walk from her office to the city park.</item>
-        <item>Она часто кормит голубей на озере около городской башни.==She often feeds swans on the lake near the city tower.</item>
-        <item>Стадион вмещает более 3000 зрителей.==The stadium seats more than 3000 spectators.</item>
-        <item>Тур по городу длится примерно два часа и отправляется каждые 15 минут из аэропорта.==The city tour lasts approximately 2 hours and departs every 15 minutes from the airport.</item>
+        <item>Я обычно приезжаю на станцию за 30 минут до отправления.==I usually arrive at the station 30 minutes before departure.</item>
+        <item>Нам нужно найти банкомат, чтобы снять наличные.==We need to find an ATM to withdraw cash.</item>
+        <item>Весной они всегда высаживают цветы вдоль тротуаров.==In spring, they always plant flowers along the sidewalks.</item>
+        <item>Они обычно берут больше за экспресс-ремонт обуви.==They usually charge more for express shoe repairs.</item>
+        <item>Многие горожане принимают участие в ежегодном городском марафоне.==Many residents take part in the annual city marathon.</item>
+        <item>Летом театральные представления часто проходят на музыкальной площадке в парке.==In summer, theatrical performances often take place at the music venue in the park.</item>
+        <item>Поезда до Парижа отправляются каждые 15 минут, и путешествие занимает 30 минут.==Trains to Paris depart every 15 minutes, and the journey takes about 30 minutes.</item>
+        <item>Туристы часто фотографируют с этого моста.==Tourists often take pictures from this bridge.</item>
+        <item>В общественном транспорте дети всегда ездят бесплатно.==Children always ride public transport for free.</item>
+        <item>Замусоренные улицы дают негативное представление о местной среде.==Littered streets give a bad impression of the local environment.</item>
+        <item>По субботам детишки собираются на детской площадке.==On Saturdays, small children gather at the playground.</item>
+        <item>Многие маршруты стоят дороже в выходные.==Many routes are more expensive on weekends.</item>
+        <item>От офиса до городского парка она обычно прогуливается.==She usually walks from the office to the city park.</item>
+        <item>Она часто кормит голубей на озере около городской башни.==She often feeds pigeons by the lake near the city tower.</item>
+        <item>Стадион вмещает более 3000 зрителей.==The stadium holds more than 3,000 spectators.</item>
+        <item>Тур по городу длится примерно два часа и отправляется каждые 15 минут из аэропорта.==The city tour lasts about 2 hours and departs every 15 minutes from the airport.</item>
         <item>Густонаселенный город страдает от загрязнения воздуха.==The densely populated city suffers from air pollution.</item>
-        <item>Бульвар красиво выглядит вечером, когда включают фонари.==The boulevard looks beautiful in the evening when they turn on the street lights.</item>
-        <item>Возведение этого собора датируется 18 веком.==The construction of the cathedral dates back to 18th century.</item>
-        <item>Ночная иллюминация приводит гостей города в восхищение.==Night-time illumination fascinates guests of the city.</item>
-        <item>Эта линия метро соединяет восточную и западную части города.==This subway line connects east and west parts of the city.</item>
-        <item>Здание выходит на живописную набережную. ==The building faces a picturesque embankment.</item>
-        <item>Карта показывает все популярные туристические места.==The map shows all the popular tourist destinations.</item>
+        <item>Бульвар красиво выглядит вечером, когда включают фонари.==The boulevard looks beautiful in the evening when the streetlights are turned on.</item>
+        <item>Возведение этого собора датируется 18 веком.==The construction of this cathedral dates back to the 18th century.</item>
+        <item>Ночная иллюминация приводит гостей города в восхищение.==Nighttime illumination amazes the city\'s visitors.</item>
+        <item>Эта линия метро соединяет восточную и западную части города.==This subway line connects the east and west parts of the city.</item>
+        <item>Здание выходит на живописную набережную.==The building overlooks a picturesque waterfront.</item>
+        <item>Карта показывает все популярные туристические места.==The map shows all the popular tourist attractions.</item>
         <item>Каждый год этот древний город привлекает тысячи посетителей.==This ancient city attracts thousands of visitors every year.</item>
         <item>Эта улица ведет к почтовому отделению.==This street leads to the post office.</item>
-        <item>Большое количество дорогих авто указывает на высокий уровень жизни в городе.==A large number of expensive cars indicates high standard of living in the city.</item>
-        <item>Ты можешь идти пешком или доехать на автобусе.==You can go on foot or take a bus.</item>
-        <item>Она может встретить вас у подземного перехода и проводить до гостиницы.==She can meet you near the underground crossing and accompany you to the hotel.</item>
+        <item>Большое количество дорогих авто указывает на высокий уровень жизни в городе.==A large number of expensive cars indicates a high standard of living in the city.</item>
+        <item>Ты можешь идти пешком или доехать на автобусе.==You can walk or take a bus.</item>
+        <item>Она может встретить вас у подземного перехода и проводить до гостиницы.==She can meet you at the underground crossing and guide you to the hotel.</item>
         <item>У некоторых небоскребов на первых этажах находятся магазины и рестораны.==Some skyscrapers have shops and restaurants on their ground floors.</item>
         <item>В этом отеле есть тренажерный зал.==This hotel has a gym.</item>
-        <item>За въезд в рекреационную зону взимается плата, и посетители также платят за пользование озером.==The recreation area has an admission fee, and visitors also pay for use of the lake.</item>
-        <item>Лучше предупредить водителя, что вы хотите выйти, за один квартал до вашей остановки.==It is wise to signal the driver one block before your stop that you want to get off.</item>
-        <item>Эта экскурсия популярна среди семейных путешественников.==This excursion is popular with family travelers.</item>
-        <item>Эти районы знамениты яркими витринами магазинов.==The districts are famous for their flashy shop windows.</item>
-        <item>На экскурсию по обзору достопримечательностей регистрироваться не нужно.==You don\'t need to register for the sightseeing tour.</item>
-        <item>Мы нечасто ходим в театр.==We don\'t go to the theatre very often.</item>
-        <item>В этом развлекательном парке не принимают карты Виза.==They don\'t accept Visa cards in the amusement park.</item>
-        <item>Новые дома не строят в историческом центре города.==They don\'t build modern houses in the historical center of the town.</item>
-        <item>По воскресеньям банки не работают.==Banks don\'t work on Sundays.</item>
-        <item>Коренные жители обычно не знают об этой исторической достопримечательности.==The natives don\'t usually know about this historic landmark.</item>
-        <item>ДТП не часто происходят на этих оживленных улицах.==Car accidents don\'t occur often on these animated streets.</item>
-        <item>Городские власти не разрешают спонтанные демонстрации.==City authorities don\'t permit spontaneous demonstrations.</item>
-        <item>Его не слишком беспокоит (он не обращает внимания) шумная стройка за окном.==He doesn\'t pay much attention to the noisy building site outside his window.</item>
-        <item>Ей не нравится этот маршрут, так как он проходит через криминальный район.==She doesn\'t like this route as it goes through the criminal area.</item>
-        <item>Из-за пробок она не ездит на работу на машине.==She doesn\'t drive to work because of traffic jams.</item>
-        <item>В этой кассе не продаются ж/д билеты.==This ticket office doesn\’t sell railway tickets.</item>
-        <item>На этой карте не указаны велосипедные дорожки.==This map doesn\'t show cycle lanes.</item>
-        <item>Ж/д билет до Москвы стоит недорого.==A railway ticket to Moscow doesn\'t cost much.</item>
-        <item>Она не умеет кататься на коньках, поэтому не ходит на каток.==She can\'t skate so she doesn\'t go to the skating-rink.</item>
-        <item>В час-пик поймать такси нелегко.==It\'s not easy to hail a cab during a rush hour.</item>
-        <item>Рано утром движение не слишком затрудненное.==The traffic isn\'t very heavy early in the morning.</item>
-        <item>В отеле нет услуг прачечной.==Laundry service isn\'t available in the hotel.</item>
-        <item>Стоянка рядом с нашим офисом - не бесплатная.==The car parking near our office isn\'t free.</item>
-        <item>Для такого модного кафе цены не высокие.==For such a trendy cafe the prices aren\’t high.</item>
-        <item>Кто знает короткий путь к дворцу?==Who knows a short route to the palace?</item>
+        <item>За въезд в рекреационную зону взимается плата, и посетители также платят за пользование озером.==There is an admission fee for the recreation area, and visitors also pay to use the lake.</item>
+        <item>Лучше предупредить водителя, что вы хотите выйти, за один квартал до вашей остановки.==It’s better to let the driver know one block before your stop that you want to get off.</item>
+        <item>Эта экскурсия популярна среди семейных путешественников.==This tour is popular among family travelers.</item>
+        <item>Эти районы знамениты яркими витринами магазинов.==These districts are famous for their bright shop windows.</item>
+        <item>На экскурсию по обзору достопримечательностей регистрироваться не нужно.==You don’t need to register for the sightseeing tour.</item>
+        <item>Мы нечасто ходим в театр.==We don’t often go to the theater.</item>
+        <item>В этом развлекательном парке не принимают карты Visa.==They don’t accept Visa cards at this amusement park.</item>
+        <item>Новые дома не строят в историческом центре города.==They don’t build modern houses in the historic city center.</item>
+        <item>По воскресеньям банки не работают.==Banks don’t open on Sundays.</item>
+        <item>Коренные жители обычно не знают об этой исторической достопримечательности.==The locals usually don’t know about this historic landmark.</item>
+        <item>ДТП не часто происходят на этих оживленных улицах.==Car accidents don\'t often happen on these busy streets.</item>
+        <item>Городские власти не разрешают спонтанные демонстрации.==City authorities don’t allow spontaneous demonstrations.</item>
+        <item>Его не слишком беспокоит (он не обращает внимания) шумная стройка за окном.==He doesn’t mind the noisy construction site outside his window.</item>
+        <item>Ей не нравится этот маршрут, так как он проходит через криминальный район.==She doesn’t like this route because it goes through a dangerous area.</item>
+        <item>Из-за пробок она не ездит на работу на машине.==She doesn’t drive to work because of traffic jams.</item>
+        <item>В этой кассе не продаются ж/д билеты.==This ticket office doesn’t sell train tickets.</item>
+        <item>На этой карте не указаны велосипедные дорожки.==This map doesn’t show bike lanes.</item>
+        <item>Ж/д билет до Москвы стоит недорого.==A train ticket to Moscow doesn’t cost much.</item>
+        <item>Она не умеет кататься на коньках, поэтому не ходит на каток.==She can’t skate, so she doesn’t go to the skating rink.</item>
+        <item>В час-пик поймать такси нелегко.==It’s not easy to catch a cab during rush hour.</item>
+        <item>Рано утром движение не слишком затрудненное.==Traffic isn’t heavy early in the morning.</item>
+        <item>В отеле нет услуг прачечной.==The hotel doesn’t offer laundry service.</item>
+        <item>Стоянка рядом с нашим офисом - не бесплатная.==The parking lot near our office isn’t free.</item>
+        <item>Для такого модного кафе цены не высокие.==For such a trendy cafe, the prices aren’t high.</item>
+        <item>Кто знает короткий путь к дворцу?==Who knows a shortcut to the palace?</item>
         <item>Автобус с каким номером идет до городского стадиона?==What bus number goes to the city stadium?</item>
-        <item>Какой продуктовый магазин работает круглосуточно?==What grocery store works round the clock?</item>
-        <item>Сколько линий метро проходят через ваш город?==How many subway lines run through your city?</item>
+        <item>Какой продуктовый магазин работает круглосуточно?==Which grocery store is open 24/7?</item>
+        <item>Сколько линий метро проходят через ваш город?==How many subway lines go through your city?</item>
         <item>Кто может нам показать дорогу к оперному театру?==Who can show us the way to the opera house?</item>
-        <item>Вы покупаете продукты на местном рынке?==Do you buy products at the local market?</item>
-        <item>Они устраивают индивидуальные туры по обзору достопримечательностей?==Do they give individual sightseeing tours?</item>
-        <item>В картинной галерее выставлены работы современных художников?==Does the art gallery present modern artists\’ works?</item>
+        <item>Вы покупаете продукты на местном рынке?==Do you buy groceries at the local market?</item>
+        <item>Они устраивают индивидуальные туры по обзору достопримечательностей?==Do they offer private sightseeing tours?</item>
+        <item>В картинной галерее выставлены работы современных художников?==Does the art gallery exhibit works of modern artists?</item>
         <item>Эта современная выставка привлекает много посетителей?==Does this modern exhibition attract many visitors?</item>
-        <item>По выходным цена на билеты поднимается?==Does weekend ticket price go up?</item>
+        <item>По выходным цена на билеты поднимается?==Does the ticket price go up on weekends?</item>
         <item>Она может заказать нам билеты?==Can she book tickets for us?</item>
-        <item>Поблизости есть круглосуточная аптека?==Is there an all-night drugstore nearby?</item>
-        <item>Здесь можно снять комнату?==Are there rooms available for rent?</item>
+        <item>Поблизости есть круглосуточная аптека?==Is there a 24-hour pharmacy nearby?</item>
+        <item>Здесь можно снять комнату?==Is it possible to rent a room here?</item>
         <item>Это дорога к памятнику?==Is this the way to the monument?</item>
-        <item>Сколько арендные платежи в день за машины?==How much are car rentals per day?</item>
+        <item>Сколько стоит аренда автомобиля в день?==How much are car rentals per day?</item>
         <item>Как нам добраться до зоопарка?==How do we get to the zoo?</item>
-        <item>На какой остановке ты обычно выходишь?==What bus station do you usually get off at?</item>
-        <item>Как часто отсюда ходят автобусы в аэропорт?==How often do buses depart from here to the airport?</item>
-        <item>Сколько времени пешком до центра города? ==How long does it take to walk from here to the city center?</item>
+        <item>На какой остановке ты обычно выходишь?==Which bus stop do you usually get off at?</item>
+        <item>Как часто отсюда ходят автобусы в аэропорт?==How often do buses run from here to the airport?</item>
+        <item>Сколько времени пешком до центра города?==How long does it take to walk to the city center?</item>
         <item>Во сколько по утрам открывается музей?==What time does the museum open in the morning?</item>
         <item>Когда метро открывается и закрывается?==When does the subway open and close?</item>
-        <item>Где я могу пополнить баланс мобильного?==Where can I top up my mobile phone?</item>
-        <item>Где мне могут починить туфли?==Where can I have my shoes fixed?</item>
-        <item>С какого возраста можно посещать ночные клубы?==From what age can you go to night clubs?</item>
+        <item>Где я могу пополнить баланс мобильного?==Where can I top up my mobile balance?</item>
+        <item>Где мне могут починить туфли?==Where can I get my shoes repaired?</item>
+        <item>С какого возраста можно посещать ночные клубы?==At what age can you go to nightclubs?</item>
     </string-array>
 
     <string-array name="present_simple_food">
@@ -2707,255 +2707,247 @@
         <item>Они пекут печенье каждое воскресенье.==They bake cookies every Sunday.</item>
         <item>Он никогда не готовит картофель.==He never cooks potatoes.</item>
         <item>Моя сестра любит устрицы.==My sister likes oysters.</item>
-        <item>Она часто заключает договора об импорте морепродуктов.==She often fixes agreements about import of seafood.</item>
-        <item>Она каждый день проходит мимо магазина, где продают шоколад.==Every day she passes the shop where they sell chocolate.</item>
+        <item>Она часто заключает договора об импорте морепродуктов.==he often enters into contracts for importing seafood.</item>
+        <item>Она каждый день проходит мимо магазина, где продают шоколад.==Every day, she walks past the store that sells chocolate.</item>
         <item>Она никогда не целует его, после того как он ест лук.==She never kisses him after he eats onion.</item>
         <item>Мой брат всегда моет виноград.==My brother always washes grapes.</item>
         <item>Она часто ищет свежее манго.==She often searches for fresh mango.</item>
         <item>Она смотрит кулинарную передачу каждый понедельник.==She watches the cooking programme every Monday</item>
-        <item>Каждый день он делает домашнее задание по учебе, чтобы выучиться на шефа-кондитера.==Every day he does homework for his studies to become a pastry chef.</item>
+        <item>Каждый день он делает домашнее задание, чтобы выучиться на шефа-кондитера.==Every day, he does his homework to become a pastry chef.</item>
         <item>Каждые выходные она идет отдохнуть в сад, где много грушевых деревьев.==Every weekend she goes to relax in the garden full of pear trees.</item>
         <item>Он часто жарит лук.==He often fries onion.</item>
         <item>Мария пытается готовить каждые выходные.==Maria tries to cook every weekend.</item>
         <item>Он любит лосось.==He likes salmon.</item>
-        <item>Они обычно едят кабачки.==Usually they eat zucchini.</item>
+        <item>Они обычно едят кабачки.==They usually eat zucchini.</item>
         <item>Каждый вечер мы ужинаем вместе.==Every evening we have dinner together.</item>
-        <item>Она готовила завтрак. Вдруг неожиданно молоко убегает из кастрюли.==She was cooking breakfast. Suddenly milk goes out of pan.</item>
-        <item>Мы обедали на улице. Вдруг начинается очень сильный дождь.==We were having a lunch outside. Suddenly it starts to rain heavily.</item>
+        <item>Она готовила завтрак. Вдруг неожиданно молоко убегает из кастрюли.==She was cooking breakfast. Suddenly, the milk boiled over from the pot.</item>
+        <item>Мы обедали на улице. Вдруг начинается очень сильный дождь.==We were having lunch outside. Suddenly, it started to rain heavily.</item>
         <item>У нас нет вилок.==We do not have forks.</item>
-        <item>Я обычно не добавляю приправы, когда готовлю.==Usually I don\’t add any seasoning, when I cook.</item>
+        <item>Я обычно не добавляю приправы, когда готовлю.==I usually don\'t add spices when I cook.</item>
         <item>Ты любишь соленую еду?==Do you like salty food?</item>
         <item>Кто обычно в твоей семье моет посуду?==Who usually washes the dishes in your family?</item>
-        <item>Чья жена готовит завтрак лучше?==Whose wife makes the best breakfast?</item>
+        <item>Чья жена готовит завтрак лучше?==Whose wife cooks breakfast better?</item>
         <item>Куда мы обычно кладем помидоры?==Where do we usually put tomatoes?</item>
         <item>Ты варишь яйца каждое утро.==You boil eggs every morning.</item>
         <item>Птицы часто едят злаки.==Birds often eat cereals.</item>
         <item>Мальчики обычно собирают мандарины осенью.==Boys usually gather tangerines in fall.</item>
-        <item>Я предпочитаю есть персики, а не груши.==I prefer to eat peaches than pears.</item>
+        <item>Я предпочитаю есть персики, а не груши.==I prefer eating peaches rather than pears.</item>
         <item>Они часто готовят утку по воскресеньям.==They often cook duck on Sundays.</item>
         <item>Ты делаешь пироги со свининой дважды в неделю.==You make pork pies twice a week.</item>
         <item>Джо любит сметану.==Joe likes sour cream.</item>
         <item>Она делает бутерброды своему отцу каждый четверг.==She makes sandwiches for her father every Thursday.</item>
         <item>Мой брат любит есть пасту по утрам.==My brother enjoys eating pasta in the morning.</item>
-        <item>Анна добавляет карри в каждое блюдо.==Anna adds curry powder in every dish.</item>
+        <item>Анна добавляет карри в каждое блюдо.==Anna adds curry powder to every dish.</item>
         <item>Он любит смешивать кетчуп с майонезом.==He likes mixing ketchup and mayonnaise.</item>
         <item>Моя кошка ест джем каждый день.==My cat eats jam every day.</item>
-        <item>Он регулярно чинит один и тот же грузовик с пшеницей.==He regularly fixes the same truck with wheat.</item>
+        <item>Он регулярно чинит один и тот же грузовик с пшеницей.==He regularly repairs the same truck with wheat.</item>
         <item>Моя мама смешивает йогурт со сметаной.==My mother mixes yoghurt and sour cream.</item>
         <item>Кен расслабляется, когда готовит.==Ken relaxes when he cooks.</item>
-        <item>Мне не нравится, когда мне нужно готовить обед самому.==It vexes me when I need to cook lunch myself.</item>
+        <item>Мне не нравится, когда мне нужно готовить обед самому.==I don\'t like it when I have to cook lunch myself..</item>
         <item>Он обычно решает все проблемы с моей плитой.==He usually fixes all the problems with my oven.</item>
-        <item>Адам обычно фокусирует свое внимание на уборке комнаты, а не на готовке.==Adam often focuses on cleaning the room, not on cooking.</item>
+        <item>Адам обычно фокусирует свое внимание на уборке комнаты, а не на готовке.==Adam usually focuses on cleaning the room, not on cooking.</item>
         <item>Он скучает по своей девушке, потому что она хорошо готовит.==He misses his girlfriend, because she cooks very well.</item>
         <item>Каждый понедельник она переходит дорогу, чтобы добраться до этого продуктового магазина.==Every Monday she crosses the road to get to this grocery store.</item>
-        <item>Мой папа проходит мимо кондитерской каждое утро.==My father passes a bakery every morning.</item>
+        <item>Мой папа проходит мимо кондитерской каждое утро.==My dad passes by the bakery every morning.</item>
         <item>Он скучает по итальянским завтракам.==He misses Italian breakfasts.</item>
         <item>Он никогда не моет сливы.==He never washes plums.</item>
-        <item>Моя девушка заканчивает кулинарные курсы в 7 часов каждую среду.==My girlfriend finishes her cooking courses at 7 o\’clock every Wednesday.</item>
+        <item>Моя девушка заканчивает кулинарные курсы в 7 часов каждую среду.==My girlfriend finishes her cooking classes at 7 o\'clock every Wednesday.</item>
         <item>Каждый раз, когда я съедаю его яблоко, он меня наказывает.==Every time I eat his apple, he punishes me.</item>
-        <item>Она подталкивает меня съесть эти рыбные палочки, каждый раз когда я ее навещаю.==She pushes me to eat these fish fingers every time I visit her.</item>
+        <item>Она подталкивает меня съесть эти рыбные палочки, каждый раз когда я ее навещаю.==She pushes me to eat these fish sticks every time I visit her.</item>
         <item>Он моет помидоры каждые два часа.==He washes tomatoes every two hours.</item>
-        <item>Мой ребенок подходит ко мне каждый раз, когда я режу картошку.==My kid approaches me every time I cut potatoes.</item>
-        <item>Она аллергик, она всегда чешется, когда варит рис.==She is allergic, she always scratches herself when she boils rice.</item>
+        <item>Мой ребенок подходит ко мне каждый раз, когда я режу картошку.==My kid comes to me every time I cut potatoes.</item>
+        <item>Она аллергик и она всегда чешется, когда варит рис.==She\'s allergic, and she always itches when she cooks rice.</item>
         <item>Моя сестра включает плиту на каждых выходных.==My sister switches on the oven every weekend.</item>
-        <item>Он всегда трогает тесто, когда я готовлю ему торт.==He always touches pastry when I prepare cakes for him.</item>
+        <item>Он всегда трогает тесто, когда я готовлю ему торт.==He always touches the dough when I\'m making a cake for him.</item>
         <item>Его сестра ходит в магазин каждую пятницу.==His sister goes to the shop every Friday.</item>
-        <item>Она делает пасту уникальным способом.==She does pasta in a unique way.</item>
+        <item>Она делает пасту уникальным способом.==She makes pasta in a unique way.</item>
         <item>Джейк ходит в этот супермаркет каждую неделю, чтобы купить конфеты и шоколад.==Jake goes to this supermarket to buy sweets and chocolate every week.</item>
-        <item>Он поддакивает каждый раз, когда шеф повар чем-то недоволен.==He echoes back every time the chef complains about something.</item>
-        <item>Анна пытается смешивать грибы и огурцы каждый месяц.==Anna tries to mix mushrooms and cucumbers every month.</item>
         <item>Она изучает биологию и она вегетарианка.==She studies biology and she is vegetarian.</item>
         <item>Они любят пиццу с ананасом.==They like pizza with pineapple.</item>
         <item>Он всегда обедает в школе.==He always has his lunch at school.</item>
         <item>Джулия не ест горчицу.==Julia doesn\’t eat mustard.</item>
         <item>Мои родители обычно жарят мясо на воскресный обед.==My parents usually fry meat for Sunday lunch.</item>
-        <item>Обычно я ем питу с ветчиной на завтрак.==Usually I eat pita bread and ham for breakfast.</item>
+        <item>Обычно я ем питу с ветчиной на завтрак.==I sually eat pita with ham for breakfast.</item>
         <item>Я ем семгу каждый день.==I eat salmon every day.</item>
-        <item>Каждый месяц мы ходим в ресторан.==Every month we go to the restaurant.</item>
-        <item>Я варил яйца. Внезапно яйцо лопается.==I was boiling eggs. Suddenly the egg cracks.</item>
-        <item>Я резал грибы. Внезапно кошка подавилась.==I was cutting mushrooms. Suddenly the cat chokes.</item>
+        <item>Каждый месяц мы ходим в ресторан.==We go to a restaurant every month.</item>
+        <item>Я варил яйца. Внезапно яйцо лопается.==I was boiling eggs. Suddenly, the egg cracked.</item>
+        <item>Я резал грибы. Внезапно кошка подавилась.==I was cutting mushrooms. Suddenly the cat choked.</item>
         <item>Она не использует уксус для этого блюда.==She does not use vinegar for this dish.</item>
         <item>У него нет ножа.==He does not have a knife.</item>
         <item>Она не ест макароны.==She doesn\’t eat pasta.</item>
-        <item>Он обычно не ищет сладкие ягоды.==Usually he doesn\’t search for sweet berries.</item>
+        <item>Он обычно не ищет сладкие ягоды.==He usually doesn\'t look for sweet berries.</item>
         <item>Он не ест недоваренные яйца.==He doesn\’t eat undercooked eggs.</item>
-        <item>Я обычно не тру сыр.==Usually I don\’t grate cheese.</item>
-        <item>Эта компания обычно не продает мучные изделия.==This company usually doesn\’t sell flour products.</item>
+        <item>Я обычно не тру сыр.==I usually don\'t grate cheese.</item>
         <item>Ты не ешь бананы каждый день.==You don\’t eat bananas every day.</item>
-        <item>Я часто не режу овощи.==Often I don\’t cut vegetables.</item>
-        <item>Она обычно не жарит фарш.==Usually she doesn\’t fry minced meat.</item>
+        <item>Я часто не режу овощи.==I don’t often cut vegetables.</item>
+        <item>Она обычно не жарит фарш.==She usually doesn’t fry minced meat.</item>
         <item>Я не покупаю свежие кексы каждое утро.==I don\’t buy fresh muffins every morning.</item>
         <item>Ты не любишь клюкву.==You don\’t like cranberries.</item>
         <item>Я не ем говядину.==I don\’t eat beef.</item>
-        <item>Он не часто готовит форель.==He doesn\’t\’t cook trout that often.</item>
-        <item>Я не люблю индейку.==I don\’t like turkey.</item>
+        <item>Он не часто готовит форель.==He doesn\'t often cook trout.</item>
         <item>Мы не едим домашнюю птицу.==We don\’t eat poultry.</item>
-        <item>Они не очень часто пользуются духовкой.==They don\’t use oven very often.</item>
+        <item>Они не очень часто пользуются духовкой.==They don\'t often use the oven.</item>
         <item>Я не люблю кислый соус.==I don\’t like sour sauce.</item>
         <item>Она печет торты?==Does she bake cakes?</item>
-        <item>Они обычно очищают от кожуры фрукты перед тем, как их съесть?==Do they normally peal fruits before eating them?</item>
-        <item>Кто лучше готовит пироги, я или моя сестра?==Who cooks tarts better, me or my sister?</item>
-        <item>Кто готовит чаще, ты или твоя мама?==Who cooks more often, you or your mother?</item>
+        <item>Они обычно очищают от кожуры фрукты перед тем, как их съесть?==Do they usually peel fruits before eating them?</item>
+        <item>Кто лучше готовит пироги, я или моя сестра?==Who bakes pies better, me or my sister?</item>
+        <item>Кто готовит чаще, ты или твоя мама?==Who cooks more often, you or your mom?</item>
         <item>Чей рецепт ты используешь?==Whose recipe do you use?</item>
-        <item>Чья мать готовит самый вкусный мармелад?==Whose mother makes the tastiest marmalade?</item>
+        <item>Чья мать готовит самый вкусный мармелад?==Whose mother makes the best marmalade?</item>
         <item>Почему мы едим тунца каждую неделю?==Why do we eat tuna every week?</item>
         <item>Когда ты обычно добавляешь масло?==When do you usually add oil?</item>
-        <item>Куда ты обычно ставишь мед?==Where do you usually put honey?</item>
+        <item>Куда ты обычно ставишь мед?==Where do you usually put the honey?</item>
         <item>Почему мы каждый раз едим сосиски вместо телятины?==Why do we eat sausages instead of veal every time?</item>
-        <item>Когда ты обычно покупаешь осьминогов у рыбаков, утром или вечером?==When do you usually buy octopus from fishermen, in the morning or in the evening?</item>
+        <item>Когда ты обычно покупаешь осьминогов у рыбаков, утром или вечером?==When do you usually buy octopus from the fishermen, in the morning or in the evening?</item>
         <item>Кто всегда забывает купить йогурт?==Who always forgets to buy yogurt?</item>
-        <item>Куда ты обычно ставишь овсяную крупу?==Where do you normally put oatmeal?</item>
+        <item>Куда ты обычно ставишь овсяную крупу?==Where do you usually put the oatmeal?</item>
         <item>Почему мы каждый раз покупаем свинину вместо бекона?==Why do we buy pork instead of bacon every time?</item>
         <item>Кто всегда оставляет холодильник открытым?==Who always leaves the fridge open?</item>
-        <item>Где я обычно могу найти моллюсков?==Where do I usually find clams?</item>
-        <item>Куда мы обычно ставим манную крупу?==Where do we usually put semolina?</item>
+        <item>Где я обычно могу найти моллюсков?==Where can I usually find clams?</item>
+        <item>Куда мы обычно ставим манную крупу?==Where do we usually put the semolina?</item>
     </string-array>
 
     <string-array name="present_process_work_and_leisure">
-        <item>Ты собираешь чемоданы.==You\'re packing bags.</item>
-        <item>Он сейчас занимается в тренажерном зале.==He\'s working out at the gym now.</item>
-        <item>Я сейчас помогаю своему ребенку с домашним заданием.==I\'m helping my child with his homework at the moment.</item>
-        <item>У них сейчас пикник в саду.==They are having a picnic in the garden now.</item>
+        <item>Ты собираешь чемоданы.==You\'re packing your bags.</item>
+        <item>Он сейчас занимается в тренажерном зале.==He\'s working out at the gym right now.</item>
+        <item>Я сейчас помогаю своему ребенку с домашним заданием.==I\'m helping my child with his homework right now.</item>
+        <item>У них сейчас пикник в саду.==They\'re having a picnic in the yard right now.</item>
         <item>Что-то мне не весело на этой вечеринке.==I\'m not having fun at this party.</item>
-        <item>У меня сейчас собеседование, я не могу с тобой разговаривать.==I\'m having an interview now, so I can\'t talk to you.</item>
-        <item>Мой муж не работает на этой неделе - он в отпуске.==My husband is not working this week, he\'s on holiday.</item>
-        <item>Она сегодня задерживается на работе: делает отчет.==She is working late hours today: she\'s writing a report.</item>
-        <item>Сейчас он не пишет новую книгу. Он ищет вдохновение.==He\'s not writing a new book now, he\'s looking for inspiration.</item>
-        <item>Она сейчас вяжет новый наряд для своей собачки.==She is knitting a new outfit for her dog now.</item>
-        <item>Вечно он с друзьями тусуется!==He\'s constantly hanging out with his friends.</item>
+        <item>У меня сейчас собеседование, я не могу с тобой разговаривать.==I\'m having an interview right now, so I can\'t talk to you.</item>
+        <item>Мой муж не работает на этой неделе - он в отпуске.==My husband isn\'t working this week; he\'s on vacation.</item>
+        <item>Она сегодня задерживается на работе: пишет отчет.==She\'s working late today; she\'s writing a report.</item>
+        <item>Сейчас он не пишет новую книгу. Он ищет вдохновение.==He\'s not writing a new book right now; he\'s looking for inspiration.</item>
+        <item>Она сейчас вяжет новый наряд для своей собачки.==She\'s knitting a new outfit for her dog right now.</item>
+        <item>Вечно он с друзьями тусуется!==He\'s constantly hanging out with his friends!</item>
         <item>Все свободное время она проводит в своем саду, но не может вырастить даже один цветок.==She\'s spending all her free time in her garden, but can\'t grow even one flower.</item>
-        <item>Она никогда не отвечает на звонки, когда ходит по магазинам==She never answers her phone when she\'s shopping.</item>
-        <item>Тебе нравится вечеринка?==Are you enjoying the party?</item>
+        <item>Она никогда не отвечает на звонки, когда ходит по магазинам.==She never answers her phone when she\'s shopping.</item>
+        <item>Тебе нравится (наслаждаешься) вечеринка?==Are you enjoying the party?</item>
         <item>Твой муж ищет новую работу?==Is your husband looking for a new job?</item>
         <item>Кто выигрывает?==Who\'s winning?</item>
-        <item>Почему ты опаздываешь?==Why are you being late?</item>
         <item>Ты Гарри Поттера читаешь, так ведь? Это моя любимая книга! ==You\'re reading Harry Potter, aren\'t you? It\'s my favorite book!</item>
-        <item>Эта девушка учится с нами на водительских курсах, не так ли?==This girl is taking driving courses with us, isn\'t she?</item>
-        <item>Я сейчас занимаюсь уборкой квартиры и не могу к вам присоединиться на чашку кофе.==I\'m cleaning my flat and can\'t join you for a cup of coffee.</item>
-        <item>Я не смотрю теннисный матч, я не поклонник тенниса.==I\'m not watching the tennis match, I\'m not really a tennis fan.</item>
-        <item>Она не читает книгу, а просто делает вид.==She\'s not reading a book, she\'s just pretending to do so.</item>
+        <item>Эта девушка учится с нами на водительских курсах, не так ли?==This girl is taking driving lessons with us, isn\'t she?</item>
+        <item>Я сейчас занимаюсь уборкой квартиры и не могу к вам присоединиться на чашку кофе.==I\'m cleaning my apartment right now, and I can\'t join you for a cup of coffee.</item>
+        <item>Я не смотрю теннисный матч, я не поклонник тенниса.==I\'m not watching the tennis match; I\'m not really a tennis fan.</item>
+        <item>Она не читает книгу, а просто делает вид.==She\'s not reading a book, she\'s just pretending to.</item>
         <item>Она не готовит, она собирается заказать пиццу.==She\'s not cooking, she\'s going to order a pizza.</item>
         <item>Да ты меня не слушаешь! Ты витаешь в облаках!==But you\'re not listening to me! You\'re daydreaming!</item>
-        <item>Мы в кинотеатре смотрим фильм, не звони мне сейчас.==We\'re watching a movie in the cinema, don\'t call me now.</item>
+        <item>Мы в кинотеатре смотрим фильм, не звони мне сейчас.==We\'re watching a movie at the theater, don\'t call me right now.</item>
         <item>Мой муж чинит мебель на кухне.==My husband is fixing the furniture in the kitchen.</item>
-        <item>Он в кабинете - оформляет свою коллекцию монет.==He\'s in his study, he\’s designing his coin collection.</item>
-        <item>Он опаздывает, все уже в конференц-зале.==He is being late, everybody is in the conference hall already.</item>
-        <item>У него работы навалом, а он сидит в интернете.==He has a lot of work to do and still he\'s surfing the net.</item>
-        <item>Я сейчас в ванной расслабляюсь.==I\'m relaxing in the bath now.</item>
-        <item>Она сейчас в салоне красоты.==She is visiting a beauty salon at the moment.</item>
+        <item>Он в кабинете - оформляет свою коллекцию монет.==He\'s in his study, organizing his coin collection.</item>
+        <item>У него работы навалом, а он сидит в интернете.==He has a lot of work to do, yet he\'s surfing the internet.</item>
+        <item>Я сейчас в ванной расслабляюсь.==I\'m relaxing in the bath right now.</item>
+        <item>Она сейчас в салоне красоты.==She\'s at the beauty salon right now.</item>
         <item>Она специально болеет за другую команду.==She\'s rooting for the other team on purpose.</item>
-        <item>Она сейчас занимается йогой. Она снимает стресс таким образом.==She\'s doing yoga now. She relieves stress this way.</item>
-        <item>Они катаются на коньках в центральном парке.==They\'re skating in the central park.</item>
+        <item>Она сейчас занимается йогой. Она снимает стресс таким образом.==She\'s doing yoga right now. She relieves stress this way.</item>
+        <item>Они катаются на коньках в центральном парке.==They\'re skating in Central Park.</item>
         <item>Дети репетируют выступление.==The children are rehearsing their performance.</item>
-        <item>Мы тут по городу катаемся, можем заехать в гости.==We\'re driving around the town, we can pay you a visit.</item>
-        <item>Мы пишем песни, чтобы поддержать нашу футбольную команду.==We\'re writing songs to cheer up our football team.</item>
+        <item>Мы тут по городу катаемся, можем заехать в гости.==We\'re driving around town, we could drop by.</item>
+        <item>Мы пишем песни, чтобы подбодрить нашу футбольную команду.==We\'re writing songs to cheer up our soccer team.</item>
         <item>Бегуны соревнуются за национальный титул.==The runners are competing for the national title.</item>
-        <item>Рекордное число спортсменов из Aфрики принимает участие в этих соревнованиях.==A record number of African athletes are participating in the competition.</item>
+        <item>Рекордное число Африканских атлетов принимает участие в этих соревнованиях.==A record number of African athletes are participating in this competition.</item>
         <item>Моя подруга ходит на кулинарные курсы.==My friend is taking cooking classes.</item>
         <item>Я все еще поддерживаю связь со своим американским другом - мы все еще переписываемся.==I still keep in touch with my American friend - we\'re still exchanging letters.</item>
-        <item>Она не занимается сейчас / не тренируется - она просто сидит на диете.==Currently she\'s not working out, she\'s just dieting.</item>
+        <item>В настоящее время она не тренируется - она просто сидит на диете.==Currently, she\'s not working out, she\'s just dieting.</item>
         <item>Я в данный момент не пишу свой доклад, так что могу помочь тебе с твоим.==I\'m not writing my report at the moment, so I can help you with yours.</item>
-        <item>Мы сейчас в Тайланде, мы живем в отеле Centara.==We\'re in Thailand now, and we\'re staying at the Centara Hotel.</item>
-        <item>На данный момент он занимается медицинским исследованием.==He\'s doing a medical research at the moment.</item>
-        <item>Они вовсе не ждут лето, они увлекаются сноубордингом.==They\'re not looking forward to the summer, they\'re keen on snowboarding.</item>
-        <item>Этот атлет не участвует в соревнованиях, он залечивает травму.==The athlete isn\'t participating in this competition, he\'s recovering from an injury.</item>
-        <item>Она навещает родственников в Германии.==She is visiting her relatives in Germany.</item>
-        <item>Она коллекционирует марки с породами собак. Коллекция с кошками у нее уже есть.==She\'s collecting stamps with dog breeds. She already has a collection with cats.</item>
+        <item>Мы сейчас в Тайланде, мы живем в отеле Centara.==We\'re in Thailand right now, and we\'re staying at the Centara Hotel.</item>
+        <item>На данный момент он занимается медицинским исследованием.==He\'s doing medical research at the moment.</item>
+        <item>Они вовсе не ждут лето, они увлекаются сноубордингом.==They\'re not looking forward to summer, they\'re into snowboarding.</item>
+        <item>Этот атлет не участвует в соревнованиях, он восстанавливается после травмы.==The athlete isn\'t participating in this competition, he\'s recovering from an injury.</item>
+        <item>Она навещает родственников в Германии.==She\'s visiting her relatives in Germany.</item>
+        <item>Она коллекционирует марки с породами собак. Коллекция с кошками у нее уже есть.==She\'s collecting stamps with dog breeds. She already has a collection of cats.</item>
         <item>Он не ищет работу. Он собирается этот год пропутешествовать.==He\'s not looking for a job. He\'s going to travel this year.</item>
-        <item>Мой сосед учится играть на пианино - каждый вечер этот шум не дает мне покоя.==My neighbor is learning to play the piano, the noise is disturbing me every evening.</item>
-        <item>Я работаю над докладом в настоящее время.==I\'m working on my report now.</item>
-        <item>Он в данный момент едет на работу?==Is he driving to work now?</item>
-        <item>Ты сейчас занимаешься уборкой?==Are you cleaning your flat at the moment?</item>
-        <item>Твой муж сегодня задерживается на работе?==Is your husband working late hours today?</item>
+        <item>Мой сосед учится играть на пианино - каждый вечер этот шум не дает мне покоя.==My neighbor is learning to play the piano; the noise bothers me every evening.</item>
+        <item>Я работаю над докладом в настоящее время.==I\'m working on my report right now.</item>
+        <item>Он в данный момент едет на работу?==Is he driving to work right now?</item>
+        <item>Твой муж сегодня задерживается на работе?==Is your husband working late today?</item>
         <item>Она все еще занимается йогой?==Is she still doing yoga?</item>
-        <item>Она все еще усиленно занимается спортом, чтобы похудеть?==Is she still exercising hard to lose weight?</item>
+        <item>Она все еще усиленно упражняется спортом, чтобы похудеть?==Is she still exercising hard to lose weight?</item>
         <item>Она все еще общается со своим китайским другом?==Is she still keeping in touch with her Chinese friend?</item>
         <item>Твой ребенок учится играть на пианино?==Is your child learning to play the piano?</item>
-        <item>Твоя подруга-художница выставляет свои работы в настоящее время?==Is your friend painter currently exhibiting her paintings?</item>
+        <item>Твоя подруга-художница выставляет свои работы в настоящее время?==Is your friend painter currently exhibiting her works?</item>
         <item>Твоя коллега посещает курсы по рисованию?==Is your colleague taking drawing classes?</item>
-        <item>Ты и твои коллеги готовите короткое представление к новогодней вечеринке?==Are you and your colleagues preparing a short performance for the New Year party?</item>
-        <item>Твои друзья выбирают, куда поедут в отпуск?==Are your friends choosing a destination for their vocation?</item>
+        <item>Ты и твои коллеги готовите короткое представление к новогодней вечеринке?==Are you and your colleagues preparing a short performance for the New Year\'s party?</item>
+        <item>Твои друзья выбирают, куда поедут в отпуск?==Are your friends choosing a destination for their vacation?</item>
         <item>Твои друзья все еще мечтают переехать за границу?==Are your friends still dreaming of moving abroad?</item>
-        <item>Кто играет на бас гитаре в такой поздний час?==Who is playing the bass guitar so late at night?</item>
-        <item>Что за актер играет главную роль?==What actor is playing the leading role?</item>
-        <item>Какая компания сейчас набирает персонал?==What company is hiring people now?</item>
-        <item>Какой художник выставляет свои работы в картинной галерее?==What painter is exhibiting his works at the art gallery?</item>
-        <item>Кто из твоих друзей сейчас ходит на курсы вождения?==Who among your friends is currently taking driving courses?</item>
+        <item>Кто играет на бас-гитаре в такой поздний час?==Who\'s playing the bass guitar so late at night?</item>
+        <item>Что за актер играет главную роль?==Which actor is playing the leading role?</item>
+        <item>Какая компания сейчас набирает персонал?==Which company is hiring right now?</item>
+        <item>Какой художник выставляет свои работы в картинной галерее?==Which painter is exhibiting his works at the art gallery?</item>
+        <item>Кто из твоих друзей сейчас ходит на курсы вождения?==Which of your friends is currently taking driving lessons?</item>
         <item>Какие профессии становятся популярными в настоящее время?==What professions are currently becoming popular?</item>
-        <item>Какую программу он сейчас смотрит? На четвертом канале Спартак играет.==What TV program is he watching now? Spartak is playing on the 4th channel.</item>
+        <item>Какую программу он сейчас смотрит? На четвертом канале Спартак играет.==What TV show is he watching now? Spartak is playing on channel 4.</item>
         <item>Зачем она поливает цветы? Сейчас дождь начнется.==Why is she watering the flowers? It\'s going to rain.</item>
-        <item>Где ты сидишь в кафе? Мы уже подходим.==Where are you sitting in the café? We\'re coming.</item>
-        <item>Где ты проводишь отпуск в настоящий момент? Ты же сейчас не работаешь, так ведь?==Where are you currently spending your holidays? You\'re not working now, are you?</item>
-        <item>Ты за какую команду болеешь? Обе как-то не очень играют.==What team are you supporting? Both of them aren\'t playing very well.</item>
+        <item>Где ты сидишь в кафе? Мы уже подходим.==Where are you sitting in the cafе? We\'re almost there.</item>
+        <item>Где ты проводишь отпуск в настоящий момент? Ты же сейчас не работаешь, так ведь?==Where are you currently spending your vacation? You\'re not working now, are you?</item>
+        <item>Ты за какую команду болеешь? Обе как-то не очень играют.==Which team are you supporting? Both of them aren\'t playing very well.</item>
         <item>На какую работу он устраивается?==What job is he applying for?</item>
-        <item>Какие марки ты сейчас коллекционируешь?==Which kind of stamps are you currently collecting?</item>
-        <item>Какую пьесу они репетируют теперь?==What play are they presently rehearsing?</item>
+        <item>Какие марки ты сейчас коллекционируешь?==What kind of stamps are you currently collecting?</item>
+        <item>Какую пьесу они репетируют теперь?==What play are they rehearsing now?</item>
         <item>В каком отеле они размещаются?==What hotel are they staying at?</item>
         <item>Где твой ребенок проводит летние каникулы?==Where is your child spending summer holidays?</item>
     </string-array>
 
     <string-array name="present_process_relationship">
         <item>Я вижу ты гуляешь с новой девушкой. Мог бы ты нас познакомить?==I see you\’re walking with a new girlfriend. Could you introduce us?</item>
-        <item>- Посмотри! Они дерутся!- А кто это?- Муж и его жена ==- Look!They\’re fighting!- Who are they?- The husband and his wife</item>
-        <item>Он вечно разбрасывает свои носки по квартире. Ненавижу эту его привычку!==He\’s always throwing his socks in the apartment. I hate this habit of his!</item>
-        <item>Мы с сестрой смотрим передачу о влиянии афродизиаков на размножение кроликов. Не понимаю зачем, черт побери, это им==My sister and I are watching a program about the influence of aphrodisiacs on the reproduction of rabbits. I do not understand why the hell they need it</item>
-        <item>Он все готовится сделать ей предложение. А она подумывает о том, чтоб бросить его. ==He is still getting ready to propose, while she is thinking of dumping him.</item>
-        <item>- А где мои маленькие крошки?-Девочки в своей комнате. Разговаривают и смеются==- Where are my little babies?-The girls are in their room. Talking and laughing</item>
-        <item>Почему ты смеешься? Тебе нравится шутить надо мной? Это потому что я приемный сын?==Why are you laughing? Do you like making fun on me? Is it because I\’m a step-son?</item>
-        <item>Мне постоянно кто-то звонит, когда я принимаю ванну==Every time somebody\’s calling me when I\’m taking a bath. I hate it!</item>
-        <item>Например, твой любимый племянник сейчас пытается своровать твой бумажник==For example, your lovely nephew is trying to steal your wallet now.</item>
-        <item>Она все еще ждет, что он вернется и женится на ней==She is still waiting for him to return and marry her.</item>
-        <item>Смотри! Он стоит на коленях и предлагает ей выйти за него замуж ==-Look! He is on his knees and proposing to marry him</item>
-        <item>Моя жена всегда соглашается со своими подружками чтобы ей там не сказали!==My wife\’s always agreeing with her friends whatever she is told there!</item>
-        <item>-Ты делаешь уроки?-Сама делай!-Не груби матери! ==- Are you doing your homework?- Do it yourself!- Don\'t answer back to your mother!</item>
-        <item>- Что ты делаешь?- Звоню в полицию. ==- What are you doing?- I\’m phoning the police.</item>
-        <item>В этом месяце мы готовимся к свадьбе==We are preparing for the wedding this month</item>
-        <item>Подружки невесты дерутся за ее букет. Никогда не видел, чтобы девушек так хотели выйти замуж==Bridesmaids are fighting for her bouquet. I\'ve never seen such girls who are so eager to get married.</item>
-        <item>Внучка несет не только пирожки бабушке, но и счет за коммунальные услуги==А granddaughter is carrying not only pies to her grandmother, but also a utility bill.</item>
-        <item>Все дети на улице играют в игры, а наш ребенок читает теорию струн==All kids are playing games in the street, and our child is reading the string-array theory.</item>
-        <item>Наш разведенный друг ищет немного романтики==Our divorced friend is looking for a little romance</item>
-        <item>Мой супруг каждый день говорит мне один и тот же комплимент «ты просто космос»! Меня это уже бесит!==Every day my spouse is telling me the same compliment like “You are fucking rock” over and over again! It infuriates me!</item>
-        <item>- Где же, блин, мое обручальное кольцо?-Кто знает…Думаю, ты потерял его и сейчас кто-то пытается его продать==- Where the hell is my wedding ring?- Who knows … I think you lost it and now someone is trying to sell it</item>
-        <item>Будучи сиротой, он бродит по улице целый день и смотрит на счастливые семьи==Being an orphan, he is wandering the whole day in the street and looking at the happy families.</item>
-        <item>- Привет, сильная и независимая женщина. Что делаешь? Наверно, ты сейчас на свидании или знакомишься с кем-то?- Нет… я сижу и играю с кошками.==- Hi, strong and independent woman! What are you doing? Perhaps you are on date or getting acquaintance now, right?- No … I am sitting and playing with my cats</item>
-        <item>Жених просит отменить свадьбу. Ему становится хуже и его может стошнить==The fiance\’s asking to call wedding off. It\’s getting worse to him and he might throw up.</item>
-        <item>Мой зять молчит все время, пока говорит свекровь. ==My son-in-law is silent all this time while his mother-in-law is talking.</item>
-        <item>Полицейские стоят и думают, стоит ли им арестовать супругов за драку в общественных местах или подождать финала этой романтической истории==Policemen are staying and thinking if they should arrest spouses for fighting in public places or they should wait the end of this romantic story</item>
-        <item>Ой, ваш новорожденный сын улыбается, не понимая куда он попал==Oh, your new-born baby is smiling, not realizing where he is</item>
-        <item>Не беспокой кондитера. Он делает нам свадебный торт==Do not bother confectioner. He is making for us a wedding cake</item>
-        <item>- Эти близнецы классно танцуют.- О, да! Это же « Лэс Твинс»==- The twins are dancing great.- Oh yeah! It\'s "Les Twins"</item>
+        <item>- Посмотри! Они дерутся! - А кто это? - Муж и его жена == - Look! They\’re fighting! - Who are they? - The husband and his wife</item>
+        <item>Он вечно разбрасывает свои носки по квартире. Ненавижу эту его привычку! == He\’s always throwing his socks around the apartment. I hate that habit of his!</item>
+        <item>Мы с сестрой смотрим передачу о влиянии афродизиаков на размножение кроликов. Не понимаю, зачем это им. == My sister and I are watching a show about the influence of aphrodisiacs on rabbit reproduction. I don\’t understand why they need it.</item>
+        <item>Он все готовится сделать ей предложение. А она подумывает о том, чтобы бросить его. == He\’s still getting ready to propose, while she\'s thinking of dumping him.</item>
+        <item>- А где мои маленькие крошки? - Девочки в своей комнате, разговаривают и смеются. == - Where are my little ones? - The girls are in their room, talking and laughing.</item>
+        <item>Почему ты смеешься? Тебе нравится шутить надо мной? Это потому что я приемный сын? == Why are you laughing? Do you like making fun of me? Is it because I\’m adopted?</item>
+        <item>Мне постоянно кто-то звонит, когда я принимаю ванну. == Someone always calls me when I\'m taking a bath. I hate it!</item>
+        <item>Например, твой любимый племянник сейчас пытается своровать твой бумажник. == For example, your favorite nephew is trying to steal your wallet right now.</item>
+        <item>Она все еще ждет, что он вернется и женится на ней. == She\’s still waiting for him to come back and marry her.</item>
+        <item>Смотри! Он стоит на коленях и делает ей предложение. == Look! He\’s on his knees proposing to her.</item>
+        <item>Моя жена всегда соглашается со своими подружками, что бы они ни говорили! == My wife is always agreeing with her friends, no matter what they say!</item>
+        <item>- Ты делаешь уроки? - Сама делай! - Не груби матери! == - Are you doing your homework? - Do it yourself! - Don\'t talk back to your mother!</item>
+        <item>- Что ты делаешь? - Звоню в полицию. == - What are you doing? - I\'m calling the police.</item>
+        <item>В этом месяце мы готовимся к свадьбе. == We\'re preparing for the wedding this month.</item>
+        <item>Подружки невесты дерутся за ее букет. Никогда не видел девушек, которые так хотят выйти замуж. == The bridesmaids are fighting over her bouquet. I\'ve never seen girls so eager to get married.</item>
+        <item>Внучка несет не только пирожки бабушке, но и счет за коммунальные услуги. == A granddaughter is carrying not only pies to her grandmother but also a utility bill.</item>
+        <item>Все дети на улице играют в игры, а наш ребенок читает теорию струн. == All the kids are playing outside, and our child is reading about string theory.</item>
+        <item>Наш разведенный друг ищет немного романтики.==Our divorced friend is looking for a little romance.</item>
+        <item>- Где же мое обручальное кольцо? - Кто знает… Думаю, ты потерял его, и сейчас кто-то пытается его продать. == - Where is my wedding ring? - Who knows… I think you lost it, and now someone is trying to sell it.</item>
+        <item>Будучи сиротой, он бродит по улице целый день и смотрит на счастливые семьи. == Being an orphan, he\'s wandering around the street all day, watching happy families.</item>
+        <item>- Привет, сильная и независимая женщина. Что делаешь? Наверное, ты сейчас на свидании или знакомишься с кем-то, верно? - Нет… я просто сижу и играю с кошками. == - Hi, strong and independent woman! What are you doing? Maybe you\'re on a date or meeting someone, right? - No… I\'m just sitting here playing with my cats.</item>
+        <item>Жених просит отменить свадьбу. Ему становится хуже, и его может стошнить. == The groom is asking to call off the wedding. He\'s feeling worse, and he might throw up.</item>
+        <item>Мой зять молчит все время, пока говорит свекровь. == My son-in-law stays quiet the whole time while his mother-in-law talks.</item>
+        <item>Полицейские стоят и думают, стоит ли им арестовать парочку за драку в общественном месте или подождать окончания этой романтической истории. == The police officers are standing there, wondering whether they should arrest the couple for fighting in public or wait for the end of this romantic story.</item>
+        <item>Ой, ваш новорожденный сын улыбается, не понимая, куда он попал. == Oh, your newborn baby is smiling, not realizing where he is.</item>
+        <item>Не беспокой кондитера. Он делает нащ свадебный торт. == Don\'t bother the baker. He\'s making our wedding cake.</item>
+        <item>- Эти близнецы классно танцуют. - О, да! Это же "Les Twins". == - The twins are dancing great. - Oh yeah! It\'s "Les Twins".</item>
         <item>-А где ваш малыш?-Думаю, он пьет водку средь девушек==-Where is your baby?-I think he\’s drinking vodka among girls</item>
-        <item>-Сын, ты где?-Бегаю….от полиции.==-Son, where are you?- I\’m running … away from the police.</item>
+        <item>- Сын, ты где? - Бегаю… от полиции. == - Son, where are you? - Running… from the police.</item>
     </string-array>
 
     <string-array name="present_simple_cont">
         <item>Вечером я всегда закрываю окно==I always close the window at night.</item>
         <item>Солнце всходит на востоке.==The sun rises in the east.</item>
-        <item>Мальчики не плачут.==The boys do not (don\’t) cry.</item>
-        <item>Мы не путешественники,==We are not (aren\’t) travelers.</item>
-        <item>Алексей отдыхает в Крыму каждое лето==Aleksey has a rest in Crimea every summer</item>
-        <item>Эта квартира стоит достаточно дорого.==This apartment costs a lot of money.</item>
-        <item>Он идёт пешком в школу каждый день==He walks to school every day.</item>
-        <item>Он идет вниз по улице==He is walking down the street.</item>
-        <item>Мы идем в кинотеатр==We are going to the cinema.</item>
-        <item>Он знает о ее проблеме==He knows about her problem.</item>
-        <item>Вечно ты оставляешь газету на полу.==You are always leaving your newspaper on the floor</item>
-        <item>Она занимается йогой каждый день==She does yoga every day.</item>
-        <item>Он принимает душ сейчас==He is taking a shower now.</item>
+        <item>Мальчики не плачут.==Boys don\’t cry.</item>
+        <item>Мы не путешественники.==We are not travelers.</item>
+        <item>Алексей отдыхает в Крыму каждое лето.==Aleksey vacations in Crimea every summer.</item>
+        <item>Эта квартира стоит достаточно дорого.==This apartment is quite expensive.</item>
+        <item>Он идёт пешком в школу каждый день.==He walks to school every day.</item>
+        <item>Он идет вниз по улице.==He is walking down the street.</item>
+        <item>Мы идем в кинотеатр.==We are going to the movie theater.</item>
+        <item>Он знает о ее проблеме.==He knows about her problem.</item>
+        <item>Вечно ты оставляешь газету на полу.==You are always leaving the newspaper on the floor.</item>
+        <item>Она занимается йогой каждый день.==She does yoga every day.</item>
+        <item>Он принимает душ сейчас.==He is taking a shower now.</item>
         <item>Он спит.==He is sleeping.</item>
-        <item>Моя мама отдыхает.==My mother is resting (having a rest).</item>
+        <item>Моя мама отдыхает.==My mother is resting.</item>
         <item>Соседи празднуют день рождения сына.==My neighbors are celebrating their son\'s birthday.</item>
         <item>Он играет в компьютерную игру.==He is playing a computer game.</item>
-        <item>Он твой младший брат==He is your younger brother</item>
-        <item>Обычно мой друг приходит поздно.==Usually my friend comes late.</item>
-        <item>Я чищу овощи.==I\’m peeling vegetables.</item>
-        <item>Они работают над новым проектом.==They are working at a new project.</item>
-        <item>Моя подружка переписывается с немцем.==My girlfriend is chatting with a German.</item>
-        <item>Обычно он встает в 8 часов.==Usually he gets up at eight o\’clock.</item>
+        <item>Он твой младший брат.==He is your younger brother.</item>
+        <item>Обычно мой друг приходит поздно.==Usually, my friend comes late.</item>
+        <item>Я чищу овощи.==I am peeling vegetables.</item>
+        <item>Они работают над новым проектом.==They are working on a new project.</item>
+        <item>Моя подружка переписывается с немцем.==My girlfriend is chatting with a German guy.</item>
+        <item>Обычно он встает в 8 часов.==Usually, he gets up at eight o\'clock.</item>
         <item>Они обычно покупают газеты по утрам.==They usually buy newspapers in the morning.</item>
-        <item>Я еду в метро. ==I\’m taking the subway (going by subway/on a train)</item>
-        <item>Я учу испанский.==I\’m learning Spanish</item>
-        <item>Какой-то человек стоит у моей машины.==A man (some man) is standing near my car.</item>
+        <item>Я еду в метро.==I am taking the subway.</item>
+        <item>Я учу испанский.==I am learning Spanish.</item>
+        <item>Какой-то человек стоит у моей машины.==Some man is standing near my car.</item>
         <item>Они все еще ходят по городу.==They are still walking around the city.</item>
         <item>Он навещает своих родителей очень часто.==He visits his parents very often.</item>
         <item>Я обычно ложусь спать в 11.==I usually go to bed at eleven.</item>
@@ -2966,48 +2958,49 @@
         <item>Мы готовим ужин сейчас.==We are cooking dinner now.</item>
         <item>Они играют в комнате (в данный момент).==They are playing in the room (at the moment).</item>
         <item>Она любит молоко.==She likes milk.</item>
-        <item>Радио не работает.==Radio is not (isn\’t) working.</item>
-        <item>Я не читаю газету сейчас.==I\’m not reading a newspaper now.</item>
-        <item>Я не сижу в интернете.==I\’m not surfing the internet.</item>
-        <item>Я и моя жена всегда находим компромисс. Я каждый раз признаю, что я не прав, и она соглашается.==Every time I admit I\'m wrong and she agrees with me.</item>
-        <item>Насколько я знаю, она хочет выйти замуж за немца и сделать его несчастным==As far as I know, she wants to get married to a German and make him unhappy</item>
-        <item>Они слишком много думают по ночам==They think a lot at night</item>
+        <item>Радио не работает.==The radio is not working.</item>
+        <item>Я не читаю газету сейчас.==I\'m not reading a newspaper now.</item>
+        <item>Я не сижу в интернете.==I\'m not surfing the internet.</item>
+        <item>Я и моя жена всегда находим компромисс. Я каждый раз признаю, что я не прав, и она соглашается.==My wife and I always find a compromise. Every time I admit I am wrong, and she agrees with me.</item>
+        <item>Насколько я знаю, она хочет выйти замуж за немца и сделать его несчастным.==As far as I know, she wants to marry a German guy and make him unhappy.</item>
+        <item>Они слишком много думают по ночам.==They think too much at night.</item>
         <item>Вы изучаете английский в настоящее время.==You are learning English now.</item>
-        <item>Не могу попробовать на вкус свои губы, можешь сделать это для меня?==I can\’t taste my lips, can you do it for me?</item>
-        <item>Назад!! Вы стоите на моей ауре!==Back off!! You\'re standing in my aura</item>
-        <item>Мальчик постоянно разыгрывает свою бедную маму.==The boy is constantly playing tricks on his poor mother..</item>
-        <item>О чем ты, блин, сейчас говоришь?==What the hell are you talking about now?</item>
-        <item>Я умный человек. Я просто делаю глупости.==I\'m a smart person. I just do stupid things</item>
-        <item>Моя соседка курит марихуану. Она говорит, что это лекарство от реальности==My neighbor smokes marijuana. She says that this medicine from reality</item>
-        <item>Я жду посадки на рейс.==I\’m waiting for boarding.</item>
-        <item>Он выбирает горячее блюдо в меню.==He\’s choosing a hot dish in the menu.</item>
-        <item>Я стою в очереди на регистрацию.==I\’m standing in the line (am queuing) for the check-in</item>
-        <item>Она танцуют танго.==They are dancing tango.</item>
-        <item>Я строю новый дом за городом.==I\'m building a new house in the country</item>
+        <item>Не могу попробовать на вкус свои губы, можешь сделать это для меня?==I can\'t taste my lips. Can you do it for me?</item>
+        <item>Назад!! Вы стоите на моей ауре!==Back off!! You\'re standing in my aura!</item>
+        <item>Мальчик постоянно разыгрывает свою бедную маму.==The boy is constantly playing tricks on his poor mother.</item>
+        <item>О чем ты сейчас говоришь?==What are you talking about now?</item>
+        <item>Я умный человек. Я просто делаю глупости.==I\'m a smart person. I just do stupid things.</item>
+        <item>Моя соседка курит марихуану. Она говорит, что это лекарство от реальности.==My neighbor smokes marijuana. She says it is medicine from reality.</item>
+        <item>Я жду посадки на рейс.==I\'m waiting for boarding.</item>
+        <item>Он выбирает горячее блюдо в меню.==He is choosing a hot dish from the menu.</item>
+        <item>Я стою в очереди на регистрацию.==I am standing in line for check-in.</item>
+        <item>Они танцуют танго.==They are dancing tango.</item>
+        <item>Я строю новый дом за городом.==I am building a new house in the country.</item>
         <item>Я сейчас ем.==I am eating now.</item>
-        <item>Он играет в футбол сейчас.==Не is playing football now.</item>
-        <item>Он играет в футбол по субботам.==Не plays football every Saturday.</item>
+        <item>Он играет в футбол сейчас.==He is playing soccer now.</item>
+        <item>Он играет в футбол по субботам.==He plays soccer every Saturday.</item>
         <item>Она смотрит телевизор в данный момент.==She is watching TV at the moment.</item>
         <item>Я работаю в данный момент.==I am working at the moment.</item>
-        <item>Я работаю в офисе.==I work at the office.</item>
+        <item>Я работаю в офисе.==I work at an office.</item>
         <item>Мы сейчас гуляем.==We are walking now.</item>
         <item>Обычно мы гуляем по вечерам.==We usually walk in the evening.</item>
-        <item>Я не играю в шахматы.==I don\’t play chess.</item>
-        <item>Он не любит апельсиновый сок.==He doesn\’t like orange juice.</item>
+        <item>Я не играю в шахматы.==I don\'t play chess.</item>
+        <item>Он не любит апельсиновый сок.==He doesn\'t like orange juice.</item>
         <item>Он не ест бутерброд сейчас.==He is not eating a sandwich now.</item>
-        <item>Он принимает душ?==Is he having a shower?</item>
+        <item>Он принимает душ?==Is he taking a shower?</item>
         <item>Они сейчас спят?==Are they sleeping now?</item>
-        <item>Мы не встаем рано утром.==We don\’t get up early in the morning.</item>
-        <item>Она не читает каждый день.==She doesn\’t read every day.</item>
+        <item>Мы не встаем рано утром.==We don\'t get up early in the morning.</item>
+        <item>Она не читает каждый день.==She doesn\'t read every day.</item>
         <item>Твоя сестра ходит в школу?==Does your sister go to school?</item>
         <item>Ты часто ходишь в музей?==Do you often go to the museum?</item>
-        <item>Мы ждём автобус?==Are we waiting for a bus?</item>
-        <item>Салли сейчас делает домашнее задание?==Is Sally doing her homework at the moment?</item>
+        <item>Мы ждем автобус?==Are we waiting for the bus?</item>
+        <item>Салли сейчас делает домашнее задание?==Is Sally doing her homework now?</item>
         <item>Вы используете этот словарь?==Are you using this dictionary?</item>
         <item>Я слушаю произведения Моцарта сейчас?==Am I listening to Mozart now?</item>
         <item>Шеф готовит новое блюдо?==Is the chef cooking a new dish?</item>
         <item>Ты постоянно что-то теряешь!==You are always losing something!</item>
     </string-array>
+
 
     <string-array name="present_simple_vs_present_process">
         <item>Она говорит по-японски==She speaks Japanese</item>
@@ -3168,7 +3161,7 @@
         <item>Я был дома.==I was at home.</item>
         <item>Вчера вечером он был в клубе.==He was in the club last night.</item>
         <item>Она была в магазине вчера.==She was at the shop yesterday.</item>
-        <item>Я был в кино в прошлый понедельник.==I was at the cinema last Monday.</item>
+        <item>Я был в кино в прошлый понедельник.==I was at the movie theater last Monday.</item>
         <item>Это был очень хороший фильм.==It was a very good film.</item>
         <item>Ты был в библиотеке.==You were in the library.</item>
         <item>Вчера мы были в зоопарке.==We were at/in the Zoo yesterday.</item>
@@ -3176,13 +3169,13 @@
         <item>Они были в бассейне.==They were at the swimming-pool.</item>
         <item>Вчера мои родители были в супермаркете.==My parents were at/in the supermarket yesterday.</item>
         <item>Я был продавцом пять лет назад.==I was a seller five years ago.</item>
-        <item>Утром она была в кафе.==She was at/in the café in the morning.</item>
+        <item>Утром она была в кафе.==She was at/in the cafe in the morning.</item>
         <item>Дети были в парке.==The children were in the park.</item>
         <item>Ты был в магазине игрушек.==You were at/in the toy shop.</item>
         <item>Ботинки были очень дорогие.==The shoes were very expensive.</item>
-        <item>Я не был вчера в кино.==I wasn\'t at the cinema yesterday.</item>
+        <item>Я не был вчера в кино.==I wasn\'t at the movie theater yesterday.</item>
         <item>Моя собака не была в парке.==My dog wasn\'t in the park.</item>
-        <item>Мама и папа не были в ресторане.==Mum and Dad weren\’t at/in the restaurant.</item>
+        <item>Мама и папа не были в ресторане.==Mom and Dad weren\’t at/in the restaurant.</item>
         <item>Она не была дома в прошлое воскресенье.==She wasn\'t at home last Sunday.</item>
         <item>Он был на работе в выходные.==He was at work last weekend.</item>
         <item>Вчера мы были в театре.==We were at the theatre yesterday.</item>
@@ -3269,7 +3262,7 @@
         <item>Кто лечил его собаку?==Who treated his dog?</item>
         <item>Мы готовили ужин для родственников в прошлое воскресенье==We made dinner for our relatives last Sunday.</item>
         <item>Он был хорошим работником и получал хорошую зарплату==He was a good employee and he got a good salary.</item>
-        <item>Мы ездили в кино на автобусе==We went to the cinema by bus.</item>
+        <item>Мы ездили в кино на автобусе==We went to the movie theater by bus.</item>
         <item>Она порезала овощи для салата==She cut vegetables for a salad.</item>
         <item>Он мечтал купить новую машину==He dreamt to buy a new car.</item>
         <item>Собака легла на диван ==The dog lay on the couch.</item>
@@ -3884,13 +3877,13 @@
         <item>Он согласился с женой и она улыбнулась.==He agreed with his wife and she smiled.</item>
         <item>Они условились о том, чтобы проводить отпуск вместе.==They agreed about spending their vacation together.</item>
         <item>В Англии люди всегда извиняются перед вами, за то, что вы наступили им на ногу.==In England people always apologize to you for your standing on their foot.</item>
-        <item>Я должен извиниться перед мамой, мне не следует так говорить==I must apologize to mum, I shouldn\’t talk like this.</item>
+        <item>Я должен извиниться перед мамой, мне не следует так говорить==I must apologize to mom, I shouldn\’t talk like this.</item>
         <item>Он никогда не извиняется перед женой за отвратительное поведение==He never apologizes to his wife for his disgusting behavior.</item>
         <item>Не стоит заставлять маленьких детей извиняться перед родителями за плохое поведение, они не испытывают чувства стыда.==You shouldn\’t make little children apologize to their parents for their bad behavior, for they don\’t feel guilty.</item>
         <item>Извинись перед братом немедленно!==Apologize to your brother immediately!</item>
         <item>Они спросили меня об истории Египта, а я не знал, что ответить.==They asked me about the history of Egypt, but I didn\’t know what to answer.</item>
         <item>Спроси его о чем угодно, он всегда знает ответ, он очень знающий человек.==Ask him about anything, he always knows the answer, he is a very knowledgeable person.</item>
-        <item>Попроси у мамы денег, сходим в кафе.==Ask mum for money, we\’ll go to the café.</item>
+        <item>Попроси у мамы денег, сходим в кафе.==Ask mom for money, we\’ll go to the cafe.</item>
         <item>Он пришел попросить у меня совета.==He came to ask me for advice.</item>
         <item>Ему сложно попросить у меня что-то.==It is difficult for him to ask me for something.</item>
         <item>Она попросила у него неделю на подготовку к проекту.==She asked him for a week to prepare for the project.</item>
@@ -4117,7 +4110,7 @@
         <item>Мы не услышим вас==We will not hear you</item>
         <item>Они не поженятся в следующем году==They will not marry next year</item>
         <item>Они не пойдут в лес через месяц==They will not go to the forest in a month</item>
-        <item>Я пойду в кино?==Will I go to the cinema?</item>
+        <item>Я пойду в кино?==Will I go to the movie theater?</item>
         <item>Я куплю сыр?==Will I buy cheese?</item>
         <item>Вы нам поможете?==Will you help us?</item>
         <item>Вы поедете с нами?==Will you go with us?</item>
@@ -4287,7 +4280,7 @@
         <item>Мы не пойдем в зоопарк.==We are not going to the zoo</item>
         <item>Они не ограбят банк.==They are not robbing the bank</item>
         <item>Они не спросят тебя завтра.==They are not asking you tomorrow</item>
-        <item>Пойду ли я в кино завтра?==Am I going to the cinema tomorrow?</item>
+        <item>Пойду ли я в кино завтра?==Am I going to the movie theater tomorrow?</item>
         <item>Играю ли я теннис сегодня вечером?==Am I playing tennis tonight?</item>
         <item>Смотрю ли я фильм по телевизору этим вечером?==Am I watching a film on TV tonight?</item>
         <item>Ты идешь в отпуск в следующем месяце?==Are you going on holiday next month?</item>
@@ -4306,13 +4299,13 @@
         <item>Что они делают вечером?==What are they doing in the evening?</item>
         <item>Куда вы пойдете вечером?==Where are you going in the evening?</item>
         <item>Кто пойдет в магазин?==Who is going to the shop?</item>
-        <item>Он пойдет в кино завтра==He is going to the cinema tomorrow</item>
+        <item>Он пойдет в кино завтра==He is going to the movie theater tomorrow</item>
         <item>Я не приду на вечеринку==I am not coming to the party</item>
         <item>Она испечет торт завтра?==Is she baking a cake tomorrow?</item>
         <item>Ты пойдешь в магазин завтра==You are going to the shop tomorrow</item>
         <item>Они не пойдут в театр==They are not going to the theatre</item>
         <item>Ты женишься в следующем году?==Are you getting married next year?</item>
-        <item>Завтра я иду в кино.==I am going to the cinema tomorrow.</item>
+        <item>Завтра я иду в кино.==I am going to the movie theater tomorrow.</item>
         <item>Я не работаю завтра==I\’m not working tomorrow</item>
         <item>Когда я встречаюсь с ней?==When am I meeting her?</item>
         <item>Мы уезжаем завтра!==We are leaving tomorrow! (We are going away tomorrow!)</item>
@@ -4331,7 +4324,7 @@
         <item>Сегодня он ужинает с министром.==Today he is having dinner with the minister</item>
         <item>Я встречаюсь с ними за ланчем.==I am seeing him at lunch</item>
         <item>Ты опять не слушаешься? Все, я звоню папе!==You are disobedient again, aren\’t you? Alright, I am calling father!</item>
-        <item>Мама уезжает на неделю, и мы остаемся с папой!==Mum is leaving for a week and we are staying with Dad!</item>
+        <item>Мама уезжает на неделю, и мы остаемся с папой!==Mom is leaving for a week and we are staying with Dad!</item>
         <item>На следующих выходных я не играю в теннис, моя ракетка сломалась==Next week I am not playing tennis, my racquet broke down</item>
         <item>Давай договоримся! Я делаю уборку, а ты идешь в магазин!==Let\’s arrange it! I am cleaning and you are going shopping</item>
         <item>Он уезжает завтра?==Is he leaving tomorrow?</item>
@@ -4420,7 +4413,7 @@
         <item>Наш президент собирается посетить больницу==Our president is going to visit a/the hospital</item>
         <item>Мы не собираемся в этом участвовать==We are not going to take part in that (it)</item>
         <item>Они не собираются оплачивать эти расходы==They are not going to pay these expenses</item>
-        <item>Моя мама собирается приехать к нам в выходные==My mum is going to come to our place on the weekend</item>
+        <item>Моя мама собирается приехать к нам в выходные==My mom is going to come to our place on the weekend</item>
         <item>Я не собираюсь помогать им==I am not going to help them</item>
         <item>Мы не собираемся работать за границей==We are not going to work abroad</item>
         <item>Он не собирается отдавать документы==He is not going to give the documents away</item>
@@ -4512,7 +4505,7 @@
         <item>Он будет все выходные лежать под машиной!!!!==He will be lying under the car for the whole weekend!!!</item>
         <item>Давай сделаем так! Я буду готовить, а ты будешь мыть пол. А потом будем лежать и смотреть фильм вместе.==Let\’s do like this! I will be cooking and you will be washing the floor. And then we will be lying and watching a/the movie together.</item>
         <item>Мы будем гулять в парке после обеда, приходи и ты.==We will be walking in the park in the afternoon, come, too.</item>
-        <item>Когда ты придешь домой, сынок? – Рано, мама, вы еще спать будете.==When will you come home, sonny? – It will be early, mum, you will be still sleeping.</item>
+        <item>Когда ты придешь домой, сынок? – Рано, мама, вы еще спать будете.==When will you come home, sonny? – It will be early, mom, you will be still sleeping.</item>
         <item>Что будешь делать после работы?==What will you be doing after work?</item>
         <item>Я весь вечер буду готовиться к завтрашнему празднику.==I will be getting ready for tomorrow\’s party the whole evening.</item>
         <item>Она снова будет смотреть весь вечер сериалы.==She will be watching soap operas for the whole evening again!!</item>
@@ -4569,7 +4562,7 @@
 
     <string-array name="the_first_conditional">
         <item>Если ты будешь есть яблоко каждый день, ты будешь здоров.==If you eat an apple every day, you will be healthy.</item>
-        <item>Если ты закончишь домашнюю работу, мы пойдём в кино.==If you finish your homework, we will go to the cinema.</item>
+        <item>Если ты закончишь домашнюю работу, мы пойдём в кино.==If you finish your homework, we will go to the movie theater.</item>
         <item>Если у меня будет много денег, я куплю машину.==If I have a lot of money, I will buy a car.</item>
         <item>Если погода будет хорошая, мы будем играть на открытом воздухе.==If the weather is fine, we will play outside.</item>
         <item>Если мой брат вернётся раньше, мы посмотрим телевизор вместе.==If my brother returns early, we will watch TV together.</item>
@@ -4893,7 +4886,7 @@
         <item>Этот дом не такой большой, как тот, что на Парк Стрит.==This house was not so big as the one in Park Street.</item>
         <item>Он был не такой умный, как его одноклассник.==He was not as intelligent as his class-mate.</item>
         <item>Её машина была не такой дорогой, как его машина.==Her car was not as expensive as his.</item>
-        <item>Ресторан был не таким дешёвым, как кафе.==The restaurant was not as cheap as the café.</item>
+        <item>Ресторан был не таким дешёвым, как кафе.==The restaurant was not as cheap as the cafe.</item>
         <item>Автобус не такой быстрый, как такси.==The bus is not as fast as a taxi.</item>
         <item>«Лада Калина» не так хороша, как «Рено».==A Lada Kalina is not as good as a Renault.</item>
     </string-array>
@@ -4970,7 +4963,7 @@
         <item>Почему дожди здесь чаще, чем на юге?==Why are rains more often here than in the South?</item>
         <item>Эта аллея не темнее следующей.==This alley is not darker than the next one.</item>
         <item>Этот заповедник больше, чем тот?==Is this sanctuary bigger than that one?</item>
-        <item>Еда в этом модном кафе вкусней, чем напитки?==Is the food in this trendy café tastier than the drinks?</item>
+        <item>Еда в этом модном кафе вкусней, чем напитки?==Is the food in this trendy cafe tastier than the drinks?</item>
         <item>Здесь воздух чище, чем в лесу?==Is the air cleaner here than in the forest?</item>
         <item>Почему ты думаешь, что консерватория скучнее, чем опера?==Why do you think the conservatory is duller than the opera house?</item>
         <item>Кто больше любит ходить пешком, чем ездить на автобусе?==Who likes going on foot more than going by bus?</item>
@@ -4984,12 +4977,12 @@
         <item>Это не самый красивый вид города.==This isn\’t the most picturesque view of the city.</item>
         <item>Это не самое чистое озеро в округе.==This isn\’t the cleanest lake in the area.</item>
         <item>Это самый старый дом на этой улице?==Is this the oldest house in the street?</item>
-        <item>Это самое популярное арт-кафе в городе?==Is this the most popular art-café in the city?</item>
+        <item>Это самое популярное арт-кафе в городе?==Is this the most popular art-cafe in the city?</item>
         <item>Это самый длинный мост в Европе?==Is this the longest bridge in Europe?</item>
         <item>Это самый дешёвый ресторан в этом районе?==Is this the cheapest restaurant in the district?</item>
         <item>Это самый знаменитый оперный театр?==Is this the most famous opera house?</item>
         <item>Это самая чистая улица в городе?==Is this the cleanest street in the city?</item>
-        <item>Где самый большой кинотеатр в городе?==Where is the biggest cinema in the city?</item>
+        <item>Где самый большой кинотеатр в городе?==Where is the biggest movie theater in the city?</item>
         <item>Где самое старое посольство в нашей стране?==Where is the oldest embassy in our country?</item>
         <item>Почему статуя Свободы – самая популярная достопримечательность в Нью-Йорке?==Why is the Statue of Liberty the most popular sightseeing in New York?</item>
     </string-array>
@@ -5182,13 +5175,13 @@
     <string-array name="have_to">
         <item>Ему необходимо согласиться.==He has to agree.</item>
         <item>Ей нужно ответить на звонок.==She has to answer the call.</item>
-        <item>Маме нужно узнать рецепт. ==Mum has to learn the recipe.</item>
+        <item>Маме нужно узнать рецепт. ==Mom has to learn the recipe.</item>
         <item>Мне нужно встать в очередь.==I have to stand in the line (queue).</item>
         <item>Учителю нужно сходить с учениками в музей.==The teacher has to go to the museum with the students.</item>
         <item>Мне нужно заполнить все документы.==I have to fill out all the documents.</item>
         <item>Папе необходимо найти ключи от машины.==Dad has to find the car keys.</item>
         <item>Он очень занят, но ему нужно лететь в Москву.==He is very busy, but he has to fly to Moscow.</item>
-        <item>Маме нужно получить права.==Mum has to get driver\’s license.</item>
+        <item>Маме нужно получить права.==Mom has to get driver\’s license.</item>
         <item>Мне не надо с ним встречаться, я позвоню ему по телефону.==I don\’t have to meet him, I will call him on the phone.</item>
         <item>Ему не нужно идти на работу, он примет все заявки дома.==He doesn\’t have to go to work, he will take all the requests at home.</item>
         <item>Мне не нужно слушать новости, я читаю интернет-статьи.==I don\’t have to listen to the news, I read internet articles.</item>
@@ -5201,7 +5194,7 @@
         <item>Ей надо сходить в магазин.==She has to go shopping (to the shop).</item>
         <item>Он был вынужден поехать домой.==He had to go home.</item>
         <item>Ей пришлось сидеть с детьми.==She had to babysit.</item>
-        <item>Мама разбила яйца, ей пришлось идти снова в магазин.==Mum broke the eggs and she had to go to the shop again.</item>
+        <item>Мама разбила яйца, ей пришлось идти снова в магазин.==Mom broke the eggs and she had to go to the shop again.</item>
         <item>Моя сестра расплакалась, мне пришлось дать ей конфету.==My sister burst out crying and I had to give her a sweet (candy).</item>
         <item>Вчера на улице был сильный дождь, мне пришлось взять дождевик.==Yesterday it was raining hard outside, I had to take my rain coat.</item>
         <item>Я упал, и мне пришлось идти в больницу .==I fell down and I had to go to hospital.</item>
@@ -5212,7 +5205,7 @@
         <item>Мне нужно будет идти к врачу.==I had to go to the doctor.</item>
         <item>Ему будет нужно ехать на дачу.==He will have to go to the summer house.</item>
         <item>Ей нужно будет убраться. ==She will have to clean.</item>
-        <item>Маме нужно будет сходить в магазин.==Mum will have to go shopping (to the shop).</item>
+        <item>Маме нужно будет сходить в магазин.==Mom will have to go shopping (to the shop).</item>
         <item>Папе нужно будет вспомнить правила дорожного движения.==Dad will have to recollect traffic rules.</item>
         <item>Ей нужно будет продать свою машину.==She will have to sell her car.</item>
         <item>Ему нужно будет приготовить ужин.==He will have to cook dinner.</item>
@@ -5342,7 +5335,7 @@
 
     <string-array name="gotta">
         <item>Человек должен делать то, что он должен делать==A man\'s gotta do what a man\'s gotta do</item>
-        <item>Я должен позвонить домой прямо сейчас. Моя мама будет беспокоиться==I\'ve gotta phone home right now. My mum\'ll be worried.</item>
+        <item>Я должен позвонить домой прямо сейчас. Моя мама будет беспокоиться==I\'ve gotta phone home right now. My mom\'ll be worried.</item>
         <item>Ты должен переодеться сейчас. Матч начнется через пять минут==You gotta get changed right away. The match starts in five minutes</item>
         <item>Шевелись, нам нужно сбыть эту штуку, парень==Come on, we gotta deal this stuff, man</item>
         <item>Мы должны избавиться от этого барахла или мы будем пойманы и окажемся в чьем-нибудь багажнике.==We gotta get rid of this stuff or we\'re gonna get caught and wind up in somebody\'s trunk.</item>
@@ -5483,7 +5476,7 @@
         <item>Неужели они женаты?==Can they be married?</item>
         <item>Неужели ты и есть тот самый певец?==Can you be that very singer?</item>
         <item>Не может быть, что они сейчас едут на метро!==They can\’t be going by subway now!</item>
-        <item>Не может быть, что он сейчас сидит в кафе!==He can\’t be sitting in the café right now</item>
+        <item>Не может быть, что он сейчас сидит в кафе!==He can\’t be sitting in the cafe right now</item>
         <item>Не может быть, что она сейчас поет на сцене! ==She can\’t be singing on the stage now</item>
         <item>Не может быть, что ты стоишь сейчас за дверью!==You can\’t be standing behind the door now</item>
         <item>Неужели ты едешь ко мне?==Can you be going to me?</item>
@@ -5520,7 +5513,7 @@
         <item>Где Алексей? Вероятно, он в библиотеке. Он часто ходит туда по понедельникам==Where is Aleksey? – He can be at the library. He often goes there on Mondays</item>
         <item>Едва ли Алексей не заметил нас.==Aleksey mightn\’t have noticed us.</item>
         <item>Не может быть, что Алексей настолько стар==Aleksey can\'t be so old</item>
-        <item>Где твоя девушка была прошлым вечером? Я думаю, что она могла быть в кино со своей подругой.==Where was your girl-friend last night? I think she may have been at the cinema with her friend.</item>
+        <item>Где твоя девушка была прошлым вечером? Я думаю, что она могла быть в кино со своей подругой.==Where was your girl-friend last night? I think she may have been at the movie theater with her friend.</item>
         <item>Гари не может быть в Лондоне, он мне звонил с Индии вчера.==Harry can\'t be in London, he called me from India yesterday .</item>
         <item>У Алексея нет друзей. Весьма вероятно, он очень одинок==Aleksey has no friends. He must be very lonely.</item>
         <item>Должно быть тут ошибка! Не может быть, чтоб салат был столь дорогим! ==There must be a mistake! A salad can\'t be so expensive!</item>
@@ -5589,7 +5582,7 @@
         <item>Неужели они женаты?==Can they be married?</item>
         <item>Неужели ты и есть тот самый певец?==Can you be that very singer?</item>
         <item>Не может быть, что они сейчас едут на метро!==They can\’t be going by subway now!</item>
-        <item>Не может быть, что он сейчас сидит в кафе!==He can\’t be sitting in the café right now</item>
+        <item>Не может быть, что он сейчас сидит в кафе!==He can\’t be sitting in the cafe right now</item>
         <item>Не может быть, что она сейчас поет на сцене! ==She can\’t be singing on the stage now</item>
         <item>Не может быть, что ты стоишь сейчас за дверью!==You can\’t be standing behind the door now</item>
         <item>Неужели ты едешь ко мне?==Can you be going to me?</item>
@@ -5653,7 +5646,7 @@
         <item>Шампанское не трясут.==Champagne is not shaken.</item>
         <item>Колбасу не едят с вареньем.==Sausage is not eaten with jam.</item>
         <item>Здесь не подают мясо.==Meat is not served here.</item>
-        <item>Молоко в этом кафе не кипятят.==Milk is not boiled in this café.</item>
+        <item>Молоко в этом кафе не кипятят.==Milk is not boiled in this cafe.</item>
         <item>Цветы не продают на улице.==Flowers are not sold in the street.</item>
         <item>Деньги не дают за красивые глаза.==Money is not given for beautiful eyes.</item>
         <item>Пол моют через день.==The floor is washed every other day.</item>
@@ -5665,7 +5658,7 @@
         <item>Детей не бьют.==Children are not beaten.</item>
         <item>Ногти обрезают маленькими ножницами.==Nails are cut with small scissors.</item>
         <item>Машину моют раз в неделю.==The car is washed once a week.</item>
-        <item>Детей не посылают в аптеку купить лекарств.==Children are not sent to the pharmacy to buy medicine.</item>
+        <item>Детей не посылают в аптеку купить лекарств.==Children are not sent to the drugstore to buy medicine.</item>
         <item>Информация обновляется ежедневно.==(The) information is updated daily (several times a day/a few times a day).</item>
         <item>Люди делятся на несколько категорий.==People are divided into several categories.</item>
         <item>Специи хранят в герметичных упаковках.==Spices are kept in sealed packages.</item>
@@ -5840,7 +5833,7 @@
 
     <string-array name="would_like_to">
         <item>Не хочешь поесть чего-нибудь?==Would you like to eat something?</item>
-        <item>Не хочешь пойти в кино?==Would you like to go to the cinema?</item>
+        <item>Не хочешь пойти в кино?==Would you like to go to the movie theater?</item>
         <item>Мы не хотели бы путешествовать автобусом. ==We wouldn\'t like to travel by bus</item>
         <item>Я бы хотел посмотреть кино по телевизору.==I\’d like to watch the film on TV</item>
         <item>Не хотите ли сесть на мое место?==Would you like to take my place?</item>
@@ -6323,7 +6316,7 @@
         <item>Я не знаю, что мне делать==I don\’t know what to do</item>
         <item>Я не понимал, куда идти.==I didn\’t understand where to go</item>
         <item>Они не говорили мне, зачем идти туда==They didn\’t tell me why to go there</item>
-        <item>мама всегда говорит мне, что надеть==Mum always tells me what to wear</item>
+        <item>мама всегда говорит мне, что надеть==Mom always tells me what to wear</item>
         <item>Я не знаю, что мне учить.==I don\’t know what to learn</item>
         <item>Скажи мне, что написать тут.==Tell me what to write here</item>
         <item>Он написал нам, как добраться до этого места.==He wrote to us how to get to this place</item>

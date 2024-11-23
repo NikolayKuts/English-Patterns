@@ -2,6 +2,11 @@ package com.example.englishpatterns.data.common
 
 sealed interface Constants {
 
+    data object Coommon : Constants {
+
+        const val CLIPBOARD_CLIP_DATA_LABEL = "sentence"
+    }
+
     data object WordHunt : Constants {
 
         const val BASE_URL = "https://wooordhunt.com/word/"
@@ -24,7 +29,6 @@ sealed interface Constants {
     data object ChatGpt : Constants {
 
         const val BASE_URL = "https://www.chatgpt.com/c/"
-        const val CLIPBOARD_CLIP_DATA_LABEL = "sentence"
     }
 
     data object YouGlish : Constants {
@@ -35,5 +39,10 @@ sealed interface Constants {
     data object Google : Constants {
 
         const val BASE_URL_WITH_PLACEHOLDER = "https://www.google.com/search?q=%s&tbm=isch"
+    }
+
+    data object Sanstv : Constants {
+
+        const val BASE_URL_WITH_PLACEHOLDER = "https://sanstv.ru/words#template=%s*&dict=ru_nouns&sort=desc"
     }
 }

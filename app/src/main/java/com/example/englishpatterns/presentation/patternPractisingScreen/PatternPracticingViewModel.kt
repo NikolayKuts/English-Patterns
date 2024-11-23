@@ -10,6 +10,7 @@ import com.example.englishpatterns.data.SecretConstants
 import com.example.englishpatterns.data.TextAudioPlayer
 import com.example.englishpatterns.data.common.ClipboardUnit
 import com.example.englishpatterns.data.common.Constants
+import com.example.englishpatterns.data.common.LoadingState
 import com.example.englishpatterns.data.yandexApi.YandexWordInfoProvider
 import com.example.englishpatterns.domain.PatternGroupUnitState
 import com.example.englishpatterns.domain.PatternManager
@@ -160,6 +161,10 @@ class PatternPracticingViewModel(
             is PatternPracticingAction.RedirectionToGoogleImagesPageRequired -> {
                 handleRedirectionToGoogleImagesPageRequest(action = action)
             }
+
+            is PatternPracticingAction.RedirectionToWordTemplateSearchPageRequired -> {
+                handleRedirectionToWordTemplateSearchPageRequest(action = action)
+            }
         }
     }
 
@@ -282,7 +287,17 @@ class PatternPracticingViewModel(
 
         fetchTextInfoJob = viewModelScope.launch(Dispatchers.IO) {
             selectedTextProvider.fetchTextInfo(word = action.text).collect { loadingState ->
-                state.update { it.copy(selectedTextInfo = loadingState) }
+                val updatedLoadingState = if (loadingState is LoadingState.Success) {
+                    val updatedTranscription = "[ ${loadingState.data.transcription} ]"
+                    val updatedLoadingData = loadingState.data.copy(
+                        transcription = updatedTranscription
+                    )
+
+                    loadingState.copy(data = updatedLoadingData)
+                } else {
+                    loadingState
+                }
+                state.update { it.copy(selectedTextInfo = updatedLoadingState) }
             }
         }
 
@@ -294,10 +309,7 @@ class PatternPracticingViewModel(
     ) {
         val url = "${Constants.WordHunt.BASE_URL}${action.text}"
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-        val clipboardUnit = ClipboardUnit(
-            label = Constants.ChatGpt.CLIPBOARD_CLIP_DATA_LABEL,
-            text = action.text,
-        )
+        val clipboardUnit = ClipboardUnit(text = action.text,)
 
         viewModelScope.launch {
             eventState.emit(
@@ -331,7 +343,6 @@ class PatternPracticingViewModel(
         val url = "${Constants.ChatGpt.BASE_URL}${SecretConstants.GhatGpt.ENGLISH_PATTERNS_CHAT_ID}"
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
         val clipboardUnit = ClipboardUnit(
-            label = Constants.ChatGpt.CLIPBOARD_CLIP_DATA_LABEL,
             text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
         )
 
@@ -366,13 +377,31 @@ class PatternPracticingViewModel(
         val encodedText = Uri.encode(action.text).trim()
         val url = Constants.Google.BASE_URL_WITH_PLACEHOLDER.format(encodedText.lowercase())
         val clipboardUnit = ClipboardUnit(
-            label = Constants.ChatGpt.CLIPBOARD_CLIP_DATA_LABEL,
             text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
         )
 
         viewModelScope.launch {
             eventState.emit(
                 PatternPracticingEvent.RedirectionToGoogleImagesPageRequired(
+                    url = url,
+                    clipboardUnit = clipboardUnit,
+                )
+            )
+        }
+    }
+
+    private fun handleRedirectionToWordTemplateSearchPageRequest(
+        action: PatternPracticingAction.RedirectionToWordTemplateSearchPageRequired
+    ) {
+        val encodedText = Uri.encode(action.text).trim()
+        val url = Constants.Sanstv.BASE_URL_WITH_PLACEHOLDER.format(encodedText.lowercase())
+        val clipboardUnit = ClipboardUnit(
+            text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
+        )
+
+        viewModelScope.launch {
+            eventState.emit(
+                PatternPracticingEvent.RedirectionToWordTemplateSearchPageRequired(
                     url = url,
                     clipboardUnit = clipboardUnit,
                 )

@@ -13,4 +13,5 @@ data class PatternPracticingState(
 
 data class SelectedTextInfo(
     val transcription: String = "",
+    val translations: List<String> = emptyList(),
 )

@@ -66,4 +66,5 @@ class YandexWordInfoProvider {
 
 fun YandexWordInfo.toDomainEntity(): SelectedTextInfo = SelectedTextInfo(
     transcription = def?.firstOrNull()?.ts ?: "",
+    translations = def?.flatMap { def -> def.tr.map { tr -> tr.text } } ?: emptyList()
 )

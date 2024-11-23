@@ -33,4 +33,6 @@ sealed interface PatternPracticingAction {
     data class RedirectionToYouGlishPageRequired(val text: String) : PatternPracticingAction
 
     data class RedirectionToGoogleImagesPageRequired(val text: String) : PatternPracticingAction
+
+    data class RedirectionToWordTemplateSearchPageRequired(val text: String) : PatternPracticingAction
 }
