@@ -3082,78 +3082,78 @@
 
     <string-array name="process_process_result">
         <item>Он спит.==He is sleeping.</item>
-        <item>Он уже с 3 часов спит.==He has been sleeping since 3 o\’clock.</item>
-        <item>Моя мама отдыхает.==My mom is resting (having a rest).</item>
-        <item>Мой начальник уже месяц отдыхает.==My boss has been resting (having a rest) for a month</item>
+        <item>Он уже с 3 часов спит.==He has been sleeping since 3 o\'clock.</item>
+        <item>Моя мама отдыхает.==My mom is resting.</item>
+        <item>Мой начальник уже месяц отдыхает.==My boss has been resting for a month.</item>
         <item>Мои друзья отдыхают за границей с начала марта.==My friends have been resting abroad since the beginning of March.</item>
         <item>Шеф готовит новое блюдо.==The chef is cooking a new dish.</item>
-        <item>Отец с утра готовит маме завтрак.==Father has been cooking breakfast for mother since morning.</item>
+        <item>Отец с утра готовит маме завтрак.==Father has been cooking breakfast for mom since morning.</item>
         <item>Он уже полдня готовит.==He has been cooking for half a day already.</item>
         <item>Соседи празднуют день рождения сына.==My neighbors are celebrating their son\'s birthday.</item>
         <item>Соседи уже три дня празднуют день рождения сына.==My neighbors have been celebrating their son\'s birthday for three days.</item>
         <item>Соседи празднуют день рождения сына с пятницы.==My neighbors have been celebrating their son\'s birthday since Friday.</item>
         <item>Он играет в компьютерную игру.==He is playing a computer game.</item>
-        <item>Он уже пять часов играет в эту игру.==He\’s been playing this computer game for 5 hours.</item>
-        <item>Он с пяти часов вечера играет в эту компьютерную игру.==He\’s been playing this computer game since 5 o\’clock.</item>
-        <item>Я чищу овощи.==I\’m peeling vegetables.</item>
-        <item>Я уже полчаса чищу овощи.==I\’ve been peeling vegetables for half an hour.</item>
-        <item>Я с трех часов чищу овощи.==I\’ve been peeling vegetables since 3 o\’clock.</item>
-        <item>Они работают над новым проектом.==They are working at a new project.</item>
-        <item>Они уже полгода работают над новым проектом.==They have been working on a new project for six month.</item>
-        <item>Они с начала года работают надо новым проектом.==They\’ve been working on a new project since the beginning of the year.</item>
+        <item>Он уже пять часов играет в эту игру.==He\'s been playing this computer game for 5 hours.</item>
+        <item>Он с пяти часов вечера играет в эту компьютерную игру.==He\'s been playing this computer game since 5 p.m.</item>
+        <item>Я чищу овощи.==I\'m peeling vegetables.</item>
+        <item>Я уже полчаса чищу овощи.==I\'ve been peeling vegetables for half an hour.</item>
+        <item>Я с трех часов чищу овощи.==I\'ve been peeling vegetables since 3 o\'clock.</item>
+        <item>Они работают над новым проектом.==They are working on a new project.</item>
+        <item>Они уже полгода работают над новым проектом.==They have been working on a new project for six months.</item>
+        <item>Они с начала года работают над новым проектом.==They\'ve been working on a new project since the beginning of the year.</item>
         <item>Моя подружка переписывается с немцем.==My girlfriend is chatting with a German.</item>
         <item>Они переписываются уже два года.==They have been chatting for two years already.</item>
-        <item>Он переписываются с тех пор, как познакомились в интернете два года назад.==They have been chatting since they met at the Internet two years ago.</item>
-        <item>Я жду посадки на рейс.==I\’m waiting for boarding.</item>
-        <item>Я уже четыре часа жду посадки на рейс.==I\’ve been waiting for boarding for 4 hours already.</item>
-        <item>Я уже с утра жду посадки на рейс.==I\’ve been waiting for boarding since morning already.</item>
-        <item>Он выбирает горячее блюдо в меню.==He\’s choosing a hot dish in the menu.</item>
-        <item>Он уже 20 минут выбирает, что он будет есть.==He\’s been choosing what he will (is going to eat) eat for 20 minutes already.</item>
-        <item>Он выбирает, что он будет есть, с тех пор, как пришел в ресторан.==He\’s been choosing what he will eat (is going to eat) since he came to the restaurant.</item>
-        <item>Я не сижу в интернете.==I\’m not surfing the internet.</item>
-        <item>Я уже полгода не сижу в соцсетях.==I have not been surfing the internet for six month already.</item>
-        <item>Я с начала прошлого года не сижу в интернете.==I have not been surfing the internet since the beginning of last year.</item>
-        <item>Я стою в очереди на регистрацию.==I\’m standing in the line (am queuing) for the check-in</item>
-        <item>Я уже час стою в очереди на регистрацию==I\'ve been standing in the line (am queuing) for the check-in for an hour already.</item>
-        <item>Я с двух часов стою в очереди на регистрацию.==I\'ve been standing in the line (am queuing) for the check-in since 2 o\’clock.</item>
-        <item>Я не читаю газету сейчас.==I\’m not reading a newspaper now.</item>
-        <item>Я уже несколько лет не читаю газет.==I have not been reading newspapers for several years already.</item>
-        <item>Я не читаю газет с тех пор, как купил компьютер.==I haven\’t been reading newspapers since I bought the computer.</item>
-        <item>Она танцуют танго.==They are dancing tango.</item>
-        <item>Они уже четыре часа танцуют танго.==They have been dancing tango for four o\'clock</item>
-        <item>Они не танцуют танго с тех пор, как поссорились.==They haven\’t been dancing tango since they quarreled (argued).</item>
-        <item>Я строю новый дом за городом.==I\'m building a new house in the country</item>
+        <item>Они переписываются с тех пор, как познакомились в интернете два года назад.==They have been chatting since they met on the Internet two years ago.</item>
+        <item>Я жду посадки на рейс.==I\'m waiting for boarding.</item>
+        <item>Я уже четыре часа жду посадки на рейс.==I\'ve been waiting for boarding for 4 hours already.</item>
+        <item>Я уже с утра жду посадки на рейс.==I\'ve been waiting for boarding since morning already.</item>
+        <item>Он выбирает горячее блюдо в меню.==He\'s choosing a hot dish from the menu.</item>
+        <item>Он уже 20 минут выбирает, что он будет есть.==He\'s been choosing what he will eat for 20 minutes already.</item>
+        <item>Он выбирает, что он будет есть, с тех пор, как пришел в ресторан.==He\'s been choosing what he will eat since he came to the restaurant.</item>
+        <item>Я не сижу в интернете.==I\'m not surfing the internet.</item>
+        <item>Я уже полгода не сижу в соцсетях.==I haven\'t been surfing social media for six months already.</item>
+        <item>Я с начала прошлого года не сижу в интернете.==I haven\'t been surfing the internet since the beginning of last year.</item>
+        <item>Я стою в очереди на регистрацию.==I\'m standing in line for the check-in.</item>
+        <item>Я уже час стою в очереди на регистрацию.==I\'ve been standing in line for the check-in for an hour already.</item>
+        <item>Я с двух часов стою в очереди на регистрацию.==I\'ve been standing in line for the check-in since 2 o\'clock.</item>
+        <item>Я не читаю газету сейчас.==I\'m not reading a newspaper now.</item>
+        <item>Я уже несколько лет не читаю газет.==I haven\'t been reading newspapers for several years already.</item>
+        <item>Я не читаю газет с тех пор, как купил компьютер.==I haven\'t been reading newspapers since I bought a computer.</item>
+        <item>Они танцуют танго.==They are dancing tango.</item>
+        <item>Они уже четыре часа танцуют танго.==They have been dancing tango for four hours.</item>
+        <item>Они не танцуют танго с тех пор, как поссорились.==They haven\'t been dancing tango since they quarreled.</item>
+        <item>Я строю новый дом за городом.==I\'m building a new house in the country.</item>
         <item>Я уже два года строю новый дом за городом.==I\'ve been building a new house in the country for two years already.</item>
-        <item>Я строю новый дом за городом с тех пор, как сгорел мой старый коттедж.==I\'ve been building a new house in the country since my old house burned down.</item>
-        <item>Я еду в метро.==I\’m taking the subway (going by subway/on a train)</item>
-        <item>Я добираюсь до тебя уже два часа.==I\’ve been getting to your place for two hours already</item>
-        <item>Я учу испанский.==I\’m learning Spanish</item>
-        <item>Я уже полгода учу испанский.==I\’ve been learning Spanish for six months already</item>
-        <item>Я учу испанский с начала мая.==I\’ve been learning Spanish since the beginning of May</item>
-        <item>Мы едем по этой дороге уже второй день.==We\'ve been going down this road for the second day already</item>
+        <item>Я строю новый дом за городом с тех пор, как сгорел мой старый коттедж.==I\'ve been building a new house in the country since my old cottage burned down.</item>
+        <item>Я еду в метро.==I\'m taking the subway.</item>
+        <item>Я добираюсь до тебя уже два часа.==I\'ve been getting to your place for two hours already.</item>
+        <item>Я учу испанский.==I\'m learning Spanish.</item>
+        <item>Я уже полгода учу испанский.==I\'ve been learning Spanish for six months already.</item>
+        <item>Я учу испанский с начала мая.==I\'ve been learning Spanish since the beginning of May.</item>
+        <item>Мы едем по этой дороге уже второй день.==We\'ve been going down this road for the second day already.</item>
         <item>Они едут за нами с утра.==They have been following us since morning.</item>
         <item>Кто-то едет за нами.==Someone is following us.</item>
-        <item>Какой-то человек стоит у моей машины.==A man (some man) is standing near my car.</item>
-        <item>Какая-то дама уже полчаса гуляет вокруг нашей площадки.==A lady (some lady) has been walking around our area (ground) for half an hour already</item>
-        <item>Какие-то люди с самого утра толпятся на улице возле нашего дома.==Some people have been crowding(in the street )outside our house since morning</item>
-        <item>Я так устала. Я с утра хожу по городу.==I\'m so tired. I have been walking around the city since morning</item>
+        <item>Какой-то человек стоит у моей машины.==A man is standing near my car.</item>
+        <item>Какая-то дама уже полчаса гуляет вокруг нашей площадки.==A lady has been walking around our area for half an hour already.</item>
+        <item>Какие-то люди с самого утра толпятся на улице возле нашего дома.==Some people have been crowding outside our house since morning.</item>
+        <item>Я так устала. Я с утра хожу по городу.==I\'m so tired. I have been walking around the city since morning.</item>
         <item>Они все еще ходят по городу.==They are still walking around the city.</item>
-        <item>Мой дядя ходит по городу с тех пор, как приехал к нам погостить.==My uncle has been walking around the city since he came to visit us .</item>
+        <item>Мой дядя ходит по городу с тех пор, как приехал к нам погостить.==My uncle has been walking around the city since he came to visit us.</item>
         <item>Ты выгуливаешь собаку?==Are you walking the dog?</item>
         <item>Ты уже сколько времени выгуливаешь собаку?==How long have you been walking the dog?</item>
         <item>Как давно вы живете тут?==How long have you been living here?</item>
-        <item>Они не пользуются общественным транспортом уже два года.==They have not been using public transport for two years already.</item>
-        <item>Весь день я пытался найти эту гостиницу==I\’ve been trying to find the hotel for the whole day</item>
-        <item>Салли сейчас делает домашнее задание==Sally is doing her homework at the moment.</item>
-        <item>Я живу в Англии последние восемь лет==I have been living in England for the last eight years.</item>
+        <item>Они не пользуются общественным транспортом уже два года.==They haven\'t been using public transportation for two years already.</item>
+        <item>Весь день я пытался найти эту гостиницу.==I\'ve been trying to find the hotel for the whole day.</item>
+        <item>Салли сейчас делает домашнее задание.==Sally is doing her homework at the moment.</item>
+        <item>Я живу в Англии последние восемь лет.==I have been living in England for the last eight years.</item>
         <item>Вы используете этот словарь?==Are you using this dictionary?</item>
-        <item>Я слушаю произведения Моцарта сейчас==I\’m listening to Mozart now</item>
+        <item>Я слушаю произведения Моцарта сейчас.==I\'m listening to Mozart now.</item>
         <item>Почему ты смеешься?==Why are you laughing?</item>
-        <item>Я не жду тебя два часа.==I have not been waiting for you for two hours</item>
-        <item>Радио не работает.==Radio is not (isn\’t) working.</item>
-        <item>Он играет в футбол целый день==He has been playing football for the whole day</item>
-        <item>Я читаю этот журнал с тех пор, как купил его неделю назад==I have been reading this magazine since I bought it a week ago</item>
-        <item>Мы живем в этой гостинице почти месяц.==We have been staying in this hotel for nearly a month</item>
+        <item>Я не жду тебя два часа.==I haven\'t been waiting for you for two hours.</item>
+        <item>Радио не работает.==The radio isn\'t working.</item>
+        <item>Он играет в футбол целый день.==He has been playing soccer all day.</item>
+        <item>Я читаю этот журнал с тех пор, как купил его неделю назад.==I have been reading this magazine since I bought it a week ago.</item>
+        <item>Мы живем в этой гостинице почти месяц.==We have been staying in this hotel for nearly a month.</item>
     </string-array>
 
     <string-array name="was_were">
