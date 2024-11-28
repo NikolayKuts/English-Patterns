@@ -3158,28 +3158,28 @@
 
     <string-array name="was_were">
         <item>Я был дома.==I was at home.</item>
-        <item>Вчера вечером он был в клубе.==He was in the club last night.</item>
-        <item>Она была в магазине вчера.==She was at the shop yesterday.</item>
+        <item>Вчера вечером он был в клубе.==He was at the club last night.</item>
+        <item>Она была в магазине вчера.==She was at the store yesterday.</item>
         <item>Я был в кино в прошлый понедельник.==I was at the movie theater last Monday.</item>
-        <item>Это был очень хороший фильм.==It was a very good film.</item>
-        <item>Ты был в библиотеке.==You were in the library.</item>
-        <item>Вчера мы были в зоопарке.==We were at/in the Zoo yesterday.</item>
+        <item>Это был очень хороший фильм.==It was a very good movie.</item>
+        <item>Ты был в библиотеке.==You were at the library.</item>
+        <item>Вчера мы были в зоопарке.==We were at the zoo yesterday.</item>
         <item>На прошлой неделе вы были в музее.==You were at the museum last week.</item>
-        <item>Они были в бассейне.==They were at the swimming-pool.</item>
-        <item>Вчера мои родители были в супермаркете.==My parents were at/in the supermarket yesterday.</item>
-        <item>Я был продавцом пять лет назад.==I was a seller five years ago.</item>
-        <item>Утром она была в кафе.==She was at/in the cafe in the morning.</item>
-        <item>Дети были в парке.==The children were in the park.</item>
-        <item>Ты был в магазине игрушек.==You were at/in the toy shop.</item>
+        <item>Они были в бассейне.==They were at the swimming pool.</item>
+        <item>Вчера мои родители были в супермаркете.==My parents were at the supermarket yesterday.</item>
+        <item>Я был продавцом пять лет назад.==I was a salesperson five years ago.</item>
+        <item>Утром она была в кафе.==She was at the cafe in the morning.</item>
+        <item>Дети были в парке.==The children were at the park.</item>
+        <item>Ты был в магазине игрушек.==You were at the toy store.</item>
         <item>Ботинки были очень дорогие.==The shoes were very expensive.</item>
         <item>Я не был вчера в кино.==I wasn\'t at the movie theater yesterday.</item>
-        <item>Моя собака не была в парке.==My dog wasn\'t in the park.</item>
-        <item>Мама и папа не были в ресторане.==Mom and Dad weren\’t at/in the restaurant.</item>
+        <item>Моя собака не была в парке.==My dog wasn\'t at the park.</item>
+        <item>Мама и папа не были в ресторане.==Mom and Dad weren\'t at the restaurant.</item>
         <item>Она не была дома в прошлое воскресенье.==She wasn\'t at home last Sunday.</item>
         <item>Он был на работе в выходные.==He was at work last weekend.</item>
-        <item>Вчера мы были в театре.==We were at the theatre yesterday.</item>
+        <item>Вчера мы были в театре.==We were at the theater yesterday.</item>
         <item>Я не был на почте вчера.==I wasn\'t at the post office yesterday.</item>
-        <item>Утром ты не был в центре.==You weren\’t in the centre in the morning.</item>
+        <item>Утром ты не был в центре.==You weren\'t downtown in the morning.</item>
     </string-array>
 
     <string-array name="there_was_there_were">
@@ -3188,22 +3188,22 @@
         <item>В парке была женщина.==There was a woman in the park.</item>
         <item>В бутылке было воды.==There was water in the bottle.</item>
         <item>Утром на тарелке было пирожное.==There was a cake on the plate in the morning.</item>
-        <item>Вчера вечером по телевизору был хороший фильм.==There was a good film on TV yesterday evening.</item>
+        <item>Вчера вечером по телевизору был хороший фильм.==There was a good movie on TV last night.</item>
         <item>В доме было четыре комнаты.==There were four rooms in the house.</item>
         <item>В отеле было много людей.==There were many people in the hotel.</item>
         <item>В ресторане было два официанта.==There were two waiters in the restaurant.</item>
         <item>В сумке было много книг.==There were a lot of books in the bag.</item>
         <item>В феврале было 28 дней.==There were 28 days in February.</item>
         <item>На прошлой неделе на вечеринке было около 50 человек.==There were about fifty people at the party last week.</item>
-        <item>В 18-м веке здесь была церковь.==There was a church here in XVIII century.</item>
-        <item>В магазине не было молока.==There wasn\'t any milk in the shop.</item>
+        <item>В 18-м веке здесь была церковь.==There was a church here in the 18th century.</item>
+        <item>В магазине не было молока.==There wasn\'t any milk in the store.</item>
         <item>В машине было два ребёнка.==There were two children in the car.</item>
         <item>На полке не было книг.==There were no books on the shelf.</item>
         <item>Прошлой ночью в твоём саду был медведь.==There was a bear in your garden last night.</item>
-        <item>Десять лет назад в этом парке было много фонтанов==There were many fountains in this park 10 years ago.</item>
+        <item>Десять лет назад в этом парке было много фонтанов==There were many fountains in this park ten years ago.</item>
         <item>Пять месяцев назад в зоопарке было четыре тигра.==There were four tigers in the zoo five months ago.</item>
         <item>В этом тексте было три новых слова.==There were three new words in the text.</item>
-        <item>Через эту реку не было моста.==There wasn\’t a bridge on this river.</item>
+        <item>Через эту реку не было моста.==There wasn\’t a bridge across this river.</item>
         <item>В моем кармане не было денег.==There was no money in my pocket.</item>
         <item>В гараже было две машины.==There were two cars in the garage.</item>
         <item>На полу была вода.==There was water on the floor.</item>
