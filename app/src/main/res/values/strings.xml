@@ -3592,47 +3592,48 @@
     </string-array>
 
     <string-array name="as_things_stand_now_at_first">
-        <item>При текущем положении дел, это оптимистичный план.==As things stand now it\’s an optimistic plan.</item>
-        <item>При текущем положении дел, это не подходящий человек.==As things stand now he\’s not a right person.</item>
-        <item>При текущем положении дел, тебе нужно носить брюки.==As things stand now you need to wear trousers.</item>
-        <item>При текущем положении дел, тебе нужно купить телевизор==As things stand now you need to buy a TV.</item>
-        <item>Он выглядит глупо, при текущем положении дел. ==He looks stupid as things stand now.</item>
-        <item>При текущем положении дел, они выглядят надежными.==As things stand now they look reliable.</item>
-        <item>При текущем положении дел, он выглядит высокомерным.==As things stand now he looks arrogant.</item>
-        <item>Он выглядит в хорошей форме, при текущем положении дел. ==He looks well built as things stand now.</item>
-        <item>Как оказалось, она храбрая девочка.==As things turned out she was a brave girl.</item>
-        <item>Как оказалось, они амбициозные ученые. ==As things turned out they were ambitious scientists.</item>
-        <item>Как оказалось, мы умные студенты.==As things turned out, we were clever scientists.</item>
-        <item>Как оказалось, он надежный человек.==As things turned out he was a reliable man.</item>
-        <item>Как оказалось, она не вытирает пыль в комнате.==As things turned out she didn\’t dust in the room.</item>
-        <item>Как оказалось, они редко готовят.==As things turned out they cooked seldom.</item>
-        <item>Они не полют сад, как оказалось. ==They didn\’t pull weeds as things turned out.</item>
-        <item>Как оказалось, она не поливает цветы. ==As things turned out she didn\’t water the flowers</item>
-        <item>Что касается Карла, он злой человек. ==As to Carl, he is an angry man.</item>
-        <item>Что касается меня, я не смотрю телевизор.==As to me, I don\’t watch TV.</item>
-        <item>Что касается Бэт, она много читает.==As to Beth, she reads a lot.</item>
-        <item>Что касается Стива, он хорошо готовит. ==As to Steve, he cooks well.</item>
-        <item>Что касается ее, она обедает в 12.==As for her, she has lunch at 12 o\’clock.</item>
+        <item>При текущем положении дел, это оптимистичный план.==As things stand now, it\'s an optimistic plan.</item>
+        <item>При текущем положении дел, это не подходящий человек.==As things stand now, he\'s not the right person.</item>
+        <item>При текущем положении дел, тебе нужно носить брюки.==As things stand now, you need to wear pants.</item>
+        <item>При текущем положении дел, тебе нужно купить телевизор.==As things stand now, you need to buy a TV.</item>
+        <item>Он выглядит глупо, при текущем положении дел.==He looks stupid as things stand now.</item>
+        <item>При текущем положении дел, они выглядят надежными.==As things stand now, they look reliable.</item>
+        <item>При текущем положении дел, он выглядит высокомерным.==As things stand now, he looks arrogant.</item>
+        <item>Он выглядит в хорошей форме, при текущем положении дел.==He looks in good shape as things stand now.</item>
+        <item>Как оказалось, она храбрая девочка.==As things turned out, she was a brave girl.</item>
+        <item>Как оказалось, они амбициозные ученые.==As things turned out, they were ambitious scientists.</item>
+        <item>Как оказалось, мы умные студенты.==As things turned out, we were smart students.</item>
+        <item>Как оказалось, он надежный человек.==As things turned out, he was a reliable man.</item>
+        <item>Как оказалось, она не вытирает пыль в комнате.==As things turned out, she didn\'t dust the room.</item>
+        <item>Как оказалось, они редко готовят.==As things turned out, they rarely cooked.</item>
+        <item>Они не полют сад, как оказалось.==They didn\'t pull weeds as things turned out.</item>
+        <item>Как оказалось, она не поливает цветы.==As things turned out, she didn\'t water the flowers.</item>
+        <item>Что касается Карла, он злой человек.==As for Carl, he is an angry man.</item>
+        <item>Что касается меня, я не смотрю телевизор.==As for me, I don\'t watch TV.</item>
+        <item>Что касается Бэт, она много читает.==As for Beth, she reads a lot.</item>
+        <item>Что касается Стива, он хорошо готовит.==As for Steve, he cooks well.</item>
+        <item>Что касается ее, она обедает в 12.==As for her, she has lunch at 12 o\'clock.</item>
         <item>Что касается их, они играют в карты.==As for them, they play cards.</item>
-        <item>Что касается него, он ходит за покупками. ==As for him, he goes shopping.</item>
-        <item>Что касается Марии, она моет посуду.==As for Mary, she does the washing-up.</item>
-        <item>Я вижу с первого взгляда, что он профессионал. ==I see at a glance he is a professional.</item>
-        <item>Он видит пыль с первого взгляда. ==He sees dust at a glance</item>
-        <item>Я с первого взгляда вижу, что ты оптимист.==I see at a glance you are an optimist.</item>
+        <item>Что касается него, он ходит за покупками.==As for him, he goes shopping.</item>
+        <item>Что касается Марии, она моет посуду.==As for Mary, she does the dishes.</item>
+        <item>Я вижу с первого взгляда, что он профессионал.==I see at a glance that he is a professional.</item>
+        <item>Он видит пыль с первого взгляда.==He sees dust at a glance.</item>
+        <item>Я с первого взгляда вижу, что ты оптимист.==I see at a glance that you are an optimist.</item>
         <item>Она с первого взгляда замечает учителей.==She notices teachers at a glance.</item>
         <item>Ты замечаешь беспорядок с первого взгляда.==You notice a mess at a glance.</item>
         <item>Я с первого взгляда замечаю политиков.==I notice politicians at a glance.</item>
         <item>Доктора сразу замечают твой избыточный вес.==Doctors notice your overweight at a glance.</item>
         <item>Она влюбляется в мужчин с первого взгляда.==She falls in love with men at a glance.</item>
-        <item>Сначала он любит свою работу, а потом нет.==At first he loves his work then he doesn\’t.</item>
-        <item>Сначала студенты чувствуют себя пессимистично. ==At first students feel pessimistic.</item>
-        <item>Сначала она говорит то, что тебе нравится.==At first she says what you like.</item>
-        <item>Сначала он добрый, а потом злится.==At first he is kind and then becomes angry.</item>
-        <item>Сначала я пользуюсь прибором, а потом перестаю.==At first I use a device then I stop.</item>
-        <item>Сначала он выглядит застенчивым, а потом общительным.==At first he looks shy then communicative.</item>
-        <item>Сначала он выглядит активным, а потом ленивым.==At first he looks active then lazy.</item>
-        <item>Сначала она плачет, а потом смеется.==At first she cries then she laughs.</item>
+        <item>Сначала он любит свою работу, а потом нет.==At first, he loves his job, then he doesn\'t.</item>
+        <item>Сначала студенты чувствуют себя пессимистично.==At first, students feel pessimistic.</item>
+        <item>Сначала она говорит то, что тебе нравится.==At first, she says what you like.</item>
+        <item>Сначала он добрый, а потом злится.==At first, he is kind, and then he gets angry.</item>
+        <item>Сначала я пользуюсь прибором, а потом перестаю.==At first, I use a device, then I stop.</item>
+        <item>Сначала он выглядит застенчивым, а потом общительным.==At first, he looks shy, then communicative.</item>
+        <item>Сначала он выглядит активным, а потом ленивым.==At first, he looks active, then lazy.</item>
+        <item>Сначала она плачет, а потом смеется.==At first, she cries, then she laughs.</item>
     </string-array>
+
 
     <string-array name="at_least_in_my_opinion">
         <item>По крайней мере, он хороший актер.==At least he is a good actor.</item>
