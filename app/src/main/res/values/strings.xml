@@ -3765,69 +3765,69 @@
 
     <string-array name="thus_if_i_am_not_mistaken">
         <item>Он очень позитивный, таким образом, он всегда улыбается.==He is very positive, thus he always smiles.</item>
-        <item>Она много слушает, таким образом, она очень умная. ==She listens a lot, thus she is very clever.</item>
+        <item>Она много слушает, таким образом, она очень умная.==She listens a lot, thus she is very smart.</item>
         <item>Она много танцует, таким образом, она хороший танцор.==She dances a lot, thus she is a good dancer.</item>
-        <item>Он часто катается на байке, таким образом, он хороший байкер. ==He often rides a bike, thus he is a good biker.</item>
-        <item>У него хорошая машина, таким образом, он очень высокомерен.==He has a good car, thus he is very arrogant.</item>
-        <item>У нее есть мультиварка, таким образом, она готовит в ней каждый день. ==She has a multicook, thus she cooks in it every day.</item>
-        <item>У них хороший пылесос, таким образом, они пылесосят раз в неделю.==They have a good vacuum, thus they clean once a week.</item>
-        <item>У нас отличная газовая плита, таким образом, печем вкусные торты. ==We have a perfect oven, thus we make good cakes.</item>
+        <item>Он часто катается на байке, таким образом, он хороший байкер.==He often rides a bike, thus he is a good biker.</item>
+        <item>У него хорошая машина, таким образом, он очень высокомерен.==He has a nice car, thus he is very arrogant.</item>
+        <item>У нее есть мультиварка, таким образом, она готовит в ней каждый день.==She has a multicooker, thus she cooks in it every day.</item>
+        <item>У них хороший пылесос, таким образом, они пылесосят раз в неделю.==They have a good vacuum cleaner, thus they vacuum once a week.</item>
+        <item>У нас отличная газовая плита, таким образом, печем вкусные торты.==We have a great oven, thus we make delicious cakes.</item>
         <item>У нас есть микроволновая печь, но мы ей не пользуемся.==We have a microwave oven but we don\’t use it.</item>
         <item>У меня есть тостер, но я не включаю его в розетку.==I have a toaster but I don\’t plug it in.</item>
         <item>У них есть телевизор, но они его не смотрят.==They have a TV but they don\’t watch it.</item>
-        <item>У нее есть духовка, но она не печет торты.==She has an oven but doesn\’t make cakes.</item>
-        <item>У него есть вытяжка, но он ей не пользуется. ==He has a cooker hood but he doesn\’t use it.</item>
+        <item>У нее есть духовка, но она не печет торты.==She has an oven but she doesn\’t make cakes.</item>
+        <item>У него есть вытяжка, но он ей не пользуется.==He has a range hood but he doesn\’t use it.</item>
         <item>У меня есть робот пылесос, но я убираюсь сам.==I have a robotic vacuum cleaner but I clean by myself.</item>
-        <item>Он ложится спать поздно, но встает рано.==He wakes up late but gets up early.</item>
-        <item>Она чистит зубы но не умывается.==She cleans her teeth but doesn\’t wash face.</item>
-        <item>Прежде всего, я хочу посмотреть телевизор. ==First of all, I want to watch a TV.</item>
-        <item>В первую очередь, тебе нужно помыть руки==First of all, you need to wash your hands.</item>
+        <item>Он ложится спать поздно, но встает рано.==He goes to bed late but gets up early.</item>
+        <item>Она чистит зубы но не умывается.==She brushes her teeth but doesn\’t wash her face.</item>
+        <item>Прежде всего, я хочу посмотреть телевизор.==First of all, I want to watch TV.</item>
+        <item>В первую очередь, тебе нужно помыть руки.==First of all, you need to wash your hands.</item>
         <item>Прежде всего, нужно отключить холодильник.==First of all, we need to unplug the fridge.</item>
-        <item>Прежде всего, он хочет убраться в дома.==First of all, he wants to clean the house.</item>
+        <item>Прежде всего, он хочет убраться в доме.==First of all, he wants to clean the house.</item>
         <item>Она звонит своему другу, в первую очередь.==She calls her friend, first of all.</item>
-        <item>Прежде всего, я думаю, а потом делаю.==First of all, I think then do.</item>
+        <item>Прежде всего, я думаю, а потом делаю.==First of all, I think then I do.</item>
         <item>Они моют посуду, в первую очередь.==They do the dishes, first of all.</item>
-        <item>В первую очередь, он пытается понять вопрос.==First of all, he tries to understand a question.</item>
-        <item>Он работает там, и, более того, ему это нравится.==He works there, and what\’s more he likes it.</item>
-        <item>Они устраивают беспорядок, и, более того, они этому рады.==They make a mess, and what\’s more they are happy with that.</item>
-        <item>В комнате пыль, и, более того, они ее не убирает.==The room is messy, and what\’s more they don\’t clean it.</item>
-        <item>У них старый пылесос, и, кроме того, он работает.==They have an old vacuum, and what\’s more it works.</item>
-        <item>Он ленивый, и, более того, он знает об этом.==He is lazy, and what\’s more he knows it.</item>
-        <item>Ты чувствителен, более того, ты не плачешь.==You are sensitive, what\’s more you don\’t cry.</item>
-        <item>Она директор, более того, она счастлива.==She is a director, what\’s more she is happy.</item>
-        <item>Он банкир, более того, он щедрый.==He is a banker, what\’s more he is generous.</item>
-        <item>Кто новый директор, кстати?==Who is a new director, by the way?</item>
+        <item>В первую очередь, он пытается понять вопрос.==First of all, he tries to understand the question.</item>
+        <item>Он работает там, и, более того, ему это нравится.==He works there, and what\’s more, he likes it.</item>
+        <item>Они устраивают беспорядок, и, более того, они этому рады.==They make a mess, and what\’s more, they are happy about it.</item>
+        <item>В комнате пыль, и, более того, они ее не убирают.==The room is dusty, and what\’s more, they don\’t clean it.</item>
+        <item>У них старый пылесос, и, кроме того, он работает.==They have an old vacuum cleaner, and what\’s more, it works.</item>
+        <item>Он ленивый, и, более того, он знает об этом.==He is lazy, and what\’s more, he knows it.</item>
+        <item>Ты чувствителен, более того, ты не плачешь.==You are sensitive, what\’s more, you don\’t cry.</item>
+        <item>Она директор, более того, она счастлива.==She is a director, what\’s more, she is happy.</item>
+        <item>Он банкир, более того, он щедрый.==He is a banker, what\’s more, he is generous.</item>
+        <item>Кто новый директор, кстати?==Who is the new director, by the way?</item>
         <item>Кстати, ты как поживаешь?==By the way, how are you?</item>
         <item>Кстати, он хороший отец.==By the way, he is a good father.</item>
-        <item>Кстати, как тебе новый миксер?==By the way, how is the new mixer?</item>
-        <item>Кстати, сколько стоит этот телевизор,==By the way, how much is the TV?</item>
+        <item>Кстати, как тебе новый миксер?==By the way, how do you like the new mixer?</item>
+        <item>Кстати, сколько стоит этот телевизор?==By the way, how much is this TV?</item>
         <item>Кстати, сколько ему лет?==By the way, how old is he?</item>
         <item>Кстати, сколько стоит утюг?==By the way, how much is the iron?</item>
         <item>Кстати, почем рыба?==By the way, how much is the fish?</item>
-        <item>Послушай, ты не прав!==Look here, you are wrong!</item>
-        <item>Послушай, нам надо поговорить.==Look here, we need to talk.</item>
-        <item>Послушай, как ее зовут?==Look here, what\’s her name?</item>
-        <item>Послушай, где ты покупаешь этот сыр?==Look here, where do you buy the cheese?</item>
-        <item>Послушай, он прав!==Look here, he is right!</item>
-        <item>Послушай, тебе нужно примерить это пальто.==Look here, you need to try on the coat.</item>
-        <item>Послушай, он очень добрый человек.==Look here, he is very kind man.</item>
-        <item>Послушай, нам нужно идти.==Look here, we need to go.</item>
-        <item>В этом магазине она покупает фрукты, воду и тому подобное.==In this shop she buys fruit, water and so on.</item>
-        <item>Дома он смотрит телевизор, читает книги и тому подобное.==At home he watches TV, reads books and so on.</item>
-        <item>На выходных я мою посуду, пылесошу и так далее. ==At the weekends I do the washing-up, vacuum and so on.</item>
-        <item>Они едят много шоколада, конфет и так далее.==They eat a lot of chocolate, sweets and so on.</item>
-        <item>He has pain in his neck, back and so on.==У него боль в шее, спине и так далее.</item>
-        <item>Он умный, добрый и так далее.==He is clever, kind and so on.</item>
-        <item>Я ремонтирую телевизоры, микроволновые печи и тому подобное.==I fix TVs, microwave ovens and so on.</item>
-        <item>Они читают книги, чтобы находить ответы и тому подобное.==They read books to find answers and so on.</item>
-        <item>Если я не ошибаюсь, он очень интеллигентный.==If I\’m not mistaken, he is very intelligent</item>
-        <item>Если я не ошибаюсь, она работает бухгалтером. ==If I\’m not mistaken, she works as an accountant.</item>
-        <item>Он танцор, если я не ошибаюсь.==He is a dancer if I\’m not mistaken.</item>
-        <item>Если я не ошибаюсь, он ложиться спать в 10.==If I\’m not mistaken, he goes to bed at ten.</item>
+        <item>Послушай, ты не прав!==Listen, you are wrong!</item>
+        <item>Послушай, нам надо поговорить.==Listen, we need to talk.</item>
+        <item>Послушай, как ее зовут?==Listen, what\’s her name?</item>
+        <item>Послушай, где ты покупаешь этот сыр?==Listen, where do you buy this cheese?</item>
+        <item>Послушай, он прав!==Listen, he is right!</item>
+        <item>Послушай, тебе нужно примерить это пальто.==Listen, you need to try on this coat.</item>
+        <item>Послушай, он очень добрый человек.==Listen, he is a very kind man.</item>
+        <item>Послушай, нам нужно идти.==Listen, we need to go.</item>
+        <item>В этом магазине она покупает фрукты, воду и тому подобное.==In this shop, she buys fruit, water, and so on.</item>
+        <item>Дома он смотрит телевизор, читает книги и тому подобное.==At home, he watches TV, reads books, and so on.</item>
+        <item>На выходных я мою посуду, пылесошу и так далее.==On the weekends, I do the dishes, vacuum, and so on.</item>
+        <item>Они едят много шоколада, конфет и так далее.==They eat a lot of chocolate, candy, and so on.</item>
+        <item>У него боль в шее, спине и так далее.==He has pain in his neck, back, and so on.</item>
+        <item>Он умный, добрый и так далее.==He is smart, kind, and so on.</item>
+        <item>Я ремонтирую телевизоры, микроволновые печи и тому подобное.==I fix TVs, microwave ovens, and so on.</item>
+        <item>Они читают книги, чтобы находить ответы и тому подобное.==They read books to find answers, and so on.</item>
+        <item>Если я не ошибаюсь, он очень интеллигентный.==If I\’m not mistaken, he is very intelligent.</item>
+        <item>Если я не ошибаюсь, она работает бухгалтером.==If I\’m not mistaken, she works as an accountant.</item>
+        <item>Он танцор, если я не ошибаюсь.==He is a dancer, if I\’m not mistaken.</item>
+        <item>Если я не ошибаюсь, он ложится спать в 10.==If I\’m not mistaken, he goes to bed at ten.</item>
         <item>Тебя зовут Педро, если я не ошибаюсь.==You are Pedro, if I\’m not mistaken.</item>
         <item>Если я не ошибаюсь, он храбрый человек.==If I\’m not mistaken, he is a brave man.</item>
         <item>Он репортер, если я не ошибаюсь.==He is a reporter, if I\’m not mistaken.</item>
-        <item>Если я не ошибаюсь, ты часто готовишь.==If I\’m not mistaken, you do the cooking often.</item>
+        <item>Если я не ошибаюсь, ты часто готовишь.==If I\’m not mistaken, you cook often.</item>
     </string-array>
 
     <string-array name="verbs_with_prepositions_1">
