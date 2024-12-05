@@ -3361,42 +3361,42 @@
 
     <string-array name="present_result">
         <item>Я видел этот фильм.==I\’ve watched this movie.</item>
-        <item>Я сделал домашнее задание.==I have done my homework</item>
-        <item>Она никогда не была в Лондоне ==She has never been to London</item>
-        <item>Я сломал ногу==I have broken my leg</item>
+        <item>Я сделал домашнее задание.==I have done my homework.</item>
+        <item>Она никогда не была в Лондоне ==She has never been to London.</item>
+        <item>Я сломал ногу==I have broken my leg.</item>
         <item>Я пришел домой==I\’ve come home.</item>
-        <item>Он прогулял школу==He\’s played truant from school</item>
-        <item>Мы закончили работу==We have done the work</item>
-        <item>Она отказалась от десерта==She has declined her dessert</item>
-        <item>Я написал письмо==I\’ve written a letter</item>
+        <item>Он прогулял школу==He\’s skipped school.</item>
+        <item>Мы закончили работу==We have finished the work.</item>
+        <item>Она отказалась от десерта==She has declined her dessert.</item>
+        <item>Я написал письмо==I\’ve written a letter.</item>
         <item>Я сделала тебе венок из одуванчиков==I have made a dandelion crown for you.</item>
-        <item>Мы купили тебе новую машину==We\’ve bought you a new car</item>
-        <item>Она не заметила паука==She hasn\'t noticed a spider</item>
-        <item>Я не нашла сумку==I haven\'t found the bag</item>
+        <item>Мы купили тебе новую машину==We\’ve bought you a new car.</item>
+        <item>Она не заметила паука==She hasn\'t noticed the spider.</item>
+        <item>Я не нашла сумку==I haven\'t found the bag.</item>
         <item>Дождь прекратился?==Has it stopped raining?</item>
-        <item>Милиция поймала вора?==Has Police caught a thief?</item>
-        <item>Он не закончил работу?==Hasn\’t he done the work?</item>
-        <item>Он уехал во Францию==He has gone to France</item>
+        <item>Милиция поймала вора?==Have the police caught the thief?</item>
+        <item>Он не закончил работу?==Hasn\’t he finished the work?</item>
+        <item>Он уехал во Францию==He has gone to France.</item>
         <item>Ты помыл посуду?==Have you washed the dishes?</item>
         <item>Ты встретил его?==Have you met him?</item>
         <item>Ты не изменился.==You haven\’t changed.</item>
         <item>Вы когда-нибудь были в Москве?==Have you ever been to Moscow?</item>
-        <item>Что ты cделал?==What have you done?</item>
-        <item>Я только что поужинал==I have had dinner</item>
-        <item>Ветчина испортились==The ham has spoiled.</item>
-        <item>Я забыл его имя==I have forgotten his name</item>
-        <item>Я еще не получил письмо==I have not received the letter yet</item>
+        <item>Что ты сделал?==What have you done?</item>
+        <item>Я только что поужинал==I have just had dinner.</item>
+        <item>Ветчина испортилась==The ham has gone bad.</item>
+        <item>Я забыл его имя==I have forgotten his name.</item>
+        <item>Я еще не получил письмо==I have not received the letter yet.</item>
         <item>Ты купил хлеб?==Have you bought bread?</item>
         <item>Она нашла свой ключ?==Has she found her key?</item>
-        <item>Мы закончили проект==We have finished the(a) project</item>
-        <item>Он никогда не слышал ту песню.==He has never heard that song</item>
+        <item>Мы закончили проект==We have finished the project.</item>
+        <item>Он никогда не слышал ту песню.==He has never heard that song.</item>
         <item>Ты только что приехал?==Have you just arrived?</item>
-        <item>Я потратил все мои деньги==I have spent all my money</item>
-        <item>Я простудился==I have caught cold</item>
+        <item>Я потратил все мои деньги==I have spent all my money.</item>
+        <item>Я простудился==I have caught a cold.</item>
         <item>Он съел гамбургер?==Has he eaten a hamburger?</item>
-        <item>Я ограбил банк==I\’ve robbed the bank</item>
+        <item>Я ограбил банк==I\’ve robbed the bank.</item>
         <item>Ты взял мою чашку?==Have you taken my cup?</item>
-        <item>Кто выпил сок?==Who has drunk juice?</item>
+        <item>Кто выпил сок?==Who has drunk the juice?</item>
     </string-array>
 
     <string-array name="articles_geography">
