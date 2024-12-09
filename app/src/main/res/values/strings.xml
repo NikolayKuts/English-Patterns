@@ -4132,46 +4132,45 @@
         <item>Ты не напишешь==You will not write to me.</item>
     </string-array>
 
-
     <string-array name="future_simple_will_v">
-        <item>Я поеду в Англию следующим летом.==I will go to England next summer</item>
-        <item>Завтра я куплю новые туфли.==I will buy new shoes tomorrow. (Tomorrow I will buy new shoes)</item>
-        <item>Он подарит мне машину.==He will give me a new car. (He will present me with a new car)</item>
-        <item>Я вымою посуду после обеда.==I will wash the dishes after lunch. (I will wash up after lunch)</item>
+        <item>Я поеду в Англию следующим летом.==I will go to England next summer.</item>
+        <item>Завтра я куплю новые туфли.==I will buy new shoes tomorrow.</item>
+        <item>Он подарит мне машину.==He will give me a car. (He will present me with a car.)</item>
+        <item>Я вымою посуду после обеда.==I will wash the dishes after lunch.</item>
         <item>Я подумаю об этом завтра.==I will think about it tomorrow.</item>
-        <item>Она съест пирожное перед сном.==She will eat a cake (the cake) before sleep.</item>
-        <item>Мы прыгнем с парашютом вместе.==We will jump with the parachute together.</item>
+        <item>Она съест пирожное перед сном.==She will eat a cake before going to bed.</item>
+        <item>Мы прыгнем с парашютом вместе.==We will parachute together.</item>
         <item>Мы поставим этот стол посередине комнаты.==We will put this table in the middle of the room.</item>
-        <item>Мои родители приедут в выходные.==My parents will come (arrive) on the weekend.</item>
-        <item>Бабушка испечет пирог на мой день рождения.==Grandmother will bake a cake for my birthday.</item>
-        <item>Я куплю тебе новую квартиру.==I will buy you a new flat (apartment).</item>
+        <item>Мои родители приедут в выходные.==My parents will come over on the weekend.</item>
+        <item>Бабушка испечет пирог на мой день рождения.==Grandma will bake a cake for my birthday.</item>
+        <item>Я куплю тебе новую квартиру.==I will buy you a new apartment.</item>
         <item>Мы не поедем домой.==We will not go home.</item>
         <item>Я не вернусь.==I will not come back.</item>
-        <item>Он не будет кушать с ними.==He will not eat with us.</item>
+        <item>Он не будет кушать с ними.==He will not eat with them.</item>
         <item>Она не станет с тобой разговаривать.==She will not talk to you.</item>
-        <item>Мне не понадобится машина.==We will not need a (the) car.</item>
+        <item>Мне не понадобится машина.==I will not need a car.</item>
         <item>Тебе не понравится это.==You will not like it.</item>
-        <item>Я не буду это есть.==I will not eat that (it).</item>
+        <item>Я не буду это есть.==I will not eat it.</item>
         <item>Мы не будем ложиться спать.==We will not go to bed.</item>
-        <item>Он не станет работать в этой компании.==He will not work in this company.</item>
-        <item>Мои дети не будут ходить в эту школу.==My kids (children) will not go to this school.</item>
+        <item>Он не станет работать в этой компании.==He will not work for this company.</item>
+        <item>Мои дети не будут ходить в эту школу.==My kids will not go to this school.</item>
         <item>Мы не будем покупать новый дом.==We will not buy a new house.</item>
-        <item>Мы не полетим на самолете.==We will not go by plane.</item>
-        <item>Они не станут работать вместе.==They will not work with us.</item>
+        <item>Мы не полетим на самолете.==We will not fly on a plane.</item>
+        <item>Они не станут работать вместе.==They will not work together.</item>
         <item>Я не буду думать о плохом.==I will not think about bad things.</item>
         <item>Мы не будем принимать лекарства.==We will not take medicine.</item>
-        <item>Он не будет пить алкоголь.==He will not take alcohol.</item>
-        <item>Ты не будешь этого делать.==You will not do that.</item>
+        <item>Он не будет пить алкоголь.==He will not drink alcohol.</item>
+        <item>Ты не будешь этого делать.==You will not do this.</item>
         <item>Мы не будем заказывать это блюдо.==We will not order this dish.</item>
-        <item>Он не принесет нам наш заказ.==He will not bring us our order. (He will not serve us our order)</item>
+        <item>Он не принесет нам наш заказ.==He will not bring us our order.</item>
         <item>Я не буду вас лечить.==I will not treat you.</item>
-        <item>Мой ребенок не будет мыть машину.==My child (kid) will not wash the car.</item>
+        <item>Мой ребенок не будет мыть машину.==My child will not wash the car.</item>
         <item>Я не буду платить за такое плохое обслуживание.==I will not pay for such bad service.</item>
-        <item>Дочка не будет участвовать в этом конкурсе.==My daughter will not take part in this contest.</item>
-        <item>Я не поведу машину.==I will not drive (a car).</item>
+        <item>Дочка не будет участвовать в этом конкурсе.==My daughter will not participate in this contest.</item>
+        <item>Я не поведу машину.==I will not drive.</item>
         <item>Его сын не будет кататься на лыжах.==His son will not ski.</item>
-        <item>Завтра не будет холодно.==It will not be cold tomorrow. (Tomorrow it will not be cold)</item>
-        <item>На следующей неделе нас не будет в стране.==Next week we will not be in the country.</item>
+        <item>Завтра не будет холодно.==It will not be cold tomorrow.</item>
+        <item>На следующей неделе нас не будет в стране.==We will not be in the country next week.</item>
         <item>Они не будут звонить нам ночью.==They will not call us at night.</item>
         <item>Вы поедете с нами?==Will you go with us?</item>
         <item>Он будет петь?==Will he sing?</item>
@@ -4180,26 +4179,26 @@
         <item>Вы нас подождете?==Will you wait for us?</item>
         <item>Он подготовит документы?==Will he prepare the documents?</item>
         <item>Ты выйдешь за меня замуж?==Will you marry me?</item>
-        <item>Он предупредит нас заранее?==Will he warn us in advance?</item>
+        <item>Он предупредит нас заранее?==Will he warn us ahead of time?</item>
         <item>Она будет сотрудничать с нами?==Will she cooperate with us?</item>
-        <item>Будет ли эта компания платить комиссионные?==Will this company pay commission?</item>
+        <item>Будет ли эта компания платить комиссионные?==Will this company pay commissions?</item>
         <item>Ты приедешь после ужина?==Will you come after dinner?</item>
         <item>Ты приготовишь мой любимый салат?==Will you make my favorite salad?</item>
         <item>Она пришлет мне сообщение?==Will she send me a message?</item>
         <item>Ты напишешь мне смс-ку?==Will you text me?</item>
-        <item>Я не приеду на выходные.==I will not come on the weekend.</item>
-        <item>Вы поедете в отпуск на дачу.==You will go to the summer house (cottage) on your vacation.</item>
-        <item>Все сотрудники получат премию.==All the employees will get a bonus.</item>
-        <item>Дети будут играть во дворе.==The children will play in the yard.</item>
-        <item>Родители соберутся в большом зале.==The parents will get together in the big hall.</item>
+        <item>Я не приеду на выходные.==I will not come for the weekend.</item>
+        <item>Вы поедете в отпуск на дачу.==You will go to the summer house on vacation.</item>
+        <item>Все сотрудники получат премию.==All the employees will get bonuses.</item>
+        <item>Дети будут играть во дворе.==The kids will play in the yard.</item>
+        <item>Родители соберутся в большом зале.==The parents will gather in the big hall.</item>
         <item>Все семьи будут играть в эту игру.==All the families will play this game.</item>
         <item>Ты будешь ловить мяч?==Will you catch the ball?</item>
-        <item>Мы не станем спорить.==We will not argue. (dispute)</item>
+        <item>Мы не станем спорить.==We will not argue.</item>
         <item>Ты не поверишь мне.==You will not believe me.</item>
-        <item>Ты расскажешь маме?==Will you tell mother?</item>
-        <item>Ты больше не будешь красть.==You will not steal any more.</item>
-        <item>Он отправится в тюрьму.==He will go to prison.</item>
-        <item>Эти люди не будут плавать в нашем бассейне.==These people will not swim in our swimming pool.</item>
+        <item>Ты расскажешь маме?==Will you tell mom?</item>
+        <item>Ты больше не будешь красть.==You will not steal anymore.</item>
+        <item>Он отправится в тюрьму.==He will go to jail.</item>
+        <item>Эти люди не будут плавать в нашем бассейне.==These people will not swim in our pool.</item>
         <item>Наш начальник не будет обедать.==Our boss will not have lunch.</item>
     </string-array>
 
