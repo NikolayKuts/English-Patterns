@@ -4066,50 +4066,50 @@
         <item>Я переведу этот текст==I will translate the text.</item>
         <item>Я буду плакать==I will cry.</item>
         <item>Я сдам экзамен==I will pass the exam.</item>
-        <item>Я решу задачу==I will solve the task.</item>
+        <item>Я решу проблему==I will solve the problem.</item>
         <item>Я буду врачом==I will be a doctor.</item>
-        <item>Ты сделаешь завтрак==You will make/prepare breakfast.</item>
+        <item>Ты сделаешь завтрак==You will make breakfast.</item>
         <item>Ты полюбишь меня==You will love me.</item>
         <item>Ты поедешь в Грецию в следующем месяце==You will go to Greece next month.</item>
         <item>Ты будешь работать завтра==You will work tomorrow.</item>
-        <item>Ты позвонишь ей==You will phone her.</item>
+        <item>Ты позвонишь ей==You will call her.</item>
         <item>Ты послушаешь эту песню завтра==You will listen to this song tomorrow.</item>
-        <item>Ты купишь билеты==You will buy tickets.</item>
+        <item>Ты купишь билеты==You will buy the tickets.</item>
         <item>Он подарит мне машину==He will give me a car.</item>
         <item>Он купит цветы==He will buy flowers.</item>
-        <item>Он будет учить английский.==He will learn English.</item>
+        <item>Он будет учить английский.==He will study English.</item>
         <item>Он покрасит стены завтра.==He will paint the walls tomorrow.</item>
         <item>Он полюбит ее.==He will love her.</item>
-        <item>Она съест суп через час.==She will eat soup in an hour.</item>
+        <item>Она съест суп через час.==She will eat the soup in an hour.</item>
         <item>Она поцелует его через месяц.==She will kiss him in a month.</item>
-        <item>Она решит задачу.==She will solve the task.</item>
+        <item>Она решит проблему.==She will solve the problem.</item>
         <item>Она будет актрисой.==She will be an actress.</item>
         <item>Она скажет нам.==She will tell us.</item>
-        <item>Она позовет тебя (позвонит).==She will call you.</item>
+        <item>Она позовет тебя \(позвонит\).==She will call you.</item>
         <item>Мы придем завтра.==We will come tomorrow.</item>
         <item>Мы вернемся через 4 часа.==We will return in 4 hours.</item>
-        <item>Мы опоздаем на самолет.==We will miss the plane.</item>
-        <item>Мы напишем вам завтра==We will write you tomorrow</item>
-        <item>Мы принесем тетради==We will bring notebooks.</item>
-        <item>Они пригласят вас==They will invite toy</item>
-        <item>Они помогут вам==They will help you</item>
-        <item>Они решат задачу==They will solve the task</item>
-        <item>Они придут вечером==They will come in the evening</item>
-        <item>Они сделают свое домашнее задание завтра==They will do their homework tomorrow</item>
-        <item>Они поедят через час==They will eat in an hour</item>
-        <item>Я не пойду==I will not go</item>
-        <item>Я не буду художником==I will not be an artist</item>
-        <item>Ты не полюбишь нас==You will not love us</item>
-        <item>Ты не купишь машину==You will not buy a car</item>
-        <item>Он не принесет пирожки==You will not bring patties</item>
-        <item>Он не поедет в Омск==He will not go to Omsk</item>
-        <item>Она не поцелует его через час==She will not kiss him in an hour</item>
-        <item>Она не построит дом==She will not build a house</item>
-        <item>Мы не посмотрим фильм завтра==We will not watch the movie tomorrow</item>
-        <item>Мы не услышим вас==We will not hear you</item>
-        <item>Они не поженятся в следующем году==They will not marry next year</item>
-        <item>Они не пойдут в лес через месяц==They will not go to the forest in a month</item>
-        <item>Я пойду в кино?==Will I go to the movie theater?</item>
+        <item>Мы опоздаем на самолет.==We will miss the flight.</item>
+        <item>Мы напишем вам завтра==We will write to you tomorrow.</item>
+        <item>Мы принесем тетради==We will bring the notebooks.</item>
+        <item>Они пригласят вас==They will invite you.</item>
+        <item>Они помогут вам==They will help you.</item>
+        <item>Они решат проблему==They will solve the problem.</item>
+        <item>Они придут вечером==They will come in the evening.</item>
+        <item>Они сделают свое домашнее задание завтра==They will do their homework tomorrow.</item>
+        <item>Они поедят через час==They will eat in an hour.</item>
+        <item>Я не пойду==I will not go.</item>
+        <item>Я не буду художником==I will not be an artist.</item>
+        <item>Ты не полюбишь нас==You will not love us.</item>
+        <item>Ты не купишь машину==You will not buy a car.</item>
+        <item>Он не принесет пирожки==He will not bring the pies.</item>
+        <item>Он не поедет в Омск==He will not go to Omsk.</item>
+        <item>Она не поцелует его через час==She will not kiss him in an hour.</item>
+        <item>Она не построит дом==She will not build a house.</item>
+        <item>Мы не посмотрим фильм завтра==We will not watch the movie tomorrow.</item>
+        <item>Мы не услышим вас==We will not hear you.</item>
+        <item>Они не поженятся в следующем году==They will not get married next year.</item>
+        <item>Они не пойдут в лес через месяц==They will not go to the forest in a month.</item>
+        <item>Я пойду в кино?==Will I go to the movies?</item>
         <item>Я куплю сыр?==Will I buy cheese?</item>
         <item>Вы нам поможете?==Will you help us?</item>
         <item>Вы поедете с нами?==Will you go with us?</item>
@@ -4118,19 +4118,20 @@
         <item>Она останется тут?==Will she stay here?</item>
         <item>Она нас подождет?==Will she wait for us?</item>
         <item>Мы подготовим документы?==Will we prepare the documents?</item>
-        <item>Мы поженимся?==Will we marry?</item>
-        <item>Я не поведу машину.==I will not drive (a car).</item>
+        <item>Мы поженимся?==Will we get married?</item>
+        <item>Я не поведу машину.==I will not drive.</item>
         <item>Ты приедешь?==Will you come?</item>
-        <item>Ты расскажешь маме?==Will you tell mother?</item>
-        <item>Я попью чай==I will drink tea</item>
-        <item>Она пойдет с тобой в театр==She will go to the theatre with you</item>
-        <item>Они ответят тебе завтра==They will answer you tomorrow</item>
+        <item>Ты расскажешь маме?==Will you tell mom?</item>
+        <item>Я попью чай==I will drink tea.</item>
+        <item>Она пойдет с тобой в театр==She will go to the theater with you.</item>
+        <item>Они ответят тебе завтра==They will answer you tomorrow.</item>
         <item>Они не станут работать==They will not work.</item>
-        <item>Он купит мясо==He will buy meat</item>
+        <item>Он купит мясо==He will buy meat.</item>
         <item>Я не вернусь.==I will not come back.</item>
         <item>Ты уснешь?==Will you fall asleep?</item>
-        <item>Ты не напишешь ==You will not write me</item>
+        <item>Ты не напишешь==You will not write to me.</item>
     </string-array>
+
 
     <string-array name="future_simple_will_v">
         <item>Я поеду в Англию следующим летом.==I will go to England next summer</item>
