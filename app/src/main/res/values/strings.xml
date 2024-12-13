@@ -1247,7 +1247,7 @@
         <item>Мы никогда не смотрим ТВ в воскресенье.==We never watch TV on Sunday.</item>
         <item>Мы всегда смотрим ТВ в воскресенье.==We always watch TV on Sunday.</item>
         <item>Он всегда сидит в интернете после уроков.==He always surfs the net after lessons.</item>
-        <item>Он редко сидит в интернете после уроков.==He often surfs the net after lessons.</item>
+        <item>Он редко сидит в интернете после уроков.==He rarely surfs the net after lessons.</item>
         <item>Обычно он сидит в интернете после уроков.==Usually he surfs the net after lessons.</item>
         <item>Время от времени он сидит в интернете после уроков.==From time to time he surfs the net after lessons.</item>
         <item>Он никогда не сидит в интернете после уроков.==He never surfs the net after lessons.</item>
@@ -1259,7 +1259,7 @@
         <item>Они часто навещают друзей летом.==They often visit friends in summer.</item>
         <item>Они обычно навещают друзей летом.==They usually visit friends in summer.</item>
         <item>Они навещают друзей летом время от времени.==They visit friends in summer from time to time.</item>
-        <item>Они никогда навещают друзей летом.==They never visit friends in summer.</item>
+        <item>Они никогда не навещают друзей летом.==They never visit friends in summer.</item>
         <item>Она всегда ходит за покупками, когда у нее есть деньги.==She always goes shopping when she has (got) money.</item>
         <item>Она никогда не ходит за покупками, когда у нее есть деньги.==She never goes shopping when she has (got) money.</item>
         <item>Она редко ходит за покупками, когда у нее есть деньги.==She rarely goes shopping when she has (got) money.</item>
@@ -1277,10 +1277,10 @@
         <item>Они часто пылесосят ковры после завтрака.==They often vacuum the carpets after breakfast.</item>
         <item>Они никогда не пылесосят ковры после завтрака.==They never vacuum the carpets after breakfast.</item>
         <item>Обычно она выносит мусор.==Usually she takes the trash out.</item>
-        <item>Время от времени она выносит мусор.==From time to time she takes the rubbish out.</item>
-        <item>Она всегда выносит мусор.==She always takes the rubbish out.</item>
-        <item>Она никогда выносит мусор.==She never takes the rubbish out.</item>
-        <item>Она редко выносит мусор.==She rarely takes the rubbish out.</item>
+        <item>Время от времени она выносит мусор.==From time to time she takes the trash out.</item>
+        <item>Она всегда выносит мусор.==She always takes the trash out.</item>
+        <item>Она никогда не выносит мусор.==She never takes the trash out.</item>
+        <item>Она редко выносит мусор.==She rarely takes the trash out.</item>
         <item>Мы никогда не заправляем кровать, когда приходит мама.==We never make the bed when Mom comes.</item>
         <item>Мы всегда заправляем кровать, когда приходит мама.==We always make the bed when Mom comes.</item>
         <item>Мы обычно заправляем кровать, когда приходит мама.==We usually make the bed when Mom comes.</item>
@@ -1345,7 +1345,7 @@
         <item>Мы не идем домой в 5 вечера.==We don\'t go home at five p.m.</item>
         <item>Он не идет домой после работы.==He doesn\'t go home after work.</item>
         <item>Я не часто хожу в кино.==I don\'t often go to the movie theater.</item>
-        <item>Она не ходит в кино по понедельникам.==She doesn\'t often go to the movie theater on Mondays.</item>
+        <item>Она не часто ходит в кино по понедельникам.==She doesn\'t often go to the movie theater on Mondays.</item>
         <item>Вы не ходите в ресторан во вторник.==You don\'t go to the restaurant on Tuesday.</item>
         <item>Мой брат не ходит в ресторан каждый день.==My brother doesn\'t go to the restaurant every day.</item>
         <item>Их сестры не часто ходят в театр.==Their sisters don\'t often go to the theatre.</item>
@@ -1414,7 +1414,7 @@
         <item>Мы играем в теннис днем.==We play tennis in the afternoon.</item>
         <item>Он играет в гольф ночью.==He plays golf at night.</item>
         <item>Их сын играет в компьютерные игры все время.==Their son plays computer games all the time.</item>
-        <item>Она играет в боулинг в том клубе.==She plays bowling in that club.</item>
+        <item>Она играет в боулинг в том клубе.==She goes bowling at that club.</item>
         <item>Мой дедушка играет в карты со своими (его) друзьями.==My grandfather plays cards with his friends.</item>
         <item>Мы играем в шашки после школы.==We play checkers after school.</item>
         <item>Ты играешь в домино кошмарно.==You play domino awfully.</item>
@@ -1431,7 +1431,7 @@
         <item>Мой дядя постоянно играет в домино.==My uncle constantly plays domino.</item>
         <item>Ты играешь в карты в (этом) баре.==You play cards in the bar.</item>
         <item>Доктора играют в регби после работы.==The doctors play rugby after work.</item>
-        <item>Учителя играют в боулинг на каникулах.==The teachers play bowling on holiday.</item>
+        <item>Учителя играют в боулинг на каникулах.==The teachers go bowling on holiday.</item>
         <item>Папа играет в футбол плохо.==Dad plays football badly.</item>
         <item>Мы редко играем в шахматы.==We rarely play chess.</item>
         <item>Мой дядя играет в теннис.==My uncle plays tennis.</item>
@@ -1468,7 +1468,7 @@
         <item>Мы не играем в теннис днем.==We don\'t play tennis in the afternoon.</item>
         <item>Он не играет в гольф ночью.==He doesn\'t play golf at night.</item>
         <item>Их сын не играет в компьютерные игры все время.==Their son doesn\'t play computer games all the time.</item>
-        <item>Она не играет в боулинг в том клубе.==She doesn\'t play bowling in that club.</item>
+        <item>Она не играет в боулинг в том клубе.==She doesn\'t play bowling at that club.</item>
         <item>Мой дедушка не играет в карты со своими (его) друзьями.==My grandfather doesn\'t play cards with his friends.</item>
         <item>Мы не играем в шашки после школы.==We don\'t play checkers after school.</item>
         <item>Я не играю на пианино по вечерам.==I don\'t play the piano in the evening.</item>
@@ -2522,7 +2522,7 @@
         <item>В нашем городе есть театр и две церкви==There is a theatre and two churches in our city</item>
         <item>В этом парке есть скамейки, дорожки и газон==There are benches, paths and a lawn in this park</item>
         <item>Поблизости с метро находится школа==There is a school near the subway station</item>
-        <item>Между кинотеатром и школой есть банк==There is a bank between the school and the movie theater</item>
+        <item>Между кинотеатром и школой есть банк==There is a bank between the movie theater and the school</item>
         <item>Пешеходный переход находится справа от автобусной остановки==There is a crossing to the right of the bus stop</item>
         <item>За рестораном есть маленький садик==There is a small garden behind the restaurant</item>
         <item>Слева от кафе есть офис страховой компании==There is an insurance company office to the left of the cafe</item>
@@ -2549,7 +2549,7 @@
         <item>Рядом с супермаркетом нет парковки==There is no parking near the supermarket</item>
         <item>За этим метро нет парка==There is no park behind the subway station</item>
         <item>Справа от светофора нет пешеходного перехода==There is no crossing to the right of the traffic light</item>
-        <item>На этой улице нет кинотеатров==There are no movie theater on this street</item>
+        <item>На этой улице нет кинотеатров==There are no movie theaters on this street.</item>
         <item>Слева от школы нет деткой площадки==There is no playground to the left of the school</item>
         <item>На этом этаже нет кафе==There is no cafe on this floor</item>
         <item>Напротив этого банка нет торгового центра==There is no mall opposite this bank</item>
@@ -4535,7 +4535,7 @@
         <item>Если он приезжает в город, мы вместе ужинаем==If he comes to town, we have dinner together</item>
         <item>Попроси его подождать, если он придет туда до меня==Ask him to wait if he gets there before me</item>
         <item>Когда я опаздываю, то отец отвозит меня в школу==When I am late, my dad drives me to school</item>
-        <item>Если нагреть воду до 0 градусов Цельсия, она замерзает==If you cool water to 0 degrees Celsius, it freezes</item>
+        <item>Если охладить воду до 0 градусов Цельсия, она замерзает==If you cool water to 0 degrees Celsius, it freezes</item>
         <item>Если я покупаю обувь в этом магазине, я получаю 10%-ую скидку==If I buy shoes at this store, I get a 10% discount</item>
         <item>Если я пью шампанское, у меня болит голова==If I drink champagne, I get a headache</item>
         <item>Если она встает поздно, отец не отвозит ее в университет==If she gets up late, her dad doesn\’t drive her to university</item>
@@ -4544,8 +4544,8 @@
         <item>Если я ем меньше, я чувствую себя лучше==If I eat less, I feel better</item>
         <item>Если история интересная, я читаю ее своим детям==If a story is interesting, I read it to my kids</item>
         <item>Если лед тает, он превращается в воду==If ice melts, it turns into water</item>
-        <item>Если хранить кофе в морозильнике, то аромат сохраняется дольше==If you store coffee in the freezer, its aroma lasts longer</item>
-        <item>Если ты долго пытаться сделать одно и то же, ты добиваешься успеха.==If you try to do the same thing for a long time, you succeed</item>
+        <item>Если хранить кофе в морозильнике, то его аромат сохраняется дольше==If you store coffee in the freezer, its aroma lasts longer</item>
+        <item>Если ты долго пытаешься сделать одно и то же, ты добиваешься успеха.==If you try to do the same thing for a long time, you succeed</item>
         <item>Если в конце марта дожди, то лето бывает холодное==If it rains at the end of March, summer is usually cold</item>
         <item>Если ты хочешь похудеть, ешь меньше и бегай по утрам.==If you want to lose weight, eat less and run in the mornings</item>
         <item>Если дети плохо себя ведут, они не получают подарков от Санты.==If children misbehave, they don\’t get presents from Santa</item>
@@ -4570,7 +4570,7 @@
         <item>Она останется в Москве, если получит работу.==She will stay in Moscow if she gets a job.</item>
         <item>Он получит открытку, если она отправит её сегодня.==He will get the postcard if she sends it today.</item>
         <item>Если я найду твои ключи, я тебе их отдам.==If I find your keys, I will give them back to you.</item>
-        <item>Если мы возьмём машину, нам будет трудно найти место на парковке.==If we take the car, it will be hard to find a parking spot.</item>
+        <item>Если мы возьмём машину, нам будет трудно найти парковочное место.==If we take the car, it will be hard to find a parking spot.</item>
         <item>Если завтра будет дождь, мы не пойдём в парк.==If it rains tomorrow, we will not go to the park.</item>
         <item>Твои родители будут счастливы, если мы проведём несколько дней с ними.==Your parents will be happy if we spend a few days with them.</item>
         <item>Если мне будет лучше завтра, я вернусь на работу.==If I feel better tomorrow, I will go back to work.</item>
@@ -4583,8 +4583,8 @@
         <item>Если ты не будешь класть так много сахара в кофе, ты не прибавишь так много в весе.==If you don\'t put so much sugar in your coffee, you will not put on so much weight!</item>
         <item>Он не получит лучшую работу, если не сдаст этот экзамен.==He will not get a better job if he doesn\'t pass this exam.</item>
         <item>Если мы будем ждать здесь, мы опоздаем.==If we wait here, we will be late.</item>
-        <item>Если он накопит все деньги, то сможет поедет на каникулы во Францию.==If he saves up all his money, he will go on vacation to France.</item>
-        <item>Если ты приготовишь обед, я вымою посуду.==If you cook dinner, I will wash the dishes.</item>
+        <item>Если он накопит все деньги, то сможет поехать на каникулы во Францию.==If he saves up all his money, he will go on vacation to France.</item>
+        <item>Если ты приготовишь обед, я вымою посуду.==If you cook lunch, I will wash the dishes.</item>
         <item>Они пойдут на вечеринку, если их пригласят.==They will go to the party if they are invited.</item>
         <item>Если я не лягу спать рано, завтра я буду уставший.==If I don\'t go to bed early, I will be tired tomorrow.</item>
         <item>Я куплю новое платье, если у меня будет достаточно денег.==I will buy a new dress if I have enough money.</item>
