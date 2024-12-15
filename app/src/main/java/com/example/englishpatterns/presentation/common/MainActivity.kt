@@ -25,6 +25,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.englishpatterns.data.PatternHoldersSerializer
 import com.example.englishpatterns.presentation.collectWhenStarted
+import com.example.englishpatterns.presentation.common.customTabs.ChatGptCustomTabManager
 import com.example.englishpatterns.presentation.navigation.AppNavGraph
 import com.example.englishpatterns.presentation.navigation.Screen
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingBaseViewModel
@@ -48,6 +49,9 @@ class MainActivity : ComponentActivity() {
     private val viewModel: BaseViewModel<MainState, MainAction, MainEvent> by viewModels<MainViewModel> {
         MainViewModelFactory(dataStore = dataStore)
     }
+
+    private val localStorage by lazy { LocalStorage.getInstance(context = application) }
+    private val chatGptCustomTabManager = ChatGptCustomTabManager()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
@@ -88,37 +92,52 @@ class MainActivity : ComponentActivity() {
                                     )
 
                                 LaunchedEffect(key1 = Unit) {
-                                    patternPracticingViewModel.eventState.collectLatest {
+                                    patternPracticingViewModel.eventState.collectLatest { event ->
+                                        when (event) {
+                                            is PatternPracticingEvent.WarmupCustomTabs -> {
+                                                chatGptCustomTabManager.prepareCustomTab(
+                                                    context = this@MainActivity,
+                                                    url = event.url
+                                                )
+                                            }
 
-                                        when (it) {
                                             is PatternPracticingEvent.RedirectionToWordHuntAppRequired -> {
-//                                                startActivityWithCheck(intent = it.intent)
-                                                copyToClipboard(clipboardUnit = it.clipboardUnit)
-                                                navController.navigateToWebContentScreen(url = it.url)
+//                                                startActivityWithCheck(intent = event.intent)
+                                                copyToClipboard(clipboardUnit = event.clipboardUnit)
+                                                navController.navigateToWebContentScreen(url = event.url)
                                             }
 
                                             is PatternPracticingEvent.RedirectionToKlafAppRequired -> {
-                                                startActivityWithCheck(intent = it.intent)
+                                                startActivityWithCheck(intent = event.intent)
                                             }
 
                                             is PatternPracticingEvent.RedirectionToGhatGptAppRequired -> {
-                                                copyToClipboard(clipboardUnit = it.clipboardUnit)
+                                                copyToClipboard(clipboardUnit = event.enClipboardUnit)
 
-                                                startActivityWithCheck(intent = it.intent)
-//                                                navController.navigateToWebContentScreen(url = it.url)
+                                                localStorage.apply {
+                                                    enClipText = event.enClipboardUnit.text
+                                                    ruClipText = event.ruClipboardUnit.text
+                                                    selectedClipText =
+                                                        event.selectedClipboardUnit.text
+                                                }
+
+                                                chatGptCustomTabManager.launchCustomTab(
+                                                    url = event.url,
+                                                    context = this@MainActivity
+                                                )
                                             }
 
                                             is PatternPracticingEvent.RedirectionToYouGlishPageRequired -> {
-//                                                startActivityWithCheck(intent = it.intent)
-                                                navController.navigateToWebContentScreen(url = it.url)
+//                                                startActivityWithCheck(intent = event.intent)
+                                                navController.navigateToWebContentScreen(url = event.url)
                                             }
 
                                             is PatternPracticingEvent.RedirectionToGoogleImagesPageRequired -> {
-                                                navController.navigateToWebContentScreen(url = it.url)
+                                                navController.navigateToWebContentScreen(url = event.url)
                                             }
 
                                             is PatternPracticingEvent.RedirectionToWordTemplateSearchPageRequired -> {
-                                                navController.navigateToWebContentScreen(url = it.url)
+                                                navController.navigateToWebContentScreen(url = event.url)
                                             }
                                         }
                                     }

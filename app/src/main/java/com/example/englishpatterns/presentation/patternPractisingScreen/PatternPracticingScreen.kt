@@ -413,7 +413,7 @@ private fun PatternTranslationContent(
                     showDropdown = newSelectedText.isNotBlank() == true
                     selectedText = newSelectedText
                     sendAction(
-                        PatternPracticingAction.SelectedTextInfoRequired(
+                        PatternPracticingAction.TextSelected(
                             newSelectedText
                         )
                     )

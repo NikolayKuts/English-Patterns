@@ -134,8 +134,9 @@ class PatternPracticingViewModel(
                 currentPatterGroupUnitState.value = patternManager.previousPatternGroupUnitState()
             }
 
-            is PatternPracticingAction.SelectedTextInfoRequired -> {
+            is PatternPracticingAction.TextSelected -> {
                 handelSelectedTextInfoRequest(action = action)
+                requireCustomTabsToWarmUp(action)
             }
 
             is PatternPracticingAction.TextPronunciationRequired -> {
@@ -279,7 +280,7 @@ class PatternPracticingViewModel(
     }
 
     private fun handelSelectedTextInfoRequest(
-        action: PatternPracticingAction.SelectedTextInfoRequired
+        action: PatternPracticingAction.TextSelected
     ) {
         if (action.text.isBlank()) return
 
@@ -304,12 +305,31 @@ class PatternPracticingViewModel(
         textAudioPlayer.preparePronunciation(text = action.text)
     }
 
+    private fun requireCustomTabsToWarmUp(action: PatternPracticingAction.TextSelected) {
+        if (action.text.isBlank()) return
+
+        viewModelScope.launch(Dispatchers.IO) {
+            val url =
+                "${Constants.ChatGpt.BASE_URL}${SecretConstants.GhatGpt.ENGLISH_PATTERNS_CHAT_ID}"
+            val clipboardUnit = ClipboardUnit(
+                text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
+            )
+
+            val event = PatternPracticingEvent.WarmupCustomTabs(
+                url = url,
+                clipboardUnit = clipboardUnit,
+            )
+
+            eventState.emit(value = event)
+        }
+    }
+
     private fun handleSelectedTextSearchRequest(
         action: PatternPracticingAction.SelectedTextSearchRequired
     ) {
         val url = "${Constants.WordHunt.BASE_URL}${action.text}"
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-        val clipboardUnit = ClipboardUnit(text = action.text,)
+        val clipboardUnit = ClipboardUnit(text = action.text)
 
         viewModelScope.launch {
             eventState.emit(
@@ -342,16 +362,22 @@ class PatternPracticingViewModel(
     ) {
         val url = "${Constants.ChatGpt.BASE_URL}${SecretConstants.GhatGpt.ENGLISH_PATTERNS_CHAT_ID}"
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-        val clipboardUnit = ClipboardUnit(
+        val ruClipboardUnit = ClipboardUnit(
+            text = currentPatterGroupUnitState.value?.pattern?.native ?: ""
+        )
+        val enClipboardUnit = ClipboardUnit(
             text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
         )
+        val selectedClipboardUnit = ClipboardUnit(text = action.text)
 
         viewModelScope.launch {
             eventState.emit(
                 PatternPracticingEvent.RedirectionToGhatGptAppRequired(
                     intent = intent,
                     url = url,
-                    clipboardUnit = clipboardUnit
+                    ruClipboardUnit = ruClipboardUnit,
+                    enClipboardUnit = enClipboardUnit,
+                    selectedClipboardUnit = selectedClipboardUnit
                 )
             )
         }

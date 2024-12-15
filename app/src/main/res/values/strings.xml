@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">English Patterns</string>
+    <string name="clip_board_icon_description">Clip board icon</string>
+    <string name="en">En</string>
+    <string name="ru">Ru</string>
+    <string name="selected">selected</string>
 
     <string-array name="possessive_pronouns">
         <item>Мое имя==My name</item>
