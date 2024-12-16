@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
@@ -154,70 +155,71 @@ fun PatternPracticingScreen(
             val sizeText = if (size == -1) "" else " / $size"
             val progress = "$positionText$sizeText"
 
-            Column {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        modifier = Modifier.weight(1f),
-                        text = progress
-                    )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    modifier = Modifier.weight(1f),
+                    text = progress
+                )
 
+                val shuffleButtonTint = if (state.isPatternGroupHolderSateShuffled) {
+                    MaterialTheme.colorScheme.onSurface
+                } else {
+                    Color(0xFFA5A5A5)
+                }
+
+                RoundedButton(
+                    activated = state.isPatternGroupHolderSateShuffled,
+                    activatedBackground = Color(0xFF4B7485),
+                    onClink = { sendAction(PatternPracticingAction.ShufflePatternPairs) }
+                ) {
                     Icon(
-                        modifier = Modifier
-                            .clip(RoundedCornerShape(50.dp))
-                            .background(Color(0xFF4B7485))
-                            .clickable { sendAction(PatternPracticingAction.ShufflePatternPairs) }
-                            .padding(8.dp),
+                        tint = shuffleButtonTint,
                         painter = painterResource(id = R.drawable.ic_shuffle),
                         contentDescription = null
                     )
-                    Spacer(modifier = Modifier.width(8.dp))
+                }
 
-                    val (
-                        allButtonColor,
-                        allButtonTextColor,
-                        allButtonBorderColor
-                    ) = if (state.patternGroupHolders.all { it.isChosen }) {
-                        Triple(Color(0xFFA1BB84), Color.Unspecified, Color.Transparent)
-                    } else {
-                        Triple(Color(0x19A2A2A2), Color(0xFFA5A5A5), Color(0xFF686868))
+                Spacer(modifier = Modifier.width(8.dp))
+
+                val isAllButtonActivated = state.patternGroupHolders.all { it.isChosen }
+                val allButtonTextColor = if (isAllButtonActivated) {
+                    Color.Unspecified
+                } else {
+                    Color(0xFFA5A5A5)
+                }
+
+                RoundedButton(
+                    activated = isAllButtonActivated,
+                    activatedBackground = Color(0xFFA1BB84),
+                    onClink = {
+                        sendAction(PatternPracticingAction.ChangeAllPatternGroupHoldersSelectionState)
+                    }
+                ) {
+                    Text(text = "all", color = allButtonTextColor)
+                }
+
+                Spacer(modifier = Modifier.width(8.dp))
+
+                Row(
+                    modifier = Modifier
+                        .border(
+                            width = 1.dp,
+                            color = Color(0xFF565656),
+                            shape = RoundedCornerShape(50.dp)
+                        )
+                        .padding(6.dp),
+                ) {
+                    PatterGroupNavigationButton(iconId = R.drawable.ic_arrow_back) {
+                        sendAction(PatternPracticingAction.SelectPreviousPatternGroup)
                     }
 
-                    Button(
-                        modifier = Modifier.defaultMinSize(minWidth = 41.dp, minHeight = 41.dp),
-                        shape = RoundedCornerShape(50.dp),
-                        border = BorderStroke(width = 1.dp, color = allButtonBorderColor),
-                        contentPadding = PaddingValues(),
-                        colors = ButtonDefaults.buttonColors(containerColor = allButtonColor),
-                        onClick = {
-                            sendAction(PatternPracticingAction.ChangeAllPatternGroupHoldersSelectionState)
-                        }
-                    ) {
-                        Text(text = "all", color = allButtonTextColor)
-                    }
+                    Spacer(modifier = Modifier.width(10.dp))
 
-                    Spacer(modifier = Modifier.width(8.dp))
-
-                    Row(
-                        modifier = Modifier
-                            .border(
-                                width = 1.dp,
-                                color = Color(0xFF565656),
-                                shape = RoundedCornerShape(50.dp)
-                            )
-                            .padding(6.dp),
-                    ) {
-                        PatterGroupNavigationButton(iconId = R.drawable.ic_arrow_back) {
-                            sendAction(PatternPracticingAction.SelectPreviousPatternGroup)
-                        }
-
-                        Spacer(modifier = Modifier.width(10.dp))
-
-                        PatterGroupNavigationButton(iconId = R.drawable.ic_arrow_forward) {
-                            sendAction(PatternPracticingAction.SelectNextPatternGroup)
-                        }
+                    PatterGroupNavigationButton(iconId = R.drawable.ic_arrow_forward) {
+                        sendAction(PatternPracticingAction.SelectNextPatternGroup)
                     }
                 }
             }
@@ -860,6 +862,34 @@ private fun SelectedTextMenu(
                 }
             }
         }
+    }
+}
+
+@Composable
+fun RoundedButton(
+    activated: Boolean,
+    activatedBackground: Color,
+    onClink: () -> Unit,
+    content: @Composable() (RowScope.() -> Unit)
+) {
+    val (
+        buttonColor,
+        borderColor
+    ) = if (activated) {
+        activatedBackground to Color.Transparent
+    } else {
+        Color(0x19A2A2A2) to Color(0xFF686868)
+    }
+
+    Button(
+        modifier = Modifier.defaultMinSize(minWidth = 41.dp, minHeight = 41.dp),
+        shape = RoundedCornerShape(50.dp),
+        border = BorderStroke(width = 1.dp, color = borderColor),
+        contentPadding = PaddingValues(),
+        colors = ButtonDefaults.buttonColors(containerColor = buttonColor),
+        onClick = onClink
+    ) {
+        content()
     }
 }
 

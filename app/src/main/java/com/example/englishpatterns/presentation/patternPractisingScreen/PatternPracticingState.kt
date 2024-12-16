@@ -7,6 +7,7 @@ data class PatternPracticingState(
     val patternGroupHolders: List<PatternGroupHolder> = emptyList(),
     val currentPattern: PatternGroupUnitState? = null,
     val isTranslationHidden: Boolean = false,
+    val isPatternGroupHolderSateShuffled: Boolean = false,
     val selectedTextInfo: LoadingState<SelectedTextInfo> = LoadingState.Non,
     val pronunciationLoadingState:  LoadingState<Unit> = LoadingState.Non,
 )

@@ -47,12 +47,12 @@ class PatternPracticingViewModel(
 
     private val currentPatterGroupUnitState = MutableStateFlow<PatternGroupUnitState?>(value = null)
 
-    private val currentPracticePatternGroupHolderSate = MutableStateFlow<PatternGroupHolder?>(
+    private val currentPatternGroupHoldersSate = MutableStateFlow<PatternGroupHolder?>(
         value = patternGroupHoldersSate.value.mapToSingleChosenPatternHolderGroup()
     )
 
     private var patternManager = PatternManager(
-        patternGroupHolder = currentPracticePatternGroupHolderSate.value
+        patternGroupHolder = currentPatternGroupHoldersSate.value
     )
 
     private var fetchTextInfoJob: Job? = null
@@ -95,11 +95,13 @@ class PatternPracticingViewModel(
             }
 
             PatternPracticingAction.ShufflePatternPairs -> {
-                currentPracticePatternGroupHolderSate.value =
+                currentPatternGroupHoldersSate.value =
                     patternGroupHoldersSate.value.mapToSingleChosenShuffledPatternGroupHolder()
 
+                setShufflingState(value = true)
+
                 patternManager = PatternManager(
-                    patternGroupHolder = currentPracticePatternGroupHolderSate.value
+                    patternGroupHolder = currentPatternGroupHoldersSate.value
                 )
                 currentPatterGroupUnitState.value = patternManager.nextPatternGroupUnitState()
             }
@@ -436,12 +438,15 @@ class PatternPracticingViewModel(
     }
 
     private fun resetCurrentPatternGroupUnitState() {
-        currentPracticePatternGroupHolderSate.value =
+        currentPatternGroupHoldersSate.value =
             patternGroupHoldersSate.value.mapToSingleChosenPatternHolderGroup()
 
+        setShufflingState(value = false)
+
         patternManager = PatternManager(
-            patternGroupHolder = currentPracticePatternGroupHolderSate.value
+            patternGroupHolder = currentPatternGroupHoldersSate.value
         )
+
         currentPatterGroupUnitState.value = patternManager.nextPatternGroupUnitState()
     }
 
@@ -453,11 +458,13 @@ class PatternPracticingViewModel(
                 }
             }
 
-            currentPracticePatternGroupHolderSate.value =
+            setShufflingState(value = false)
+
+            currentPatternGroupHoldersSate.value =
                 patternGroupHoldersSate.value.mapToSingleChosenPatternHolderGroup()
 
             patternManager = PatternManager(
-                patternGroupHolder = currentPracticePatternGroupHolderSate.value
+                patternGroupHolder = currentPatternGroupHoldersSate.value
             )
         }
     }
@@ -468,13 +475,21 @@ class PatternPracticingViewModel(
      * weakly memorized patterns is one of the selected groups.
      * **/
     private fun updateCurrentPatternGroupUnitState(newPattern: Pattern) {
-        currentPracticePatternGroupHolderSate.update {
+        currentPatternGroupHoldersSate.update {
             it?.copy(patterns = it.patterns + newPattern)
         }
 
         currentPatterGroupUnitState.value = patternManager.updatedPatternGroupUnitState(
-            updatedPatternGroupHolder = currentPracticePatternGroupHolderSate.value
+            updatedPatternGroupHolder = currentPatternGroupHoldersSate.value
         )
+    }
+
+    private fun setShufflingState(value: Boolean) {
+        val shouldUpdate = value.not() || state.value.patternGroupHolders.any { it.isChosen }
+
+        if (shouldUpdate) {
+            state.update { it.copy(isPatternGroupHolderSateShuffled = value) }
+        }
     }
 
     class Factory(
