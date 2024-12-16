@@ -7,6 +7,11 @@ sealed interface Constants {
         const val CLIPBOARD_CLIP_DATA_LABEL = "sentence"
     }
 
+    data object Uri : Constants {
+
+        const val ENCODED_PERCENT_SYMBOL = "%25"
+    }
+
     data object WordHunt : Constants {
 
         const val BASE_URL = "https://wooordhunt.com/word/"

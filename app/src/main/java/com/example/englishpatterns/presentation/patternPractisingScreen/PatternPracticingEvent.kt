@@ -5,6 +5,11 @@ import com.example.englishpatterns.data.common.ClipboardUnit
 
 sealed interface PatternPracticingEvent {
 
+    data class WarmupCustomTabs(
+        val url: String,
+        val clipboardUnit: ClipboardUnit,
+    ) : PatternPracticingEvent
+
     data class RedirectionToWordHuntAppRequired(
         val intent: Intent,
         val url: String,
@@ -16,7 +21,9 @@ sealed interface PatternPracticingEvent {
     data class RedirectionToGhatGptAppRequired(
         val intent: Intent,
         val url: String,
-        val clipboardUnit: ClipboardUnit,
+        val ruClipboardUnit: ClipboardUnit,
+        val enClipboardUnit: ClipboardUnit,
+        val selectedClipboardUnit: ClipboardUnit,
     ) : PatternPracticingEvent
 
     data class RedirectionToYouGlishPageRequired(

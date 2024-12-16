@@ -5,12 +5,12 @@ plugins {
 }
 
 android {
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.englishpatterns"
         minSdk = 25
-        targetSdk =  33
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -72,7 +72,8 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.8.2")
 
     /** DataStore **/
-    implementation("androidx.datastore:datastore:1.1.1")
+    implementation(libs.androidx.datastore)
+    implementation(libs.datastore.preferences)
 
     /** Kotlin Serialization **/
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
@@ -85,4 +86,7 @@ dependencies {
 
     /** SplashScreen API **/
     implementation(libs.androidx.core.splashscreen)
+
+    /** Custom Tabs **/
+    implementation(libs.androidx.browser)
 }
