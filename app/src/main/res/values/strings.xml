@@ -4837,13 +4837,13 @@
 
     <string-array name="good_bad_far_old">
         <item>Моя работа лучше, чем твоя.==My work is better than yours.</item>
-        <item>Идея Майка была лучше, чем идея Джима.==Mike\’s idea was better than Jim\’s.</item>
-        <item>Велосипед лучше для меня, чем мотоцикл.==A bicycle is better for me than a motorbike.</item>
+        <item>Идея Майка была лучше, чем идея Джима.==Mike\'s idea was better than Jim\'s.</item>
+        <item>Велосипед лучше для меня, чем мотоцикл.==A bicycle is better for me than a motorcycle.</item>
         <item>Погода сегодня лучше, чем была вчера?==Is the weather better today than it was yesterday?</item>
-        <item>Это лучший фильм, который я когда-либо видел.==This is the best film I have ever seen.</item>
+        <item>Это лучший фильм, который я когда-либо видел.==This is the best movie I have ever seen.</item>
         <item>Колин – лучший студент в нашей группе.==Colin is the best student in our group.</item>
-        <item>«Война и мир» лучшая книга Толстого?==Is ‘War and Peace\’ the best book by Tolstoy?</item>
-        <item>Какая у Мадонны лучшая песня?==What is Madonna\’s best song?</item>
+        <item>«Война и мир» лучшая книга Толстого?==Is \'War and Peace\' the best book by Tolstoy?</item>
+        <item>Какая у Мадонны лучшая песня?==What is Madonna\'s best song?</item>
         <item>Погода хуже сегодня, чем была вчера.==The weather is worse today than it was yesterday.</item>
         <item>Качество этого устройства хуже, чем оно было раньше.==The quality of this device is worse than it used to be.</item>
         <item>Мои волосы хуже, чем твои?==Is my hair worse than yours?</item>
@@ -4851,54 +4851,54 @@
         <item>Он худший менеджер в нашей компании.==He is the worst manager in our company.</item>
         <item>Это худшая песня, которую ты когда-либо пел.==This is the worst song you have ever sung.</item>
         <item>Это худший ресторан в вашем городе?==Is it the worst restaurant in your city?</item>
-        <item>Это худшие туфли из всех?==Are they the worst shoes of all?</item>
+        <item>Это худшие туфли из всех?==Are these the worst shoes of all?</item>
         <item>Посмотри на другой (дальний) берег озера.==Look at the farther shore of the lake.</item>
         <item>Синий дом на другой (дальней) стороне улицы.==The blue house is on the farther side of the street.</item>
         <item>Позвоните по этому номеру для дальнейших деталей.==Call this number for further details.</item>
-        <item>У вас есть ещё (дальнейшие) вопросы?==Have you got any further questions?</item>
+        <item>У вас есть ещё (дальнейшие) вопросы?==Do you have any further questions?</item>
         <item>Поставь коробку в самый дальний угол комнаты.==Put the box in the farthest corner of the room.</item>
-        <item>Они достигли самой дальней северной точки страны.==They reached the farthest north point of the country.</item>
+        <item>Они достигли самой дальней северной точки страны.==They reached the farthest northern point of the country.</item>
         <item>Эта планета – самая дальняя от солнца.==This planet is the farthest from the sun.</item>
         <item>Я нашёл её в части сада, самой дальней от дома.==I found her in the part of the garden farthest from the house.</item>
-        <item>Мой брат старше меня на 5 лет.==My brother is 5 years older than me/I am.</item>
+        <item>Мой брат старше меня на 5 лет.==My brother is 5 years older than me.</item>
         <item>Хэлен старше, чем Мэри.==Helen is older than Mary.</item>
         <item>Он самый старший мальчик в нашем классе.==He is the oldest boy in our class.</item>
-        <item>Кто самый старший из твоих друзей?==Who is the oldest of all your friends?</item>
+        <item>Кто самый старший из твоих друзей?==Who is the oldest of your friends?</item>
     </string-array>
 
     <string-array name="as_as">
         <item>Она такая же красивая, как и её сестра.==She is as beautiful as her sister.</item>
         <item>Он такой же сильный, как и его тренер.==He is as strong as his coach.</item>
         <item>Моя машина такая же дорогая, как твоя.==My car is as expensive as yours.</item>
-        <item>Его работа такая же важная, как и у этого менеджера.==His work is as important as this manager\’s.</item>
-        <item>Эта книга такая же толстая, как «Война и мир».==This book is as thick as ‘War and Peace\’.</item>
+        <item>Его работа такая же важная, как и у этого менеджера.==His work is as important as that manager\'s.</item>
+        <item>Эта книга такая же толстая, как «Война и мир».==This book is as thick as \‘War and Peace\’.</item>
         <item>Джон такой же высокий, как и Майк.==John is as tall as Mike.</item>
         <item>Эти туфли такие же дешёвые, как и эти тапочки.==These shoes are as cheap as these slippers.</item>
-        <item>Этот фильм такой же интересный, как «Друзья».==This film is as interesting as ‘Friends\’.</item>
+        <item>Этот фильм такой же интересный, как «Друзья».==This movie is as interesting as \‘Friends\’.</item>
         <item>Стиральная машина такая же полезная, как и посудомоечная машина.==A washing machine is as useful as a dishwasher.</item>
-        <item>Мой друг такой же умный, как и наш профессор.==My friend is as clever as our professor.</item>
+        <item>Мой друг такой же умный, как и наш профессор.==My friend is as smart as our professor.</item>
     </string-array>
 
     <string-array name="not_so_as_not_as_as">
-        <item>Моё кресло не такое удобное, как твоё.==My armchair is not so comfortable as yours.</item>
-        <item>Погода сегодня не такая хорошая, как была вчера.==The weather today is not so good as it was yesterday.</item>
+        <item>Моё кресло не такое удобное, как твоё.==My armchair isn\’t so comfortable as yours.</item>
+        <item>Погода сегодня не такая хорошая, как была вчера.==The weather today isn\’t so good as it was yesterday.</item>
         <item>Мои друзья не так счастливы, как твои.==My friends aren\’t so happy as yours.</item>
-        <item>Моя бабушка не такая старая, как его.==My grandmother is not so old as his.</item>
-        <item>Этот дом не такой большой, как тот, что на Парк Стрит.==This house was not so big as the one in Park Street.</item>
-        <item>Он был не такой умный, как его одноклассник.==He was not as intelligent as his class-mate.</item>
-        <item>Её машина была не такой дорогой, как его машина.==Her car was not as expensive as his.</item>
-        <item>Ресторан был не таким дешёвым, как кафе.==The restaurant was not as cheap as the cafe.</item>
-        <item>Автобус не такой быстрый, как такси.==The bus is not as fast as a taxi.</item>
-        <item>«Лада Калина» не так хороша, как «Рено».==A Lada Kalina is not as good as a Renault.</item>
+        <item>Моя бабушка не такая старая, как его.==My grandmother isn\’t so old as his.</item>
+        <item>Этот дом не такой большой, как тот, что на Парк Стрит.==This house isn\’t so big as the one on Park Street.</item>
+        <item>Он был не такой умный, как его одноклассник.==He wasn\’t as intelligent as his classmate.</item>
+        <item>Её машина была не такой дорогой, как его машина.==Her car wasn\’t as expensive as his.</item>
+        <item>Ресторан был не таким дешёвым, как кафе.==The restaurant wasn\’t as cheap as the cafe.</item>
+        <item>Автобус не такой быстрый, как такси.==The bus isn\’t as fast as a taxi.</item>
+        <item>«Лада Калина» не так хороша, как «Рено».==A Lada Kalina isn\’t as good as a Renault.</item>
     </string-array>
 
     <string-array name="twice_times_as_as">
         <item>Эта машина в два раза дороже, чем та.==This car is twice as expensive as that one.</item>
         <item>Моя зарплата в три раза выше, чем у моей жены.==My salary is 3 times as high as my wife\’s.</item>
         <item>Небоскрёб в 4 раза выше, чем наш дом.==The skyscraper is 4 times as tall as our house.</item>
-        <item>Это кольцо в 4 раза дешевле, чем серьги.==This ring is four times as cheap as the ear-rings.</item>
+        <item>Это кольцо в 4 раза дешевле, чем серьги.==This ring is four times as cheap as the earrings.</item>
         <item>Люси собрала в два раза больше грибов, чем Джон.==Lucy has picked twice as many mushrooms as John.</item>
-        <item>В его квартире в два раза больше комнат, чем в моей.==There are twice as many rooms in his flat as in mine.</item>
+        <item>В его квартире в два раза больше комнат, чем в моей.==There are twice as many rooms in his apartment as in mine.</item>
         <item>На твоей тарелке в два раза больше мяса, чем у него.==There is twice as much meat on your plate as on his.</item>
         <item>Мой словарь в три раза толще, чем твой.==My dictionary is 3 times as thick as yours.</item>
         <item>Мой чемодан в два раза тяжелее, чем моя сумка.==My suitcase is twice as heavy as my handbag.</item>
@@ -4909,26 +4909,26 @@
         <item>Её волосы того же цвета, что у её сестры.==Her hair is the same color as her sister\’s.</item>
         <item>Её зарплата такая же, как моя.==Her salary is the same as mine.</item>
         <item>Моя подруга того же возраста, что и моя сестра.==My friend is the same age as my sister.</item>
-        <item>Я буду пить то же вино, что и ты.==I will have the same wine as you.</item>
+        <item>Я буду пить то же вино, что и ты.==I will drink the same wine as you.</item>
         <item>Её машина того же цвета, что моя.==Her car is the same color as mine.</item>
         <item>Мой день рождения в тот же, день, что у моей мамы.==My birthday is on the same day as my mother\’s.</item>
         <item>Мы приехали в то же время, что и наши партнёры.==We arrived at the same time as our partners.</item>
-        <item>Мы получили тот же приз, что и наши соперники.==We got the same prize as our rivals.</item>
-        <item>Я живу на той же улице, что и вы.==I live in the same street as you.</item>
-        <item>Я могу делать ту же работу, что они.==I can do the same work as they do.</item>
+        <item>Мы получили тот же приз, что и наши соперники.==We got the same prize as our competitors.</item>
+        <item>Я живу на той же улице, что и вы.==I live on the same street as you.</item>
+        <item>Я могу делать ту же работу, что они.==I can do the same work as they can.</item>
     </string-array>
 
     <string-array name="the_the">
-        <item>Чем больше мы работаем, тем больше полезных вещей мы делаем.==The more we work the more useful things we do.</item>
-        <item>Чем лучше я знаю тебя, тем лучше я понимаю твои проблемы.==The better I know you the better I understand your problems.</item>
-        <item>Чем длиннее твой рабочий день, тем меньше времени ты проводишь со своей семьёй.==The longer your working day is the less time you spend with your family.</item>
-        <item>Чем теплее погода, тем лучше.==The warmer the weather is the better.</item>
-        <item>Чем усерднее ты работаешь, тем больше денег ты получаешь.==The harder you work the more money you earn.</item>
-        <item>Чем лучше вы знаете язык, тем лучше вы говорите.==The better you know the language the better you speak.</item>
-        <item>Чем скорее ты придёте, тем лучше.==The sooner you will come the better.</item>
-        <item>Чем громче вы слушаете музыку, тем хуже.==The louder music you listen to the worse.</item>
-        <item>Чем быстрее вы едете, тем это опаснее. ==The faster you drive the more dangerous it is.</item>
-        <item>Чем он сильнее, тем лучше.==The stronger he is the better.</item>
+        <item>Чем больше мы работаем, тем больше полезных вещей мы делаем.==The more we work, the more useful things we do.</item>
+        <item>Чем лучше я знаю тебя, тем лучше я понимаю твои проблемы.==The better I know you, the better I understand your problems.</item>
+        <item>Чем длиннее твой рабочий день, тем меньше времени ты проводишь со своей семьёй.==The longer your working day is, the less time you spend with your family.</item>
+        <item>Чем теплее погода, тем лучше.==The warmer the weather is, the better.</item>
+        <item>Чем усерднее ты работаешь, тем больше денег ты получаешь.==The harder you work, the more money you earn.</item>
+        <item>Чем лучше вы знаете язык, тем лучше вы говорите.==The better you know the language, the better you speak.</item>
+        <item>Чем скорее ты придёте, тем лучше.==The sooner you come, the better.</item>
+        <item>Чем громче вы слушаете музыку, тем хуже.==The louder the music you listen to, the worse it is.</item>
+        <item>Чем быстрее вы едете, тем это опаснее. ==The faster you drive, the more dangerous it is.</item>
+        <item>Чем он сильнее, тем лучше.==The stronger he is, the better.</item>
     </string-array>
 
     <string-array name="adjectives_comparative_city">
