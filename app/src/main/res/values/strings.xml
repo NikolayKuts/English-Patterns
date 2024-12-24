@@ -4753,59 +4753,58 @@
     </string-array>
 
     <string-array name="there_verb">
-        <item>Остается один вопрос.==There remains one question .</item>
-        <item>Звонок (звонят).==There goes the bell .</item>
+        <item>Остается один вопрос.==There remains one question.</item>
+        <item>Звонок (звонят).==There goes the bell.</item>
         <item>Вновь идет дождь.==There comes the rain again.</item>
         <item>Мой старый друг идет.==There comes my old friend.</item>
         <item>Вновь идет мой ребенок.==There goes my child again.</item>
         <item>Внутри тебя что-то потрясающее.==There exists something amazing inside you.</item>
-        <item>В жизни наступает момент, когда ты сожалеешь, что ты не ребенок.==There comes a point of life, when you regret you aren\’t a child.</item>
+        <item>В жизни наступает момент, когда ты сожалеешь, что ты не ребенок.==There comes a point in life, when you regret you aren\’t a child.</item>
         <item>В том городе лежит порт.==There lies the port in that city.</item>
         <item>Между ними, похоже, произошло какое-то недоразумение.==There seems to be some misunderstanding between them.</item>
         <item>Мой ужин стоит (лежит).==There lies my dinner.</item>
         <item>Мой поезд идет.==There goes my train.</item>
         <item>На горизонте появляется дымок.==There appears smoke on the horizon.</item>
-        <item>В том городишке живет один старый человек, который ненавидит молодых.==There lives one old person in that town, who hates young people.</item>
-        <item>Однако, танцоры, которые отличаются в чисто классических ролях, остаются.==There remain, however, dancers who excel in the purely classical roles.</item>
-        <item>Следует волна разочарования, когда компания вводит новую модель.==There follows a wave of disappointment, when a company introduces a new model.</item>
+        <item>В том городишке живет один старый человек, который ненавидит молодых.==There lives an old man in that town who hates young people.</item>
+        <item>Однако, танцоры, которые отличаются в чисто классических ролях, остаются.==There remain, however, dancers who excel in purely classical roles.</item>
+        <item>Следует волна разочарования, когда компания вводит новую модель.==There follows a wave of disappointment when a company introduces a new model.</item>
         <item>Жил мудрец на берегу.==There lived a sage on the shore.</item>
         <item>В дверь постучали.==There came a knock at the door.</item>
-        <item>В зал вдруг вошел уродливый старик.==Suddenly there entered an ugly old man to the hall.</item>
-        <item>Странно выглядевшая девушка пришла с собакой.==There came an old looking girl with a big crocodile.</item>
+        <item>В зал вдруг вошел уродливый старик.==Suddenly there entered an ugly old man into the hall.</item>
+        <item>Странно выглядевшая девушка пришла с собакой.==There came a strange-looking girl with a dog.</item>
         <item>Последовала новая серия экспериментов.==There followed a new series of experiments.</item>
         <item>В этот момент произошло одно из тех событий, которые кажутся необъяснимыми.==At this point there occurred one of those seemingly inexplicable events.</item>
         <item>В деревне жила модель.==There lived a model in the village.</item>
-        <item>Настал день, когда ты устал жить дальше.==There came a day when you fed up of carrying on.</item>
+        <item>Настал день, когда ты устал жить дальше.==There came a day when you were fed up with carrying on.</item>
         <item>Так случилось, что рядом не было никого, кто бы мог ей помочь.==There happened to be no one nearby to help her.</item>
-        <item>Утром появилось зловещее предзнаменование.==There came an ominous indication In the morning.</item>
-        <item>В те дни существовало истинное товарищество в нашей профессии.==There existed a true camaraderie in our profession in those days.</item>
-        <item>После того, как я прибыл, возникли новые темы для обсуждения.==There arose a new topic for conversation after I arrived.</item>
+        <item>Утром появилось зловещее предзнаменование.==There came an ominous sign in the morning.</item>
+        <item>В те дни существовало истинное товарищество в нашей профессии.==There existed true camaraderie in our profession in those days.</item>
+        <item>После того, как я прибыл, возникли новые темы для обсуждения.==After I arrived, there arose new topics for discussion.</item>
         <item>Внутри нее жило маленькое испуганное существо.==There lived a small frightened creature inside her.</item>
-        <item>Осталось сделать много работы.==There has much work remained to do</item>
-        <item>Много парадоксов возникло.==There have lots of paradoxes arisen.</item>
+        <item>Осталось сделать много работы.==There remains much work to be done.</item>
+        <item>Много парадоксов возникло.==There have been many paradoxes arisen.</item>
         <item>Он пришел с женой.==There has he come with his wife.</item>
-        <item>Словно дьявол из ада появилась она==There has she appeared like a devil from the hell.</item>
-        <item>Послышался долгий разрывающийся звук с последующим глухим стуком ==There has a long tearing sound come, followed by a heavy thud.</item>
-        <item>Что-то странное случилось.==There has something strange happened.</item>
-        <item>Возникли новые трудности.==There have new difficulties arisen</item>
-        <item>Киллер убил свою жертву==There has the killer murdered his victim.</item>
-        <item>С неба упала звезда==There has the star fallen down from the sky</item>
+        <item>Послышался долгий разрывающийся звук с последующим глухим стуком.==There has come a long tearing sound followed by a heavy thud.</item>
+        <item>Что-то странное случилось.==There has happened something strange.</item>
+        <item>Возникли новые трудности.==There have arisen new difficulties.</item>
+        <item>Киллер убил свою жертву.==There has the killer murdered his victim.</item>
+        <item>С неба упала звезда.==There has the star fallen from the sky.</item>
     </string-array>
 
     <string-array name="adjectives_more">
         <item>«Мазда» дороже, чем «Дэу Матиз».==The Mazda is more expensive than the Daewoo Matiz.</item>
-        <item>Мой сын скучал на концерте сильнее, чем дочь.==My son was more bored during the concert than my daughter.</item>
-        <item>Фильм более захватывающий, чем книга.==The film is more exciting than the book.</item>
+        <item>Мой сын скучал на концерте сильнее, чем дочь.==My son was more bored at the concert than my daughter.</item>
+        <item>Фильм более захватывающий, чем книга.==The movie is more exciting than the book.</item>
         <item>Я чувствую себя сейчас более уставшим, чем вчера.==I feel more tired now than I did yesterday.</item>
-        <item>Кресло удобнее, чем диван?==Is the arm-chair more comfortable than the couch?</item>
+        <item>Кресло удобнее, чем диван?==Is the armchair more comfortable than the couch?</item>
         <item>Ваш музей современнее, чем Музей науки?==Is your museum more modern than the Museum of Science?</item>
         <item>Мэрилин Монро была популярней, чем Одри Хэпберн?==Was Marilyn Monroe more popular than Audrey Hepburn?</item>
         <item>Ваши задачи были сложней, чем мои?==Were your tasks more difficult than mine?</item>
         <item>Этот концерт был приятней, чем собрание?==Was this concert more enjoyable than the meeting?</item>
-        <item>Останкинская башня выше, чем Эйфелева башня.==The Ostankinskaya Tower is higher than the Eifel Tower.</item>
+        <item>Останкинская башня выше, чем Эйфелева башня.==The Ostankino Tower is taller than the Eiffel Tower.</item>
         <item>Мой торт больше, чем её.==My cake is bigger than hers.</item>
         <item>Самолёт быстрее, чем поезд.==A plane is faster than a train.</item>
-        <item>Квартира дешевле, чем дом.==A flat is cheaper than a house.</item>
+        <item>Квартира дешевле, чем дом.==An apartment is cheaper than a house.</item>
         <item>Россия больше, чем Испания.==Russia is bigger than Spain.</item>
         <item>Англия меньше, чем Канада.==England is smaller than Canada.</item>
         <item>Ваш чемодан был тяжелей, чем моя сумка?==Was your suitcase heavier than my bag?</item>
@@ -4815,25 +4814,25 @@
     </string-array>
 
     <string-array name="adjectives_the_most">
-        <item>Эта комедия самый интересный фильм, который я когда-либо смотрел.==This comedy is the most interesting film I have ever watched.</item>
+        <item>Эта комедия самый интересный фильм, который я когда-либо смотрел.==This comedy is the most interesting movie I have ever watched.</item>
         <item>Президент – самый важный человек в нашей компании.==The president is the most important person in our company.</item>
         <item>iPad – самый надёжный из моих устройств.==The iPad is the most reliable of my devices.</item>
-        <item>Физика была для меня самым сложным предметом в школе.==Physics was the most complicated subject for me at school.</item>
-        <item>Этот торговый центр – самый многолюдный в нашем городе.==This shopping center is the most crowded in our city.</item>
+        <item>Физика была для меня самым сложным предметом в школе.==Physics was the hardest subject for me in school.</item>
+        <item>Этот торговый центр – самый многолюдный в нашем городе.==This shopping mall is the most crowded in our city.</item>
         <item>Мэри – самая серьёзная девушка в нашей группе.==Mary is the most serious girl in our group.</item>
         <item>Моя новость - самая удивительная из всех.==My news is the most surprising of all.</item>
-        <item>Майк самый умный инженер в вашей компании?==Is Mike the most intelligent engineer in your company?</item>
-        <item>Наше собрание в пятницу было самым скучным из всех?==Was our meeting on Friday the most boring of all?</item>
+        <item>Майк самый умный инженер в вашей компании?==Is Mike the smartest engineer in your company?</item>
+        <item>Наше собрание в пятницу было самым скучным из всех?==Was our meeting on Friday the most boring one?</item>
         <item>Этот ресторан – самый дорогой в вашем городе?==Is this restaurant the most expensive in your city?</item>
-        <item>Это самый крепкий кофе, который я когда-либо пил.==This is the strongest coffee I have ever drunk.</item>
+        <item>Это самый крепкий кофе, который я когда-либо пил.==This is the strongest coffee I have ever had.</item>
         <item>Эта книга – самая толстая, которую я когда-либо читала.==This book is the thickest I have ever read.</item>
-        <item>Моя мама – самая высокая в нашей семье.==My mother is the tallest woman in our family.</item>
-        <item>Юбка Елены была самой короткой.==Helen\’s skirt was the shortest.</item>
+        <item>Моя мама – самая высокая в нашей семье.==My mother is the tallest in our family.</item>
+        <item>Юбка Елены была самой короткой.==Helen\'s skirt was the shortest.</item>
         <item>Волга самая длинная река в России?==Is the Volga the longest river in Russia?</item>
         <item>Это был самый холодный день года?==Was that the coldest day of the year?</item>
         <item>Он был самым старым работником в нашей компании?==Was he the oldest employee in our company?</item>
         <item>Он самый занятой человек в нашем офисе?==Is he the busiest person in our office?</item>
-        <item>Она самая счастливая девушка, которую ты когда-либо встречал?==Is she the happiest girl you have ever met?</item>
+        <item>Она самая счастливая девушка, которую ты когда-либо встречал?==Is she the happiest girl you\'ve ever met?</item>
     </string-array>
 
     <string-array name="good_bad_far_old">
