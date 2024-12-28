@@ -1723,10 +1723,10 @@
         <item>Она читает перед сном глянцевые журналы==She reads glossy magazines before going to bed</item>
         <item>Я чувствую себя сонным по понедельникам==I feel sleepy on Mondays</item>
         <item>Они обычно завтракают в ресторане==They usually have breakfast in the restaurant</item>
-        <item>Он работает в большой компании==He works in a big company</item>
+        <item>Он работает в большой компании==He works for a big company.</item>
         <item>Мы добираемся на работу на метро==We go to work by subway</item>
         <item>Он сидит в интернете по вечерам ==He surfs the Internet in the evenings</item>
-        <item>Я использую компьютер только для работы==I use computer for work only</item>
+        <item>Я использую компьютер только для работы==I use a computer only for work.</item>
         <item>Мы встречаемся с друзьями по выходным==We meet friends on the weekends</item>
         <item>Она ходит в спортзал после работы==She goes to the gym after work</item>
         <item>Они всегда слушают музыку в метро==They always listen to music on the subway."</item>
@@ -1740,7 +1740,7 @@
         <item>По вечерам я играю с моими детьми==I play with my kids (children) in the evenings</item>
         <item>Я готовлю каждый день==I cook every day</item>
         <item>Обычно он встает, умывается, чистит зубы и выходит из дома==Usually he gets up, washes his face, brushes his teeth and leaves the house</item>
-        <item>Мы ездим на велосипедах в парк по субботам==We cycle to the park on Saturdays</item>
+        <item>Мы ездим на велосипедах в парк по субботам==We ride bikes to the park on Saturdays.</item>
         <item>Иногда он звонит своему другу==He calls his friend sometimes</item>
         <item>Она всегда накрывает на стол, когда приходят друзья==She always lays the table when friends come</item>
         <item>Они готовят обед для родственников каждое воскресенье==They make dinner for their relatives every Sunday</item>
@@ -1795,7 +1795,7 @@
         <item>Где она играет с питомцами?==Where does she play with pets?</item>
         <item>Почему ты чувствуешь себя сонным?==Why do you feel sleepy?</item>
         <item>Как часто он ей звонит?==How often does he phone her?</item>
-        <item>Как часто они пользуются компьютером?==How often do they use computer?</item>
+        <item>Как часто они пользуются компьютером?==How often do they use a computer?</item>
         <item>Когда ты выходишь из дома?==When do you leave the house?</item>
         <item>Мы не выходим из дома, если погода плохая==We don\'t leave the house if the weather is bad</item>
         <item>Она одевается модно==She gets dressed fashionably</item>
@@ -1867,7 +1867,7 @@
         <item>Ей нравится работать с людьми?==Does she like working with people?</item>
         <item>Им нравится работать с бумагами?==Do they like working with papers?</item>
         <item>Тебе нравится работать с животными?==Do you like working with animals?</item>
-        <item>Тебе нравится ездить на велосипеде в университет?==Do you like cycling to university?</item>
+        <item>Тебе нравится ездить на велосипеде в университет?==Do you like riding a bike to university?</item>
         <item>Тебе нравится слушать пианино?==Do you like listening to the piano music?</item>
         <item>Тебе нравится водить машину?==Do you like driving?</item>
         <item>Почему тебе нравится так много спать?==Why do you like sleeping so much?</item>
@@ -2592,7 +2592,7 @@
         <item>Какие животные есть в этом зоопарке?==Which animals are there in this zoo?</item>
         <item>Какая кухня в этом ресторане?==What cuisine is there in this restaurant?</item>
         <item>Сколько улиц в этом районе?==How many streets are there in this district?</item>
-        <item>Сколько каналов в центре города?==How many canals in the downtown?</item>
+        <item>Сколько каналов в центре города?==How many canals are there in the city center?</item>
         <item>Сколько машин на парковке?==How many cars are there in the parking?</item>
         <item>Сколько магазинов в этом торговом центре?==How many shops are there in this mall?</item>
         <item>Что есть между этими зданиями?==What is there between these buildings?</item>
@@ -2761,7 +2761,7 @@
         <item>Он моет помидоры каждые два часа.==He washes tomatoes every two hours.</item>
         <item>Мой ребенок подходит ко мне каждый раз, когда я режу картошку.==My kid comes to me every time I cut potatoes.</item>
         <item>Она аллергик и она всегда чешется, когда варит рис.==She\'s allergic, and she always itches when she cooks rice.</item>
-        <item>Моя сестра включает плиту на каждых выходных.==My sister switches on the oven every weekend.</item>
+        <item>Моя сестра включает плиту на каждых выходных.==My sister turns on the stove every weekend.</item>
         <item>Он всегда трогает тесто, когда я готовлю ему торт.==He always touches the dough when I\'m making a cake for him.</item>
         <item>Его сестра ходит в магазин каждую пятницу.==His sister goes to the shop every Friday.</item>
         <item>Она делает пасту уникальным способом.==She makes pasta in a unique way.</item>
@@ -3573,7 +3573,7 @@
         <item>Раньше Кристина ела мясо, а теперь она вегетарианка.==Christine used to eat meat, but now she is a vegetarian.</item>
         <item>Раньше Сара была толстой, но сейчас она худая.==Sarah used to be fat, but now she is thin.</item>
         <item>Раньше Джордж был лучшим учеником в классе, но теперь лучшая Лена.==George used to be the best student in class, but now Lena is the best.</item>
-        <item>Раньше апельсины во Флориде стоили очень дешево, но теперь они очень дорогие.==Oranges used to be very cheap in Florida, but now they are very expensive.</item>
+        <item>Апельсины раньше были очень дешёвыми во Флориде, но теперь они стали очень дорогими.==Oranges used to be very cheap in Florida, but now they are very expensive.</item>
         <item>Главная беда нашего времени в том, что будущее больше не выглядит таким, каким он выглядело раньше==The main trouble of our time is that the future no longer looks the way it used to.</item>
         <item>Тебе раньше нравилось учиться в школе?==Did you use to like school?</item>
         <item>Когда я раньше работал почтальоном, я вставал рано утром.==When I worked as a postman, I used to get up early.</item>
@@ -4766,7 +4766,6 @@
         <item>Мой поезд идет.==There goes my train.</item>
         <item>На горизонте появляется дымок.==There appears smoke on the horizon.</item>
         <item>В том городишке живет один старый человек, который ненавидит молодых.==There lives an old man in that town who hates young people.</item>
-        <item>Однако, танцоры, которые отличаются в чисто классических ролях, остаются.==There remain, however, dancers who excel in purely classical roles.</item>
         <item>Следует волна разочарования, когда компания вводит новую модель.==There follows a wave of disappointment when a company introduces a new model.</item>
         <item>Жил мудрец на берегу.==There lived a sage on the shore.</item>
         <item>В дверь постучали.==There came a knock at the door.</item>
@@ -4775,7 +4774,7 @@
         <item>Последовала новая серия экспериментов.==There followed a new series of experiments.</item>
         <item>В этот момент произошло одно из тех событий, которые кажутся необъяснимыми.==At this point there occurred one of those seemingly inexplicable events.</item>
         <item>В деревне жила модель.==There lived a model in the village.</item>
-        <item>Настал день, когда ты устал жить дальше.==There came a day when you were fed up with carrying on.</item>
+        <item>Настал день, когда ты был сыт по горло продолжать/продолжением.==There came a day when you were fed up with carrying on.</item>
         <item>Так случилось, что рядом не было никого, кто бы мог ей помочь.==There happened to be no one nearby to help her.</item>
         <item>Утром появилось зловещее предзнаменование.==There came an ominous sign in the morning.</item>
         <item>В те дни существовало истинное товарищество в нашей профессии.==There existed true camaraderie in our profession in those days.</item>
@@ -4783,7 +4782,7 @@
         <item>Внутри нее жило маленькое испуганное существо.==There lived a small frightened creature inside her.</item>
         <item>Осталось сделать много работы.==There remains much work to be done.</item>
         <item>Много парадоксов возникло.==There have been many paradoxes arisen.</item>
-        <item>Он пришел с женой.==There has he come with his wife.</item>
+        <item>Он пришел с женой.==There he has come with his wife.</item>
         <item>Послышался долгий разрывающийся звук с последующим глухим стуком.==There has come a long tearing sound followed by a heavy thud.</item>
         <item>Что-то странное случилось.==There has happened something strange.</item>
         <item>Возникли новые трудности.==There have arisen new difficulties.</item>
@@ -4826,7 +4825,7 @@
         <item>Этот ресторан – самый дорогой в вашем городе?==Is this restaurant the most expensive in your city?</item>
         <item>Это самый крепкий кофе, который я когда-либо пил.==This is the strongest coffee I have ever had.</item>
         <item>Эта книга – самая толстая, которую я когда-либо читала.==This book is the thickest I have ever read.</item>
-        <item>Моя мама – самая высокая в нашей семье.==My mother is the tallest in our family.</item>
+        <item>Моя мама – самая высокая в нашей семье.==My mon is the tallest in our family.</item>
         <item>Юбка Елены была самой короткой.==Helen\'s skirt was the shortest.</item>
         <item>Волга самая длинная река в России?==Is the Volga the longest river in Russia?</item>
         <item>Это был самый холодный день года?==Was that the coldest day of the year?</item>
@@ -4911,7 +4910,7 @@
         <item>Моя подруга того же возраста, что и моя сестра.==My friend is the same age as my sister.</item>
         <item>Я буду пить то же вино, что и ты.==I will drink the same wine as you.</item>
         <item>Её машина того же цвета, что моя.==Her car is the same color as mine.</item>
-        <item>Мой день рождения в тот же, день, что у моей мамы.==My birthday is on the same day as my mother\’s.</item>
+        <item>Мой день рождения в тот же, день, что у моей мамы.==My birthday is on the same day as my mom\'s.</item>
         <item>Мы приехали в то же время, что и наши партнёры.==We arrived at the same time as our partners.</item>
         <item>Мы получили тот же приз, что и наши соперники.==We got the same prize as our competitors.</item>
         <item>Я живу на той же улице, что и вы.==I live on the same street as you.</item>
@@ -4923,7 +4922,7 @@
         <item>Чем лучше я знаю тебя, тем лучше я понимаю твои проблемы.==The better I know you, the better I understand your problems.</item>
         <item>Чем длиннее твой рабочий день, тем меньше времени ты проводишь со своей семьёй.==The longer your working day is, the less time you spend with your family.</item>
         <item>Чем теплее погода, тем лучше.==The warmer the weather is, the better.</item>
-        <item>Чем усерднее ты работаешь, тем больше денег ты получаешь.==The harder you work, the more money you earn.</item>
+        <item>Чем усерднее ты работаешь, тем больше денег ты зарабатываешь.==The harder you work, the more money you earn.</item>
         <item>Чем лучше вы знаете язык, тем лучше вы говорите.==The better you know the language, the better you speak.</item>
         <item>Чем скорее ты придёте, тем лучше.==The sooner you come, the better.</item>
         <item>Чем громче вы слушаете музыку, тем хуже.==The louder the music you listen to, the worse it is.</item>
@@ -4967,7 +4966,7 @@
         <item>Еда в этом модном кафе вкусней, чем напитки?==Is the food in this trendy cafe tastier than the drinks?</item>
         <item>Здесь воздух чище, чем в лесу?==Is the air cleaner here than in the forest?</item>
         <item>Почему ты думаешь, что консерватория скучнее, чем опера?==Why do you think the conservatory is duller than the opera house?</item>
-        <item>Кто больше любит ходить пешком, чем ездить на автобусе?==Who prefers walking more than riding the bus?</item>
+        <item>Кто больше любит ходить пешком, чем ездить на автобусе?==Who likes walking more than riding the bus?</item>
         <item>Что лучше поездки на гондоле?==What is better than a gondola ride?</item>
         <item>Когда мы увидим самый старый храм?==When will we see the oldest temple?</item>
         <item>Где самый большой стадион, который он когда-либо видел?==Where is the biggest stadium he has ever seen?</item>
@@ -5010,7 +5009,7 @@
         <item>Их объяснение было проще и ближе к истине==Their explanation was simpler and closer to the truth.</item>
         <item>Это самый простой способ заслужить доверие==It\'s the simplest way to earn trust.</item>
         <item>Самый близкий ее друг погиб в выходные==Her closest friend died over the weekend.</item>
-        <item>Это гораздо дальше, чем я думала==It\'s farther away than I thought.</item>
+        <item>Это гораздо дальше, чем я думала==It\'s much farther than I thought.</item>
         <item>Он живет в самых отдаленных уголках земного шара==He lives in the farthest corners of the earth.</item>
         <item>Помните, никто не хуже, чем вы==Remember, nobody is worse than you.</item>
         <item>Он всегда думает о людях самое плохое==He always thinks the worst of everyone.</item>
@@ -5020,7 +5019,7 @@
         <item>Он лучший писатель ==He is the best writer.</item>
         <item>Сегодня жарче, чем вчера.==Today is hotter than yesterday.</item>
         <item>Сегодня самый жаркий день==Today is the hottest day.</item>
-        <item>Этот путь более длинный (длиннее) ==It\'s a longer way.</item>
+        <item>Этот путь более длинный (длиннее) ==This way is longer.</item>
         <item>Это самый длинный путь==It\'s the longest way.</item>
         <item>Он рассказал нам о более счастливом человеке==He told us about a happier person.</item>
         <item>Она знает самого счастливого человека==She knows the happiest person.</item>
@@ -5122,7 +5121,6 @@
         <item>В Интернете можно найти любую информацию.==You can find any information on the Internet.</item>
         <item>Алекс может рисовать.==Alex can draw.</item>
         <item>Ты придешь?==Can you come?</item>
-        <item>Какие наркотики ты можешь мне продать?==What drugs can you sell me?</item>
         <item>Где я могу взять ручку?==Where can I get a pen?</item>
         <item>Никто не может купить здоровье и счастье.==Nobody can buy health and happiness.</item>
         <item>Не каждый может быть миллиардером.==Not everyone can be a billionaire.</item>
@@ -5143,8 +5141,8 @@
         <item>Не могли бы вы повторить это медленнее?==Could you repeat that more slowly, please?</item>
         <item>Вы не дадите мне свой словарь?==Could you give me your dictionary?</item>
         <item>Не могли бы вы показать мне дорогу к площади?==Could you show me the way to the square?</item>
-        <item>Извините, как пройти к этому месту?==Could you tell me how I can get to this place?</item>
-        <item>Скажите, пожалуйста, как пройти в центр города==Excuse me, could you tell me how to get to the city center (the subway)?</item>
+        <item>Извините, вы могли бы мне сказать, как пройти к этому месту?==Excuse me, could you tell me how I can get to this place?</item>
+        <item>Извините, пожалуйста, вы могли бы сказать как пройти в центр города==Excuse me please, could you tell me how to get to the city center (the subway)?</item>
         <item>Покажите на плане, где мы сейчас находимся==Could you please point out where we are on this map?</item>
         <item>Не могли бы вы мне подсказать сколько это стоит?==Could you tell me how much it costs?</item>
         <item>Подскажите, где я могу купить билеты?==Could you tell me where I can buy tickets?</item>
@@ -5290,7 +5288,6 @@
         <item>Я могу (делать) все.==I can do everything.</item>
         <item>Нам следует взять перерыв.==We should take a break.</item>
         <item>Могу я увидеть продюсера?==Can I see the producer?</item>
-        <item>Неужели здесь в середине июля так холодно?==Could it be so cold in the middle of July here?</item>
         <item>Куда нам (следует) пойти?==Where should we go?</item>
         <item>Можно нам войти?==May we come in?</item>
         <item>Вы должны выбраться отсюда==You must get out of here.</item>
@@ -5335,25 +5332,24 @@
     <string-array name="gotta">
         <item>Человек должен делать то, что он должен делать==A man\'s gotta do what a man\'s gotta do</item>
         <item>Я должен позвонить домой прямо сейчас. Моя мама будет беспокоиться==I\'ve gotta call home right now. My mom will be worried.</item>
-        <item>Ты должен переодеться сейчас. Матч начнется через пять минут==You gotta get changed right away. The match starts in five minutes.</item>
+        <item>Ты должен переодеться немедлено. Матч начнется через пять минут==You gotta get changed right away. The match starts in five minutes.</item>
         <item>Шевелись, нам нужно сбыть эту штуку, парень==Come on, we gotta deal this stuff, man.</item>
         <item>Мы должны избавиться от этого барахла или мы будем пойманы и окажемся в чьем-нибудь багажнике.==We gotta get rid of this stuff or we\'re gonna get caught and end up in someone\'s trunk.</item>
         <item>Ты должен прекратить делать это==You gotta stop doing that.</item>
         <item>Она должно быть шутит!==She\'s gotta be kidding!</item>
         <item>Я должен идти в ванную.==I gotta go to the bathroom.</item>
         <item>Мне нужно быстро съесть что-нибудь.==I gotta eat something quickly!</item>
-        <item>Знаете, как говорят, сначала вы должны потратить деньги, чтобы делать деньги!==You know what they say, you\'ve gotta spend money to make money!</item>
+        <item>Знаете, как говорят, сначала вы должны потратить деньги, чтобы делать деньги!==You know what they say, first you\'ve gotta spend money to make money!</item>
         <item>Он должен учить английский, если он собирается работать в Америке==He\'s gotta learn English if he\'s gonna work in America.</item>
         <item>Я должна отпустить тебя сейчас==I gotta let you go now.</item>
         <item>Порой нужно проиграть, чтобы победить==Sometimes you gotta lose to win.</item>
         <item>Их надо устранить, потому что они нам мешают==We gotta take them out because they\'re causing problems.</item>
         <item>Мужчина должен смотреть за своей семьей==A man\'s gotta look out for his family.</item>
-        <item>Ему нужно экономить деньги==He\'s gotta save money.</item>
+        <item>Ему должен экономить деньги==He\'s gotta save money.</item>
         <item>Я должен сказать жене, что буду поздно==I\'ve gotta tell my wife I\'ll be late.</item>
         <item>Я должен сегодня убраться в доме==I\'ve gotta clean my house today.</item>
         <item>Нам нужно решить насчёт времени==We\'ve gotta figure out the timing.</item>
         <item>Я должен узнать больше о законах==I\'ve gotta learn more about the laws.</item>
-        <item>У меня есть оружие.==I\'ve gotta gun.</item>
         <item>Ему приходится вставать в 7 утра каждый день==He\'s gotta get up every morning at 7 a.m.</item>
         <item>Мне пора!==Gotta go!</item>
         <item>Я должен произвести впечатление на шефа.==I gotta impress my boss.</item>
@@ -5370,58 +5366,54 @@
         <item>Я должен навещать бабушку каждую неделю.==I gotta visit my grandma every week.</item>
         <item>Алексу приходится делать много международных звонков.==Alex\'s gotta make lots of international calls.</item>
         <item>Мы не обязаны этого делать.==We haven\'t gotta do this.</item>
-        <item>У нее нет денег==She hasn\'t gotta any money.</item>
         <item>Им нужно работать?==Have they gotta work?</item>
     </string-array>
 
     <string-array name="gonna_going_to">
-        <item>Этим летом будет чертовски больно==This summer\'s gonna hurt like a motherfucker</item>
         <item>Мы должны избавиться от этого барахла или мы будем пойманы и окажемся в чьем-нибудь багажнике.==We have to get rid of this stuff or we\'re gonna get caught and end up in somebody\'s trunk.</item>
         <item>Пристегните ремни. Будет жёсткая ночка==Fasten your seatbelts. It\'s gonna be a bumpy night.</item>
         <item>Я собираюсь закинуть ноги и отдохнуть==I\'m gonna put my feet up and relax.</item>
         <item>Он собирается сделать ей предложение, от которого она не сможет отказаться==He\'s gonna make her an offer she can\'t refuse.</item>
-        <item>Она собирается выглядеть довольно изящно==She\'s gonna look real smart.</item>
-        <item>Ты ведь знаешь, что я собираюсь купить новую машину?==You know that I\'m gonna buy a new car, don\'t you?</item>
+        <item>Она собирается выглядеть довольно изящно==She\'s gonna look real elegant.</item>
+        <item>Ты ведь знаешь, что я собираюсь купить новую машину, не так ли?==You know that I\'m gonna buy a new car, don\'t you?</item>
         <item>Осторожно! Ты уронишь книги!==Watch out! You\'re gonna drop your books.</item>
         <item>Ты собираешься сделать так, чтобы я чувствовал себя хорошо==You\'re gonna make me feel alright.</item>
         <item>Я собираюсь поехать в Магадан спасать ежиков от влияния местных властей==I\'m gonna go to Magadan to save hedgehogs from the influence of the local authorities.</item>
         <item>Мне надо дать тебе пинка и я собираюсь сделать это==I have to kick your ass, and I\'m gonna do it.</item>
         <item>Он собирается пристрелить ее==He\'s gonna shoot her.</item>
-        <item>Слушай, я собираюсь завалиться спать, но я позвоню тебе завтра, хорошо детка?==Hey, I\'m gonna hit the sack, but I\'ll call you tomorrow, okay babe?</item>
+        <item>Слушай, я собираюсь завалиться спать, но я позвоню тебе завтра, хорошо детка?==Listen, I\'m gonna hit the sack, but I\'ll call you tomorrow, okay babe?</item>
         <item>Смотри на этого парня. Он собирается спрыгнуть с поезда.==Look at this guy. He\'s gonna jump off the train!</item>
         <item>В этом году я собираюсь поступить в колледж.==I\'m gonna go to college this year.</item>
         <item>Я собираюсь купить что-нибудь.==I\'m gonna buy something.</item>
-        <item>Ничто не повлияет на то, как я тебя люблю.==Nothing\'s gonna change my love for you.</item>
         <item>Сегодня вечером я собираюсь пойти в кино.==I\'m gonna go to the movies tonight.</item>
-        <item>Хочу новый двигатель себе поставить==I\'m gonna put a new motor in it.</item>
+        <item>Я собираюсь поставить себе новый двигатель==I\'m gonna install a new engine for myself.</item>
         <item>Я не собираюсь вызвать полицию==I\'m not gonna call the cops.</item>
         <item>Я не собираюсь построить дом себе==I\'m not gonna build a house for myself.</item>
-        <item>Я тебе не расскажу.==I\'m not gonna tell you.</item>
-        <item>Не злись ты так, я всё улажу.==Don\'t get so mad, I\'m gonna get everything sorted out.</item>
-        <item>Ты не пойдёшь в клуб пока не вымоешь посуду==You ain\'t going to the club until you\'ve done the dishes.</item>
-        <item>Я не собираюсь прыгать за тобой в пропасть, я слишком эгоистичная личность.==I\'m not gonna jump into the abyss for you; I\'m too selfish a person.</item>
+        <item>Я не собираюсь тебе рассказывать.==I\'m not gonna tell you.</item>
+        <item>Не злись ты так, я всё (собираюсь) улажу.==Don\'t get so mad, I\'m gonna get everything sorted out.</item>
+        <item>Я не собираюсь прыгать за тобой в пропасть, я слишком эгоистичная личность.==I\'m not gonna jump into the abyss after you; I\'m too selfish a person.</item>
         <item>Она этого не сделает==She\'s not gonna do it.</item>
         <item>Я не буду встречаться с ней==I\'m not gonna date her.</item>
         <item>Мальчик не будет пить==The boy\'s not gonna drink.</item>
         <item>Он не будет готовить ужин==He\'s not gonna make dinner.</item>
         <item>Мы не будем говорить об этом==We\'re not gonna talk about it.</item>
         <item>Ты собираешься сделать больно моему сердцу?==Are you gonna hurt my heart?</item>
-        <item>Он собирается пойти поесть?==Is he gonna eat out?</item>
+        <item>Он собирается пойти поесть?==Is he gonna eat out (go eat?)?</item>
         <item>Ты собираешься пойти по моим стопам?==Are you gonna follow in my footsteps?</item>
         <item>Ты собираешься оставить меня вновь?==Are you gonna leave me again?</item>
         <item>Что он собирается надеть на свадьбу?==What\'s he gonna wear to the wedding?</item>
         <item>Что мы будем делать сейчас?==What are we gonna do now?</item>
-        <item>Что ты, черт побери, собираешься делать?==What the hell are you gonna do?</item>
+        <item>Что ты собираешься делать?==What are you gonna do?</item>
         <item>Ты собираешься сделать так, чтобы я чувствовал себя хорошо==You\'re gonna make me feel alright.</item>
-        <item>Ты поможешь?==Are you gonna help?</item>
+        <item>Ты собираешься помочь?==Are you gonna help?</item>
         <item>Я собираюсь отдохнуть==I\'m gonna rest now.</item>
         <item>Он не собирается покупать машину==He\'s not gonna buy a car.</item>
         <item>Она собирается получить эту работу==She\'s gonna get the job.</item>
         <item>Что он собирается сделать после свадьбы?==What\'s he gonna do after the wedding?</item>
         <item>Я тебе не скажу.==I\'m not gonna tell you.</item>
-        <item>Моя сестра выйдет замуж за этого парня==My sister\'s gonna marry this guy.</item>
+        <item>Моя сестра собирается выйти замуж за этого парня==My sister\'s gonna marry this guy.</item>
         <item>Он собирается купить эту машину?==Is he gonna buy this car?</item>
-        <item>Ты не пойдешь туда.==You ain\'t gonna go there.</item>
+        <item>Ты не собираешься идти туда.==You ain\'t gonna go there.</item>
     </string-array>
 
     <string-array name="modal_probabilities">
