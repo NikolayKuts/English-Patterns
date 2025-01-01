@@ -5658,19 +5658,19 @@
     <string-array name="past_simple_passive">
         <item>Ему сказали выйти.==He was told to go out.</item>
         <item>Те книги были прочитаны на прошлой неделе.==Those books were read last week.</item>
-        <item>Письмо было написано карандашом.==The letter was written with a pencil.</item>
+        <item>Письмо было написано карандашом.==The letter was written with/in pencil.</item>
         <item>То яблоко было взято моим кузеном.==That apple was taken by my cousin.</item>
         <item>Нам дали много денег в прошлом году.==We were given a lot of money last year.</item>
         <item>Эти пирожные были принесены его девушкой.==These cakes were brought by his girlfriend.</item>
-        <item>Те песни слышали много раз в прошлый понедельник.==Those songs were heard a lot of times last Monday.</item>
-        <item>Историю запомнило много людей.==The story was remembered by a lot of people.</item>
+        <item>Те песни слышали много раз в прошлый понедельник.==Those songs were heard many times last Monday.</item>
+        <item>Историю запомнило много людей.==The story was remembered by many people.</item>
         <item>Памелу Андерсон увидели на автобусной остановке вчера.==Pamela Anderson was seen at the bus stop yesterday.</item>
         <item>Эти консервы с рыбой были открыты в 2013 году.==These cans of fish were opened in 2013.</item>
         <item>На мой вопрос ответили вчера.==My question was answered yesterday.</item>
-        <item>В хоккей много играли прошлой зимой.==Hockey was played last winter a lot.</item>
-        <item>Этот текст был переведен на прошлом уроке.==This text was translated at the last lesson.</item>
+        <item>В хоккей много играли прошлой зимой.==Hockey was played a lot last winter.</item>
+        <item>Этот текст был переведен на прошлом уроке.==This text was translated in? the last lesson.</item>
         <item>На станции их встретил агент.==At the station they were met by their agent.</item>
-        <item>Ребенка нашли через две недели поисков.==The child was found after 2 weeks of search.</item>
+        <item>Ребенка нашли через две недели поисков.==The child was found after two weeks of searching.</item>
         <item>Бандитов не поймали в прошлом январе.==The gangsters weren\’t caught last January.</item>
         <item>Эти слова не были выучены в прошлом месяце.==These words weren\’t learned last month.</item>
         <item>В гольф не играли в Африке.==Golf wasn\’t played in Africa.</item>
@@ -5680,11 +5680,11 @@
         <item>У Анджелины Джоли не брали интервью, когда она была молодой.==Angelina Jolie wasn\’t interviewed when she was young.</item>
         <item>Эти дома не были проданы, они все еще принадлежат нам.==These houses weren\’t sold, we still own them.</item>
         <item>Компьютер не трогали на прошлой неделе.==The computer wasn\’t touched last week.</item>
-        <item>Он не был спасен мной, пожарные это сделали.==He wasn\’t saved by me, firemen did that.</item>
+        <item>Он не был спасен мной, пожарные это сделали.==He wasn\’t saved by me, the firemen did that.</item>
         <item>Бабочек не убили, им дали свободу.==Butterflies weren\’t killed, they were given freedom.</item>
-        <item>Не все деньги были потеряны, когда мы поехали в казино.==All the money wasn\’t lost when we went to the casino.</item>
+        <item>Не все деньги были потеряны, когда мы поехали в казино.==Not all the money was lost when we went to the casino.</item>
         <item>Он был известен как хороший работник?==Was he known as a good worker?</item>
-        <item>Кошек переехали 2 часа назад?==Were the cats run over 2 hours ago?</item>
+        <item>Кошек переехали 2 часа назад?==Were the cats run over two hours ago?</item>
         <item>Письмо было подписано ручкой?==Was the letter signed with a pen?</item>
         <item>Библиотека была закрыта, когда ты туда пришел?==Was the library closed when you came there?</item>
         <item>Товары были проданы вчера?==Were the goods sold yesterday?</item>
@@ -5693,13 +5693,13 @@
         <item>Мост был спроектирован в 1980 году?==Was the bridge designed in 1980?</item>
         <item>Их поблагодарили за вечеринку?==Were they thanked for the party?</item>
         <item>Когда были построены эти дома?==When were these houses built?</item>
-        <item>Почему их проверяли дважды у пункта охраны?==Why were they checked twice at security point?</item>
+        <item>Почему их проверяли дважды у пункта охраны?==Why were they checked twice at the security point?</item>
         <item>Каким языкам тебя учили, когда ты была в школе?==What languages were you taught when you were at school?</item>
         <item>Как долго ее преследовал бывший муж?==How long was she followed by her ex-husband?</item>
         <item>Когда была замечена ошибка?==When was the mistake noticed?</item>
         <item>Кем была нарисована эта картина?==Who was this picture drawn by?</item>
         <item>Почему те магазины описывали как хорошие?==Why were those shops described as good ones?</item>
-        <item>Что было изобретено Беллом?==What was created by Bell?</item>
+        <item>Что было изобретено Беллом?==What was invented by Bell?</item>
         <item>Почему все паспорта были забыты в гостинице?==Why were all the passports forgotten in the hotel?</item>
     </string-array>
 
