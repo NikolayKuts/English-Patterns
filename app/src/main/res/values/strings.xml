@@ -5417,7 +5417,7 @@
     </string-array>
 
     <string-array name="modal_probabilities">
-        <item>Может, он дома (но вряд ли)==He might be at homeю</item>
+        <item>Может, он дома (но вряд ли)==He might be at home</item>
         <item>Может, она гордится собой, но она этого совсем не показывает.==She might be proud of herself, but she doesn\'t show it at all</item>
         <item>Может, ты и найдешь шанс исправить положение.==You might find a chance to fix the situation</item>
         <item>Может, он и опытный работник, но он делает очень глупые ошибки.==He might be an experienced worker, but he makes very silly mistakes</item>
@@ -5525,68 +5525,6 @@
         <item>Не может быть, чтобы Петер был там в тот вечер — мы были вместе.==Peter can\'t have been there that night, we were together.</item>
         <item>Может, он дома, но вряд ли==He might be at home</item>
         <item>Может, она гордится собой, но она этого совсем не показывает.==She might be proud of herself, but she does not show it at all</item>
-        <item>Может, конечно, ты и найдешь шанс исправить положение.==You might find a chance to improve everything</item>
-        <item>Может, он и опытный работник, но он делает очень глупые ошибки.==He might be an excellent employee, but he makes very silly mistakes.</item>
-        <item>Может, он и хочет нам помочь, но он ведет себя странно.==He might want to help us but he behaves very strangely.</item>
-        <item>Может, он и отдыхает сейчас за границей, но вряд ли, у него нет на это денег==He might be on vacation abroad now, but he has no money for that.</item>
-        <item>Может, конечно, она и пишет отчет, но вряд ли, так как сейчас она висит в социальной сети.==She might be writing a report, but now she is hanging on a social network</item>
-        <item>Может, он уже и идет домой, но я думаю, что он сейчас еще сидит в офисе.==He might be going home, but I think he is still sitting in the office now.</item>
-        <item>Может, они и летят на самолете, но я думаю, что они едут поездом, так как она боится высоты.==They might be going by plane, but I think they are going by train, because she is afraid of heights.</item>
-        <item>Может, конечно, он уже все закончил…==He might have finished everything</item>
-        <item>Ну, может, они поругались…==They might have argued</item>
-        <item>ну, может он оставил телефон дома, конечно….==He might have left his phone at home</item>
-        <item>Может, он и ошибся…==He might have made a mistake</item>
-        <item>Может, он и звонил, но вряд ли…==He might have phoned</item>
-        <item>Может, они, конечно и забыли про наш праздник…==They might have forgotten about our party</item>
-        <item>Он, может (50%), опаздывает.==He may be late</item>
-        <item>Они, может (50%), приедут позже.==They may come later</item>
-        <item>Она, может (50%), захочет побыть одна.==She may want to stay alone</item>
-        <item>Может (50%), она работает сейчас.==She may be working now</item>
-        <item>Может (50%), они едут в лифте.==They may be taking the elevator now</item>
-        <item>Может (50%), начальник разговаривает по телефону.==The boss may be talking on the phone now</item>
-        <item>Может (50%), он помнит тот случай.==He may remember that case</item>
-        <item>Может (50%), он жене звонит.==He may be calling his wife</item>
-        <item>Может (50%), он все написал.==He may have written everything</item>
-        <item>Может (50%), он забыл про это.==He may have forgotten about it</item>
-        <item>Может (50%), они уже приехали.==They may have already arrived</item>
-        <item>Может (50%), мы его обидели.==We may have offended him</item>
-        <item>Должно быть, она очень терпеливая.==She must be very patient</item>
-        <item>Должно быть, ты очень голоден.==You must be very hungry</item>
-        <item>Ты, скорее всего, устал.==You must be tired</item>
-        <item>Он, скорее всего, не очень доволен.==He must not be very satisfied</item>
-        <item>Ты, скорее всего, помнишь об этом (ты должен об этом помнить)==You must remember about it</item>
-        <item>Они, должно быть, сейчас спят.==They must be sleeping now</item>
-        <item>Она, должно быть, душ принимает.==She must be taking a shower now</item>
-        <item>Скорее всего, они сейчас гуляют с ребенком.==They must be walking with the kid(child)</item>
-        <item>Должно быть, они собаку выгуливают.==They must be walking the dog</item>
-        <item>Должно быть, он потерял кейс на вокзале.==He must have lost the case at the station</item>
-        <item>Должно быть, кто-то вытащил кошелек в автобусе.==Somebody must have taken the purse out on the bus</item>
-        <item>Скорее всего, он купил билет заранее.==He must have bought the ticket in advance</item>
-        <item>Скорее всего, она просто передумала с ними идти.==She must have just changed her mind about going with them</item>
-        <item>Не может быть, чтобы ты так устал (ты не можешь быть таким уставшим)==You can\'t be that tired(so tired)</item>
-        <item>Не может быть, что дети голодны (дети не могут быть голодными)==The kids can\'t be hungry</item>
-        <item>Не может быть, что он работает на американцев.==He can\'t work for Americans</item>
-        <item>Не может быть, чтобы ты тренировался каждый день(ты не можешь тренироваться каждый день)==You can\'t train every day</item>
-        <item>Неужели вы правы?==Can you be right?</item>
-        <item>Неужели это правда?==Can this be true?</item>
-        <item>Неужели они женаты?==Can they be married?</item>
-        <item>Неужели ты и есть тот самый певец?==Can you be that very singer?</item>
-        <item>Не может быть, что они сейчас едут на метро!==They can\'t be going by subway now!</item>
-        <item>Не может быть, что он сейчас сидит в кафе!==He can\'t be sitting in the cafe right now</item>
-        <item>Не может быть, что она сейчас поет на сцене! ==She can\'t be singing on the stage now</item>
-        <item>Не может быть, что ты стоишь сейчас за дверью!==You can\'t be standing behind the door now</item>
-        <item>Неужели ты едешь ко мне?==Can you be coming to me?</item>
-        <item>Неужели они делают это для меня?==Can they be doing this for me?</item>
-        <item>Неужели она покупает этот дом для тебя?==Can she be buying this house for you?</item>
-        <item>Не может быть, что ты запомнил это все с первого раза!==You can\'t have memorized all this from the first time!</item>
-        <item>Не может быть, что ты опоздал на свой рейс!==You can\'t have missed your flight!</item>
-        <item>Не может быть, что ты заболел!==You can\'t have fallen ill!</item>
-        <item>Не может быть, что он уехал из страны!==He can\'t have left the country!</item>
-        <item>Не может быть, что он продал свою собаку!==He can\'t have sold his dog!</item>
-        <item>Неужели он упустил этот шанс?==Can he have missed this chance?</item>
-        <item>Неужели они расстались?==Can they have parted?</item>
-        <item>Неужели она купила это платье?==Can she have bought the dress?</item>
-        <item>Неужели ты все видел?==Can you have seen everything?</item>
     </string-array>
 
     <string-array name="present_simple_passive">
@@ -5782,18 +5720,18 @@
         <item>К шести часам вся работа была закончена==All the work was finished by 6 o\’clock</item>
         <item>В два часа грузовики как раз разгружали==At two o\’clock the trucks were being unloaded.</item>
         <item>К трем часам все устройства были подготовлены.==By 3 o\’clock all the devices had been prepared</item>
-        <item>Все документы отправляются службой DHL==All the documents are sent with DHL service</item>
+        <item>Все документы отправляются службой DHL==All the documents are sent via DHL service</item>
         <item>Этот контракт будет подписан на следующей неделе==This contract will be signed next week</item>
-        <item>На нашей улице строят новый торговый центр.== A new mall is being built in our street</item>
-        <item>Мои часы сейчас ремонтируют==My watch/clock is being repaired right now</item>
+        <item>На нашей улице строят новый торговый центр.==A new mall is being built on our street</item>
+        <item>Мои часы сейчас ремонтируют==My watch is being repaired right now</item>
         <item>Его машину украли.==His car was stolen (has been stolen)</item>
         <item>Все документы готовятся заранее.==All the documents are prepared in advance</item>
         <item>Этот проект будет закончен к концу года==This project will have been finished by the end of the year</item>
-        <item>В прошлом сезоне в этом театре поставили шесть новых спектаклей==Last season six new performances were staged in this theatre</item>
-        <item>Про него все забыли, потому что информацию скрывали.==He was forgotten by everybody, because the information was concealed</item>
-        <item>Мне все объяснили.==I was explained everything</item>
+        <item>В прошлом сезоне в этом театре поставили шесть новых спектаклей==Last season six new performances were staged in this theater</item>
+        <item>Про него все забыли, потому что информацию скрывали.==He was forgotten by everyone, because the information was concealed</item>
+        <item>Мне все объяснили.==Everything was explained to me(?)</item>
         <item>Корабль сейчас ремонтируют.==The ship is being repaired now</item>
-        <item>Мосты в Петербурге разводят по ночам==The bridges in St.Petersburg are drawn at night</item>
+        <item>Мосты в Петербурге разводят по ночам==The bridges in St. Petersburg are raised at night</item>
         <item>Его послали на конференцию==He was sent to the conference</item>
         <item>Эти люди были обмануты.==These people were deceived</item>
         <item>На него смотрели с изумлением==He was being looked at with astonishment</item>
@@ -5803,8 +5741,8 @@
         <item>Тебя ищут!==You are being looked for</item>
         <item>Его обязательно найдут==He will be found for sure</item>
         <item>В этой школе преподают три иностранных языка==Three foreign languages are taught in this school</item>
-        <item>Нам показали все интересные места в этом городе==We were shown all interesting places in this city</item>
-        <item>Игрушки были раскиданы по всему дому==The toys were scatted all over the room</item>
+        <item>Нам показали все интересные места в этом городе==We were shown all the interesting places in this city</item>
+        <item>Игрушки были раскиданы по всему дому==The toys were scattered all over the house</item>
         <item>Все приготовления будут закончены завтра с утра==All the preparations will be finished tomorrow morning</item>
         <item>Его никогда не приглашают к нам домой==He is never invited to our home</item>
         <item>Окно оставили открытым==The window was left open</item>
@@ -5817,7 +5755,7 @@
         <item>В горах построили несколько симпатичных отелей==A few nice hotels were built in the mountains</item>
         <item>Ему не позволили поехать вместе с друзьями.==He was not allowed to go with his friends</item>
         <item>Посуду вымыли холодной водой==The dishes were washed with cold water</item>
-        <item>Его часто водили гулять в парк==He was often taken for a walk to/in the park</item>
+        <item>Его часто водили гулять в парк==He was often taken for a walk in the park</item>
         <item>Мне прервали!==I was interrupted (have been interrupted)</item>
     </string-array>
 
@@ -6236,7 +6174,7 @@
 
     <string-array name="gerund">
         <item>Мне нравится кататься на скейте==I like skateboarding</item>
-        <item>Я терпеть не могу стоять в очереди==I hate queuing</item>
+        <item>Я терпеть не могу стоять в очереди==I hate standing in line</item>
         <item>Я обожаю сидеть у окна в дождливый день==I adore sitting at the window on a rainy day.</item>
         <item>Ему понравилось разговаривать с детьми.==He enjoyed talking to the kids.</item>
         <item>Вы не против пойти туда вместе?==Do you mind going there together?</item>
@@ -6244,37 +6182,37 @@
         <item>Пожалуйста, перестань смеяться над ребенком==Please, stop laughing at the child</item>
         <item>Вы не против прийти сюда еще раз?==Would you mind coming here again?</item>
         <item>Я не против работать с этой компанией==I don\’t mind working with this company</item>
-        <item>Я не могу отложить покраску потолка==I can\’t put off paining the ceiling</item>
+        <item>Я не могу отложить покраску потолка==I can\’t put off painting the ceiling</item>
         <item>Она расплакалась==She burst out crying</item>
         <item>Хотя он был уставший, он продолжил нести все сумки сам.==Though he was tired, he went on (continued) carrying all the bags himself.</item>
         <item>Они рассмеялись==They burst out laughing.</item>
         <item>В прошлом году он бросил курить.==He stopped smoking last year.</item>
-        <item>Ему нравилось разговаривать на эту тему.==He liked/enjoyed talking on this topic.</item>
+        <item>Ему нравилось разговаривать на эту тему.==He liked/enjoyed talking about this topic.</item>
         <item>Не нервничай! Перестань обкусывать ногти(грызть ногти)==Don\’t be nervous! Stop biting your nails.</item>
         <item>Они перестали разговаривать==They stopped talking</item>
-        <item>Он отрицал, что едет в Нью-Йорк==He denied going to New-York.</item>
+        <item>Он отрицал, что едет в Нью-Йорк==He denied going to New York.</item>
         <item>Я не могу отложить написание доклада.==I can\’t put off writing the report.</item>
-        <item>Мы закончили работу над этой проблемой.==We finished working at this problem</item>
+        <item>Мы закончили работу над этой проблемой.==We finished working on this problem</item>
         <item>Продолжайте петь==Keep singing!</item>
         <item>Он отрицает участие в этом конкурсе.==He denies taking part in this contest</item>
         <item>Я получил удовольствие от плавания в соленой воде.==I enjoyed swimming in the salty water</item>
         <item>Она избегала встречи со своим начальником.==She avoided meeting her boss</item>
         <item>Мы отложим обсуждение этого вопроса.==We will put off discussing this question</item>
-        <item>Она не возражал против того, чтобы остаться дома и посмотреть новый фильм==He didn\’t mind staying at home and watching the/a new movie.</item>
+        <item>Она не возражала против того, чтобы остаться дома и посмотреть новый фильм==She didn\’t mind staying at home and watching the/a new movie.</item>
         <item>Перестань дрожать!==Stop trembling!</item>
-        <item>Избегайте показывать людям, что вы боитесь их==Avoid showing to people that you are afraid of them</item>
+        <item>Избегайте показывать людям, что вы боитесь их==Avoid showing people that you are afraid of them</item>
         <item>Он перестал есть мясо и молочные продукты.==He stopped eating meat and dairy products</item>
-        <item>Вы не против поехать на такси?==Do you mind going by taxi?/would you mind going by taxi?</item>
+        <item>Вы не против поехать на такси?==Do you mind going by taxi?/Would you mind going by taxi?</item>
         <item>Они отрицают, что работают с Apple.==They deny working with Apple</item>
         <item>Я терпеть не могу мыть окна зимой.==I hate washing windows in winter</item>
         <item>Моему другу удалось получить эту работу.==My friend succeeded in getting this job.</item>
-        <item>Она подозревала его в том, что он ее обманывает.==She suspected him of deceiving him.</item>
-        <item>Он отказался от идеи когда-то жениться на ней.==He gave up the idea of marrying her once.</item>
+        <item>Она подозревала его в том, что он ее обманывает.==She suspected him of deceiving her.</item>
+        <item>Он отказался от идеи когда-то жениться на ней.==He gave up the idea of marrying her someday.</item>
         <item>Спасибо вам за помощь!==Thank you very much for helping!</item>
         <item>Мы с нетерпением ждем, когда увидимся с вами!==We are looking forward to seeing you!</item>
         <item>Я просто мечтаю встретиться с этими людьми!==I am just dreaming of meeting these people</item>
         <item>Плохая погода не позволила нам остаться у озера==Bad weather prevented us from staying at the lake</item>
-        <item>Они обвиняют его в том, что он экономит на еде.==They accuse him of saving on food.</item>
+        <item>Они обвиняют его в том, что он экономит на еде.==They accuse him of skimping on food.</item>
         <item>Она подумывает о том, чтобы сменить работу==She is thinking of changing her job</item>
         <item>Он не одобряет то, что она пьет так много кофе.==He does not approve of her drinking so much coffee.</item>
     </string-array>
