@@ -5417,173 +5417,173 @@
     </string-array>
 
     <string-array name="modal_probabilities">
-        <item>Может, он дома, но вряд ли==He might be at home</item>
-        <item>Может, она гордится собой, но она этого совсем не показывает.==She might be proud of herself, but she does not show it at all</item>
-        <item>Может, конечно, ты и найдешь шанс исправить положение.==You might find a chance to improve everything</item>
-        <item>Может, он и опытный работник, но он делает очень глупые ошибки.==He might be an excellent employee, but he makes very silly mistakes.</item>
-        <item>Может, он и хочет нам помочь, но он ведет себя странно.==He might want to help us but he behaves very strange.</item>
-        <item>Может, он и отдыхает сейчас за границей, но вряд ли, у него нет на это денег==He might be having a rest abroad now, but he has no money for that.</item>
-        <item>Может, конечно, она и пишет отчет, но вряд ли, так как сейчас она висит в социальной сети.==She might be writing a report, but now she is hanging in a social net</item>
-        <item>Может, он уже и идет домой, но я думаю, что он сейчас еще сидит в офисе.==He might be going home, but I think he is still sitting in the office now.</item>
-        <item>Может, они и летят на самолете, но я думаю, что они едут поездом, так как она боится высоты.==They might be going by plane, but I think they are going by train, because she is afraid of height.</item>
-        <item>Может, конечно, он уже все закончил…==He might have finished everything</item>
+        <item>Может, он дома (но вряд ли)==He might be at homeю</item>
+        <item>Может, она гордится собой, но она этого совсем не показывает.==She might be proud of herself, but she doesn\'t show it at all</item>
+        <item>Может, ты и найдешь шанс исправить положение.==You might find a chance to fix the situation</item>
+        <item>Может, он и опытный работник, но он делает очень глупые ошибки.==He might be an experienced worker, but he makes very silly mistakes</item>
+        <item>Может, он и хочет нам помочь, но он ведет себя странно.==He might want to help us, but he\'s acting very strange</item>
+        <item>Может, он и отдыхает сейчас за границей (вряд ли), но у него нет на это денег==He might be vacationing abroad now, but he has no money for that</item>
+        <item>Может, она и пишет отчет (вряд ли), но так как сейчас она висит в социальной сети.==She might be writing a report, but she\'s currently on social net</item>
+        <item>Может, он уже и идет домой, но я думаю, что он сейчас еще сидит в офисе.==He might be going home, but I think he\'s still in the office</item>
+        <item>Может, они и летят на самолете, но я думаю, что они едут поездом, так как она боится высоты.==They might be flying on a plane, but I think they are going by train because she\'s afraid of heights</item>
+        <item>Может, он уже все закончил…==He might have finished everything…</item>
         <item>Ну, может, они поругались…==They might have argued</item>
-        <item>ну, может он оставил телефон дома, конечно….==He might have left his phone at home</item>
-        <item>Может, он и ошибся…==He might have made a mistake</item>
-        <item>Может, он и звонил, но вряд ли…==He might have phoned</item>
-        <item>Может, они, конечно и забыли про наш праздник…==They might have forgotten about our party</item>
-        <item>Он, может, опаздывает.==He may be late</item>
-        <item>Они, может, приедут позже.==They may come later</item>
-        <item>Она, может, захочет побыть одна.==She may want to stay alone</item>
-        <item>Может, она работает сейчас.== She may be working now</item>
-        <item>Может, они едут в лифте.==They may be going in the lift now</item>
-        <item>Может, начальник разговаривает по телефону.==The boss may be talking on the phone now</item>
-        <item>Может, он помнит тот случай.==He may remember that case</item>
-        <item>Может, он жене звонит.== He may be calling his wife</item>
-        <item>Может, он все написал.==He may have written everything</item>
-        <item>Может, он забыл про это.==He may have forgotten about it</item>
-        <item>Может, они уже приехали.==They may have already arrived(come)</item>
-        <item>Может, мы его обидели.==We may have offended him</item>
+        <item>ну, может он оставил телефон дома==He might have left his phone at home</item>
+        <item>Может, он и ошибся…==He might have made a mistake…</item>
+        <item>Может, он и звонил (вряд ли)…==He might have called</item>
+        <item>Может, они и забыли про наш праздник…==They might have forgotten about our celebration…</item>
+        <item>Он, может (50%), опаздывает.==He may be late</item>
+        <item>Они, может (50%), приедут позже.==They may come later</item>
+        <item>Она, может (50%), захочет побыть одна.==She may want to be alone</item>
+        <item>Может (50%), она работает сейчас.==She may be working now</item>
+        <item>Может (50%), они едут в лифте.==They may be in the elevator</item>
+        <item>Может (50%), начальник разговаривает по телефону.==The boss may be talking on the phone</item>
+        <item>Может (50%), он помнит тот случай.==He may remember that case</item>
+        <item>Может (50%), он жене звонит.==He may be calling his wife</item>
+        <item>Может (50%), он все написал.==He may have written everything</item>
+        <item>Может (50%), он забыл про это.==He may have forgotten about it</item>
+        <item>Может (50%), они уже приехали.==They may have already arrived</item>
+        <item>Может (50%), мы его обидели.==We may have offended him</item>
         <item>Должно быть, она очень терпеливая.==She must be very patient</item>
         <item>Должно быть, ты очень голоден.==You must be very hungry</item>
         <item>Ты, скорее всего, устал.==You must be tired</item>
-        <item>Он, скорее всего, не очень доволен.==He must be not very satisfied</item>
-        <item>Ты, скорее всего, помнишь об этом(ты должен об этом помнить)==You must remember about it</item>
+        <item>Он, скорее всего, не очень доволен.==He must not be very satisfied</item>
+        <item>Ты, скорее всего, помнишь об этом (ты должен об этом помнить)==You must remember this</item>
         <item>Они, должно быть, сейчас спят.==They must be sleeping now</item>
         <item>Она, должно быть, душ принимает.==She must be taking a shower now</item>
-        <item>Скорее всего, они сейчас гуляют с ребенком.==They must be walking with the kid(child)</item>
+        <item>Скорее всего, они сейчас гуляют с ребенком.==They must be walking with the child now</item>
         <item>Должно быть, они собаку выгуливают.==They must be walking the dog</item>
-        <item>Должно быть, он потерял кейс на вокзале.==He must have lost the case at the station</item>
-        <item>Должно быть, кто-то вытащил кошелек в автобусе.==Somebody must have taken the purse out in the bus</item>
+        <item>Должно быть, он потерял кейс на вокзале.==He must have lost his case at the station</item>
+        <item>Должно быть, кто-то вытащил кошелек в автобусе.==Someone must have taken the wallet on the bus</item>
         <item>Скорее всего, он купил билет заранее.==He must have bought the ticket in advance</item>
-        <item>Скорее всего, она просто передумала с ними идти.==He must have just changed her mind to go with them</item>
-        <item>Не может быть, чтобы ты так устал (ты не можешь быть таким уставшим)==You can\’t be that tired(so tired)</item>
-        <item>Не может быть, что дети голодны (дети не могут быть голодными)==The kids can\’t be hungry</item>
-        <item>Не может быть, что он работает на американцев.==He can\’t work for Americans</item>
-        <item>Не может быть, чтобы ты тренировался каждый день (ты не можешь тренироваться каждый день)==You can\’t train every day</item>
+        <item>Скорее всего, она просто передумала с ними идти.==She must have just changed her mind about going with them</item>
+        <item>Не может быть, чтобы ты так устал (ты не можешь быть таким уставшим)==You can\'t be that tired</item>
+        <item>Не может быть, что дети голодны (дети не могут быть голодными)==The kids can\'t be hungry</item>
+        <item>Не может быть, что он работает на американцев.==He can\'t be working for Americans</item>
+        <item>Не может быть, чтобы ты тренировался каждый день (ты не можешь тренироваться каждый день)==You can\'t be training every day</item>
         <item>Неужели вы правы?==Can you be right?</item>
         <item>Неужели это правда?==Can this be true?</item>
         <item>Неужели они женаты?==Can they be married?</item>
         <item>Неужели ты и есть тот самый певец?==Can you be that very singer?</item>
-        <item>Не может быть, что они сейчас едут на метро!==They can\’t be going by subway now!</item>
-        <item>Не может быть, что он сейчас сидит в кафе!==He can\’t be sitting in the cafe right now</item>
-        <item>Не может быть, что она сейчас поет на сцене! ==She can\’t be singing on the stage now</item>
-        <item>Не может быть, что ты стоишь сейчас за дверью!==You can\’t be standing behind the door now</item>
-        <item>Неужели ты едешь ко мне?==Can you be going to me?</item>
+        <item>Не может быть, что они сейчас едут на метро!==They can\'t be taking the subway now!</item>
+        <item>Не может быть, что он сейчас сидит в кафе!==He can\'t be sitting in the cafe now!</item>
+        <item>Не может быть, что она сейчас поет на сцене!==She can\'t be singing on the stage now!</item>
+        <item>Не может быть, что ты стоишь сейчас за дверью!==You can\'t be standing behind the door right now!</item>
+        <item>Неужели ты едешь ко мне?==Can you be coming to me?</item>
         <item>Неужели они делают это для меня?==Can they be doing this for me?</item>
         <item>Неужели она покупает этот дом для тебя?==Can she be buying this house for you?</item>
-        <item>Не может быть, что ты запомнил это все с первого раза!==You can\’t have memorized all this from the first time!</item>
-        <item>Не может быть, что ты опоздал на свой рейс!==You can\’t have missed your flight!</item>
-        <item>Не может быть, что ты заболел!==You can\’t have fallen ill!</item>
-        <item>Не может быть, что он уехал из страны!==He can\’t have left the country!</item>
-        <item>Не может быть, что он продал свою собаку!==He can\’t have sold his dog!</item>
-        <item>Неужели он упустил этот шанс?==Can he have left this chance?</item>
-        <item>Неужели они расстались?==Can they have parted?</item>
+        <item>Не может быть, что ты запомнил это все с первого раза!==You can\'t have memorized all this on the first try!</item>
+        <item>Не может быть, что ты опоздал на свой рейс!==You can\'t have missed your flight!</item>
+        <item>Не может быть, что ты заболел!==You can\'t have gotten sick!</item>
+        <item>Не может быть, что он уехал из страны!==He can\'t have left the country!</item>
+        <item>Не может быть, что он продал свою собаку!==He can\'t have sold his dog!</item>
+        <item>Неужели он упустил этот шанс?==Can he have missed this chance?</item>
+        <item>Неужели они расстались?==Can they have broken up?</item>
         <item>Неужели она купила это платье?==Can she have bought the dress?</item>
         <item>Неужели ты все видел?==Can you have seen everything?</item>
-        <item>Она может позвонить скоро==She may phone soon</item>
+        <item>Она может (50%) позвонить скоро==She may call soon</item>
         <item>Лиза может не скоро вернуться.==Liza might not come back soon</item>
-        <item>Он выглядит уставшим. Возможно, он болен==He looks tired. He may be sick.</item>
-        <item>Возможно, Алексей не знает, что Меган Фокс здесь==Aleksey may not know that Megan Fox is here.</item>
-        <item>Возможно, она не придет.==She may not come.</item>
-        <item>Возможно, Карла сейчас спит.==Carla may be sleeping now.</item>
-        <item>Она, возможно, права.==She may be right</item>
+        <item>Он выглядит уставшим. Возможно (50%), он болен==He looks tired. He may be sick.</item>
+        <item>Возможно (50%), Алексей не знает, что Меган Фокс здесь==Aleksey may not know that Megan Fox is here.</item>
+        <item>Возможно (50%), она не придет.==She may not come.</item>
+        <item>Возможно (50%), Карла сейчас спит.==Carla may be sleeping now.</item>
+        <item>Она, возможно (50%), права.==She may be right</item>
         <item>Весьма вероятно, Оливия в саду.==Olivia must be in the garden</item>
-        <item>Возможно, они сейчас смотрят телевизор.==They may be watching TV at that moment.</item>
+        <item>Возможно (50%), они сейчас смотрят телевизор.==They may be watching TV at that moment.</item>
         <item>Возможно, ты оставил её в магазине.==You might have left it in the store</item>
         <item>Возможно, мы не поможем ему.==We might not help him</item>
         <item>Весьма вероятно, что Алексей сейчас играет на пианино.==Aleksey must be playing the piano now.</item>
-        <item>Полагаю, что, возможно, она спала.==I suppose she may have been asleep</item>
+        <item>Полагаю, что, возможно (50%), она спала.==I suppose she may have been asleep</item>
         <item>Ее сестра, возможно, сейчас читает книгу==Her sister might be reading a book now.</item>
         <item>Возможно, она не знала о ней.==She might not have known about it.</item>
         <item>Возможно, Алексей придет на вечеринку==Aleksey may come to the party.</item>
-        <item>Возможно, Алексей осматривает достопримечательности==Aleksey may be doing sightseeing.</item>
-        <item>Возможно, Алексей сделал всю работу самостоятельно.==Aleksey can have done all the job himself.</item>
+        <item>Возможно (50%), Алексей осматривает достопримечательности==Aleksey may be doing sightseeing.</item>
+        <item>Возможно (50%), Алексей сделал всю работу самостоятельно.==Aleksey may have done all the work himself.</item>
         <item>Она, может быть, уехала из Ливерпуля.==She might have left Liverpool.</item>
-        <item>Где Алексей? Вероятно, он в библиотеке. Он часто ходит туда по понедельникам==Where is Aleksey? – He can be at the library. He often goes there on Mondays</item>
-        <item>Едва ли Алексей не заметил нас.==Aleksey mightn\’t have noticed us.</item>
-        <item>Не может быть, что Алексей настолько стар==Aleksey can\'t be so old</item>
-        <item>Где твоя девушка была прошлым вечером? Я думаю, что она могла быть в кино со своей подругой.==Where was your girl-friend last night? I think she may have been at the movie theater with her friend.</item>
-        <item>Гари не может быть в Лондоне, он мне звонил с Индии вчера.==Harry can\'t be in London, he called me from India yesterday .</item>
+        <item>Где Алексей? Вероятно (50%), он в библиотеке. Он часто ходит туда по понедельникам==Where is Aleksey? – He may be at the library. He often goes there on Mondays</item>
+        <item>Едва ли Алексей не заметил нас.==Aleksey mightn\'t have noticed us.</item>
+        <item>Не может быть, что Алексей настолько стар==Aleksey can\'t be that old</item>
+        <item>Где твоя девушка была прошлым вечером? Я думаю, что она могла быть (50%) в кино со своей подругой.==Where was your girlfriend last night? I think she may have been at the movie theater with her friend.</item>
+        <item>Гари не может быть в Лондоне, он мне звонил с Индии вчера.==Harry can\'t be in London, he called me from India yesterday.</item>
         <item>У Алексея нет друзей. Весьма вероятно, он очень одинок==Aleksey has no friends. He must be very lonely.</item>
         <item>Должно быть тут ошибка! Не может быть, чтоб салат был столь дорогим! ==There must be a mistake! A salad can\'t be so expensive!</item>
         <item>Ты не мог его видеть ==You can\'t have seen him.</item>
         <item>Наверняка водитель сейчас покупает новую лопату.==The driver must be buying a new spade now</item>
-        <item>Не может быть, что сосед сейчас опять рвет билеты.==The neighbour can\’t be tearing tickets again.</item>
-        <item>Может быть, Роберт смотрит фильмы ужасов по утрам.==Robert may watch horror films every morning</item>
+        <item>Не может быть, что сосед сейчас опять рвет билеты.==The neighbor can\'t be tearing tickets again.</item>
+        <item>Может быть (50%), Роберт смотрит фильмы ужасов по утрам.==Robert may watch horror films every morning</item>
         <item>Возможно, этот компьютер - китайский.==This computer might be Chinese</item>
         <item>Должно быть, ты был голоден, раз съел все в холодильнике.==You must have been hungry. You emptied the fridge.</item>
         <item>Должно быть, они прислали подарок. Где-то была открытка.==They must have sent you a present. There was a postcard somewhere.</item>
         <item>Мы опаздываем. Вероятно, они нас еще ждут.==We are late. They might be still waiting for us.</item>
-        <item>Она не может быть дома. Она заграницей.==She can\’t be home. She is abroad.</item>
-        <item>Это не могли быть следы кота. Это было животное намного крупнее.==It can\’t have been a cat\’s footstep. It was much bigger animal.</item>
+        <item>Она не может быть дома. Она заграницей.==She can\'t be home. She is abroad.</item>
+        <item>Это не могли быть следы кота. Это было животное намного крупнее.==It can\'t have been a cat\'s footstep. It was a much bigger animal.</item>
         <item>Он взял зонт — должно быть идет дождь.==He took his umbrella, it must be raining</item>
-        <item>Он в костюме, должно быть собирается на важную встречу.==He\’s wearing a suit, he must be going to an important meeting</item>
+        <item>Он в костюме, должно быть собирается на важную встречу.==He\'s wearing a suit, he must be going to an important meeting</item>
         <item>Ты прочитал много книг, должно быть ты знаешь все.==You read a lot of books, you must know everything</item>
-        <item>Возможно, туда будет нелегко попасть.==It can be difficult to get there.</item>
+        <item>Возможно (50%), туда будет нелегко попасть.==It may be difficult to get there.</item>
         <item>Мои родители, возможно, поедут этим летом в Крым. ==My parents might be going to Crimea this summer</item>
-        <item>Не может быть, чтобы Петер был там в тот вечер — мы были вместе.==Peter can\’t be there that night, we were together.</item>
+        <item>Не может быть, чтобы Петер был там в тот вечер — мы были вместе.==Peter can\'t have been there that night, we were together.</item>
         <item>Может, он дома, но вряд ли==He might be at home</item>
         <item>Может, она гордится собой, но она этого совсем не показывает.==She might be proud of herself, but she does not show it at all</item>
         <item>Может, конечно, ты и найдешь шанс исправить положение.==You might find a chance to improve everything</item>
         <item>Может, он и опытный работник, но он делает очень глупые ошибки.==He might be an excellent employee, but he makes very silly mistakes.</item>
-        <item>Может, он и хочет нам помочь, но он ведет себя странно.==He might want to help us but he behaves very strange.</item>
-        <item>Может, он и отдыхает сейчас за границей, но вряд ли, у него нет на это денег==He might be having a rest abroad now, but he has no money for that.</item>
-        <item>Может, конечно, она и пишет отчет, но вряд ли, так как сейчас она висит в социальной сети.==She might be writing a report, but now she is hanging in a social net</item>
+        <item>Может, он и хочет нам помочь, но он ведет себя странно.==He might want to help us but he behaves very strangely.</item>
+        <item>Может, он и отдыхает сейчас за границей, но вряд ли, у него нет на это денег==He might be on vacation abroad now, but he has no money for that.</item>
+        <item>Может, конечно, она и пишет отчет, но вряд ли, так как сейчас она висит в социальной сети.==She might be writing a report, but now she is hanging on a social network</item>
         <item>Может, он уже и идет домой, но я думаю, что он сейчас еще сидит в офисе.==He might be going home, but I think he is still sitting in the office now.</item>
-        <item>Может, они и летят на самолете, но я думаю, что они едут поездом, так как она боится высоты.==They might be going by plane, but I think they are going by train, because she is afraid of height.</item>
+        <item>Может, они и летят на самолете, но я думаю, что они едут поездом, так как она боится высоты.==They might be going by plane, but I think they are going by train, because she is afraid of heights.</item>
         <item>Может, конечно, он уже все закончил…==He might have finished everything</item>
         <item>Ну, может, они поругались…==They might have argued</item>
         <item>ну, может он оставил телефон дома, конечно….==He might have left his phone at home</item>
         <item>Может, он и ошибся…==He might have made a mistake</item>
         <item>Может, он и звонил, но вряд ли…==He might have phoned</item>
         <item>Может, они, конечно и забыли про наш праздник…==They might have forgotten about our party</item>
-        <item>Он, может, опаздывает.==He may be late</item>
-        <item>Они, может, приедут позже.==They may come later</item>
-        <item>Она, может, захочет побыть одна.==She may want to stay alone</item>
-        <item>Может, она работает сейчас.==She may be working now</item>
-        <item>Может, они едут в лифте.==They may be going in the lift now</item>
-        <item>Может, начальник разговаривает по телефону.==The boss may be talking on the phone now</item>
-        <item>Может, он помнит тот случай.==He may remember that case</item>
-        <item>Может, он жене звонит.==He may be calling his wife</item>
-        <item>Может, он все написал.==He may have written everything</item>
-        <item>Может, он забыл про это.==He may have forgotten about it</item>
-        <item>Может, они уже приехали.==They may have already arrived(come)</item>
-        <item>Может, мы его обидели.==We may have offended him</item>
+        <item>Он, может (50%), опаздывает.==He may be late</item>
+        <item>Они, может (50%), приедут позже.==They may come later</item>
+        <item>Она, может (50%), захочет побыть одна.==She may want to stay alone</item>
+        <item>Может (50%), она работает сейчас.==She may be working now</item>
+        <item>Может (50%), они едут в лифте.==They may be taking the elevator now</item>
+        <item>Может (50%), начальник разговаривает по телефону.==The boss may be talking on the phone now</item>
+        <item>Может (50%), он помнит тот случай.==He may remember that case</item>
+        <item>Может (50%), он жене звонит.==He may be calling his wife</item>
+        <item>Может (50%), он все написал.==He may have written everything</item>
+        <item>Может (50%), он забыл про это.==He may have forgotten about it</item>
+        <item>Может (50%), они уже приехали.==They may have already arrived</item>
+        <item>Может (50%), мы его обидели.==We may have offended him</item>
         <item>Должно быть, она очень терпеливая.==She must be very patient</item>
         <item>Должно быть, ты очень голоден.==You must be very hungry</item>
         <item>Ты, скорее всего, устал.==You must be tired</item>
-        <item>Он, скорее всего, не очень доволен.==He must be not very satisfied</item>
+        <item>Он, скорее всего, не очень доволен.==He must not be very satisfied</item>
         <item>Ты, скорее всего, помнишь об этом (ты должен об этом помнить)==You must remember about it</item>
         <item>Они, должно быть, сейчас спят.==They must be sleeping now</item>
         <item>Она, должно быть, душ принимает.==She must be taking a shower now</item>
         <item>Скорее всего, они сейчас гуляют с ребенком.==They must be walking with the kid(child)</item>
         <item>Должно быть, они собаку выгуливают.==They must be walking the dog</item>
         <item>Должно быть, он потерял кейс на вокзале.==He must have lost the case at the station</item>
-        <item>Должно быть, кто-то вытащил кошелек в автобусе.==Somebody must have taken the purse out in the bus</item>
+        <item>Должно быть, кто-то вытащил кошелек в автобусе.==Somebody must have taken the purse out on the bus</item>
         <item>Скорее всего, он купил билет заранее.==He must have bought the ticket in advance</item>
-        <item>Скорее всего, она просто передумала с ними идти.==He must have just changed her mind to go with them</item>
-        <item>Не может быть, чтобы ты так устал (ты не можешь быть таким уставшим)==You can\’t be that tired(so tired)</item>
-        <item>Не может быть, что дети голодны (дети не могут быть голодными)==The kids can\’t be hungry</item>
-        <item>Не может быть, что он работает на американцев.==He can\’t work for Americans</item>
-        <item>Не может быть, чтобы ты тренировался каждый день(ты не можешь тренироваться каждый день)==You can\’t train every day</item>
+        <item>Скорее всего, она просто передумала с ними идти.==She must have just changed her mind about going with them</item>
+        <item>Не может быть, чтобы ты так устал (ты не можешь быть таким уставшим)==You can\'t be that tired(so tired)</item>
+        <item>Не может быть, что дети голодны (дети не могут быть голодными)==The kids can\'t be hungry</item>
+        <item>Не может быть, что он работает на американцев.==He can\'t work for Americans</item>
+        <item>Не может быть, чтобы ты тренировался каждый день(ты не можешь тренироваться каждый день)==You can\'t train every day</item>
         <item>Неужели вы правы?==Can you be right?</item>
         <item>Неужели это правда?==Can this be true?</item>
         <item>Неужели они женаты?==Can they be married?</item>
         <item>Неужели ты и есть тот самый певец?==Can you be that very singer?</item>
-        <item>Не может быть, что они сейчас едут на метро!==They can\’t be going by subway now!</item>
-        <item>Не может быть, что он сейчас сидит в кафе!==He can\’t be sitting in the cafe right now</item>
-        <item>Не может быть, что она сейчас поет на сцене! ==She can\’t be singing on the stage now</item>
-        <item>Не может быть, что ты стоишь сейчас за дверью!==You can\’t be standing behind the door now</item>
-        <item>Неужели ты едешь ко мне?==Can you be going to me?</item>
+        <item>Не может быть, что они сейчас едут на метро!==They can\'t be going by subway now!</item>
+        <item>Не может быть, что он сейчас сидит в кафе!==He can\'t be sitting in the cafe right now</item>
+        <item>Не может быть, что она сейчас поет на сцене! ==She can\'t be singing on the stage now</item>
+        <item>Не может быть, что ты стоишь сейчас за дверью!==You can\'t be standing behind the door now</item>
+        <item>Неужели ты едешь ко мне?==Can you be coming to me?</item>
         <item>Неужели они делают это для меня?==Can they be doing this for me?</item>
         <item>Неужели она покупает этот дом для тебя?==Can she be buying this house for you?</item>
-        <item>Не может быть, что ты запомнил это все с первого раза!==You can\’t have memorized all this from the first time!</item>
-        <item>Не может быть, что ты опоздал на свой рейс!==You can\’t have missed your flight!</item>
-        <item>Не может быть, что ты заболел!==You can\’t have fallen ill!</item>
-        <item>Не может быть, что он уехал из страны!==He can\’t have left the country!</item>
-        <item>Не может быть, что он продал свою собаку!==He can\’t have sold his dog!</item>
-        <item>Неужели он упустил этот шанс?==Can he have left this chance?</item>
+        <item>Не может быть, что ты запомнил это все с первого раза!==You can\'t have memorized all this from the first time!</item>
+        <item>Не может быть, что ты опоздал на свой рейс!==You can\'t have missed your flight!</item>
+        <item>Не может быть, что ты заболел!==You can\'t have fallen ill!</item>
+        <item>Не может быть, что он уехал из страны!==He can\'t have left the country!</item>
+        <item>Не может быть, что он продал свою собаку!==He can\'t have sold his dog!</item>
+        <item>Неужели он упустил этот шанс?==Can he have missed this chance?</item>
         <item>Неужели они расстались?==Can they have parted?</item>
         <item>Неужели она купила это платье?==Can she have bought the dress?</item>
         <item>Неужели ты все видел?==Can you have seen everything?</item>
