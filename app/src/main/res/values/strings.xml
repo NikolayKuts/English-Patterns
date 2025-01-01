@@ -5590,7 +5590,7 @@
     </string-array>
 
     <string-array name="present_simple_passive">
-        <item>Мне звонят по ночам.==I am called at nights.</item>
+        <item>Мне звонят по ночам.==I am called at night.</item>
         <item>Ему посылают много сообщений.==He is sent a lot of messages.</item>
         <item>Ей платят много.==She is paid a lot.</item>
         <item>Их всегда приглашают на наши вечеринки.==They are always invited to our parties.</item>
@@ -5605,7 +5605,7 @@
         <item>Тойоту делают в Японии.==Toyota is made (produced) in Japan.</item>
         <item>Сметану делают из молока.==Sour cream is made from milk.</item>
         <item>Эти конфеты делают из сухого молока.==These sweets (candies) are made from dried milk.</item>
-        <item>Сигары делают на Кубе.==Cigars are made in (on) Cuba.</item>
+        <item>Сигары делают на Кубе.==Cigars are made in Cuba.</item>
         <item>Меня любят.==I am loved.</item>
         <item>Его всегда слушают.==He is always listened to.</item>
         <item>Ее никогда не ждут.==She is never waited for.</item>
@@ -5626,9 +5626,9 @@
         <item>Творог сделан из молока.==Cottage cheese is made from milk.</item>
         <item>Сейчас не пишут письма, а шлют е-мейлы.==Letters are not written now, now e-mails are sent.</item>
         <item>Эту музыку слушают только в клубах.==This music is listened to in clubs only.</item>
-        <item>Банковские карты Виза принимают везде.==Visa banking cards are accepted everywhere.</item>
+        <item>Банковские карты Виза принимают везде.==Visa bank cards are accepted everywhere.</item>
         <item>В зоопарках животных держат в клетках.==Animals in zoos are kept in cages.</item>
-        <item>В сафари парках животных кормят три раза в день. ==In safari parks animals are fed three times a day.</item>
+        <item>В сафари парках животных кормят три раза в день.==In safari parks animals are fed three times a day.</item>
         <item>Эти программы пишут в России.==These programs are written in Russia.</item>
         <item>Такие фильмы снимают (shoot) в горах.==Such films are shot in the mountains.</item>
         <item>Эту воду не пьют.==This water is not drunk.</item>
@@ -5652,7 +5652,7 @@
         <item>Информация обновляется ежедневно.==(The) information is updated daily (several times a day/a few times a day).</item>
         <item>Люди делятся на несколько категорий.==People are divided into several categories.</item>
         <item>Специи хранят в герметичных упаковках.==Spices are kept in sealed packages.</item>
-        <item>Кредитные карты присылают по почте.==Credit cards are sent by post.</item>
+        <item>Кредитные карты присылают по почте.==Credit cards are sent by mail.</item>
     </string-array>
 
     <string-array name="past_simple_passive">
