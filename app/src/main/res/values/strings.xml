@@ -4998,7 +4998,7 @@
         <item>Он самый храбрый человек, какого я знаю.==He is the bravest person I know.</item>
         <item>Елена - самая красивая девушка в нашем колледже.==Helen is the prettiest girl in our college.</item>
         <item>Натали была красивее, чем ее сестра.==Natalie was prettier than her sister.</item>
-        <item>Он более интеллектуальная копия своего отца.==He is a cleverer version of his father.</item>
+        <item>Он — более умная версия своего отца.==He is a cleverer version of his father.</item>
         <item>Он самый умный парень в классе==He is the smartest boy in the class.</item>
         <item>Мы шли пешком (поход) более короткими маршрутами==We hiked some of the shorter trails.</item>
         <item>Это самая короткая дорога к вокзалу.==This is the shortest way to the station.</item>
@@ -5136,14 +5136,14 @@
     </string-array>
 
     <string-array name="could">
-        <item>Вы не могли бы мне помочь?==Could you help me, please?</item>
-        <item>Могли бы вы говорить помедленнее?==Could you speak more slowly, please?</item>
-        <item>Не могли бы вы повторить это медленнее?==Could you repeat that more slowly, please?</item>
+        <item>Вы не могли бы мне помочь, пожалуйста?==Could you help me, please?</item>
+        <item>Могли бы вы говорить помедленнее?==Could you speak more slowly?</item>
+        <item>Не могли бы вы повторить это медленнее?==Could you repeat that more slowly?</item>
         <item>Вы не дадите мне свой словарь?==Could you give me your dictionary?</item>
         <item>Не могли бы вы показать мне дорогу к площади?==Could you show me the way to the square?</item>
         <item>Извините, вы могли бы мне сказать, как пройти к этому месту?==Excuse me, could you tell me how I can get to this place?</item>
         <item>Извините, пожалуйста, вы могли бы сказать как пройти в центр города==Excuse me please, could you tell me how to get to the city center (the subway)?</item>
-        <item>Покажите на плане, где мы сейчас находимся==Could you please point out where we are on this map?</item>
+        <item>Не могли бы вы указать, где мы находимся на этой карте?==Could you please point out where we are on this map?</item>
         <item>Не могли бы вы мне подсказать сколько это стоит?==Could you tell me how much it costs?</item>
         <item>Подскажите, где я могу купить билеты?==Could you tell me where I can buy tickets?</item>
         <item>Не могли бы вы одолжить мне немного денег?==Could you lend me some money?</item>
@@ -5151,16 +5151,16 @@
         <item>Не могли бы вы отвезти меня в центр города?==Could you take me to the city center?</item>
         <item>Вы могли бы подождать меня здесь?==Could you wait for me here?</item>
         <item>Можно ли мне еще один напиток?==Could I have another drink?</item>
-        <item>Можно ли мне подушку?==Could I get a pillow, please?</item>
+        <item>Можно ли мне подушку, пожалуйста?==Could I get a pillow, please?</item>
         <item>Могу ли я сесть впереди?==Could I sit in the front?</item>
         <item>Могу я это примерить?==Could I try this on?</item>
         <item>Могу я получить чек, пожалуйста?==Could I have a receipt, please?</item>
         <item>Могу ли я покурить здесь?==Could I smoke here?</item>
         <item>Вы могли бы поменяться со мной местами?==Could I switch seats with you?</item>
-        <item>Могу ли я вас побеспокоить?==Could I bother you for a moment?</item>
+        <item>Могу ли я вас побеспокоить?==Could I bother you?</item>
         <item>Можно попросить счет?==Could I have the check?</item>
         <item>Могу ли я оплатить пластиковой картой?==Could I pay with a credit card?</item>
-        <item>Покажите ваши документы==Could I see your documents?</item>
+        <item>Могу я увидеть ваши документы?==Could I see your documents?</item>
         <item>Здесь можно припарковаться?==Can I park here?</item>
         <item>Могли бы мы остановиться у банкомата?==Could we stop at an ATM?</item>
         <item>Могу ли я обменять это==Could I exchange this?</item>
@@ -5183,7 +5183,6 @@
         <item>Маме нужно получить права.==Mom has to get her driver\’s license.</item>
         <item>Мне не надо с ним встречаться, я позвоню ему по телефону.==I don\’t have to meet him, I will call him on the phone.</item>
         <item>Ему не нужно идти на работу, он примет все заявки дома.==He doesn\’t have to go to work, he will handle all the requests from home.</item>
-        <item>Мне не нужно слушать новости, я читаю интернет-статьи.==I don\’t have to listen to the news, I read online articles.</item>
         <item>Мне не нужно отвечать на звонки, это делает секретарь.==I don\’t have to answer the calls; my secretary does that.</item>
         <item>Ему не нужно учиться в университете, он получил хорошее образование в колледже.==He doesn\’t have to study at a university; he got a good education in college.</item>
         <item>Ей не нужно рисовать плакат, она должна сочинить стихотворение.==She doesn\’t have to draw a poster; she has to write a poem.</item>
@@ -5194,7 +5193,7 @@
         <item>Он был вынужден поехать домой.==He had to go home.</item>
         <item>Ей пришлось сидеть с детьми.==She had to babysit.</item>
         <item>Мама разбила яйца, ей пришлось идти снова в магазин.==Mom broke the eggs, and she had to go to the store again.</item>
-        <item>Моя сестра расплакалась, мне пришлось дать ей конфету.==My sister started crying, and I had to give her a piece of candy.</item>
+        <item>Моя сестра расплакалась, мне пришлось дать ей конфету.==My sister burst into tears, so I had to give her a candy.</item>
         <item>Вчера на улице был сильный дождь, мне пришлось взять дождевик.==It was raining heavily outside yesterday, so I had to take my raincoat.</item>
         <item>Я упал, и мне пришлось идти в больницу.==I fell down, and I had to go to the hospital.</item>
         <item>Мне пришлось согласиться с ним.==I had to agree with him.</item>
@@ -5214,7 +5213,7 @@
         <item>Мне придется слушать новости каждый день?==Will I have to listen to the news every day?</item>
         <item>Ему не нужно начинать свой бизнес?==Doesn\’t he have to start his own business?</item>
         <item>Почему ей придется сидеть с детьми?==Why will she have to babysit?</item>
-        <item>Зачем ему нужно лететь в Москву завтра?==Why does he have to fly to Moscow tomorrow? (Or: Why will he have to fly to Moscow tomorrow?)</item>
+        <item>Зачем ему нужно лететь в Москву завтра?==Why does he have to fly to Moscow tomorrow?</item>
         <item>Почему ей пришлось продать свою машину?==Why did she have to sell her car?</item>
         <item>Им нужно открыть дверь?==Do they have to open the door?</item>
         <item>Зачем мне нужно стоять в очереди?==Why do I have to stand in line?</item>
@@ -5238,7 +5237,7 @@
         <item>Он умеет писать стихи.==He can write poetry.</item>
         <item>Я должен носить очки для чтения==I have to wear reading glasses.</item>
         <item>Кевину стоит вкладывать свои деньги==Kevin should invest his money.</item>
-        <item>Ты должен прочесть последнюю книгу Себастьяна Фолка, она просто потрясающая!==You really must read Sebastian Faulk\’s latest book. It\’s amazing!</item>
+        <item>Ты обязан прочесть последнюю книгу Себастьяна Фолка, она просто потрясающая!==You  must read Sebastian Faulk\’s latest book. It\’s amazing!</item>
         <item>Алексу приходится делать много международных звонков.==Alex has to make many international calls.</item>
         <item>В библиотеках нельзя громко разговаривать.==You must not talk loudly in libraries.</item>
         <item>Уже позднее, чем я думал, мне пора.==It\’s later than I thought. I have to go.</item>
@@ -5372,7 +5371,7 @@
     <string-array name="gonna_going_to">
         <item>Мы должны избавиться от этого барахла или мы будем пойманы и окажемся в чьем-нибудь багажнике.==We have to get rid of this stuff or we\'re gonna get caught and end up in somebody\'s trunk.</item>
         <item>Пристегните ремни. Будет жёсткая ночка==Fasten your seatbelts. It\'s gonna be a bumpy night.</item>
-        <item>Я собираюсь закинуть ноги и отдохнуть==I\'m gonna put my feet up and relax.</item>
+        <item>Я собираюсь закинуть ноги и расслабиться==I\'m gonna put my feet up and relax.</item>
         <item>Он собирается сделать ей предложение, от которого она не сможет отказаться==He\'s gonna make her an offer she can\'t refuse.</item>
         <item>Она собирается выглядеть довольно изящно==She\'s gonna look real elegant.</item>
         <item>Ты ведь знаешь, что я собираюсь купить новую машину, не так ли?==You know that I\'m gonna buy a new car, don\'t you?</item>
@@ -5417,14 +5416,14 @@
     </string-array>
 
     <string-array name="modal_probabilities">
-        <item>Может, он дома (но вряд ли)==He might be at home</item>
+        <item>Может, он дома==He might be at home</item>
         <item>Может, она гордится собой, но она этого совсем не показывает.==She might be proud of herself, but she doesn\'t show it at all</item>
         <item>Может, ты и найдешь шанс исправить положение.==You might find a chance to fix the situation</item>
         <item>Может, он и опытный работник, но он делает очень глупые ошибки.==He might be an experienced worker, but he makes very silly mistakes</item>
         <item>Может, он и хочет нам помочь, но он ведет себя странно.==He might want to help us, but he\'s acting very strange</item>
         <item>Может, он и отдыхает сейчас за границей (вряд ли), но у него нет на это денег==He might be vacationing abroad now, but he has no money for that</item>
         <item>Может, она и пишет отчет (вряд ли), но так как сейчас она висит в социальной сети.==She might be writing a report, but she\'s currently on social net</item>
-        <item>Может, он уже и идет домой, но я думаю, что он сейчас еще сидит в офисе.==He might be going home, but I think he\'s still in the office</item>
+        <item>Может, он и идет домой, но я думаю, что он сейчас еще сидит в офисе.==He might be going home, but I think he\'s still in the office</item>
         <item>Может, они и летят на самолете, но я думаю, что они едут поездом, так как она боится высоты.==They might be flying on a plane, but I think they are going by train because she\'s afraid of heights</item>
         <item>Может, он уже все закончил…==He might have finished everything…</item>
         <item>Ну, может, они поругались…==They might have argued</item>
@@ -5442,7 +5441,7 @@
         <item>Может (50%), он жене звонит.==He may be calling his wife</item>
         <item>Может (50%), он все написал.==He may have written everything</item>
         <item>Может (50%), он забыл про это.==He may have forgotten about it</item>
-        <item>Может (50%), они уже приехали.==They may have already arrived</item>
+        <item>Может (50%), они уже прибыли.==They may have already arrived</item>
         <item>Может (50%), мы его обидели.==We may have offended him</item>
         <item>Должно быть, она очень терпеливая.==She must be very patient</item>
         <item>Должно быть, ты очень голоден.==You must be very hungry</item>
@@ -5489,13 +5488,13 @@
         <item>Возможно (50%), Карла сейчас спит.==Carla may be sleeping now.</item>
         <item>Она, возможно (50%), права.==She may be right</item>
         <item>Весьма вероятно, Оливия в саду.==Olivia must be in the garden</item>
-        <item>Возможно (50%), они сейчас смотрят телевизор.==They may be watching TV at that moment.</item>
-        <item>Возможно, ты оставил её в магазине.==You might have left it in the store</item>
+        <item>Возможно (50%), они смотрят телевизор в данный момент.==They may be watching TV at that moment.</item>
+        <item>Возможно, ты оставил её в магазине.==You might have left it at the store</item>
         <item>Возможно, мы не поможем ему.==We might not help him</item>
         <item>Весьма вероятно, что Алексей сейчас играет на пианино.==Aleksey must be playing the piano now.</item>
         <item>Полагаю, что, возможно (50%), она спала.==I suppose she may have been asleep</item>
         <item>Ее сестра, возможно, сейчас читает книгу==Her sister might be reading a book now.</item>
-        <item>Возможно, она не знала о ней.==She might not have known about it.</item>
+        <item>Возможно, она не знала об этом.==She might not have known about it.</item>
         <item>Возможно, Алексей придет на вечеринку==Aleksey may come to the party.</item>
         <item>Возможно (50%), Алексей осматривает достопримечательности==Aleksey may be doing sightseeing.</item>
         <item>Возможно (50%), Алексей сделал всю работу самостоятельно.==Aleksey may have done all the work himself.</item>
@@ -5512,18 +5511,17 @@
         <item>Не может быть, что сосед сейчас опять рвет билеты.==The neighbor can\'t be tearing tickets again.</item>
         <item>Может быть (50%), Роберт смотрит фильмы ужасов по утрам.==Robert may watch horror films every morning</item>
         <item>Возможно, этот компьютер - китайский.==This computer might be Chinese</item>
-        <item>Должно быть, ты был голоден, раз съел все в холодильнике.==You must have been hungry. You emptied the fridge.</item>
+        <item>Должно быть, ты был голоден, раз съел все в холодильнике.==You must have been hungry to eat everything in the fridge.</item>
         <item>Должно быть, они прислали подарок. Где-то была открытка.==They must have sent you a present. There was a postcard somewhere.</item>
         <item>Мы опаздываем. Вероятно, они нас еще ждут.==We are late. They might be still waiting for us.</item>
         <item>Она не может быть дома. Она заграницей.==She can\'t be home. She is abroad.</item>
-        <item>Это не могли быть следы кота. Это было животное намного крупнее.==It can\'t have been a cat\'s footstep. It was a much bigger animal.</item>
         <item>Он взял зонт — должно быть идет дождь.==He took his umbrella, it must be raining</item>
         <item>Он в костюме, должно быть собирается на важную встречу.==He\'s wearing a suit, he must be going to an important meeting</item>
         <item>Ты прочитал много книг, должно быть ты знаешь все.==You read a lot of books, you must know everything</item>
         <item>Возможно (50%), туда будет нелегко попасть.==It may be difficult to get there.</item>
-        <item>Мои родители, возможно, поедут этим летом в Крым. ==My parents might be going to Crimea this summer</item>
-        <item>Не может быть, чтобы Петер был там в тот вечер — мы были вместе.==Peter can\'t have been there that night, we were together.</item>
-        <item>Может, он дома, но вряд ли==He might be at home</item>
+        <item>Мои родители, возможно, поедут этим летом в Крым.==My parents might go to Crimea this summer</item>
+        <item>Не может быть, чтобы Питер был там в тот вечер — мы были вместе.==Peter couldn\'t have been there that night, we were together.</item>
+        <item>Может, он дома==He might be at home</item>
         <item>Может, она гордится собой, но она этого совсем не показывает.==She might be proud of herself, but she does not show it at all</item>
     </string-array>
 
@@ -5562,7 +5560,7 @@
         <item>Хлеб пекут по ночам.==Bread is baked at night.</item>
         <item>Тут продают цветы.==Flowers are sold here.</item>
         <item>Творог сделан из молока.==Cottage cheese is made from milk.</item>
-        <item>Сейчас не пишут письма, а шлют е-мейлы.==Letters are not written now, now e-mails are sent.</item>
+        <item>Сейчас не пишут письма, а шлют е-мейлы.==Letters are not written now, but e-mails are sent.</item>
         <item>Эту музыку слушают только в клубах.==This music is listened to in clubs only.</item>
         <item>Банковские карты Виза принимают везде.==Visa bank cards are accepted everywhere.</item>
         <item>В зоопарках животных держат в клетках.==Animals in zoos are kept in cages.</item>
@@ -5575,11 +5573,11 @@
         <item>Колбасу не едят с вареньем.==Sausage is not eaten with jam.</item>
         <item>Здесь не подают мясо.==Meat is not served here.</item>
         <item>Молоко в этом кафе не кипятят.==Milk is not boiled in this cafe.</item>
-        <item>Цветы не продают на улице.==Flowers are not sold in the street.</item>
+        <item>Цветы не продают на улице.==Flowers are not sold on the street.</item>
         <item>Деньги не дают за красивые глаза.==Money is not given for beautiful eyes.</item>
         <item>Пол моют через день.==The floor is washed every other day.</item>
         <item>Мебель протирают каждый день.==The furniture is dusted every day.</item>
-        <item>Посуду моют после еды.==The dishes are washed (done) after meals.</item>
+        <item>Посуду моют после еды.==The dishes are washed after meals.</item>
         <item>Руки моют перед едой.==Hands are washed before meals.</item>
         <item>Еду подают горячей.==(The) food is served hot.</item>
         <item>Старших не перебивают.==Seniors are not interrupted.</item>
@@ -5587,7 +5585,7 @@
         <item>Ногти обрезают маленькими ножницами.==Nails are cut with small scissors.</item>
         <item>Машину моют раз в неделю.==The car is washed once a week.</item>
         <item>Детей не посылают в аптеку купить лекарств.==Children are not sent to the drugstore to buy medicine.</item>
-        <item>Информация обновляется ежедневно.==(The) information is updated daily (several times a day/a few times a day).</item>
+        <item>Информация обновляется ежедневно.==The information is updated daily.</item>
         <item>Люди делятся на несколько категорий.==People are divided into several categories.</item>
         <item>Специи хранят в герметичных упаковках.==Spices are kept in sealed packages.</item>
         <item>Кредитные карты присылают по почте.==Credit cards are sent by mail.</item>
@@ -5606,7 +5604,7 @@
         <item>Эти консервы с рыбой были открыты в 2013 году.==These cans of fish were opened in 2013.</item>
         <item>На мой вопрос ответили вчера.==My question was answered yesterday.</item>
         <item>В хоккей много играли прошлой зимой.==Hockey was played a lot last winter.</item>
-        <item>Этот текст был переведен на прошлом уроке.==This text was translated in? the last lesson.</item>
+        <item>Этот текст был переведен на прошлом уроке.==This text was translated in the last lesson.</item>
         <item>На станции их встретил агент.==At the station they were met by their agent.</item>
         <item>Ребенка нашли через две недели поисков.==The child was found after two weeks of searching.</item>
         <item>Бандитов не поймали в прошлом январе.==The gangsters weren\’t caught last January.</item>
@@ -5668,7 +5666,7 @@
         <item>Почему яйца взбиты?==Why are the eggs scrambled?</item>
         <item>Где обычно хранят сёмгу?==Where is salmon usually kept?</item>
         <item>Почему холодильник выключен?==Why is the fridge turned off?</item>
-        <item>Почему плита включена?==Why is the oven turned on?</item>
+        <item>Почему плита включена?==Why is the stove turned on?</item>
         <item>Почему штопор сломан?==Why is the corkscrew broken?</item>
         <item>Где готовится мясо ягнёнка?==Where is the lamb cooked?</item>
         <item>Что здесь налито?==What is poured here?</item>
@@ -5676,14 +5674,14 @@
         <item>Джем кладётся на горячий тост.==Jam is put on the hot toast.</item>
         <item>Варенье варится из ягод и сахара.==Jam is made from berries and sugar.</item>
         <item>Бананы очищаются обезьянами.==Bananas are peeled by monkeys.</item>
-        <item>Лучшее мороженое готовится итальянцами.==The best ice cream is prepared by Italians.</item>
+        <item>Лучшее мороженое готовится итальянцами.==The best ice cream is made by Italians.</item>
         <item>Немного ежевики заморожено до завтра.==Some blackberries are frozen till tomorrow.</item>
         <item>Немного клюквы смешано с сахаром.==Some cranberries are mixed with sugar.</item>
         <item>Немного малины сварено.==Some raspberries are boiled.</item>
         <item>Мясо режется мясниками.==Meat is cut by butchers.</item>
         <item>Посмотри! Баклажан уже нарезан.==Look! The eggplant is already cut.</item>
-        <item>Ветчину всегда режет мой папа.==Ham is always cut by my father.</item>
-        <item>Обычно грибы собирают мои родственники.==Mushrooms are usually collected by my relatives.</item>
+        <item>Ветчину всегда режет мой папа.==Ham is always cut by my Dad.</item>
+        <item>Обычно грибы собирают мои родственники.==Mushrooms are usually picked by my relatives.</item>
         <item>Вкусный кетчуп производят мексиканцы.==Tasty ketchup is produced by Mexicans.</item>
         <item>Хлеб выпекается булочниками.==Bread is baked by bakers.</item>
         <item>Сёмгу готовят с лимоном и майонезом.==Salmon is cooked with lemon and mayonnaise.</item>
@@ -5701,7 +5699,7 @@
         <item>Сливки подают со льдом?==Is cream served with ice?</item>
         <item>Сахар добавлен в мой чай?==Is the sugar added to my tea?</item>
         <item>Испечены ли пирожки с капустой?==Are the pies with cabbage baked?</item>
-        <item>Яйца взбиваются папой?==Are the eggs scrambled by Dad?</item>
+        <item>Яйца взбиваются папой?==Are the eggs being beaten by Dad?</item>
         <item>Эти бобы запеченные?==Are these beans baked?</item>
         <item>Почему эта горчица смешана с кетчупом?==Why is this mustard mixed with ketchup?</item>
         <item>Почему яблоки нарезаны кубиками? Их следует нарезать ломтиками.==Why are the apples diced? They should be sliced.</item>
@@ -5709,7 +5707,7 @@
         <item>Почему это блюдо испорчено?==Why is this dish spoilt?</item>
         <item>Что обычно добавляется в этот салат?==What is usually added to this salad?</item>
         <item>Что выпекается моей мамой?==What is baked by my mom?</item>
-        <item>Что варится в этой кастрюле?==What is boiled in this pan?</item>
+        <item>Что варится в этой кастрюле?==What is boiled in this pot?</item>
         <item>Что взбито?==What is scrambled?</item>
         <item>Что пожарено?==What is fried?</item>
         <item>Что испорчено?==What is spoilt?</item>
@@ -5719,7 +5717,7 @@
         <item>Из магазина украли много денег.==A lot of money was stolen from the shop (A lot of money has been stolen from the shop)</item>
         <item>К шести часам вся работа была закончена==All the work was finished by 6 o\’clock</item>
         <item>В два часа грузовики как раз разгружали==At two o\’clock the trucks were being unloaded.</item>
-        <item>К трем часам все устройства были подготовлены.==By 3 o\’clock all the devices had been prepared</item>
+        <item>К трем часам все устройства были подготовлены.==By three o’clock, all the devices had been prepared.</item>
         <item>Все документы отправляются службой DHL==All the documents are sent via DHL service</item>
         <item>Этот контракт будет подписан на следующей неделе==This contract will be signed next week</item>
         <item>На нашей улице строят новый торговый центр.==A new mall is being built on our street</item>
@@ -5737,10 +5735,10 @@
         <item>На него смотрели с изумлением==He was being looked at with astonishment</item>
         <item>Все ли страницы отсканированы?==Are all the pages scanned?</item>
         <item>Мне прописали новое лекарство.==I was prescribed a new medicine</item>
-        <item>О них часто говорят==They are often spoken about</item>
+        <item>О них часто говорят==They are often talked about.</item>
         <item>Тебя ищут!==You are being looked for</item>
         <item>Его обязательно найдут==He will be found for sure</item>
-        <item>В этой школе преподают три иностранных языка==Three foreign languages are taught in this school</item>
+        <item>В этой школе преподают три иностранных языка==Three foreign languages are taught at this school</item>
         <item>Нам показали все интересные места в этом городе==We were shown all the interesting places in this city</item>
         <item>Игрушки были раскиданы по всему дому==The toys were scattered all over the house</item>
         <item>Все приготовления будут закончены завтра с утра==All the preparations will be finished tomorrow morning</item>
@@ -5750,7 +5748,7 @@
         <item>Мне дали новый проект==I was given a new project (I have been given a new project)</item>
         <item>Нам рассказали очень странную историю==We were told a very strange story</item>
         <item>Документ был подписан очень быстро==The document was signed very quickly</item>
-        <item>Этот вопрос обсуждался еще до того, как вы пришли.==This question had been discussed before you came</item>
+        <item>Этот вопрос обсудили еще до того, как вы пришли.==This question had been discussed before you came</item>
         <item>Решение было найдено до обеда==The solution had been found before lunch</item>
         <item>В горах построили несколько симпатичных отелей==A few nice hotels were built in the mountains</item>
         <item>Ему не позволили поехать вместе с друзьями.==He was not allowed to go with his friends</item>
@@ -6207,11 +6205,11 @@
         <item>Я терпеть не могу мыть окна зимой.==I hate washing windows in winter</item>
         <item>Моему другу удалось получить эту работу.==My friend succeeded in getting this job.</item>
         <item>Она подозревала его в том, что он ее обманывает.==She suspected him of deceiving her.</item>
-        <item>Он отказался от идеи когда-то жениться на ней.==He gave up the idea of marrying her someday.</item>
-        <item>Спасибо вам за помощь!==Thank you very much for helping!</item>
+        <item>Он отказался (бросил) от идеи когда-то жениться на ней.==He gave up the idea of marrying her someday.</item>
+        <item>Спасибо вам за помощь!==Thank you for helping!</item>
         <item>Мы с нетерпением ждем, когда увидимся с вами!==We are looking forward to seeing you!</item>
         <item>Я просто мечтаю встретиться с этими людьми!==I am just dreaming of meeting these people</item>
-        <item>Плохая погода не позволила нам остаться у озера==Bad weather prevented us from staying at the lake</item>
+        <item>Плохая погода не позволила/помешала нам остаться у озера==Bad weather prevented us from staying at the lake</item>
         <item>Они обвиняют его в том, что он экономит на еде.==They accuse him of skimping on food.</item>
         <item>Она подумывает о том, чтобы сменить работу==She is thinking of changing her job</item>
         <item>Он не одобряет то, что она пьет так много кофе.==He does not approve of her drinking so much coffee.</item>
