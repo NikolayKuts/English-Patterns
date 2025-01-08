@@ -5759,46 +5759,46 @@
 
     <string-array name="would_like_to">
         <item>Не хочешь поесть чего-нибудь?==Would you like to eat something?</item>
-        <item>Не хочешь пойти в кино?==Would you like to go to the movie theater?</item>
+        <item>Не хочешь пойти в кино?==Would you like to go to the movies?</item>
         <item>Мы не хотели бы путешествовать автобусом. ==We wouldn\'t like to travel by bus</item>
-        <item>Я бы хотел посмотреть кино по телевизору.==I\’d like to watch the film on TV</item>
-        <item>Не хотите ли сесть на мое место?==Would you like to take my place?</item>
+        <item>Я бы хотел посмотреть кино по телевизору.==I\’d like to watch the movie on TV</item>
+        <item>Не хотите ли сесть на мое место?==Would you like to take my seat?</item>
         <item>Я хотел бы уточнить это заявление==I would like to clarify this statement</item>
         <item>Что бы ты хотел сделать завтра?==What would you like to do tomorrow?</item>
         <item>Когда ты бы хотел поехать в Италию?==When would you like to go to Italy?</item>
         <item>Желаете ли поиграть на скрипке или на пианино?==Would you like to play the violin or the piano?</item>
-        <item>Я бы хотела иметь шикарную машину.==I would like to have a posh car</item>
+        <item>Я бы хотела иметь шикарную машину.==I would like to have a fancy car</item>
         <item>Я хотел бы быть приглашенным==I would like to be invited</item>
         <item>Чем бы вы хотели заняться в следующие выходные?==What would you like to do next weekend?</item>
         <item>Я бы хотел съездить в Италию еще раз==I\'d like to visit Italy again</item>
-        <item>Что ты хотел бы на завтрак? ==What would you like to have for breakfast?</item>
-        <item>Ты хотел бы присоединиться ко мне? ==Would you like to join me?</item>
+        <item>Что ты хотел бы на завтрак?==What would you like to have for breakfast?</item>
+        <item>Ты хотел бы присоединиться ко мне?==Would you like to join me?</item>
         <item>Я бы выпил немного молока==I would like to drink some milk</item>
-        <item>Желаете посмотреть номер? ==Would you like to have a look at the room?</item>
+        <item>Желаете посмотреть номер?==Would you like to have a look at the room?</item>
         <item>Он бы хотел организовать это==He would like to arrange it</item>
-        <item>Он бы хотел полетать на воздушном шаре. ==He\'d like to fly in a hot-air balloon</item>
-        <item>Я бы хотел забронировать номер.==I would like (‘d like) to book a room.</item>
+        <item>Он бы хотел полетать на воздушном шаре.==He\'d like to fly in a hot air balloon</item>
+        <item>Я бы хотел забронировать номер.==I\’d to book a room</item>
         <item>Я бы хотел найти прекрасное место, чтобы пропасть там==I would like to find a beautiful place to get lost</item>
         <item>Хотели бы вы позавтракать?==Would you like to have breakfast?</item>
-        <item>Не желаете ли пойти в театр?==Would you like to go to the theatre?</item>
-        <item>Хотел бы ты прогулять школу?==Would you like to play truant from school?</item>
+        <item>Не желаете ли пойти в театр?==Would you like to go to the theater?</item>
+        <item>Хотел бы ты прогулять школу?==Would you like to skip school?</item>
         <item>Я бы хотел продолжить учиться==I\’d like to continue studying</item>
         <item>Она хотела бы остаться с ним==She\’d like to stay with him</item>
         <item>Я бы хотел помочь вам==I\’d like to help you</item>
         <item>Он хотел бы потанцевать с еще одной девушкой==He\’d like to dance with another girl</item>
         <item>Ты хотел бы оставить ее в покое?==Would you like to leave her alone?</item>
         <item>Я бы хотел поцеловать ее много раз==I\’d like to kiss her many times</item>
-        <item>Мы бы хотели сказать вам спасибо==We\’d like to tell you thank you</item>
+        <item>Мы бы хотели сказать вам спасибо==We\’d like to say thank you to you</item>
         <item>Я бы хотел вести машину всю ночь напролет==I\’d like to drive a car all night long</item>
     </string-array>
 
     <string-array name="shall">
         <item>Помочь вам?==Shall I help you?</item>
-        <item>Начнем обедать?==Shall we begin dinner?</item>
-        <item>Нам переехать в жилую комнату?==Shall we move into the living room?</item>
+        <item>Начнем обедать?==Shall we start dinner?</item>
+        <item>Нам переехать в жилую комнату?==Shall we move to the living room?</item>
         <item>Пойдем на пляж?==Shall we go to the beach?</item>
-        <item>Закрыть дверь?==Shall I shut the door?</item>
-        <item>Когда нам вас ждать?==When shall we wait for you?</item>
+        <item>Закрыть дверь?==Shall I close the door?</item>
+        <item>Когда нам вас ожидали?==When shall we expect you?</item>
         <item>Увидимся завтра?==Shall I see you tomorrow?</item>
         <item>Потанцуем?==Shall we dance?</item>
         <item>Перевести?==Shall I translate?</item>
@@ -5807,26 +5807,26 @@
         <item>Давай (может быть) поговорим о твоем будущем?==Shall we talk about your future?</item>
         <item>Можно мне принести эту книгу завтра?==Shall I bring this book tomorrow?</item>
         <item>Можно я открою окно?==Shall I open the window?</item>
-        <item>Я заберу твою сестру из колледжа?==Shall I pick your sister up from college?</item>
+        <item>Я заберу твою сестру из колледжа?==Shall I pick up your sister from college?</item>
         <item>Возьмем такси?==Shall we take a taxi?</item>
         <item>Пойдем туда завтра?==Shall we go there tomorrow?</item>
         <item>Поцелуемся?==Shall I kiss you?</item>
-        <item>Сделать Вам кофе? ==Shall I make you some coffee?</item>
-        <item>Погуляем по парку?==Shall we go about the park?</item>
-        <item>Мне остаться дома?==Shall I stay at home?</item>
+        <item>Сделать Вам кофе?==Shall I make you some coffee?</item>
+        <item>Погуляем по парку?==Shall we take a walk in the park?</item>
+        <item>Мне остаться дома?==Shall I stay home?</item>
         <item>Что бы нам сегодня поесть?==What shall we eat today?</item>
-        <item>Как насчет начать встречаться?==Shall we date?</item>
+        <item>Как насчет начать встречаться?==Shall we start dating?</item>
         <item>А не поиграть ли нам в игру?==Shall we play a game?</item>
         <item>Что же нам делать теперь?==What shall we do now?</item>
         <item>Стоит ли мне перестать тратить деньги?==Shall I stop wasting money?</item>
         <item>Когда мы пойдем в лес?==When shall we go to the woods?</item>
-        <item>Куда мне это положить?==Where shall I put it?</item>
+        <item>Куда мне это положить?==Where shall I put this?</item>
         <item>Когда нам остановиться?==When shall we stop?</item>
         <item>А не попробовать ли нам сделать это?==Shall we try to do it?</item>
         <item>Купить эту машину?==Shall I buy this car?</item>
-        <item>А не провести ли нам выходные в Москве?==Shall we spend our holidays in Moscow?</item>
+        <item>А не провести ли нам выходные в Москве?==Shall we spend the weekend in Moscow?</item>
         <item>Стоит ли позволить ей жить со мной?==Shall I allow her to live with me?</item>
-        <item>Мне прогулять школу?==Shall I play truant from school?</item>
+        <item>Мне прогулять школу?==Shall I skip school?</item>
         <item>Мне дать ему шанс?==Shall I give him a chance?</item>
     </string-array>
 
