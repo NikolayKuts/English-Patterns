@@ -5831,139 +5831,138 @@
     </string-array>
 
     <string-array name="articles_food">
-        <item>Русский вариант==Английский вариант</item>
         <item>Дай мне стакан теплого молока==Give me a glass of warm milk</item>
-        <item>Хотите попробовать настоящую пиццу?==Would you like to taste real pizza?</item>
+        <item>Хотите попробовать настоящую пиццу?==Would you like to try real pizza?</item>
         <item>Вкусная пицца==Tasty pizza</item>
         <item>Я хочу купить мясо==I want to buy meat</item>
         <item>Пицца была довольно-таки вкусной==The pizza was pretty tasty</item>
         <item>Зеленый чай==Green tea</item>
         <item>Чашка зеленого чая==A cup of green tea</item>
-        <item>Килограмм черешни==A kilogram of cherry</item>
-        <item>Пойдем купим черешню==Let\’s go to buy cherry</item>
+        <item>Килограмм черешни==A kilogram of cherries</item>
+        <item>Пойдем купим черешню==Let\’s go to buy cherries</item>
         <item>А у вас есть помидор?==Do you have a tomato?</item>
-        <item>Дайте мне тот огурец==Give me that/the cucumber</item>
+        <item>Дайте мне тот огурец==Give me that cucumber</item>
         <item>Яйцо треснувшее==The egg has a crack</item>
         <item>Порежь ветчину==Cut the ham</item>
         <item>Я жарю бекон==I\’m frying bacon</item>
         <item>Купи масла==Buy cooking oil</item>
         <item>Сливочное масло==Butter</item>
         <item>Упаковка сливочного масла==A pack of butter</item>
-        <item>(Этот) сыр для салата, не трогай его==The cheese is for salad, don\’t take it</item>
-        <item>Килограмм старого сыра==A kilo of old cheese</item>
+        <item>(Этот) сыр для салата, не трогай его==The cheese is for salad, don\’t touch it</item>
+        <item>Килограмм старого (выдержанный) сыра==A kilo of aged cheese</item>
         <item>Прокисшее молоко==Sour milk</item>
         <item>Принесите корочку хлеба и килограмм сосисок==Bring a crust of bread and a kilo of sausages</item>
         <item>Пицца плохо пахнет! Принесите другую==The pizza smells bad! Bring another one</item>
         <item>Хлеб==Bread</item>
         <item>Гамбургер==A hamburger</item>
         <item>Сосиска в масле==A sausage in oil</item>
-        <item>Булочка с маком==A small-roll with poppy</item>
+        <item>Булочка с маком==A roll with poppy seeds</item>
         <item>Большой соленый рулет с огурцом==A big salty roll with cucumber</item>
-        <item>Мы ели вкусный борщ==We ate tasty borsch</item>
-        <item>Тарелка борща была большой==A plate of borsch was big</item>
-        <item>Борщ был сварен мной==The borsch was cooked by me/I cooked the borsch</item>
+        <item>Мы ели вкусный борщ==We ate tasty borscht</item>
+        <item>Тарелка борща была большой==A plate of borscht was big</item>
+        <item>Борщ был сварен мной==The borscht was cooked by me</item>
         <item>Где соль?==Where is the salt?</item>
-        <item>Соль на холодильнике==The salt is on the fridge.</item>
+        <item>Соль на холодильнике==The salt is on the fridge</item>
         <item>Блины==Pancakes</item>
         <item>Стопка блинчиков==A stack of pancakes</item>
-        <item>Где бекон, который ты готовила?==Where is the bacon which you cooked?</item>
+        <item>Где бекон, который ты готовила?==Where is the bacon you cooked?</item>
         <item>Пончик==A doughnut</item>
-        <item>Сладкий джем==Sweet jelly</item>
+        <item>Сладкий джем==Sweet jam</item>
         <item>Кусочек ветчины==A piece of ham</item>
-        <item>Ананас==A pine-apple</item>
-        <item>Ананасовый сок==Pine-apple juice</item>
+        <item>Ананас==A pineapple</item>
+        <item>Ананасовый сок==Pineapple juice</item>
         <item>Литр ананасового сока==A liter of pineapple juice</item>
-        <item>(Тот) ананасовый сок был сладким==The pine-apple juice was sweet</item>
+        <item>(Тот) ананасовый сок был сладким==That pineapple juice was sweet</item>
         <item>Яблоки съела твоя мама==The apples were eaten by your mom</item>
-        <item>Яичница ==Fried eggs</item>
-        <item>Оладьи ==Fritters</item>
-        <item>Вкусный пирог==A tasty cake</item>
+        <item>Яичница==Fried eggs</item>
+        <item>Оладьи==Fritters</item>
+        <item>Вкусный пирог==A tasty pie</item>
         <item>Шпинат==Spinach</item>
-        <item>(Эта) курица не прожаренная ==The chicken is not fried</item>
+        <item>(Эта) курица не прожаренная==The chicken is not fried</item>
         <item>Килограмм свинины==A kilo of pork</item>
         <item>Ты сможешь приготовить индейку?==Can you cook turkey?</item>
         <item>Моя мама готовит телятину==My mom\’s cooking veal</item>
-        <item>Дайте мне тех ребрышек ==Give me the/those spare ribs</item>
-        <item>Вырезка трески==Tenderloin of сod</item>
-        <item>(Этот )бургер превосходен==The/This burger is excellent</item>
-        <item>Я хочу купить куриные крылышки с соусом==I wanna buy buffalo wings / hot wings / chicken wings with sauce</item>
-        <item>Картофель фри ==French fries / chips</item>
-        <item>Где гамбургер, который ты принес? ==Where is the hamburger, (which) you brought?</item>
-        <item>Хот-дог без сосиски ==A hot-dog without a sausage</item>
-        <item>Пакет чипсов==A packet of crisps</item>
+        <item>Дайте мне тех ребрышек==Give me those spare ribs</item>
+        <item>Вырезка трески==Cod tenderloin</item>
+        <item>(Этот) бургер превосходен==This burger is excellent</item>
+        <item>Я хочу купить куриные крылышки с соусом==I wanna buy chicken wings with sauce</item>
+        <item>Картофель фри==French fries</item>
+        <item>Где гамбургер, который ты принес?==Where is the hamburger you brought?</item>
+        <item>Хот-дог без сосиски==A hot dog without a sausage</item>
+        <item>Пакет чипсов==A bag of chips</item>
         <item>Кусочек пиццы==A slice of pizza</item>
         <item>Корейская спаржа==Korean asparagus</item>
         <item>Ты купил репку?==Did you buy a turnip?</item>
         <item>На столе луковица==There is an onion on the table</item>
         <item>Мешок картофеля==A sack of potatoes</item>
-        <item>Долька чеснок==A clove of garlic</item>
-        <item>Та капуста, которую я забыл купить ==The/That cabbage, (which) I forgot to buy</item>
-        <item>Рис ==Rice</item>
+        <item>Долька чеснока==A clove of garlic</item>
+        <item>Та капуста, которую я забыл купить==That cabbage I forgot to buy</item>
+        <item>Рис==Rice</item>
         <item>Тонна чечевицы==A ton of lentils</item>
         <item>Кто съел баклажан?==Who ate the eggplant?</item>
-        <item>Кто-то продает горох==Someone sells peas</item>
+        <item>Кто-то продает горох==Someone is selling peas</item>
         <item>Тыква или дыня==A pumpkin or a melon</item>
         <item>Что такое цуккини?==What is zucchini?</item>
         <item>Мне нужна морковка==I need a carrot</item>
-        <item>Авокадо - полезный фрукт==Avocado is a useful fruit</item>
-        <item>Мне нужен авокадо и еще большая креветка для этого салата==I need an avocado and a shrimp too for the salad.</item>
+        <item>Авокадо - полезный фрукт==Avocado is a healthy fruit</item>
+        <item>Мне нужен авокадо и еще большая креветка для этого салата==I need an avocado and a large shrimp for this salad</item>
         <item>Миндаль==Almond</item>
         <item>У меня есть красивое яблоко. Оно изображено на телефоне==I have a beautiful apple. It\’s shown on the phone</item>
-        <item>Половинка банана ==A half of banana</item>
-        <item>Спелая слива висит на дереве==A ripe plum hangs on the tree</item>
+        <item>Половинка банана==Half a banana/A half of banana</item>
+        <item>Спелая слива висит на дереве==A ripe plum is hanging on the tree</item>
         <item>Где те груши?==Where are the pears?</item>
-        <item>Хочешь фисташек?==Would you like pistachios?</item>
-        <item>Ту клубничку я есть не буду.==I am not going to the / that strawberry</item>
+        <item>Хочешь фисташек?==Do you want pistachios?</item>
+        <item>Ту клубничку я есть не буду.==I am not going to eat that strawberry</item>
         <item>Красная клюква==Red cranberries</item>
         <item>Виноград==Grapes</item>
         <item>Гроздь винограда==A bunch of grapes</item>
-        <item>Тот апельсин съела мышь==The/That orange was eaten by mouse</item>
-        <item>Арахис растет в земле==Peanuts grow in the ground</item>
-        <item>Мандарин напоминает мне о Новом годе (в зависимости от ситуации)==A mandarin reminds me about the New Year / The mandarin reminds me about the New Year</item>
+        <item>Тот апельсин съела мышь==That orange was eaten by a mouse</item>
+        <item>Арахис растет в земле==Peanuts grow underground</item>
+        <item>Мандарин напоминает мне о Новом годе==A mandarin reminds me of the New Year</item>
         <item>Грек съел грецкий орех в Греции==The Greek ate a walnut in Greece</item>
-        <item>Добавь немного лапши ==Add some noodles</item>
-        <item>(Этот) суп очень питательный ==The/This soup is very nourishing</item>
-        <item>Замаринуй щуку ==Pickle a pike</item>
-        <item>Я закажу ростбиф ==I\’ll order a roastbeef/ roastbeef</item>
-        <item>Ростбиф будет готов через пять минут==The roastbeef will be cooked in 5 minutes</item>
+        <item>Добавь немного лапши==Add some noodles</item>
+        <item>(Этот) суп очень питательный==This soup is very nutritious</item>
+        <item>Замаринуй щуку==Marinate a pike</item>
+        <item>Я закажу ростбиф==I\’ll order roast beef</item>
+        <item>Ростбиф будет готов через пять минут==The roast beef will be ready in 5 minutes</item>
         <item>Мука==Flour</item>
-        <item>Лавровый лист==Bay leaves</item>
+        <item>Лавровый лист==Bay leaf</item>
         <item>Пара лавровых листов==A couple of bay leaves</item>
         <item>Щепотка соли==A pinch of salt</item>
         <item>Неспелый арбуз==An unripe watermelon</item>
-        <item>Пересоленный салат==Oversalted salad</item>
+        <item>Пересоленный салат==Over-salted salad</item>
         <item>Хочу выпить уксуса==I want to drink vinegar</item>
         <item>Каша==Porridge</item>
         <item>Тарелка каши==A plate of porridge</item>
         <item>Я не люблю кашу==I don\’t like porridge</item>
-        <item>Та каша не вкусная==That/the porridge is not tasty</item>
-        <item>Ты сварил эту кашу?==Have you boiled this/the porridge?</item>
+        <item>Та каша не вкусная==That porridge is not tasty</item>
+        <item>Ты сварил эту кашу?==Did you boil this porridge?</item>
         <item>Давай пожарим мясо вместе с картофелем==Let\’s fry meat with potatoes</item>
         <item>Как отварить лапшу?==How to boil noodles?</item>
         <item>Я хочу купить рыбу==I wanna buy fish</item>
-        <item>Мог бы ты почистить эту морковь?==Could you peel the carrot?</item>
-        <item>Она любит жарить картошку==She likes friing potatoes</item>
+        <item>Мог бы ты почистить эту морковь?==Could you peel this carrot?</item>
+        <item>Она любит жарить картошку==She likes frying potatoes</item>
         <item>Это не трудно варить суп==It\’s not hard to boil soup</item>
         <item>Тот суп стоит в холодильнике уже неделю==That soup has been in the fridge for a week</item>
         <item>Чашка кофе==A cup of coffee</item>
         <item>Крепкий кофе горький==Strong coffee is bitter</item>
         <item>У тебя есть немного сахара?==Do you have some sugar?</item>
-        <item>Положи сахар в чашку ==Put the sugar into the cup</item>
+        <item>Положи сахар в чашку==Put the sugar into the cup</item>
         <item>Оливки очень популярны в нашей стране.==Olives are very popular in our country.</item>
         <item>Я предпочитаю есть белок (яйцо)==I prefer to eat egg white</item>
-        <item>Поешь йогурта==Eat(some) yogurt</item>
-        <item>Мороженое ==Ice cream</item>
+        <item>Поешь йогурта==Eat (some) yogurt</item>
+        <item>Мороженое==Ice cream</item>
         <item>Горячее какао==Hot cocoa</item>
-        <item>Летом мы пьем пиво==We drink beer in summer</item>
-        <item>Имею ли я право заказать стакан коктейля?==Do I have a right to order a glass of cocktail?</item>
-        <item>Глинтвейн может согреть вас зимними вечерами==Mulled wine can warm you in winter evenings</item>
+        <item>Летом мы пьем пиво==We drink beer in the summer</item>
+        <item>Имею ли я право заказать стакан коктейля?==Do I have the right to order a glass of cocktail?</item>
+        <item>Глинтвейн может согреть вас зимними вечерами==Mulled wine can warm you on winter evenings</item>
         <item>Неспелая вишня очень кислая==Unripe cherries are very sour</item>
         <item>Купи немного хлеба==Buy some bread</item>
-        <item>Чай со льдом утоляет жажду==Iced- tea quenches thirst</item>
-        <item>Так, чай остыл==The tea has cooled down</item>
-        <item>Кабачок==A marrow/a zucchini</item>
+        <item>Чай со льдом утоляет жажду==Iced tea quenches thirst</item>
+        <item>Так, чай остыл==So, the tea has cooled down</item>
+        <item>Кабачок==A zucchini</item>
         <item>Ванилин==Vanilla</item>
-        <item>Эта еда безвкусная ==This food is tasteless</item>
+        <item>Эта еда безвкусная==This food is tasteless</item>
         <item>Киви==A kiwi</item>
     </string-array>
 
