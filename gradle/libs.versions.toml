@@ -6,7 +6,7 @@ customTabs = "1.8.0"
 datastoreVersion = "1.1.1"
 
 # Ktor #
-ktor = "2.3.10"
+ktor = "2.3.13"
 
 # LoKdroid #
 lokdroid = "0.0.4-alpha"

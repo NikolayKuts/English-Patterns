@@ -1,9 +1,11 @@
 package com.example.englishpatterns.data.yandexApi
 
+import android.content.Context
+import com.example.englishpatterns.R
 import com.example.englishpatterns.data.SecretConstants
 import com.example.englishpatterns.data.common.LoadingState
-import com.example.englishpatterns.presentation.patternPractisingScreen.SelectedTextInfo
 import com.example.englishpatterns.data.yandexApi.entities.YandexWordInfo
+import com.example.englishpatterns.presentation.patternPractisingScreen.SelectedTextInfo
 import com.lib.lokdroid.core.logD
 import com.lib.lokdroid.core.logW
 import io.ktor.client.HttpClient
@@ -17,14 +19,20 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.serialization.json.Json
+import java.security.KeyStore
+import java.security.cert.CertificateFactory
+import javax.net.ssl.TrustManagerFactory
+import javax.net.ssl.X509TrustManager
 
-class YandexWordInfoProvider {
+class YandexWordInfoProvider(context: Context) {
 
     companion object {
 
         private const val BASE_URL = "https://dictionary.yandex.net/"
         private const val PATH = "api/v1/dicservice.json/lookup"
         private const val TIMEOUT = 10000L
+        private const val YANDEX_CERTIFICATE_ALIAS = "yandex_certificate_alias"
+        private const val CERTIFICATE_FACTORY_TYPE = "X.509"
     }
 
     private val client = HttpClient(CIO) {
@@ -38,7 +46,31 @@ class YandexWordInfoProvider {
             )
         }
         defaultRequest { url(urlString = BASE_URL) }
-        engine { requestTimeout = TIMEOUT }
+
+        engine {
+            requestTimeout = TIMEOUT
+            https { trustManager = createTrustManager(context = context) }
+        }
+    }
+
+    private fun createTrustManager(context: Context): X509TrustManager {
+        val certInputStream = context.resources.openRawResource(R.raw.yandex_dictionary_api_cert)
+
+        val keyStore = KeyStore.getInstance(KeyStore.getDefaultType()).apply {
+            val certificateFactory = CertificateFactory.getInstance(CERTIFICATE_FACTORY_TYPE)
+                .generateCertificate(certInputStream)
+
+            load(null, null)
+            setCertificateEntry(YANDEX_CERTIFICATE_ALIAS, certificateFactory)
+        }
+
+        val trustManagerFactory = TrustManagerFactory.getInstance(
+            TrustManagerFactory.getDefaultAlgorithm()
+        ).apply { init(keyStore) }
+
+        val trustManagers = trustManagerFactory.trustManagers
+
+        return trustManagers.first() as X509TrustManager
     }
 
     fun fetchTextInfo(word: String): Flow<LoadingState<SelectedTextInfo>> = flow {
