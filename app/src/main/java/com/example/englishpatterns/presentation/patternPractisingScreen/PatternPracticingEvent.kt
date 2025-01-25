@@ -40,4 +40,6 @@ sealed interface PatternPracticingEvent {
         val url: String,
         val clipboardUnit: ClipboardUnit,
     ) : PatternPracticingEvent
+
+    data class TextToSpeech(val text: String) : PatternPracticingEvent
 }

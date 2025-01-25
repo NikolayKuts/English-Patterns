@@ -1,7 +1,6 @@
 package com.example.englishpatterns.presentation.common
 
 import android.content.ActivityNotFoundException
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -17,13 +16,12 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.datastore.dataStore
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.englishpatterns.data.PatternHoldersSerializer
+import com.example.englishpatterns.data.TextSpeaker
 import com.example.englishpatterns.presentation.collectWhenStarted
 import com.example.englishpatterns.presentation.common.customTabs.ChatGptCustomTabManager
 import com.example.englishpatterns.presentation.navigation.AppNavGraph
@@ -41,13 +39,8 @@ import kotlinx.coroutines.flow.collectLatest
 
 class MainActivity : ComponentActivity() {
 
-    private val Context.dataStore by dataStore(
-        fileName = "pattern_holders",
-        serializer = PatternHoldersSerializer()
-    )
-
     private val viewModel: BaseViewModel<MainState, MainAction, MainEvent> by viewModels<MainViewModel> {
-        MainViewModelFactory(dataStore = dataStore)
+        MainViewModelFactory(dataStore = this.patternStore)
     }
 
     private val localStorage by lazy { LocalStorage.getInstance(context = application) }
@@ -59,6 +52,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         enableEdgeToEdge()
+
+        var textSpeaker: TextSpeaker? = null
 
         setContent {
             EnglishPatternsTheme {
@@ -92,6 +87,8 @@ class MainActivity : ComponentActivity() {
                                     )
 
                                 LaunchedEffect(key1 = Unit) {
+                                    textSpeaker = TextSpeaker(context = application)
+
                                     patternPracticingViewModel.eventState.collectLatest { event ->
                                         when (event) {
                                             is PatternPracticingEvent.WarmupCustomTabs -> {
@@ -139,6 +136,10 @@ class MainActivity : ComponentActivity() {
                                             is PatternPracticingEvent.RedirectionToWordTemplateSearchPageRequired -> {
                                                 navController.navigateToWebContentScreen(url = event.url)
                                             }
+
+                                            is PatternPracticingEvent.TextToSpeech -> {
+                                                textSpeaker?.speak(text = event.text)
+                                            }
                                         }
                                     }
                                 }
@@ -154,6 +155,8 @@ class MainActivity : ComponentActivity() {
                                         lifecycleOwner.lifecycle.removeObserver(
                                             patternPracticingViewModel.textAudioPlayer
                                         )
+                                        textSpeaker?.stop()
+                                        textSpeaker = null
                                     }
                                 }
 

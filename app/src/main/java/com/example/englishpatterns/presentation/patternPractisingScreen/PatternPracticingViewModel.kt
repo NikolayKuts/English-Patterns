@@ -28,7 +28,7 @@ import kotlinx.coroutines.launch
 
 class PatternPracticingViewModel(
     private val context: Application,
-    private val selectedTextProvider: YandexWordInfoProvider = YandexWordInfoProvider(),
+    private val selectedTextProvider: YandexWordInfoProvider = YandexWordInfoProvider(context = context),
     override val textAudioPlayer: TextAudioPlayer = TextAudioPlayer(),
     rawPatternGroups: List<RawPatternGroup>,
 ) : PatternPracticingBaseViewModel() {
@@ -167,6 +167,9 @@ class PatternPracticingViewModel(
 
             is PatternPracticingAction.RedirectionToWordTemplateSearchPageRequired -> {
                 handleRedirectionToWordTemplateSearchPageRequest(action = action)
+            }
+            is PatternPracticingAction.TextToSpeechRequired -> {
+                handleTextToSpeechRequired()
             }
         }
     }
@@ -434,6 +437,13 @@ class PatternPracticingViewModel(
                     clipboardUnit = clipboardUnit,
                 )
             )
+        }
+    }
+
+    private fun handleTextToSpeechRequired() {
+        viewModelScope.launch {
+            val text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
+            eventState.emit(value = PatternPracticingEvent.TextToSpeech(text = text))
         }
     }
 

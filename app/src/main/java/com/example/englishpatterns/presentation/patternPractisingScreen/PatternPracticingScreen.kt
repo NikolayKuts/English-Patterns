@@ -11,10 +11,12 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.keyframes
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
@@ -83,6 +85,7 @@ import androidx.compose.ui.window.Popup
 import com.example.englishpatterns.R
 import com.example.englishpatterns.data.common.LoadingState
 import com.example.englishpatterns.domain.PatternGroupUnitState
+import com.example.englishpatterns.presentation.common.MainAction
 import com.example.englishpatterns.presentation.common.shimmerEffect
 import com.example.englishpatterns.ui.theme.EnglishPatternsTheme
 import kotlinx.coroutines.android.awaitFrame
@@ -318,6 +321,7 @@ private fun PatterGroupNavigationButton(
     )
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun BoxScope.PatternContent(
     patternGroupUnitState: PatternGroupUnitState?,
@@ -349,9 +353,12 @@ private fun BoxScope.PatternContent(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            modifier = Modifier.clickable {
-                sendAction(PatternPracticingAction.ChangeTranslationVisibilityState)
-            },
+            modifier = Modifier.combinedClickable(
+                onClick = { sendAction(PatternPracticingAction.ChangeTranslationVisibilityState) },
+                onLongClick = {
+                    sendAction(PatternPracticingAction.TextToSpeechRequired)
+                },
+            ),
             text = patternGroupUnitState?.pattern?.native ?: "",
             color = Color(0xFFC5CC85),
             textAlign = TextAlign.Center

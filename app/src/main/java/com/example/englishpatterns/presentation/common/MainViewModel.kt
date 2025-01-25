@@ -16,10 +16,10 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 class MainViewModel(
-    private val dataStore: DataStore<RowPatternGroupHolders>,
+    private val patternStore: DataStore<RowPatternGroupHolders>,
 ) : BaseViewModel<MainState, MainAction, MainEvent>() {
 
-    private val rawPatternGroupHoldersState = dataStore.data
+    private val rawPatternGroupHoldersState = patternStore.data
     private val chosenRawPatternGroupHolders: Flow<List<RawPatternGroupHolder>> =
         getChosenRawPatternGroupHoldersState()
     override val state = MutableStateFlow(value = MainState())
@@ -48,6 +48,24 @@ class MainViewModel(
                     )
 
                     eventState.emit(event)
+                }
+            }
+
+            is MainAction.SetMarkColor -> {
+                viewModelScope.launch(Dispatchers.IO) {
+                    patternStore.updateData {
+                        val list = it.content
+                        val holder = list.getOrNull(action.patternIndex) ?: return@updateData it
+                        val updatedRawPatternGroup = holder.rawPatternGroup.toNew(
+                            markColor = action.markColor
+                        )
+                        val updatedContent = list.toMutableList().apply {
+                            this[action.patternIndex] =
+                                holder.copy(rawPatternGroup = updatedRawPatternGroup)
+                        }
+
+                        it.copy(content = updatedContent)
+                    }
                 }
             }
         }
@@ -80,7 +98,7 @@ class MainViewModel(
         rawPatternGroupHolder: RawPatternGroupHolder
     ) {
         viewModelScope.launch(Dispatchers.IO) {
-            dataStore.updateData { patternHolders ->
+            patternStore.updateData { patternHolders ->
                 val updatedHolders = patternHolders.content.toMutableList()
                     .apply {
                         this[position] =

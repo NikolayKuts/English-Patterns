@@ -9,616 +9,1132 @@ sealed class RawPatternGroup(
     val name: String,
     @StringRes vararg val contentResIds: Int
 ) {
+    abstract val markColor: MarkColor
+
+    abstract fun toNew(markColor: MarkColor): RawPatternGroup
 
     @Serializable
-    class PossessivePronouns : RawPatternGroup(
+    data class PossessivePronouns(
+        override val markColor: MarkColor = MarkColor.Non
+    ) : RawPatternGroup(
         name = "Possessive pronouns",
-        contentResIds = intArrayOf(R.array.possessive_pronouns)
-    )
+        contentResIds = intArrayOf(R.array.possessive_pronouns),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ThisThatTheseThose : RawPatternGroup(
+    data class ThisThatTheseThose(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "This/that - these/those",
-        contentResIds = intArrayOf(R.array.this_that_these_those)
-    )
+        contentResIds = intArrayOf(R.array.this_that_these_those),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PossessiveCaseOfNouns : RawPatternGroup(
+    data class PossessiveCaseOfNouns(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Possessive case of nouns",
-        contentResIds = intArrayOf(R.array.possessive_case_of_nouns)
-    )
+        contentResIds = intArrayOf(R.array.possessive_case_of_nouns),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ToBeAdjectivesAffirmative : RawPatternGroup(
+    data class ToBeAdjectivesAffirmative(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "To be + adjectives affirmative",
-        contentResIds = intArrayOf(R.array.to_be_adjectives_affirmative)
-    )
+        contentResIds = intArrayOf(R.array.to_be_adjectives_affirmative),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ToBeAdjectivesQuestions : RawPatternGroup(
+    data class ToBeAdjectivesQuestions(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "To be + adjectives questions",
-        contentResIds = intArrayOf(R.array.to_be_adjectives_questions)
-    )
+        contentResIds = intArrayOf(R.array.to_be_adjectives_questions),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ToBeAdjectivesNegative : RawPatternGroup(
+    data class ToBeAdjectivesNegative(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "To be + adjectives negative",
-        contentResIds = intArrayOf(R.array.to_be_adjectives_negative)
-    )
+        contentResIds = intArrayOf(R.array.to_be_adjectives_negative),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ToBeAdjectivesMixed : RawPatternGroup(
+    data class ToBeAdjectivesMixed(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "To be + adjectives mixed",
-        contentResIds = intArrayOf(R.array.to_be_adjectives_mixed)
-    )
+        contentResIds = intArrayOf(R.array.to_be_adjectives_mixed),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ToBeSpecialQuestions : RawPatternGroup(
+    data class ToBeSpecialQuestions(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "To be + special questions",
-        contentResIds = intArrayOf(R.array.to_be_special_questions)
-    )
+        contentResIds = intArrayOf(R.array.to_be_special_questions),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class VerbToBeArticle : RawPatternGroup(
+    data class VerbToBeArticle(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Verb to be + article",
-        contentResIds = intArrayOf(R.array.verb_to_be_article)
-    )
+        contentResIds = intArrayOf(R.array.verb_to_be_article),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ThisIsA : RawPatternGroup(
+    data class ThisIsA(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "This is a",
-        contentResIds = intArrayOf(R.array.this_is_a)
-    )
+        contentResIds = intArrayOf(R.array.this_is_a),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class TheNounBe : RawPatternGroup(
+    data class TheNounBe(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "The + noun + be",
-        contentResIds = intArrayOf(R.array.the_noun_be)
-    )
+        contentResIds = intArrayOf(R.array.the_noun_be),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentSimple : RawPatternGroup(
+    data class PresentSimple(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Simple",
-        contentResIds = intArrayOf(R.array.present_simple)
-    )
+        contentResIds = intArrayOf(R.array.present_simple),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class Ordinals : RawPatternGroup(
+    data class Ordinals(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Ordinals",
-        contentResIds = intArrayOf(R.array.ordinals)
-    )
+        contentResIds = intArrayOf(R.array.ordinals),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class TimePrepositionsAt : RawPatternGroup(
+    data class TimePrepositionsAt(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Time prepositions at",
-        contentResIds = intArrayOf(R.array.time_prepositions_at)
-    )
+        contentResIds = intArrayOf(R.array.time_prepositions_at),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class TimePrepositionsIn : RawPatternGroup(
+    data class TimePrepositionsIn(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Time prepositions in",
-        contentResIds = intArrayOf(R.array.time_prepositions_in)
-    )
+        contentResIds = intArrayOf(R.array.time_prepositions_in),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class TimePrepositionsOn : RawPatternGroup(
+    data class TimePrepositionsOn(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Time prepositions on",
-        contentResIds = intArrayOf(R.array.time_prepositions_on)
-    )
+        contentResIds = intArrayOf(R.array.time_prepositions_on),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class TimePrepositionsMixed : RawPatternGroup(
+    data class TimePrepositionsMixed(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Time prepositions mixed",
-        contentResIds = intArrayOf(R.array.time_prepositions_mixed)
-    )
+        contentResIds = intArrayOf(R.array.time_prepositions_mixed),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentSimpleTimePrepositions : RawPatternGroup(
+    data class PresentSimpleTimePrepositions(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Simple + time prepositions",
-        contentResIds = intArrayOf(R.array.present_simple_time_prepositions)
-    )
+        contentResIds = intArrayOf(R.array.present_simple_time_prepositions),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentSimpleFrequencyAdverbs : RawPatternGroup(
+    data class PresentSimpleFrequencyAdverbs(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Simple frequency adverbs",
-        contentResIds = intArrayOf(R.array.present_simple_frequency_adverbs)
-    )
+        contentResIds = intArrayOf(R.array.present_simple_frequency_adverbs),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentSimpleGo : RawPatternGroup(
+    data class PresentSimpleGo(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Simple + go",
-        contentResIds = intArrayOf(R.array.present_simple_go)
-    )
+        contentResIds = intArrayOf(R.array.present_simple_go),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentSimplePlay : RawPatternGroup(
+    data class PresentSimplePlay(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Simple + play",
-        contentResIds = intArrayOf(R.array.present_simple_play)
-    )
+        contentResIds = intArrayOf(R.array.present_simple_play),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PossessivePronounsSecond : RawPatternGroup(
+    data class PossessivePronounsSecond(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Possessive pronouns 2",
-        contentResIds = intArrayOf(R.array.possessive_pronouns_2)
-    )
+        contentResIds = intArrayOf(R.array.possessive_pronouns_2),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ObjectPronouns : RawPatternGroup(
+    data class ObjectPronouns(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Object pronouns",
-        contentResIds = intArrayOf(R.array.object_pronouns)
-    )
+        contentResIds = intArrayOf(R.array.object_pronouns),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentSimpleLesson2 : RawPatternGroup(
+    data class PresentSimpleLesson2(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present simple lessen 2",
-        contentResIds = intArrayOf(R.array.present_simple_lesson_2)
-    )
+        contentResIds = intArrayOf(R.array.present_simple_lesson_2),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class LikeVIng : RawPatternGroup(
+    data class LikeVIng(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Like + Ving",
-        contentResIds = intArrayOf(R.array.like_Ving)
-    )
+        contentResIds = intArrayOf(R.array.like_Ving),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class BeFondKeenInterestedCrazy : RawPatternGroup(
+    data class BeFondKeenInterestedCrazy(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Be + found of + keen on..",
-        contentResIds = intArrayOf(R.array.be_fond_of_be_keen_on_be_interested_in_be_crazy_about)
-    )
+        contentResIds = intArrayOf(R.array.be_fond_of_be_keen_on_be_interested_in_be_crazy_about),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentProcess : RawPatternGroup(
+    data class PresentProcess(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Process",
-        contentResIds = intArrayOf(R.array.present_process)
-    )
+        contentResIds = intArrayOf(R.array.present_process),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentTypicalVsPresentProcess : RawPatternGroup(
+    data class PresentTypicalVsPresentProcess(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Typical vs Present Process",
-        contentResIds = intArrayOf(R.array.present_typical_vs_present_process)
-    )
+        contentResIds = intArrayOf(R.array.present_typical_vs_present_process),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class LocationPrepositions : RawPatternGroup(
+    data class LocationPrepositions(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Location Prepositions",
-        contentResIds = intArrayOf(R.array.location_prepositions)
-    )
+        contentResIds = intArrayOf(R.array.location_prepositions),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ThereIsInstallation : RawPatternGroup(
+    data class ThereIsInstallation(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "There is installation",
-        contentResIds = intArrayOf(R.array.there_is_installation)
-    )
+        contentResIds = intArrayOf(R.array.there_is_installation),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ThereIsThereArePrepositions : RawPatternGroup(
+    data class ThereIsThereArePrepositions(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "There is / there are + prepositions",
-        contentResIds = intArrayOf(R.array.there_is_there_are_prepositions)
-    )
+        contentResIds = intArrayOf(R.array.there_is_there_are_prepositions),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ManyMuch : RawPatternGroup(
+    data class ManyMuch(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Many / much",
-        contentResIds = intArrayOf(R.array.many_much)
-    )
+        contentResIds = intArrayOf(R.array.many_much),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class MuchManyLittleFew : RawPatternGroup(
+    data class MuchManyLittleFew(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Much / many / little / few",
-        contentResIds = intArrayOf(R.array.much_many_little_few)
-    )
+        contentResIds = intArrayOf(R.array.much_many_little_few),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class SomeAnyNo : RawPatternGroup(
+    data class SomeAnyNo(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Some / any / no",
-        contentResIds = intArrayOf(R.array.some_any_no)
-    )
+        contentResIds = intArrayOf(R.array.some_any_no),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PrepositionsInAtToOn : RawPatternGroup(
+    data class PrepositionsInAtToOn(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Prepositions in/at, to, on",
-        contentResIds = intArrayOf(R.array.prepositions_in_at_to_on)
-    )
+        contentResIds = intArrayOf(R.array.prepositions_in_at_to_on),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class MovementAroundTheCity : RawPatternGroup(
+    data class MovementAroundTheCity(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Movement around the city",
-        contentResIds = intArrayOf(R.array.movement_around_the_city)
-    )
+        contentResIds = intArrayOf(R.array.movement_around_the_city),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PrepositionsCityThereIs : RawPatternGroup(
+    data class PrepositionsCityThereIs(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Prepositions City there is",
-        contentResIds = intArrayOf(R.array.prepositions_city_there_is)
-    )
+        contentResIds = intArrayOf(R.array.prepositions_city_there_is),
+    ) {
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentSimpleCity : RawPatternGroup(
+    data class PresentSimpleCity(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present simple CITY",
-        contentResIds = intArrayOf(R.array.present_simple_city)
-    )
+        contentResIds = intArrayOf(R.array.present_simple_city),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
+
 
     @Serializable
-    class PresentSimpleFood : RawPatternGroup(
+    data class PresentSimpleFood(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Simple Food",
-        contentResIds = intArrayOf(R.array.present_simple_food)
-    )
+        contentResIds = intArrayOf(R.array.present_simple_food),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentProcessWorkAndLeisure : RawPatternGroup(
+    data class PresentProcessWorkAndLeisure(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Process WORK and LEISURE",
-        contentResIds = intArrayOf(R.array.present_process_work_and_leisure)
-    )
+        contentResIds = intArrayOf(R.array.present_process_work_and_leisure),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentProcessRelationship : RawPatternGroup(
+    data class PresentProcessRelationship(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Process + Relationship",
-        contentResIds = intArrayOf(R.array.present_process_relationship)
-    )
+        contentResIds = intArrayOf(R.array.present_process_relationship),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentSimpleCont : RawPatternGroup(
+    data class PresentSimpleCont(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present simple cont.",
-        contentResIds = intArrayOf(R.array.present_simple_cont)
-    )
+        contentResIds = intArrayOf(R.array.present_simple_cont),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentSimpleVsPresentProcess : RawPatternGroup(
+    data class PresentSimpleVsPresentProcess(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Simple vs Present Process",
-        contentResIds = intArrayOf(R.array.present_simple_vs_present_process)
-    )
+        contentResIds = intArrayOf(R.array.present_simple_vs_present_process),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentProcessResult : RawPatternGroup(
+    data class PresentProcessResult(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Process + Result",
-        contentResIds = intArrayOf(R.array.present_process_result)
-    )
+        contentResIds = intArrayOf(R.array.present_process_result),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ProcessProcessResult : RawPatternGroup(
+    data class ProcessProcessResult(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Process / Process + result",
-        contentResIds = intArrayOf(R.array.process_process_result)
-    )
+        contentResIds = intArrayOf(R.array.process_process_result),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class WasWere : RawPatternGroup(
+    data class WasWere(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Was / Were ",
-        contentResIds = intArrayOf(R.array.was_were)
-    )
+        contentResIds = intArrayOf(R.array.was_were),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ThereWasThereWere : RawPatternGroup(
+    data class ThereWasThereWere(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "There was / there were",
-        contentResIds = intArrayOf(R.array.there_was_there_were)
-    )
+        contentResIds = intArrayOf(R.array.there_was_there_were),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PastTypical : RawPatternGroup(
+    data class PastTypical(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Past Typical",
-        contentResIds = intArrayOf(R.array.past_typical)
-    )
+        contentResIds = intArrayOf(R.array.past_typical),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PastProcess : RawPatternGroup(
+    data class PastProcess(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Past process",
-        contentResIds = intArrayOf(R.array.past_process)
-    )
+        contentResIds = intArrayOf(R.array.past_process),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentResult : RawPatternGroup(
+    data class PresentResult(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Result",
-        contentResIds = intArrayOf(R.array.present_result)
-    )
+        contentResIds = intArrayOf(R.array.present_result),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ArticlesGeography : RawPatternGroup(
+    data class ArticlesGeography(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Articles geography",
-        contentResIds = intArrayOf(R.array.articles_geography)
-    )
+        contentResIds = intArrayOf(R.array.articles_geography),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class CountriesAndCities : RawPatternGroup(
+    data class CountriesAndCities(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Countries and cities",
-        contentResIds = intArrayOf(R.array.countries_and_cities)
-    )
+        contentResIds = intArrayOf(R.array.countries_and_cities),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ToBeUsedToGetUsedTo : RawPatternGroup(
+    data class ToBeUsedToGetUsedTo(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "To be used to / get used to",
-        contentResIds = intArrayOf(R.array.to_be_used_to_get_used_to)
-    )
+        contentResIds = intArrayOf(R.array.to_be_used_to_get_used_to),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class UsedTo : RawPatternGroup(
+    data class UsedTo(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Used to",
-        contentResIds = intArrayOf(R.array.used_to)
-    )
+        contentResIds = intArrayOf(R.array.used_to),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class AsThingsStandNowAtFirst : RawPatternGroup(
+    data class AsThingsStandNowAtFirst(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "As things stand now / At first",
-        contentResIds = intArrayOf(R.array.as_things_stand_now_at_first)
-    )
+        contentResIds = intArrayOf(R.array.as_things_stand_now_at_first),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class AtLeastInMyOpinion : RawPatternGroup(
+    data class AtLeastInMyOpinion(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "At least / In my opinion",
-        contentResIds = intArrayOf(R.array.at_least_in_my_opinion)
-    )
+        contentResIds = intArrayOf(R.array.at_least_in_my_opinion),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class InOtherWordsToSayTheTruth : RawPatternGroup(
+    data class InOtherWordsToSayTheTruth(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "In other words / To say the truth",
-        contentResIds = intArrayOf(R.array.in_other_words_To_say_the_truth)
-    )
+        contentResIds = intArrayOf(R.array.in_other_words_To_say_the_truth),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class OnTheContraryAsMatterOfFact : RawPatternGroup(
+    data class OnTheContraryAsMatterOfFact(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "On the contrary / As a matter of fact",
-        contentResIds = intArrayOf(R.array.on_the_contrary_as_a_matter_of_fact)
-    )
+        contentResIds = intArrayOf(R.array.on_the_contrary_as_a_matter_of_fact),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ThusIfIAmNotMistaken : RawPatternGroup(
+    data class ThusIfIAmNotMistaken(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Thus / If I’m not mistaken",
-        contentResIds = intArrayOf(R.array.thus_if_i_am_not_mistaken)
-    )
+        contentResIds = intArrayOf(R.array.thus_if_i_am_not_mistaken),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class VerbsWithPrepositions : RawPatternGroup(
+    data class VerbsWithPrepositions(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Verbs with prepositions",
-        contentResIds = intArrayOf(R.array.verbs_with_prepositions_1, R.array.verbs_with_prepositions_2)
-    )
+        contentResIds = intArrayOf(
+            R.array.verbs_with_prepositions_1,
+            R.array.verbs_with_prepositions_2
+        ),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class FutureSimpleForBeginner : RawPatternGroup(
+    data class FutureSimpleForBeginner(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Future Simple for beginner",
-        contentResIds = intArrayOf(R.array.future_simple_for_beginner)
-    )
+        contentResIds = intArrayOf(R.array.future_simple_for_beginner),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class FutureSimpleWillV : RawPatternGroup(
+    data class FutureSimpleWillV(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Future simple will+V",
-        contentResIds = intArrayOf(R.array.future_simple_will_v)
-    )
+        contentResIds = intArrayOf(R.array.future_simple_will_v),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class Plan100Percents : RawPatternGroup(
+    data class Plan100Percents(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Plan 100%",
-        contentResIds = intArrayOf(R.array.plan_100)
-    )
+        contentResIds = intArrayOf(R.array.plan_100),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class Plan50Percents : RawPatternGroup(
+    data class Plan50Percents(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Plan 50%",
-        contentResIds = intArrayOf(R.array.plan_50)
-    )
+        contentResIds = intArrayOf(R.array.plan_50),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class FutureProcess : RawPatternGroup(
+    data class FutureProcess(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Future Process",
-        contentResIds = intArrayOf(R.array.future_process)
-    )
+        contentResIds = intArrayOf(R.array.future_process),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ZeroConditional : RawPatternGroup(
+    data class ZeroConditional(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Zero conditional",
-        contentResIds = intArrayOf(R.array.zero_conditional)
-    )
+        contentResIds = intArrayOf(R.array.zero_conditional),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class TheFirstConditional : RawPatternGroup(
+    data class TheFirstConditional(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "The First Conditional",
-        contentResIds = intArrayOf(R.array.the_first_conditional)
-    )
+        contentResIds = intArrayOf(R.array.the_first_conditional),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class SecondConditional : RawPatternGroup(
+    data class SecondConditional(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Second conditional",
-        contentResIds = intArrayOf(R.array.second_conditional)
-    )
+        contentResIds = intArrayOf(R.array.second_conditional),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ThirdConditional : RawPatternGroup(
+    data class ThirdConditional(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Third conditional",
-        contentResIds = intArrayOf(R.array.third_conditional)
-    )
+        contentResIds = intArrayOf(R.array.third_conditional),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class UsingWish : RawPatternGroup(
+    data class UsingWish(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Using \"Wish\"",
-        contentResIds = intArrayOf(R.array.using_wish)
-    )
+        contentResIds = intArrayOf(R.array.using_wish),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ThereVerb : RawPatternGroup(
+    data class ThereVerb(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "There + verb",
-        contentResIds = intArrayOf(R.array.there_verb)
-    )
+        contentResIds = intArrayOf(R.array.there_verb),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class AdjectivesMore : RawPatternGroup(
+    data class AdjectivesMore(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Adjectives more adj. / __er",
-        contentResIds = intArrayOf(R.array.adjectives_more)
-    )
+        contentResIds = intArrayOf(R.array.adjectives_more),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class AdjectivesTheMost : RawPatternGroup(
+    data class AdjectivesTheMost(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Adjectives the most adj. / the __est",
-        contentResIds = intArrayOf(R.array.adjectives_the_most)
-    )
+        contentResIds = intArrayOf(R.array.adjectives_the_most),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class GoodBadFarOld : RawPatternGroup(
+    data class GoodBadFarOld(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "good/bad/far/old",
-        contentResIds = intArrayOf(R.array.good_bad_far_old)
-    )
+        contentResIds = intArrayOf(R.array.good_bad_far_old),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class AsAs : RawPatternGroup(
+    data class AsAs(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "as …. as",
-        contentResIds = intArrayOf(R.array.as_as)
-    )
+        contentResIds = intArrayOf(R.array.as_as),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class NotSoAsNotAsAs : RawPatternGroup(
+    data class NotSoAsNotAsAs(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "not so … as/ not as ... as",
-        contentResIds = intArrayOf(R.array.not_so_as_not_as_as)
-    )
+        contentResIds = intArrayOf(R.array.not_so_as_not_as_as),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class TwiceTimesAsAs : RawPatternGroup(
+    data class TwiceTimesAsAs(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "twice / 3 times as….as",
-        contentResIds = intArrayOf(R.array.twice_times_as_as)
-    )
+        contentResIds = intArrayOf(R.array.twice_times_as_as),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class TheSameAs : RawPatternGroup(
+    data class TheSameAs(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "The same…as",
-        contentResIds = intArrayOf(R.array.the_same_as)
-    )
+        contentResIds = intArrayOf(R.array.the_same_as),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class TheThe : RawPatternGroup(
+    data class TheThe(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "The...  the",
-        contentResIds = intArrayOf(R.array.the_the)
-    )
+        contentResIds = intArrayOf(R.array.the_the),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class AdjectivesComparativeCity : RawPatternGroup(
+    data class AdjectivesComparativeCity(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Adjectives - Comparative (City)",
-        contentResIds = intArrayOf(R.array.adjectives_comparative_city)
-    )
+        contentResIds = intArrayOf(R.array.adjectives_comparative_city),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ComparativeAndSuperlativeDegreesOfAdjectives : RawPatternGroup(
+    data class ComparativeAndSuperlativeDegreesOfAdjectives(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Comparative and superlative degrees of adjectives",
-        contentResIds = intArrayOf(R.array.comparative_and_superlative_degrees_of_adjectives)
-    )
+        contentResIds = intArrayOf(R.array.comparative_and_superlative_degrees_of_adjectives),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ModalVerbCan : RawPatternGroup(
+    data class ModalVerbCan(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Modal verb CAN",
-        contentResIds = intArrayOf(R.array.modal_verb_can)
-    )
+        contentResIds = intArrayOf(R.array.modal_verb_can),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class Could : RawPatternGroup(
+    data class Could(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Could",
-        contentResIds = intArrayOf(R.array.could)
-    )
+        contentResIds = intArrayOf(R.array.could),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class HaveTo : RawPatternGroup(
+    data class HaveTo(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Have to",
-        contentResIds = intArrayOf(R.array.have_to)
-    )
+        contentResIds = intArrayOf(R.array.have_to),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class CanMayMustHaveTo : RawPatternGroup(
+    data class CanMayMustHaveTo(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Can, May, Must, Have to",
-        contentResIds = intArrayOf(R.array.can_may_must_have_to)
-    )
+        contentResIds = intArrayOf(R.array.can_may_must_have_to),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class HadToWillHaveTo : RawPatternGroup(
-        name= "Had to & Will have to",
-        contentResIds = intArrayOf(R.array.had_to_will_have_to)
-    )
+    data class HadToWillHaveTo(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
+        name = "Had to & Will have to",
+        contentResIds = intArrayOf(R.array.had_to_will_have_to),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class Gotta : RawPatternGroup(
+    data class Gotta(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Gotta",
-        contentResIds = intArrayOf(R.array.gotta)
-    )
+        contentResIds = intArrayOf(R.array.gotta),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class GonnaGoingTo : RawPatternGroup(
+    data class GonnaGoingTo(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Gonna = going to",
-        contentResIds = intArrayOf(R.array.gonna_going_to)
-    )
+        contentResIds = intArrayOf(R.array.gonna_going_to),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ModalProbabilities : RawPatternGroup(
+    data class ModalProbabilities(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Modal probabilities",
-        contentResIds = intArrayOf(R.array.modal_probabilities)
-    )
+        contentResIds = intArrayOf(R.array.modal_probabilities),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentSimplePassive : RawPatternGroup(
+    data class PresentSimplePassive(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Simple Passive",
-        contentResIds = intArrayOf(R.array.present_simple_passive)
-    )
+        contentResIds = intArrayOf(R.array.present_simple_passive),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PastSimplePassive : RawPatternGroup(
+    data class PastSimplePassive(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Past Simple Passive",
-        contentResIds = intArrayOf(R.array.past_simple_passive)
-    )
+        contentResIds = intArrayOf(R.array.past_simple_passive),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class PresentTypicalPassiveFood : RawPatternGroup(
+    data class PresentTypicalPassiveFood(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Present Typical Passive (Food)",
-        contentResIds = intArrayOf(R.array.present_typical_passive_food)
-    )
+        contentResIds = intArrayOf(R.array.present_typical_passive_food),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class Passive : RawPatternGroup(
+    data class Passive(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Passive",
-        contentResIds = intArrayOf(R.array.passive)
-    )
+        contentResIds = intArrayOf(R.array.passive),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class WouldLikeTo : RawPatternGroup(
+    data class WouldLikeTo(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Would like to",
-        contentResIds = intArrayOf(R.array.would_like_to)
-    )
+        contentResIds = intArrayOf(R.array.would_like_to),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class Shall : RawPatternGroup(
+    data class Shall(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Shall",
-        contentResIds = intArrayOf(R.array.shall)
-    )
+        contentResIds = intArrayOf(R.array.shall),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class ArticlesFood : RawPatternGroup(
+    data class ArticlesFood(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Articles food",
-        contentResIds = intArrayOf(R.array.articles_food)
-    )
+        contentResIds = intArrayOf(R.array.articles_food),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class AtRestaurant : RawPatternGroup(
+    data class AtRestaurant(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "At a restaurant",
-        contentResIds = intArrayOf(R.array.at_restaurant)
-    )
+        contentResIds = intArrayOf(R.array.at_restaurant),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class Pronouns : RawPatternGroup(
+    data class Pronouns(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Pronouns",
-        contentResIds = intArrayOf(R.array.pronouns)
-    )
+        contentResIds = intArrayOf(R.array.pronouns),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class Gerund : RawPatternGroup(
+    data class Gerund(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Gerund",
-        contentResIds = intArrayOf(R.array.gerund)
-    )
+        contentResIds = intArrayOf(R.array.gerund),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class Infinitive : RawPatternGroup(
+    data class Infinitive(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Infinitive",
-        contentResIds = intArrayOf(R.array.infinitive)
-    )
+        contentResIds = intArrayOf(R.array.infinitive),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class SomethingAnythingNothing : RawPatternGroup(
+    data class SomethingAnythingNothing(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "Something / anything / nothing",
-        contentResIds = intArrayOf(R.array.something_anything_nothing)
-    )
+        contentResIds = intArrayOf(R.array.something_anything_nothing),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 
     @Serializable
-    class TheOtherAnother : RawPatternGroup(
+    data class TheOtherAnother(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
         name = "The other / another",
-        contentResIds = intArrayOf(R.array.the_other_another)
-    )
+        contentResIds = intArrayOf(R.array.the_other_another),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 }

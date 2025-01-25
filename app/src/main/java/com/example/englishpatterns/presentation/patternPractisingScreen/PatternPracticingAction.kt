@@ -20,6 +20,8 @@ sealed interface PatternPracticingAction {
 
     data object ChangeTranslationVisibilityState: PatternPracticingAction
 
+    data object TextToSpeechRequired : PatternPracticingAction
+
     data class TextPronunciationRequired(val text: String) : PatternPracticingAction
 
     data class TextSelected(val text: String) : PatternPracticingAction
