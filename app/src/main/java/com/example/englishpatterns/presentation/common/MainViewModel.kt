@@ -61,7 +61,7 @@ class MainViewModel(
                         )
                         val updatedContent = list.toMutableList().apply {
                             this[action.patternIndex] =
-                                holder.copy(rawPatternGroup = updatedRawPatternGroup)
+                                holder.copy(rawPatternGroup = updatedRawPatternGroup, isChosen = false)
                         }
 
                         it.copy(content = updatedContent)

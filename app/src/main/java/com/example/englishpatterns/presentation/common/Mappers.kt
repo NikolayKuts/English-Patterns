@@ -8,6 +8,7 @@ fun MarkColor.toUiMarkColor(): UiMarkColor = when (this) {
     MarkColor.Accented -> UiMarkColor.SoftOrangePeach
     MarkColor.Warning -> UiMarkColor.WarmCoralRed
     MarkColor.Positive -> UiMarkColor.VividSkyBlue
+    MarkColor.Highlighted -> UiMarkColor.MutedOliveDarkMauve
 }
 
 fun UiMarkColor.toMarkColor(): MarkColor = when (this) {
@@ -15,4 +16,5 @@ fun UiMarkColor.toMarkColor(): MarkColor = when (this) {
     UiMarkColor.WarmCoralRed -> MarkColor.Warning
     UiMarkColor.VividSkyBlue -> MarkColor.Positive
     UiMarkColor.MutedOliveGreen -> MarkColor.Non
+    UiMarkColor.MutedOliveDarkMauve -> MarkColor.Highlighted
 }

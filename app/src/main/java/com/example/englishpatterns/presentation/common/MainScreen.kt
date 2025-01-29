@@ -157,6 +157,7 @@ private fun Item(
                 }
             )
         }
+        Color(0x59EA86FF)
     }
 }
 

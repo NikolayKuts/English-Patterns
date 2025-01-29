@@ -16,4 +16,7 @@ sealed interface MarkColor {
 
     @Serializable
     data object Positive : MarkColor
+
+    @Serializable
+    data object Highlighted : MarkColor
 }

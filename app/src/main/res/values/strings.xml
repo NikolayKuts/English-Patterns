@@ -1833,33 +1833,33 @@
     <string-array name="like_Ving">
         <item>Он любит готовить==He likes cooking.</item>
         <item>Моей маме нравится готовить.==My mother likes cooking.</item>
-        <item>Нам нравится заниматься спортом.==We like doing sports.</item>
-        <item>Я люблю играть в футбол.==I like playing football.</item>
+        <item>Нам нравится заниматься спортом.==We like exercising.</item>
+        <item>Я люблю играть в футбол.==I like playing soccer.</item>
         <item>Моя сестра любит играть в теннис.==My sister likes playing tennis.</item>
         <item>Мой отец любит смотреть хоккей.==My father likes watching hockey.</item>
-        <item>Ему нравится играть в компьютерные игры.==He likes playing computer games.</item>
-        <item>Мне нравится ездить на работу на велосипеде.==I like cycling to work.</item>
+        <item>Ему нравится играть в компьютерные игры.==He likes playing video games.</item>
+        <item>Мне нравится ездить на работу на велосипеде.==I like biking to work.</item>
         <item>Они увлекаются просмотром видео.==They like watching videos.</item>
         <item>Мне нравится кататься на велосипеде.==I like riding a bike.</item>
-        <item>Он любит смотреть новости по телевизору.==He likes watching news on TV.</item>
-        <item>Нам нравится готовить завтрак вместе.==We like making (cooking) breakfast together</item>
-        <item>Я ненавижу мыть посуду.==I hate washing the dishes.</item>
-        <item>Мой папа не любит мыть посуду.==My father doesn\’t like washing the dishes.</item>
+        <item>Он любит смотреть новости по телевизору.==He likes watching the news on TV.</item>
+        <item>Нам нравится готовить завтрак вместе.==We like making breakfast together.</item>
+        <item>Я ненавижу мыть посуду.==I hate doing the dishes.</item>
+        <item>Мой папа не любит мыть посуду.==My dad doesn\’t like washing dishes.</item>
         <item>Моя сестра любит накрывать на стол.==My sister likes setting the table.</item>
         <item>Нам нравится ужинать рано.==We like having dinner early.</item>
-        <item>Я люблю сидеть в интернете.==I like surfing the Internet.</item>
-        <item>Мы любим болтать (сидеть в чате).==We like chatting.</item>
-        <item>Дети любят сладкое на ужин.==Children like having sweets for dinner.</item>
-        <item>Мне нравится водить машину.==I like driving.</item>
-        <item>Они любят есть фаст-фуд.==They like eating fast food.</item>
+        <item>Я люблю сидеть в интернете.==I like browsing the Internet.</item>
+        <item>Мы любим болтать (сидеть в чате).==We like chatting online.</item>
+        <item>Дети любят сладкое на ужин.==Kids like having dessert after dinner.</item>
+        <item>Мне нравится водить машину.==I enjoy driving.</item>
+        <item>Они любят есть фаст-фуд.==They love eating fast food.</item>
         <item>Ему нравится принимать горячий душ.==He likes taking a hot shower.</item>
-        <item>Я ненавижу принимать холодный душ.==I hate having a cold shower.</item>
+        <item>Я ненавижу принимать холодный душ.==I hate a cold shower.</item>
         <item>Я ненавижу слушать рок-музыку.==I hate listening to rock music.</item>
-        <item>Я ненавижу сидеть за компьютером весь день.==I hate using the computer all day.</item>
-        <item>Я люблю работать с детьми.==I love working with children.</item>
+        <item>Я ненавижу сидеть за компьютером весь день.==I hate being on the computer all day.</item>
+        <item>Я люблю работать с детьми.==I love working with kids.</item>
         <item>Тебе нравится рано просыпаться?==Do you like waking up early?</item>
-        <item>Ты любишь заниматься спортом?==Do you love doing sports?</item>
-        <item>Ей нравится мыть посуду?==Does she like doing the washing-up?</item>
+        <item>Ты любишь тренироваться?==Do you like working out?</item>
+        <item>Ей нравится мыть посуду?==Does she like doing dishes?</item>
         <item>Твоей сестре нравится готовить?==Does your sister like cooking?</item>
         <item>Твоему брату нравится смотреть видео?==Does your brother like watching videos?</item>
         <item>Тебе нравится играть на барабанах?==Do you like playing drums?</item>
@@ -1868,22 +1868,20 @@
         <item>Им нравится работать с бумагами?==Do they like working with papers?</item>
         <item>Тебе нравится работать с животными?==Do you like working with animals?</item>
         <item>Тебе нравится ездить на велосипеде в университет?==Do you like riding a bike to university?</item>
-        <item>Тебе нравится слушать пианино?==Do you like listening to the piano music?</item>
+        <item>Тебе нравится слушать пианино?==Do you like piano music?</item>
         <item>Тебе нравится водить машину?==Do you like driving?</item>
         <item>Почему тебе нравится так много спать?==Why do you like sleeping so much?</item>
-        <item>Почему ты ненавидишь смотреть телевизор?==Why do you hate watching TV?</item>
+        <item>Почему ты ненавидишь смотреть телевизор?==Why do you hate TV?</item>
         <item>Я не люблю есть в одиночестве.==I don\’t like eating alone.</item>
         <item>Она не любит кинофильмы.==She doesn\’t like movies.</item>
-        <item>Дети не любят чистить зубы.==Children don\’t like brushing their teeth.</item>
-        <item>Ей не нравится писать электронные письма.==She doesn\’t like writing emails.</item>
+        <item>Дети не любят чистить зубы.==Kids don\’t like brushing teeth.</item>
+        <item>Ей не нравится писать электронные письма.==She dislikes writing emails.</item>
         <item>Они не любят смотреть телевизор.==They don\’t like watching TV.</item>
-        <item>Он не любит интернет==He doesn\’t like Internet.</item>
         <item>Он не любит слушать радио.==He doesn\’t like listening to the radio.</item>
         <item>Они не любят ужинать дома.==They don\’t like having dinner at home.</item>
         <item>Моя дочь не любит играть с нашей собакой.==My daughter doesn\’t like playing with our dog.</item>
         <item>Тебе нравится читать газеты?==Do you like reading newspapers?</item>
         <item>Он увлекается игрой на барабанах?==Does he like playing the drums?</item>
-        <item>Ты любишь вздремнуть?==Do you like having a nap?</item>
         <item>Ему нравится много спать?==Does he like sleeping a lot?</item>
         <item>Он увлекается поп-музыкой?==Does she like pop music?</item>
         <item>Она увлекается чтением книг?==Does she like reading books?</item>
@@ -1893,7 +1891,7 @@
         <item>Ему нравится звонить друзьям.==He likes phoning his friends.</item>
         <item>Ему нравится встречаться с друзьями после работы.==He likes meeting his friends after work.</item>
         <item>Ей не нравится мыть пол.==She dislikes washing the floor.</item>
-        <item>Ей нравится мыть окна?==Does she like washing the windows?</item>
+        <item>Ей нравится мыть окна?==Does she clean windows?</item>
     </string-array>
 
     <string-array name="be_fond_of_be_keen_on_be_interested_in_be_crazy_about">
