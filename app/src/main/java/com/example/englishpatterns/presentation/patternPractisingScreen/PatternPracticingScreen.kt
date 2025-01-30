@@ -16,7 +16,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
@@ -58,6 +57,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -85,7 +85,6 @@ import androidx.compose.ui.window.Popup
 import com.example.englishpatterns.R
 import com.example.englishpatterns.data.common.LoadingState
 import com.example.englishpatterns.domain.PatternGroupUnitState
-import com.example.englishpatterns.presentation.common.MainAction
 import com.example.englishpatterns.presentation.common.shimmerEffect
 import com.example.englishpatterns.ui.theme.EnglishPatternsTheme
 import kotlinx.coroutines.android.awaitFrame
@@ -353,12 +352,9 @@ private fun BoxScope.PatternContent(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            modifier = Modifier.combinedClickable(
-                onClick = { sendAction(PatternPracticingAction.ChangeTranslationVisibilityState) },
-                onLongClick = {
-                    sendAction(PatternPracticingAction.TextToSpeechRequired)
-                },
-            ),
+            modifier = Modifier.clickable {
+                sendAction(PatternPracticingAction.ChangeTranslationVisibilityState)
+            },
             text = patternGroupUnitState?.pattern?.native ?: "",
             color = Color(0xFFC5CC85),
             textAlign = TextAlign.Center
@@ -427,6 +423,9 @@ private fun PatternTranslationContent(
                         )
                     )
                 },
+                onSelectedTextToSpeechButtonClick = {
+                    PatternPracticingAction.SelectedTextToSpeechRequired(value = selectedText)
+                },
             )
 
             if (showDropdown && isTranslationHidden.not()) {
@@ -450,6 +449,7 @@ fun SelectableText(
     textColor: Color,
     isTranslationHidden: Boolean,
     onGloballyPositioned: (IntSize) -> Unit,
+    onSelectedTextToSpeechButtonClick: () -> Unit,
 ) {
     var textInput by remember(text) { mutableStateOf(TextFieldValue(text)) }
     val (handleColor, backgroundSelectionColor) = if (isTranslationHidden) {
@@ -458,15 +458,21 @@ fun SelectableText(
         Color(0xFF484848) to Color(0x42B3B3B3)
     }
 
+    var selectionXIndex by remember { mutableIntStateOf(0) }
+    var selectedText by remember { mutableStateOf("") }
+
     OutlinedTextField(
         modifier = Modifier
             .widthIn(min = 3.dp)
             .onGloballyPositioned { onGloballyPositioned(it.size) },
         value = textInput,
         onValueChange = { newValue: TextFieldValue ->
+            selectionXIndex = newValue.selection.end
             textInput = newValue
+
             val selectedTextValue = textInput.getSelectedText().text
 
+            selectedText = selectedTextValue
             onTextSelected(selectedTextValue)
         },
         readOnly = true,
@@ -488,12 +494,26 @@ fun SelectableText(
             color = textColor
         ),
     )
+
+    // TODO("replace implementation)
+    if (selectedText.isNotBlank()) {
+        val xOffset = (selectionXIndex * 15)
+        Popup(
+            offset = IntOffset(x = xOffset, y = -35)
+        ) {
+            Icon(
+                modifier = Modifier.clickable { onSelectedTextToSpeechButtonClick() },
+                painter = painterResource(R.drawable.ic_volume_up),
+                contentDescription = ""
+            )
+        }
+    }
 }
 
 @Composable
 private fun BoxScope.BottomContent(
     sendAction: (PatternPracticingAction) -> Unit,
-    onWeakButtonClick: () -> Unit = {},
+    onWeakButtonClick: () -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -518,6 +538,18 @@ private fun BoxScope.BottomContent(
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(text = "weak")
+            }
+
+            Spacer(modifier = Modifier.width(16.dp))
+
+            Button(
+                onClick = { sendAction(PatternPracticingAction.TextToSpeechRequired) },
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFE3CF93)),
+            ) {
+                Icon(
+                    painter = painterResource(id = R.drawable.ic_volume_up),
+                    contentDescription = null,
+                )
             }
         }
 
@@ -916,7 +948,7 @@ private fun PatternPracticingScreenPreview() {
         ) {
             PatternPracticingScreen(
                 state = PatternPracticingState(
-                    isTranslationHidden = true,
+                    isTranslationHidden = false,
                     patternGroupHolders = listOf(
                         PatternGroupHolder(
                             patterns = listOf(

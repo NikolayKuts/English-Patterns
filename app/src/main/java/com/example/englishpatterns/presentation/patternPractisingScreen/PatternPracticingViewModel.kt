@@ -168,8 +168,13 @@ class PatternPracticingViewModel(
             is PatternPracticingAction.RedirectionToWordTemplateSearchPageRequired -> {
                 handleRedirectionToWordTemplateSearchPageRequest(action = action)
             }
+
             is PatternPracticingAction.TextToSpeechRequired -> {
                 handleTextToSpeechRequired()
+            }
+
+            is PatternPracticingAction.SelectedTextToSpeechRequired -> {
+                handleSelectedTextToSpeechRequired(action = action)
             }
         }
     }
@@ -444,6 +449,14 @@ class PatternPracticingViewModel(
         viewModelScope.launch {
             val text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
             eventState.emit(value = PatternPracticingEvent.TextToSpeech(text = text))
+        }
+    }
+
+    private fun handleSelectedTextToSpeechRequired(
+        action: PatternPracticingAction.SelectedTextToSpeechRequired,
+    ) {
+        viewModelScope.launch {
+            eventState.emit(value = PatternPracticingEvent.TextToSpeech(text = action.value))
         }
     }
 
