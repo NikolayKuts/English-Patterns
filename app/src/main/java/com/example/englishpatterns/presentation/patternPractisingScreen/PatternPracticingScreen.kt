@@ -6,6 +6,9 @@ import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
 import androidx.annotation.DrawableRes
 import androidx.compose.animation.Animatable
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.AnimationVector4D
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.keyframes
@@ -114,7 +117,7 @@ fun PatternPracticingScreen(
                     animationSpec = keyframes {
                         durationMillis = duration
 
-                        Color(0x89D07B75) at (duration / 2)
+                        Color(0x69D07B75) at (duration / 2)
                         Color.Transparent at duration
                     }
                 )
@@ -237,13 +240,17 @@ fun PatternPracticingScreen(
                 isTranslationHidden = state.isTranslationHidden,
                 selectedTextInfo = state.selectedTextInfo,
                 pronunciationLoadingState = state.pronunciationLoadingState,
+                background = patternContentContainerColor,
                 sendAction = sendAction
             )
         }
 
         BottomContent(
             sendAction = sendAction,
-            onWeakButtonClick = { animatableGroupPointerColor() }
+            onWeakButtonClick = {
+                animatableGroupPointerColor()
+//                isButtonClicked = !isButtonClicked
+            }
         )
     }
 
@@ -327,6 +334,7 @@ private fun BoxScope.PatternContent(
     isTranslationHidden: Boolean,
     selectedTextInfo: LoadingState<SelectedTextInfo>,
     pronunciationLoadingState: LoadingState<Unit>,
+    background: Animatable<Color, AnimationVector4D>,
     sendAction: (PatternPracticingAction) -> Unit,
 ) {
     val position = patternGroupUnitState?.position ?: -1
@@ -348,7 +356,11 @@ private fun BoxScope.PatternContent(
     Column(
         modifier = Modifier
             .align(Alignment.Center)
-            .graphicsLayer { rotationY = rotation },
+            .graphicsLayer { rotationY = rotation }
+            .clip(RoundedCornerShape(8.dp))
+            .background(background.value)
+            .padding(top = 20.dp)
+            .padding(horizontal = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
@@ -424,7 +436,9 @@ private fun PatternTranslationContent(
                     )
                 },
                 onSelectedTextToSpeechButtonClick = {
-                    PatternPracticingAction.SelectedTextToSpeechRequired(value = selectedText)
+                    sendAction(
+                        PatternPracticingAction.SelectedTextToSpeechRequired(value = selectedText)
+                    )
                 },
             )
 
