@@ -60,7 +60,7 @@ fun MainScreen(
         LazyColumn(
             modifier = Modifier
                 .fillMaxWidth()
-                .fillMaxHeight(0.95F)
+                .weight(1f)
                 .padding(start = 6.dp, end = 6.dp),
         ) {
             header(state = state)
@@ -76,12 +76,24 @@ fun MainScreen(
             }
         }
 
-        Button(
-            modifier = Modifier.fillMaxWidth(),
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8FAE6B)),
-            onClick = { sendAction(MainAction.NavigateToPatternPracticing) }
-        ) {
-            Text(text = "start")
+        Column {
+            Button(
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8FAE6B)),
+                onClick = { sendAction(MainAction.NavigateToPatternPracticing) }
+            ) {
+                Text(text = "start")
+            }
+
+            Spacer(modifier = Modifier.height(4.dp))
+
+            Button(
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4DA4EA)),
+                onClick = { sendAction(MainAction.NavigateToIrregularVerbsPracticeScreen) }
+            ) {
+                Text(text = "Verbs")
+            }
         }
     }
 }

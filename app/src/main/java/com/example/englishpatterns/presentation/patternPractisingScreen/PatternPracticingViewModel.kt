@@ -341,13 +341,11 @@ class PatternPracticingViewModel(
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
         val clipboardUnit = ClipboardUnit(text = action.text)
 
-        viewModelScope.launch {
-            eventState.emit(
-                PatternPracticingEvent.RedirectionToWordHuntAppRequired(
-                    intent = intent,
-                    url = url,
-                    clipboardUnit = clipboardUnit
-                )
+        eventState.launchEmit {
+            PatternPracticingEvent.RedirectionToWordHuntAppRequired(
+                intent = intent,
+                url = url,
+                clipboardUnit = clipboardUnit
             )
         }
     }
@@ -362,8 +360,8 @@ class PatternPracticingViewModel(
             setPackage(Constants.Klaf.PACKAGE_NAME)
         }
 
-        viewModelScope.launch {
-            eventState.emit(PatternPracticingEvent.RedirectionToKlafAppRequired(intent = intent))
+        eventState.launchEmit {
+            PatternPracticingEvent.RedirectionToKlafAppRequired(intent = intent)
         }
     }
 
@@ -380,15 +378,13 @@ class PatternPracticingViewModel(
         )
         val selectedClipboardUnit = ClipboardUnit(text = action.text)
 
-        viewModelScope.launch {
-            eventState.emit(
-                PatternPracticingEvent.RedirectionToGhatGptAppRequired(
-                    intent = intent,
-                    url = url,
-                    ruClipboardUnit = ruClipboardUnit,
-                    enClipboardUnit = enClipboardUnit,
-                    selectedClipboardUnit = selectedClipboardUnit
-                )
+        eventState.launchEmit {
+            PatternPracticingEvent.RedirectionToGhatGptAppRequired(
+                intent = intent,
+                url = url,
+                ruClipboardUnit = ruClipboardUnit,
+                enClipboardUnit = enClipboardUnit,
+                selectedClipboardUnit = selectedClipboardUnit
             )
         }
     }
@@ -400,10 +396,8 @@ class PatternPracticingViewModel(
         val url = Constants.YouGlish.BASE_URL_WITH_PLACEHOLDER.format(encodedText.lowercase())
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
 
-        viewModelScope.launch {
-            eventState.emit(
-                PatternPracticingEvent.RedirectionToYouGlishPageRequired(intent = intent, url = url)
-            )
+        eventState.launchEmit {
+            PatternPracticingEvent.RedirectionToYouGlishPageRequired(intent = intent, url = url)
         }
     }
 
@@ -416,12 +410,11 @@ class PatternPracticingViewModel(
             text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
         )
 
-        viewModelScope.launch {
-            eventState.emit(
-                PatternPracticingEvent.RedirectionToGoogleImagesPageRequired(
-                    url = url,
-                    clipboardUnit = clipboardUnit,
-                )
+
+        eventState.launchEmit {
+            PatternPracticingEvent.RedirectionToGoogleImagesPageRequired(
+                url = url,
+                clipboardUnit = clipboardUnit,
             )
         }
     }
@@ -435,29 +428,25 @@ class PatternPracticingViewModel(
             text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
         )
 
-        viewModelScope.launch {
-            eventState.emit(
-                PatternPracticingEvent.RedirectionToWordTemplateSearchPageRequired(
-                    url = url,
-                    clipboardUnit = clipboardUnit,
-                )
+        eventState.launchEmit {
+            PatternPracticingEvent.RedirectionToWordTemplateSearchPageRequired(
+                url = url,
+                clipboardUnit = clipboardUnit,
             )
         }
     }
 
     private fun handleTextToSpeechRequired() {
-        viewModelScope.launch {
+        eventState.launchEmit {
             val text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
-            eventState.emit(value = PatternPracticingEvent.TextToSpeech(text = text))
+            PatternPracticingEvent.TextToSpeech(text = text)
         }
     }
 
     private fun handleSelectedTextToSpeechRequired(
         action: PatternPracticingAction.SelectedTextToSpeechRequired,
     ) {
-        viewModelScope.launch {
-            eventState.emit(value = PatternPracticingEvent.TextToSpeech(text = action.value))
-        }
+        eventState.launchEmit { PatternPracticingEvent.TextToSpeech(text = action.value) }
     }
 
     private fun resetCurrentPatternGroupUnitState() {

@@ -24,6 +24,9 @@ import androidx.navigation.compose.rememberNavController
 import com.example.englishpatterns.data.TextSpeaker
 import com.example.englishpatterns.presentation.collectWhenStarted
 import com.example.englishpatterns.presentation.common.customTabs.ChatGptCustomTabManager
+import com.example.englishpatterns.presentation.irregularVerbsPractice.IrregularVerbsPracticeEvent
+import com.example.englishpatterns.presentation.irregularVerbsPractice.IrregularVerbsPracticeScreen
+import com.example.englishpatterns.presentation.irregularVerbsPractice.IrregularVerbsPracticeViewModel
 import com.example.englishpatterns.presentation.navigation.AppNavGraph
 import com.example.englishpatterns.presentation.navigation.Screen
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingBaseViewModel
@@ -171,6 +174,37 @@ class MainActivity : ComponentActivity() {
                                     modifier = Modifier.padding(paddingValues),
                                     state = WebContentState(url = url)
                                 )
+                            },
+                            irregularVerbsScreenContent = {
+                                textSpeaker = TextSpeaker(context = application)
+                                val irregularVerbsPracticeViewModel = viewModel<IrregularVerbsPracticeViewModel>()
+
+                                LaunchedEffect(key1 = Unit) {
+                                    irregularVerbsPracticeViewModel.eventState.collectLatest { event ->
+                                        logD("event observed: $event")
+                                        when (event) {
+                                            is IrregularVerbsPracticeEvent.TextToSpeech -> {
+                                                textSpeaker?.speak(text = event.text)
+                                            }
+                                        }
+                                    }
+                                }
+
+                                val lifecycleOwner: LifecycleOwner = LocalLifecycleOwner.current
+
+                                DisposableEffect(lifecycleOwner) {
+                                    onDispose {
+                                        textSpeaker?.stop()
+                                        textSpeaker = null
+                                    }
+                                }
+
+
+                                IrregularVerbsPracticeScreen(
+                                    modifier = Modifier.padding(paddingValues),
+                                    state = irregularVerbsPracticeViewModel.state.collectAsState().value,
+                                    sendAction = irregularVerbsPracticeViewModel::sendAction
+                                )
                             }
                         )
                     }
@@ -191,6 +225,10 @@ class MainActivity : ComponentActivity() {
 
                     navController.navigate(route = destination)
                 }
+
+                MainEvent.IrregularVerbsPracticeRequired -> {
+                    navController.navigateToIrregularVerbsPracticeScreen()
+                }
             }
         }
     }
@@ -207,5 +245,9 @@ class MainActivity : ComponentActivity() {
         val destination = Screen.WebContentScreen(url = url)
 
         navigate(route = destination)
+    }
+
+    private fun NavController.navigateToIrregularVerbsPracticeScreen() {
+        navigate(route = Screen.IrregularVerbs)
     }
 }

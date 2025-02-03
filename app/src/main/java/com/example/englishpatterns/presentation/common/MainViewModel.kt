@@ -42,12 +42,10 @@ class MainViewModel(
             }
 
             MainAction.NavigateToPatternPracticing -> {
-                viewModelScope.launch {
-                    val event = MainEvent.PatternPracticingRequired(
+                eventState.launchEmit {
+                    MainEvent.PatternPracticingRequired(
                         rawPatternGroups = getChosenRawPatternGroups()
                     )
-
-                    eventState.emit(event)
                 }
             }
 
@@ -61,12 +59,19 @@ class MainViewModel(
                         )
                         val updatedContent = list.toMutableList().apply {
                             this[action.patternIndex] =
-                                holder.copy(rawPatternGroup = updatedRawPatternGroup, isChosen = false)
+                                holder.copy(
+                                    rawPatternGroup = updatedRawPatternGroup,
+                                    isChosen = false
+                                )
                         }
 
                         it.copy(content = updatedContent)
                     }
                 }
+            }
+
+            MainAction.NavigateToIrregularVerbsPracticeScreen -> {
+                eventState.launchEmit { MainEvent.IrregularVerbsPracticeRequired }
             }
         }
     }

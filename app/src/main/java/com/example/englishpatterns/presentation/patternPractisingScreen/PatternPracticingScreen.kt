@@ -6,7 +6,6 @@ import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
 import androidx.annotation.DrawableRes
 import androidx.compose.animation.Animatable
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.AnimationVector4D
 import androidx.compose.animation.core.LinearEasing
@@ -178,7 +177,7 @@ fun PatternPracticingScreen(
                 RoundedButton(
                     activated = state.isPatternGroupHolderSateShuffled,
                     activatedBackground = Color(0xFF4B7485),
-                    onClink = { sendAction(PatternPracticingAction.ShufflePatternPairs) }
+                    onClick = { sendAction(PatternPracticingAction.ShufflePatternPairs) }
                 ) {
                     Icon(
                         tint = shuffleButtonTint,
@@ -199,7 +198,7 @@ fun PatternPracticingScreen(
                 RoundedButton(
                     activated = isAllButtonActivated,
                     activatedBackground = Color(0xFFA1BB84),
-                    onClink = {
+                    onClick = {
                         sendAction(PatternPracticingAction.ChangeAllPatternGroupHoldersSelectionState)
                     }
                 ) {
@@ -922,7 +921,7 @@ private fun SelectedTextMenu(
 fun RoundedButton(
     activated: Boolean,
     activatedBackground: Color,
-    onClink: () -> Unit,
+    onClick: () -> Unit,
     content: @Composable() (RowScope.() -> Unit)
 ) {
     val (
@@ -940,7 +939,7 @@ fun RoundedButton(
         border = BorderStroke(width = 1.dp, color = borderColor),
         contentPadding = PaddingValues(),
         colors = ButtonDefaults.buttonColors(containerColor = buttonColor),
-        onClick = onClink
+        onClick = onClick
     ) {
         content()
     }

@@ -13,4 +13,6 @@ sealed interface MainAction {
     data object NavigateToPatternPracticing : MainAction
 
     data class SetMarkColor(val patternIndex: Int, val markColor: MarkColor) : MainAction
+
+    data object NavigateToIrregularVerbsPracticeScreen : MainAction
 }

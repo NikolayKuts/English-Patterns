@@ -7,4 +7,6 @@ sealed interface MainEvent {
     data class PatternPracticingRequired(
         val rawPatternGroups: List<RawPatternGroup>
     ) : MainEvent
+
+    data object IrregularVerbsPracticeRequired : MainEvent
 }

@@ -28,6 +28,9 @@ class TextSpeaker(context: Context) {
                     val voices = textToSpeech.voices
 
                     textToSpeech.voice = voices.firstOrNull { it.name == EN_US_X_IOM_VOICE_NAME }
+                        ?: voices.firstOrNull { it.name == EN_US_X_IOL_VOICE_NAME }
+                        ?: voices.firstOrNull { it.name == EN_US_X_TPC_VOICE_NAME }
+                        ?: return@OnInitListener
                 }
             } else {
                 logE("Initialization failed!")

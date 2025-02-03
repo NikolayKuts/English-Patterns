@@ -16,4 +16,7 @@ sealed class Screen(open val route: String) {
 
     @Serializable
     data class WebContentScreen(val url: String) : Screen(route = "WebContentScreen")
+
+    @Serializable
+    data object IrregularVerbs : Screen(route = "IrregularVerbs")
 }

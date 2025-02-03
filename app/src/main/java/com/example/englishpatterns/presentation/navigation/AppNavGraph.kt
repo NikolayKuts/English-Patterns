@@ -14,6 +14,7 @@ fun AppNavGraph(
     mainScreenContent: @Composable () -> Unit,
     patternPracticingScreenContent: @Composable (List<RawPatternGroup>) -> Unit,
     webContentScreenContent: @Composable (url: String) -> Unit,
+    irregularVerbsScreenContent: @Composable () -> Unit,
 ) {
     NavHost(
         navController = navHostController,
@@ -36,5 +37,7 @@ fun AppNavGraph(
 
             webContentScreenContent(args.url)
         }
+
+        composable<Screen.IrregularVerbs> { irregularVerbsScreenContent() }
     }
 }
