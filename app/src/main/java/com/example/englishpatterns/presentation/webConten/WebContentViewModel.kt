@@ -1,10 +1,10 @@
 package com.example.englishpatterns.presentation.webConten
 
-import com.example.englishpatterns.presentation.common.BaseViewModel
+import com.example.englishpatterns.presentation.common.MviViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 
-class WebContentViewModel : BaseViewModel<WebContentState, WebContentAction, Unit>()  {
+class WebContentViewModel : MviViewModel<WebContentState, WebContentAction, Unit>()  {
 
     override val state = MutableStateFlow(WebContentState(url = ""))
 

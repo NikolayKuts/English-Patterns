@@ -4,7 +4,7 @@ import com.example.englishpatterns.domain.irregularVerbs.HidingMode
 import com.example.englishpatterns.domain.irregularVerbs.VerbDetails
 
 data class IrregularVerbsPracticeState(
-    val verbsGroupHolders: List<VerbsGroupHolder>,
+    val verbsGroupViewHolders: List<IrregularVerbsGroupViewHolder>,
     val currentVerbDetails: VerbDetails? =  null,
     val verbHighlightModeOn: Boolean = false,
     val isShufflingModeOn: Boolean = false,

@@ -1,8 +1,9 @@
 package com.example.englishpatterns.presentation.irregularVerbsPractice
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -49,7 +50,6 @@ import com.example.englishpatterns.domain.irregularVerbs.Verb
 import com.example.englishpatterns.domain.irregularVerbs.VerbDetails
 import com.example.englishpatterns.presentation.patternPractisingScreen.RoundedButton
 import com.example.englishpatterns.ui.theme.EnglishPatternsTheme
-import com.lib.lokdroid.core.logI
 
 @Composable
 fun IrregularVerbsPracticeScreen(
@@ -60,47 +60,16 @@ fun IrregularVerbsPracticeScreen(
     val verb = state.currentVerbDetails
 
     Column(modifier = modifier) {
+        VerbsGroups(verbsGroupViewHolders = state.verbsGroupViewHolders, sendAction = sendAction)
 
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceEvenly
-        ) {
-            state.verbsGroupHolders.forEach {
-                VerbGroupButton(
-                    title = it.type.pattern,
-                    checked = it.isSelected
-                ) {
-                    sendAction(IrregularVerbsPracticeAction.ChangeVerbGroup(it.type))
-                }
-            }
-        }
         Spacer(modifier = Modifier.height(8.dp))
 
-        Row(modifier = Modifier.align(Alignment.End)) {
-            SimpleDropdownMenu(
-                hidingMode = state.hidingMode,
-                onModeSelected = { sendAction(IrregularVerbsPracticeAction.SetHidingMode(it)) }
-            )
-
-            Spacer(modifier = Modifier.width(16.dp))
-
-            ShuffleButton(isShufflingModeOn = state.isShufflingModeOn) {
-                sendAction(IrregularVerbsPracticeAction.ChangeShufflingMode)
-            }
-
-            Spacer(modifier = Modifier.width(16.dp))
-
-            Switch(
-
-                checked = state.verbHighlightModeOn,
-                onCheckedChange = { sendAction(IrregularVerbsPracticeAction.ChangeVerbHighlightMode) },
-                colors = SwitchDefaults.colors(
-                    checkedThumbColor = Color(0xFF91AA74),
-                    uncheckedThumbColor = Color(0x7003A9F4),
-                    checkedTrackColor = Color(0x70858585)
-                )
-            )
-        }
+        ModePanel(
+            hidingMode = state.hidingMode,
+            isShufflingModeOn = state.isShufflingModeOn,
+            verbHighlightModeOn = state.verbHighlightModeOn,
+            sendAction = sendAction
+        )
 
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -111,42 +80,91 @@ fun IrregularVerbsPracticeScreen(
             sendAction = sendAction
         )
 
-        Button(
-            modifier = Modifier.align(Alignment.End),
-            onClick = { sendAction(IrregularVerbsPracticeAction.TextToSpeech) },
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFE3CF93)),
-        ) {
-            Icon(
-                painter = painterResource(id = R.drawable.ic_volume_up),
-                contentDescription = null,
-            )
-        }
-        Row(
+        TextToSpeechButton { sendAction(IrregularVerbsPracticeAction.TextToSpeech) }
 
-        ) {
-            Button(
-                modifier = Modifier.weight(1f),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF90C0C7)),
-                onClick = { sendAction(IrregularVerbsPracticeAction.PreviousVerb) },
-            ) {
-                Text(text = "Previous")
-            }
-            Spacer(modifier = Modifier.width(16.dp))
-            Button(
-                modifier = Modifier.weight(1f),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF91AA74)),
-                onClick = { sendAction(IrregularVerbsPracticeAction.NextVerb) },
-            ) {
-                Text(text = "Next")
+        VerbDescriptionManagementPanel(
+            onPreviousClick = { sendAction(IrregularVerbsPracticeAction.PreviousVerb) },
+            onNextClick = { sendAction(IrregularVerbsPracticeAction.NextVerb) }
+        )
+    }
+}
+
+@Composable
+private fun VerbsGroups(
+    verbsGroupViewHolders: List<IrregularVerbsGroupViewHolder>,
+    sendAction: (action: IrregularVerbsPracticeAction) -> Unit,
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceEvenly
+    ) {
+        verbsGroupViewHolders.forEach {
+            when (it) {
+                is IrregularVerbsGroupViewHolder.Common -> {
+                    VerbGroupButton(
+                        title = it.type.pattern,
+                        checked = it.isSelected
+                    ) {
+                        sendAction(IrregularVerbsPracticeAction.ChangeVerbGroup(it.type))
+                    }
+                }
+
+                is IrregularVerbsGroupViewHolder.FullyChanging -> {
+                    VerbGroupDropdownMenuButton(
+                        holder = it,
+                        onClick = {
+                            sendAction(IrregularVerbsPracticeAction.ChangeVerbGroup(it.type))
+                        },
+                        onItemClick = { subGroupViewHolder ->
+                            sendAction(
+                                IrregularVerbsPracticeAction.SetSubGroup(subGroupViewHolder)
+                            )
+                        }
+
+                    )
+                }
             }
         }
     }
+}
 
+@Composable
+private fun ColumnScope.ModePanel(
+    hidingMode: HidingMode,
+    isShufflingModeOn: Boolean,
+    verbHighlightModeOn: Boolean,
+    sendAction: (action: IrregularVerbsPracticeAction) -> Unit,
+) {
+    Row(modifier = Modifier.align(Alignment.End)) {
+        SimpleDropdownMenu(
+            text = hidingMode::class.simpleName ?: "Unknown",
+            onModeSelected = { sendAction(IrregularVerbsPracticeAction.SetHidingMode(it)) }
+        )
+
+        Spacer(modifier = Modifier.width(16.dp))
+
+        ShuffleButton(isShufflingModeOn = isShufflingModeOn) {
+            sendAction(IrregularVerbsPracticeAction.ChangeShufflingMode)
+        }
+
+        Spacer(modifier = Modifier.width(16.dp))
+
+        Switch(
+
+            checked = verbHighlightModeOn,
+            onCheckedChange = { sendAction(IrregularVerbsPracticeAction.ChangeVerbHighlightMode) },
+            colors = SwitchDefaults.colors(
+                checkedThumbColor = Color(0xFF91AA74),
+                uncheckedThumbColor = Color(0x7003A9F4),
+                checkedTrackColor = Color(0x70858585)
+            )
+        )
+    }
 }
 
 @Composable
 fun SimpleDropdownMenu(
-    hidingMode: HidingMode,
+    text: String,
     onModeSelected: (HidingMode) -> Unit
 ) {
     var expanded by remember { mutableStateOf(false) }
@@ -159,7 +177,7 @@ fun SimpleDropdownMenu(
 
     Box {
         Button(onClick = { expanded = true }) {
-            Text(text = hidingMode::class.simpleName ?: "Unknown")
+            Text(text = text)
         }
 
         DropdownMenu(
@@ -229,7 +247,7 @@ private fun ColumnScope.VerbDescriptionContent(
         val v3Hidden = hidingMode == HidingMode.Third || hidingMode == HidingMode.SecondAndThird
 
         verb?.let {
-            Row() {
+            Row {
                 VerbItem(verb = it.v1, verbColor = v1Color, hidden = false)
                 Spacer(modifier = Modifier.width(12.dp))
                 VerbItem(verb = it.v2, verbColor = v2Color, hidden = v2Hidden)
@@ -239,7 +257,6 @@ private fun ColumnScope.VerbDescriptionContent(
         }
 
         if (hidingMode != HidingMode.Non) {
-//            var isPressed by remember { mutableStateOf(false) }
             var lastMode by remember { mutableStateOf(hidingMode) }
 
             Spacer(modifier = Modifier.height(38.dp))
@@ -253,15 +270,12 @@ private fun ColumnScope.VerbDescriptionContent(
                         detectTapGestures(
                             onPress = {
                                 if (hidingMode != HidingMode.Non) {
-                                    logI("Hiding mode: $hidingMode")
                                     lastMode = hidingMode
                                 }
                                 sendAction(IrregularVerbsPracticeAction.ShowHiddenVerbs)
                                 tryAwaitRelease()
                                 sendAction(
-                                    IrregularVerbsPracticeAction.ReturnVerbVisibilityMode(
-                                        lastMode
-                                    )
+                                    IrregularVerbsPracticeAction.ReturnVerbVisibilityMode(lastMode)
                                 )
                             }
                         )
@@ -269,6 +283,44 @@ private fun ColumnScope.VerbDescriptionContent(
             ) {
                 Text(text = "Show")
             }
+        }
+    }
+}
+
+@Composable
+private fun ColumnScope.TextToSpeechButton(onClick: () -> Unit) {
+    Button(
+        modifier = Modifier.align(Alignment.End),
+        onClick = onClick,
+        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFE3CF93)),
+    ) {
+        Icon(
+            painter = painterResource(id = R.drawable.ic_volume_up),
+            contentDescription = null,
+        )
+    }
+}
+
+@Composable
+private fun VerbDescriptionManagementPanel(
+    onPreviousClick: () -> Unit,
+    onNextClick: () -> Unit,
+) {
+    Row {
+        Button(
+            modifier = Modifier.weight(1f),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF90C0C7)),
+            onClick = onPreviousClick,
+        ) {
+            Text(text = "Previous")
+        }
+        Spacer(modifier = Modifier.width(16.dp))
+        Button(
+            modifier = Modifier.weight(1f),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF91AA74)),
+            onClick = onNextClick,
+        ) {
+            Text(text = "Next")
         }
     }
 }
@@ -306,10 +358,12 @@ private fun getVerbColorsByGroupType(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun VerbGroupButton(
     title: String,
     checked: Boolean,
+    onLongClick: () -> Unit = {},
     onClick: () -> Unit,
 ) {
     val backgroundColor = if (checked) Color(0x8DA0D762) else Color(0xFF575757)
@@ -318,12 +372,54 @@ private fun VerbGroupButton(
         modifier = Modifier
             .clip(RoundedCornerShape(18.dp))
             .background(backgroundColor)
-            .clickable { onClick() }
+            .combinedClickable(
+                onClick = onClick,
+                onLongClick = onLongClick,
+            )
             .padding(8.dp),
         text = title,
         fontWeight = FontWeight.Bold
 
     )
+}
+
+@Composable
+private fun VerbGroupDropdownMenuButton(
+    holder: IrregularVerbsGroupViewHolder.FullyChanging,
+    onClick: () -> Unit,
+    onItemClick: (FullyChangingSubGroupViewHolder) -> Unit,
+) {
+    var expanded by remember { mutableStateOf(false) }
+
+    Box {
+        VerbGroupButton(
+            title = holder.type.pattern,
+            checked = holder.isSelected,
+            onClick = onClick,
+            onLongClick = { expanded = true }
+        )
+
+        DropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false }
+        ) {
+            holder.subGroups.forEach { subGroupViewHolder ->
+                val backgroundColor = if (subGroupViewHolder.isSelected) {
+                    Color(0x768BC34A)
+                } else {
+                    Color.Transparent
+                }
+
+                DropdownMenuItem(
+                    modifier = Modifier.background(backgroundColor),
+                    text = {
+                        Text(text = subGroupViewHolder.subGroupName)
+                    },
+                    onClick = { onItemClick(subGroupViewHolder) }
+                )
+            }
+        }
+    }
 }
 
 @Composable
@@ -357,10 +453,12 @@ private fun VerbItem(
 
 @Composable
 private fun IrregularVerbsPracticeScreenPreview() {
-    val verbsDetails = IrregularVerbsStorage.unchanging.take(6).first()
+    val verbsDetails = IrregularVerbsStorage.unchanging.details.take(6).first()
     val state = IrregularVerbsPracticeState(
         currentVerbDetails = verbsDetails,
-        verbsGroupHolders = IrregularVerbGroupType.entries.map { VerbsGroupHolder(it) },
+        verbsGroupViewHolders = IrregularVerbGroupType.entries.map {
+            IrregularVerbsGroupViewHolder.Common(type = it, isSelected = false)
+        },
         hidingMode = HidingMode.Third
     )
 

@@ -31,7 +31,7 @@ class PatternPracticingViewModel(
     private val selectedTextProvider: YandexWordInfoProvider = YandexWordInfoProvider(context = context),
     override val textAudioPlayer: TextAudioPlayer = TextAudioPlayer(),
     rawPatternGroups: List<RawPatternGroup>,
-) : PatternPracticingBaseViewModel() {
+) : PatternPracticingMviViewModel() {
 
     companion object {
 

@@ -29,7 +29,7 @@ import com.example.englishpatterns.presentation.irregularVerbsPractice.Irregular
 import com.example.englishpatterns.presentation.irregularVerbsPractice.IrregularVerbsPracticeViewModel
 import com.example.englishpatterns.presentation.navigation.AppNavGraph
 import com.example.englishpatterns.presentation.navigation.Screen
-import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingBaseViewModel
+import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingMviViewModel
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingEvent
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingScreen
 import com.example.englishpatterns.presentation.patternPractisingScreen.PatternPracticingViewModel
@@ -42,7 +42,7 @@ import kotlinx.coroutines.flow.collectLatest
 
 class MainActivity : ComponentActivity() {
 
-    private val viewModel: BaseViewModel<MainState, MainAction, MainEvent> by viewModels<MainViewModel> {
+    private val viewModel: MviViewModel<MainState, MainAction, MainEvent> by viewModels<MainViewModel> {
         MainViewModelFactory(dataStore = this.patternStore)
     }
 
@@ -81,7 +81,7 @@ class MainActivity : ComponentActivity() {
                                 )
                             },
                             patternPracticingScreenContent = { rawPatternGroups ->
-                                val patternPracticingViewModel: PatternPracticingBaseViewModel =
+                                val patternPracticingViewModel: PatternPracticingMviViewModel =
                                     viewModel<PatternPracticingViewModel>(
                                         factory = PatternPracticingViewModel.Factory(
                                             context = application,

@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
-abstract class BaseViewModel<State, Action, Event> : ViewModel() {
+abstract class MviViewModel<State, Action, Event> : ViewModel() {
 
     abstract val state: StateFlow<State>
     abstract val eventState: SharedFlow<Event>

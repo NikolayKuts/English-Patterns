@@ -17,7 +17,7 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(
     private val patternStore: DataStore<RowPatternGroupHolders>,
-) : BaseViewModel<MainState, MainAction, MainEvent>() {
+) : MviViewModel<MainState, MainAction, MainEvent>() {
 
     private val rawPatternGroupHoldersState = patternStore.data
     private val chosenRawPatternGroupHolders: Flow<List<RawPatternGroupHolder>> =
