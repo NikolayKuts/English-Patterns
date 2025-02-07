@@ -3,8 +3,8 @@ package com.example.englishpatterns.presentation.irregularVerbsPractice
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
-import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -37,7 +37,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -65,7 +64,6 @@ fun IrregularVerbsPracticeScreen(
         Spacer(modifier = Modifier.height(8.dp))
 
         ModePanel(
-            hidingMode = state.hidingMode,
             isShufflingModeOn = state.isShufflingModeOn,
             verbHighlightModeOn = state.verbHighlightModeOn,
             sendAction = sendAction
@@ -73,7 +71,7 @@ fun IrregularVerbsPracticeScreen(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        VerbDescriptionContent(
+        VerbDetailsContent(
             verb = verb,
             highlightModeOn = state.verbHighlightModeOn,
             hidingMode = state.hidingMode,
@@ -130,17 +128,11 @@ private fun VerbsGroups(
 
 @Composable
 private fun ColumnScope.ModePanel(
-    hidingMode: HidingMode,
     isShufflingModeOn: Boolean,
     verbHighlightModeOn: Boolean,
     sendAction: (action: IrregularVerbsPracticeAction) -> Unit,
 ) {
     Row(modifier = Modifier.align(Alignment.End)) {
-        SimpleDropdownMenu(
-            text = hidingMode::class.simpleName ?: "Unknown",
-            onModeSelected = { sendAction(IrregularVerbsPracticeAction.SetHidingMode(it)) }
-        )
-
         Spacer(modifier = Modifier.width(16.dp))
 
         ShuffleButton(isShufflingModeOn = isShufflingModeOn) {
@@ -150,7 +142,6 @@ private fun ColumnScope.ModePanel(
         Spacer(modifier = Modifier.width(16.dp))
 
         Switch(
-
             checked = verbHighlightModeOn,
             onCheckedChange = { sendAction(IrregularVerbsPracticeAction.ChangeVerbHighlightMode) },
             colors = SwitchDefaults.colors(
@@ -159,41 +150,6 @@ private fun ColumnScope.ModePanel(
                 checkedTrackColor = Color(0x70858585)
             )
         )
-    }
-}
-
-@Composable
-fun SimpleDropdownMenu(
-    text: String,
-    onModeSelected: (HidingMode) -> Unit
-) {
-    var expanded by remember { mutableStateOf(false) }
-    val options = listOf(
-        HidingMode.Non,
-        HidingMode.Third,
-        HidingMode.Second,
-        HidingMode.SecondAndThird
-    )
-
-    Box {
-        Button(onClick = { expanded = true }) {
-            Text(text = text)
-        }
-
-        DropdownMenu(
-            expanded = expanded,
-            onDismissRequest = { expanded = false }
-        ) {
-            options.forEach { option ->
-                DropdownMenuItem(
-                    text = { Text(option::class.simpleName ?: "Unknown") },
-                    onClick = {
-                        onModeSelected(option)
-                        expanded = false
-                    }
-                )
-            }
-        }
     }
 }
 
@@ -221,7 +177,7 @@ private fun ShuffleButton(
 }
 
 @Composable
-private fun ColumnScope.VerbDescriptionContent(
+private fun ColumnScope.VerbDetailsContent(
     verb: VerbDetails?,
     highlightModeOn: Boolean,
     hidingMode: HidingMode,
@@ -250,38 +206,13 @@ private fun ColumnScope.VerbDescriptionContent(
             Row {
                 VerbItem(verb = it.v1, verbColor = v1Color, hidden = false)
                 Spacer(modifier = Modifier.width(12.dp))
-                VerbItem(verb = it.v2, verbColor = v2Color, hidden = v2Hidden)
+                VerbItem(verb = it.v2, verbColor = v2Color, hidden = v2Hidden) {
+                    sendAction(IrregularVerbsPracticeAction.ChangeHidingMode(HidingMode.Second))
+                }
                 Spacer(modifier = Modifier.width(12.dp))
-                VerbItem(verb = it.v3, verbColor = v3Color, v3Hidden)
-            }
-        }
-
-        if (hidingMode != HidingMode.Non) {
-            var lastMode by remember { mutableStateOf(hidingMode) }
-
-            Spacer(modifier = Modifier.height(38.dp))
-
-            Box(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(8.dp))
-                    .background(Color(0xFF769157))
-                    .padding(8.dp)
-                    .pointerInput(Unit) {
-                        detectTapGestures(
-                            onPress = {
-                                if (hidingMode != HidingMode.Non) {
-                                    lastMode = hidingMode
-                                }
-                                sendAction(IrregularVerbsPracticeAction.ShowHiddenVerbs)
-                                tryAwaitRelease()
-                                sendAction(
-                                    IrregularVerbsPracticeAction.ReturnVerbVisibilityMode(lastMode)
-                                )
-                            }
-                        )
-                    }
-            ) {
-                Text(text = "Show")
+                VerbItem(verb = it.v3, verbColor = v3Color, v3Hidden) {
+                    sendAction(IrregularVerbsPracticeAction.ChangeHidingMode(HidingMode.Third))
+                }
             }
         }
     }
@@ -427,6 +358,7 @@ private fun VerbItem(
     verb: Verb,
     verbColor: Color,
     hidden: Boolean,
+    onClick: (() -> Unit)? = null
 ) {
     val background = if (hidden) Color(0x62656564) else Color.Unspecified
     val finalVerbColor = if (hidden) Color.Transparent else verbColor
@@ -436,6 +368,7 @@ private fun VerbItem(
         modifier = Modifier
             .clip(RoundedCornerShape(4.dp))
             .background(background)
+            .clickable(enabled = onClick != null) { onClick?.invoke() }
             .padding(4.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {

@@ -9,6 +9,4 @@ sealed interface HidingMode {
     data object Second : HidingMode
 
     data object SecondAndThird : HidingMode
-
-    data class ForcedShow(val previousMode: HidingMode) : HidingMode
 }

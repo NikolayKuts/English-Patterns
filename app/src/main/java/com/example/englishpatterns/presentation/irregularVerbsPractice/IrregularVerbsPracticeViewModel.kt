@@ -75,16 +75,8 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
                 handleTextToSpeechAction()
             }
 
-            is IrregularVerbsPracticeAction.SetHidingMode -> {
+            is IrregularVerbsPracticeAction.ChangeHidingMode -> {
                 handleSetHidingModeAction(action)
-            }
-
-            is IrregularVerbsPracticeAction.ReturnVerbVisibilityMode -> {
-                handleReturnVerbVisibilityModeAction()
-            }
-
-            is IrregularVerbsPracticeAction.ShowHiddenVerbs -> {
-                handleShowHiddenVerbsAction()
             }
 
             is IrregularVerbsPracticeAction.SetSubGroup -> {
@@ -174,22 +166,34 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
         eventState.launchEmit { IrregularVerbsPracticeEvent.TextToSpeech(textToSpeech) }
     }
 
-    private fun handleSetHidingModeAction(action: IrregularVerbsPracticeAction.SetHidingMode) {
-        state.update { it.copy(hidingMode = action.mode) }
-    }
+    private fun handleSetHidingModeAction(action: IrregularVerbsPracticeAction.ChangeHidingMode) {
+        val currentHidingMode = state.value.hidingMode
 
-    private fun handleReturnVerbVisibilityModeAction() {
-        val currentMode = state.value.hidingMode as? HidingMode.ForcedShow ?: return
+        val updatedHidingMode = when (action.mode) {
+            HidingMode.Non -> action.mode
 
-        state.update { it.copy(hidingMode = currentMode.previousMode) }
-    }
+            HidingMode.Third -> {
+                when (currentHidingMode) {
+                    HidingMode.SecondAndThird -> HidingMode.Second
+                    HidingMode.Third -> HidingMode.Non
+                    HidingMode.Second -> HidingMode.SecondAndThird
+                    HidingMode.Non -> HidingMode.Third
+                }
+            }
 
-    private fun handleShowHiddenVerbsAction() {
-        state.update {
-            val updatedMode = HidingMode.ForcedShow(previousMode = it.hidingMode)
+            HidingMode.Second -> {
+                when (currentHidingMode) {
+                    HidingMode.SecondAndThird -> HidingMode.Third
+                    HidingMode.Third -> HidingMode.SecondAndThird
+                    HidingMode.Second -> HidingMode.Non
+                    HidingMode.Non -> HidingMode.Second
+                }
+            }
 
-            it.copy(hidingMode = updatedMode)
+            HidingMode.SecondAndThird -> currentHidingMode
         }
+
+        state.update { it.copy(hidingMode = updatedHidingMode) }
     }
 
     private fun handleSetSubGroupAction(action: IrregularVerbsPracticeAction.SetSubGroup) {

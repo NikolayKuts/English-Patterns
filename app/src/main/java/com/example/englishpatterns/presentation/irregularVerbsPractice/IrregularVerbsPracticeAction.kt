@@ -17,11 +17,7 @@ sealed interface IrregularVerbsPracticeAction {
 
     data object TextToSpeech : IrregularVerbsPracticeAction
 
-    data class SetHidingMode(val mode: HidingMode) : IrregularVerbsPracticeAction
+    data class ChangeHidingMode(val mode: HidingMode) : IrregularVerbsPracticeAction
 
     data class SetSubGroup(val group: FullyChangingSubGroupViewHolder) : IrregularVerbsPracticeAction
-
-    data object ShowHiddenVerbs : IrregularVerbsPracticeAction
-
-    data class ReturnVerbVisibilityMode(val mode: HidingMode) : IrregularVerbsPracticeAction
 }
