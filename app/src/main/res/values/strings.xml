@@ -1202,7 +1202,7 @@
         <item>Она ходит за покупками в отпуске.==She goes shopping on vacation.</item>
         <item>Мы делаем завтрак в воскресенье утром.==We make breakfast on Sunday morning.</item>
         <item>Они делают завтрак в пятницу утром.==They make breakfast on Friday morning.</item>
-        <item>Он делает завтрак в понедельник утром.==He makes breakfast on Monday evening.</item>
+        <item>Он делает завтрак в понедельник утром.==He makes breakfast on Monday morning.</item>
         <item>Она делает завтрак во вторник утром.==She makes breakfast on Tuesday evening.</item>
         <item>Я покупаю подарки 7-го марта. ==I buy presents on March, 7.</item>
         <item>Ты покупаешь подарки 30-го декабря.==You buy presents on December, 30.</item>
@@ -1714,7 +1714,7 @@
         <item>Они работают на нас?==Do they work for us?</item>
         <item>Вы помогаете им на работе?==Do you help them at work?</item>
         <item>Скажи мне, почему ты меня ненавидишь==Tell me why you hate me</item>
-        <item>Кто звонит тебе каждый день?==Who phones you every day?</item>
+        <item>Кто звонит тебе каждый день?==Who calls you every day?</item>
         <item>Какие игрушки ты покупаешь им?==What toys do you buy them?</item>
     </string-array>
 
@@ -2487,7 +2487,7 @@
         <item>Сделайте пересадку на другой самолет в аэропорту.==Chang planes at the airport.</item>
         <item>Сделайте пересадку на другой трамвай на следующей остановке.==Change trams at the next stop.</item>
         <item>Сделайте пересадку на следующей станции метро.==Change trains at the next underground station.</item>
-        <item>Сделайте пересадку на другой автобус на следующей остановке.==Change buses at the next bus stop.</item>
+        <item>Пересаживайтесь на другой автобус на следующей остановке.==Change buses at the next bus stop.</item>
         <item>Проедьте еще 2 автобусных остановки.==Go two more bus stops.</item>
         <item>Проедьте еще 3 станции метро.==Go three more stations.</item>
         <item>Езжайте еще 15 минут по прямой.==Drive 15 more minutes straight ahead.</item>
@@ -3178,17 +3178,17 @@
         <item>Моя собака не была в парке.==My dog wasn\'t at the park.</item>
         <item>Мама и папа не были в ресторане.==Mom and Dad weren\'t at the restaurant.</item>
         <item>Она не была дома в прошлое воскресенье.==She wasn\'t at home last Sunday.</item>
-        <item>Он был на работе в выходные.==He was at work last weekend.</item>
+        <item>Он был на работе в прошлые выходные.==He was at work last weekend.</item>
         <item>Вчера мы были в театре.==We were at the theater yesterday.</item>
         <item>Я не был на почте вчера.==I wasn\'t at the post office yesterday.</item>
-        <item>Утром ты не был в центре.==You weren\'t downtown in the morning.</item>
+        <item>Утром ты не был в центре.==You weren\'t downtown this morning.</item>
     </string-array>
 
     <string-array name="there_was_there_were">
         <item>В холодильнике было яблоко.==There was an apple in the fridge.</item>
         <item>В моем супе была муха.==There was a fly in my soup.</item>
         <item>В парке была женщина.==There was a woman in the park.</item>
-        <item>В бутылке было воды.==There was water in the bottle.</item>
+        <item>В бутылке была вода.==There was water in the bottle.</item>
         <item>Утром на тарелке было пирожное.==There was a cake on the plate in the morning.</item>
         <item>Вчера вечером по телевизору был хороший фильм.==There was a good movie on TV last night.</item>
         <item>В доме было четыре комнаты.==There were four rooms in the house.</item>
@@ -3281,7 +3281,7 @@
         <item>У тебя был хороший день?==Did you have a good day?</item>
         <item>Они видели финал шоу?==Did they see the finale of the show?</item>
         <item>Ты ходил в спортзал на прошлой неделе?==Did you go to the gym last week?</item>
-        <item>Они готовили обед для родственников?==Did they make dinner for their relatives?</item>
+        <item>Они готовили ужин для родственников?==Did they make dinner for their relatives?</item>
         <item>Он покупал машину для своего сына?==Did he buy a car for his son?</item>
         <item>Что вы делали прошлым летом?==What did you do last summer?</item>
         <item>Что она читала вчера?==What did she read yesterday?</item>
@@ -3517,7 +3517,7 @@
         <item>Я постепенно привыкаю каждый день вставать в десять=="I am gradually getting used to waking up at ten every day.</item>
         <item>Она начала работать по ночам и до сих пор привыкает спать днем.==She started working nights and is still getting used to sleeping during the day.</item>
         <item>Я постепенно привыкаю к этому==I\'m gradually getting used to it.</item>
-        <item>Дети были в интернате, поэтому они привыкли находиться вдали от дома==The children were at boarding school, so they are used to staying away from home.</item>
+        <item>Дети были в интернате, поэтому они привыкли находиться вдали от дома==The kids were in a boarding school, so they got used to being away from home.</item>
         <item>Они привыкнут друг к другу.==They will get used to each other.</item>
         <item>Я постепенно привыкаю к семейной жизни.==I am gradually getting used to family life.</item>
         <item>Мне было привычно быстро печатать==I was used to typing fast.</item>
@@ -3526,7 +3526,7 @@
         <item>Поначалу русская кухня казалась мне странной, потом постепенно я привыкал к ней и теперь такое питание кажется мне обычным.==At first, I found Russian food strange, but I gradually got used to it, and now it seems normal to me.</item>
         <item>Он привык жить один.==He is used to living alone.</item>
         <item>Я привык спать 6 часов, мне просто больше не нужно.==I am used to sleeping 6 hours; I just don\'t need more.</item>
-        <item>Я вышел на пенсию, но все еще никак не могу привыкнуть к тому, что мне нечем заняться дома.==Since I retired, I still can\'t get used to having nothing to do all day.</item>
+        <item>С тех пор как я вышел на пенсию, я всё ещё не могу привыкнуть к тому, что мне нечем заняться весь день.==Since I retired, I still can\'t get used to having nothing to do all day.</item>
         <item>Когда ты переедешь в Англию, тебе придется привыкнуть к левостороннему вождению.==When you move to England, you\'ll have to get used to driving on the left side.</item>
         <item>Я так и не привык пить чай с молоком, поэтому я просто стал пить кофе.==I never got used to drinking tea with milk, so I just started drinking coffee.</item>
         <item>Ей пришлось привыкать жить в доме поменьше.==She had to get used to living in a smaller house.</item>
@@ -3539,7 +3539,7 @@
         <item>Моя сестра привыкла слушать громкую музыку, и я не могу уснуть.==My sister got used to listening to loud music, and I can\'t fall asleep.</item>
         <item>Курение вошло у моего брата в привычку раньше, чем он успел это заметить.==My brother got used to smoking before he managed to notice it.</item>
         <item>Если она не перестанет слушать громкую музыку, то к концу недели я к этому уже привыкну!==If she doesn\'t stop listening to loud music, I\'ll get used to it by the end of the week!</item>
-        <item>Думаю, что я скоро к этому привыкну==I think I\'ll get used to it very soon.</item>
+        <item>Думаю, я очень скоро к этому привыкну.==I think I\'ll get used to it very soon.</item>
     </string-array>
 
     <string-array name="used_to">
@@ -3547,7 +3547,7 @@
         <item>Он (всегда) пил пиво, а сейчас он пьет только вино.==He used to drink beer, but now he only drinks wine.</item>
         <item>Она играла в теннис в школе (а сейчас не играет)==She used to play tennis at school.</item>
         <item>Просыпались ли они раньше рано?==Did they use to wake up early?</item>
-        <item>Ты не был таким мрачным, когда я знал тебя==You didn\'t use to be so gloomy when I knew you</item>
+        <item>Ты не был раньше таким мрачным, когда я знал тебя==You didn\'t use to be so gloomy when I knew you</item>
         <item>Моя мама раньше давала каждому из нас по сэндвичу перед тем, как отпустить в школу.==My mom used to give each of us a sandwich before she let us go to school.</item>
         <item>Каждое утро раньше он целовал свою жену и уезжал на работу.==Every morning he used to kiss his wife and leave for work.</item>
         <item>Ты раньше ходил на диско, когда был моложе?==Did you use to go to discos when you were younger?</item>
@@ -3563,7 +3563,7 @@
         <item>Раньше мы не пеклись так о деньгах.==We didn\'t use to worry so much about money.</item>
         <item>Я был нерешительным, но теперь я не уверен==I used to be indecisive, but now I\'m not sure</item>
         <item>В детстве раньше я не любил мороженое==When I was a child, I didn\’t use to like ice cream..</item>
-        <item>Когда я был молод, я думал, что богатство и власть сделают меня счастливым. Я оказался прав.==When I was young, I used to think that wealth and power would bring me happiness. I was right</item>
+        <item>Когда я был молод, я думал, что богатство и власть принесут мне счастье. Я был прав.==When I was young, I used to think that wealth and power would bring me happiness. I was right</item>
         <item>Раньше я каждый день ходил на пляж.==I used to go to the beach every day.</item>
         <item>Сэм и Мэри раньше часто ездили в Мексику летом.==Sam and Mary used to go to Mexico in the summer.</item>
         <item>Раньше я начинал работать в 9 часов.==I used to start work at 9 o\'clock.</item>
@@ -4130,7 +4130,7 @@
         <item>Он купит мясо==He will buy meat.</item>
         <item>Я не вернусь.==I will not come back.</item>
         <item>Ты уснешь?==Will you fall asleep?</item>
-        <item>Ты не напишешь==You will not write to me.</item>
+        <item>Ты не напишешь мне==You will not write to me.</item>
     </string-array>
 
     <string-array name="future_simple_will_v">
@@ -4143,7 +4143,7 @@
         <item>Мы прыгнем с парашютом вместе.==We will parachute together.</item>
         <item>Мы поставим этот стол посередине комнаты.==We will put this table in the middle of the room.</item>
         <item>Мои родители приедут в выходные.==My parents will come over on the weekend.</item>
-        <item>Бабушка испечет пирог на мой день рождения.==Grandma will bake a cake for my birthday.</item>
+        <item>Бабушка испечёт торт на мой день рождения.==Grandma will bake a cake for my birthday.</item>
         <item>Я куплю тебе новую квартиру.==I will buy you a new apartment.</item>
         <item>Мы не поедем домой.==We will not go home.</item>
         <item>Я не вернусь.==I will not come back.</item>
@@ -4214,7 +4214,7 @@
         <item>Они уезжают в 11 утра.==They are leaving at 11:00 in the morning.</item>
         <item>Мы приземляемся в Хитроу через 20 минут.==We are landing at Heathrow in 20 minutes.</item>
         <item>Мы вылетаем в Париж утром.==We are flying to Paris in the morning.</item>
-        <item>Я обедаю в гостях в субботу.==I am dining out on Saturday.</item>
+        <item>Я ужинаю вне дома в субботу.==I am dining out on Saturday.</item>
         <item>Ты не обедаешь со мной во вторник==You are not having lunch with me on Tuesday.</item>
         <item>Они не поженятся в июне.==They\'re not getting married in June.</item>
         <item>Мы не едем загород на выходных==We are not going to the countryside this weekend.</item>
@@ -4235,20 +4235,19 @@
         <item>Что ты делаешь этим вечером?==What are you doing this evening?</item>
         <item>Где ты остановишься?==Where are you staying?</item>
         <item>Я пою в клубе сегодня вечером==I am singing tonight at the club.</item>
-        <item>Ты останешься со мной?==Are you staying with me today?</item>
+        <item>Ты останешься со мной сегодня?==Are you staying with me today?</item>
         <item>Я не иду на фестиваль на этих выходных==I\'m not going to a festival this weekend.</item>
         <item>Я приступлю к новой работе на следующей неделе.==I\'m starting a new job next week.</item>
         <item>Я увижу его завтра.==I\'m seeing him tomorrow.</item>
         <item>Когда мы вернемся назад?==When are we coming back?</item>
         <item>Кто купит новый дом на следующей неделе?==Who is buying a new house next week?</item>
-        <item>Мы пообедаем вместе.==We\'re having dinner together.</item>
+        <item>Мы ужинаем вместе.==We\'re having dinner together.</item>
         <item>Ты завтра встречаешься с друзьями?==Are you meeting your friends tomorrow?</item>
         <item>Мы не покрасим завтра спальню.==We\'re not painting the bedroom tomorrow.</item>
         <item>Когда он меня подберет (на машине)?==When is he picking me up?</item>
         <item>Встречаю ли я моего отца в аэропорту?==Am I meeting my father at the airport?</item>
         <item>Он не работает на следующей неделе==He isn\'t working next week.</item>
         <item>Я покрашу стены завтра.==I\'m painting the walls tomorrow.</item>
-        <item>Я убью тебя.==I\'m killing you.</item>
         <item>Я сегодня иду на вечеринку==I\'m going to a party tonight.</item>
         <item>Я напишу ей во вторник==I\'m writing to her on Tuesday.</item>
         <item>Ты принесешь молоко через час==You are bringing milk in an hour.</item>
@@ -4286,7 +4285,7 @@
         <item>Ты идешь в отпуск в следующем месяце?==Are you going on vacation next month?</item>
         <item>Ты идешь завтра на концерт?==Are you going to a concert tomorrow?</item>
         <item>Он продаст дом летом?==Is he selling the house this summer?</item>
-        <item>Он решит задачу завтра?==Is he solving this problem tomorrow?</item>
+        <item>Он решит задачу завтра?==Is he solving the problem tomorrow?</item>
         <item>Она пойдет в цирк?==Is she going to the circus?</item>
         <item>Она работает завтра?==Is she working tomorrow?</item>
         <item>Мы поедем в Китай летом?==Are we going to China this summer?</item>
@@ -4323,7 +4322,7 @@
         <item>На следующей неделе я не готовлю, мы всю неделю ходим в рестораны==Next week I am not cooking; we are going to restaurants all week.</item>
         <item>Сегодня он ужинает с министром==Today he is having dinner with the minister.</item>
         <item>Я встречаюсь с ними за ланчем==I am meeting them for lunch.</item>
-        <item>Ты опять не слушаешься? Все, я звоню папе!==You are disobedient again, aren\'t you? Alright, I\'m calling Dad!</item>
+        <item>Ты снова непослушный, да? Ладно, я звоню папе!==You are disobedient again, aren\'t you? Alright, I\'m calling Dad!</item>
         <item>Мама уезжает на неделю, и мы остаемся с папой!==Mom is leaving for a week, and we are staying with Dad!</item>
         <item>На следующих выходных я не играю в теннис, моя ракетка сломалась==I\'m not playing tennis next weekend because my racket is broken.</item>
         <item>Давай договоримся! Я делаю уборку, а ты идешь в магазин!==Let\'s make a deal! I am cleaning, and you are going to the store.</item>
@@ -4396,7 +4395,7 @@
         <item>Я собираюсь купить кое-какой еды сегодня днем.==I\'m going to buy some food this afternoon.</item>
         <item>Я не собираюсь записывать этот текст. ==I am not going to write this text.</item>
         <item>Ты собираешься пригласить его?==Are you going to invite him?</item>
-        <item>собирается продать свой дом.==She is going to sell her house.</item>
+        <item>Она собирается продать свой дом.==She is going to sell her house.</item>
         <item>Я не буду смотреть телевизор сегодня вечером.==I\'m not going to watch TV this evening.</item>
         <item>Она собирается играть в волейбол? ==Is she going to play volleyball?</item>
         <item>Завтра мы собираемся праздновать день рождения нашего сына==Tomorrow we are going to celebrate our son\'s birthday.</item>
@@ -4475,7 +4474,7 @@
         <item>Они собираются пригласить нас на вечеринку?==Are they going to invite us to the party?</item>
         <item>Собирается ли он найти работу?==Is he going to find a job?</item>
         <item>Собираюсь ли я зарабатывать много денег?==Am I going to earn a lot of money?</item>
-        <item>Собираемся ли мы играть футбол по выходным?==Are we going to play football on weekends?</item>
+        <item>Собираемся ли мы играть футбол по выходным?==Are we going to play soccer on weekends?</item>
         <item>Они собираются принять душ вместе?==Are they going to take a shower together?</item>
         <item>Она собирается примерить это платье прямо сейчас?==Is she going to try on this dress right now?</item>
         <item>Собирается ли она звонить своему бывшему?==Is she going to call her ex-boyfriend?</item>
@@ -4490,7 +4489,7 @@
         <item>Она собирается остаться дома==She is going to stay home.</item>
         <item>Они не собираются ждать его==They are not going to wait for him.</item>
         <item>Вы не собираемся выставлять себя на посмешище==We are not going to make fools of ourselves.</item>
-        <item>Они собираются путешествовать в следующем месяце==Are they going to travel next month?</item>
+        <item>Они собираются путешествовать в следующем месяце?==Are they going to travel next month?</item>
         <item>Он не собирается давать им денег==He is not going to give them any money.</item>
         <item>Собирается ли она помочь нам улучшить наше произношение?==Is she going to help us (to) improve our pronunciation?</item>
         <item>Ты собираешься нарисовать кота?==Are you going to draw a cat?</item>
@@ -4508,9 +4507,9 @@
         <item>Когда ты придешь домой, сынок? – Рано, мама, вы еще спать будете.==When will you come home, son? – Early, mom, you will still be sleeping.</item>
         <item>Что будешь делать после работы?==What will you be doing after work?</item>
         <item>Я весь вечер буду готовиться к завтрашнему празднику.==I will be getting ready for tomorrow\’s party all evening.</item>
-        <item>Она снова будет смотреть весь вечер сериалы.==She will be watching soap operas all evening again!!</item>
+        <item>Она снова будет смотреть весь вечер сериалы.==She will be watching TV series all evening again!!</item>
         <item>Они будут сидеть в аэропорту 3 часа.==They will be sitting at the airport for three hours.</item>
-        <item>Я буду сидеть всю ночь – мой полет длится с 12 ночи до 7 утра.==I will be sitting all night – my flight lasts from 12 a.m. to 7 a.m.</item>
+        <item>Я буду сидеть всю ночь – мой полет длится с 12 ночи до 7 утра.==I will be sitting all night – my flight lasts from midnight to 7 a.m.</item>
         <item>Ты не будешь спать в 11? Я тебе позвоню.==Won\’t you be sleeping at 11? I will call you.</item>
         <item>Ты поедешь с нами на дачу? Мы будем купаться и загорать все выходные.==Will you go to the summer house with us? We will be swimming and sunbathing all weekend.</item>
         <item>Поеду в отпуск и буду все дни лежать на пляже, смотреть на море и ничего не делать.==I will go on vacation and will be lying on the beach, looking at the sea, and doing nothing all day long.</item>
@@ -4584,7 +4583,7 @@
         <item>Если ты не будешь класть так много сахара в кофе, ты не прибавишь так много в весе.==If you don\'t put so much sugar in your coffee, you will not put on so much weight!</item>
         <item>Он не получит лучшую работу, если не сдаст этот экзамен.==He will not get a better job if he doesn\'t pass this exam.</item>
         <item>Если мы будем ждать здесь, мы опоздаем.==If we wait here, we will be late.</item>
-        <item>Если он накопит все деньги, то сможет поехать на каникулы во Францию.==If he saves up all his money, he will go on vacation to France.</item>
+        <item>Если он накопит все деньги, то сможет поехать на каникулы во Францию.==If he saves up all the money, he will be able to go on vacation to France.</item>
         <item>Если ты приготовишь обед, я вымою посуду.==If you cook lunch, I will wash the dishes.</item>
         <item>Они пойдут на вечеринку, если их пригласят.==They will go to the party if they are invited.</item>
         <item>Если я не лягу спать рано, завтра я буду уставший.==If I don\'t go to bed early, I will be tired tomorrow.</item>
@@ -4641,7 +4640,7 @@
         <item>Если бы мы уделяли грамматике больше внимания, мы бы знали язык лучше.==If we paid more attention to grammar, we would know the language better</item>
         <item>Если бы я был на твоем месте, я бы обсудил этот вопрос с твоим начальником.==If I were you, I would discuss this matter with your boss</item>
         <item>Она была бы счастлива, если бы ее пригласили на вечеринку==She would be happy if she were invited to the party</item>
-        <item>Если бы у меня были деньги, я бы купил новую одежду.==I would buy some new clothes if I had some money</item>
+        <item>Я бы купил новую одежду, если бы у меня были деньги.==I would buy some new clothes if I had some money</item>
         <item>Если бы я был президентом страны, я бы увеличил налоги==If I were the president of my country, I would raise taxes</item>
         <item>Если бы у меня было время, то я пошел бы в выходные на пляж.==If I had time, I\’d go to the beach this weekend</item>
         <item>Если бы сегодня была суббота, то мы пошли бы на пляж.==If today were Saturday, we would go to the beach</item>
@@ -4728,7 +4727,6 @@
         <item>Мне было жаль, что я работал тогда над этим проектом==I wished I hadn\’t worked on that project</item>
         <item>Мне было жаль, что я не остался там, а не в кондитерской.==I wished I had stayed there instead of at the sweetshop.</item>
         <item>Тебе хотелось бы, чтобы ты был богатым и знаменитым?==Do you wish you were rich and famous?</item>
-        <item>Ты бы хотел, что бы он был мертв==Do you wish he were dead?</item>
         <item>Жаль, что ты никак не бросишь курить! ==I wish you would stop smoking!</item>
         <item>Тебе жаль, что вы расстались?==Do you wish you hadn\’t broken up with her?</item>
         <item>Жаль, что я не могу купить это пальто==I wish I could buy this coat</item>
@@ -5174,13 +5172,13 @@
         <item>Ей нужно ответить на звонок.==She has to answer the call.</item>
         <item>Маме нужно узнать рецепт. ==Mom has to learn the recipe.</item>
         <item>Мне нужно встать в очередь.==I have to stand in line.</item>
-        <item>Учителю нужно сходить с учениками в музей.==The teacher has to go to the museum with the students.</item>
-        <item>Мне нужно заполнить все документы.==I have to fill out all the paperwork.</item>
+        <item>Учитель должен сходить с учениками в музей.==The teacher has to go to the museum with the students.</item>
+        <item>Мне должен заполнить все документы.==I have to fill out all the documents.</item>
         <item>Папе необходимо найти ключи от машины.==Dad has to find the car keys.</item>
         <item>Он очень занят, но ему нужно лететь в Москву.==He is very busy, but he has to fly to Moscow.</item>
         <item>Маме нужно получить права.==Mom has to get her driver\’s license.</item>
         <item>Мне не надо с ним встречаться, я позвоню ему по телефону.==I don\’t have to meet him, I will call him on the phone.</item>
-        <item>Ему не нужно идти на работу, он примет все заявки дома.==He doesn\’t have to go to work, he will handle all the requests from home.</item>
+        <item>Ему не нужно идти на работу, он обработает все запросы из дома.==He doesn\’t have to go to work, he will handle all the requests from home.</item>
         <item>Мне не нужно отвечать на звонки, это делает секретарь.==I don\’t have to answer the calls; my secretary does that.</item>
         <item>Ему не нужно учиться в университете, он получил хорошее образование в колледже.==He doesn\’t have to study at a university; he got a good education in college.</item>
         <item>Ей не нужно рисовать плакат, она должна сочинить стихотворение.==She doesn\’t have to draw a poster; she has to write a poem.</item>
@@ -5342,7 +5340,7 @@
         <item>Порой нужно проиграть, чтобы победить==Sometimes you gotta lose to win.</item>
         <item>Их надо устранить, потому что они нам мешают==We gotta take them out because they\'re causing problems.</item>
         <item>Мужчина должен смотреть за своей семьей==A man\'s gotta look out for his family.</item>
-        <item>Ему должен экономить деньги==He\'s gotta save money.</item>
+        <item>Ему нужно копить деньги.==He\'s gotta save money.</item>
         <item>Я должен сказать жене, что буду поздно==I\'ve gotta tell my wife I\'ll be late.</item>
         <item>Я должен сегодня убраться в доме==I\'ve gotta clean my house today.</item>
         <item>Нам нужно решить насчёт времени==We\'ve gotta figure out the timing.</item>
@@ -5775,7 +5773,7 @@
         <item>Желаете посмотреть номер?==Would you like to have a look at the room?</item>
         <item>Он бы хотел организовать это==He would like to arrange it</item>
         <item>Он бы хотел полетать на воздушном шаре.==He\'d like to fly in a hot air balloon</item>
-        <item>Я бы хотел забронировать номер.==I\’d to book a room</item>
+        <item>Я бы хотел забронировать номер.==I would like to book a room.</item>
         <item>Я бы хотел найти прекрасное место, чтобы пропасть там==I would like to find a beautiful place to get lost</item>
         <item>Хотели бы вы позавтракать?==Would you like to have breakfast?</item>
         <item>Не желаете ли пойти в театр?==Would you like to go to the theater?</item>
@@ -5840,7 +5838,7 @@
         <item>Пойдем купим черешню==Let\’s go to buy cherries</item>
         <item>А у вас есть помидор?==Do you have a tomato?</item>
         <item>Дайте мне тот огурец==Give me that cucumber</item>
-        <item>Яйцо треснувшее==The egg has a crack</item>
+        <item>Яйцо треснувшее==A cracked egg.</item>
         <item>Порежь ветчину==Cut the ham</item>
         <item>Я жарю бекон==I\’m frying bacon</item>
         <item>Купи масла==Buy cooking oil</item>
@@ -5855,7 +5853,7 @@
         <item>Гамбургер==A hamburger</item>
         <item>Сосиска в масле==A sausage in oil</item>
         <item>Булочка с маком==A roll with poppy seeds</item>
-        <item>Большой соленый рулет с огурцом==A big salty roll with cucumber</item>
+        <item>Большой соленый рулет с огурцом==A big salty roll with a cucumber.</item>
         <item>Мы ели вкусный борщ==We ate tasty borscht</item>
         <item>Тарелка борща была большой==A plate of borscht was big</item>
         <item>Борщ был сварен мной==The borscht was cooked by me</item>
@@ -5873,14 +5871,14 @@
         <item>(Тот) ананасовый сок был сладким==That pineapple juice was sweet</item>
         <item>Яблоки съела твоя мама==The apples were eaten by your mom</item>
         <item>Яичница==Fried eggs</item>
-        <item>Оладьи==Fritters</item>
+        <item>Оладьи==Pancakes</item>
         <item>Вкусный пирог==A tasty pie</item>
         <item>Шпинат==Spinach</item>
         <item>(Эта) курица не прожаренная==The chicken is not fried</item>
         <item>Килограмм свинины==A kilo of pork</item>
         <item>Ты сможешь приготовить индейку?==Can you cook turkey?</item>
         <item>Моя мама готовит телятину==My mom\’s cooking veal</item>
-        <item>Дайте мне тех ребрышек==Give me those spare ribs</item>
+        <item>Дайте мне тех ребрышек==Give me those ribs</item>
         <item>Вырезка трески==Cod tenderloin</item>
         <item>(Этот) бургер превосходен==This burger is excellent</item>
         <item>Я хочу купить куриные крылышки с соусом==I wanna buy chicken wings with sauce</item>
@@ -5928,7 +5926,7 @@
         <item>Пара лавровых листов==A couple of bay leaves</item>
         <item>Щепотка соли==A pinch of salt</item>
         <item>Неспелый арбуз==An unripe watermelon</item>
-        <item>Пересоленный салат==Over-salted salad</item>
+        <item>Пересоленный салат==An over-salted salad.</item>
         <item>Хочу выпить уксуса==I want to drink vinegar</item>
         <item>Каша==Porridge</item>
         <item>Тарелка каши==A plate of porridge</item>
@@ -5941,7 +5939,7 @@
         <item>Мог бы ты почистить эту морковь?==Could you peel this carrot?</item>
         <item>Она любит жарить картошку==She likes frying potatoes</item>
         <item>Это не трудно варить суп==It\’s not hard to boil soup</item>
-        <item>Тот суп стоит в холодильнике уже неделю==That soup has been in the fridge for a week</item>
+        <item>Тот суп постоял (пробыл) в холодильнике уже неделю==That soup has been in the fridge for a week</item>
         <item>Чашка кофе==A cup of coffee</item>
         <item>Крепкий кофе горький==Strong coffee is bitter</item>
         <item>У тебя есть немного сахара?==Do you have some sugar?</item>
@@ -5984,7 +5982,7 @@
         <item>Вы решили, что будете заказывать?==Have you decided what to order?</item>
         <item>Могу я принять Ваш заказ?==May I take your order?</item>
         <item>Готовы сделать заказ?==Are you ready to order?</item>
-        <item>Я ещё не выбрал.==I\’m not ready to order yet.</item>
+        <item>Я ещё не готов сделать заказ.==I\’m not ready to order yet.</item>
         <item>Вы не могли бы подойти через пять минут?==Could you please come back in five minutes?</item>
         <item>Какие у вас фирменные блюда?==What\’s the house specialty?</item>
         <item>Какое сегодня блюдо дня?==What\’s today\’s special?</item>
@@ -5996,7 +5994,7 @@
         <item>Сюда входят яйца (молочные продукты)?==Does it contain eggs (dairy products)?</item>
         <item>Это подается с салатом?==Does it come with a salad?</item>
         <item>Я бы хотел сделать заказ.==I\’d like to order now.</item>
-        <item>Я возьму яичницу с беконом.==I\’ll take bacon and eggs.</item>
+        <item>Я возьму яичницу с беконом.==I\'ll have fried eggs with bacon.</item>
         <item>Я бы хотел устрицы и картофельный салат.==I\’d like oysters and potato salad.</item>
         <item>Я хочу комплексный обед.==I\’d like the set lunch.</item>
         <item>Я буду яблочный пирог.==I\’ll have apple pie.</item>
@@ -6028,7 +6026,7 @@
         <item>Вы принимаете кредитные карты?==Do you accept credit cards?</item>
         <item>Оставьте сдачу себе.==Keep the change.</item>
         <item>Я это не заказывал.==I didn\’t order this.</item>
-        <item>Извините, но я заказывал не говядину, а курицу.==I\’m sorry, but I ordered chicken, not beef.</item>
+        <item>Извините, но я заказывал не говядину, а курицу.==Excuse me, but I ordered chicken, not beef.</item>
         <item>Я думаю в чеке ошибка, мы не заказывали вино.==I think there\’s a mistake in the check. We didn\’t order any wine.</item>
         <item>Можно попросить другой гарнир?==Could I ask for a different side dish?</item>
         <item>Мясо слишком жёсткое.==The meat is too tough.</item>
@@ -6039,7 +6037,7 @@
         <item>Слишком много специй.==It\’s too spicy.</item>
         <item>Это не совсем свежее.==This isn\’t very fresh.</item>
         <item>Мой заказ еще не принесли.==My order hasn\’t come/arrived yet.</item>
-        <item>Поторопитесь, пожалуйста.==Could you hurry, please?</item>
+        <item>Ты мог бы поторопиться, пожалуйста?==Could you hurry, please?</item>
     </string-array>
 
     <string-array name="pronouns">
@@ -6212,7 +6210,7 @@
 
     <string-array name="infinitive">
         <item>Она слишком толстая, чтобы носить это платье сейчас.==She is too fat to wear this dress now</item>
-        <item>Происшествие слишком ужасным, чтобы быстро забыть о нем==The accident was too awful to forget about it quickly</item>
+        <item>Авария была слишком ужасной, чтобы быстро забыть о ней.==The accident was too awful to forget about it quickly</item>
         <item>Он был слишком рассеян, чтобы заметить ее новую прическу.==He was too absent-minded to notice her new hairdo</item>
         <item>Окно было слишком грязным, чтобы увидеть что-то сквозь него==The window was too dirty to see anything through it</item>
         <item>Она была слишком глупа, чтобы понять объяснение==She was too stupid to understand the explanation</item>
@@ -6254,7 +6252,8 @@
 
     <string-array name="something_anything_nothing">
         <item>Я вижу что-то под креслом.==I see something under the armchair.</item>
-        <item>В газете есть что-то интересное.==There is something interesting in the newspaper. Он сейчас что-то пишет. He is writing something now.</item>
+        <item>В газете есть что-то интересное.==There is something interesting in the newspaper.</item>
+        <item>Он сейчас что-то пишет.==He is writing something now.</item>
         <item>Она читает что-то интересное в журнале.==She is reading something interesting in the magazine.</item>
         <item>Что-то не в порядке с его машиной.==There is something wrong with his car.</item>
         <item>В его сумке что-то есть.==There is something in his bag.</item>
@@ -6263,8 +6262,9 @@
         <item>В этой комнате ничего нет.==There is nothing in the room. (or) There isn\’t anything in the room.</item>
         <item>Он ничего не знает об этой вечеринке.==He knows nothing about the party. (or) He doesn\'t know anything about the party.</item>
         <item>На кухне я ничего не вижу.==I see nothing in the kitchen. (or) I don\'t see anything in the kitchen.</item>
-        <item>В этой картине нет ничего красивого.==There is nothing beautiful in this picture. (or) There isn\’t anything beautiful in this picture.</item>
-        <item>В холодильнике есть что-нибудь (поесть)?==Is there anything in the fridge? Есть что-нибудь по телевизору сегодня вечером? (or) Is there anything on TV tonight?</item>
+        <item>В этой картине нет ничего красивого.==There is nothing beautiful in this painting. (or) There isn\’t anything beautiful in this painting.</item>
+        <item>В холодильнике есть что-нибудь (поесть)?==Is there anything in the fridge?</item>
+        <item>Есть что-нибудь по телевизору сегодня вечером?==Is there anything on TV tonight?</item>
         <item>Что-нибудь есть за дверью?==Is there anything behind the door?</item>
         <item>Ты можешь сказать что-нибудь о моем яблочном пироге?==Can you say anything about my apple pie?</item>
         <item>Ты можешь делать все, что тебе нравится.==You can do anything you like.</item>
@@ -6279,21 +6279,23 @@
         <item>У тебя есть что-нибудь поесть?==Do you have anything to eat?</item>
         <item>У меня есть что-то вкусное для тебя.==I have something tasty for you.</item>
         <item>У меня нет ничего вкусного для тебя.==I have nothing tasty for you. (or) I don\’t have anything tasty for you.</item>
-        <item>Есть ли у тебя что-нибудь вкусное для меня?==Do you have anything tasty for me? У меня что-то в глазу. I have something in my eye.</item>
+        <item>Есть ли у тебя что-нибудь вкусное для меня?==Do you have anything tasty for me?</item>
+        <item>У меня что-то в глазу.==I have something in my eye.</item>
         <item>Я ничего не знаю об этом магазине.==I know nothing about this shop. (or) I don\’t know anything about this shop.</item>
         <item>Я думаю, что-то не так с моими часами.==I think there is something wrong with my watch.</item>
         <item>Жарко. Дай мне что-нибудь попить.==It\’s hot. Give me something to drink.</item>
         <item>В этом новом музее есть что-нибудь интересное?==Is there anything interesting in this new museum?</item>
         <item>Я ничего не вижу на этой полке.==I see nothing on this shelf. (or) I don\’t see anything on this shelf.</item>
         <item>В твоем кармане что-то есть?==Is there anything in your pocket? Я покупаю что-то для тебя. I am buying something for you.</item>
-        <item>Есть ли что-нибудь дешевле?==Is there anything cheaper? В моем супе что-то есть. There is something in my soup.</item>
+        <item>Есть ли что-нибудь дешевле?==Is there anything cheaper?</item>
+        <item>В моем супе что-то есть==There is something in my soup.</item>
         <item>Я ничего не понимаю в готовке.==I understand nothing about cooking. (or) I don\’t understand anything about cooking.</item>
         <item>В углу комнаты что-то есть?==Is there anything in the corner of the room?</item>
         <item>Я вижу что-то возле окна.==I see something near the window.</item>
         <item>В его платяном шкафу что-то есть.==There is something in his wardrobe.</item>
         <item>Он что-нибудь знает об этом банке?==Does he know anything about this bank?</item>
         <item>Могу я взять одну из твоих футболок. Бери любую, какая нравится.==Can I take one of your T-shirts? Take any one you like.</item>
-        <item>Мне нечего делать после работы.==I have nothing to do after work. (or) I haven\’t anything to do after work.</item>
+        <item>Мне нечего делать после работы.==I have nothing to do after work. (or) I didn\'t have anything to do after work.</item>
         <item>Есть что-нибудь интересное в программе театра?==Is there anything interesting in the theater program?</item>
         <item>В ванной что-то есть.==There is something in the bathroom.</item>
         <item>Ты сейчас что-нибудь делаешь?==Are you doing anything now?</item>
