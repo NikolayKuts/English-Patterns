@@ -4,6 +4,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.englishpatterns.domain.irregularVerbs.HidingMode
 import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType
 import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbsGroup
+import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbsGroup.SubGroupNameProvider
 import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbsStorage
 import com.example.englishpatterns.domain.irregularVerbs.VerbDetails
 import com.example.englishpatterns.presentation.common.MviViewModel
@@ -96,26 +97,54 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
                         subGroupName = verbsStorage.fullyChanging.first.name
                     ),
                     FullyChangingSubGroupViewHolder(
-                        subGroupName = verbsStorage.fullyChanging.x_anX_uXX.name
+                        subGroupName = verbsStorage.fullyChanging.second.name
                     ),
                     FullyChangingSubGroupViewHolder(
-                        subGroupName = verbsStorage.fullyChanging.x_oXe_Xen.name
+                        subGroupName = verbsStorage.fullyChanging.third.name
                     ),
                     FullyChangingSubGroupViewHolder(
-                        subGroupName = verbsStorage.fullyChanging.iXe_oXe_Xen.name
+                        subGroupName = verbsStorage.fullyChanging.fourth.name
                     ),
                     FullyChangingSubGroupViewHolder(
-                        subGroupName = verbsStorage.fullyChanging.some.name
+                        subGroupName = verbsStorage.fullyChanging.fifth.name
                     ),
                     FullyChangingSubGroupViewHolder(
-                        subGroupName = verbsStorage.fullyChanging.x_ew_wn.name
+                        subGroupName = verbsStorage.fullyChanging.sixth.name
                     ),
                     FullyChangingSubGroupViewHolder(
-                        subGroupName = verbsStorage.fullyChanging.x_aXe_Xen.name
+                        subGroupName = verbsStorage.fullyChanging.seventh.name
                     ),
                 )
             ),
-            IrregularVerbsGroupViewHolder.Common(type = verbsStorage.partiallyConsistent.type),
+            IrregularVerbsGroupViewHolder.PartiallyConsistent(
+                type = verbsStorage.partiallyConsistent.type,
+                subGroups = listOf(
+                    PartiallyConsistentSubGroupViewHolder(
+                        subGroupName = verbsStorage.partiallyConsistent.first.name
+                    ),
+                    PartiallyConsistentSubGroupViewHolder(
+                        subGroupName = verbsStorage.partiallyConsistent.second.name
+                    ),
+                    PartiallyConsistentSubGroupViewHolder(
+                        subGroupName = verbsStorage.partiallyConsistent.third.name
+                    ),
+                    PartiallyConsistentSubGroupViewHolder(
+                        subGroupName = verbsStorage.partiallyConsistent.fourth.name
+                    ),
+                    PartiallyConsistentSubGroupViewHolder(
+                        subGroupName = verbsStorage.partiallyConsistent.fifth.name
+                    ),
+                    PartiallyConsistentSubGroupViewHolder(
+                        subGroupName = verbsStorage.partiallyConsistent.sixth.name
+                    ),
+                    PartiallyConsistentSubGroupViewHolder(
+                        subGroupName = verbsStorage.partiallyConsistent.seventh.name
+                    ),
+                    PartiallyConsistentSubGroupViewHolder(
+                        subGroupName = verbsStorage.partiallyConsistent.eighth.name
+                    ),
+                )
+            ),
         )
     }
 
@@ -204,7 +233,6 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
     private fun changeVerbGroupHolderSelectionState(triggeredType: IrregularVerbGroupType) {
         verbsGroupViewHolders.update { currentList ->
             currentList.map { groupViewHolder ->
-
                 if (groupViewHolder.type == triggeredType) {
                     when (groupViewHolder) {
                         is IrregularVerbsGroupViewHolder.Common -> {
@@ -212,6 +240,10 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
                         }
 
                         is IrregularVerbsGroupViewHolder.FullyChanging -> {
+                            groupViewHolder.copy(isSelected = !groupViewHolder.isSelected)
+                        }
+
+                        is IrregularVerbsGroupViewHolder.PartiallyConsistent -> {
                             groupViewHolder.copy(isSelected = !groupViewHolder.isSelected)
                         }
                     }
@@ -241,7 +273,9 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
         return flatMap { selectedVerbGroup ->
             when (selectedVerbGroup) {
                 is IrregularVerbsGroup.PartiallyConsistent -> {
-                    selectedVerbGroup.details
+                    selectedVerbGroup.retrieveVerbsDetails(
+                        groupType = IrregularVerbGroupType.PartiallyConsistent
+                    )
                 }
 
                 is IrregularVerbsGroup.PartiallyChanging -> {
@@ -253,20 +287,9 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
                 }
 
                 is IrregularVerbsGroup.FullyChanging -> {
-                    val subGroups = selectedVerbGroup.subGroups.filter { subGroup ->
-                        verbsGroupViewHolders.value.asSequence().filter {
-                            it.type == IrregularVerbGroupType.FullyChanging
-                        }.mapNotNull {
-                            it as? IrregularVerbsGroupViewHolder.FullyChanging
-                        }.flatMap { subGroupViewHolder ->
-                            subGroupViewHolder.subGroups
-                        }.filter { subGroupViewHolder ->
-                            subGroupViewHolder.isSelected
-                        }.map { it.subGroupName }
-                            .contains(subGroup.name)
-                    }
-
-                    subGroups.flatMap { it.details }
+                    selectedVerbGroup.retrieveVerbsDetails(
+                        groupType = IrregularVerbGroupType.FullyChanging
+                    )
                 }
             }
         }
@@ -289,20 +312,58 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
     private fun manageSubGroupSelection(action: IrregularVerbsPracticeAction.SetSubGroup) {
         verbsGroupViewHolders.update { groupViewHolders ->
             groupViewHolders.map { groupViewHolder ->
-                if (groupViewHolder is IrregularVerbsGroupViewHolder.FullyChanging) {
-                    val updatedSubHolders = groupViewHolder.subGroups.map { subGroupViewHolder ->
-                        if (subGroupViewHolder == action.group) {
-                            subGroupViewHolder.copy(isSelected = subGroupViewHolder.isSelected.not())
-                        } else {
-                            subGroupViewHolder
-                        }
+                when (groupViewHolder) {
+                    is IrregularVerbsGroupViewHolder.FullyChanging -> {
+                        val updatedSubHolders =
+                            groupViewHolder.subGroups.map { subGroupViewHolder ->
+                                if (subGroupViewHolder == action.subGroupViewHolder) {
+                                    subGroupViewHolder.copy(isSelected = subGroupViewHolder.isSelected.not())
+                                } else {
+                                    subGroupViewHolder
+                                }
+                            }
+
+                        groupViewHolder.copy(subGroups = updatedSubHolders)
                     }
 
-                    groupViewHolder.copy(subGroups = updatedSubHolders)
-                } else {
-                    groupViewHolder
+                    is IrregularVerbsGroupViewHolder.PartiallyConsistent -> {
+                        val updatedSubHolders =
+                            groupViewHolder.subGroups.map { subGroupViewHolder ->
+                                if (subGroupViewHolder == action.subGroupViewHolder) {
+                                    subGroupViewHolder.copy(isSelected = subGroupViewHolder.isSelected.not())
+                                } else {
+                                    subGroupViewHolder
+                                }
+                            }
+
+                        groupViewHolder.copy(subGroups = updatedSubHolders)
+                    }
+
+                    else -> groupViewHolder
                 }
             }
         }
+    }
+
+    private fun <Provider> IrregularVerbsGroup.SubGroupProvider<Provider>.retrieveVerbsDetails(
+        groupType: IrregularVerbGroupType
+    ): List<VerbDetails>
+            where Provider : SubGroupNameProvider,
+                  Provider : IrregularVerbsGroup.SubGroupDetailsProvider {
+        return this.filterSelectedSubGroups(groupType = groupType).flatMap { it.details }
+    }
+
+    private fun <Provider : SubGroupNameProvider> IrregularVerbsGroup.SubGroupProvider<Provider>.filterSelectedSubGroups(
+        groupType: IrregularVerbGroupType
+    ): List<Provider> {
+        val selectedSubGroupNames = verbsGroupViewHolders.value.asSequence()
+            .filter { it.type == groupType }
+            .mapNotNull { it as? IrregularVerbsGroupViewHolder.SubGroupViewHolderProvider<*> }
+            .flatMap { it.subGroups }
+            .filter { it.isSelected }
+            .map { it.subGroupName }
+            .toSet()
+
+        return subGroups.filter { it.name in selectedSubGroupNames }
     }
 }

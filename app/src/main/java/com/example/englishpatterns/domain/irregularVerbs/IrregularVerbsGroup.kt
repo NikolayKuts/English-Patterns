@@ -7,6 +7,21 @@ import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType.
 
 sealed class IrregularVerbsGroup(val type: IrregularVerbGroupType) {
 
+    interface SubGroupProvider<T> {
+
+        val subGroups: List<T>
+    }
+
+    interface SubGroupNameProvider {
+
+        val name: String
+    }
+
+    interface SubGroupDetailsProvider {
+
+        val details: List<VerbDetails>
+    }
+
     operator fun plus(other: IrregularVerbsGroup): List<IrregularVerbsGroup> {
         return listOf(this) + listOf(other)
     }
@@ -18,46 +33,120 @@ sealed class IrregularVerbsGroup(val type: IrregularVerbGroupType) {
 
     data class FullyChanging(
         val first: SubGroup.First,
-        val x_anX_uXX: SubGroup.X_anX_uXX,
-        val x_oXe_Xen: SubGroup.X_oXe_Xen,
-        val iXe_oXe_Xen: SubGroup.IXe_oXe_Xen,
-        val some: SubGroup.Some,
-        val x_ew_wn: SubGroup.X_ew_wn,
-        val x_aXe_Xen: SubGroup.X_aXe_Xen,
-    ) : IrregularVerbsGroup(type = FullyChanging) {
+        val second: SubGroup.Second,
+        val third: SubGroup.Third,
+        val fourth: SubGroup.Fourth,
+        val fifth: SubGroup.Fifth,
+        val sixth: SubGroup.Sixth,
+        val seventh: SubGroup.Seventh,
+    ) : IrregularVerbsGroup(type = FullyChanging), SubGroupProvider<FullyChanging.SubGroup> {
 
-        sealed class SubGroup(val name: String, val details: List<VerbDetails>) {
+        sealed class SubGroup(
+            override val name: String,
+            override val details: List<VerbDetails>
+        ): SubGroupNameProvider, SubGroupDetailsProvider {
 
-            data class First(val data: List<VerbDetails>) : SubGroup(name = "First", details = data)
-            data class X_anX_uXX(val data: List<VerbDetails>) :
-                SubGroup(name = "X_anX_uXX", details = data)
+            data class First(
+                val data: List<VerbDetails>,
+            ) : SubGroup(name = "First", details = data)
 
-            data class X_oXe_Xen(val data: List<VerbDetails>) :
-                SubGroup(name = "X_oXe_Xen", details = data)
+            data class Second(
+                val data: List<VerbDetails>,
+            ) : SubGroup(name = "X_anX_uXX", details = data)
 
-            data class IXe_oXe_Xen(val data: List<VerbDetails>) :
-                SubGroup(name = "IXe_oXe_Xen", details = data)
+            data class Third(
+                val data: List<VerbDetails>,
+            ) : SubGroup(name = "X_oXe_Xen", details = data)
 
-            data class Some(val data: List<VerbDetails>) : SubGroup(name = "Fifth", details = data)
+            data class Fourth(
+                val data: List<VerbDetails>,
+            ) : SubGroup(name = "IXe_oXe_Xen", details = data)
 
-            data class X_ew_wn(val data: List<VerbDetails>) :
-                SubGroup(name = "X_ew_wn", details = data)
+            data class Fifth(
+                val data: List<VerbDetails>,
+            ) : SubGroup(name = "Fifth", details = data)
 
-            data class X_aXe_Xen(val data: List<VerbDetails>) :
-                SubGroup(name = "X_aXe_Xen", details = data)
+            data class Sixth(
+                val data: List<VerbDetails>,
+            ) : SubGroup(name = "X_ew_wn", details = data)
+
+            data class Seventh(
+                val data: List<VerbDetails>,
+            ) : SubGroup(name = "X_aXe_Xen", details = data)
         }
 
-        val subGroups get() = listOf(
-            first,
-            x_anX_uXX,
-            x_oXe_Xen,
-            iXe_oXe_Xen,
-            some,
-            x_ew_wn,
-            x_aXe_Xen,
-        )
+        override val subGroups
+            get() = listOf(
+                first,
+                second,
+                third,
+                fourth,
+                fifth,
+                sixth,
+                seventh,
+            )
     }
 
-    data class PartiallyConsistent(val details: List<VerbDetails>) :
-        IrregularVerbsGroup(type = PartiallyConsistent)
+    data class PartiallyConsistent(
+        val first: SubGroup.First,
+        val second: SubGroup.Second,
+        val third: SubGroup.Third,
+        val fourth: SubGroup.Fourth,
+        val fifth: SubGroup.Fifth,
+        val sixth: SubGroup.Sixth,
+        val seventh: SubGroup.Seventh,
+        val eighth: SubGroup.Eighth,
+    ) : IrregularVerbsGroup(type = PartiallyConsistent),
+        SubGroupProvider<PartiallyConsistent.SubGroup> {
+
+        sealed class SubGroup(
+            override val name: String,
+            override val details: List<VerbDetails>
+        ) : SubGroupNameProvider, SubGroupDetailsProvider {
+
+            data class First(
+                val data: List<VerbDetails>
+            ) : SubGroup(name = "x_o_o", details = data)
+
+            data class Second(
+                val data: List<VerbDetails>
+            ) : SubGroup(name = "x_e_e_1", details = data)
+
+            data class Third(
+                val data: List<VerbDetails>
+            ) : SubGroup(name = "x_e_e_2", details = data)
+
+            data class Fourth(
+                val data: List<VerbDetails>
+            ) : SubGroup(name = "x_found_found", details = data)
+
+            data class Fifth(
+                val data: List<VerbDetails>
+            ) : SubGroup(name = "el_ould_ould", details = data)
+
+            data class Sixth(
+                val data: List<VerbDetails>
+            ) : SubGroup(name = "stand_ud_ud", details = data)
+
+            data class Seventh(
+                val data: List<VerbDetails>
+            ) : SubGroup(name = "shuffled_1", details = data)
+
+            data class Eighth(
+                val data: List<VerbDetails>
+            ) : SubGroup(name = "shuffled_2", details = data)
+        }
+
+        override val subGroups: List<SubGroup>
+            get() = listOf(
+                first,
+                second,
+                third,
+                fourth,
+                fifth,
+                sixth,
+                seventh,
+                eighth,
+            )
+    }
 }

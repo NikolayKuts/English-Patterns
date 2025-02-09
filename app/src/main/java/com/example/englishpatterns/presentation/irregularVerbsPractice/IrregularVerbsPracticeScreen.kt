@@ -118,6 +118,20 @@ private fun VerbsGroups(
                                 IrregularVerbsPracticeAction.SetSubGroup(subGroupViewHolder)
                             )
                         }
+                    )
+                }
+
+                is IrregularVerbsGroupViewHolder.PartiallyConsistent -> {
+                    VerbGroupDropdownMenuButton(
+                        holder = it,
+                        onClick = {
+                            sendAction(IrregularVerbsPracticeAction.ChangeVerbGroup(it.type))
+                        },
+                        onItemClick = { subGroupViewHolder ->
+                            sendAction(
+                                IrregularVerbsPracticeAction.SetSubGroup(subGroupViewHolder)
+                            )
+                        }
 
                     )
                 }
@@ -315,11 +329,13 @@ private fun VerbGroupButton(
 }
 
 @Composable
-private fun VerbGroupDropdownMenuButton(
-    holder: IrregularVerbsGroupViewHolder.FullyChanging,
+private fun <Holder, Sub> VerbGroupDropdownMenuButton(
+    holder: Holder,
     onClick: () -> Unit,
-    onItemClick: (FullyChangingSubGroupViewHolder) -> Unit,
-) {
+    onItemClick: (Sub) -> Unit,
+) where Holder : IrregularVerbsGroupViewHolder,
+        Holder : IrregularVerbsGroupViewHolder.SubGroupViewHolderProvider<Sub>,
+        Sub : IrregularVerbsGroupViewHolder.SubGroupViewHolder {
     var expanded by remember { mutableStateOf(false) }
 
     Box {

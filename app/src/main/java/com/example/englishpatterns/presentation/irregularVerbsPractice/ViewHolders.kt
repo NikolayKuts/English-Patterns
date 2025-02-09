@@ -4,6 +4,17 @@ import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType
 
 sealed interface IrregularVerbsGroupViewHolder {
 
+    interface SubGroupViewHolderProvider<T: SubGroupViewHolder> {
+
+        val subGroups: List<T>
+    }
+
+    interface SubGroupViewHolder {
+
+        val subGroupName: String
+        val isSelected: Boolean
+    }
+
     val type: IrregularVerbGroupType
     val isSelected: Boolean
 
@@ -14,12 +25,23 @@ sealed interface IrregularVerbsGroupViewHolder {
 
     data class FullyChanging(
         override val type: IrregularVerbGroupType,
-        val subGroups: List<FullyChangingSubGroupViewHolder>,
+        override val subGroups: List<FullyChangingSubGroupViewHolder>,
         override val isSelected: Boolean = false
-    ) : IrregularVerbsGroupViewHolder
+    ) : IrregularVerbsGroupViewHolder, SubGroupViewHolderProvider<FullyChangingSubGroupViewHolder>
+
+    data class PartiallyConsistent(
+        override val type: IrregularVerbGroupType,
+        override val subGroups: List<PartiallyConsistentSubGroupViewHolder>,
+        override val isSelected: Boolean = false
+    ) : IrregularVerbsGroupViewHolder, SubGroupViewHolderProvider<PartiallyConsistentSubGroupViewHolder>
 }
 
 data class FullyChangingSubGroupViewHolder(
-    val subGroupName: String,
-    val isSelected: Boolean = false,
-)
+    override val subGroupName: String,
+    override val isSelected: Boolean = false,
+) : IrregularVerbsGroupViewHolder.SubGroupViewHolder
+
+data class PartiallyConsistentSubGroupViewHolder(
+    override val subGroupName: String,
+    override val isSelected: Boolean = false,
+) : IrregularVerbsGroupViewHolder.SubGroupViewHolder
