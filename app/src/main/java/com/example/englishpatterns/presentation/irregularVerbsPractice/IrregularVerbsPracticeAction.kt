@@ -22,4 +22,8 @@ sealed interface IrregularVerbsPracticeAction {
     data class SetSubGroup(
         val subGroupViewHolder: IrregularVerbsGroupViewHolder.SubGroupViewHolder
     ) : IrregularVerbsPracticeAction
+
+    data object ShowHiddenVerbs : IrregularVerbsPracticeAction
+
+    data class ReturnVerbVisibilityMode(val mode: HidingMode) : IrregularVerbsPracticeAction
 }

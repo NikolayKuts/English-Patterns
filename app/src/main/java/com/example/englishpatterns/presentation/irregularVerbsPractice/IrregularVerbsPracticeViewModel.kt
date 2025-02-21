@@ -83,6 +83,14 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
             is IrregularVerbsPracticeAction.SetSubGroup -> {
                 handleSetSubGroupAction(action)
             }
+
+            is IrregularVerbsPracticeAction.ReturnVerbVisibilityMode -> {
+                handleReturnVerbVisibilityModeAction()
+            }
+
+            is IrregularVerbsPracticeAction.ShowHiddenVerbs -> {
+                handleShowHiddenVerbsAction()
+            }
         }
     }
 
@@ -207,6 +215,7 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
                     HidingMode.Third -> HidingMode.Non
                     HidingMode.Second -> HidingMode.SecondAndThird
                     HidingMode.Non -> HidingMode.Third
+                    is HidingMode.ForcedShow -> HidingMode.Third
                 }
             }
 
@@ -216,10 +225,14 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
                     HidingMode.Third -> HidingMode.SecondAndThird
                     HidingMode.Second -> HidingMode.Non
                     HidingMode.Non -> HidingMode.Second
+                    is HidingMode.ForcedShow -> HidingMode.Second
                 }
             }
 
             HidingMode.SecondAndThird -> currentHidingMode
+            is HidingMode.ForcedShow -> {
+                HidingMode.Non
+            }
         }
 
         state.update { it.copy(hidingMode = updatedHidingMode) }
@@ -228,6 +241,20 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
     private fun handleSetSubGroupAction(action: IrregularVerbsPracticeAction.SetSubGroup) {
         manageSubGroupSelection(action = action)
         updateVerbsDetailsBySelectionState()
+    }
+
+    private fun handleReturnVerbVisibilityModeAction() {
+        val currentMode = state.value.hidingMode as? HidingMode.ForcedShow ?: return
+
+        state.update { it.copy(hidingMode = currentMode.previousMode) }
+    }
+
+    private fun handleShowHiddenVerbsAction() {
+        state.update {
+            val updatedMode = HidingMode.ForcedShow(previousMode = it.hidingMode)
+
+            it.copy(hidingMode = updatedMode)
+        }
     }
 
     private fun changeVerbGroupHolderSelectionState(triggeredType: IrregularVerbGroupType) {

@@ -5,6 +5,7 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -37,6 +38,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -57,6 +59,7 @@ fun IrregularVerbsPracticeScreen(
     sendAction: (action: IrregularVerbsPracticeAction) -> Unit,
 ) {
     val verb = state.currentVerbDetails
+    val hidingMode = state.hidingMode
 
     Column(modifier = modifier) {
         VerbsGroups(verbsGroupViewHolders = state.verbsGroupViewHolders, sendAction = sendAction)
@@ -78,7 +81,46 @@ fun IrregularVerbsPracticeScreen(
             sendAction = sendAction
         )
 
-        TextToSpeechButton { sendAction(IrregularVerbsPracticeAction.TextToSpeech) }
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.End
+        ) {
+            if (hidingMode != HidingMode.Non) {
+                var lastMode by remember { mutableStateOf(hidingMode) }
+
+//                Spacer(modifier = Modifier.height(38.dp))
+
+                Box(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(16.dp))
+                        .background(Color(0xFF9F5D58))
+                        .padding(10.dp)
+                        .padding(horizontal = 8.dp)
+                        .pointerInput(Unit) {
+                            detectTapGestures(
+                                onPress = {
+                                    if (hidingMode != HidingMode.Non) {
+                                        lastMode = hidingMode
+                                    }
+                                    sendAction(IrregularVerbsPracticeAction.ShowHiddenVerbs)
+                                    tryAwaitRelease()
+                                    sendAction(
+                                        IrregularVerbsPracticeAction.ReturnVerbVisibilityMode(
+                                            lastMode
+                                        )
+                                    )
+                                }
+                            )
+                        }
+                ) {
+                    Text(text = "Show")
+                }
+                Spacer(modifier = Modifier.width(24.dp))
+            }
+
+            TextToSpeechButton { sendAction(IrregularVerbsPracticeAction.TextToSpeech) }
+        }
 
         VerbDescriptionManagementPanel(
             onPreviousClick = { sendAction(IrregularVerbsPracticeAction.PreviousVerb) },
@@ -233,9 +275,8 @@ private fun ColumnScope.VerbDetailsContent(
 }
 
 @Composable
-private fun ColumnScope.TextToSpeechButton(onClick: () -> Unit) {
+private fun TextToSpeechButton(onClick: () -> Unit) {
     Button(
-        modifier = Modifier.align(Alignment.End),
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFE3CF93)),
     ) {
