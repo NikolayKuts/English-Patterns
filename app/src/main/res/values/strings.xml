@@ -917,7 +917,7 @@
         <item>(17) Семнадцатый==The seventeenth</item>
         <item>(18) Восемнадцатый==The eighteenth</item>
         <item>(19) Девятнадцатый==The nineteenth</item>
-        <item>(20) Двадцатый == The twentieth</item>
+        <item>(20) Двадцатый==The twentieth</item>
         <item>(30) Тридцатый==The thirtieth</item>
         <item>(40) Сороковой==The fortieth</item>
         <item>(50) Пятидесятый==The fiftieth</item>
@@ -2891,35 +2891,35 @@
 
     <string-array name="present_process_relationship">
         <item>Я вижу ты гуляешь с новой девушкой. Мог бы ты нас познакомить?==I see you\’re walking with a new girlfriend. Could you introduce us?</item>
-        <item>- Посмотри! Они дерутся! - А кто это? - Муж и его жена == - Look! They\’re fighting! - Who are they? - The husband and his wife</item>
-        <item>Он вечно разбрасывает свои носки по квартире. Ненавижу эту его привычку! == He\’s always throwing his socks around the apartment. I hate that habit of his!</item>
-        <item>Мы с сестрой смотрим передачу о влиянии афродизиаков на размножение кроликов. Не понимаю, зачем это им. == My sister and I are watching a show about the influence of aphrodisiacs on rabbit reproduction. I don\’t understand why they need it.</item>
-        <item>Он все готовится сделать ей предложение. А она подумывает о том, чтобы бросить его. == He\’s still getting ready to propose, while she\'s thinking of dumping him.</item>
-        <item>- А где мои маленькие крошки? - Девочки в своей комнате, разговаривают и смеются. == - Where are my little ones? - The girls are in their room, talking and laughing.</item>
-        <item>Почему ты смеешься? Тебе нравится шутить надо мной? Это потому что я приемный сын? == Why are you laughing? Do you like making fun of me? Is it because I\’m adopted?</item>
-        <item>Мне постоянно кто-то звонит, когда я принимаю ванну. == Someone always calls me when I\'m taking a bath. I hate it!</item>
-        <item>Например, твой любимый племянник сейчас пытается своровать твой бумажник. == For example, your favorite nephew is trying to steal your wallet right now.</item>
-        <item>Она все еще ждет, что он вернется и женится на ней. == She\’s still waiting for him to come back and marry her.</item>
-        <item>Смотри! Он стоит на коленях и делает ей предложение. == Look! He\’s on his knees proposing to her.</item>
-        <item>Моя жена всегда соглашается со своими подружками, что бы они ни говорили! == My wife is always agreeing with her friends, no matter what they say!</item>
-        <item>- Ты делаешь уроки? - Сама делай! - Не груби матери! == - Are you doing your homework? - Do it yourself! - Don\'t talk back to your mother!</item>
-        <item>- Что ты делаешь? - Звоню в полицию. == - What are you doing? - I\'m calling the police.</item>
-        <item>В этом месяце мы готовимся к свадьбе. == We\'re preparing for the wedding this month.</item>
-        <item>Подружки невесты дерутся за ее букет. Никогда не видел девушек, которые так хотят выйти замуж. == The bridesmaids are fighting over her bouquet. I\'ve never seen girls so eager to get married.</item>
-        <item>Внучка несет не только пирожки бабушке, но и счет за коммунальные услуги. == A granddaughter is carrying not only pies to her grandmother but also a utility bill.</item>
-        <item>Все дети на улице играют в игры, а наш ребенок читает теорию струн. == All the kids are playing outside, and our child is reading about string theory.</item>
+        <item>- Посмотри! Они дерутся! - А кто это? - Муж и его жена==- Look! They\’re fighting! - Who are they? - The husband and his wife</item>
+        <item>Он вечно разбрасывает свои носки по квартире. Ненавижу эту его привычку!==He\’s always throwing his socks around the apartment. I hate that habit of his!</item>
+        <item>Мы с сестрой смотрим передачу о влиянии афродизиаков на размножение кроликов. Не понимаю, зачем это им.==My sister and I are watching a show about the influence of aphrodisiacs on rabbit reproduction. I don\’t understand why they need it.</item>
+        <item>Он все готовится сделать ей предложение. А она подумывает о том, чтобы бросить его.==He\’s still getting ready to propose, while she\'s thinking of dumping him.</item>
+        <item>- А где мои маленькие крошки? - Девочки в своей комнате, разговаривают и смеются.==- Where are my little ones? - The girls are in their room, talking and laughing.</item>
+        <item>Почему ты смеешься? Тебе нравится шутить надо мной? Это потому что я приемный сын?==Why are you laughing? Do you like making fun of me? Is it because I\’m adopted?</item>
+        <item>Мне постоянно кто-то звонит, когда я принимаю ванну.==Someone always calls me when I\'m taking a bath. I hate it!</item>
+        <item>Например, твой любимый племянник сейчас пытается своровать твой бумажник.==For example, your favorite nephew is trying to steal your wallet right now.</item>
+        <item>Она все еще ждет, что он вернется и женится на ней.==She\’s still waiting for him to come back and marry her.</item>
+        <item>Смотри! Он стоит на коленях и делает ей предложение.==Look! He\’s on his knees proposing to her.</item>
+        <item>Моя жена всегда соглашается со своими подружками, что бы они ни говорили!==My wife is always agreeing with her friends, no matter what they say!</item>
+        <item>- Ты делаешь уроки? - Сама делай! - Не груби матери!==- Are you doing your homework? - Do it yourself! - Don\'t talk back to your mother!</item>
+        <item>- Что ты делаешь? - Звоню в полицию.==- What are you doing? - I\'m calling the police.</item>
+        <item>В этом месяце мы готовимся к свадьбе.==We\'re preparing for the wedding this month.</item>
+        <item>Подружки невесты дерутся за ее букет. Никогда не видел девушек, которые так хотят выйти замуж.==The bridesmaids are fighting over her bouquet. I\'ve never seen girls so eager to get married.</item>
+        <item>Внучка несет не только пирожки бабушке, но и счет за коммунальные услуги.==A granddaughter is carrying not only pies to her grandmother but also a utility bill.</item>
+        <item>Все дети на улице играют в игры, а наш ребенок читает теорию струн.==All the kids are playing outside, and our child is reading about string theory.</item>
         <item>Наш разведенный друг ищет немного романтики.==Our divorced friend is looking for a little romance.</item>
-        <item>- Где же мое обручальное кольцо? - Кто знает… Думаю, ты потерял его, и сейчас кто-то пытается его продать. == - Where is my wedding ring? - Who knows… I think you lost it, and now someone is trying to sell it.</item>
-        <item>Будучи сиротой, он бродит по улице целый день и смотрит на счастливые семьи. == Being an orphan, he\'s wandering around the street all day, watching happy families.</item>
-        <item>- Привет, сильная и независимая женщина. Что делаешь? Наверное, ты сейчас на свидании или знакомишься с кем-то, верно? - Нет… я просто сижу и играю с кошками. == - Hi, strong and independent woman! What are you doing? Maybe you\'re on a date or meeting someone, right? - No… I\'m just sitting here playing with my cats.</item>
-        <item>Жених просит отменить свадьбу. Ему становится хуже, и его может стошнить. == The groom is asking to call off the wedding. He\'s feeling worse, and he might throw up.</item>
-        <item>Мой зять молчит все время, пока говорит свекровь. == My son-in-law stays quiet the whole time while his mother-in-law talks.</item>
-        <item>Полицейские стоят и думают, стоит ли им арестовать парочку за драку в общественном месте или подождать окончания этой романтической истории. == The police officers are standing there, wondering whether they should arrest the couple for fighting in public or wait for the end of this romantic story.</item>
-        <item>Ой, ваш новорожденный сын улыбается, не понимая, куда он попал. == Oh, your newborn baby is smiling, not realizing where he is.</item>
-        <item>Не беспокой кондитера. Он делает нащ свадебный торт. == Don\'t bother the baker. He\'s making our wedding cake.</item>
-        <item>- Эти близнецы классно танцуют. - О, да! Это же "Les Twins". == - The twins are dancing great. - Oh yeah! It\'s "Les Twins".</item>
+        <item>- Где же мое обручальное кольцо? - Кто знает… Думаю, ты потерял его, и сейчас кто-то пытается его продать.==- Where is my wedding ring? - Who knows… I think you lost it, and now someone is trying to sell it.</item>
+        <item>Будучи сиротой, он бродит по улице целый день и смотрит на счастливые семьи.==Being an orphan, he\'s wandering around the street all day, watching happy families.</item>
+        <item>- Привет, сильная и независимая женщина. Что делаешь? Наверное, ты сейчас на свидании или знакомишься с кем-то, верно? - Нет… я просто сижу и играю с кошками.==- Hi, strong and independent woman! What are you doing? Maybe you\'re on a date or meeting someone, right? - No… I\'m just sitting here playing with my cats.</item>
+        <item>Жених просит отменить свадьбу. Ему становится хуже, и его может стошнить.==The groom is asking to call off the wedding. He\'s feeling worse, and he might throw up.</item>
+        <item>Мой зять молчит все время, пока говорит свекровь.==My son-in-law stays quiet the whole time while his mother-in-law talks.</item>
+        <item>Полицейские стоят и думают, стоит ли им арестовать парочку за драку в общественном месте или подождать окончания этой романтической истории.==The police officers are standing there, wondering whether they should arrest the couple for fighting in public or wait for the end of this romantic story.</item>
+        <item>Ой, ваш новорожденный сын улыбается, не понимая, куда он попал.==Oh, your newborn baby is smiling, not realizing where he is.</item>
+        <item>Не беспокой кондитера. Он делает нащ свадебный торт.==Don\'t bother the baker. He\'s making our wedding cake.</item>
+        <item>- Эти близнецы классно танцуют. - О, да! Это же "Les Twins".==- The twins are dancing great. - Oh yeah! It\'s "Les Twins".</item>
         <item>-А где ваш малыш?-Думаю, он пьет водку средь девушек==-Where is your baby?-I think he\’s drinking vodka among girls</item>
-        <item>- Сын, ты где? - Бегаю… от полиции. == - Son, where are you? - Running… from the police.</item>
+        <item>- Сын, ты где? - Бегаю… от полиции.==- Son, where are you? - Running… from the police.</item>
     </string-array>
 
     <string-array name="present_simple_cont">
@@ -5677,7 +5677,7 @@
         <item>Мясо режется мясниками.==Meat is cut by butchers.</item>
         <item>Посмотри! Баклажан уже нарезан.==Look! The eggplant is already cut.</item>
         <item>Ветчину всегда режет мой папа.==Ham is always cut by my Dad.</item>
-        <item>Обычно грибы собирают мои родственники.==Mushrooms are usually picked by my relatives.</item>
+        <item>Обычно грибы собираются моими родственниками.==Mushrooms are usually picked by my relatives.</item>
         <item>Вкусный кетчуп производят мексиканцы.==Tasty ketchup is produced by Mexicans.</item>
         <item>Хлеб выпекается булочниками.==Bread is baked by bakers.</item>
         <item>Сёмгу готовят с лимоном и майонезом.==Salmon is cooked with lemon and mayonnaise.</item>
@@ -5750,7 +5750,7 @@
         <item>Ему не позволили поехать вместе с друзьями.==He was not allowed to go with his friends</item>
         <item>Посуду вымыли холодной водой==The dishes were washed with cold water</item>
         <item>Его часто водили гулять в парк==He was often taken for a walk in the park</item>
-        <item>Мне прервали!==I was interrupted (have been interrupted)</item>
+        <item>Мня прервали!==I was interrupted (have been interrupted)</item>
     </string-array>
 
     <string-array name="would_like_to">
@@ -5766,7 +5766,7 @@
         <item>Я бы хотела иметь шикарную машину.==I would like to have a fancy car</item>
         <item>Я хотел бы быть приглашенным==I would like to be invited</item>
         <item>Чем бы вы хотели заняться в следующие выходные?==What would you like to do next weekend?</item>
-        <item>Я бы хотел съездить в Италию еще раз==I\'d like to visit Italy again</item>
+        <item>Я бы хотел съездить в Италию снова==I\'d like to visit Italy again</item>
         <item>Что ты хотел бы на завтрак?==What would you like to have for breakfast?</item>
         <item>Ты хотел бы присоединиться ко мне?==Would you like to join me?</item>
         <item>Я бы выпил немного молока==I would like to drink some milk</item>
@@ -5855,7 +5855,7 @@
         <item>Булочка с маком==A roll with poppy seeds</item>
         <item>Большой соленый рулет с огурцом==A big salty roll with a cucumber.</item>
         <item>Мы ели вкусный борщ==We ate tasty borscht</item>
-        <item>Тарелка борща была большой==A plate of borscht was big</item>
+        <item>Тарелка борща была большой==The bowl of borscht was large.</item>
         <item>Борщ был сварен мной==The borscht was cooked by me</item>
         <item>Где соль?==Where is the salt?</item>
         <item>Соль на холодильнике==The salt is on the fridge</item>
@@ -5869,12 +5869,12 @@
         <item>Ананасовый сок==Pineapple juice</item>
         <item>Литр ананасового сока==A liter of pineapple juice</item>
         <item>(Тот) ананасовый сок был сладким==That pineapple juice was sweet</item>
-        <item>Яблоки съела твоя мама==The apples were eaten by your mom</item>
+        <item>Яблоки съедены твоей мамой==The apples were eaten by your mom</item>
         <item>Яичница==Fried eggs</item>
         <item>Оладьи==Pancakes</item>
         <item>Вкусный пирог==A tasty pie</item>
         <item>Шпинат==Spinach</item>
-        <item>(Эта) курица не прожаренная==The chicken is not fried</item>
+        <item>Курица не прожаренная==The chicken is undercooked.</item>
         <item>Килограмм свинины==A kilo of pork</item>
         <item>Ты сможешь приготовить индейку?==Can you cook turkey?</item>
         <item>Моя мама готовит телятину==My mom\’s cooking veal</item>
@@ -5952,7 +5952,7 @@
         <item>Летом мы пьем пиво==We drink beer in the summer</item>
         <item>Имею ли я право заказать стакан коктейля?==Do I have the right to order a glass of cocktail?</item>
         <item>Глинтвейн может согреть вас зимними вечерами==Mulled wine can warm you on winter evenings</item>
-        <item>Неспелая вишня очень кислая==Unripe cherries are very sour</item>
+        <item>Неспелые вишни очень кислые==Unripe cherries are very sour</item>
         <item>Купи немного хлеба==Buy some bread</item>
         <item>Чай со льдом утоляет жажду==Iced tea quenches thirst</item>
         <item>Так, чай остыл==So, the tea has cooled down</item>
@@ -5967,7 +5967,7 @@
         <item>Я хочу заказать столик на двоих на сегодняшний вечер.==I\’d like to reserve a table for two people tonight.</item>
         <item>У вас есть свободные столики?==Do you have any free tables?</item>
         <item>Столик на двоих, пожалуйста.==A table for two people, please.</item>
-        <item>Все столики заняты.==All tables are fully booked.</item>
+        <item>Все столики заняты.==All the tables are taken.</item>
         <item>У меня зарезервировано.==I\'ve got a reservation.</item>
         <item>Дайте нам другой столик.==Give us another table.</item>
         <item>Можно нам столик рядом с окном?==Could we have a seat next to the window?</item>
@@ -5976,14 +5976,14 @@
         <item>Заказ еды.==Ordering the Meal.</item>
         <item>Дайте, пожалуйста, меню.==Give me the menu, please./Can I have the menu, please?</item>
         <item>Я бы хотел посмотреть меню.==I\’d like to see the menu.</item>
-        <item>Могу я посмотреть винную карту?==Could I see the wine list, please?</item>
+        <item>Могу я посмотреть винную карту, пожалуйста?==Could I see the wine list, please?</item>
         <item>Какие у вас вина?==What kinds of wine do you have?</item>
-        <item>Принесите нам бутылку сухого вина.==Bring us a bottle of dry wine, please.</item>
+        <item>Принесите нам бутылку сухого вина, пожалуйста.==Bring us a bottle of dry wine, please.</item>
         <item>Вы решили, что будете заказывать?==Have you decided what to order?</item>
         <item>Могу я принять Ваш заказ?==May I take your order?</item>
         <item>Готовы сделать заказ?==Are you ready to order?</item>
         <item>Я ещё не готов сделать заказ.==I\’m not ready to order yet.</item>
-        <item>Вы не могли бы подойти через пять минут?==Could you please come back in five minutes?</item>
+        <item>Вы не могли бы, пожалуйста, подойти через пять минут?==Could you please come back in five minutes?</item>
         <item>Какие у вас фирменные блюда?==What\’s the house specialty?</item>
         <item>Какое сегодня блюдо дня?==What\’s today\’s special?</item>
         <item>Что Вы рекомендуете?==What do you recommend?</item>
@@ -5991,7 +5991,7 @@
         <item>У меня аллергия на арахис.==I\’m allergic to peanuts.</item>
         <item>Я не ем мясо.==I don\’t eat meat.</item>
         <item>У вас есть вегетарианские блюда?==Do you have any vegetarian dishes?</item>
-        <item>Сюда входят яйца (молочные продукты)?==Does it contain eggs (dairy products)?</item>
+        <item>Сюда входят яйца или  молочные продукты?==Does it contain eggs or dairy products?</item>
         <item>Это подается с салатом?==Does it come with a salad?</item>
         <item>Я бы хотел сделать заказ.==I\’d like to order now.</item>
         <item>Я возьму яичницу с беконом.==I\'ll have fried eggs with bacon.</item>
@@ -6016,7 +6016,7 @@
         <item>Сколько я должен?==How much do I owe you?</item>
         <item>Сколько всего?==What\’s the total?</item>
         <item>Плата за обслуживание включена в счет?==Is the service charge included?</item>
-        <item>Мне кажется, в счете ошибка.==I believe there\’s a mistake in the bill.</item>
+        <item>Мне кажется, в счете ошибка.==It seems to me that there is a mistake in the bill.</item>
         <item>Я заплачу по счету.==The check is on me.</item>
         <item>Запишите это на мой счет, пожалуйста.==Put it on my tab, please.</item>
         <item>Я плачу за всех.==I\’m paying for everyone.</item>
@@ -6043,7 +6043,8 @@
     <string-array name="pronouns">
         <item>Моему коту 5 лет.==My cat is 5 years old.</item>
         <item>Поднимите (свои, ваши) руки и закройте глаза!==Raise your hands and close your eyes!</item>
-        <item>Никто не мог понять его настоящих отношений со своей женой==No one(nobody) could understand his true relations with his wife</item>
+        <item>Никто не мог понять его настоящих отношений со своей женой==No one could understand his true relationship with his wife.</item>
+        <item>Никто не мог понять его настоящих отношений со своей женой==No one could understand his true relationship with his wife.</item>
         <item>Я оставил свой словарь дома==I left my dictionary at home</item>
         <item>Его доклад интересный==His report is interesting</item>
         <item>Мой портфель - черный==My bag(case) is black</item>
@@ -6053,7 +6054,7 @@
         <item>Оба еe брата живут там.==Both her brothers live there</item>
         <item>Они любят своих детей==They love their children</item>
         <item>Снимите свое пальто==Take off your coat</item>
-        <item>Где твой кот (твоя кошка, ваша кошка, ваш кот)?==Where is your cat?</item>
+        <item>Где твой кот?==Where is your cat?</item>
         <item>Это мой отец==This is my father.</item>
         <item>Это ваши часы? ==Is that (this) your watch?</item>
         <item>Это мой брат, а это (то) его жена и их дети.==This is my brother and that is his wife with their children.</item>
@@ -6067,13 +6068,13 @@
         <item>Я не знаю, что сказать ему.==I don\’t know what to tell him.</item>
         <item>Они не хотели слушать нас.==They didn\’t want to listen to us.</item>
         <item>Где вы их видели?==Where did you see them?</item>
-        <item>В прошлый понедельник этот мужчина помог нам с багажом, когда мы прибыли в отель.==Last Monday this man helped us with luggage when we arrived at the hotel.</item>
+        <item>В прошлый понедельник этот мужчина помог нам с багажом, когда мы прибыли в отель.==Last Monday, this man helped us with our luggage when we arrived at the hotel.</item>
         <item>Я хочу подарить тебе большой подарок на следующий день рождения.==I want to give you a big present for your next birthday.</item>
         <item>Это платье сидит на ней прекрасно.==This dress fits her perfectly.</item>
-        <item>Это моя книга. Дайте мне ее.==It\’s my book. Give it to me, please.</item>
+        <item>Это моя книга. Дайте мне ее, пожалуйста==It\’s my book. Give it to me, please.</item>
         <item>Спросите его об этом.==Ask him a question about it.</item>
         <item>Думаю, это его книга==I think it\’s his book</item>
-        <item>В прошлый раз я видел их с ней на улице.==Last time I saw them with her in the street.</item>
+        <item>В прошлый раз я видел их с ней на улице.==Last time, I saw them with her on the street.</item>
         <item>Не говори мне об их способностях==Do not tell me about their abilities</item>
         <item>Ты его видишь?==Do you see him?</item>
         <item>Попроси его помыть посуду==Ask him to wash the dishes</item>
@@ -6107,8 +6108,7 @@
         <item>Дайте ей сыграть! Её очередь==Let her play! It\'s her turn</item>
         <item>Мой дом - моя крепость==My house is my castle</item>
         <item>Почему они вас не позвали?==Why didn\’t they call you?</item>
-        <item>Расскажи нам, как нам стоит жить==Tell us how to live our life</item>
-        <item>Я спрошу его об этом, если он все-таки вернется==I\’ll ask him about it, if he will come back</item>
+        <item>Я спрошу его об этом, если он все-таки вернется==I will ask him about it if he does come back.</item>
         <item>Это не моя ручка, моя красная.==This is not my pen, mine is red</item>
         <item>Где все наши игрушки? – Мои здесь.==Where are all our toys? – Mine are here</item>
         <item>Моя комната большая, твоя – больше.==My room is large, yours is larger</item>
@@ -6116,9 +6116,9 @@
         <item>Его комната больше, чем ее.==His room is larger than hers</item>
         <item>Вот ваша шляпа, а где моя?==Here is your hat, but where is mine?</item>
         <item>Чей это карандаш? – Ее.==Whose pencil is this? – It\’s hers</item>
-        <item>Это ее дело, не ваше.==That\'s her own business, not yours</item>
+        <item>Это ее дело, не ваше.==This is her business, not yours.</item>
         <item>Мой портфель - черный. Его - коричневый.==My bag is black. His is brown.</item>
-        <item>Эта комната будет моей, а та - твоей (вашей).==This room will be mine, and that room will be yours.</item>
+        <item>Эта комната будет моей, а та - твоей.==This room will be mine, and that one will be yours.</item>
         <item>Возьми (те) мою тетрадь, а я возьму твою (вашу).==Take my notebook and I\'ll take yours.</item>
         <item>Он - мой друг.==Не is a friend of mine. /He is my friend</item>
         <item>Что пьют ежи? – Моему нравится молоко.==What do hedgehogs drink? – Mine likes milk.</item>
@@ -6128,7 +6128,7 @@
         <item>Чьи это вещи? - Наши.==Whose things are these? - They are ours.</item>
         <item>Я оставил свой словарь дома. Можно пользоваться вашим?==I left my dictionary at home. May I use yours?</item>
         <item>Его доклад более интересный, чем наш.==His report is more interesting than ours.</item>
-        <item>Это была ее старая подруга==It was an old friend of hers</item>
+        <item>Это была одна из ее старах подруг==It was an old friend of hers</item>
         <item>Чья это собака? - Это моя.==Whose dog is this? - It is mine</item>
         <item>Мой дом большой. Что насчёт твоего?==My house is big. What about yours?</item>
         <item>Его велосипед сломан, возьми её==His bicycle is broken down, take hers</item>
@@ -6148,7 +6148,7 @@
         <item>Статья была переведена ею, а не ими.==The article was translated by her and not by them</item>
         <item>Одна из его подруг звонила мне вчера.==A friend of his called me yesterday</item>
         <item>Ее сын очень умный и красивый.==Her son is very clever and handsome</item>
-        <item>Это ее помада.==This lipstick is hers</item>
+        <item>Это помада ее.==This lipstick is hers</item>
         <item>Это моя. Твоя книга в твоей комнате на столе.==This is mine. Your book is in your room on the table</item>
         <item>Сможешь продать мне ручку?== Can you sell me a/the pen?</item>
         <item>Эта машина новая. Ее цвет красный.==This car is new. Its color is red</item>
@@ -6159,7 +6159,7 @@
         <item>Она взяла книгу и отдала ее мне==She took a book and gave it to me</item>
         <item>Я буду ждать их ответа.==I will be waiting for their answer</item>
         <item>Он хочет поиграть с ними==He wants to play with them</item>
-        <item>Он показал картину ей, а не мне==He showed the picture to her and /but not to me</item>
+        <item>Он показал картину ей, а не мне==He showed the painting to her, not to me.</item>
         <item>Это перо (ручка) плохое. Я не могу писать им.==This pen is bad. I cannot write with it</item>
     </string-array>
 
@@ -6286,7 +6286,8 @@
         <item>Жарко. Дай мне что-нибудь попить.==It\’s hot. Give me something to drink.</item>
         <item>В этом новом музее есть что-нибудь интересное?==Is there anything interesting in this new museum?</item>
         <item>Я ничего не вижу на этой полке.==I see nothing on this shelf. (or) I don\’t see anything on this shelf.</item>
-        <item>В твоем кармане что-то есть?==Is there anything in your pocket? Я покупаю что-то для тебя. I am buying something for you.</item>
+        <item>В твоем кармане что-то есть?==Is there anything in your pocket?</item>
+        <item>>Я покупаю что-то для тебя. I am buying something for you.</item>
         <item>Есть ли что-нибудь дешевле?==Is there anything cheaper?</item>
         <item>В моем супе что-то есть==There is something in my soup.</item>
         <item>Я ничего не понимаю в готовке.==I understand nothing about cooking. (or) I don\’t understand anything about cooking.</item>
@@ -6295,7 +6296,7 @@
         <item>В его платяном шкафу что-то есть.==There is something in his wardrobe.</item>
         <item>Он что-нибудь знает об этом банке?==Does he know anything about this bank?</item>
         <item>Могу я взять одну из твоих футболок. Бери любую, какая нравится.==Can I take one of your T-shirts? Take any one you like.</item>
-        <item>Мне нечего делать после работы.==I have nothing to do after work. (or) I didn\'t have anything to do after work.</item>
+        <item>Мне нечего делать после работы.==I have nothing to do after work. (or) I don\'t have anything to do after work.</item>
         <item>Есть что-нибудь интересное в программе театра?==Is there anything interesting in the theater program?</item>
         <item>В ванной что-то есть.==There is something in the bathroom.</item>
         <item>Ты сейчас что-нибудь делаешь?==Are you doing anything now?</item>
@@ -6362,5 +6363,99 @@
         <item>В нашем классе все нравятся друг другу.==In our class everyone likes one another.</item>
         <item>На моей работе люди знают друг друга.==At my work people know one another very well.</item>
         <item>В нашем доме все помогают друг другу.==In our house everybody helps one another.</item>
+    </string-array>
+
+    <string-array name="Both">
+        <item>Обе собаки лают на прохожих==Both dogs bark at passersby.</item>
+        <item>Оба брата работают в одной компании==Both brothers work in the same company.</item>
+        <item>Обе машины припаркованы у входа==Both cars are parked at the entrance.</item>
+        <item>Обе страны подписали договор==Both countries signed the agreement.</item>
+        <item>Обе ручки сломаны==Both pens are broken.</item>
+        <item>Оба ответа верны==Both answers are correct.</item>
+        <item>Обе девочки любят танцы==Both girls love dancing.</item>
+
+        <item>Оба из них любят путешествовать==Both of them love traveling.</item>
+        <item>Обе книги на столе мои==Both of the books on the table are mine.</item>
+        <item>Обе комнаты заняты==Both of the rooms are occupied.</item>
+        <item>Оба фильма были интересными==Both of the movies were interesting.</item>
+        <item>Оба родителя работают врачами==Both of the parents are doctors.</item>
+        <item>Обе чашки пустые==Both of the cups are empty.</item>
+        <item>Обе кошки спрятались под кроватью==Both of the cats hid under the bed.</item>
+
+        <item>Она и умная, и красивая==She is both smart and beautiful.</item>
+        <item>Он говорит и по-французски, и по-английски==He speaks both French and English.</item>
+        <item>Мы любим и кофе, и чай==We love both coffee and tea.</item>
+        <item>Этот фильм и интересный, и смешной==This movie is both interesting and funny.</item>
+        <item>Она и поет, и играет на гитаре==She both sings and plays the guitar.</item>
+        <item>Он и бегает быстро, и прыгает высоко==He both runs fast and jumps high.</item>
+        <item>Эти упражнения полезны и для тела, и для ума==These exercises are good for both the body and the mind.</item>
+
+        <item>Никто из нас не хочет туда идти==Neither of us wants to go there.</item>
+        <item>Никто из них не любит сыр==Neither of them likes cheese.</item>
+        <item>Никто из двух фильмов мне не понравился==Neither of the two movies impressed me.</item>
+        <item>Ни один из родителей не согласен==Neither of the parents agrees.</item>
+        <item>Никто из них не работает сегодня==Neither of them is working today.</item>
+        <item>Ни одна из книг мне не интересна==Neither of the books interests me.</item>
+        <item>Никто из двух учеников не сдал экзамен==Neither of the two students passed the exam.</item>
+
+        <item>Оба телефона разряжены==Both phones are dead.</item>
+        <item>Обе чашки стоят на полке==Both cups are on the shelf.</item>
+        <item>Обе подушки мягкие==Both pillows are soft.</item>
+        <item>Оба брата любят спорт==Both brothers love sports.</item>
+        <item>Обе двери были закрыты==Both doors were closed.</item>
+        <item>Обе команды сыграли хорошо==Both teams played well.</item>
+        <item>Оба варианта возможны==Both options are possible.</item>
+    </string-array>
+
+    <string-array name="a_noun_of_possessive_pronoun">
+        <item>Этот мужчина - мой сосед==This man is my neighbor.</item>
+        <item>Она - моя сестра==She is my sister.</item>
+        <item>Этот дом - их собственность==This house is their property.</item>
+        <item>Эта машина - его==This car is his.</item>
+        <item>Это был мой шанс==That was my chance.</item>
+        <item>Этот ребенок - их сын==This child is their son.</item>
+        <item>Эта книга - моя==This book is mine.</item>
+        <item>Эта проблема - наша==This problem is ours.</item>
+        <item>Этот телефон - твой==This phone is yours.</item>
+        <item>Этот кот - её==This cat is hers.</item>
+        <item>Этот учитель - наш==This teacher is ours.</item>
+        <item>Эта идея - моя==This idea is mine.</item>
+
+        <item>Он один из моих друзей==He is a friend of mine.</item>
+        <item>Она одна из моих коллег==She is a colleague of mine.</item>
+        <item>Это одна из их машин==This is a car of theirs.</item>
+        <item>Это был один из моих лучших дней==That was a great day of mine.</item>
+        <item>Он один из её родственников==He is a relative of hers.</item>
+        <item>Это один из его любимых ресторанов==This is a favorite restaurant of his.</item>
+        <item>Это был один из наших планов==That was a plan of ours.</item>
+        <item>Этот город - один из их любимых==This city is a favorite of theirs.</item>
+        <item>Это одна из её лучших работ==This is a masterpiece of hers.</item>
+        <item>Этот совет - один из моих==This advice is a piece of mine.</item>
+        <item>Этот кот - один из её==This cat is a pet of hers.</item>
+        <item>Это один из моих лучших проектов==This is a project of mine.</item>
+        <item>Этот рисунок - один из моих==This drawing is a sketch of mine.</item>
+        <item>Это был один из его лучших выступлений==That was a performance of his.</item>
+        <item>Она одна из моих учениц==She is a student of mine.</item>
+        <item>Этот фильм - один из наших любимых==This movie is a favorite of ours.</item>
+        <item>Это один из твоих самых сложных проектов==This is a tough project of yours.</item>
+        <item>Этот рассказ - один из её==This story is a piece of hers.</item>
+        <item>Этот подарок - один из его==This gift is a present of his.</item>
+        <item>Это был один из их больших успехов==That was a success of theirs.</item>
+        <item>Этот звонок был одним из моих==This call was a call of mine.</item>
+        <item>Эта песня - одна из моих любимых==This song is a favorite of mine.</item>
+        <item>Это была одна из их лучших идей==That was an idea of theirs.</item>
+        <item>Этот совет - один из наших==This advice is a suggestion of ours.</item>
+        <item>Этот торт - один из её лучших==This cake is a masterpiece of hers.</item>
+        <item>Это один из твоих старых телефонов?==Is this an old phone of yours?</item>
+        <item>Этот преподаватель - один из наших==This teacher is a mentor of ours.</item>
+        <item>Этот замок - один из самых красивых в мире==This castle is a wonder of ours.</item>
+        <item>Это одно из твоих воспоминаний?==Is this a memory of yours?</item>
+        <item>Эта встреча была одной из самых запоминающихся==This meeting was an experience of mine.</item>
+        <item>Этот стиль - один из его фирменных==This style is a trademark of his.</item>
+        <item>Эти слова - одни из её==These words are an expression of hers.</item>
+        <item>Этот вопрос был одним из их сложных==This question was a challenge of theirs.</item>
+        <item>Эта ошибка - одна из наших==This mistake is a failure of ours.</item>
+        <item>Это был один из твоих главных успехов==That was an achievement of yours.</item>
+        <item>Это был один из моих самых длинных отпусков==That was a vacation of mine.</item>
     </string-array>
 </resources>
