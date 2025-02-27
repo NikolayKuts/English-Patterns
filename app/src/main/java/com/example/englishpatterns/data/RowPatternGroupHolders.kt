@@ -114,6 +114,8 @@ private fun getDefaultHolders(): List<RawPatternGroupHolder> = listOf(
     Infinitive(),
     SomethingAnythingNothing(),
     TheOtherAnother(),
+    Both(),
+    NounOfPossessivePronoun()
 )
 
 private fun composedDefaultRawPatternGroupHolders(

@@ -1137,4 +1137,26 @@ sealed class RawPatternGroup(
 
         override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
     }
+
+    @Serializable
+    data class Both(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
+        name = "Both",
+        contentResIds = intArrayOf(R.array.both),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
+
+    @Serializable
+    data class NounOfPossessivePronoun(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : RawPatternGroup(
+        name = "A noun of possessive pronoun",
+        contentResIds = intArrayOf(R.array.noun_of_possessive_pronoun),
+    ) {
+
+        override fun toNew(markColor: MarkColor): RawPatternGroup = copy(markColor = markColor)
+    }
 }

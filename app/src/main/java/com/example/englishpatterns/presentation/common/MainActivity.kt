@@ -22,6 +22,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.englishpatterns.data.TextSpeaker
+import com.example.englishpatterns.data.patternStore
 import com.example.englishpatterns.presentation.collectWhenStarted
 import com.example.englishpatterns.presentation.common.customTabs.ChatGptCustomTabManager
 import com.example.englishpatterns.presentation.irregularVerbsPractice.IrregularVerbsPracticeEvent

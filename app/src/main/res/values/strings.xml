@@ -6365,7 +6365,7 @@
         <item>В нашем доме все помогают друг другу.==In our house everybody helps one another.</item>
     </string-array>
 
-    <string-array name="Both">
+    <string-array name="both">
         <item>Обе собаки лают на прохожих==Both dogs bark at passersby.</item>
         <item>Оба брата работают в одной компании==Both brothers work in the same company.</item>
         <item>Обе машины припаркованы у входа==Both cars are parked at the entrance.</item>
@@ -6407,7 +6407,7 @@
         <item>Оба варианта возможны==Both options are possible.</item>
     </string-array>
 
-    <string-array name="a_noun_of_possessive_pronoun">
+    <string-array name="noun_of_possessive_pronoun">
         <item>Этот мужчина - мой сосед==This man is my neighbor.</item>
         <item>Она - моя сестра==She is my sister.</item>
         <item>Этот дом - их собственность==This house is their property.</item>
