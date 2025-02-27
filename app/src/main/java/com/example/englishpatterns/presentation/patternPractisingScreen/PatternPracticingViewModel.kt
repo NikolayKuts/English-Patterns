@@ -59,7 +59,16 @@ class PatternPracticingViewModel(
 
     init {
         patternGroupHoldersSate.onEach { holders ->
-            state.update { it.copy(patternGroupHolders = holders) }
+            state.update {
+                val weekPatternGroupHolder = holders.firstOrNull { holder ->
+                    holder.isWeaklyMemorized
+                } ?: PatternGroupHolder()
+
+                it.copy(
+                    patternGroupHolders = holders,
+                    weekPatterGroupHolder = weekPatternGroupHolder
+                )
+            }
         }.flowOn(Dispatchers.IO)
             .launchIn(viewModelScope)
 

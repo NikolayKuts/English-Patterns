@@ -5,6 +5,7 @@ import com.example.englishpatterns.domain.PatternGroupUnitState
 
 data class PatternPracticingState(
     val patternGroupHolders: List<PatternGroupHolder> = emptyList(),
+    val weekPatterGroupHolder: PatternGroupHolder = PatternGroupHolder(),
     val currentPattern: PatternGroupUnitState? = null,
     val isTranslationHidden: Boolean = false,
     val isPatternGroupHolderSateShuffled: Boolean = false,

@@ -257,7 +257,10 @@ fun PatternPracticingScreen(
     var showExitDialog by remember { mutableStateOf(false) }
 
     if (showExitDialog) {
+        val weekMemorizedPatternsCount = state.weekPatterGroupHolder.patterns.size
+
         ExitDialog(
+            weekPatternsCount = weekMemorizedPatternsCount,
             onDismiss = { showExitDialog = false },
             onConfirm = { shouldInterceptBack = false }
         )
@@ -278,6 +281,11 @@ private fun LazyListScope.groupItems(
         } else {
             Color.Transparent
         }
+        val borderColor = if (patternGroupHolder.isChosen) {
+            Color(0xFF8DA96D)
+        } else {
+            Color(0xFF535650)
+        }
 
         Box(
             modifier = Modifier
@@ -289,9 +297,7 @@ private fun LazyListScope.groupItems(
                 .defaultMinSize(minHeight = 30.dp, minWidth = 20.dp)
                 .border(
                     width = 2.dp,
-                    color = if (patternGroupHolder.isChosen)
-                        Color(0xFF8DA96D) else
-                        Color(0xFF535650),
+                    color = borderColor,
                     shape = RoundedCornerShape(6.dp)
                 )
                 .clip(RoundedCornerShape(6.dp))
@@ -588,6 +594,7 @@ private fun BoxScope.BottomContent(
 
 @Composable
 private fun ExitDialog(
+    weekPatternsCount: Int,
     onDismiss: () -> Unit,
     onConfirm: () -> Unit,
 ) {
@@ -617,7 +624,30 @@ private fun ExitDialog(
                     )
                 },
                 title = {
-                    Text(text = "Are you sure you want to exit?")
+                    Column {
+                        Text(text = "Are you sure you want to exit?")
+
+                        val text = if (weekPatternsCount == 1) {
+                            "There is 1 week pattern"
+                        } else if (weekPatternsCount > 1) {
+                            "There are $weekPatternsCount week patterns"
+                        } else {
+                            null
+                        }
+
+                        text?.let {
+                            Spacer(modifier = Modifier.height(8.dp))
+
+                            Text(
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .background(Color(0x55db5353))
+                                    .padding(8.dp)
+                                    .align(Alignment.CenterHorizontally),
+                                text = it,
+                            )
+                        }
+                    }
                 },
                 dismissButton = {
                     AlertDialogButton(
@@ -1048,6 +1078,7 @@ private fun PatternPracticingScreenPreview() {
 @Composable
 private fun ExitDialogPreview() {
     ExitDialog(
+        weekPatternsCount = 4,
         onDismiss = {},
         onConfirm = {}
     )
