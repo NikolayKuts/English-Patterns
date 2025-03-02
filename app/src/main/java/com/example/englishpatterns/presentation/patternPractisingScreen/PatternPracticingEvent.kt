@@ -42,4 +42,6 @@ sealed interface PatternPracticingEvent {
     ) : PatternPracticingEvent
 
     data class TextToSpeech(val text: String) : PatternPracticingEvent
+
+    data object WeekPatternStored : PatternPracticingEvent
 }

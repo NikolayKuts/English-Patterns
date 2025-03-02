@@ -1,14 +1,15 @@
 package com.example.englishpatterns.presentation.patternPractisingScreen
 
 import com.example.englishpatterns.data.common.LoadingState
-import com.example.englishpatterns.domain.PatternGroupUnitState
+import com.example.englishpatterns.domain.PracticingPatternUnit
 
 data class PatternPracticingState(
-    val patternGroupHolders: List<PatternGroupHolder> = emptyList(),
-    val weekPatterGroupHolder: PatternGroupHolder = PatternGroupHolder(),
-    val currentPattern: PatternGroupUnitState? = null,
+    val practicingPatternGroups: List<PracticingPatternGroup> = emptyList(),
+    val weekPracticingPatterGroup: PracticingPatternGroup = PracticingPatternGroup(),
+    val currentPractisingPatternGroupUnit: PracticingPatternUnit? = null,
     val isTranslationHidden: Boolean = false,
-    val isPatternGroupHolderSateShuffled: Boolean = false,
+    val isPracticingPatternGroupShuffled: Boolean = false,
+    val isStoringWeekPatternEnabled: Boolean = false,
     val selectedTextInfo: LoadingState<SelectedTextInfo> = LoadingState.Non,
     val pronunciationLoadingState:  LoadingState<Unit> = LoadingState.Non,
 )

@@ -5,14 +5,14 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
-import com.example.englishpatterns.domain.RawPatternGroup
+import com.example.englishpatterns.domain.PatternGroupResource
 import kotlin.reflect.typeOf
 
 @Composable
 fun AppNavGraph(
     navHostController: NavHostController,
     mainScreenContent: @Composable () -> Unit,
-    patternPracticingScreenContent: @Composable (List<RawPatternGroup>) -> Unit,
+    patternPracticingScreenContent: @Composable (List<PatternGroupResource>) -> Unit,
     webContentScreenContent: @Composable (url: String) -> Unit,
     irregularVerbsScreenContent: @Composable () -> Unit,
 ) {
@@ -24,12 +24,12 @@ fun AppNavGraph(
 
         composable<Screen.PatternPracticingScreen>(
             typeMap = mapOf(
-                typeOf<List<RawPatternGroup>>() to CustomNavType.RawPatternGroupList
+                typeOf<List<PatternGroupResource>>() to CustomNavType.PatternGroupResources
             )
         ) {
             val args = it.toRoute<Screen.PatternPracticingScreen>()
 
-            patternPracticingScreenContent(args.rawPatternGroups)
+            patternPracticingScreenContent(args.patternGroupResources)
         }
 
         composable<Screen.WebContentScreen> {

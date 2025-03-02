@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -41,7 +40,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
-import com.example.englishpatterns.domain.RawPatternGroupHolder
+import com.example.englishpatterns.domain.PatternGroupResContainer
 import com.example.englishpatterns.presentation.UiMarkColor
 import com.example.englishpatterns.ui.theme.EnglishPatternsTheme
 
@@ -65,9 +64,9 @@ fun MainScreen(
         ) {
             header(state = state)
 
-            itemsIndexed(items = state.rowPatternGroupHolders.content) { index, holder ->
+            itemsIndexed(items = state.patternGroupResContainers.content) { index, container ->
                 Item(
-                    holder = holder,
+                    selectableResContainer = container,
                     index = index,
                     markColorChooserEnable = markColorChooserEnable,
                     sendAction = sendAction
@@ -101,14 +100,14 @@ fun MainScreen(
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun Item(
-    holder: RawPatternGroupHolder,
+    selectableResContainer: PatternGroupResContainer,
     index: Int,
     markColorChooserEnable: MutableState<Boolean>,
     sendAction: (action: MainAction) -> Unit
 ) {
-    val markColor = holder.rawPatternGroup.markColor
+    val markColor = selectableResContainer.patternGroupResource.markColor
 
-    val itemBackground = when (holder.isChosen) {
+    val itemBackground = when (selectableResContainer.isChosen) {
         true -> Color(0x9A6F7C60)
         else -> Color(markColor.toUiMarkColor().value)
     }
@@ -129,7 +128,10 @@ private fun Item(
             .combinedClickable(
                 onClick = {
                     sendAction(
-                        MainAction.ChangePatterHolderChoosingState(position = index, holder)
+                        MainAction.ChangePatternGroupResContainerChoosingState(
+                            position = index,
+                            resContainer = selectableResContainer
+                        )
                     )
                     markColorChooserEnable.value = false
                 },
@@ -149,7 +151,7 @@ private fun Item(
         Spacer(modifier = Modifier.width(4.dp))
 
         Text(
-            text = holder.rawPatternGroup.name,
+            text = selectableResContainer.patternGroupResource.name,
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(shape = RoundedCornerShape(4.dp))
@@ -204,8 +206,8 @@ private fun MarkColorPopup(
 @OptIn(ExperimentalFoundationApi::class)
 private fun LazyListScope.header(state: MainState) {
     stickyHeader {
-        val count = state.rowPatternGroupHolders.content.count { patternHolder ->
-            patternHolder.isChosen
+        val count = state.patternGroupResContainers.content.count { resContainer ->
+            resContainer.isChosen
         }
 
         Row(

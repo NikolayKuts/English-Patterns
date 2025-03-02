@@ -2,9 +2,10 @@ package com.example.englishpatterns.presentation.common
 
 import androidx.datastore.core.DataStore
 import androidx.lifecycle.viewModelScope
-import com.example.englishpatterns.data.RowPatternGroupHolders
-import com.example.englishpatterns.domain.RawPatternGroup
-import com.example.englishpatterns.domain.RawPatternGroupHolder
+import com.example.englishpatterns.data.PatternGroupResContainers
+import com.example.englishpatterns.domain.PatternGroupResContainer
+import com.example.englishpatterns.domain.PatternGroupResource
+import com.example.englishpatterns.presentation.patternPractisingScreen.PracticingPatternGroup
 import com.lib.lokdroid.core.logD
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -16,35 +17,38 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 class MainViewModel(
-    private val patternStore: DataStore<RowPatternGroupHolders>,
+    private val patternStore: DataStore<PatternGroupResContainers>,
+    private val weekPatternStorage: DataStore<PracticingPatternGroup>,
 ) : MviViewModel<MainState, MainAction, MainEvent>() {
 
-    private val rawPatternGroupHoldersState = patternStore.data
-    private val chosenRawPatternGroupHolders: Flow<List<RawPatternGroupHolder>> =
-        getChosenRawPatternGroupHoldersState()
+    private val patternGroupResContainersStata = patternStore.data
+
+    private val chosenPatternGroupResContainers: Flow<List<PatternGroupResContainer>> =
+        getChosenPatternGroupResContainersState()
+
     override val state = MutableStateFlow(value = MainState())
 
     override val eventState = MutableSharedFlow<MainEvent>()
 
     init {
-        observeRawPatternGroupHoldersSource()
+        observePatternGroupResContainersSource()
     }
 
     override fun sendAction(action: MainAction) {
         logD("sendAction() called. Action: $action")
 
         when (action) {
-            is MainAction.ChangePatterHolderChoosingState -> {
-                changePatterHolderChoosingState(
+            is MainAction.ChangePatternGroupResContainerChoosingState -> {
+                changePatternGroupResContainerChoosingState(
                     position = action.position,
-                    rawPatternGroupHolder = action.rawPatternGroupHolder
+                    patternGroupResContainer = action.resContainer
                 )
             }
 
             MainAction.NavigateToPatternPracticing -> {
                 eventState.launchEmit {
                     MainEvent.PatternPracticingRequired(
-                        rawPatternGroups = getChosenRawPatternGroups()
+                        patternGroupResources = getChosenSelectablePatternGroupContainers()
                     )
                 }
             }
@@ -53,14 +57,14 @@ class MainViewModel(
                 viewModelScope.launch(Dispatchers.IO) {
                     patternStore.updateData {
                         val list = it.content
-                        val holder = list.getOrNull(action.patternIndex) ?: return@updateData it
-                        val updatedRawPatternGroup = holder.rawPatternGroup.toNew(
+                        val resContainer = list.getOrNull(action.patternIndex) ?: return@updateData it
+                        val updatedPatternGroupResContainer = resContainer.patternGroupResource.toNew(
                             markColor = action.markColor
                         )
                         val updatedContent = list.toMutableList().apply {
                             this[action.patternIndex] =
-                                holder.copy(
-                                    rawPatternGroup = updatedRawPatternGroup,
+                                resContainer.copy(
+                                    patternGroupResource = updatedPatternGroupResContainer,
                                     isChosen = false
                                 )
                         }
@@ -76,41 +80,53 @@ class MainViewModel(
         }
     }
 
-    private fun observeRawPatternGroupHoldersSource() {
+    private fun observePatternGroupResContainersSource() {
         viewModelScope.launch(Dispatchers.IO) {
-            rawPatternGroupHoldersState.collect { holders ->
-                state.update { it.copy(rowPatternGroupHolders = holders) }
+            patternGroupResContainersStata.collect { resContainers ->
+                state.update { it.copy(patternGroupResContainers = resContainers) }
             }
         }
     }
 
-    private fun getChosenRawPatternGroupHoldersState(): Flow<List<RawPatternGroupHolder>> {
-        return rawPatternGroupHoldersState.map {
-            it.content.filter { holder -> holder.isChosen }
+    private fun getChosenPatternGroupResContainersState(): Flow<List<PatternGroupResContainer>> {
+        return patternGroupResContainersStata.map {
+            it.content.filter { container -> container.isChosen }
         }
     }
 
-    private suspend fun getChosenRawPatternGroups(): List<RawPatternGroup> {
-        return chosenRawPatternGroupHolders.firstOrNull()?.let { holders ->
-            holders.map { holder -> holder.rawPatternGroup }
+    private suspend fun getChosenSelectablePatternGroupContainers(): List<PatternGroupResource> {
+        return chosenPatternGroupResContainers.firstOrNull()?.let { containers ->
+            containers.map { resContainer -> resContainer.patternGroupResource }
         } ?: run {
             emptyList()
         }
     }
 
-    private fun changePatterHolderChoosingState(
+    private fun changePatternGroupResContainerChoosingState(
         position: Int,
-        rawPatternGroupHolder: RawPatternGroupHolder
+        patternGroupResContainer: PatternGroupResContainer
     ) {
         viewModelScope.launch(Dispatchers.IO) {
-            patternStore.updateData { patternHolders ->
-                val updatedHolders = patternHolders.content.toMutableList()
-                    .apply {
-                        this[position] =
-                            rawPatternGroupHolder.copy(isChosen = !rawPatternGroupHolder.isChosen)
-                    }
+            val allResContainers = patternGroupResContainersStata.firstOrNull() ?: return@launch
+            val resContainerToChange = allResContainers.content[position]
 
-                RowPatternGroupHolders(content = updatedHolders)
+            when {
+                patternStore.data.firstOrNull()?.content?.contains(resContainerToChange) == true -> {
+                    patternStore.updateData { resContainers ->
+                        val updatedResContainers = resContainers.content.toMutableList()
+                            .apply {
+                                this[position] = patternGroupResContainer.copy(
+                                    isChosen = patternGroupResContainer.isChosen.not()
+                                )
+                            }
+
+                        PatternGroupResContainers(content = updatedResContainers)
+                    }
+                }
+
+                resContainerToChange.patternGroupResource is PatternGroupResource.WeekPatternGroupResource -> {
+                    weekPatternStorage.updateData { it.copy(isChosen = !it.isChosen) }
+                }
             }
         }
     }

@@ -3,6 +3,7 @@ package com.example.englishpatterns.presentation.common
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -21,8 +22,12 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.englishpatterns.data.ResourcesContentManager
+import com.example.englishpatterns.data.TextAudioPlayer
 import com.example.englishpatterns.data.TextSpeaker
 import com.example.englishpatterns.data.patternStore
+import com.example.englishpatterns.data.weekPatternStorage
+import com.example.englishpatterns.data.yandexApi.YandexWordInfoProvider
 import com.example.englishpatterns.presentation.collectWhenStarted
 import com.example.englishpatterns.presentation.common.customTabs.ChatGptCustomTabManager
 import com.example.englishpatterns.presentation.irregularVerbsPractice.IrregularVerbsPracticeEvent
@@ -44,7 +49,10 @@ import kotlinx.coroutines.flow.collectLatest
 class MainActivity : ComponentActivity() {
 
     private val viewModel: MviViewModel<MainState, MainAction, MainEvent> by viewModels<MainViewModel> {
-        MainViewModelFactory(dataStore = this.patternStore)
+        MainViewModelFactory(
+            patternStorage = this.patternStore,
+            weekPatternStorage = this.weekPatternStorage,
+        )
     }
 
     private val localStorage by lazy { LocalStorage.getInstance(context = application) }
@@ -85,8 +93,15 @@ class MainActivity : ComponentActivity() {
                                 val patternPracticingViewModel: PatternPracticingMviViewModel =
                                     viewModel<PatternPracticingViewModel>(
                                         factory = PatternPracticingViewModel.Factory(
-                                            context = application,
-                                            rawPatternGroups = rawPatternGroups
+                                            patternGroupResources = rawPatternGroups,
+                                            resourcesContentManager = ResourcesContentManager(
+                                                context = application
+                                            ),
+                                            yandexWordInfoProvider = YandexWordInfoProvider(
+                                                context = application
+                                            ),
+                                            weekPatternStorage = this.weekPatternStorage,
+                                            textAudioPlayer = TextAudioPlayer()
                                         )
                                     )
 
@@ -144,6 +159,14 @@ class MainActivity : ComponentActivity() {
                                             is PatternPracticingEvent.TextToSpeech -> {
                                                 textSpeaker?.speak(text = event.text)
                                             }
+
+                                            PatternPracticingEvent.WeekPatternStored -> {
+                                                Toast.makeText(
+                                                    this@MainActivity,
+                                                    "Week pattern stored",
+                                                    Toast.LENGTH_SHORT
+                                                ).show()
+                                            }
                                         }
                                     }
                                 }
@@ -178,7 +201,8 @@ class MainActivity : ComponentActivity() {
                             },
                             irregularVerbsScreenContent = {
                                 textSpeaker = TextSpeaker(context = application)
-                                val irregularVerbsPracticeViewModel = viewModel<IrregularVerbsPracticeViewModel>()
+                                val irregularVerbsPracticeViewModel =
+                                    viewModel<IrregularVerbsPracticeViewModel>()
 
                                 LaunchedEffect(key1 = Unit) {
                                     irregularVerbsPracticeViewModel.eventState.collectLatest { event ->
@@ -221,7 +245,7 @@ class MainActivity : ComponentActivity() {
             when (event) {
                 is MainEvent.PatternPracticingRequired -> {
                     val destination = Screen.PatternPracticingScreen(
-                        rawPatternGroups = event.rawPatternGroups
+                        patternGroupResources = event.patternGroupResources
                     )
 
                     navController.navigate(route = destination)

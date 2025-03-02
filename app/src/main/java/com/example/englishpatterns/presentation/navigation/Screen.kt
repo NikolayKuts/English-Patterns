@@ -1,6 +1,6 @@
 package com.example.englishpatterns.presentation.navigation
 
-import com.example.englishpatterns.domain.RawPatternGroup
+import com.example.englishpatterns.domain.PatternGroupResource
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -11,7 +11,7 @@ sealed class Screen(open val route: String) {
 
     @Serializable
     class PatternPracticingScreen(
-         val rawPatternGroups: List<RawPatternGroup>,
+        val patternGroupResources: List<PatternGroupResource>,
     ) : Screen(route = "PatternPracticingScreen")
 
     @Serializable

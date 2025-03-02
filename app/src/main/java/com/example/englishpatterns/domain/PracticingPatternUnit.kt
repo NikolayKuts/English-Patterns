@@ -1,8 +1,8 @@
 package com.example.englishpatterns.domain
 
-import com.example.englishpatterns.presentation.patternPractisingScreen.Pattern
+import com.example.englishpatterns.data.Pattern
 
-data class PatternGroupUnitState(
+data class PracticingPatternUnit(
     val pattern: Pattern,
     val position: Int,
     val groupSize: Int

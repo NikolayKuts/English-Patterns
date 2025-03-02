@@ -1,13 +1,13 @@
 package com.example.englishpatterns.presentation.common
 
 import com.example.englishpatterns.domain.MarkColor
-import com.example.englishpatterns.domain.RawPatternGroupHolder
+import com.example.englishpatterns.domain.PatternGroupResContainer
 
 sealed interface MainAction {
 
-    data class ChangePatterHolderChoosingState(
+    data class ChangePatternGroupResContainerChoosingState(
         val position: Int,
-        val rawPatternGroupHolder: RawPatternGroupHolder,
+        val resContainer: PatternGroupResContainer,
     ) : MainAction
 
     data object NavigateToPatternPracticing : MainAction

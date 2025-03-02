@@ -13,7 +13,6 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.keyframes
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -85,8 +84,9 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
 import com.example.englishpatterns.R
+import com.example.englishpatterns.data.Pattern
 import com.example.englishpatterns.data.common.LoadingState
-import com.example.englishpatterns.domain.PatternGroupUnitState
+import com.example.englishpatterns.domain.PracticingPatternUnit
 import com.example.englishpatterns.presentation.common.shimmerEffect
 import com.example.englishpatterns.ui.theme.EnglishPatternsTheme
 import kotlinx.coroutines.android.awaitFrame
@@ -134,7 +134,7 @@ fun PatternPracticingScreen(
                 Spacer(modifier = Modifier.width(16.dp))
 
                 val listState = rememberLazyListState()
-                val lastItemIndex = state.patternGroupHolders.indexOfLast { it.isChosen }
+                val lastItemIndex = state.practicingPatternGroups.indexOfLast { it.isChosen }
                 val scrollPosition = if (lastItemIndex < 0) 0 else lastItemIndex
 
                 LaunchedEffect(key1 = state) {
@@ -145,7 +145,7 @@ fun PatternPracticingScreen(
                     state = listState
                 ) {
                     groupItems(
-                        patternGroupHolders = state.patternGroupHolders,
+                        practicingPatternGroups = state.practicingPatternGroups,
                         sendAction = sendAction
                     )
                 }
@@ -153,9 +153,9 @@ fun PatternPracticingScreen(
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            val position = (state.currentPattern?.position ?: -1) + 1
+            val position = (state.currentPractisingPatternGroupUnit?.position ?: -1) + 1
             val positionText = if (position == 0) "" else position.toString()
-            val size = state.currentPattern?.groupSize ?: -1
+            val size = state.currentPractisingPatternGroupUnit?.groupSize ?: -1
             val sizeText = if (size == -1) "" else " / $size"
             val progress = "$positionText$sizeText"
 
@@ -168,14 +168,14 @@ fun PatternPracticingScreen(
                     text = progress
                 )
 
-                val shuffleButtonTint = if (state.isPatternGroupHolderSateShuffled) {
+                val shuffleButtonTint = if (state.isPracticingPatternGroupShuffled) {
                     MaterialTheme.colorScheme.onSurface
                 } else {
                     Color(0xFFA5A5A5)
                 }
 
                 RoundedButton(
-                    activated = state.isPatternGroupHolderSateShuffled,
+                    activated = state.isPracticingPatternGroupShuffled,
                     activatedBackground = Color(0xFF4B7485),
                     onClick = { sendAction(PatternPracticingAction.ShufflePatternPairs) }
                 ) {
@@ -188,7 +188,7 @@ fun PatternPracticingScreen(
 
                 Spacer(modifier = Modifier.width(8.dp))
 
-                val isAllButtonActivated = state.patternGroupHolders.all { it.isChosen }
+                val isAllButtonActivated = state.practicingPatternGroups.all { it.isChosen }
                 val allButtonTextColor = if (isAllButtonActivated) {
                     Color.Unspecified
                 } else {
@@ -199,7 +199,7 @@ fun PatternPracticingScreen(
                     activated = isAllButtonActivated,
                     activatedBackground = Color(0xFFA1BB84),
                     onClick = {
-                        sendAction(PatternPracticingAction.ChangeAllPatternGroupHoldersSelectionState)
+                        sendAction(PatternPracticingAction.ChangeAllPracticingPatternGroupsSelectionState)
                     }
                 ) {
                     Text(text = "all", color = allButtonTextColor)
@@ -231,11 +231,11 @@ fun PatternPracticingScreen(
 
         AnimatedContent(
             modifier = Modifier.align(Alignment.Center),
-            targetState = state.currentPattern,
+            targetState = state.currentPractisingPatternGroupUnit,
             label = "AnimatedContent"
         ) { patternGroupUnitState ->
             PatternContent(
-                patternGroupUnitState = patternGroupUnitState,
+                practicingPatternUnit = patternGroupUnitState,
                 isTranslationHidden = state.isTranslationHidden,
                 selectedTextInfo = state.selectedTextInfo,
                 pronunciationLoadingState = state.pronunciationLoadingState,
@@ -245,6 +245,7 @@ fun PatternPracticingScreen(
         }
 
         BottomContent(
+            isStoreButtonEnabled = state.isStoringWeekPatternEnabled,
             sendAction = sendAction,
             onWeakButtonClick = {
                 animatableGroupPointerColor()
@@ -257,7 +258,7 @@ fun PatternPracticingScreen(
     var showExitDialog by remember { mutableStateOf(false) }
 
     if (showExitDialog) {
-        val weekMemorizedPatternsCount = state.weekPatterGroupHolder.patterns.size
+        val weekMemorizedPatternsCount = state.weekPracticingPatterGroup.patterns.size
 
         ExitDialog(
             weekPatternsCount = weekMemorizedPatternsCount,
@@ -272,16 +273,16 @@ fun PatternPracticingScreen(
 }
 
 private fun LazyListScope.groupItems(
-    patternGroupHolders: List<PatternGroupHolder>,
+    practicingPatternGroups: List<PracticingPatternGroup>,
     sendAction: (PatternPracticingAction) -> Unit
 ) {
-    itemsIndexed(items = patternGroupHolders) { index, patternGroupHolder ->
-        val itemBackground: Color = if (patternGroupHolder.isWeaklyMemorized) {
+    itemsIndexed(items = practicingPatternGroups) { index, practicingPatternGroup ->
+        val itemBackground: Color = if (practicingPatternGroup.isWeaklyMemorized) {
             Color(0xBFC96D65)
         } else {
             Color.Transparent
         }
-        val borderColor = if (patternGroupHolder.isChosen) {
+        val borderColor = if (practicingPatternGroup.isChosen) {
             Color(0xFF8DA96D)
         } else {
             Color(0xFF535650)
@@ -291,7 +292,7 @@ private fun LazyListScope.groupItems(
             modifier = Modifier
                 .clickable {
                     sendAction(
-                        PatternPracticingAction.ChangePatternGroupHolderChoosingState(position = index)
+                        PatternPracticingAction.ChangePracticingPatternGroupChoosingState(position = index)
                     )
                 }
                 .defaultMinSize(minHeight = 30.dp, minWidth = 20.dp)
@@ -332,17 +333,16 @@ private fun PatterGroupNavigationButton(
     )
 }
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun BoxScope.PatternContent(
-    patternGroupUnitState: PatternGroupUnitState?,
+    practicingPatternUnit: PracticingPatternUnit?,
     isTranslationHidden: Boolean,
     selectedTextInfo: LoadingState<SelectedTextInfo>,
     pronunciationLoadingState: LoadingState<Unit>,
     background: Animatable<Color, AnimationVector4D>,
     sendAction: (PatternPracticingAction) -> Unit,
 ) {
-    val position = patternGroupUnitState?.position ?: -1
+    val position = practicingPatternUnit?.position ?: -1
     var rotationState by remember {
         mutableStateOf(true)
     }
@@ -372,7 +372,7 @@ private fun BoxScope.PatternContent(
             modifier = Modifier.clickable {
                 sendAction(PatternPracticingAction.ChangeTranslationVisibilityState)
             },
-            text = patternGroupUnitState?.pattern?.native ?: "",
+            text = practicingPatternUnit?.pattern?.native ?: "",
             color = Color(0xFFC5CC85),
             textAlign = TextAlign.Center
         )
@@ -380,7 +380,7 @@ private fun BoxScope.PatternContent(
         Spacer(modifier = Modifier.height(40.dp))
 
         PatternTranslationContent(
-            patternGroupUnitState = patternGroupUnitState,
+            practicingPatternUnit = practicingPatternUnit,
             selectedTextInfo = selectedTextInfo,
             isTranslationHidden = isTranslationHidden,
             pronunciationLoadingState = pronunciationLoadingState,
@@ -391,7 +391,7 @@ private fun BoxScope.PatternContent(
 
 @Composable
 private fun PatternTranslationContent(
-    patternGroupUnitState: PatternGroupUnitState?,
+    practicingPatternUnit: PracticingPatternUnit?,
     selectedTextInfo: LoadingState<SelectedTextInfo>,
     isTranslationHidden: Boolean,
     sendAction: (PatternPracticingAction) -> Unit,
@@ -417,7 +417,7 @@ private fun PatternTranslationContent(
     ) {
         SelectionContainer {
             var selectedText by remember { mutableStateOf("") }
-            var showDropdown by remember(patternGroupUnitState) { mutableStateOf(false) }
+            var showDropdown by remember(practicingPatternUnit) { mutableStateOf(false) }
             var translationTextContainerSize by remember { mutableStateOf(IntSize.Zero) }
             val (translationContainerColor, translationTextColor) = if (isTranslationHidden) {
                 Color(0xFF292929) to Color.Transparent
@@ -426,7 +426,7 @@ private fun PatternTranslationContent(
             }
 
             SelectableText(
-                text = patternGroupUnitState?.pattern?.translation ?: "",
+                text = practicingPatternUnit?.pattern?.translation ?: "",
                 containerColor = translationContainerColor,
                 textColor = translationTextColor,
                 isTranslationHidden = isTranslationHidden,
@@ -531,6 +531,7 @@ fun SelectableText(
 
 @Composable
 private fun BoxScope.BottomContent(
+    isStoreButtonEnabled: Boolean,
     sendAction: (PatternPracticingAction) -> Unit,
     onWeakButtonClick: () -> Unit,
 ) {
@@ -544,19 +545,40 @@ private fun BoxScope.BottomContent(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Button(
-                onClick = {
-                    sendAction(PatternPracticingAction.AddPatternAsWeaklyMemorized)
-                    onWeakButtonClick()
-                },
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFDB8B86)),
-            ) {
-                Icon(
-                    painter = painterResource(id = R.drawable.ic_thumb_down),
-                    contentDescription = null,
-                )
+            Row {
+                val storeButtonColor = if (isStoreButtonEnabled) {
+                    Color(0xFFDB8B86)
+                } else {
+                    Color(0xFF5E5E5E)
+                }
+
+                Button(
+                    enabled = isStoreButtonEnabled,
+                    onClick = { sendAction(PatternPracticingAction.StoreWeaklyMemorizedPattern) },
+                    colors = ButtonDefaults.buttonColors(containerColor = storeButtonColor),
+                ) {
+                    Icon(
+                        painter = painterResource(id = R.drawable.ic_save),
+                        contentDescription = null,
+                    )
+                }
+
                 Spacer(modifier = Modifier.width(8.dp))
-                Text(text = "weak")
+
+                Button(
+                    onClick = {
+                        sendAction(PatternPracticingAction.AddPatternAsWeaklyMemorized)
+                        onWeakButtonClick()
+                    },
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFDB8B86)),
+                ) {
+                    Icon(
+                        painter = painterResource(id = R.drawable.ic_thumb_down),
+                        contentDescription = null,
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(text = "weak")
+                }
             }
 
             Spacer(modifier = Modifier.width(16.dp))
@@ -992,8 +1014,8 @@ private fun PatternPracticingScreenPreview() {
             PatternPracticingScreen(
                 state = PatternPracticingState(
                     isTranslationHidden = false,
-                    patternGroupHolders = listOf(
-                        PatternGroupHolder(
+                    practicingPatternGroups = listOf(
+                        PracticingPatternGroup(
                             patterns = listOf(
                                 Pattern(
                                     native = "native",
@@ -1002,7 +1024,7 @@ private fun PatternPracticingScreenPreview() {
                             ),
                             isChosen = true
                         ),
-                        PatternGroupHolder(
+                        PracticingPatternGroup(
                             patterns = listOf(
                                 Pattern(
                                     native = "native",
@@ -1011,7 +1033,7 @@ private fun PatternPracticingScreenPreview() {
                             ),
                             isChosen = false
                         ),
-                        PatternGroupHolder(
+                        PracticingPatternGroup(
                             patterns = listOf(
                                 Pattern(
                                     native = "native",
@@ -1020,7 +1042,7 @@ private fun PatternPracticingScreenPreview() {
                             ),
                             isChosen = false
                         ),
-                        PatternGroupHolder(
+                        PracticingPatternGroup(
                             patterns = listOf(
                                 Pattern(
                                     native = "native",
@@ -1029,33 +1051,8 @@ private fun PatternPracticingScreenPreview() {
                             ),
                             isChosen = true
                         ),
-
-//                        PatternGroupHolder(
-//                            listOf(Pattern(native = "native", translation = "translation"))
-//                        ),
-//                        PatternGroupHolder(
-//                            listOf(Pattern(native = "native", translation = "translation"))
-//                        ),
-//                        PatternGroupHolder(
-//                            listOf(Pattern(native = "native", translation = "translation"))
-//                        ),
-//                        PatternGroupHolder(
-//                            listOf(Pattern(native = "native", translation = "translation"))
-//                        ),
-//                        PatternGroupHolder(
-//                            listOf(Pattern(native = "native", translation = "translation"))
-//                        ),
-//                        PatternGroupHolder(
-//                            listOf(Pattern(native = "native", translation = "translation"))
-//                        ),
-//                        PatternGroupHolder(
-//                            listOf(Pattern(native = "native", translation = "translation"))
-//                        ),
-//                        PatternGroupHolder(
-//                            listOf(Pattern(native = "native", translation = "translation"))
-//                        ),
                     ),
-                    currentPattern = PatternGroupUnitState(
+                    currentPractisingPatternGroupUnit = PracticingPatternUnit(
                         pattern = Pattern(
                             native = "some native text",
                             translation = "some translation text"
