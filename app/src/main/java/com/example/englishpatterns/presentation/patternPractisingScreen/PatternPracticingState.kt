@@ -10,6 +10,7 @@ data class PatternPracticingState(
     val isTranslationHidden: Boolean = false,
     val isPracticingPatternGroupShuffled: Boolean = false,
     val isStoringWeekPatternEnabled: Boolean = false,
+    val isAddingWeekPatternEnabled: Boolean = false,
     val selectedTextInfo: LoadingState<SelectedTextInfo> = LoadingState.Non,
     val pronunciationLoadingState:  LoadingState<Unit> = LoadingState.Non,
 )

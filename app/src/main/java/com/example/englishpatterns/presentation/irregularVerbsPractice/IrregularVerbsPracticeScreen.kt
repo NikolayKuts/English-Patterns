@@ -3,6 +3,7 @@ package com.example.englishpatterns.presentation.irregularVerbsPractice
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -155,9 +156,18 @@ private fun VerbsGroups(
                         onClick = {
                             sendAction(IrregularVerbsPracticeAction.ChangeVerbGroup(it.type))
                         },
+                        onAllSubgroupsItemClick = {
+                            sendAction(
+                                IrregularVerbsPracticeAction.ManageAllSubGroupsSelection(
+                                    type = IrregularVerbGroupType.FullyChanging
+                                )
+                            )
+                        },
                         onItemClick = { subGroupViewHolder ->
                             sendAction(
-                                IrregularVerbsPracticeAction.SetSubGroup(subGroupViewHolder)
+                                IrregularVerbsPracticeAction.ChangeSubGroupSelection(
+                                    subGroupViewHolder
+                                )
                             )
                         }
                     )
@@ -169,9 +179,18 @@ private fun VerbsGroups(
                         onClick = {
                             sendAction(IrregularVerbsPracticeAction.ChangeVerbGroup(it.type))
                         },
+                        onAllSubgroupsItemClick = {
+                            sendAction(
+                                IrregularVerbsPracticeAction.ManageAllSubGroupsSelection(
+                                    type = IrregularVerbGroupType.PartiallyConsistent
+                                )
+                            )
+                        },
                         onItemClick = { subGroupViewHolder ->
                             sendAction(
-                                IrregularVerbsPracticeAction.SetSubGroup(subGroupViewHolder)
+                                IrregularVerbsPracticeAction.ChangeSubGroupSelection(
+                                    subGroupViewHolder
+                                )
                             )
                         }
 
@@ -373,6 +392,7 @@ private fun VerbGroupButton(
 private fun <Holder, Sub> VerbGroupDropdownMenuButton(
     holder: Holder,
     onClick: () -> Unit,
+    onAllSubgroupsItemClick: () -> Unit,
     onItemClick: (Sub) -> Unit,
 ) where Holder : IrregularVerbsGroupViewHolder,
         Holder : IrregularVerbsGroupViewHolder.SubGroupViewHolderProvider<Sub>,
@@ -391,6 +411,12 @@ private fun <Holder, Sub> VerbGroupDropdownMenuButton(
             expanded = expanded,
             onDismissRequest = { expanded = false }
         ) {
+            DropdownMenuItem(
+                modifier = Modifier.border(width = 3.dp, color = Color(0xff989898)),
+                text = { Text(text = "All") },
+                onClick = { onAllSubgroupsItemClick() }
+            )
+
             holder.subGroups.forEach { subGroupViewHolder ->
                 val backgroundColor = if (subGroupViewHolder.isSelected) {
                     Color(0x768BC34A)

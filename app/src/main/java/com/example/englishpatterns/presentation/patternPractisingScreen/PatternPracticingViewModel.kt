@@ -68,10 +68,14 @@ class PatternPracticingViewModel(
                 val weekPracticingPatternGroup = groups.firstOrNull { group ->
                     group.isWeaklyMemorized
                 } ?: PracticingPatternGroup()
+                val isAddingWeekPatternEnabled = isAddingWeekPatternEnabled(
+                    currentPattern = currentPatterGroupUnitState.value?.pattern
+                )
 
                 it.copy(
                     practicingPatternGroups = groups,
-                    weekPracticingPatterGroup = weekPracticingPatternGroup
+                    weekPracticingPatterGroup = weekPracticingPatternGroup,
+                    isAddingWeekPatternEnabled = isAddingWeekPatternEnabled
                 )
             }
         }.flowOn(Dispatchers.IO)
@@ -86,10 +90,14 @@ class PatternPracticingViewModel(
                 } else {
                     false
                 }
+                val isAddingWeekPatternEnabled = isAddingWeekPatternEnabled(
+                    currentPattern = currentPatternGroupUnit?.pattern
+                )
 
                 it.copy(
                     currentPractisingPatternGroupUnit = currentPatternGroupUnit,
-                    isStoringWeekPatternEnabled = isStoringWeekPatternEnabled
+                    isStoringWeekPatternEnabled = isStoringWeekPatternEnabled,
+                    isAddingWeekPatternEnabled = isAddingWeekPatternEnabled
                 )
             }
         }.flowOn(Dispatchers.IO)
@@ -245,6 +253,13 @@ class PatternPracticingViewModel(
         return PracticingPatternGroup(
             patterns = this.filter { it.isChosen }.map { it.patterns }.flatten()
         )
+    }
+
+    private fun isAddingWeekPatternEnabled(currentPattern: Pattern?): Boolean {
+        return practicingPatternGroupSate.value
+            .filter { it.isWeaklyMemorized }
+            .none { group -> group.patterns.contains(currentPattern) }
+                && currentPracticingPatternGroupSate.value?.patterns?.isNotEmpty() == true
     }
 
     private fun List<PracticingPatternGroup>.mapToSingleChosenShuffledGroup(): PracticingPatternGroup {

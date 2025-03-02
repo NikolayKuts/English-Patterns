@@ -246,6 +246,7 @@ fun PatternPracticingScreen(
 
         BottomContent(
             isStoreButtonEnabled = state.isStoringWeekPatternEnabled,
+            isAddingWeekPatternEnabled = state.isAddingWeekPatternEnabled,
             sendAction = sendAction,
             onWeakButtonClick = {
                 animatableGroupPointerColor()
@@ -532,6 +533,7 @@ fun SelectableText(
 @Composable
 private fun BoxScope.BottomContent(
     isStoreButtonEnabled: Boolean,
+    isAddingWeekPatternEnabled: Boolean,
     sendAction: (PatternPracticingAction) -> Unit,
     onWeakButtonClick: () -> Unit,
 ) {
@@ -545,17 +547,17 @@ private fun BoxScope.BottomContent(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Row {
-                val storeButtonColor = if (isStoreButtonEnabled) {
-                    Color(0xFFDB8B86)
-                } else {
-                    Color(0xFF5E5E5E)
-                }
+            val buttonColor: (Boolean) -> Color = {
+                if (it) Color(0xFFDB8B86) else Color(0xFF5E5E5E)
+            }
 
+            Row {
                 Button(
                     enabled = isStoreButtonEnabled,
                     onClick = { sendAction(PatternPracticingAction.StoreWeaklyMemorizedPattern) },
-                    colors = ButtonDefaults.buttonColors(containerColor = storeButtonColor),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = buttonColor(isStoreButtonEnabled)
+                    ),
                 ) {
                     Icon(
                         painter = painterResource(id = R.drawable.ic_save),
@@ -566,11 +568,14 @@ private fun BoxScope.BottomContent(
                 Spacer(modifier = Modifier.width(8.dp))
 
                 Button(
+                    enabled = isAddingWeekPatternEnabled,
                     onClick = {
                         sendAction(PatternPracticingAction.AddPatternAsWeaklyMemorized)
                         onWeakButtonClick()
                     },
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFDB8B86)),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = buttonColor(isAddingWeekPatternEnabled)
+                    ),
                 ) {
                     Icon(
                         painter = painterResource(id = R.drawable.ic_thumb_down),

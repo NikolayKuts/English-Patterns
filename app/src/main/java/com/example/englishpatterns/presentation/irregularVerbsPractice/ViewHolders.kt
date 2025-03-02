@@ -4,12 +4,12 @@ import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType
 
 sealed interface IrregularVerbsGroupViewHolder {
 
-    interface SubGroupViewHolderProvider<T: SubGroupViewHolder> {
+    sealed interface SubGroupViewHolderProvider<T: SubGroupViewHolder> {
 
         val subGroups: List<T>
     }
 
-    interface SubGroupViewHolder {
+    sealed interface SubGroupViewHolder {
 
         val subGroupName: String
         val isSelected: Boolean

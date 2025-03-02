@@ -80,8 +80,12 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
                 handleSetHidingModeAction(action)
             }
 
-            is IrregularVerbsPracticeAction.SetSubGroup -> {
-                handleSetSubGroupAction(action)
+            is IrregularVerbsPracticeAction.ChangeSubGroupSelection -> {
+                handleChangeSubGroupSelectionAction(action)
+            }
+
+            is IrregularVerbsPracticeAction.ManageAllSubGroupsSelection -> {
+                managerAllSubGroupsSelectionAction(action = action)
             }
 
             is IrregularVerbsPracticeAction.ReturnVerbVisibilityMode -> {
@@ -238,7 +242,9 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
         state.update { it.copy(hidingMode = updatedHidingMode) }
     }
 
-    private fun handleSetSubGroupAction(action: IrregularVerbsPracticeAction.SetSubGroup) {
+    private fun handleChangeSubGroupSelectionAction(
+        action: IrregularVerbsPracticeAction.ChangeSubGroupSelection,
+    ) {
         manageSubGroupSelection(action = action)
         updateVerbsDetailsBySelectionState()
     }
@@ -255,6 +261,13 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
 
             it.copy(hidingMode = updatedMode)
         }
+    }
+
+    private fun managerAllSubGroupsSelectionAction(
+        action: IrregularVerbsPracticeAction.ManageAllSubGroupsSelection,
+    ) {
+        manageAllSubGroupsSelection(type = action.type)
+        updateVerbsDetailsBySelectionState()
     }
 
     private fun changeVerbGroupHolderSelectionState(triggeredType: IrregularVerbGroupType) {
@@ -336,7 +349,9 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
             .contains(this.type)
     }
 
-    private fun manageSubGroupSelection(action: IrregularVerbsPracticeAction.SetSubGroup) {
+    private fun manageSubGroupSelection(
+        action: IrregularVerbsPracticeAction.ChangeSubGroupSelection,
+    ) {
         verbsGroupViewHolders.update { groupViewHolders ->
             groupViewHolders.map { groupViewHolder ->
                 when (groupViewHolder) {
@@ -367,6 +382,52 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
                     }
 
                     else -> groupViewHolder
+                }
+            }
+        }
+    }
+
+    private fun manageAllSubGroupsSelection(
+        type: IrregularVerbGroupType
+    ) {
+        verbsGroupViewHolders.update { groupViewHolders ->
+            groupViewHolders.map { groupViewHolder ->
+                when {
+                    groupViewHolder is IrregularVerbsGroupViewHolder.FullyChanging
+                            && groupViewHolder.type == type -> {
+                        val updatedSubHolders =
+                            groupViewHolder.manageSubGroupSelection<FullyChangingSubGroupViewHolder>()
+
+                        groupViewHolder.copy(subGroups = updatedSubHolders)
+                    }
+
+                    groupViewHolder is IrregularVerbsGroupViewHolder.PartiallyConsistent
+                            && groupViewHolder.type == type -> {
+                        val updatedSubHolders =
+                            groupViewHolder.manageSubGroupSelection<PartiallyConsistentSubGroupViewHolder>()
+                        groupViewHolder.copy(subGroups = updatedSubHolders)
+                    }
+
+                    else -> groupViewHolder
+                }
+            }
+        }
+    }
+
+    private inline fun <reified R: IrregularVerbsGroupViewHolder.SubGroupViewHolder>
+            IrregularVerbsGroupViewHolder.SubGroupViewHolderProvider<*>.manageSubGroupSelection(): List<R> {
+        val isAllSubgroupsSelected = subGroups.all { it.isSelected }
+
+        return when (this) {
+            is IrregularVerbsGroupViewHolder.FullyChanging -> {
+                subGroups.map { subGroupViewHolder ->
+                    subGroupViewHolder.copy(isSelected = isAllSubgroupsSelected.not()) as R
+                }
+            }
+
+            is IrregularVerbsGroupViewHolder.PartiallyConsistent -> {
+                subGroups.map { subGroupViewHolder ->
+                    subGroupViewHolder.copy(isSelected = isAllSubgroupsSelected.not()) as R
                 }
             }
         }
