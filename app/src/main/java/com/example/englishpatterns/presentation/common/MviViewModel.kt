@@ -4,6 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -25,5 +28,13 @@ abstract class MviViewModel<State, Action, Event> : ViewModel() {
         viewModelScope.launch(context = context, start = start) {
             emit(block())
         }
+    }
+
+    protected fun <T> Flow<T>.launchCollect(
+        context: CoroutineContext = Dispatchers.IO,
+        start: CoroutineStart = CoroutineStart.DEFAULT,
+        collector: FlowCollector<T>,
+    ): Job = viewModelScope.launch(context = context, start = start) {
+        this@launchCollect.collect(collector)
     }
 }

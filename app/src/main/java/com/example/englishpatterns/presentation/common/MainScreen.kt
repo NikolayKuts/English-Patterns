@@ -76,9 +76,16 @@ fun MainScreen(
         }
 
         Column {
+            val buttonColor = if (state.isStartButtonEnabled) {
+                Color(0xFF8FAE6B) }
+            else {
+                Color(0xFF5E5E5E)
+            }
+
             Button(
                 modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8FAE6B)),
+                enabled = state.isStartButtonEnabled,
+                colors = ButtonDefaults.buttonColors(containerColor = buttonColor),
                 onClick = { sendAction(MainAction.NavigateToPatternPracticing) }
             ) {
                 Text(text = "start")

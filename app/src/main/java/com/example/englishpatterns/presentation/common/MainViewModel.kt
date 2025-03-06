@@ -32,6 +32,7 @@ class MainViewModel(
 
     init {
         observePatternGroupResContainersSource()
+        observeChosenPatterGroupResContainers()
     }
 
     override fun sendAction(action: MainAction) {
@@ -57,10 +58,12 @@ class MainViewModel(
                 viewModelScope.launch(Dispatchers.IO) {
                     patternStore.updateData {
                         val list = it.content
-                        val resContainer = list.getOrNull(action.patternIndex) ?: return@updateData it
-                        val updatedPatternGroupResContainer = resContainer.patternGroupResource.toNew(
-                            markColor = action.markColor
-                        )
+                        val resContainer = list.getOrNull(action.patternIndex)
+                            ?: return@updateData it
+                        val updatedPatternGroupResContainer =
+                            resContainer.patternGroupResource.toNew(
+                                markColor = action.markColor
+                            )
                         val updatedContent = list.toMutableList().apply {
                             this[action.patternIndex] =
                                 resContainer.copy(
@@ -81,10 +84,14 @@ class MainViewModel(
     }
 
     private fun observePatternGroupResContainersSource() {
-        viewModelScope.launch(Dispatchers.IO) {
-            patternGroupResContainersStata.collect { resContainers ->
-                state.update { it.copy(patternGroupResContainers = resContainers) }
-            }
+        patternGroupResContainersStata.launchCollect { resContainers ->
+            state.update { it.copy(patternGroupResContainers = resContainers) }
+        }
+    }
+
+    private fun observeChosenPatterGroupResContainers() {
+        chosenPatternGroupResContainers.launchCollect {
+            state.update { state -> state.copy(isStartButtonEnabled = it.isNotEmpty()) }
         }
     }
 
