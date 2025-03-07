@@ -1,5 +1,6 @@
 package com.example.englishpatterns.presentation.common
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.CoroutineStart
@@ -13,9 +14,11 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
-abstract class MviViewModel<State, Action, Event> : ViewModel() {
+abstract class MviViewModel<State, Action, Event>(
+    protected val savedStateHandle: SavedStateHandle
+) : ViewModel() {
 
-    abstract val state: StateFlow<State>
+    abstract val uiState: StateFlow<State>
     abstract val eventState: SharedFlow<Event>
 
     abstract fun sendAction(action: Action)

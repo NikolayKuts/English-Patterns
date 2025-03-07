@@ -3,9 +3,13 @@ package com.example.englishpatterns.presentation.patternPractisingScreen
 import android.content.Intent
 import android.net.Uri
 import androidx.datastore.core.DataStore
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.createSavedStateHandle
 import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.viewmodel.CreationExtras
+import com.example.englishpatterns.data.IdentifiablePattern
 import com.example.englishpatterns.data.Pattern
 import com.example.englishpatterns.data.ResourcesContentManager
 import com.example.englishpatterns.data.SecretConstants
@@ -14,9 +18,9 @@ import com.example.englishpatterns.data.common.ClipboardUnit
 import com.example.englishpatterns.data.common.Constants
 import com.example.englishpatterns.data.common.LoadingState
 import com.example.englishpatterns.data.yandexApi.YandexWordInfoProvider
-import com.example.englishpatterns.domain.PracticingPatternUnit
-import com.example.englishpatterns.domain.PracticingPatternManager
 import com.example.englishpatterns.domain.PatternGroupResource
+import com.example.englishpatterns.domain.PracticingPatternManager
+import com.example.englishpatterns.domain.PracticingPatternUnit
 import com.lib.lokdroid.core.logD
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -36,89 +40,44 @@ class PatternPracticingViewModel(
     private val weekPatternStorage: DataStore<PracticingPatternGroup>,
     override val textAudioPlayer: TextAudioPlayer,
     patternGroupResources: List<PatternGroupResource>,
-) : PatternPracticingMviViewModel() {
+    savedStateHandle: SavedStateHandle,
+) : PatternPracticingMviViewModel(savedStateHandle = savedStateHandle) {
 
     companion object {
 
         private const val PATTERN_GROUP_CHUNK_SIZE = 6
     }
 
-    override val state = MutableStateFlow(value = PatternPracticingState())
+    override val uiState = MutableStateFlow(value = PatternPracticingState())
 
     override val eventState = MutableSharedFlow<PatternPracticingEvent>()
 
-    private val practicingPatternGroupSate: MutableStateFlow<List<PracticingPatternGroup>> =
-        MutableStateFlow(value = patternGroupResources.toChunkedPracticingPatternGroups())
+    private val stateStore = PatternPracticingStateStore(savedStateHandle = savedStateHandle)
+
+    private val practicingPatternGroupsSate: MutableStateFlow<List<IdentifiablePracticingPatternGroup>> =
+        getPatternGroupsAsMutStateFlow(patternGroupResources = patternGroupResources)
 
     private val currentPatterGroupUnitState = MutableStateFlow<PracticingPatternUnit?>(value = null)
 
-    private val currentPracticingPatternGroupSate = MutableStateFlow<PracticingPatternGroup?>(
-        value = practicingPatternGroupSate.value.mapToSingleChosenPracticingPatternGroup()
-    )
+    private val currentChosenPracticingPatternGroupState: MutableStateFlow<IdentifiablePracticingPatternGroup?> =
+        getCurrentChosenPractisingPatternGroupSate()
 
     private var practicingPatternManager = PracticingPatternManager(
-        practicingPatternGroup = currentPracticingPatternGroupSate.value
+        practicingPatternGroup = currentChosenPracticingPatternGroupState.value
     )
 
     private var fetchTextInfoJob: Job? = null
 
     init {
-        practicingPatternGroupSate.onEach { groups ->
-            state.update {
-                val weekPracticingPatternGroup = groups.firstOrNull { group ->
-                    group.isWeaklyMemorized
-                } ?: PracticingPatternGroup()
-                val isAddingWeekPatternEnabled = isAddingWeekPatternEnabled(
-                    currentPattern = currentPatterGroupUnitState.value?.pattern
-                )
-
-                it.copy(
-                    practicingPatternGroups = groups,
-                    weekPracticingPatterGroup = weekPracticingPatternGroup,
-                    isAddingWeekPatternEnabled = isAddingWeekPatternEnabled
-                )
-            }
-        }.flowOn(Dispatchers.IO)
-            .launchIn(viewModelScope)
-
-        currentPatterGroupUnitState.onEach { currentPatternGroupUnit ->
-            state.update {
-                val weekPatterns = weekPatternStorage.data.firstOrNull()?.patterns ?: return@onEach
-                val currentPattern = currentPatternGroupUnit?.pattern
-                val isStoringWeekPatternEnabled = if (currentPattern != null) {
-                    currentPattern !in weekPatterns
-                } else {
-                    false
-                }
-                val isAddingWeekPatternEnabled = isAddingWeekPatternEnabled(
-                    currentPattern = currentPatternGroupUnit?.pattern
-                )
-
-                it.copy(
-                    currentPractisingPatternGroupUnit = currentPatternGroupUnit,
-                    isStoringWeekPatternEnabled = isStoringWeekPatternEnabled,
-                    isAddingWeekPatternEnabled = isAddingWeekPatternEnabled
-                )
-            }
-        }.flowOn(Dispatchers.IO)
-            .launchIn(viewModelScope)
-
-        textAudioPlayer.loadingState.onEach { pronunciationLoadingState ->
-            state.update { it.copy(pronunciationLoadingState = pronunciationLoadingState) }
-        }.flowOn(Dispatchers.IO)
-            .launchIn(viewModelScope)
-
-        weekPatternStorage.data.onEach { practicingPatternGroup ->
-            val currentPattern = currentPatterGroupUnitState.value?.pattern
-            val isStoringWeekPatternEnabled = if (currentPattern != null) {
-                currentPattern !in practicingPatternGroup.patterns
-            } else {
-                false
-            }
-
-            state.update { it.copy(isStoringWeekPatternEnabled = isStoringWeekPatternEnabled) }
-        }.flowOn(Dispatchers.IO)
-            .launchIn(viewModelScope)
+        updateCurrentPatterGroupUnitStateBySavedState()
+        updateShufflingStateBySavedState()
+        observePractisingPatternInitPositionChange()
+        observePracticingPatternGroupsSate()
+        observeCurrentPatterGroupUnitState()
+        observeTextAudioPlayerLoadingState()
+        observeWeekPatternStorageChange()
+        observeCurrentChosenPracticingPatternGroupState()
+        observeUIStateChange()
     }
 
     override fun sendAction(action: PatternPracticingAction) {
@@ -126,7 +85,7 @@ class PatternPracticingViewModel(
 
         when (action) {
             is PatternPracticingAction.ChangePracticingPatternGroupChoosingState -> {
-                practicingPatternGroupSate.update {
+                practicingPatternGroupsSate.update {
                     it.toMutableList().apply {
                         val group = this[action.position]
                         this[action.position] = group.copy(isChosen = !group.isChosen)
@@ -142,19 +101,18 @@ class PatternPracticingViewModel(
             }
 
             PatternPracticingAction.ShufflePatternPairs -> {
-                currentPracticingPatternGroupSate.value =
-                    practicingPatternGroupSate.value.mapToSingleChosenShuffledGroup()
+                currentChosenPracticingPatternGroupState.value =
+                    practicingPatternGroupsSate.value.mapToSingleChosenShuffledGroup()
 
                 setShufflingState(value = true)
 
-                practicingPatternManager = PracticingPatternManager(
-                    practicingPatternGroup = currentPracticingPatternGroupSate.value
+                currentPatterGroupUnitState.value = practicingPatternManager.updatedUnit(
+                    currentChosenPracticingPatternGroupState.value
                 )
-                currentPatterGroupUnitState.value = practicingPatternManager.nextUnit()
             }
 
             PatternPracticingAction.ChangeAllPracticingPatternGroupsSelectionState -> {
-                practicingPatternGroupSate.update { practicingPatternGroups ->
+                practicingPatternGroupsSate.update { practicingPatternGroups ->
                     val revertedFirstElementSelectionState =
                         practicingPatternGroups.all { it.isChosen }
                             .not()
@@ -232,7 +190,132 @@ class PatternPracticingViewModel(
         }
     }
 
-    private fun List<PatternGroupResource>.toChunkedPracticingPatternGroups(): List<PracticingPatternGroup> {
+    private fun getPatternGroupsAsMutStateFlow(
+        patternGroupResources: List<PatternGroupResource>
+    ): MutableStateFlow<List<IdentifiablePracticingPatternGroup>> {
+        val groups = stateStore.getIdentifiedPracticingPatternGroups(
+            groups = patternGroupResources.toChunkedPracticingPatternGroups()
+        )
+
+        return MutableStateFlow(value = groups)
+    }
+
+    private fun getCurrentChosenPractisingPatternGroupSate(): MutableStateFlow<IdentifiablePracticingPatternGroup?> {
+        val singleGroup =
+            practicingPatternGroupsSate.value.mapToSingleChosenPatternGroup()
+        val savedCurrentSinglePatternGroup = stateStore.getCurrentSinglePatternGroup(
+            singleGroup = singleGroup
+        )
+
+        return MutableStateFlow(value = savedCurrentSinglePatternGroup)
+    }
+
+    private fun updateCurrentPatterGroupUnitStateBySavedState() {
+        stateStore.getSavedPatternUnitPosition()?.let {
+            currentPatterGroupUnitState.value = practicingPatternManager.toUnit(position = it)
+        }
+    }
+
+    private fun updateShufflingStateBySavedState() {
+        stateStore.getSavedShufflingState()?.let { isShuffled ->
+            uiState.update { it.copy(isPracticingPatternGroupShuffled = isShuffled) }
+        }
+    }
+
+    private fun observePractisingPatternInitPositionChange() {
+        practicingPatternManager.unitPositionState.launchCollect {
+            stateStore.saveCurrentPatternUnitPosition(position = it)
+        }
+    }
+
+    private fun observePracticingPatternGroupsSate() {
+        practicingPatternGroupsSate.onEach { groups ->
+            uiState.update {
+                val weekPatternGroup = groups.firstOrNull { group -> group.isWeaklyMemorized }
+                    ?.noId() ?: PracticingPatternGroup()
+
+                val isAddingWeekPatternEnabled = isAddingWeekPatternEnabled(
+                    currentPattern = currentPatterGroupUnitState.value?.pattern
+                )
+
+                it.copy(
+                    practicingPatternGroups = groups.map { group -> group.noId() },
+                    weekPracticingPatterGroup = weekPatternGroup,
+                    isAddingWeekPatternEnabled = isAddingWeekPatternEnabled
+                )
+            }
+
+            val chosenGroupsIds = groups.filter { it.isChosen }
+                .map { it.id }
+
+            stateStore.saveChosenPatternGroupsIds(ids = chosenGroupsIds)
+
+            groups.firstOrNull { it.isWeaklyMemorized }?.let { weekGroup ->
+                stateStore.saveWeekPatterns(weekGroup.identifiablePatterns)
+            }
+        }.flowOn(Dispatchers.IO)
+            .launchIn(viewModelScope)
+    }
+
+    private fun observeCurrentPatterGroupUnitState() {
+        currentPatterGroupUnitState.onEach { currentPatternGroupUnit ->
+            uiState.update {
+                val weekPatterns = weekPatternStorage.data.firstOrNull()?.patterns ?: return@onEach
+                val currentPattern = currentPatternGroupUnit?.pattern
+                val isStoringWeekPatternEnabled = if (currentPattern != null) {
+                    currentPattern.noId() !in weekPatterns
+                } else {
+                    false
+                }
+                val isAddingWeekPatternEnabled = isAddingWeekPatternEnabled(
+                    currentPattern = currentPatternGroupUnit?.pattern
+                )
+
+                it.copy(
+                    currentPractisingPatternGroupUnit = currentPatternGroupUnit,
+                    isStoringWeekPatternEnabled = isStoringWeekPatternEnabled,
+                    isAddingWeekPatternEnabled = isAddingWeekPatternEnabled
+                )
+            }
+        }.flowOn(Dispatchers.IO)
+            .launchIn(viewModelScope)
+    }
+
+    private fun observeTextAudioPlayerLoadingState() {
+        textAudioPlayer.loadingState.onEach { pronunciationLoadingState ->
+            uiState.update { it.copy(pronunciationLoadingState = pronunciationLoadingState) }
+        }.flowOn(Dispatchers.IO)
+            .launchIn(viewModelScope)
+    }
+
+    private fun observeWeekPatternStorageChange() {
+        weekPatternStorage.data.onEach { practicingPatternGroup ->
+            val currentPattern = currentPatterGroupUnitState.value?.pattern
+            val isStoringWeekPatternEnabled = if (currentPattern != null) {
+                currentPattern.noId() !in practicingPatternGroup.patterns
+            } else {
+                false
+            }
+
+            uiState.update { it.copy(isStoringWeekPatternEnabled = isStoringWeekPatternEnabled) }
+        }.flowOn(Dispatchers.IO)
+            .launchIn(viewModelScope)
+    }
+
+    private fun observeCurrentChosenPracticingPatternGroupState() {
+        currentChosenPracticingPatternGroupState.onEach { group ->
+            stateStore.saveCurrentSingleGroupPatternsIds(group)
+        }.flowOn(Dispatchers.IO)
+            .launchIn(viewModelScope)
+    }
+
+    private fun observeUIStateChange() {
+        uiState.launchCollect { state ->
+            stateStore.saveShufflingState(state.isPracticingPatternGroupShuffled)
+        }
+    }
+
+    private fun List<PatternGroupResource>.toChunkedPracticingPatternGroups(): List<IdentifiablePracticingPatternGroup> {
         val patternsList = this.flatMap { rawPatternGroup ->
             rawPatternGroup.contentResIds.flatMap { arrayResId ->
                 runBlocking { resourcesContentManager.getStringArray(arrayResId).toList() }
@@ -244,41 +327,60 @@ class PatternPracticingViewModel(
             }
         }
 
-        return patternsList.chunked(size = PATTERN_GROUP_CHUNK_SIZE).map { patterns ->
-            PracticingPatternGroup(patterns = patterns, isChosen = false)
+        return patternsList.chunkToGroups()
+    }
+
+    private fun List<Pattern>.chunkToGroups(): List<IdentifiablePracticingPatternGroup> {
+        var globalPatternIndex = 0
+
+        return chunked(PATTERN_GROUP_CHUNK_SIZE).mapIndexed { groupIndex, patterns ->
+            val indexedPatterns = patterns.map { pattern ->
+                val identifiablePattern =
+                    IdentifiablePattern(id = globalPatternIndex, value = pattern)
+                globalPatternIndex++
+                identifiablePattern
+            }
+
+            IdentifiablePracticingPatternGroup(
+                id = groupIndex,
+                identifiablePatterns = indexedPatterns,
+                isChosen = false
+            )
         }
     }
 
-    private fun List<PracticingPatternGroup>.mapToSingleChosenPracticingPatternGroup(): PracticingPatternGroup {
-        return PracticingPatternGroup(
-            patterns = this.filter { it.isChosen }.map { it.patterns }.flatten()
+    private fun List<IdentifiablePracticingPatternGroup>.mapToSingleChosenPatternGroup(): IdentifiablePracticingPatternGroup {
+        return IdentifiablePracticingPatternGroup(
+            id = -1,
+            identifiablePatterns = this.filter { it.isChosen }.map { it.identifiablePatterns }
+                .flatten()
         )
     }
 
-    private fun isAddingWeekPatternEnabled(currentPattern: Pattern?): Boolean {
-        return practicingPatternGroupSate.value
+    private fun isAddingWeekPatternEnabled(currentPattern: IdentifiablePattern?): Boolean {
+        return practicingPatternGroupsSate.value
             .filter { it.isWeaklyMemorized }
-            .none { group -> group.patterns.contains(currentPattern) }
-                && currentPracticingPatternGroupSate.value?.patterns?.isNotEmpty() == true
+            .none { group -> group.identifiablePatterns.contains(currentPattern) }
+                && currentChosenPracticingPatternGroupState.value?.identifiablePatterns?.isNotEmpty() == true
     }
 
-    private fun List<PracticingPatternGroup>.mapToSingleChosenShuffledGroup(): PracticingPatternGroup {
+    private fun List<IdentifiablePracticingPatternGroup>.mapToSingleChosenShuffledGroup(): IdentifiablePracticingPatternGroup {
         val shuffledPatterns = this.filter { it.isChosen }
-            .map { it.patterns.shuffled() }
+            .map { it.identifiablePatterns.shuffled() }
             .shuffled()
             .flatten()
             .shuffled()
 
-        return PracticingPatternGroup(patterns = shuffledPatterns)
+        return IdentifiablePracticingPatternGroup(id = -1, identifiablePatterns = shuffledPatterns)
     }
 
     private fun manageSelectingNextPatternGroup() {
-        val chosenPracticingPatternGroups = practicingPatternGroupSate.value
+        val chosenPracticingPatternGroups = practicingPatternGroupsSate.value
         val currentIndex = chosenPracticingPatternGroups.indexOfLast { it.isChosen }
 
         if (chosenPracticingPatternGroups.isEmpty()) return
 
-        practicingPatternGroupSate.update {
+        practicingPatternGroupsSate.update {
             it.mapIndexed { index, practicingPatternGroup ->
                 practicingPatternGroup.copy(isChosen = index == (currentIndex.inc()) % it.size)
             }
@@ -288,20 +390,20 @@ class PatternPracticingViewModel(
     }
 
     private fun manageSelectingPreviousPatternGroup() {
-        val chosenPracticingPatternGroups = practicingPatternGroupSate.value
+        val chosenPracticingPatternGroups = practicingPatternGroupsSate.value
         val currentIndex = chosenPracticingPatternGroups.indexOfFirst { it.isChosen }
 
         if (chosenPracticingPatternGroups.isEmpty()) return
 
-        practicingPatternGroupSate.update {
-            it.mapIndexed { index, PracticingPatternGroup ->
+        practicingPatternGroupsSate.update {
+            it.mapIndexed { index, patternGroup ->
                 val targetIndex = if (currentIndex == -1) {
                     it.size.dec()
                 } else {
                     (currentIndex.dec() + it.size) % it.size
                 }
 
-                PracticingPatternGroup.copy(isChosen = index == targetIndex)
+                patternGroup.copy(isChosen = index == targetIndex)
             }
         }
 
@@ -311,7 +413,7 @@ class PatternPracticingViewModel(
     private fun manageAddingPatternAsWeaklyMemorized() {
         val currentPattern = currentPatterGroupUnitState.value?.pattern ?: return
 
-        practicingPatternGroupSate.update {
+        practicingPatternGroupsSate.update {
             val practicingPatternGroupsToUpdate = it.toMutableList()
             val weaklyMemorizedPracticingPatternGroupIndex =
                 practicingPatternGroupsToUpdate.indexOfFirst { group -> group.isWeaklyMemorized }
@@ -320,23 +422,23 @@ class PatternPracticingViewModel(
                 val weaklyMemorizedPracticingPatternGroup =
                     practicingPatternGroupsToUpdate[weaklyMemorizedPracticingPatternGroupIndex]
 
-                if (currentPattern in weaklyMemorizedPracticingPatternGroup.patterns) return@update it
+                if (currentPattern in weaklyMemorizedPracticingPatternGroup.identifiablePatterns) return@update it
 
                 val updatedPatterns =
-                    weaklyMemorizedPracticingPatternGroup.patterns + currentPattern
+                    weaklyMemorizedPracticingPatternGroup.identifiablePatterns + currentPattern
 
                 practicingPatternGroupsToUpdate[weaklyMemorizedPracticingPatternGroupIndex] =
-                    weaklyMemorizedPracticingPatternGroup.copy(patterns = updatedPatterns)
+                    weaklyMemorizedPracticingPatternGroup.copy(identifiablePatterns = updatedPatterns)
             } else {
-                practicingPatternGroupsToUpdate.add(
-                    PracticingPatternGroup(
-                        patterns = listOf(currentPattern),
-                        isWeaklyMemorized = true
-                    )
+                val weekGroup = IdentifiablePracticingPatternGroup(
+                    id = practicingPatternGroupsToUpdate.lastIndex.inc(),
+                    identifiablePatterns = listOf(currentPattern),
+                    isWeaklyMemorized = true
                 )
+                practicingPatternGroupsToUpdate.add(weekGroup)
             }
 
-            practicingPatternGroupSate.value.firstOrNull { practicingPatternGroup ->
+            practicingPatternGroupsSate.value.firstOrNull { practicingPatternGroup ->
                 practicingPatternGroup.isWeaklyMemorized && practicingPatternGroup.isChosen
             }?.let { updateCurrentPatternGroupUnitState(newPattern = currentPattern) }
 
@@ -350,8 +452,13 @@ class PatternPracticingViewModel(
             var shouldNotifyAboutSuccessfulStoring = false
 
             weekPatternStorage.updateData { practicingPatternGroup ->
-                if (practicingPatternGroup.patterns.none { pattern -> pattern == currentPattern }) {
-                    val updatedPatterns = practicingPatternGroup.patterns + listOf(currentPattern)
+                val isPatternNotAddedYet = practicingPatternGroup.patterns.none { pattern ->
+                    pattern == currentPattern.noId()
+                }
+
+                if (isPatternNotAddedYet) {
+                    val updatedPatterns = practicingPatternGroup.patterns + currentPattern.noId()
+
                     shouldNotifyAboutSuccessfulStoring = true
                     practicingPatternGroup.copy(patterns = updatedPatterns)
                 } else {
@@ -366,7 +473,7 @@ class PatternPracticingViewModel(
     }
 
     private fun manageTranslationVisibilityState() {
-        state.update { it.copy(isTranslationHidden = it.isTranslationHidden.not()) }
+        uiState.update { it.copy(isTranslationHidden = it.isTranslationHidden.not()) }
     }
 
     private fun handelSelectedTextInfoRequest(
@@ -388,7 +495,7 @@ class PatternPracticingViewModel(
                 } else {
                     loadingState
                 }
-                state.update { it.copy(selectedTextInfo = updatedLoadingState) }
+                uiState.update { it.copy(selectedTextInfo = updatedLoadingState) }
             }
         }
 
@@ -402,7 +509,7 @@ class PatternPracticingViewModel(
             val url =
                 "${Constants.ChatGpt.BASE_URL}${SecretConstants.GhatGpt.ENGLISH_PATTERNS_CHAT_ID}"
             val clipboardUnit = ClipboardUnit(
-                text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
+                text = currentPatterGroupUnitState.value?.pattern?.value?.translation ?: ""
             )
 
             val event = PatternPracticingEvent.WarmupCustomTabs(
@@ -451,10 +558,10 @@ class PatternPracticingViewModel(
         val url = "${Constants.ChatGpt.BASE_URL}${SecretConstants.GhatGpt.ENGLISH_PATTERNS_CHAT_ID}"
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
         val ruClipboardUnit = ClipboardUnit(
-            text = currentPatterGroupUnitState.value?.pattern?.native ?: ""
+            text = currentPatterGroupUnitState.value?.pattern?.value?.native ?: ""
         )
         val enClipboardUnit = ClipboardUnit(
-            text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
+            text = currentPatterGroupUnitState.value?.pattern?.value?.translation ?: ""
         )
         val selectedClipboardUnit = ClipboardUnit(text = action.text)
 
@@ -487,7 +594,7 @@ class PatternPracticingViewModel(
         val encodedText = Uri.encode(action.text).trim()
         val url = Constants.Google.BASE_URL_WITH_PLACEHOLDER.format(encodedText.lowercase())
         val clipboardUnit = ClipboardUnit(
-            text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
+            text = currentPatterGroupUnitState.value?.pattern?.value?.translation ?: ""
         )
 
 
@@ -505,7 +612,7 @@ class PatternPracticingViewModel(
         val encodedText = Uri.encode(action.text).trim()
         val url = Constants.Sanstv.BASE_URL_WITH_PLACEHOLDER.format(encodedText.lowercase())
         val clipboardUnit = ClipboardUnit(
-            text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
+            text = currentPatterGroupUnitState.value?.pattern?.value?.translation ?: ""
         )
 
         eventState.launchEmit {
@@ -518,7 +625,7 @@ class PatternPracticingViewModel(
 
     private fun handleTextToSpeechRequired() {
         eventState.launchEmit {
-            val text = currentPatterGroupUnitState.value?.pattern?.translation ?: ""
+            val text = currentPatterGroupUnitState.value?.pattern?.value?.translation ?: ""
             PatternPracticingEvent.TextToSpeech(text = text)
         }
     }
@@ -530,21 +637,22 @@ class PatternPracticingViewModel(
     }
 
     private fun resetCurrentPatternGroupUnitState() {
-        currentPracticingPatternGroupSate.value =
-            practicingPatternGroupSate.value.mapToSingleChosenPracticingPatternGroup()
+        currentChosenPracticingPatternGroupState.value =
+            practicingPatternGroupsSate.value.mapToSingleChosenPatternGroup()
 
         setShufflingState(value = false)
 
-        practicingPatternManager = PracticingPatternManager(
-            practicingPatternGroup = currentPracticingPatternGroupSate.value
-        )
+        practicingPatternManager.reset(currentChosenPracticingPatternGroupState.value)
 
         currentPatterGroupUnitState.value = practicingPatternManager.nextUnit()
     }
 
     private fun managePatternGroupSelectionStatesIfNoSelected() {
-        if (practicingPatternGroupSate.value.isNotEmpty() && practicingPatternGroupSate.value.all { !it.isChosen }) {
-            practicingPatternGroupSate.update {
+        val isThereAnySelectedGroup = practicingPatternGroupsSate.value.isNotEmpty()
+                && practicingPatternGroupsSate.value.none { it.isChosen }
+
+        if (isThereAnySelectedGroup) {
+            practicingPatternGroupsSate.update {
                 it.mapIndexed { index, practicingPatternGroup ->
                     practicingPatternGroup.copy(isChosen = index == 0)
                 }
@@ -552,12 +660,10 @@ class PatternPracticingViewModel(
 
             setShufflingState(value = false)
 
-            currentPracticingPatternGroupSate.value =
-                practicingPatternGroupSate.value.mapToSingleChosenPracticingPatternGroup()
+            currentChosenPracticingPatternGroupState.value =
+                practicingPatternGroupsSate.value.mapToSingleChosenPatternGroup()
 
-            practicingPatternManager = PracticingPatternManager(
-                practicingPatternGroup = currentPracticingPatternGroupSate.value
-            )
+            practicingPatternManager.reset(currentChosenPracticingPatternGroupState.value)
         }
     }
 
@@ -566,21 +672,21 @@ class PatternPracticingViewModel(
      * Only the state of the counter needs to be updated, and that only if the group containing
      * weakly memorized patterns is one of the selected groups.
      * **/
-    private fun updateCurrentPatternGroupUnitState(newPattern: Pattern) {
-        currentPracticingPatternGroupSate.update {
-            it?.copy(patterns = it.patterns + newPattern)
+    private fun updateCurrentPatternGroupUnitState(newPattern: IdentifiablePattern) {
+        currentChosenPracticingPatternGroupState.update {
+            it?.copy(identifiablePatterns = it.identifiablePatterns + newPattern)
         }
 
         currentPatterGroupUnitState.value = practicingPatternManager.updatedUnit(
-            updatedPracticingPatternGroup = currentPracticingPatternGroupSate.value
+            updatedPracticingPatternGroup = currentChosenPracticingPatternGroupState.value
         )
     }
 
     private fun setShufflingState(value: Boolean) {
-        val shouldUpdate = value.not() || state.value.practicingPatternGroups.any { it.isChosen }
+        val shouldUpdate = value.not() || uiState.value.practicingPatternGroups.any { it.isChosen }
 
         if (shouldUpdate) {
-            state.update { it.copy(isPracticingPatternGroupShuffled = value) }
+            uiState.update { it.copy(isPracticingPatternGroupShuffled = value) }
         }
     }
 
@@ -593,12 +699,16 @@ class PatternPracticingViewModel(
     ) : ViewModelProvider.Factory {
 
         @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel> create(modelClass: Class<T>): T = PatternPracticingViewModel(
+        override fun <T : ViewModel> create(
+            modelClass: Class<T>,
+            extras: CreationExtras
+        ): T = PatternPracticingViewModel(
             resourcesContentManager = resourcesContentManager,
             wordInfoProvider = yandexWordInfoProvider,
             weekPatternStorage = weekPatternStorage,
             patternGroupResources = patternGroupResources,
             textAudioPlayer = textAudioPlayer,
+            savedStateHandle = extras.createSavedStateHandle()
         ) as T
     }
 }

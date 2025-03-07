@@ -1,45 +1,61 @@
 package com.example.englishpatterns.domain
 
-import com.example.englishpatterns.presentation.patternPractisingScreen.PracticingPatternGroup
+import com.example.englishpatterns.presentation.patternPractisingScreen.IdentifiablePracticingPatternGroup
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
 class PracticingPatternManager(
-    private var practicingPatternGroup: PracticingPatternGroup? = null,
+    private var practicingPatternGroup: IdentifiablePracticingPatternGroup? = null,
 ) {
 
-    private var position: Int = -1
+    private var mutPositionState = MutableStateFlow(value = -1)
+    val unitPositionState = mutPositionState.asStateFlow()
 
     fun nextUnit(): PracticingPatternUnit? {
         val immutablePracticingPatternGroup = practicingPatternGroup ?: return null
-        val patterns = immutablePracticingPatternGroup.patterns
+        val patterns = immutablePracticingPatternGroup.identifiablePatterns
 
         if (patterns.isEmpty()) return null
 
-        position = if (position >= patterns.lastIndex) 0 else position.inc()
+        mutPositionState.value = if (mutPositionState.value >= patterns.lastIndex) {
+            0
+        } else {
+            mutPositionState.value.inc()
+        }
 
         return PracticingPatternUnit(
-            pattern = patterns[position],
-            position = position,
+            pattern = patterns[mutPositionState.value],
+            position = mutPositionState.value,
             groupSize = patterns.size
         )
     }
 
+    fun toUnit(position: Int): PracticingPatternUnit? {
+        this.mutPositionState.value = if (position < 0) position else position.dec()
+        return nextUnit()
+    }
+
     fun previousUnit(): PracticingPatternUnit? {
         val immutablePracticingPatternGroup = practicingPatternGroup ?: return null
-        val patterns = immutablePracticingPatternGroup.patterns
+        val patterns = immutablePracticingPatternGroup.identifiablePatterns
 
         if (patterns.isEmpty()) return null
 
-        position = if (position <= 0) patterns.lastIndex else position.dec()
+        mutPositionState.value = if (mutPositionState.value <= 0) {
+            patterns.lastIndex
+        } else {
+            mutPositionState.value.dec()
+        }
 
         return PracticingPatternUnit(
-            pattern = patterns[position],
-            position = position,
+            pattern = patterns[mutPositionState.value],
+            position = mutPositionState.value,
             groupSize = patterns.size
         )
     }
 
     fun updatedUnit(
-        updatedPracticingPatternGroup: PracticingPatternGroup?
+        updatedPracticingPatternGroup: IdentifiablePracticingPatternGroup?
     ): PracticingPatternUnit? {
         this.practicingPatternGroup = updatedPracticingPatternGroup
 
@@ -47,14 +63,21 @@ class PracticingPatternManager(
 
         return when {
             immutablePracticingPatternGroup == null -> null
-            immutablePracticingPatternGroup.patterns.isEmpty() -> null
+            immutablePracticingPatternGroup.identifiablePatterns.isEmpty() -> null
             else -> {
                 PracticingPatternUnit(
-                    pattern = immutablePracticingPatternGroup.patterns[position],
-                    position = position,
-                    groupSize = immutablePracticingPatternGroup.patterns.size
+                    pattern = immutablePracticingPatternGroup.identifiablePatterns[mutPositionState.value],
+                    position = mutPositionState.value,
+                    groupSize = immutablePracticingPatternGroup.identifiablePatterns.size
                 )
             }
         }
+    }
+
+    fun reset(
+        updatedPracticingPatternGroup: IdentifiablePracticingPatternGroup?
+    ) {
+        this.practicingPatternGroup = updatedPracticingPatternGroup
+        mutPositionState.value = -1
     }
 }

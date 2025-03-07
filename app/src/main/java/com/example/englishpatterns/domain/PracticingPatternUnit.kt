@@ -1,9 +1,9 @@
 package com.example.englishpatterns.domain
 
-import com.example.englishpatterns.data.Pattern
+import com.example.englishpatterns.data.IdentifiablePattern
 
 data class PracticingPatternUnit(
-    val pattern: Pattern,
+    val pattern: IdentifiablePattern,
     val position: Int,
     val groupSize: Int
 )

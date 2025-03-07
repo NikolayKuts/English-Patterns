@@ -1,5 +1,6 @@
 package com.example.englishpatterns.presentation.irregularVerbsPractice
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import com.example.englishpatterns.domain.irregularVerbs.HidingMode
 import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType
@@ -18,17 +19,19 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
 import java.util.LinkedList
 
-class IrregularVerbsPracticeViewModel : MviViewModel<
+class IrregularVerbsPracticeViewModel(
+    savedStateHandle: SavedStateHandle,
+) : MviViewModel<
         IrregularVerbsPracticeState,
         IrregularVerbsPracticeAction,
-        IrregularVerbsPracticeEvent>() {
+        IrregularVerbsPracticeEvent>(savedStateHandle = savedStateHandle) {
 
     private val verbsStorage = IrregularVerbsStorage
     private val verbsDetails = MutableStateFlow<LinkedList<VerbDetails>>(value = LinkedList())
     private val verbsGroupViewHolders: MutableStateFlow<List<IrregularVerbsGroupViewHolder>> =
         MutableStateFlow(value = createIrregularVerbsGroupViewHolderList())
 
-    override val state = MutableStateFlow(
+    override val uiState = MutableStateFlow(
         value = IrregularVerbsPracticeState(verbsGroupViewHolders = verbsGroupViewHolders.value)
     )
 
@@ -36,14 +39,14 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
 
     init {
         verbsGroupViewHolders.onEach { holders ->
-            state.update { it.copy(verbsGroupViewHolders = holders) }
+            uiState.update { it.copy(verbsGroupViewHolders = holders) }
         }.flowOn(Dispatchers.IO)
             .launchIn(viewModelScope)
 
         verbsDetails.onEach { details ->
             val currentDetails = details.firstOrNull()
 
-            state.update { it.copy(currentVerbDetails = currentDetails) }
+            uiState.update { it.copy(currentVerbDetails = currentDetails) }
         }.flowOn(Dispatchers.IO)
             .launchIn(viewModelScope)
     }
@@ -181,13 +184,13 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
     }
 
     private fun handleChangeVerbHighlightModeAction() {
-        state.update { it.copy(verbHighlightModeOn = !it.verbHighlightModeOn) }
+        uiState.update { it.copy(verbHighlightModeOn = !it.verbHighlightModeOn) }
     }
 
     private fun handleChangeShufflingModeAction() {
-        val updatedShufflingMode = state.value.isShufflingModeOn.not()
+        val updatedShufflingMode = uiState.value.isShufflingModeOn.not()
 
-        state.update { it.copy(isShufflingModeOn = updatedShufflingMode) }
+        uiState.update { it.copy(isShufflingModeOn = updatedShufflingMode) }
 
         verbsDetails.update { details ->
             val updatedDetails = if (updatedShufflingMode) {
@@ -201,14 +204,14 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
     }
 
     private fun handleTextToSpeechAction() {
-        val details = state.value.currentVerbDetails ?: return
+        val details = uiState.value.currentVerbDetails ?: return
         val textToSpeech = "${details.v1.word} ${details.v2.word} ${details.v3.word}"
 
         eventState.launchEmit { IrregularVerbsPracticeEvent.TextToSpeech(textToSpeech) }
     }
 
     private fun handleSetHidingModeAction(action: IrregularVerbsPracticeAction.ChangeHidingMode) {
-        val currentHidingMode = state.value.hidingMode
+        val currentHidingMode = uiState.value.hidingMode
 
         val updatedHidingMode = when (action.mode) {
             HidingMode.Non -> action.mode
@@ -239,7 +242,7 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
             }
         }
 
-        state.update { it.copy(hidingMode = updatedHidingMode) }
+        uiState.update { it.copy(hidingMode = updatedHidingMode) }
     }
 
     private fun handleChangeSubGroupSelectionAction(
@@ -250,13 +253,13 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
     }
 
     private fun handleReturnVerbVisibilityModeAction() {
-        val currentMode = state.value.hidingMode as? HidingMode.ForcedShow ?: return
+        val currentMode = uiState.value.hidingMode as? HidingMode.ForcedShow ?: return
 
-        state.update { it.copy(hidingMode = currentMode.previousMode) }
+        uiState.update { it.copy(hidingMode = currentMode.previousMode) }
     }
 
     private fun handleShowHiddenVerbsAction() {
-        state.update {
+        uiState.update {
             val updatedMode = HidingMode.ForcedShow(previousMode = it.hidingMode)
 
             it.copy(hidingMode = updatedMode)
@@ -296,7 +299,7 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
 
     private fun updateVerbsDetailsBySelectionState() {
         verbsDetails.update {
-            val isShufflingModeOn = state.value.isShufflingModeOn
+            val isShufflingModeOn = uiState.value.isShufflingModeOn
             val newDetails = getInitialVerbDetailsBySelectedGroups()
 
             val updatedDetails = if (isShufflingModeOn) {
@@ -414,7 +417,7 @@ class IrregularVerbsPracticeViewModel : MviViewModel<
         }
     }
 
-    private inline fun <reified R: IrregularVerbsGroupViewHolder.SubGroupViewHolder>
+    private inline fun <reified R : IrregularVerbsGroupViewHolder.SubGroupViewHolder>
             IrregularVerbsGroupViewHolder.SubGroupViewHolderProvider<*>.manageSubGroupSelection(): List<R> {
         val isAllSubgroupsSelected = subGroups.all { it.isSelected }
 

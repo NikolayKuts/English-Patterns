@@ -1,6 +1,7 @@
 package com.example.englishpatterns.presentation.common
 
 import androidx.datastore.core.DataStore
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import com.example.englishpatterns.data.PatternGroupResContainers
 import com.example.englishpatterns.domain.PatternGroupResContainer
@@ -19,14 +20,15 @@ import kotlinx.coroutines.launch
 class MainViewModel(
     private val patternStore: DataStore<PatternGroupResContainers>,
     private val weekPatternStorage: DataStore<PracticingPatternGroup>,
-) : MviViewModel<MainState, MainAction, MainEvent>() {
+    savedStateHandle: SavedStateHandle,
+) : MviViewModel<MainState, MainAction, MainEvent>(savedStateHandle = savedStateHandle) {
 
     private val patternGroupResContainersStata = patternStore.data
 
     private val chosenPatternGroupResContainers: Flow<List<PatternGroupResContainer>> =
         getChosenPatternGroupResContainersState()
 
-    override val state = MutableStateFlow(value = MainState())
+    override val uiState = MutableStateFlow(value = MainState())
 
     override val eventState = MutableSharedFlow<MainEvent>()
 
@@ -85,13 +87,13 @@ class MainViewModel(
 
     private fun observePatternGroupResContainersSource() {
         patternGroupResContainersStata.launchCollect { resContainers ->
-            state.update { it.copy(patternGroupResContainers = resContainers) }
+            uiState.update { it.copy(patternGroupResContainers = resContainers) }
         }
     }
 
     private fun observeChosenPatterGroupResContainers() {
         chosenPatternGroupResContainers.launchCollect {
-            state.update { state -> state.copy(isStartButtonEnabled = it.isNotEmpty()) }
+            uiState.update { state -> state.copy(isStartButtonEnabled = it.isNotEmpty()) }
         }
     }
 

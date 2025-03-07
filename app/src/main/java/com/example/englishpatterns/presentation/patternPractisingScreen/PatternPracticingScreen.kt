@@ -84,6 +84,7 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
 import com.example.englishpatterns.R
+import com.example.englishpatterns.data.IdentifiablePattern
 import com.example.englishpatterns.data.Pattern
 import com.example.englishpatterns.data.common.LoadingState
 import com.example.englishpatterns.domain.PracticingPatternUnit
@@ -373,7 +374,7 @@ private fun BoxScope.PatternContent(
             modifier = Modifier.clickable {
                 sendAction(PatternPracticingAction.ChangeTranslationVisibilityState)
             },
-            text = practicingPatternUnit?.pattern?.native ?: "",
+            text = practicingPatternUnit?.pattern?.value?.native ?: "",
             color = Color(0xFFC5CC85),
             textAlign = TextAlign.Center
         )
@@ -427,7 +428,7 @@ private fun PatternTranslationContent(
             }
 
             SelectableText(
-                text = practicingPatternUnit?.pattern?.translation ?: "",
+                text = practicingPatternUnit?.pattern?.value?.translation ?: "",
                 containerColor = translationContainerColor,
                 textColor = translationTextColor,
                 isTranslationHidden = isTranslationHidden,
@@ -979,7 +980,7 @@ fun RoundedButton(
     activated: Boolean,
     activatedBackground: Color,
     onClick: () -> Unit,
-    content: @Composable() (RowScope.() -> Unit)
+    content: @Composable (RowScope.() -> Unit)
 ) {
     val (
         buttonColor,
@@ -1058,9 +1059,12 @@ private fun PatternPracticingScreenPreview() {
                         ),
                     ),
                     currentPractisingPatternGroupUnit = PracticingPatternUnit(
-                        pattern = Pattern(
-                            native = "some native text",
-                            translation = "some translation text"
+                        pattern = IdentifiablePattern(
+                            id = 1,
+                            value = Pattern(
+                                native = "some native text",
+                                translation = "some translation text"
+                            ),
                         ),
                         position = 1,
                         groupSize = 12

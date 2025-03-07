@@ -85,7 +85,7 @@ class MainActivity : ComponentActivity() {
                             mainScreenContent = {
                                 MainScreen(
                                     modifier = Modifier.padding(paddingValues),
-                                    state = viewModel.state.collectAsState().value,
+                                    state = viewModel.uiState.collectAsState().value,
                                     sendAction = viewModel::sendAction
                                 )
                             },
@@ -189,7 +189,7 @@ class MainActivity : ComponentActivity() {
 
                                 PatternPracticingScreen(
                                     modifier = Modifier.padding(paddingValues),
-                                    state = patternPracticingViewModel.state.collectAsState().value,
+                                    state = patternPracticingViewModel.uiState.collectAsState().value,
                                     sendAction = patternPracticingViewModel::sendAction
                                 )
                             },
@@ -227,7 +227,7 @@ class MainActivity : ComponentActivity() {
 
                                 IrregularVerbsPracticeScreen(
                                     modifier = Modifier.padding(paddingValues),
-                                    state = irregularVerbsPracticeViewModel.state.collectAsState().value,
+                                    state = irregularVerbsPracticeViewModel.uiState.collectAsState().value,
                                     sendAction = irregularVerbsPracticeViewModel::sendAction
                                 )
                             }
