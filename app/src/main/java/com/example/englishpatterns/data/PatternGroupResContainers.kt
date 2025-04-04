@@ -123,6 +123,8 @@ data class PatternGroupResContainers(
             TheOtherAnother(),
             Both(),
             NounOfPossessivePronoun(),
+            JobPhrasesCollocations(),
+            DescribingJobsAdjectives(),
             WeekPatternGroupResource()
         )
 

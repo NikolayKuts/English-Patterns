@@ -1161,6 +1161,39 @@ sealed class PatternGroupResource(
     }
 
     @Serializable
+    data class JobPhrasesCollocations(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : PatternGroupResource(
+        name = "Job phrases and collocations",
+        contentResIds = intArrayOf(R.array.job_phrases_and_collocations),
+    ) {
+
+        override fun toNew(markColor: MarkColor): PatternGroupResource = copy(markColor = markColor)
+    }
+
+    @Serializable
+    data class DescribingJobsAdjectives(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : PatternGroupResource(
+        name = "Describing jobs (adjectives)",
+        contentResIds = intArrayOf(R.array.describing_job_adjectives),
+    ) {
+
+        override fun toNew(markColor: MarkColor): PatternGroupResource = copy(markColor = markColor)
+    }
+
+    @Serializable
+    data class AdvancedPresentSimpleAndContinuous(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : PatternGroupResource(
+        name = "Advanced present simple and continuous",
+        contentResIds = intArrayOf(R.array.advanced_present_simple_and_сontinuous),
+    ) {
+
+        override fun toNew(markColor: MarkColor): PatternGroupResource = copy(markColor = markColor)
+    }
+
+    @Serializable
     data class WeekPatternGroupResource(
         override val markColor: MarkColor = MarkColor.Non,
     ) : PatternGroupResource(

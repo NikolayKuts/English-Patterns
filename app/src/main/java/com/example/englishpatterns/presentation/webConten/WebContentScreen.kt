@@ -49,7 +49,7 @@ fun WebContentScreen(
     }
 }
 
-class CustomWebChromeClient() : WebChromeClient() {
+class CustomWebChromeClient : WebChromeClient() {
 
     override fun onShowCustomView(view: View, callback: CustomViewCallback) {
         logD("onShowCustomView() called")
@@ -78,7 +78,7 @@ class CustomWebChromeClient() : WebChromeClient() {
     }
 }
 
-class CustomWebViewClient() : WebViewClient() {
+class CustomWebViewClient : WebViewClient() {
 
     override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
         val url = request?.url.toString()

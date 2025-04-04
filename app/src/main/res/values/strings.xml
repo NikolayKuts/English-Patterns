@@ -4675,7 +4675,7 @@
         <item>Если бы не было дождя, я бы сходил на игру.==If it hadn\'t been raining, I would have gone to the game.</item>
         <item>Если бы я знал, что ты был в Москве, я бы тебе позвонил.==If I had known that you were in Moscow, I would have called you.</item>
         <item>Если бы ты мне позвонил, я бы тебе кое-что рассказал.==If you had called me, I would have told you something.</item>
-        <item>Если бы у меня было свободное время, я бы съездил в Испанию в прошлом месяце.==If I had had free time, I would have gone to Spain last month.</item>
+        <item>Если бы у меня было свободное время, я бы съездил в Испанию в прошлом месяце.==If I had have free time, I would have gone to Spain last month.</item>
         <item>Если бы он был виновен, он был признался ещё вчера.==If he had been guilty, he would have confessed yesterday.</item>
         <item>Он не простудился бы, если бы надел теплое пальто.==He wouldn\'t have caught a cold if he had put on a warm coat.</item>
         <item>Мой брат поступил бы в университет, если бы он хорошо написал сочинение.==My brother would have entered the university if he had written a good essay.</item>
@@ -4686,7 +4686,7 @@
         <item>Если бы я выиграл в лотерею, я бы купил тебе подарок.==If I had won the lottery, I would have bought you a present.</item>
         <item>Если бы дали мне больше времени, я бы сделал доклад лучше.==If you had given me more time, I would have made a better report.</item>
         <item>Если бы они упомянули об этом вчера, все было бы уже сделано.==If they had mentioned this yesterday, everything would have already been done.</item>
-        <item>Он бы написал статью, если бы у него было достаточно времени.==He would have written an article if he had had enough time.</item>
+        <item>Он бы написал статью, если бы у него было достаточно времени.==He would have written an article if he had have enough time.</item>
         <item>Если бы погода вчера была получше, я бы сходил порыбачить.==If the weather had been better yesterday, I would have gone fishing.</item>
         <item>Если бы ты вчера не объедался, сейчас бы ты чувствовал себя нормально.==If you hadn\'t overeaten yesterday, you would feel fine now.</item>
     </string-array>
@@ -6456,5 +6456,201 @@
         <item>Эта ошибка - одна из наших==This mistake is a failure of ours.</item>
         <item>Это был один из твоих главных успехов==That was an achievement of yours.</item>
         <item>Это был один из моих самых длинных отпусков==That was a vacation of mine.</item>
+    </string-array>
+
+    <string-array name="job_phrases_and_collocations">
+        <item>Ведение собственного бизнеса обычно включат работу по многу часов.==Running your own business usually involves working long hours.</item>
+        <item>Моя команда состоит из 3 разработчиков и 1 тимлида.==My team consists of three developers and one team leader.</item>
+        <item>Я провожу большую часть дня, имея дело с запросами клиентов.==I spend most of my day dealing with customer inquiries.</item>
+        <item>Более 30 фирм-разработчиков программного обеспечения вовлечено (take part) в проект.==More than thirty software firms are involved in the project.</item>
+        <item>Он ответственный за набор и обучение нового персонала.==He is responsible for recruiting and training new staff</item>
+        <item>Руководитель команды был назначен набдлюдать/надзирать (supervise) за проектом.==A team leader was appointed to oversee the project.</item>
+        <item>Кто будет ответственным за отдел, когда Софи уйдёт?==Who will be in charge of the department when Sophie leaves?</item>
+        <item>Я хочу, чтобы ты отчитывался мне о прогрессе каждый пятницу.==I want you to report to me on the progress every Friday.</item>
+        <item>Почти 500 команд примут участие (participate) в соревновании.==Nearly five hundred teams will take part in the competition.</item>
+        <item>Компания специализируется на управлении малым бизнесом.==The company specializes in small business management.</item>
+        <item>Компьютеры могут обрабатывать огромные количества данных==Computers can handle huge amounts of data..</item>
+        <item>Нам нужно работать над обеспечением/гарантированием качества кода.==We need to work on ensuring the quality of the code.</item>
+        <item>Моя основной навык — анализ требований заинтересованных сторон.==My core skill is analyzing stakeholders\' requirements.</item>
+        <item>Каждый день я посещаю собрания, на которых докладываю другим о прогрессе по проекту.==Every day, I attend meetings where I report to others on the progress of the project.</item>
+
+        <item>Более 30 компаний-разработчиков были вовлечены в проекте.==More than thirty software companies were involved in the project.</item>
+        <item>Некоторые из моих коллег собираются принять участие в технической конференции на следующей неделе.==Some of my colleagues are going to take part in a technical conference next week</item>
+        <item>Джереми ответственный за команду из 5 разработчиков и 3 тестировщиков.==Jeremy is in charge of the team which contains 5 software developers and 3 QAs.</item>
+        <item>Mенеджеру проекта иногда приходится иметь дело с трудными клиентами и делать всё возможное, чтобы удовлетворить их потребности.==The PM sometimes has to deal with difficult customers and do his best to satisfy their needs.</item>
+        <item>Мистер Браун следит (supervises) за 61 сотрудниками и бюджетом в 5,9 миллиона долларов.==Mr. Brown oversees 61 workers and a $5.9 million budget.</item>
+        <item>Финансовый отдел занимается (обрабатывает) всеми счетами.==The finance department handles all the accounts.</item>
+        <item>Мой менеджер специализируется на написании кода на JavaScript.==My manager specializes in writing code in JS.</item>
+        <item>За что вы отвечаете?==What are you responsible for?</item>
+        <item>Что включает в себя ваша работа?==What does your job involve?</item>
+        <item>Ваша работа связана с риском? В целом, вы склонны рисковать или предпочитаете всё тщательно планировать?==Does your job involve any risk? In general: are you a risk taker or do you prefer to plan everything carefully?</item>
+        <item>Хотели бы вы стать тимлидом и отвечать за многих людей?==Would you like to become a Team Leader and be in charge of many people? </item>
+        <item>Помните ли вы ситуацию, когда перед вами стояла серьёзная задача, но вы справились с ней легко?==Do you remember a situation when you were really challenged but handled it easily?</item>
+        <item>Вы вовлечены в принятии решений на работе?==Are you involved in making decisions at work?</item>
+        <item>В каких встречах и мероприятиях вы вовлеченный на работе?==What meetings and activities are you involved in at work?</item>
+        <item>В каком IT-событии вы бы хотели принять участие?==What IT event would you like to take part in?</item>
+        <item>В каком последнем мероприятии вы участвовали (1 word)?==What is the last event you participated in?</item>
+        <item>За какими вещами и процессами должен следить (supervise) тимлид и проектный менеджер?==What things and processes does a team leader and a project manager have to oversee?</item>
+        <item>Кому вы отчитываетесь о прогрессе работы? Как часто вы должны это делаете?==Who do you report to on the progress of your work? How often do you have to do it?</item>
+        <item>Какие у вас основные навыки? В чём бы вы хотели специализироваться?==What are your core skills? What would you like to specialize in?</item>
+        <item>С какими проблемами и испытаниями вы сталкиваетесь в своей работе?==What problems and challenges do you deal with in your job?</item>
+    </string-array>
+
+    <string-array name="describing_job_adjectives">
+        <item>Иногда я нахожу это угнетающим, потому что здесь так много бюрократии.==I sometimes find this depressing, because there’s just so much bureaucracy.</item>
+        <item>Я считаю, что всё это стоит того, и у меня есть настоящее чувство достижения.==I think it’s all worthwhile and I have a real sense of achievement.</item>
+        <item>Это трудная работа — самое сложное время года для нас — праздничный сезон.==It’s a challenging job – our most difficult time of the year is the holiday season.</item>
+        <item>Обычно я работаю шестичасовую смену, и к концу чувствую себя измотанным.==I usually work a six-hour shift, and by the end I feel exhausted.</item>
+        <item>Но приятно осознавать, что я обеспечил тысячам пассажирам путешествавать безопасно.==But it’s rewarding to know that I’ve enabled thousands of passengers to travel safely.</item>
+        <item>Моя работа очень испытывуящая, потому что мне постоянно нужно учиться новому.==My work is very challenging because I constantly have to learn new things.</item>
+        <item>Я хочу работу, которая более разнообразна. Я хочу делать что-то новое каждый день.==I want a job that is more varied. I want to do different things every day.</item>
+        <item>Моя работа иногда довольно скучная и рутинная, когда мне приходится весь день писать электронные письма.==My job is sometimes quite dull and routine when I have to write emails all day long.</item>
+        <item>Я нахожу мою предыдущую работу очень напряжённой, потому что нужно было выполнить много заданий и соблюсти жёсткие сроки.==I found my previous job very stressful because I had a lot of tasks to complete and tight deadlines.</item>
+        <item>Иногда мне желаю, чтобы у меня была более гламурная работа. Было бы интересно работать в модной индустрии или играть в музыкальной группе.==Sometimes I wish I had a more glamorous job. It would be interesting to work in fashion or play in a band.</item>
+        <item>Мой рабочий график действительно напряжённый. Иногда у меня нет времени даже на обед.==My work schedule is really demanding. I sometimes don’t have time to have lunch.</item>
+        <item>Я нахожу свою работу действительно вознаграждающей. Она приносит мне большое удовлетворение.==I find my job really rewarding. It gives me so much satisfaction.</item>
+        <item>Моя работа такая рутинная и скучная — я её ненавижу. Каждый день приходится делать одни и теже задачи.==My job is so routine and boring – I hate it. Every day I have to do the same tasks.</item>
+        <item>Я обожаю своих коллег. Они весёлые люди. Я всегда смеюсь над их шутками.==I love my colleagues. They are fun people. I always laugh at their jokes.</item>
+        <item>Мы не успеваем к сроку, и эта ситуация кажется мне очень удручающей (она безнадёжна).==We can\'t meet the deadline so I find this situation very depressing (it is hopeless).</item>
+        <item>Она считает преподавание достойной карьерой, потому что оно позволяет ей чувствовать себя нужной и значимой. Она может помочь многим детям.==She considers teaching a worthwhile career because it makes her feel useful and important. She can help a lot of children.</item>
+
+        <item>Моя работа вознаграждающая и даёт чувство удовлетворения. == My job is rewarding and gives me a sense of satisfaction.</item>
+        <item>Быть учителем — это вознаграждающий опыт. == Being a teacher is a rewarding experience.</item>
+        <item>Работа волонтёром может быть очень вознаграждающей. == Volunteering can be very rewarding.</item>
+        <item>Я считаю эту задачу вознаграждающей. == I find this task rewarding.</item>
+        <item>Создание приложений, которые помогают людям, — это вознаграждающе. == Creating apps that help people is rewarding.</item>
+        <item>Он сказал, что работа в этой компании была вознаграждающей. == He said working at this company was rewarding.</item>
+
+        <item>Моя работа трудная. == My job is challenging.</item>
+        <item>Эта задача была трудной для меня. == This task was challenging for me.</item>
+        <item>Работа программиста часто бывает трудной и требующей усилий. == A programmer’s job is often challenging.</item>
+        <item>Проект оказался сложным, но я справился. == The project was challenging, but I managed.</item>
+        <item>Мне нравится, когда работа сложная и мотивирует меня. == I like it when work is challenging and motivates me.</item>
+        <item>Это была одна из самых сложных проблем, с которыми я сталкивался. == It was one of the most challenging problems I’ve faced.</item>
+
+        <item>Иногда работа может быть угнетающей. == Sometimes the job can be depressing.</item>
+        <item>Это было депрессивное интервью. == It was a depressing interview.</item>
+        <item>Меня расстраивает, когда атмосфера на работе тягостная. == It upsets me when the work atmosphere is depressing.</item>
+        <item>Безрезультатная работа кажется (чувствуется) депрессивной. == Unproductive work feels depressing.</item>
+        <item>Это был самый грустный и угнетающий день на работе. == It was the most depressing day at work.</item>
+        <item>Мне не нравится, когда офис выглядит угнетающе. == I don’t like it when the office looks depressing.</item>
+
+        <item>Эта работа очень требовательная. == This job is very demanding.</item>
+        <item>Быть разработчиком — это требовательная профессия. == Being a developer is a demanding profession.</item>
+        <item>У нас был очень требовательный клиент. == We had a very demanding client.</item>
+        <item>Работа требует концентрации — она "трубовотальная". == The job requires focus — it’s demanding.</item>
+        <item>Иногда дедлайны бывают слишком жёсткими (требовательны). == Sometimes the deadlines are too demanding.</item>
+        <item>Я устал, потому что день был очень напряжённым (требовательным). == I’m tired because the day was very demanding.</item>
+
+        <item>Эта работа действительно стоящая. == This job is really worthwhile.</item>
+        <item>Я считаю этот проект стоящим. == I consider this project worthwhile.</item>
+        <item>Вложенное время было не напрасным. == The time invested was worthwhile.</item>
+        <item>Это было трудно, но того стоило. == It was hard, but it was worthwhile.</item>
+        <item>Разработка таких приложений — сотоит того. == Developing such apps is worthwhile.</item>
+        <item>Я всегда ищу работу, которая будет стоящей. == I always look for a job that is worthwhile.</item>
+
+        <item>Иногда работа становится рутинной. == Sometimes work becomes routine.</item>
+        <item>Мне скучно от повторяющихся задач. == I’m bored with routine tasks.</item>
+        <item>Тестирование — часть ежедневной рутины. == Testing is part of the daily routine.</item>
+        <item>Я пытаюсь разнообразить рутинную работу. == I try to make routine work more interesting.</item>
+        <item>Некоторые дни полностью однообразные. == Some days are completely routine.</item>
+        <item>Рутина — это часть любой профессии. == Routine is part of any profession.</item>
+
+        <item>Моя работа очень разнообразная. == My job is very varied.</item>
+        <item>Я люблю, что задачи всегда разные. == I love that the tasks are always varied.</item>
+        <item>Проекты у нас разнообразные и интересные. == Our projects are varied and interesting.</item>
+        <item>Каждый день отличается — это делает работу разнообразной. == Every day is different — that makes the job varied.</item>
+        <item>Разработка включает разные этапы — это делает её интересной. == Development includes varied stages — that makes it exciting.</item>
+
+        <item>Мой офис довольно комфортный. == My office is quite comfortable.</item>
+        <item>У нас удобное рабочее место. == We have a comfortable workplace.</item>
+        <item>Я чувствую себя некомфортно в открытом офисе. == I feel uncomfortable in an open office.</item>
+        <item>Они создали комфортные условия для сотрудников. == They created comfortable conditions for employees.</item>
+        <item>Если температура слишком низкая, мне некомфортно работать. == If the temperature is too low, I feel uncomfortable working.</item>
+        <item>Важно, чтобы рабочая среда была удобной и приятной. == It’s important for the work environment to be comfortable and pleasant.</item>
+
+        <item>Моя работа очень ответственная. == My job is very responsible.</item>
+        <item>Разработчик несёт ответственность за качество кода. == A developer is responsible for code quality.</item>
+        <item>Я чувствую себя ответственным за успех проекта. == I feel responsible for the project’s success.</item>
+
+        <item>Работа программиста не всегда гламурная. == A programmer’s job is not always glamorous.</item>
+        <item>Моя профессия не выглядит гламурно, но она важная. == My profession doesn’t look glamorous, but it’s important.</item>
+        <item>Некоторые думают, что IT — это гламурно, но это не так. == Some people think IT is glamorous, but it’s not.</item>
+
+        <item>Иногда моя работа бывает стрессовой. == Sometimes my job is stressful.</item>
+        <item>Это был очень напряжённый день. == It was a very stressful day.</item>
+        <item>Релиз новой версии — всегда стрессовая задача. == Releasing a new version is always a stressful task.</item>
+
+        <item>Иногда задачи бывают скучными. == Sometimes tasks are dull.</item>
+        <item>Это была очень скучная и повторяющаяся работа. == It was a very dull and repetitive job.</item>
+        <item>Мне не нравятся монотонные (скучные) задачи. == I don’t like dull tasks.</item>
+        <item>Долгие отчёты — это скучно. == Long reports are dull.</item>
+        <item>Тестирование может быть немного скучным иногда. == Testing can be a bit dull sometimes.</item>
+
+        <item>Моя работа безопасна и стабильна. == My job is safe and stable.</item>
+        <item>Я чувствую себя в безопасности в компании. == I feel safe in the company.</item>
+        <item>Некоторые профессии могут быть небезопасными. == Some professions can be unsafe.</item>
+        <item>Удалённая работа — это безопасный вариант. == Remote work is a safe option.</item>
+
+        <item>Я чувствую себя уверенно в своей работе. == I feel secure in my job.</item>
+        <item>В этой компании я чувствую себя в безопасности. == I feel secure in this company.</item>
+        <item>Без постоянного контракта я чувствовал себя неуверенно. == Without a permanent contract, I felt insecure.</item>
+
+        <item>Я считаю свою работу интересной. == I consider my job to be interesting.</item>
+        <item>Я считаю эту задачу важной. == I consider this task to be important.</item>
+        <item>Многие считают Android-разработку перспективной. == Many people consider Android development to be promising.</item>
+        <item>Я считаю эту компанию надежной. == I consider this company to be reliable.</item>
+        <item>Мои друзья считают мою работу трудной. == My friends consider my job to be hard.</item>
+        <item>Я считаю свою профессию подходящей для меня. == I consider my profession to be a good fit for me.</item>
+
+        <item>Я считаю (находить) свою работу полезной, потому что она помогает людям. == I find my job worthwhile since it helps people.</item>
+        <item>Я нахожу свою работу вдохновляющей, потому что я постоянно учусь. == I find my job inspiring since I’m always learning.</item>
+        <item>Я считаю (находить), что моя работа требовательная, потому что у нас строгие сроки. == I find my job demanding since we have tight deadlines.</item>
+        <item>Я думаю (находить), моя работа интересная, потому что задачи часто меняются. == I find my job interesting because tasks often change.</item>
+        <item>Я считаю свою работу стрессовой, потому что всегда есть дедлайны. == I find my job stressful because there are always deadlines.</item>
+        <item>Мне кажется, что моя работа подходит мне, потому что я люблю решать задачи. == I find my job a good match since I enjoy solving problems.</item>
+    </string-array>
+
+    <string-array name="advanced_present_simple_and_сontinuous">
+        <item>Я участвую во встрече прямо сейчас==I’m attending a meeting right now</item>
+        <item>Он сейчас оценивает ситуацию==He is assessing the situation</item>
+        <item>Они смотрят видео по обучению==They are watching a training video</item>
+        <item>Мы сейчас думаем над этим вопросом==We are thinking about this issue</item>
+        <item>Она принимает новое предложение==She is accepting the new offer</item>
+        <item>Я провожу встречу с клиентами==I’m having a meeting with the clients</item>
+        <item>Ты обрабатываешь данные сейчас?==Are you processing the data now?</item>
+        <item>Они создают новый продукт сейчас==They are creating a new product</item>
+        <item>Он разрабатывает внутреннюю систему сейчас==He is developing an internal system</item>
+        <item>Я сейчас говорю с директором==I’m talking to the director right now</item>
+        <item>Ты сейчас вовлечен в этом проект?==Are you involved in this project right now?</item>
+        <item>Они владеют этой компанией==They own this company</item>
+        <item>Кажется, он не понимает проблему==He doesn’t seem to understand the problem</item>
+        <item>Я слышу, что кто-то пришёл==I hear that someone has arrived</item>
+        <item>Она наслаждается каждой минутой отпуска==She enjoys every minute of her vacation</item>
+        <item>Ты представляешь, что будет дальше?==Can you imagine what happens next?</item>
+        <item>Он не осознаёт последствий==He doesn’t realize the consequences</item>
+        <item>Я не против подождать==I don’t mind waiting</item>
+        <item>Я предполагаю, что они опоздают==I suppose they’ll be late</item>
+        <item>Это означает, что мы должны всё переделать==It means we have to redo everything</item>
+        <item>Она обычно принимает такие решения быстро==She usually makes these decisions quickly</item>
+        <item>Мы не смотрим видео каждый день==We don’t watch videos every day</item>
+        <item>Он часто оценивает качество работы==He often assesses the quality of the work</item>
+        <item>Ты часто ходишь (посещаешь) на такие встречи?==Do you often attend such meetings?</item>
+        <item>Они обычно говорят по-английски на встречах==They usually speak English at meetings</item>
+        <item>Он редко разрабатывает что-то сам==He rarely develops anything by himself</item>
+        <item>Мы не создаём проекты без обсуждения==We don’t create projects without discussion</item>
+        <item>Она часто обрабатывает отчёты вечером==She often processes reports in the evening</item>
+        <item>Я думаю, он не прав==I think he’s wrong</item>
+        <item>Они не принимают предложения, пока не обсудят их==They don’t accept offers until they discuss them</item>
+        <item>Он сейчас не разговаривает с клиентом==He isn’t talking to the client right now</item>
+        <item>Ты не работаешь над этим проектом сейчас==You aren’t working on this project right now</item>
+        <item>Я не думаю, что это хорошая идея==I don’t think that’s a good idea</item>
+        <item>Он сейчас не смотрит видео==He isn’t watching the video right now</item>
+        <item>Ты наслаждаешься этим?==Do you enjoy it?</item>
+        <item>Он владеет несколькими патентами==He owns several patents</item>
+        <item>Это кажется справедливым==It seems fair</item>
+        <item>Я не понимаю, что ты имеешь в виду==I don’t understand what you mean</item>
+        <item>Ты слышишь этот странный звук?==Do you hear that strange sound?</item>
+        <item>Я сейчас не обрабатываю никаких данных==I’m not processing any data right now</item>
     </string-array>
 </resources>

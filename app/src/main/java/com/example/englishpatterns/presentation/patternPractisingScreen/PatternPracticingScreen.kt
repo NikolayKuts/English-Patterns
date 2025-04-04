@@ -134,17 +134,7 @@ fun PatternPracticingScreen(
 
                 Spacer(modifier = Modifier.width(16.dp))
 
-                val listState = rememberLazyListState()
-                val lastItemIndex = state.practicingPatternGroups.indexOfLast { it.isChosen }
-                val scrollPosition = if (lastItemIndex < 0) 0 else lastItemIndex
-
-                LaunchedEffect(key1 = state) {
-                    listState.animateScrollToItem(scrollPosition)
-                }
-
-                LazyRow(
-                    state = listState
-                ) {
+                LazyRow {
                     groupItems(
                         practicingPatternGroups = state.practicingPatternGroups,
                         sendAction = sendAction

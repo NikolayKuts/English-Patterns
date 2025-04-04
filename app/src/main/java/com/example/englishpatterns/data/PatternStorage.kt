@@ -2,7 +2,10 @@ package com.example.englishpatterns.data
 
 import android.content.Context
 import androidx.datastore.dataStore
+import com.example.englishpatterns.data.storageMigrations.AddMissingAdvancedPresentSimpleAndContinuousPatternGroupMigration
 import com.example.englishpatterns.data.storageMigrations.AddMissingBothPatternGroupMigration
+import com.example.englishpatterns.data.storageMigrations.AddMissingDescribingJobsAdjectivesPatternGroupMigration
+import com.example.englishpatterns.data.storageMigrations.AddMissingJobPhrasesAndCollocationsPatternGroupMigration
 import com.example.englishpatterns.data.storageMigrations.AddMissingNounOfPossessivePronounPatternGroupMigration
 import com.example.englishpatterns.data.storageMigrations.AddMissingWeekPatternGroupMigration
 
@@ -14,6 +17,9 @@ val Context.patternStore by dataStore(
             AddMissingBothPatternGroupMigration,
             AddMissingNounOfPossessivePronounPatternGroupMigration,
             AddMissingWeekPatternGroupMigration,
+            AddMissingJobPhrasesAndCollocationsPatternGroupMigration,
+            AddMissingDescribingJobsAdjectivesPatternGroupMigration,
+            AddMissingAdvancedPresentSimpleAndContinuousPatternGroupMigration
         )
     }
 )

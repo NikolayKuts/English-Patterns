@@ -19,7 +19,7 @@ object AddMissingBothPatternGroupMigration : DataMigration<PatternGroupResContai
             isChosen = false,
         )
 
-        return currentData.copy(content = currentData.content + listOf(selectablePatternGroupResource))
+        return currentData.copy(content = currentData.content + selectablePatternGroupResource)
     }
 }
 
@@ -40,7 +40,7 @@ object AddMissingNounOfPossessivePronounPatternGroupMigration :
             isChosen = false,
         )
 
-        return currentData.copy(content = currentData.content + listOf(selectablePatternGroupResource))
+        return currentData.copy(content = currentData.content + selectablePatternGroupResource)
     }
 }
 
@@ -60,6 +60,54 @@ object AddMissingWeekPatternGroupMigration : DataMigration<PatternGroupResContai
             isChosen = false,
         )
 
-        return currentData.copy(content = currentData.content + listOf(selectablePatternGroupResource))
+        return currentData.copy(content = currentData.content + selectablePatternGroupResource)
+    }
+}
+
+object AddMissingJobPhrasesAndCollocationsPatternGroupMigration :
+    DataMigration<PatternGroupResContainers> by createPatternGroupMigration(
+        insert = { PatternGroupResource.JobPhrasesCollocations() }
+    )
+
+object AddMissingDescribingJobsAdjectivesPatternGroupMigration :
+    DataMigration<PatternGroupResContainers> by createPatternGroupMigration(
+        insert = { PatternGroupResource.DescribingJobsAdjectives() }
+    )
+
+object AddMissingAdvancedPresentSimpleAndContinuousPatternGroupMigration :
+    DataMigration<PatternGroupResContainers> by createPatternGroupMigration(
+        insert = { PatternGroupResource.AdvancedPresentSimpleAndContinuous() }
+    )
+
+inline fun <reified T : PatternGroupResource> createPatternGroupMigration(
+    crossinline insert: () -> T
+): DataMigration<PatternGroupResContainers> {
+    return object : DataMigration<PatternGroupResContainers> {
+
+        override suspend fun cleanUp() {}
+
+        override suspend fun shouldMigrate(currentData: PatternGroupResContainers): Boolean {
+            return currentData.content.none { it.patternGroupResource is T }
+        }
+
+        override suspend fun migrate(currentData: PatternGroupResContainers): PatternGroupResContainers {
+            val resContainerToInsert = PatternGroupResContainer(
+                patternGroupResource = insert(),
+                isChosen = false,
+            )
+
+            val indexToInsert = currentData.content.indexOfFirst {
+                it.patternGroupResource is PatternGroupResource.WeekPatternGroupResource
+            }
+
+            val updatedContent = if (indexToInsert == -1) {
+                currentData.content
+            } else {
+                currentData.content.toMutableList()
+                    .apply { add(index = indexToInsert, resContainerToInsert) }
+            }
+
+            return currentData.copy(content = updatedContent)
+        }
     }
 }
