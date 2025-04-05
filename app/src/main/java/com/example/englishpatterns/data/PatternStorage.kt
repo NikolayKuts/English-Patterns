@@ -7,6 +7,7 @@ import com.example.englishpatterns.data.storageMigrations.AddMissingBothPatternG
 import com.example.englishpatterns.data.storageMigrations.AddMissingDescribingJobsAdjectivesPatternGroupMigration
 import com.example.englishpatterns.data.storageMigrations.AddMissingJobPhrasesAndCollocationsPatternGroupMigration
 import com.example.englishpatterns.data.storageMigrations.AddMissingNounOfPossessivePronounPatternGroupMigration
+import com.example.englishpatterns.data.storageMigrations.AddMissingTalkingAboutJobsVocabularyPatternGroupMigration
 import com.example.englishpatterns.data.storageMigrations.AddMissingWeekPatternGroupMigration
 
 val Context.patternStore by dataStore(
@@ -19,7 +20,8 @@ val Context.patternStore by dataStore(
             AddMissingWeekPatternGroupMigration,
             AddMissingJobPhrasesAndCollocationsPatternGroupMigration,
             AddMissingDescribingJobsAdjectivesPatternGroupMigration,
-            AddMissingAdvancedPresentSimpleAndContinuousPatternGroupMigration
+            AddMissingAdvancedPresentSimpleAndContinuousPatternGroupMigration,
+            AddMissingTalkingAboutJobsVocabularyPatternGroupMigration,
         )
     }
 )

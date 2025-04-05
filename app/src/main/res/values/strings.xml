@@ -6653,4 +6653,18 @@
         <item>Ты слышишь этот странный звук?==Do you hear that strange sound?</item>
         <item>Я сейчас не обрабатываю никаких данных==I’m not processing any data right now</item>
     </string-array>
+
+    <string-array name="talking_about_jobs_vocabulary">
+        <item>Я нахожу свою работу полезной (вознаграждающей), потому что могу (есть вожможность) создавать приложения, которые улучшают пользовательский опыт.==I find my job rewarding because I get to create applications that improve users\' experiences.</item>
+        <item>Однако работа может ткаже быть довольно сложной (испытывающей), особенно когда я сталкиваюсь со сложными ошибками, требующими глубоких навыков решения проблем.==However, the work can also be quite challenging, especially when I encounter complex bugs that require deep problem-solving skills.</item>
+        <item>Некоторые дни могут казаться угнетающими, когда приходится укладываться в жатые сроки, но я стараюсь сосредоточиться на значимых (стоящих) аспектах своей работы.==Some days can feel depressing when I have to meet tight deadlines, but I try to focus on the worthwhile aspects of my work.</item>
+        <item>Я отвечаю за гарантирование того чтобы наше программное обеспечение было функциональным, но также удобным для пользователя.==I am responsible for ensuring that our software is functional but also user-friendly.</item>
+        <item>Эта часть может быть требовательной.==This part can be demanding.</item>
+        <item>Мои повседневные задачи довольно разнообразны: в один день я могу писать новый функционал, в то время как следующий требует (задействует) отладку или взаимодействие с командами.==My daily tasks are quite varied; one day, I might be coding new features, while the next day involves debugging or collaborating with teams.</item>
+        <item>Хотя я получаю удовольствие от комфортной атмосферы (окружения) на рабочем месте, бывают моменты, когда загрузка работой становится стрессовым.==Although I enjoy the comfortable environment at my workplace, there are moments when the workload becomes stressful.</item>
+        <item>Некоторые аспекты разработки программного обеспечения могут быть скучными, такие как, рутинное обслуживание (поддержка).==Some aspects of software development can be dull, such as routine maintenance.</item>
+        <item>Мне ценю, что моя работа позволяет работать на проектах, которые могут быть довольно эффектными.==I appreciate that my job allows me to work on projects that can be quite glamorous.</item>
+        <item>Однако я также признаю/осознаю, что некоторые задачи могут быть трудоёмкими.==However, I also recognize that some tasks can be time-consuming.</item>
+        <item>Я считаю командную работу необходимой в своей роли, поскольку она делает процесс разработки более приятным.==I consider teamwork to be essential in my role, as it makes the development process more enjoyable.</item>
+    </string-array>
 </resources>

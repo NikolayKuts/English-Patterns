@@ -79,6 +79,11 @@ object AddMissingAdvancedPresentSimpleAndContinuousPatternGroupMigration :
         insert = { PatternGroupResource.AdvancedPresentSimpleAndContinuous() }
     )
 
+object AddMissingTalkingAboutJobsVocabularyPatternGroupMigration :
+    DataMigration<PatternGroupResContainers> by createPatternGroupMigration(
+        insert = { PatternGroupResource.TalkingAboutJobsVocabulary() }
+    )
+
 inline fun <reified T : PatternGroupResource> createPatternGroupMigration(
     crossinline insert: () -> T
 ): DataMigration<PatternGroupResContainers> {

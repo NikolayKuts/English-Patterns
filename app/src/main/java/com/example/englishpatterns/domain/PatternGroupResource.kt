@@ -1194,6 +1194,17 @@ sealed class PatternGroupResource(
     }
 
     @Serializable
+    data class TalkingAboutJobsVocabulary(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : PatternGroupResource(
+        name = "Talking about jobs B1+/B2 vocabulary",
+        contentResIds = intArrayOf(R.array.talking_about_jobs_vocabulary),
+    ) {
+
+        override fun toNew(markColor: MarkColor): PatternGroupResource = copy(markColor = markColor)
+    }
+
+    @Serializable
     data class WeekPatternGroupResource(
         override val markColor: MarkColor = MarkColor.Non,
     ) : PatternGroupResource(
