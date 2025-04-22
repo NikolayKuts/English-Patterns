@@ -84,6 +84,21 @@ object AddMissingTalkingAboutJobsVocabularyPatternGroupMigration :
         insert = { PatternGroupResource.TalkingAboutJobsVocabulary() }
     )
 
+object AddMissingAdditionLinkersPatternGroupMigration :
+    DataMigration<PatternGroupResContainers> by createPatternGroupMigration(
+        insert = { PatternGroupResource.AdditionLinkers() }
+    )
+
+object AddMissingGerundsAndInfinitivesWithVerbsPatternGroupMigration :
+    DataMigration<PatternGroupResContainers> by createPatternGroupMigration(
+        insert = { PatternGroupResource.GerundsAndInfinitivesWithVerbs() }
+    )
+
+object PhraseVerbsPatternGroupMigration :
+    DataMigration<PatternGroupResContainers> by createPatternGroupMigration(
+    insert = { PatternGroupResource.PhrasalVerbs() }
+)
+
 inline fun <reified T : PatternGroupResource> createPatternGroupMigration(
     crossinline insert: () -> T
 ): DataMigration<PatternGroupResContainers> {

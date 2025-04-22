@@ -1205,6 +1205,39 @@ sealed class PatternGroupResource(
     }
 
     @Serializable
+    data class AdditionLinkers(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : PatternGroupResource(
+        name = "Linkers of addition",
+        contentResIds = intArrayOf(R.array.linkers_of_addition),
+    ) {
+
+        override fun toNew(markColor: MarkColor): PatternGroupResource = copy(markColor = markColor)
+    }
+
+    @Serializable
+    data class GerundsAndInfinitivesWithVerbs(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : PatternGroupResource(
+        name = "Gerunds and infinitives with verbs",
+        contentResIds = intArrayOf(R.array.gerunds_and_infinitives_with_verbs),
+    ) {
+
+        override fun toNew(markColor: MarkColor): PatternGroupResource = copy(markColor = markColor)
+    }
+
+    @Serializable
+    data class PhrasalVerbs(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : PatternGroupResource(
+        name = "Phrasal verbs",
+        contentResIds = intArrayOf(R.array.phrase_verbs),
+    ) {
+
+        override fun toNew(markColor: MarkColor): PatternGroupResource = copy(markColor = markColor)
+    }
+
+    @Serializable
     data class WeekPatternGroupResource(
         override val markColor: MarkColor = MarkColor.Non,
     ) : PatternGroupResource(

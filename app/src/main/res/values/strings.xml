@@ -6667,4 +6667,332 @@
         <item>Однако я также признаю/осознаю, что некоторые задачи могут быть трудоёмкими.==However, I also recognize that some tasks can be time-consuming.</item>
         <item>Я считаю командную работу необходимой в своей роли, поскольку она делает процесс разработки более приятным.==I consider teamwork to be essential in my role, as it makes the development process more enjoyable.</item>
     </string-array>
+    
+    <string-array name="linkers_of_addition">
+        <item>Моя работа полезная (вознаграждающая), кроме того, она требует быть стрессоустойчивым == My job is rewarding, besides, it requires being stress-resistant.</item>
+        <item>Я подаю заявку на новую работу, кроме того, я стараюсь улучшить перспективы трудоустройства == I am applying for a new job, besides, I try to improve my job prospects.</item>
+        <item>Я участвую в проектах, кроме того, я ответсвенный за команду == I take part in projects, besides, I am in charge of a team.</item>
+        <item>Я чувствую себя в безопасности, кроме того, у меня есть надежные коллеги == I feel secure, besides, I have reliable colleagues.</item>
+
+        <item>Моя работа требовательная, и к тому же я обязан быть осведомлен о деталям == My job is demanding, and on top of that, I must be aware of the details.</item>
+        <item>Я работаю в отделе логистики, и к тому же я контролирую транспортные маршруты == I work at the logistics department, and on top of that, I oversee the transport routes.</item>
+        <item>Я чувствую измотаным после работы, и к тому же приходится справляться со стрессом == I feel exhausted after work, and on top of that, I have to handle stress.</item>
+        <item>Я работаю с людьми, и к тому же я должен строить взаимопонимание с членами команды == I work with people, and on top of that, I have to build rapport with the team members.</item>
+
+        <item>Он отвечает за обслуживание клиентов, а также за руководство командой. == He is responsible for handling customers as well as overseeing a team.</item>
+        <item>Она участвует в проектах, а также работает с клиентами. == She takes part in projects as well as working with clients.</item>
+        <item>Он имеет дело с жалобами, а также занимается (обрабатывает) продажами. == He deals with complaints as well as handling sales.</item>
+        <item>Она специализируется на маркетинге, а также на разработке. == She specializes in marketing as well as developing.</item>
+
+        <item>Помимо изматывания, моя работ скучная == As well as being exhausting, my job is dull.</item>
+        <item>Помимо отклика на работу, я обновил свое резюме == As well as applying for a job, I updated my CV.</item>
+        <item>Помимо борьбы со стрессом, мне нужно планировать всё заранее == As well as combating stress, I need to plan everything in beforehand.</item>
+        <item>Помимо выполнения обязанностей, я участвую в обучении сотрудников == As well as handling responsibilities, I take part in training employees.</item>
+
+        <item>Моя работа рутинная, в дополнение к этому она неинтересная == My job is routine, in addition to that, it is uninteresting.</item>
+        <item>Я участвую в проектах, в дополнение к этому я помогаю новичкам == I take part in projects, in addition to that, I help newcomers.</item>
+        <item>Я обязан быть осведомлен о проблемах, в дополнение к этому я решаю их == I must be aware of the issues, in addition to that, I address them.</item>
+        <item>Я работаю в этой сфере, в дополнение к этому я консультирую коллег == I work in this field, in addition to that, I consult my colleagues.</item>
+
+        <item>Я обсуждаю вопросы/дела с коллегами, и также участвую в собраниях == I discuss the matter with colleagues and also take part in meetings.</item>
+        <item>Я откликаюсь на новую работу, и также применяю свои знания английского == I apply for a new job and also apply my knowledge of English.</item>
+        <item>Я работаю из офиса, и также иногда из дома == I work at the office and also sometimes at home.</item>
+        <item>Я имею дела с разными задачами, и также руковожу проектами == I deal with various tasks and also manage projects.</item>
+
+        <item>Я участвую в проектах, дополнительно, я ответственен за одним из них == I take part in projects, additionally, I am in charge of one of them.</item>
+        <item>Я борюсь с трудностями, дополнительно, я борюсь со стрессом == I struggle with some issues, additionally, I combat stress.</item>
+        <item>Я работаю в этой компании, дополнительно, я сотрудничаю с другой командой == I work for this company, additionally, I collaborate with another team.</item>
+        <item>Я ответственный за рекрутинг, дополнительно, я провожу тренинги == I am responsible for recruiting, additionally, I conduct trainings.</item>
+
+        <item>Моя работа полезная (вознаграждающая), более того, она помогает мне повысить самооценку == My job is rewarding, moreover, it helps me boost self-esteem.</item>
+        <item>Я работаю в комфортной среде, более того, я полагаюсь на свою команду == I work in a comfortable environment, moreover, I rely on my team.</item>
+        <item>Моя работа ответственная, более того, она требует концентрации == My job is responsible, moreover, it requires concentration.</item>
+        <item>Я развиваю свои навыки, более того, я стремлюсь к карьерному росту == I develop my skills, moreover, I pursue a career.</item>
+
+        <item>Я занимаюсь отчетами, и что ещё, я решаю вопросы клиентов == I handle reports, what\'s more, I address customer issues.</item>
+        <item>Я участвую в обсуждениях, и что ещё, я принимаю решения == I take part in discussions, what\'s more, I make decisions.</item>
+        <item>Я применяю знания английского, и что ещё, я обучаю других == I apply my knowledge of English, what\'s more, I train others.</item>
+        <item>Я чувствую себя в безопасности, и что ещё, я справляюсь с давлением == I feel secure, what\'s more, I handle pressure.</item>
+
+        <item>Помимо рутины, моя работа включает и общение с клиентами == Apart from the routine, my job involves communicating with clients.</item>
+        <item>Помимо поездок, моя работа требует подготовку отчетов == Apart from commuting, my job requires preparing reports.</item>
+        <item>Помимо стресса, у моей работы есть и преимущества == Apart from stress, my job has advantages too.</item>
+        <item>Помимо презентаций, я участвую в обучении персонала == Apart from presentations, I take part in staff training.</item>
+
+        <item>Более того, я участвую в проектах и развиваю лидерские качества == Furthermore, I take part in projects and develop leadership skills.</item>
+        <item>Более того, моя работа сложная (исрытывающаю) и она изматывающая == Furthermore, my job is challenging and exhausting.</item>
+        <item>Более того, я обсуждаю проблемы и предлагаю решения == Furthermore, I discuss the matter and propose solutions.</item>
+        <item>Более того, я развиваю осведомленность и помогаю другим стать уверенными == Furthermore, I build awareness and help others become confident.</item>
+
+        <item>Я не только работаю в офисе, но также дома == I not only work at the office but also at home.</item>
+        <item>Я не только обсуждаю дела, но также решаю поблемы == I not only discuss the matter but also address the issue.</item>
+        <item>Я не только откликаюсь на работу, но также использую знания английского == I not only apply for a job but also apply my knowledge of English.</item>
+        <item>Я не только справляюсь со стрессом, но также поддерживаю других == I not only handle stress but also support others.</item>
+
+        <item>Еще одно преимущество моей работы — это гибкий график == Another advantage of my job is a flexible schedule.</item>
+        <item>Еще один недостаток моей работы — это сильная загруженность == Another drawback of my job is heavy workload.</item>
+        <item>Еще одна причина откликнутся на работу — улучшение карьерных перспектив == Another reason to apply for a new job is the improvement of career prospects.</item>
+        <item>Еще одна цель — преуспеть в этом начинании == Another goal is to succeed in this endeavor.</item>
+    </string-array>
+
+    <string-array name="gerunds_and_infinitives_with_verbs">
+        <item>Я наслаждался проживанием во Франции.==I enjoyed living in France.</item>
+        <item>Мне хочется посмотреть фильм сегодня вечером.==I fancy seeing a film tonight.</item>
+        <item>Мы обсуждали совместный выход на каникулы.==We discussed going on holiday together.</item>
+        <item>Мне не нравится ждать автобусы.==I dislike waiting for buses.</item>
+        <item>Мы закончили подготовку к встрече.==We’ve finished preparing for the meeting.</item>
+        <item>Я не против прийти рано.==I don’t mind coming early.</item>
+        <item>Он предложил остановиться в Гранд Отеле.==He suggested staying at the Grand Hotel.</item>
+        <item>Они рекомендовали встретиться раньше.==They recommended meeting earlier.</item>
+        <item>Он продолжал работать, хотя чувствовал себя плохо.==He kept working, although he felt ill.</item>
+        <item>Она избегала разговаривать с начальницей.==She avoided talking to her boss.</item>
+        <item>Она скучает по жизни радом с пляжом.==She misses living near the beach.</item>
+        <item>Я оценил её помощь мне.==I appreciated her helping me.</item>
+        <item>Он задержала выполнение налогов.==He delayed doing his taxes.</item>
+        <item>Он отложил возвращение в Париж.==He postponed returning to Paris.</item>
+        <item>Она практиковалась в пении песни.==She practised singing the song.</item>
+        <item>Она рассматривала переезд в Нью-Йорк.==She considered moving to New York.</item>
+        <item>Он не выносит, когда она курит в офисе.==He can’t stand her smoking in the office.</item>
+        <item>Он не может не говорить так громко.==He can’t help talking so loudly.</item>
+        <item>Он рисковал быть пойманным.==He risked being caught.</item>
+        <item>Он признал жульничество на тесте.==He admitted cheating on the test.</item>
+        <item>Он отрицал совершение преступления.==He denied committing the crime.</item>
+        <item>Он упомянул, что учился в этом колледже.==He mentioned going to that college.</item>
+        <item>Он представляет, как будет работать там однажды.==He imagines working there one day.</item>
+        <item>Я терпел её разговоры.==I tolerated her talking.</item>
+        <item>Я понимаю, что он ушёл с работы.==I understand his quitting.</item>
+        <item>Работа включает поездки в Японию раз в месяц.==The job involves travelling to Japan once a month.</item>
+        <item>Он завершил ремонт дома.==He completed renovating the house.</item>
+        <item>Он сообщил, что она украла деньги.==He reported her stealing the money.</item>
+        <item>Я предвидел/предвосхетил, что опоздаю.==I anticipated arriving late.</item>
+        <item>Том вспомнил, как использовал кредитку в магазине.==Tom recalled using his credit card at the store.</item>
+
+        <item>Она согласилась сделать презентацию на встрече.==She agreed to give a presentation at the meeting.</item>
+        <item>Я попросил уйти рано / Я попросил его уйти рано.==I asked to leave early / I asked him to leave early.</item>
+        <item>Мы решили поужинать вне дома.==We decided to go out for dinner.</item>
+        <item>Он помог убрать кухню / Он помог своему соседу убрать кухню.==He helped to clean the kitchen / he helped his flatmate to clean the kitchen.</item>
+        <item>Она планирует купить новую квартиру в следующем году.==She plans to buy a new apartment next year.</item>
+        <item>Я надеюсь сдать экзамен.==I hope to pass the exam.</item>
+        <item>Они учатся петь.==They are learning to sing.</item>
+        <item>Я хочу пойти на вечеринку / Я хочу, чтобы он пошёл на вечеринку.==I want to come to the party / I want him to come to the party.</item>
+        <item>Я хотел бы увидеть её сегодня вечером / Я хотел бы, чтобы ты увидел её сегодня вечером.==I would like to see her tonight / I would like you to see her tonight.</item>
+        <item>Мы пообещали не опаздывать.==We promised not to be late.</item>
+        <item>Мы не можем позволить себе поехать в отпуск.==We can’t afford to go on vacation.</item>
+        <item>Он сумел открыть дверь без ключа.==He managed to open the door without the key.</item>
+        <item>Они подготовились к сдаче теста / Учителя подготовили студентов к сдаче теста.==They prepared to take the test / the teachers prepared the students to take the test.</item>
+        <item>Он потребовал поговорить с мистером Харрисом.==He demanded to speak to Mr. Harris.</item>
+        <item>Я выбрал помочь.==I chose to help.</item>
+        <item>Фрэнк предложил отвезти нас в супермаркет.==Frank offered to drive us to the supermarket.</item>
+        <item>Она подождала, чтобы купить билет в кино.==She waited to buy a movie ticket.</item>
+        <item>Я бы ненавидел быть опоздавшим / Я бы ненавидел, если бы ты опоздал.==I’d hate to be late / I’d hate you to be late.</item>
+        <item>Я бы хотел прийти / Я бы хотел, чтобы он пришел.==I’d love to come / I’d love him to come.</item>
+        <item>Казалось, Нэнси была разочарована.==Nancy seemed to be disappointed.</item>
+        <item>Они ожидают прибыть рано / Они ожидают, что Джули прибудет рано.==They expect to arrive early / they expect Julie to arrive early.</item>
+        <item>Мы намерены навестить тебя следующей весной.==We intend to visit you next spring.</item>
+        <item>Ребёнок притворился монстром.==The child pretended to be a monster.</item>
+        <item>Охранник отказался позволить им войти в здание.==The guard refused to let them enter the building.</item>
+        <item>Он склонен быть немного застенчивым.==He tends to be a little shy.</item>
+        <item>Я предпочёл бы сделать это / Я предпочёл бы, чтобы он сделал это.==I’d prefer to do it / I’d prefer him to do it.</item>
+        <item>Он заслуживает попасть в тюрьму.==He deserves to go to jail.</item>
+        <item>Казалось, его здоровье улучшилось.==His health appeared to be better.</item>
+        <item>Наоми договорилась остаться у своей кузины в Майами.==Naomi arranged to stay with her cousin in Miami.</item>
+        <item>Она заявила, что является принцессой.==She claimed to be a princess.</item>
+
+        <item>Я помню, как ходил на пляж, когда был ребёнком.==I remember going to the beach when I was a child.</item>
+        <item>Он помнит, как закрыл дверь.==He remembers closing the door.</item>
+        <item>Я не забыл купить молоко.==I remembered to buy milk.</item>
+        <item>Она не забыла отправить открытку бабушке.==She remembered to send a card to her grandmother.</item>
+
+        <item>Мы действительно учили эту тему раньше? Я забыл, что читал об этом.==Have we really studied this topic before? I forget reading about it.</item>
+        <item>Я сказал брату, что мы провели Рождество у бабушки в 1985 году, но он забыл, что был там.==I told my brother that we’d spent Christmas at Granny’s house in 1985, but he’d forgotten going there.</item>
+        <item>Я забыл позвонить маме.==I forgot to call my mother.</item>
+        <item>Она всё время забывает принести его книгу обратно.==She keeps forgetting to bring his book back.</item>
+
+        <item>Я хотел бросить курить, поэтому попробовал использовать никотиновые пластыри.==I tried using nicotine patches.</item>
+        <item>Она попыталась отказаться от шоколада, но это не помогло ей похудеть.==She tried giving up chocolate, but it didn\'t help her lose weight.</item>
+        <item>Я попробую нести чемодан, но он выглядит слишком тяжёлым для меня.==I\'ll try to carry the suitcase, but it looks too heavy for me.</item>
+        <item>Она попыталась успеть на автобус, но не смогла быстро бежать.==She tried to catch the bus, but she couldn’t run fast enough.</item>
+
+        <item>Я попробовал отказаться от шоколада, но это не помогло мне почувствовать себя лучше.==I tried giving up chocolate, but it didn\'t make me feel more healthy.</item>
+        <item>Я пытался отказаться от шоколада, но это было слишком трудно.==I tried to give up chocolate, but it was too hard.</item>
+        <item>Было слишком жарко в комнате. Я попробовал открыть окно.==It was too hot in the room. I tried opening the window.</item>
+        <item>Я попытался открыть окно, но не смог, потому что оно заело.==I tried to open the window, but I couldn\'t because it was stuck.</item>
+
+        <item>Я прекратил работать, когда ждал ребёнка.==I stopped working when I was expecting a baby.</item>
+        <item>Моя бабушка перестала водить машину, когда ей было 85.==My grandmother stopped driving when she was 85.</item>
+        <item>Когда босс вошёл в комнату, я перестал сидеть в интернете.==My boss came into the room, so I stopped browsing the internet.</item>
+        <item>Была пожарная тревога, и я перестал есть и вышел.==There was a fire alarm, so I stopped eating and went outside.</item>
+        <item>Я остановился, чтобы пообедать.==I stopped to eat lunch.</item>
+        <item>Она делала покупки, и остановилась, чтобы выпить кофе.==She was shopping and she stopped to get a cup of coffee.</item>
+
+        <item>Я бросил курить.==I stopped smoking.</item>
+        <item>Я остановился, чтобы покурить.==I stopped to smoke.</item>
+
+        <item>Я сожалею, что лёг спать так поздно.==I regret going to bed so late.</item>
+        <item>Она сожалеет, что бросила школу в 16 лет.==She regrets leaving school when she was sixteen.</item>
+        <item>С сожалением сообщаю, что поезд задерживается.==I regret to tell you that the train has been delayed.</item>
+        <item>Компания с сожалением сообщает сотрудникам, что офис в Лондоне закроется в следующем году.==The company regrets to inform employees that the London office will close next year.</item>
+    </string-array>
+    <string-array name="phrase_verbs">
+        <item>У меня закончилось молоко.==I\'m out of milk.</item>
+        <item>У неё закончилось времени.==She\'s out of time.</item>
+
+        <item>Он сделал это из уважения.==He did it out of respect.</item>
+        <item>Она закричала от страха.==She screamed out of fear.</item>
+
+        <item>Один из пяти выбрал зелёный.==One out of five chose green.</item>
+        <item>Трое из нас были заняты.==Three out of us were busy.</item>
+
+        <item>У нас закончился бензин.(process)==We ran out of gas.</item>
+        <item>Я боюсь, что у меня заканчиваются деньги.==I\'m afraid I\'m running out of money.</item>
+        <item>У нас заканчивается время.==We are running out of time.</item>
+
+        <item>Все пришли, кроме Джона.==Everyone came except for John.</item>
+        <item>Мне нравятся все фрукты, кроме бананов.==I like all fruits except for bananas.</item>
+        <item>Кроме дождя, день был хороший.==Except for the rain, it was a nice day.</item>
+
+        <item>Он начал как лучший ученик в классе, а закончил турьмой==He started as the class\' best pupil, but ended up with a jail.</item>
+        <item>Он закончил тем что потерял все деньги.==He ended up losing all his money.</item>
+        <item>Они закончил тем что поженилися.==They ended up getting married.</item>
+
+        <item>Поторопись, или мы опоздаем!==Hurry up or we’ll be late!</item>
+        <item>Ты можешь поторопиться немного?==Can you hurry up a bit?</item>
+        <item>Поторопись и доешь еду.==Hurry up and finish your food.</item>
+
+        <item>Я не успеваю за тобой.==I can\'t keep up with you.</item>
+        <item>Она поспевает за самыми последними новостями.==She keeps up with the latest news.</item>
+        <item>Постарайся поспевать за группой.==Try to keep up with the group.</item>
+
+        <item>Пожалуйста, впусти меня.==Please let me in.</item>
+        <item>Они впустили собаку.==They let the dog in.</item>
+        <item>Он впустил её через заднюю дверь.==He let her in through the back door.</item>
+
+        <item>Она издала крик.==She let out a scream.</item>
+        <item>Выпусти кошку.==Let the cat out.</item>
+        <item>Он вздохнул.==He let out a sigh.</item>
+
+        <item>Не подведи меня.==Don\'t let me down.</item>
+        <item>Она почувствовала себя подведённой подругой.==She felt let down by her friend.</item>
+        <item>Я пообещал не подводить его.==I promised not to let him down.</item>
+
+        <item>Мне хочется пиццы.==I feel like pizza.</item>
+        <item>Тебе хочется пойти погулять?==Do you feel like going for a walk?</item>
+        <item>Мне не хочется работать.==I don’t feel like working.</item>
+
+        <item>Он запал на неё.==He fell for her.</item>
+        <item>Я не могу поверить, что ты на это повёлся.==I can’t believe you fell for that.</item>
+        <item>Она запала на своего друга.==She fell for her friend.</item>
+
+        <item>Я сочувствую тебе.==I feel for you.</item>
+        <item>Мы все сочувствуем его семье.==We all feel for his family.</item>
+        <item>Я сочувствую твоей боли.==I feel for your pain.</item>
+
+        <item>Я наконец разобрался (понял) с это.==I finally figured it out.</item>
+        <item>Ты уже разобрался с заданием?==Have you figured out the task?</item>
+        <item>Она не может разобраться (понять), как это работает.==She can\'t figure out how it works.</item>
+
+        <item>Я присмотрю за твоей собакой.==I\'ll look after your dog.</item>
+        <item>Кто будет присматривать за детьми?==Who will look after the kids?</item>
+        <item>Он присматривает за своей бабулеу.==He looks after his grandma.</item>
+
+        <item>Он ускользнул, пока никто не смотрел.==He slipped away while no one was looking.</item>
+        <item>Гость незаметно ускользнул (ушёл).==The guest slipped away quietly.</item>
+        <item>Время ускользает.==Time is slipping away.</item>
+
+        <item>Он выскочил (выскользнул) из комнаты.==He slipped out of the room.</item>
+        <item>Кот выскочил (выскользнул) наружу.==The cat slipped out.</item>
+        <item>Она выскочила (выскользнула), ничего не сказав.==She slipped out without saying anything.</item>
+
+        <item>Её улыбка постепенно исчезла.==Her smile faded away.</item>
+        <item>Свет медленно исчез.==The light faded away slowly.</item>
+        <item>Музыка исчезла вдалеке.==The music faded away in the distance.</item>
+
+        <item>Продолжай в том же духе.==Carry on like that.</item>
+        <item>Он продолжил работать.==He carried on working.</item>
+        <item>Не останавливайся — продолжай.==Don\'t stop — carry on.</item>
+
+        <item>Мы разобрались с этой проблемой.==We sorted out that issue.</item>
+        <item>Ты уладил конфликт?==Did you sort out the conflict?</item>
+        <item>Мне нужно разобраться с делами.==I need to sort things out.</item>
+
+        <item>Я догнал тебя.==I caught up with you.</item>
+        <item>Она догнала свою команду.==She caught up with her team.</item>
+        <item>Ты наверстал по работе?==Did you catch up on work?</item>
+
+        <item>Примерь эту рубашку.==Try on this shirt.</item>
+        <item>Я хочу примерить это платье.==I want to try on this dress.</item>
+        <item>Он примерил новые ботинки.==He tried on the new shoes.</item>
+
+        <item>Убери свои игрушки.==Put away your toys.</item>
+        <item>Она убрала книги.==She put away the books.</item>
+        <item>Пожалуйста, убери посуду.==Please put away the dishes.</item>
+
+        <item>Она накинула куртку и ушла.==She threw on a jacket and left.</item>
+        <item>Я просто накину свитер.==I\'ll just throw on a sweater.</item>
+        <item>Он быстро накинул пальто.==He quickly threw on a coat.</item>
+
+        <item>Самолёт взлетел.==The plane took off.</item>
+        <item>Он снял свою куртку.==He took off his jacket.</item>
+        <item>Когда ты берёшь отпуск?==When do you take off for vacation?</item>
+
+        <item>Я перепутал их имена.==I mixed up their names.</item>
+        <item>Они перепутали коробки.==They mixed up the boxes.</item>
+        <item>Извини, я всё перепутал.==Sorry, I mixed everything up.</item>
+
+        <item>Что тебя задерживает?==What’s holding you up?</item>
+        <item>Извините за задержку (заминку).==Sorry for the hold-up.</item>
+        <item>Дорожное движение задержало нас.==Traffic held us up.</item>
+
+        <item>Он сдержал слёзы.==He fought back tears.</item>
+        <item>Она пыталась сдержать злость.==She tried to fight back anger.</item>
+        <item>Она отбилась от нападающего.==She fought back against the attacker.</item>
+
+        <item>Не огрызайся.==Don’t talk back.</item>
+        <item>Он огрызнулся на маму.==He talked back to his mom.</item>
+        <item>Тебе не следует дерзить учителю.==You shouldn\'t talk back to the teacher.</item>
+
+        <item>Я вернулся домой.==I got back home.</item>
+        <item>Он получил свою книгу обратно.==He got his book back.</item>
+        <item>Когда ты вернёшься?==When will you get back?</item>
+
+        <item>Я отстаю от графика.==I\'m getting behind schedule.</item>
+        <item>Ты отстаёшь с заданиями.==You\'re getting behind on your tasks.</item>
+        <item>Мы не можем отставать.==We can’t get behind.</item>
+
+        <item>Он обогнал нас.==He overtook us.</item>
+        <item>Машина обогнала автобус.==The car overtook the bus.</item>
+        <item>Они обогнали своих соперников.==They overtook their rivals.</item>
+
+        <item>Я справляюсь (обхожусь) без машины.==I get by without a car.</item>
+        <item>Она может обходится без сахара.==She can get by without sugar.</item>
+        <item>Ты сможешь справиться без него?==Can you get by without him?</item>
+
+        <item>Он пережил (преодолел) развод.==He got over the divorce.</item>
+        <item>Ты уже оправился (превозмог) от болезни?==Have you got over the illness?</item>
+        <item>Она находит трудным преодолеть это.==She finds it hard to get over it.</item>
+
+        <item>Он сбежал из дома.==He got away from home.</item>
+        <item>Им удалось выбраться.==They managed to get away.</item>
+        <item>Она выбралась на выходные.==She got away for the weekend.</item>
+
+        <item>Мы хорошо ладим.==We get along well.</item>
+        <item>Ты ладишь с братом?==Do you get along with your brother?</item>
+        <item>Они не ладят друг с другом.==They don\'t get along with each other.</item>
+
+        <item>Он ясно донес свою мысль.==He got his point across clearly.</item>
+        <item>Ты можешь объяснить (донести) это?==Can you get it across?</item>
+        <item>Он находи трудным донести идеи.==He finds it hard to get ideas across.</item>
+
+        <item>Я попробую починить это.==I\'ll have a go at fixing it.</item>
+        <item>Ты хочешь попробовать?==Do you want to have a go at it?</item>
+        <item>Он попробовал решить задачу.==He had a go at solving the problem.</item>
+
+        <item>Я наконец занялся этим.==I got around to it finally.</item>
+        <item>Ты уже занялся домашкой?==Did you get around to the homework?</item>
+        <item>Я еще никак не займусь этим.==I haven’t got around to it yet.</item>
+
+        <item>Я начал заниматься бегом.==I took up running.</item>
+        <item>Она начал заниматься живописью.==She took up painting.</item>
+        <item>Он начал заниматся игрой на гитаре.==He took up playing the guitar.</item>
+    </string-array>
 </resources>

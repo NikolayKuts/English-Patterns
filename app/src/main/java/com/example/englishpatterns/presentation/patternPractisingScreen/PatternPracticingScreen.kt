@@ -1,6 +1,10 @@
 package com.example.englishpatterns.presentation.patternPractisingScreen
 
+import android.content.Context
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
+import android.os.VibrationEffect
+import android.os.Vibrator
+import android.os.VibratorManager
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
 import androidx.annotation.DrawableRes
@@ -37,7 +41,6 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.text.selection.TextSelectionColors
@@ -70,6 +73,7 @@ import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalTextToolbar
 import androidx.compose.ui.platform.TextToolbar
 import androidx.compose.ui.platform.TextToolbarStatus
@@ -325,6 +329,23 @@ private fun PatterGroupNavigationButton(
     )
 }
 
+fun Context.vibrateShort() {
+    val vibrator = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+        (getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager).defaultVibrator
+    } else {
+        @Suppress("DEPRECATION")
+        getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+    }
+
+    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+        val effect = VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE)
+        vibrator.vibrate(effect)
+    } else {
+        @Suppress("DEPRECATION")
+        vibrator.vibrate(100) // milliseconds
+    }
+}
+
 @Composable
 private fun BoxScope.PatternContent(
     practicingPatternUnit: PracticingPatternUnit?,
@@ -339,9 +360,12 @@ private fun BoxScope.PatternContent(
         mutableStateOf(true)
     }
 
+    val context = LocalContext.current
+
     LaunchedEffect(key1 = position) {
         if (position == 0) {
             rotationState = !rotationState
+            context.vibrateShort()
         }
     }
 

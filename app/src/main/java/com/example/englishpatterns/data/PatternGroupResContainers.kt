@@ -125,7 +125,12 @@ data class PatternGroupResContainers(
             NounOfPossessivePronoun(),
             JobPhrasesCollocations(),
             DescribingJobsAdjectives(),
-            WeekPatternGroupResource()
+            AdvancedPresentSimpleAndContinuous(),
+            TalkingAboutJobsVocabulary(),
+            AdditionLinkers(),
+            GerundsAndInfinitivesWithVerbs(),
+            PhrasalVerbs(),
+            WeekPatternGroupResource(),
         )
 
         private fun composedDefaultPatternGroupResContainers(
