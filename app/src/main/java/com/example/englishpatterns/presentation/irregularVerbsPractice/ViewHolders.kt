@@ -34,6 +34,12 @@ sealed interface IrregularVerbsGroupViewHolder {
         override val subGroups: List<PartiallyConsistentSubGroupViewHolder>,
         override val isSelected: Boolean = false
     ) : IrregularVerbsGroupViewHolder, SubGroupViewHolderProvider<PartiallyConsistentSubGroupViewHolder>
+
+    data class Mixed(
+        override val type: IrregularVerbGroupType,
+        override val subGroups: List<MixedSubGroupViewHolder>,
+        override val isSelected: Boolean = false
+    ) : IrregularVerbsGroupViewHolder, SubGroupViewHolderProvider<MixedSubGroupViewHolder>
 }
 
 data class FullyChangingSubGroupViewHolder(
@@ -42,6 +48,11 @@ data class FullyChangingSubGroupViewHolder(
 ) : IrregularVerbsGroupViewHolder.SubGroupViewHolder
 
 data class PartiallyConsistentSubGroupViewHolder(
+    override val subGroupName: String,
+    override val isSelected: Boolean = false,
+) : IrregularVerbsGroupViewHolder.SubGroupViewHolder
+
+data class MixedSubGroupViewHolder(
     override val subGroupName: String,
     override val isSelected: Boolean = false,
 ) : IrregularVerbsGroupViewHolder.SubGroupViewHolder

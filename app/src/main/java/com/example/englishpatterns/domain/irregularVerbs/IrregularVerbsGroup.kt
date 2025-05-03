@@ -1,9 +1,10 @@
 package com.example.englishpatterns.domain.irregularVerbs
 
 import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType.FullyChanging
-import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType.PartiallyChanging
+import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType.SecondChanging
 import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType.PartiallyConsistent
 import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType.Unchanging
+import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbsGroup.PartiallyConsistent.SubGroup
 
 sealed class IrregularVerbsGroup(val type: IrregularVerbGroupType) {
 
@@ -29,7 +30,7 @@ sealed class IrregularVerbsGroup(val type: IrregularVerbGroupType) {
     data class Unchanging(val details: List<VerbDetails>) : IrregularVerbsGroup(type = Unchanging)
 
     data class PartiallyChanging(val details: List<VerbDetails>) :
-        IrregularVerbsGroup(type = PartiallyChanging)
+        IrregularVerbsGroup(type = SecondChanging)
 
     data class FullyChanging(
         val first: SubGroup.First,
@@ -44,7 +45,7 @@ sealed class IrregularVerbsGroup(val type: IrregularVerbGroupType) {
         sealed class SubGroup(
             override val name: String,
             override val details: List<VerbDetails>
-        ): SubGroupNameProvider, SubGroupDetailsProvider {
+        ) : SubGroupNameProvider, SubGroupDetailsProvider {
 
             data class First(
                 val data: List<VerbDetails>,
@@ -97,7 +98,7 @@ sealed class IrregularVerbsGroup(val type: IrregularVerbGroupType) {
         val seventh: SubGroup.Seventh,
         val eighth: SubGroup.Eighth,
     ) : IrregularVerbsGroup(type = PartiallyConsistent),
-        SubGroupProvider<PartiallyConsistent.SubGroup> {
+        SubGroupProvider<SubGroup> {
 
         sealed class SubGroup(
             override val name: String,
@@ -148,5 +149,50 @@ sealed class IrregularVerbsGroup(val type: IrregularVerbGroupType) {
                 seventh,
                 eighth,
             )
+    }
+
+    data class Mixed(
+        val unchanging: SubGroup.Unchanging,
+        val secondChanging: SubGroup.SecondChanging,
+        val fullyChanging: SubGroup.FullyChanging,
+        val partiallyConsistent: SubGroup.PartiallyConsistent,
+        val endChanging: SubGroup.EndChanging,
+    ) : IrregularVerbsGroup(type = IrregularVerbGroupType.Mixed), SubGroupProvider<Mixed.SubGroup> {
+
+        sealed class SubGroup(
+            override val name: String,
+            override val details: List<VerbDetails>
+        ) : SubGroupNameProvider, SubGroupDetailsProvider {
+
+            data class Unchanging(
+                val data: List<VerbDetails>
+            ) : SubGroup(name = "○○○", details = data)
+
+            data class SecondChanging(
+                val data: List<VerbDetails>
+            ) : SubGroup(name = "○∆○", details = data)
+
+            data class FullyChanging(
+                val data: List<VerbDetails>
+            ) : SubGroup(name = "○∆□", details = data)
+
+            data class PartiallyConsistent(
+                val data: List<VerbDetails>
+            ) : SubGroup(name = "○∆∆", details = data)
+
+            data class EndChanging(
+                val data: List<VerbDetails>
+            ) : SubGroup(name = "○○∆", details = data)
+        }
+
+        override val subGroups: List<SubGroup>
+            get() = listOf(
+                unchanging,
+                secondChanging,
+                fullyChanging,
+                partiallyConsistent,
+                endChanging,
+            )
+
     }
 }

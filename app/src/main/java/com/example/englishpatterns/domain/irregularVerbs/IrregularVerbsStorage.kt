@@ -1,8 +1,9 @@
 package com.example.englishpatterns.domain.irregularVerbs
 
+import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType.EndChanging
 import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType.FullyChanging
-import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType.PartiallyChanging
 import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType.PartiallyConsistent
+import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType.SecondChanging
 import com.example.englishpatterns.domain.irregularVerbs.IrregularVerbGroupType.Unchanging
 
 object IrregularVerbsStorage {
@@ -82,28 +83,28 @@ object IrregularVerbsStorage {
         )
     )
 
-    val partiallyChanging = IrregularVerbsGroup.PartiallyChanging(
+    val secondChanging = IrregularVerbsGroup.PartiallyChanging(
         details = listOf(
             VerbDetails(
                 word = "Становиться",
                 v1 = Verb(word = "become", ipa = "[bɪ'kʌm]"),
                 v2 = Verb(word = "became", ipa = "[bɪ'keɪm]"),
                 v3 = Verb(word = "become", ipa = "[bɪ'kʌm]"),
-                type = PartiallyChanging
+                type = SecondChanging
             ),
             VerbDetails(
                 word = "Приходить",
                 v1 = Verb(word = "come", ipa = "[kʌm]"),
                 v2 = Verb(word = "came", ipa = "[keɪm]"),
                 v3 = Verb(word = "come", ipa = "[kʌm]"),
-                type = PartiallyChanging
+                type = SecondChanging
             ),
             VerbDetails(
                 word = "Бежать",
                 v1 = Verb(word = "run", ipa = "[rʌn]"),
                 v2 = Verb(word = "ran", ipa = "[ræn]"),
                 v3 = Verb(word = "run", ipa = "[rʌn]"),
-                type = PartiallyChanging
+                type = SecondChanging
             ),
         )
     )
@@ -455,10 +456,10 @@ object IrregularVerbsStorage {
                     type = PartiallyConsistent
                 ),
                 VerbDetails(
-                    word = "Мечтать, дремать",
+                    word = "* Мечтать, дремать",
                     v1 = Verb(word = "dream", ipa = "[dri:m]"),
-                    v2 = Verb(word = "dreamt", ipa = "[dremt]"),
-                    v3 = Verb(word = "dreamt", ipa = "[dremt]"),
+                    v2 = Verb(word = "dreamt/dreamed", ipa = "[dremt]"),
+                    v3 = Verb(word = "dreamt/dreamed", ipa = "[dremt]"),
                     type = PartiallyConsistent
                 ),
             )
@@ -642,6 +643,410 @@ object IrregularVerbsStorage {
             )
         )
     )
+    // bleed, blow, burn, deal, dig, forbid, hang, hide, hold, seek, smell, stick, withdraw, arise, awake, bear, beat, bend, bet, bind, breed, broadcast, cling, creep, deal, flee, grind, leap, light, overcome, prove, quit, rid, saw, seek, sew, shrink, sink, slide, slay, spit, split, spoil, spring, sting, stink, swear, swing, tear, thrust, tread, wind, wring, forbear, string,
 
-    val irregularVerbsGroups = unchanging + partiallyChanging + fullyChanging + partiallyConsistent
+    val mixed = IrregularVerbsGroup.Mixed(
+        unchanging = IrregularVerbsGroup.Mixed.SubGroup.Unchanging(
+            data = listOf(
+                VerbDetails(
+                    word = "Делать ставку",
+                    v1 = Verb(word = "bet", ipa = "[bet]"),
+                    v2 = Verb(word = "bet", ipa = "[bet]"),
+                    v3 = Verb(word = "bet", ipa = "[bet]"),
+                    type = Unchanging
+                ),
+                VerbDetails(
+                    word = "Транслировать",
+                    v1 = Verb(word = "broadcast", ipa = "[ˈbrɔːdkɑːst]"),
+                    v2 = Verb(word = "broadcast", ipa = "[ˈbrɔːdkɑːst]"),
+                    v3 = Verb(word = "broadcast", ipa = "[ˈbrɔːdkɑːst]"),
+                    type = Unchanging
+                ),
+                VerbDetails(
+                    word = "Бросать",
+                    v1 = Verb(word = "quit", ipa = "[kwɪt]"),
+                    v2 = Verb(word = "quit", ipa = "[kwɪt]"),
+                    v3 = Verb(word = "quit", ipa = "[kwɪt]"),
+                    type = Unchanging
+                ),
+                VerbDetails(
+                    word = "Избавляться",
+                    v1 = Verb(word = "rid", ipa = "[rɪd]"),
+                    v2 = Verb(word = "rid", ipa = "[rɪd]"),
+                    v3 = Verb(word = "rid", ipa = "[rɪd]"),
+                    type = Unchanging
+                ),
+                VerbDetails(
+                    word = "Разделять",
+                    v1 = Verb(word = "split", ipa = "[splɪt]"),
+                    v2 = Verb(word = "split", ipa = "[splɪt]"),
+                    v3 = Verb(word = "split", ipa = "[splɪt]"),
+                    type = Unchanging
+                ),
+//                VerbDetails(
+//                    word = "Резко толкнуть, вонзить, всадить",
+//                    v1 = Verb(word = "thrust", ipa = "[θrʌst]"),
+//                    v2 = Verb(word = "thrust", ipa = "[θrʌst]"),
+//                    v3 = Verb(word = "thrust", ipa = "[θrʌst]"),
+//                    type = Unchanging
+//                ),
+            ),
+        ),
+        secondChanging = IrregularVerbsGroup.Mixed.SubGroup.SecondChanging(
+            data = listOf(
+                VerbDetails(
+                    word = "Преодолевать",
+                    v1 = Verb(word = "overcome", ipa = "[ˌəʊvəˈkʌm]"),
+                    v2 = Verb(word = "overcame", ipa = "[ˌəʊvəˈkeɪm]"),
+                    v3 = Verb(word = "overcome", ipa = "[ˌəʊvəˈkʌm]"),
+                    type = SecondChanging
+                ),
+            )
+        ),
+        fullyChanging = IrregularVerbsGroup.Mixed.SubGroup.FullyChanging(
+            data = listOf(
+                VerbDetails(
+                    word = "Дуть",
+                    v1 = Verb(word = "blow", ipa = "[bloʊ]"),
+                    v2 = Verb(word = "blew", ipa = "[bluː]"),
+                    v3 = Verb(word = "blown", ipa = "[bloʊn]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Бросать, кинуть",
+                    v1 = Verb(word = "throw", ipa = "[θrəʊ]"),
+                    v2 = Verb(word = "threw", ipa = "[θruː]"),
+                    v3 = Verb(word = "thrown", ipa = "[θrəʊn]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Изымать",
+                    v1 = Verb(word = "withdraw", ipa = "[wɪðˈdrɔː]"),
+                    v2 = Verb(word = "withdrew", ipa = "[wɪðˈdruː]"),
+                    v3 = Verb(word = "withdrawn", ipa = "[wɪðˈdrɔːn]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Запрещать",
+                    v1 = Verb(word = "forbid", ipa = "[fərˈbɪd]"),
+                    v2 = Verb(word = "forbade", ipa = "[fərˈbeɪd]"),
+                    v3 = Verb(word = "forbidden", ipa = "[fərˈbɪdn]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Прятать",
+                    v1 = Verb(word = "hide", ipa = "[haɪd]"),
+                    v2 = Verb(word = "hid", ipa = "[hɪd]"),
+                    v3 = Verb(word = "hidden", ipa = "[ˈhɪdn]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Возникать",
+                    v1 = Verb(word = "arise", ipa = "[əˈraɪz]"),
+                    v2 = Verb(word = "arose", ipa = "[əˈroʊz]"),
+                    v3 = Verb(word = "arisen", ipa = "[əˈrɪzn]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Пробуждаться",
+                    v1 = Verb(word = "awake", ipa = "[əˈweɪk]"),
+                    v2 = Verb(word = "awoke", ipa = "[əˈwoʊk]"),
+                    v3 = Verb(word = "awoken", ipa = "[əˈwoʊkən]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Доказывать",
+                    v1 = Verb(word = "prove", ipa = "[pruːv]"),
+                    v2 = Verb(word = "proved", ipa = "[pruːvd]"),
+                    v3 = Verb(word = "proven", ipa = "[ˈpruːvən]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "* Пилить",
+                    v1 = Verb(word = "saw", ipa = "[sɔː]"),
+                    v2 = Verb(word = "sawed", ipa = "[sɔːd]"),
+                    v3 = Verb(word = "sawn/sawed", ipa = "[sɔːn]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "* Шить",
+                    v1 = Verb(word = "sew", ipa = "[soʊ]"),
+                    v2 = Verb(word = "sewed", ipa = "[soʊd]"),
+                    v3 = Verb(word = "sewn/sewed", ipa = "[soʊn]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Сжиматься",
+                    v1 = Verb(word = "shrink", ipa = "[ʃrɪŋk]"),
+                    v2 = Verb(word = "shrank", ipa = "[ʃræŋk]"),
+                    v3 = Verb(word = "shrunk", ipa = "[ʃrʌŋk]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Тонуть",
+                    v1 = Verb(word = "sink", ipa = "[sɪŋk]"),
+                    v2 = Verb(word = "sank", ipa = "[sæŋk]"),
+                    v3 = Verb(word = "sunk", ipa = "[sʌŋk]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Прыгать (более живо)",
+                    v1 = Verb(word = "spring", ipa = "[sprɪŋ]"),
+                    v2 = Verb(word = "sprang", ipa = "[spræŋ]"),
+                    v3 = Verb(word = "sprung", ipa = "[sprʌŋ]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Вонять",
+                    v1 = Verb(word = "stink", ipa = "[stɪŋk]"),
+                    v2 = Verb(word = "stank", ipa = "[stæŋk]"),
+                    v3 = Verb(word = "stunk", ipa = "[stʌŋk]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Выносить, вынашивать",
+                    v1 = Verb(word = "bear", ipa = "[beə(r)]"),
+                    v2 = Verb(word = "bore", ipa = "[bɔː(r)]"),
+                    v3 = Verb(word = "borne", ipa = "[bɔːn]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Клясться",
+                    v1 = Verb(word = "swear", ipa = "[sweə(r)]"),
+                    v2 = Verb(word = "swore", ipa = "[swɔː(r)]"),
+                    v3 = Verb(word = "sworn", ipa = "[swɔːn]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "Рвать",
+                    v1 = Verb(word = "tear", ipa = "[teə(r)]"),
+                    v2 = Verb(word = "tore", ipa = "[tɔː(r)]"),
+                    v3 = Verb(word = "torn", ipa = "[tɔːn]"),
+                    type = FullyChanging
+                ),
+                VerbDetails(
+                    word = "* Ступать, наступать",
+                    v1 = Verb(word = "tread", ipa = "[tred]"),
+                    v2 = Verb(word = "trod", ipa = "[trɒd]"),
+                    v3 = Verb(word = "trodden/trod", ipa = "[ˈtrɒdn]"),
+                    type = FullyChanging
+                ),
+//                VerbDetails(
+//                    word = "Воздерживаться",
+//                    v1 = Verb(word = "forbear", ipa = "[fɔːˈbeə(r)]"),
+//                    v2 = Verb(word = "forbore", ipa = "[fɔːˈbɔː(r)]"),
+//                    v3 = Verb(word = "forborne", ipa = "[fɔːˈbɔːn]"),
+//                    type = FullyChanging
+//                ),
+//                VerbDetails(
+//                    word = "Убивать (dragon)",
+//                    v1 = Verb(word = "slay", ipa = "[sleɪ]"),
+//                    v2 = Verb(word = "slew", ipa = "[sluː]"),
+//                    v3 = Verb(word = "slain", ipa = "[sleɪn]"),
+//                    type = FullyChanging
+//                ),
+            )
+        ),
+        partiallyConsistent = IrregularVerbsGroup.Mixed.SubGroup.PartiallyConsistent(
+            data = listOf(
+                VerbDetails(
+                    word = "Приклеивать",
+                    v1 = Verb(word = "stick", ipa = "[stɪk]"),
+                    v2 = Verb(word = "stuck", ipa = "[stʌk]"),
+                    v3 = Verb(word = "stuck", ipa = "[stʌk]"),
+                    type = PartiallyConsistent
+                ),
+//                VerbDetails(
+//                    word = "Цепляться, держаться, льнуть, прилипать",
+//                    v1 = Verb(word = "cling", ipa = "[klɪŋ]"),
+//                    v2 = Verb(word = "clung", ipa = "[klʌŋ]"),
+//                    v3 = Verb(word = "clung", ipa = "[klʌŋ]"),
+//                    type = PartiallyConsistent
+//                ),
+//                VerbDetails(
+//                    word = "Жалить",
+//                    v1 = Verb(word = "sting", ipa = "[stɪŋ]"),
+//                    v2 = Verb(word = "stung", ipa = "[stʌŋ]"),
+//                    v3 = Verb(word = "stung", ipa = "[stʌŋ]"),
+//                    type = PartiallyConsistent
+//                ),
+                VerbDetails(
+                    word = "Качаться",
+                    v1 = Verb(word = "swing", ipa = "[swɪŋ]"),
+                    v2 = Verb(word = "swung", ipa = "[swʌŋ]"),
+                    v3 = Verb(word = "swung", ipa = "[swʌŋ]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "Выжимать, скручивать",
+                    v1 = Verb(word = "wring", ipa = "[rɪŋ]"),
+                    v2 = Verb(word = "wrung", ipa = "[rʌŋ]"),
+                    v3 = Verb(word = "wrung", ipa = "[rʌŋ]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "Натягивать",
+                    v1 = Verb(word = "string", ipa = "[strɪŋ]"),
+                    v2 = Verb(word = "strung", ipa = "[strʌŋ]"),
+                    v3 = Verb(word = "strung", ipa = "[strʌŋ]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "Вешать",
+                    v1 = Verb(word = "hang", ipa = "[hæŋ]"),
+                    v2 = Verb(word = "hung", ipa = "[hʌŋ]"),
+                    v3 = Verb(word = "hung", ipa = "[hʌŋ]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "Копать",
+                    v1 = Verb(word = "dig", ipa = "[dɪɡ]"),
+                    v2 = Verb(word = "dug", ipa = "[dʌɡ]"),
+                    v3 = Verb(word = "dug", ipa = "[dʌɡ]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "Убегать",
+                    v1 = Verb(word = "flee", ipa = "[fliː]"),
+                    v2 = Verb(word = "fled", ipa = "[fled]"),
+                    v3 = Verb(word = "fled", ipa = "[fled]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "Иметь дело",
+                    v1 = Verb(word = "deal", ipa = "[diːl]"),
+                    v2 = Verb(word = "dealt", ipa = "[delt]"),
+                    v3 = Verb(word = "dealt", ipa = "[delt]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "Красться",
+                    v1 = Verb(word = "creep", ipa = "[kriːp]"),
+                    v2 = Verb(word = "crept", ipa = "[krept]"),
+                    v3 = Verb(word = "crept", ipa = "[krept]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "Сгибать",
+                    v1 = Verb(word = "bend", ipa = "[bend]"),
+                    v2 = Verb(word = "bent", ipa = "[bent]"),
+                    v3 = Verb(word = "bent", ipa = "[bent]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "Держать",
+                    v1 = Verb(word = "hold", ipa = "[hoʊld]"),
+                    v2 = Verb(word = "held", ipa = "[held]"),
+                    v3 = Verb(word = "held", ipa = "[held]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "Искать",
+                    v1 = Verb(word = "seek", ipa = "[siːk]"),
+                    v2 = Verb(word = "sought", ipa = "[sɔːt]"),
+                    v3 = Verb(word = "sought", ipa = "[sɔːt]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "Связывать",
+                    v1 = Verb(word = "bind", ipa = "[baɪnd]"),
+                    v2 = Verb(word = "bound", ipa = "[baʊnd]"),
+                    v3 = Verb(word = "bound", ipa = "[baʊnd]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "Заводить (watch), наматывать",
+                    v1 = Verb(word = "wind", ipa = "[waɪnd]"),
+                    v2 = Verb(word = "wound", ipa = "[waʊnd]"),
+                    v3 = Verb(word = "wound", ipa = "[waʊnd]"),
+                    type = PartiallyConsistent
+                ),
+//                VerbDetails(
+//                    word = "Молоть",
+//                    v1 = Verb(word = "grind", ipa = "[ɡraɪnd]"),
+//                    v2 = Verb(word = "ground", ipa = "[ɡraʊnd]"),
+//                    v3 = Verb(word = "ground", ipa = "[ɡraʊnd]"),
+//                    type = PartiallyConsistent
+//                ),
+                VerbDetails(
+                    word = "* Гореть",
+                    v1 = Verb(word = "burn", ipa = "[bɜːn]"),
+                    v2 = Verb(word = "burnt/burned", ipa = "[bɜːnt]"),
+                    v3 = Verb(word = "burnt/burned", ipa = "[bɜːnt]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "* Пахнуть",
+                    v1 = Verb(word = "smell", ipa = "[smel]"),
+                    v2 = Verb(word = "smelt/smelled", ipa = "[smelt]"),
+                    v3 = Verb(word = "smelt/smelled", ipa = "[smelt]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "* Портить",
+                    v1 = Verb(word = "spoil", ipa = "[spɔɪl]"),
+                    v2 = Verb(word = "spoilt/spoiled", ipa = "[spɔɪlt]"),
+                    v3 = Verb(word = "spoilt/spoiled", ipa = "[spɔɪlt]"),
+                    type = PartiallyConsistent
+                ),
+//                VerbDetails(
+//                    word = "* Скакнуть, совершить большой прыжок",
+//                    v1 = Verb(word = "leap", ipa = "[liːp]"),
+//                    v2 = Verb(word = "leapt/leaped", ipa = "[lept]"),
+//                    v3 = Verb(word = "leapt/leaped", ipa = "[lept]"),
+//                    type = PartiallyConsistent
+//                ),
+                VerbDetails(
+                    word = "Освещать",
+                    v1 = Verb(word = "light", ipa = "[laɪt]"),
+                    v2 = Verb(word = "lit", ipa = "[lɪt]"),
+                    v3 = Verb(word = "lit", ipa = "[lɪt]"),
+                    type = PartiallyConsistent
+                ),
+                VerbDetails(
+                    word = "Скользить",
+                    v1 = Verb(word = "slide", ipa = "[slaɪd]"),
+                    v2 = Verb(word = "slid", ipa = "[slɪd]"),
+                    v3 = Verb(word = "slid", ipa = "[slɪd]"),
+                    type = PartiallyConsistent
+                ),
+//                VerbDetails(
+//                    word = "Плевать",
+//                    v1 = Verb(word = "spit", ipa = "[spɪt]"),
+//                    v2 = Verb(word = "spat", ipa = "[spæt]"),
+//                    v3 = Verb(word = "spat", ipa = "[spæt]"),
+//                    type = PartiallyConsistent
+//                ),
+//                VerbDetails(
+//                    word = "Разводить (dogs), выводить, размножаться",
+//                    v1 = Verb(word = "breed", ipa = "[briːd]"),
+//                    v2 = Verb(word = "bred", ipa = "[bred]"),
+//                    v3 = Verb(word = "bred", ipa = "[bred]"),
+//                    type = PartiallyConsistent
+//                ),
+
+//                VerbDetails(
+//                    word = "Кровоточить",
+//                    v1 = Verb(word = "bleed", ipa = "[bliːd]"),
+//                    v2 = Verb(word = "bled", ipa = "[bled]"),
+//                    v3 = Verb(word = "bled", ipa = "[bled]"),
+//                    type = PartiallyConsistent
+//                ),
+            )
+        ), endChanging = IrregularVerbsGroup.Mixed.SubGroup.EndChanging(
+            data = listOf(
+                VerbDetails(
+                    word = "Бить (удар), биться (heart)",
+                    v1 = Verb(word = "beat", ipa = "[biːt]"),
+                    v2 = Verb(word = "beat", ipa = "[biːt]"),
+                    v3 = Verb(word = "beaten", ipa = "[ˈbiːtn]"),
+                    type = EndChanging
+                ),
+            )
+        )
+    )
+
+    val irregularVerbsGroups =
+        unchanging + secondChanging + fullyChanging + partiallyConsistent + mixed
+
 }

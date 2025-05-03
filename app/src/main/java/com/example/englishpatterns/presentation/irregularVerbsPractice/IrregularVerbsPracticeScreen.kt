@@ -193,6 +193,29 @@ private fun VerbsGroups(
                                 )
                             )
                         }
+                    )
+                }
+
+                is IrregularVerbsGroupViewHolder.Mixed -> {
+                    VerbGroupDropdownMenuButton(
+                        holder = it,
+                        onClick = {
+                            sendAction(IrregularVerbsPracticeAction.ChangeVerbGroup(it.type))
+                        },
+                        onAllSubgroupsItemClick = {
+                            sendAction(
+                                IrregularVerbsPracticeAction.ManageAllSubGroupsSelection(
+                                    type = IrregularVerbGroupType.Mixed
+                                )
+                            )
+                        },
+                        onItemClick = { subGroupViewHolder ->
+                            sendAction(
+                                IrregularVerbsPracticeAction.ChangeSubGroupSelection(
+                                    subGroupViewHolder
+                                )
+                            )
+                        }
 
                     )
                 }
@@ -344,7 +367,7 @@ private fun getVerbColorsByGroupType(
                 Triple(v1HighLightColor, v1HighLightColor, v1HighLightColor)
             }
 
-            IrregularVerbGroupType.PartiallyChanging -> {
+            IrregularVerbGroupType.SecondChanging -> {
                 Triple(v1HighLightColor, v2HighLightColor, v1HighLightColor)
             }
 
@@ -354,6 +377,14 @@ private fun getVerbColorsByGroupType(
 
             IrregularVerbGroupType.PartiallyConsistent -> {
                 Triple(v1HighLightColor, v2HighLightColor, v2HighLightColor)
+            }
+
+            IrregularVerbGroupType.Mixed -> {
+                Triple(Color.Unspecified, Color.Unspecified, Color.Unspecified)
+            }
+
+            IrregularVerbGroupType.EndChanging -> {
+                Triple(v1HighLightColor, v1HighLightColor, v2HighLightColor)
             }
 
             null -> Triple(Color.Unspecified, Color.Unspecified, Color.Unspecified)

@@ -3,8 +3,10 @@ package com.example.englishpatterns.domain.irregularVerbs
 enum class IrregularVerbGroupType(val pattern: String) {
 
     Unchanging("○○○"),
-    PartiallyChanging("○∆○"),
+    SecondChanging("○∆○"),
     FullyChanging("○∆□"),
-    PartiallyConsistent("○∆∆")
+    PartiallyConsistent("○∆∆"),
+    EndChanging("○○∆"),
+    Mixed("???"),
     // "○○∆",
 }
