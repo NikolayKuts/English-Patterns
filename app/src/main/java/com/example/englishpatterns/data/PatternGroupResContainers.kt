@@ -130,6 +130,7 @@ data class PatternGroupResContainers(
             AdditionLinkers(),
             GerundsAndInfinitivesWithVerbs(),
             PhrasalVerbs(),
+            AndroidInterviewTerms(),
             WeekPatternGroupResource(),
         )
 

@@ -11,6 +11,7 @@ import com.example.englishpatterns.data.storageMigrations.AddMissingJobPhrasesAn
 import com.example.englishpatterns.data.storageMigrations.AddMissingNounOfPossessivePronounPatternGroupMigration
 import com.example.englishpatterns.data.storageMigrations.AddMissingTalkingAboutJobsVocabularyPatternGroupMigration
 import com.example.englishpatterns.data.storageMigrations.AddMissingWeekPatternGroupMigration
+import com.example.englishpatterns.data.storageMigrations.AndroidInterviewTermsPatternGroupMigration
 import com.example.englishpatterns.data.storageMigrations.PhraseVerbsPatternGroupMigration
 
 val Context.patternStore by dataStore(
@@ -27,7 +28,8 @@ val Context.patternStore by dataStore(
             AddMissingTalkingAboutJobsVocabularyPatternGroupMigration,
             AddMissingAdditionLinkersPatternGroupMigration,
             AddMissingGerundsAndInfinitivesWithVerbsPatternGroupMigration,
-            PhraseVerbsPatternGroupMigration
+            PhraseVerbsPatternGroupMigration,
+            AndroidInterviewTermsPatternGroupMigration
         )
     }
 )

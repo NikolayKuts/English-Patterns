@@ -1238,6 +1238,17 @@ sealed class PatternGroupResource(
     }
 
     @Serializable
+    data class AndroidInterviewTerms(
+        override val markColor: MarkColor = MarkColor.Non,
+    ) : PatternGroupResource(
+        name = "Android interview terms",
+        contentResIds = intArrayOf(R.array.android_interview_terms),
+    ) {
+
+        override fun toNew(markColor: MarkColor): PatternGroupResource = copy(markColor = markColor)
+    }
+
+    @Serializable
     data class WeekPatternGroupResource(
         override val markColor: MarkColor = MarkColor.Non,
     ) : PatternGroupResource(

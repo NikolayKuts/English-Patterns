@@ -6995,4 +6995,133 @@
         <item>Она начал заниматься живописью.==She took up painting.</item>
         <item>Он начал заниматся игрой на гитаре.==He took up playing the guitar.</item>
     </string-array>
+
+    <string-array name="android_interview_terms">
+        <item>строго типизированый язык==staticly typed languageD</item>
+        <item>быть совместимым (взаимодействующий) с Java==to be interoperable with Java</item>
+        <item>Одно и пермичательных фичь это его всроиный built-in null safety==One notable feature is its built-in null safety</item>
+        <item>Краткий синтач==Concise Syntax</item>
+        <item>==Делаet код более выразительным и лаконичным==Making code more expressive and concise.</item>
+        <item>выведение типов==type inference</item>
+        <item>колекция с фиксированным размером==fixed-size collection</item>
+        <item>Иерархия==hierarchy</item>
+        <item>в то время как companion объекты в Kotlin — это отдельные объекты, тесно связанные с классом==while companion objects in Kotlin are separate objects that are closely related to a class</item>
+        <item>Запечатанные классы полезны, когда вы хотите представить ограниченную иерархию типов.==Sealed classes are useful when you want to represent a restricted type hierarchy</item>
+        <item>должны быть обработаны исчерпывающим образом в выражениях, when==should be handled exhaustively in when expressions</item>
+        <item>для создания анонимных объектов с custom поведением и свойствами==to create anonymous objects with customized behavior and properties</item>
+        <item>Они полезны, когда вам нужно создать одноразовый объект без явного объявления нового именованного класса.==They are useful when you need to create a one-time object without explicitly declaring a new named class</item>
+        <item>Они предоставляют способ написания асинхронного кода, который выглядит как последовательный код.==They provide a way to write asynchronous code that looks like sequential code</item>
+        <item>Sealed классы и when комбинация выражений в Kotlin часто используются вместе для исчерпывающего сопоставления с образцом==Sealed classes and when expression combination in Kotlin are often used together for exhaustive pattern matching</item>
+        <item>Он бесшовно интегрируется с Kotlin==it integrates seamlessly with Kotlin</item>
+        <item>Compose использует эффективный рендеринг.==Compose leverages efficient rendering</item>
+        <item>Повышенная производительность==Enhanced Performance</item>
+        <item>сравнение структурного равенства==structural equality comparison</item>
+        <item>сравнение ссылочного равенства==referential equality comparison</item>
+        <item>Запечатанные интерфейсы обычно используются в сочетании с запечатанными классами для определения контролируемого набора вариантов реализации.==Sealed interfaces are commonly used in combination with sealed classes to define a controlled set of implementation options.</item>
+        <item>Композиция функций способствует модульности, возможности повторного использования и читаемости кода за счет разбиения сложных операций на более мелкие, пригодные для повторного использования функции.==Function composition promotes modularity, reusability, and readability of code by breaking down complex operations into smaller, reusable functions.</item>
+        <item>Разница между ними заключается в том, как они обрабатывают пустые коллекции или последовательности.==The difference between them lies in how they handle empty collections or sequences.</item>
+        <item>==An infix function is a function that is marked with the infix keyword</item>
+        <item>==natural language style</item>
+        <item>==The protected modifier in Kotlin is an access modifier used to restrict the visibility of a class</item>
+        <item>==It allows access within the same class and any subclasses that inherit from it</item>
+        <item>==Inlining means that the body of a function is inserted directly at the call site by the compiler, instead of making a regular function call</item>
+        <item>==promoting smooth interoperability between the two languages</item>
+        <item>==The synchronized keyword in Kotlin ensures that only one thread can access a synchronized block of code at a time</item>
+        <item>==In MVVM, the ViewModel updates the View using mechanisms like LiveData or StateFlow, ensuring a clean and reactive UI.</item>
+        <item>==MVP (Model-View-Presenter) has a Presenter that manually updates the View using interface callbacks.</item>
+        <item>==For more persistent data, use SavedStateHandle with ViewModel.</item>
+        <item>==Dependency Injection (DI) is a design pattern where objects get their dependencies from an external source.</item>
+        <item>==In Android, frameworks like Dagger or Hilt are commonly used.</item>
+        <item>==DI reduces boilerplate code and increases testability by decoupling object creation.</item>
+        <item>==Clean Architecture organizes code into layers:</item>
+        <item>==Domain: Contains business rules and use cases.</item>
+        <item>==It improves scalability, testability, and maintainability by separating concerns and reducing dependencies between layers.</item>
+        <item>==LiveData is an observable data holder. It updates the UI automatically when the data changes.</item>
+        <item>==Room: A Jetpack library that provides an abstraction over SQLite.</item>
+        <item>==This helps protect sensitive data even if the app is compromised.</item>
+        <item>==SharedPreferences is limited to key-value pairs</item>
+        <item>==Coroutines for asynchronous programming</item>
+        <item>==Kotlin has a more concise syntax and interoperable with Java</item>
+        <item>==lazy: Initializes the property only when accessed for the first time.</item>
+        <item>==Extension functions enhance readability and reusability</item>
+        <item>==Sealed classes represent restricted hierarchies, where the set of possible subclasses is known at compile time.</item>
+        <item>==Coroutines are a way to perform asynchronous tasks in a sequential manner.</item>
+        <item>==Threads are not bound to the lifecycle.</item>
+        <item>==launch: Fire-and-forget. Does not return a result.</item>
+        <item>==ProGuard obfuscates code to make it harder to reverse engineer.</item>
+        <item>==The Android Keystore System is a secure storage solution that allows apps to store cryptographic keys securely</item>
+        <item>==Use HTTPS to ensure all data is transmitted over HTTPS instead of HTTP.</item>
+        <item>==Use secure authentication mechanisms like OAuth2.</item>
+        <item>==Use short-lived tokens for API access.</item>
+        <item>==Configure the network_security_config.xml file to restrict non-secure connections and add custom SSL settings.</item>
+        <item>==This disables cleartext (HTTP) traffic and enforces secure communication with example.com.</item>
+        <item>==Override the callback methods to handle success or error scenarios.</item>
+        <item>==Used for initial setup like inflating layouts, initializing variables, or restoring saved state.</item>
+        <item>==Called when the activity becomes visible to the user but isn’t yet interactive.</item>
+        <item>==How do fragments differ from activities, and when should you use each?</item>
+        <item>==Activity: An independent screen in an Android app that serves as an entry point for user interaction.</item>
+        <item>==Fragment is a reusable UI component that represents a portion of an activity and can be combined with other fragments within the same activity.</item>
+        <item>==Activity has its own complete lifecycle and exists independently.</item>
+        <item>==Fragment has a lifecycle that is closely tied to its parent activity.</item>
+        <item>==Each activity has its own UI and is not meant to be reused within other activities.</item>
+        <item>==Fragment can be reused across multiple activities, making it more modular and efficient.</item>
+        <item>==Fragment is managed by the FragmentManager and can be added to or removed from the back stack manually.</item>
+        <item>==The screen represents a completely different feature or independent module.</item>
+        <item>==Use an Activity if you want to switch between entirely different experiences.</item>
+        <item>==Use a Fragment if you want to support dynamic UI changes within a single activity</item>
+        <item>==Use a Fragment if you are using Jetpack Navigation for seamless transitions within a single activity.</item>
+        <item>==Implicit Intents are used to perform actions without specifying the target component.</item>
+        <item>==Explicit Intents specify the exact component (activity, service) to start.</item>
+        <item>==Provide ready-to-use functionality.</item>
+        <item>==Simplify development and ensure backward compatibility.</item>
+        <item>==Compose uses Kotlin to declare UI, while traditional methods use XML layouts.</item>
+        <item>==Compose minimizes view hierarchy overhead.</item>
+        <item>==Compose tightly integrates with Kotlin, reducing boilerplate code.</item>
+        <item>==Enable data sharing between apps.</item>
+        <item>==DataStore Uses Kotlin coroutines for asynchronous and non-blocking operations</item>
+        <item>==Avoids object creation for function parameters and reduces runtime performance costs.</item>
+        <item>==Android Jetpack Compose is a modern UI toolkit introduced by Google for building native Android applications.</item>
+        <item>==Jetpack Compose, on the other hand, uses a declarative approach</item>
+        <item>==provides a more intuitive way to create interactive UIs.</item>
+        <item>==What are the advantages of using Jetpack Compose over the traditional View system</item>
+        <item>==Compose simplifies state management by automatically recomposing only the affected parts of the UI when the state changes.</item>
+        <item>==Composable functions are independent of the activity or fragment lifecycle, making them reusable and testable.</item>
+        <item>==When the state changes, Jetpack Compose automatically recomposes only the affected parts of the UI, ensuring efficient UI updates.</item>
+        <item>==The Modifier is used to customize and apply transformations to UI elements in Jetpack Compose.</item>
+        <item>==ViewModel in Jetpack Compose is used for managing and preserving UI-related data across configuration changes. </item>
+        <item>==Jetpack Compose can be integrated with existing Android frameworks and libraries by using interoperability features.</item>
+        <item>==Compose provides compatibility libraries to bridge the gap between Compose and existing View-based UI components.</item>
+        <item>==Additionally, Compose supports the embedding of traditional View-based components within Composable functions</item>
+        <item>==It allows you to define constraints between UI elements,</item>
+        <item>==MaterialTheme provides a pre-defined set of styles and attributes</item>
+        <item>==Side effects in Jetpack Compose refer to operations that have additional effects beyond modifying the UI state. </item>
+        <item>==StateFlow and SharedFlow are part of the Kotlin coroutines library</item>
+        <item>==Lazy composition in Jetpack Compose allows you to defer the execution of expensive Composable functions until they are actually needed.</item>
+        <item>==What is the role of CompositionLocal in Jetpack Compose?</item>
+        <item>==It allows you to pass down values, such as themes, fonts, or other contextual information</item>
+        <item>==here we discuss questions regarding all aspects that are mostly asked in Kotlin Interviews</item>
+        <item>==In order to help you succeed in Kotlin interviews, we’ve simplified the 100 most common interview questions for you.</item>
+        <item>==This guide covers a wide range of topics, including basic language concepts and advanced features. </item>
+        <item>==Every question is accompanied by a straightforward answer and practical example, making it easy to comprehend and apply.</item>
+        <item>==By studying these questions, you’ll gain a solid understanding of Kotlin and improve your problem-solving skills.</item>
+        <item>==It is statically typed and runs on the Java Virtual Machine (JVM)</item>
+        <item>==so you can use Kotlin code alongside Java code seamlessly.</item>
+        <item>==Type inference in Kotlin allows the compiler to automatically determine the type of a variable based on its initialization value.</item>
+        <item>==This reduces the verbosity of code and improves readability.</item>
+        <item>==By using nullable types, the compiler enforces null safety and reduces the occurrence of null pointer exceptions.</item>
+        <item>==To declare a nullable type, you append a question mark (?) to the data type.</item>
+        <item>==Use the safe call operator</item>
+        <item>==The Elvis operator (?:) allows you to provide a default value when accessing a nullable object.</item>
+        <item>==When you are certain that a nullable variable is not null at a specific point, you can use the non-null assertion operator (!!) to bypass null safety checks.</item>
+        <item>==As a result, type casting is no longer necessary, and code readability and safety are enhanced.</item>
+        <item>==Use DiffUtil to update only the modified items instead of reloading the entire list.</item>
+        <item>==How would you design a login screen with proper security measures?</item>
+        <item>==Implement rate-limiting to prevent brute force attacks.</item>
+        <item>==Use applicationContext instead of activity or fragment context in long-lived components.</item>
+        <item>==Ensure sensitive information is not logged in production builds.</item>
+        <item>==Your app includes complex animations, but users report stuttering on older devices.</item>
+        <item>==Use vector drawables instead of raster images.</item>
+        <item>==BLE is a low-power, event-driven protocol.</item>
+        <item>==Run one at a time</item>
+    </string-array>
 </resources>

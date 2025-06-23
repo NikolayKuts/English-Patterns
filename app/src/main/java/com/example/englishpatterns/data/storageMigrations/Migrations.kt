@@ -99,6 +99,11 @@ object PhraseVerbsPatternGroupMigration :
     insert = { PatternGroupResource.PhrasalVerbs() }
 )
 
+object AndroidInterviewTermsPatternGroupMigration :
+    DataMigration<PatternGroupResContainers> by createPatternGroupMigration(
+        insert = { PatternGroupResource.AndroidInterviewTerms() }
+    )
+
 inline fun <reified T : PatternGroupResource> createPatternGroupMigration(
     crossinline insert: () -> T
 ): DataMigration<PatternGroupResContainers> {
