@@ -7123,5 +7123,12 @@
         <item>==Use vector drawables instead of raster images.</item>
         <item>==BLE is a low-power, event-driven protocol.</item>
         <item>==Run one at a time</item>
+        <item>==BLE device can typically run on a small battery for weeks, if not months, or even years, making it perfect for sensor-based or Internet of Things (IoT) use cases.</item>
+        <item>==BLE opens up a world of endless possibilities by allowing developers to specify various custom profiles for different use cases.</item>
+        <item>==Your Android device acting as a Central can connect to multiple peripherals (external BLE devices) simultaneously.</item>
+        <item>==Always assume that any operation has a nonzero probability of failing.</item>
+        <item>==it’s time to roll up our sleeves and start coding!</item>
+        <item>==Note: This article is up-to-date with a compileSdkVersion and targetSdkVersion of 34 (Android 14)</item>
+        <item>==The gist of what’s possible with BLE communication can be summarized into three common BLE operations.</item>
     </string-array>
 </resources>
