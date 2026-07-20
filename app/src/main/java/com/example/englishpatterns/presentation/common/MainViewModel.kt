@@ -1,12 +1,11 @@
 package com.example.englishpatterns.presentation.common
 
-import androidx.datastore.core.DataStore
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
-import com.example.englishpatterns.data.PatternGroupResContainers
+import com.example.englishpatterns.data.PatternRepository
 import com.example.englishpatterns.domain.PatternGroupResContainer
 import com.example.englishpatterns.domain.PatternGroupResource
-import com.example.englishpatterns.presentation.patternPractisingScreen.PracticingPatternGroup
+import com.example.englishpatterns.domain.storageKey
 import com.lib.lokdroid.core.logD
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -18,12 +17,11 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 class MainViewModel(
-    private val patternStore: DataStore<PatternGroupResContainers>,
-    private val weekPatternStorage: DataStore<PracticingPatternGroup>,
+    private val patternRepository: PatternRepository,
     savedStateHandle: SavedStateHandle,
 ) : MviViewModel<MainState, MainAction, MainEvent>(savedStateHandle = savedStateHandle) {
 
-    private val patternGroupResContainersStata = patternStore.data
+    private val patternGroupResContainersStata = patternRepository.observePatternGroupResContainers()
 
     private val chosenPatternGroupResContainers: Flow<List<PatternGroupResContainer>> =
         getChosenPatternGroupResContainersState()
@@ -58,24 +56,14 @@ class MainViewModel(
 
             is MainAction.SetMarkColor -> {
                 viewModelScope.launch(Dispatchers.IO) {
-                    patternStore.updateData {
-                        val list = it.content
-                        val resContainer = list.getOrNull(action.patternIndex)
-                            ?: return@updateData it
-                        val updatedPatternGroupResContainer =
-                            resContainer.patternGroupResource.toNew(
-                                markColor = action.markColor
-                            )
-                        val updatedContent = list.toMutableList().apply {
-                            this[action.patternIndex] =
-                                resContainer.copy(
-                                    patternGroupResource = updatedPatternGroupResContainer,
-                                    isChosen = false
-                                )
-                        }
+                    val resContainer = uiState.value.patternGroupResContainers.content
+                        .getOrNull(action.patternIndex)
+                        ?: return@launch
 
-                        it.copy(content = updatedContent)
-                    }
+                    patternRepository.setPatternGroupMarkColor(
+                        groupKey = resContainer.patternGroupResource.storageKey,
+                        markColor = action.markColor
+                    )
                 }
             }
 
@@ -117,26 +105,11 @@ class MainViewModel(
     ) {
         viewModelScope.launch(Dispatchers.IO) {
             val allResContainers = patternGroupResContainersStata.firstOrNull() ?: return@launch
-            val resContainerToChange = allResContainers.content[position]
-
-            when {
-                patternStore.data.firstOrNull()?.content?.contains(resContainerToChange) == true -> {
-                    patternStore.updateData { resContainers ->
-                        val updatedResContainers = resContainers.content.toMutableList()
-                            .apply {
-                                this[position] = patternGroupResContainer.copy(
-                                    isChosen = patternGroupResContainer.isChosen.not()
-                                )
-                            }
-
-                        PatternGroupResContainers(content = updatedResContainers)
-                    }
-                }
-
-                resContainerToChange.patternGroupResource is PatternGroupResource.WeekPatternGroupResource -> {
-                    weekPatternStorage.updateData { it.copy(isChosen = !it.isChosen) }
-                }
-            }
+            val resContainerToChange = allResContainers.content.getOrNull(position) ?: return@launch
+            patternRepository.setPatternGroupChosen(
+                groupKey = resContainerToChange.patternGroupResource.storageKey,
+                isChosen = patternGroupResContainer.isChosen.not()
+            )
         }
     }
 }

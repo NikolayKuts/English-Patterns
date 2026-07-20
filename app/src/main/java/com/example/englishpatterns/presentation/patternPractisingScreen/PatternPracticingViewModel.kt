@@ -2,7 +2,6 @@ package com.example.englishpatterns.presentation.patternPractisingScreen
 
 import android.content.Intent
 import android.net.Uri
-import androidx.datastore.core.DataStore
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -11,6 +10,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
 import com.example.englishpatterns.data.IdentifiablePattern
 import com.example.englishpatterns.data.Pattern
+import com.example.englishpatterns.data.PatternRepository
 import com.example.englishpatterns.data.ResourcesContentManager
 import com.example.englishpatterns.data.SecretConstants
 import com.example.englishpatterns.data.TextAudioPlayer
@@ -37,7 +37,7 @@ import kotlinx.coroutines.runBlocking
 class PatternPracticingViewModel(
     private val resourcesContentManager: ResourcesContentManager,
     private val wordInfoProvider: YandexWordInfoProvider,
-    private val weekPatternStorage: DataStore<PracticingPatternGroup>,
+    private val patternRepository: PatternRepository,
     override val textAudioPlayer: TextAudioPlayer,
     patternGroupResources: List<PatternGroupResource>,
     savedStateHandle: SavedStateHandle,
@@ -260,7 +260,7 @@ class PatternPracticingViewModel(
     private fun observeCurrentPatterGroupUnitState() {
         currentPatterGroupUnitState.onEach { currentPatternGroupUnit ->
             uiState.update {
-                val weekPatterns = weekPatternStorage.data.firstOrNull()?.patterns ?: return@onEach
+                val weekPatterns = patternRepository.getWeekPatterns()
                 val currentPattern = currentPatternGroupUnit?.pattern
                 val isStoringWeekPatternEnabled = if (currentPattern != null) {
                     currentPattern.noId() !in weekPatterns
@@ -289,10 +289,10 @@ class PatternPracticingViewModel(
     }
 
     private fun observeWeekPatternStorageChange() {
-        weekPatternStorage.data.onEach { practicingPatternGroup ->
+        patternRepository.observeWeekPatterns().onEach { weekPatterns ->
             val currentPattern = currentPatterGroupUnitState.value?.pattern
             val isStoringWeekPatternEnabled = if (currentPattern != null) {
-                currentPattern.noId() !in practicingPatternGroup.patterns
+                currentPattern.noId() !in weekPatterns
             } else {
                 false
             }
@@ -449,22 +449,9 @@ class PatternPracticingViewModel(
     private fun manageStoreWeeklyMemorizedPatterAction() {
         viewModelScope.launch(Dispatchers.IO) {
             val currentPattern = currentPatterGroupUnitState.value?.pattern ?: return@launch
-            var shouldNotifyAboutSuccessfulStoring = false
-
-            weekPatternStorage.updateData { practicingPatternGroup ->
-                val isPatternNotAddedYet = practicingPatternGroup.patterns.none { pattern ->
-                    pattern == currentPattern.noId()
-                }
-
-                if (isPatternNotAddedYet) {
-                    val updatedPatterns = practicingPatternGroup.patterns + currentPattern.noId()
-
-                    shouldNotifyAboutSuccessfulStoring = true
-                    practicingPatternGroup.copy(patterns = updatedPatterns)
-                } else {
-                    practicingPatternGroup
-                }
-            }
+            val shouldNotifyAboutSuccessfulStoring = patternRepository.addWeekPattern(
+                pattern = currentPattern.noId()
+            )
 
             if (shouldNotifyAboutSuccessfulStoring) {
                 eventState.launchEmit { PatternPracticingEvent.WeekPatternStored }
@@ -694,7 +681,7 @@ class PatternPracticingViewModel(
         private val resourcesContentManager: ResourcesContentManager,
         private val yandexWordInfoProvider: YandexWordInfoProvider,
         private val patternGroupResources: List<PatternGroupResource>,
-        private val weekPatternStorage: DataStore<PracticingPatternGroup>,
+        private val patternRepository: PatternRepository,
         private val textAudioPlayer: TextAudioPlayer,
     ) : ViewModelProvider.Factory {
 
@@ -705,7 +692,7 @@ class PatternPracticingViewModel(
         ): T = PatternPracticingViewModel(
             resourcesContentManager = resourcesContentManager,
             wordInfoProvider = yandexWordInfoProvider,
-            weekPatternStorage = weekPatternStorage,
+            patternRepository = patternRepository,
             patternGroupResources = patternGroupResources,
             textAudioPlayer = textAudioPlayer,
             savedStateHandle = extras.createSavedStateHandle()

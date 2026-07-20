@@ -2,16 +2,17 @@ package com.example.englishpatterns.data
 
 import android.content.Context
 import android.content.res.Resources
-import kotlinx.coroutines.flow.firstOrNull
 
-class ResourcesContentManager(private val context: Context) {
+class ResourcesContentManager(
+    private val context: Context,
+    private val patternRepository: PatternRepository,
+) {
 
     suspend fun getStringArray(id: Int): Array<String> = try {
         context.resources.getStringArray(id)
     } catch (e: Resources.NotFoundException) {
-        context.weekPatternStorage.data.firstOrNull()?.patterns?.map {
+        patternRepository.getWeekPatterns().map {
             "${it.native}==${it.translation}"
-        }?.toTypedArray()
-            ?: emptyArray()
+        }.toTypedArray()
     }
 }

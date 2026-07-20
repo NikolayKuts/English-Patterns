@@ -22,11 +22,11 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.englishpatterns.data.PatternRepository
 import com.example.englishpatterns.data.ResourcesContentManager
 import com.example.englishpatterns.data.TextAudioPlayer
 import com.example.englishpatterns.data.TextSpeaker
-import com.example.englishpatterns.data.patternStore
-import com.example.englishpatterns.data.weekPatternStorage
+import com.example.englishpatterns.data.room.EnglishPatternsDatabase
 import com.example.englishpatterns.data.yandexApi.YandexWordInfoProvider
 import com.example.englishpatterns.presentation.collectWhenStarted
 import com.example.englishpatterns.presentation.common.customTabs.ChatGptCustomTabManager
@@ -48,10 +48,18 @@ import kotlinx.coroutines.flow.collectLatest
 
 class MainActivity : ComponentActivity() {
 
+    private val database by lazy { EnglishPatternsDatabase.getInstance(applicationContext) }
+
+    private val patternRepository by lazy {
+        PatternRepository(
+            patternGroupStateDao = database.patternGroupStateDao(),
+            weekPatternDao = database.weekPatternDao(),
+        )
+    }
+
     private val viewModel: MviViewModel<MainState, MainAction, MainEvent> by viewModels<MainViewModel> {
         MainViewModelFactory(
-            patternStorage = this.patternStore,
-            weekPatternStorage = this.weekPatternStorage,
+            patternRepository = patternRepository,
         )
     }
 
@@ -95,12 +103,13 @@ class MainActivity : ComponentActivity() {
                                         factory = PatternPracticingViewModel.Factory(
                                             patternGroupResources = rawPatternGroups,
                                             resourcesContentManager = ResourcesContentManager(
-                                                context = application
+                                                context = application,
+                                                patternRepository = patternRepository,
                                             ),
                                             yandexWordInfoProvider = YandexWordInfoProvider(
                                                 context = application
                                             ),
-                                            weekPatternStorage = this.weekPatternStorage,
+                                            patternRepository = patternRepository,
                                             textAudioPlayer = TextAudioPlayer()
                                         )
                                     )
