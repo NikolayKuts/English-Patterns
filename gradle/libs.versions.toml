@@ -9,7 +9,7 @@ datastoreVersion = "1.1.1"
 ktor = "2.3.13"
 
 # LoKdroid #
-lokdroid = "0.0.4-alpha"
+lokdroid = "0.1.2-alpha"
 
 # SplashScreen API #
 coreSplashscreen = "1.2.0-alpha02"

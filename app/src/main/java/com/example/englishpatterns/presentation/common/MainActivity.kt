@@ -16,6 +16,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.compose.LocalLifecycleOwner
@@ -81,7 +82,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = EnglishPatternsTheme.colors.surface
                 ) {
-                    Scaffold { paddingValues ->
+                    Scaffold(
+                        modifier = Modifier.padding(16.dp)
+                    ){ paddingValues ->
                         val navController = rememberNavController()
 
                         LaunchedEffect(key1 = Unit) {
@@ -106,9 +109,7 @@ class MainActivity : ComponentActivity() {
                                                 context = application,
                                                 patternRepository = patternRepository,
                                             ),
-                                            yandexWordInfoProvider = YandexWordInfoProvider(
-                                                context = application
-                                            ),
+                                            yandexWordInfoProvider = YandexWordInfoProvider(),
                                             patternRepository = patternRepository,
                                             textAudioPlayer = TextAudioPlayer()
                                         )

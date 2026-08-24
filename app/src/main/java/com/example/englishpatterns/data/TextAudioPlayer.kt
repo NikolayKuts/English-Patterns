@@ -44,8 +44,8 @@ class TextAudioPlayer(
     override fun onCreate(owner: LifecycleOwner) {
         super.onCreate(owner)
         logD {
-            message("onCreate() called")
-            message("owner: $owner")
+            "onCreate() called"()
+            "owner: $owner"()
         }
         if (coroutineScope == null) {
             coroutineScope = CoroutineScope(context = Dispatchers.IO + SupervisorJob())
@@ -55,8 +55,8 @@ class TextAudioPlayer(
     override fun onResume(owner: LifecycleOwner) {
         super.onResume(owner)
         logD {
-            message("onResume() called")
-            message("owner: $owner")
+            "onResume() called"()
+            "owner: $owner"()
         }
         if (mediaPlayer == null) {
             mediaPlayer = getNewPlayerInstance()
@@ -72,8 +72,8 @@ class TextAudioPlayer(
     override fun onStop(owner: LifecycleOwner) {
         super.onStop(owner)
         logD {
-            message("onStop() called")
-            message("owner: $owner")
+            "onStop() called"()
+            "owner: $owner"()
         }
         resetPreparingJob()
         isPrepared = false
@@ -85,8 +85,8 @@ class TextAudioPlayer(
     override fun onDestroy(owner: LifecycleOwner) {
         super.onDestroy(owner)
         logD {
-            message("onDestroy() called")
-            message("owner: $owner")
+            "onDestroy() called"()
+            "owner: $owner"()
         }
         coroutineScope?.cancel()
         coroutineScope = null

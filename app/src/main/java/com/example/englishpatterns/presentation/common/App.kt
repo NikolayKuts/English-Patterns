@@ -2,7 +2,7 @@ package com.example.englishpatterns.presentation.common
 
 import android.app.Application
 import com.lib.lokdroid.core.LoKdroid
-import com.lib.lokdroid.data.default_implementation.FormaterBuilder
+import com.lib.lokdroid.data.default_implementation.FormatterBuilder
 
 class App : Application() {
 
@@ -10,7 +10,7 @@ class App : Application() {
         super.onCreate()
 
         LoKdroid.initialize(
-            formatter = FormaterBuilder()
+            formatter = FormatterBuilder()
                 .withPointer()
                 .space()
                 .withLineReference()
